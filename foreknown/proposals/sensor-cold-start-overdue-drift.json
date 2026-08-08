@@ -1,0 +1,11 @@
+{
+  "name": "cold-start-overdue-drift",
+  "definition": "Splits the existing `overdue` signal (practice/src/practice/foreknown/futures.py, is_overdue) into two distinct kinds: cold_start_overdue (a future whose window.to already lay in the past on the very night it was first notarized — announced_at[:10] == first seen date and is_overdue true at NOTARIZED time) versus drift_overdue (a future that was NOT overdue when the observatory first saw it, and only became overdue on a later run while still OPEN, meaning it outlived the window it was announced with). Tonight's run.json shows 100/100 notarized futures already listed as overdue on their first night (foreknown/snapshots/2026-08-08/run.json: `notarized` and `overdue` are the same 100 ids) — entirely cold_start_overdue, since this is the observatory's first night and every future is by definition being seen for the first time. drift_overdue cannot exist yet and will only become measurable from the second run onward.",
+  "test_rule": "On each nightly run, for every OPEN future newly flagged overdue, check whether it was already overdue in the immediately preceding run's overdue list (or is cold-start, i.e. this run is its NOTARIZED run). If it was open, not overdue, and NOT in a prior run's overdue list, tag it drift_overdue in that night's run summary. The sensor is worth promoting once at least one drift_overdue case has actually been observed and its window/severity history inspected by hand.",
+  "falsification": "If, once a second night exists, every single overdue future turns out to be cold_start_overdue for many consecutive nights (i.e. GDACS simply never keeps an episode open past its own stated window), the drift_overdue class would be empty by construction and this sensor would add a label that never fires — worth dropping rather than promoting.",
+  "derived_from": [
+    "foreknown/snapshots/2026-08-08/run.json",
+    "practice/src/practice/foreknown/futures.py"
+  ],
+  "status": "PROPOSED"
+}
