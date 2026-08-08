@@ -1,7 +1,10 @@
 """The nightly notary run: fetch warning feeds → preserve bytes → fold into
-the registry of announced futures → record the run. Deterministic; no model.
+the registry of announced futures → measure verdicts and reaction → record
+the run. Deterministic; no model.
+
 The funding axis (OCHA FTS plans) is preserved daily so the money's movement
-between warning and event accumulates as a committed time series.
+between warning and event accumulates as a committed time series; the
+reaction axis (reaction.py) reads those preserved bytes back.
 """
 
 from __future__ import annotations
@@ -14,9 +17,15 @@ from pathlib import Path
 from .. import autonomy
 from ..fetch import Client, SourceUnavailable
 from ..preserve import Snapshot, read_json, write_json
-from . import sources
-from .futures import is_overdue, update_registry
+from . import reaction, sources
+from .futures import (COLD_START_OVERDUE, DRIFT_OVERDUE, is_overdue,
+                      overdue_kind, update_registry)
 from .resolve import resolve_pending
+
+# How many past UTC days of the attention series a nightly run completes.
+# GDELT publishes a day's file the morning after, so the newest day is
+# routinely still absent at 05:45 UTC — the run catches it up the next night.
+REACTION_BACKFILL_DAYS = 3
 
 FEEDS = (
     ("GDACS", sources.GDACS_URL, "gdacs.json", sources.gdacs_futures),
@@ -73,6 +82,21 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
 
     open_futures = [f for f in registry["futures"].values() if f["status"] == "OPEN"]
     overdue = [f["id"] for f in open_futures if is_overdue(f)]
+    # The machine's proposal sensor-cold-start-overdue-drift: an overdue flag
+    # that cannot tell an artefact of when we started looking from a warning
+    # that outlived its own window says nothing. Split, from tonight on.
+    kinds = {f["id"]: overdue_kind(f) for f in open_futures}
+
+    # The reaction axis: what moved while the warning was already running.
+    # Its outages are recorded in its own block — a quiet GDELT day is not a
+    # failure of the notary, and the two must stay legible apart.
+    try:
+        reaction_summary = reaction.run_reaction(
+            repo_root, day, registry, client=client,
+            backfill=REACTION_BACKFILL_DAYS)
+    except Exception as err:  # noqa: BLE001 — never lose the notary's work
+        reaction_summary = {"failures": [{"scope": "reaction",
+                                          "error": err.__class__.__name__}]}
 
     snap.write_manifest()
     write_json(run_path, {
@@ -85,17 +109,25 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "resolved": sorted(r["future"] for r in resolutions),
         "open_total": len(open_futures),
         "overdue": sorted(overdue),
+        "overdue_cold_start": sorted(f for f, k in kinds.items()
+                                     if k == COLD_START_OVERDUE),
+        "overdue_drift": sorted(f for f, k in kinds.items()
+                                if k == DRIFT_OVERDUE),
+        "reaction": reaction_summary,
     })
     autonomy.append(repo_root, "foreknown-notary-run", "machine", detail={
         "date": day, "requests": client.requests,
         "observed": len(observed), "notarized": len(summary["notarized"]),
         "revised": len(summary["revised"]), "closed": len(summary["closed"]),
         "resolved": len(resolutions),
-        "open_total": len(open_futures), "failures": len(failures)})
+        "open_total": len(open_futures), "failures": len(failures),
+        "overdue_drift": sum(1 for k in kinds.values() if k == DRIFT_OVERDUE),
+        "match_rate": reaction_summary.get("match_rate")})
     return {"date": day, "observed": len(observed), "failures": len(failures),
             **{k: len(v) for k, v in summary.items()},
             "resolved": len(resolutions),
-            "open_total": len(open_futures)}
+            "open_total": len(open_futures),
+            "reaction_failures": len(reaction_summary.get("failures", []))}
 
 
 def main(argv=None) -> None:
@@ -108,7 +140,8 @@ def main(argv=None) -> None:
     print(f"foreknown {s['date']}: {s['observed']} observed, "
           f"{s['notarized']} notarized, {s['revised']} revised, "
           f"{s['closed']} closed, {s['open_total']} open, "
-          f"{s['failures']} failure(s)")
+          f"{s['failures']} failure(s), "
+          f"{s['reaction_failures']} reaction failure(s)")
 
 
 if __name__ == "__main__":

@@ -49,8 +49,23 @@ measured lead time, or `NO_ALERT_MATCH`, which is a statement about the
 record, not about the world. Cold-start bias is flagged per resolution.
 Resolutions live in `foreknown/resolutions/` and are append-only.
 
-The funding axis (OCHA FTS response plans) is preserved daily, so the money's
-movement between warning and event accumulates as a committed time series.
+### The reaction axis
+
+Since 2026-08-08 each night also measures what moved while the clock was
+still running — **money** (which OCHA/FTS 2026 response plans list the
+warning's countries, what they ask for, what FTS reports as funded) and
+**attention** (news volume from those countries against their own 28-day
+median, from GDELT's daily raw files). The axis implements the machine's own
+proposal `sensor-fts-country-coverage`, written by the first discovery pass
+before any human had built it; the proposal's text was followed as written,
+including its refusal to judge funding adequacy.
+
+Readings live in `foreknown/reaction/`. What the numbers are not is carried
+in every record, not appended as a footnote: plan totals are the plans'
+annual figures for every country they list and are not attributable to the
+hazard; attention is measured for the *country*, not the hazard. Design,
+source probes and the honest limits:
+[`docs/2026-08-08-reaktions-achse.md`](docs/2026-08-08-reaktions-achse.md).
 
 Ethics, constitutive: the subject is the warning system and institutional
 time — never the victims. No natural persons, no accusations, no risk
@@ -66,6 +81,8 @@ practice/                 shared substrate (fetch, preserve, autonomy) +
                           project runtimes (practice.foreknown)
 foreknown/snapshots/      preserved bytes, manifests, run records (append-only)
 foreknown/registry.json   the notary's ledger of announced futures
+foreknown/resolutions/    measured verdicts for closed futures (append-only)
+foreknown/reaction/       money and attention per announced future (derived)
 foreknown/proposals/      discovery output: observations, sensor & source proposals
 autonomy/log.jsonl        the autonomy protocol (append-only, no aggregate score)
 stage/generate.py         builds public/ deterministically from committed records
@@ -94,6 +111,7 @@ Local:
 ```bash
 cd practice && python -m pip install -e '.[dev]' && python -m pytest
 python -m practice.foreknown.run --repo-root ..
+python -m practice.foreknown.reaction --repo-root .. --backfill 3
 python ../stage/generate.py --repo-root ..
 python ../verify.py --repo-root ..
 ```

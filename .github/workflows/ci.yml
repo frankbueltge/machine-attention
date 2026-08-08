@@ -32,12 +32,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Refuse modifications to preserved snapshots (I3)
+      # Every family of record that is written once and never rewritten.
+      # foreknown/reaction/iso3-fips.json is deliberately absent: the
+      # crosswalk is meant to grow as new countries appear in the registry.
+      - name: Refuse modifications to append-only records (I3)
         run: |
           changed=$(git diff --name-status --diff-filter=MD \
-            "origin/${{ github.base_ref }}...HEAD" -- foreknown/snapshots/ || true)
+            "origin/${{ github.base_ref }}...HEAD" -- \
+            foreknown/snapshots/ \
+            foreknown/resolutions/ \
+            foreknown/reaction/snapshots/ \
+            foreknown/reaction/attention/ \
+            foreknown/reaction/readings/ || true)
           if [ -n "$changed" ]; then
-            echo "preserved snapshots are append-only (I3):" >&2
+            echo "these records are append-only (I3):" >&2
             echo "$changed" >&2
             exit 1
           fi

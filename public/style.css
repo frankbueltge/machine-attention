@@ -26,6 +26,8 @@ header { display: flex; justify-content: space-between; gap: 2rem; color: var(--
   margin: 0.25rem 0 0.15rem; text-wrap: balance; }
 .featured-where { color: var(--trace); }
 .featured .clock { font-size: clamp(16px,2vw,26px); }
+.featured-reaction { margin-top: 0.55rem; max-width: 74ch; }
+.featured-reaction strong { color: var(--signal); font-weight: 400; }
 .featured-provenance { color: var(--faint); font-size: 0.85em; margin-top: 0.4rem; }
 .counts { color: var(--faint); max-width: 90ch; }
 .counts strong { color: var(--paper); font-weight: 400; }

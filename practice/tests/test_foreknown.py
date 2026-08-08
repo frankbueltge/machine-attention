@@ -4,7 +4,10 @@ from pathlib import Path
 import pytest
 
 from practice.foreknown import sources
-from practice.foreknown.futures import update_registry, is_overdue
+from practice.foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
+                                        is_overdue, overdue_kind,
+                                        update_registry,
+                                        window_to_at_notarization)
 from practice.foreknown.run import run
 from practice.preserve import read_json
 
@@ -83,6 +86,43 @@ def test_overdue_is_a_flag_not_a_closure():
     drought = registry["futures"]["gdacs-dr-1027450"]
     assert is_overdue(drought, "2026-08-08T00:00:00+00:00")
     assert drought["status"] == "OPEN"
+
+
+def test_overdue_splits_cold_start_from_drift():
+    """The machine's proposal sensor-cold-start-overdue-drift: an overdue
+    flag that cannot tell an artefact of when observation began from a
+    warning that outlived its own window states nothing."""
+    registry = {"futures": {}}
+    update_registry(registry, sources.gdacs_futures(GDACS_FIXTURE), {"GDACS": "a"})
+
+    # The drought's window ended 2026-08-06, before we ever saw it.
+    drought = registry["futures"]["gdacs-dr-1027450"]
+    drought["announced_at"] = "2026-08-08T05:45:00+00:00"
+    drought["history"][0]["ts"] = drought["announced_at"]
+    assert overdue_kind(drought, "2026-08-09T00:00:00+00:00") == COLD_START_OVERDUE
+
+    # The cyclone was inside its window when notarized and outlived it.
+    cyclone = registry["futures"]["gdacs-tc-1001297"]
+    cyclone["announced_at"] = "2026-08-01T05:45:00+00:00"
+    cyclone["history"][0]["ts"] = cyclone["announced_at"]
+    assert overdue_kind(cyclone, "2026-08-09T00:00:00+00:00") == DRIFT_OVERDUE
+    assert overdue_kind(cyclone, "2026-08-08T00:00:00+00:00") is None
+
+
+def test_a_revised_window_does_not_relabel_a_cold_start():
+    """Cold start is decided against the window the warning was announced
+    with — revisions are appended, so the original stays readable (I3)."""
+    registry = {"futures": {}}
+    update_registry(registry, sources.gdacs_futures(GDACS_FIXTURE), {"GDACS": "a"})
+    drought = registry["futures"]["gdacs-dr-1027450"]
+    drought["announced_at"] = "2026-08-08T05:45:00+00:00"
+    drought["history"][0]["ts"] = drought["announced_at"]
+
+    extended = json.loads(json.dumps(GDACS_FIXTURE))
+    extended["features"][1]["properties"]["todate"] = "2026-08-20T00:00:00"
+    update_registry(registry, sources.gdacs_futures(extended), {"GDACS": "a"})
+    assert window_to_at_notarization(drought) == "2026-08-06T00:00:00"
+    assert overdue_kind(drought, "2026-08-25T00:00:00+00:00") == COLD_START_OVERDUE
 
 
 class FakeClient:
