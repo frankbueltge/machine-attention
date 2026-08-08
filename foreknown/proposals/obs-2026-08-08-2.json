@@ -1,0 +1,20 @@
+{
+  "id": "obs-2026-08-08-2",
+  "date": "2026-08-08",
+  "kind": "difference_observation",
+  "title": "Earthquake episode windows are structurally instantaneous, not short",
+  "statement": "Every one of the 30 earthquake futures in foreknown/registry.json has window.from == window.to (30/30). No other hazard behaves this way: flood has 2/24 instant windows, wildfire 1/20, tropical cyclone 0/20, drought 0/6. This is not a record of unusually brief earthquakes — it is GDACS reporting earthquake onset as a single timestamp rather than an episode span, while flood, drought and most wildfire/cyclone records carry a genuine multi-day or multi-month window. The resolver (practice/src/practice/foreknown/resolve.py, function resolve_future, lines 86-94) computes `episode_days` from window.from/to for every ALERT_EPISODE kind, earthquakes included. Once earthquake futures start closing, their episode_days will read as 0.0 for all 30 — a source-schema artifact, not a measured duration.",
+  "method": "For each future in foreknown/registry.json, compared window.from to window.to per hazard group. Reproducible with: python3 -c \"import json; f=json.load(open('foreknown/registry.json'))['futures'].values(); from collections import Counter; c=Counter(); [c.update([(x['hazard'], x['window']['from']==x['window']['to'])]) for x in f]; print(sorted(c.items()))\"",
+  "figures": {
+    "earthquake_instant_windows": "30/30",
+    "flood_instant_windows": "2/24",
+    "wildfire_instant_windows": "1/20",
+    "tropical_cyclone_instant_windows": "0/20",
+    "drought_instant_windows": "0/6"
+  },
+  "derived_from": [
+    "foreknown/registry.json",
+    "practice/src/practice/foreknown/resolve.py"
+  ],
+  "worth_watching_because": "Any future analysis or sensor comparing 'episode length by hazard' from resolved futures will silently misread earthquakes as the shortest-lived hazard unless it excludes or separately labels the instant-window class. This observation exists so that mistake is pre-empted rather than discovered downstream."
+}

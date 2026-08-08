@@ -1,0 +1,17 @@
+{
+  "id": "obs-2026-08-08-1",
+  "date": "2026-08-08",
+  "kind": "difference_observation",
+  "title": "Red-alert rate varies eightfold across hazard types within the same feed and scale",
+  "statement": "All 100 futures notarized tonight share one source (GDACS) and one two-step severity scale (Orange, Red), yet the share reaching Red differs sharply by hazard: drought 0/6 (0%), wildfire 1/20 (5%), flood 3/24 (12%), earthquake 6/30 (20%), tropical cyclone 10/20 (50%). No drought episode in the record has ever been notarized at Red; tropical cyclones are ten times more likely to appear as Red than wildfires. This is a statement about tonight's accumulated record only — it does not claim droughts are less severe in the world, only that GDACS's Orange/Red split, as recorded here, sorts hazard types very unevenly.",
+  "method": "Grouped foreknown/registry.json futures by `hazard`, counted `severity` values per group. Reproducible with: python3 -c \"import json,collections; f=json.load(open('foreknown/registry.json'))['futures'].values(); c=collections.defaultdict(collections.Counter); [c[x['hazard']].update([x['severity']]) for x in f]; print(dict(c))\"",
+  "figures": {
+    "drought": {"Orange": 6, "Red": 0, "red_rate": 0.0},
+    "wildfire": {"Orange": 19, "Red": 1, "red_rate": 0.05},
+    "flood": {"Orange": 21, "Red": 3, "red_rate": 0.125},
+    "earthquake": {"Orange": 24, "Red": 6, "red_rate": 0.2},
+    "tropical cyclone": {"Orange": 10, "Red": 10, "red_rate": 0.5}
+  },
+  "derived_from": ["foreknown/registry.json"],
+  "worth_watching_because": "A single night cannot separate a real reporting pattern from a small-sample artifact (n=6 for drought, n=20 for wildfire and tropical cyclone). Not proposed as a sensor tonight for that reason — it needs a second independently-observed night before a test_rule could be written without curve-fitting to one sample."
+}

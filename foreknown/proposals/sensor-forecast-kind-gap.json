@@ -1,0 +1,14 @@
+{
+  "name": "forecast-kind-gap",
+  "definition": "Watches whether the observatory has notarized any kind==FORECAST future in the last N nights, given that the resolver's MATERIALIZED_AS_ALERT verdict and lead_time_hours measurement (practice/src/practice/foreknown/resolve.py, resolve_future, lines 96-121) can only ever fire against a FORECAST-kind future, and the only FORECAST-kind source configured is NHC (practice/src/practice/foreknown/sources.py, nhc_futures). Tonight's NHC snapshot (foreknown/snapshots/2026-08-08/nhc-current-storms.json, 24 bytes) returned activeStorms: [] — an honest quiet state per the source's own docstring, but the result is that foreknown/registry.json holds zero FORECAST-kind futures after the observatory's first night, so the lead-time measurement this project was built to eventually produce (docs/2026-08-09-foreknown-001-audit-und-entwurf.md, 'Was bewegte sich zwischen Warnung und Ereignis') has never had a case to run on.",
+  "test_rule": "On each nightly run, count futures with kind==FORECAST notarized that run (from run.json's `notarized` list joined against registry.json kind). If zero FORECAST-kind futures have been notarized across N consecutive runs (propose N=14, matching the E1 experiment window in docs/2026-08-09-foreknown-001-audit-und-entwurf.md), the sensor fires as a note that the forecast-to-alert measurement pathway is structurally idle under the current source portfolio — not a failure, but a fact worth surfacing before anyone reads the resolver code as active.",
+  "falsification": "Falsified the first time NHC reports even one active storm and it gets notarized as FORECAST — at that point the pathway is exercised at least once and the gap this sensor watches for has closed, at least for that episode. If NHC stays empty for the full N nights purely because it is currently outside Atlantic/Pacific cyclone season, the gap is seasonal rather than structural, and the sensor's note should say so rather than implying a defect.",
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-08/nhc-current-storms.json",
+    "foreknown/snapshots/2026-08-08/manifest.json",
+    "practice/src/practice/foreknown/sources.py",
+    "practice/src/practice/foreknown/resolve.py"
+  ],
+  "status": "PROPOSED"
+}
