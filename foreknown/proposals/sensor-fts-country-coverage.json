@@ -1,0 +1,12 @@
+{
+  "name": "fts-country-coverage",
+  "definition": "For each OPEN ALERT_EPISODE future, whether at least one of its iso3 codes appears among the iso3 codes listed in the most recently preserved OCHA/FTS response-plan snapshot (foreknown/snapshots/<latest date>/fts-plans-2026.json, field data[].locations[].iso3). A purely mechanical membership check between two already-committed registers — no funding amount, adequacy, or need judgement is made or implied.",
+  "test_rule": "On each nightly run, after the registry is folded (practice/src/practice/foreknown/run.py), compute for every future with kind==ALERT_EPISODE and status==OPEN: has_fts_plan_match = bool(set(future.iso3) & fts_plan_iso3_set). Record the boolean per future id. The sensor fires (is worth a note in that night's summary) when the aggregate match rate crosses a round threshold (e.g. below 25% or above 50%) or changes by more than 10 percentage points from the prior recorded night — both thresholds to be set from at least 3 nights of baseline, not from tonight's single sample.",
+  "falsification": "The sensor is not useful if the match rate stays within a narrow band (say +/-5 points) across many nights regardless of which specific episodes open and close — that would mean the signal is dominated by the fixed set of high-income/non-appeal countries GDACS always reports (see obs-2026-08-08-3) rather than by anything that moves. It is also falsified if OCHA republishes the FTS plan list with a materially different schema (no iso3 field, or locations no longer nested the same way) — the membership check would then need to be rewritten, not just re-tuned.",
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-08/fts-plans-2026.json",
+    "foreknown/proposals/obs-2026-08-08-3.json"
+  ],
+  "status": "PROPOSED"
+}
