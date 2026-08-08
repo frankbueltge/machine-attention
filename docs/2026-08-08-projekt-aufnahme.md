@@ -1,9 +1,9 @@
 # Projekt-Aufnahme: Wie weitere Kandidaten in die Praxis kommen
 
-**Datum:** 2026-08-09 · **Status:** Vorschlag an Frank (sein Gegenvorschlag mit ChatGPT
+**Datum:** 2026-08-08 · **Status:** Vorschlag an Frank (sein Gegenvorschlag mit ChatGPT
 steht aus; dieses Dokument ist die Vergleichsbasis, kein Beschluss)
-**Kandidaten-Backlog:** `docs/2026-08-09-kandidat-planetary-listening.md`,
-`docs/2026-08-09-kandidat-synthetic-flood.md` (weitere folgen)
+**Kandidaten-Backlog:** `docs/2026-08-08-kandidat-planetary-listening.md`,
+`docs/2026-08-08-kandidat-synthetic-flood.md` (weitere folgen)
 
 ## Grundsatz
 
@@ -23,7 +23,7 @@ EXPOSÉ → AUDIT → V0 → E-EXPERIMENT → RUNNING        (jederzeit: RETIRED
    V0-Skizze, offene Fragen (Muster: die beiden vorhandenen Kandidaten-Exposés).
 2. **AUDIT** — Go/No-Go-Protokoll je Quelle mit Live-Probes (dataset-hub-Methode; Lehre
    aus SBTI: externe Annahmen altern schneller als Architekturen). Endet mit einem
-   datierten Audit-Dokument wie `2026-08-09-foreknown-001-audit-und-entwurf.md`.
+   datierten Audit-Dokument wie `2026-08-08-foreknown-001-audit-und-entwurf.md`.
 3. **V0** — kleinster Slice, der nächtlich committete, `verify.py`-geprüfte Records
    erzeugt. Nutzt das Substrat (`practice/`: fetch/preserve/autonomy), erfindet keine
    neue Infrastruktur.
@@ -90,3 +90,72 @@ nacheinander:
 Kein Multi-Projekt-Framework, keine gemeinsame Ontologie, kein Projekt-Dashboard, keine
 Aufnahme ohne Live-Datenprobe, kein Parallel-Bau von zwei V0s, keine Bühnen-Präsenz vor
 bestandenem E-Experiment.
+
+---
+
+## Nachtrag (2026-08-08, abends): Synthese mit Franks ChatGPT-Dokumenten
+
+Frank hat drei Dokumente aus seinem ChatGPT-Strang eingebracht. Chronologie: Die beiden
+älteren (Dark Ocean als 001; Founding-Corpus-Tabelle 001–004) entstanden BEVOR ChatGPT
+The Foreknown kannte — sie beantworten dieselbe Flagship-Frage parallel; das jüngste
+Dokument kennt Foreknown/Repo/Bühne und bestätigt Foreknown als 001. Beschluss:
+
+### Übernommen
+
+1. **Founding Corpus.** Die Praxis startet nicht bei null: Das Lab besitzt ein
+   proto-investigatives Werkcorpus mit einer gemeinsamen Operation — *Differenzen
+   zwischen öffentlichen Darstellungen eines Zustands und anderen technisch
+   beobachtbaren Versionen desselben Zustands* („multiple regimes of visibility"):
+   Ghost Fleet (deklariert ≠ physisch sichtbar), Consensus (unabhängig erscheinend ≠
+   gemeinsamer Ursprung), Editorial Deadline (heutige Aussage ≠ eigene Aktenlage),
+   Two Meters / The Floor / One Tap (legitime Messregime ≠ einander).
+2. **Origin-Experiment-Muster statt Portierung.** Ein neues Projekt WÄCHST aus einem
+   Lab-Experiment; das Original bleibt vollständig erhalten, zitierbar, unter seiner
+   URL, und wird künftig als „ORIGIN" ausgewiesen. Nichts wird still umetikettiert.
+   Field-/Studio-Werke (Two Meters, The Floor, One Tap) behalten ihre
+   Ecology-Provenienz und werden nur als externe Precursors referenziert.
+3. **Founding sensibility, keine Verfassung.** discrepancy · absence · duplication ·
+   rewriting · measurement boundaries · visibility · provenance · physical trace
+   werden die ersten Discovery-Operatoren — ausdrücklich Startsensibilität, kein
+   Oberthema. Der Erfolgsfall bleibt ein Projekt, das niemand von uns vorgeschlagen
+   hat („006-Punkt").
+4. **Werk-Tiefe vor neuen Quellen.** The Foreknown wird als vollständiges Werk gebaut
+   (Reaktions-Achse nach Maschinen-Proposal `sensor-fts-country-coverage`, dann
+   ENTER → INVESTIGATE → VERIFY), BEVOR neue Quellen oder Projekte starten. FEWS/IPC
+   rückt nach hinten.
+5. **Substrat-Verträge auf Papier, Code bei Bedarf:** `artifact_ref` (Origin,
+   Abrufzeit, Hash, media_type, storage_uri — damit Git nicht unbemerkt
+   Universalmedium wird) und `stage_moment` (Projekte liefern der gemeinsamen Bühne
+   Momente statt Cards). Implementiert, wenn das ZWEITE Projekt sie real braucht;
+   die Substrat-Extraktion aus Foreknown ist der Stresstest, nicht der Vorrat.
+6. **Die harte Lehre aus One Tap** (zurückgezogen nach unzureichenden Inszenierungen,
+   Recherche blieb): *Gute Evidence ergibt nicht automatisch ein gutes digitales
+   Werk.* Abnahme-Maßstab für jede künftige Projekt-Form.
+7. **SBTI-Bühnenlabel** perspektivisch: „EARLY INSTRUMENT — STILL RUNNING".
+
+### Angepasst (Widerspruch, begründet)
+
+- **The Foreknown bleibt 001** — Franks Session-Entscheidung, vom jüngsten Dokument
+  bestätigt; die Dark-Ocean-als-001-Dokumente sind der ältere Parallel-Strang.
+- **Keine Vorab-Nummern.** Beide älteren Dokumente vergeben 001–004 vor jedem Audit —
+  das Roadmap-vor-Realität-Muster, das die Korrektur beerdigt hat. Arbeits-Sequenz ja,
+  Nummer erst bei RUNNING.
+- **Chorus vs. Synthetic Flood:** dieselbe Linie (Sprache in Maschinen-Skalierung,
+  Origin: The Consensus). Schwerpunkt entscheidet das Audit — EIN Projekt, keine
+  Doppelarchitektur.
+
+### Arbeits-Sequenz der Audits
+
+```
+JETZT   Foreknown als vollständiges Werk
+DANN    Dark-Ocean-Linie    (Origin: The Ghost Fleet; Substrat-Stresstest Geodaten;
+                             Exposé: docs/2026-08-08-kandidat-dark-ocean.md)
+DANN    Memory-Hole-Linie   (Origin: Editorial Deadline; Text/Zeit; zweiter Stresstest;
+                             Exposé: docs/2026-08-08-kandidat-memory-hole.md)
+DANN    Wahl: Chorus/Synthetic-Flood-Linie oder Planetary Listening
+SPÄTER  Compute-Ground-Linie (Precursors extern: Two Meters, The Floor, One Tap;
+                             Exposé: docs/2026-08-08-kandidat-compute-ground.md)
+```
+
+Jede Stufe durchläuft den Aufnahme-Pfad oben; Origins beschleunigen Audits, ersetzen
+sie nicht.

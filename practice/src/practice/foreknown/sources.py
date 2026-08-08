@@ -2,7 +2,7 @@
 structured warning feeds. Every adapter maps preserved bytes to future
 records — it never invents fields, and a source outage stays an outage.
 
-V0 sources (audited 2026-08-09, both keyless):
+V0 sources (audited 2026-08-08, both keyless):
 - GDACS (EU/JRC): active Orange/Red hazard alert episodes, all types.
 - NOAA NHC: tropical-cyclone advisories (genuine forecasts; an empty list
   is the honest quiet state).

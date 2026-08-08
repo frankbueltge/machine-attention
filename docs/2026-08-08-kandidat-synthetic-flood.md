@@ -1,6 +1,6 @@
 # Kandidat: The Synthetic Flood
 
-**Status:** Exposé zur Mitnahme in eine eigene Session · 2026-08-09
+**Status:** Exposé zur Mitnahme in eine eigene Session · 2026-08-08
 **Kontext:** Drittplatzierter Kandidat für Project 001 der machine investigative practice
 (gewählt wurde The Foreknown). Atlas-Lücke: Feld 12 „Sprache & Generativität" ist mit
 24 von 494 Werken dünn besetzt — und kein Werk *vermisst* die synthetische Flut, alle
@@ -39,7 +39,7 @@ führen, wenn der Messapparat selbst aus derselben Technologie besteht, die er v
   Autoren-Entropie. Die harte Detektion („ist dieser Text KI?") bleibt als ausgewiesen
   unsichere Schicht obenauf.
 
-## Datenlage (Kurzcheck 2026-08-09)
+## Datenlage (Kurzcheck 2026-08-08)
 
 | Quelle | Status | Notiz |
 |---|---|---|

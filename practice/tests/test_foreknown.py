@@ -42,7 +42,7 @@ def test_nhc_empty_list_is_the_honest_quiet_state():
 def test_registry_notarize_revise_close_lifecycle():
     registry = {"futures": {}}
     observed = sources.gdacs_futures(GDACS_FIXTURE)
-    anchors = {"GDACS": "foreknown/snapshots/2026-08-09/gdacs.json"}
+    anchors = {"GDACS": "foreknown/snapshots/2026-08-08/gdacs.json"}
 
     summary = update_registry(registry, observed, anchors)
     assert len(summary["notarized"]) == 2
@@ -81,7 +81,7 @@ def test_overdue_is_a_flag_not_a_closure():
     registry = {"futures": {}}
     update_registry(registry, sources.gdacs_futures(GDACS_FIXTURE), {"GDACS": "a"})
     drought = registry["futures"]["gdacs-dr-1027450"]
-    assert is_overdue(drought, "2026-08-09T00:00:00+00:00")
+    assert is_overdue(drought, "2026-08-08T00:00:00+00:00")
     assert drought["status"] == "OPEN"
 
 
@@ -102,16 +102,16 @@ def test_notary_run_end_to_end(tmp_path: Path):
         sources.NHC_URL: (json.dumps({"activeStorms": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
     }
-    summary = run(tmp_path, "2026-08-09", FakeClient(responses))
+    summary = run(tmp_path, "2026-08-08", FakeClient(responses))
     assert summary["notarized"] == 2 and summary["failures"] == 0
 
-    manifest = read_json(tmp_path / "foreknown/snapshots/2026-08-09/manifest.json")
+    manifest = read_json(tmp_path / "foreknown/snapshots/2026-08-08/manifest.json")
     assert len(manifest["entries"]) == 3
     registry = read_json(tmp_path / "foreknown/registry.json")
     anchor = registry["futures"]["gdacs-tc-1001297"]["history"][0]["snapshot"]
-    assert anchor == "foreknown/snapshots/2026-08-09/gdacs.json"
+    assert anchor == "foreknown/snapshots/2026-08-08/gdacs.json"
     log = (tmp_path / "autonomy/log.jsonl").read_text().strip().splitlines()
     assert json.loads(log[-1])["step"] == "foreknown-notary-run"
 
     with pytest.raises(SystemExit):
-        run(tmp_path, "2026-08-09", FakeClient(responses))
+        run(tmp_path, "2026-08-08", FakeClient(responses))

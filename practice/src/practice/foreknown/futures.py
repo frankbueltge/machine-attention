@@ -1,6 +1,6 @@
 """The registry of announced futures — the notary's ledger.
 
-Rules (docs/2026-08-09-foreknown-001-audit-und-entwurf.md):
+Rules (docs/2026-08-08-foreknown-001-audit-und-entwurf.md):
 - A future is NOTARIZED the first time it is seen; announced_at is the
   retrieval time of the preserved bytes and never changes afterwards.
 - A change to window or severity is a REVISED event, appended to history —

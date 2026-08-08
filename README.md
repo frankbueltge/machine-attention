@@ -17,7 +17,7 @@ real clocks, the ledger as fading traces. Every figure is a real system state;
 quiet nights are shown as exactly that.
 
 **Live:** https://frankbueltge.de/attention/ — published on frankbueltge.de
-(Frank's decision, 2026-08-09), where the site pulls the committed stage build
+(Frank's decision, 2026-08-08), where the site pulls the committed stage build
 nightly via its `attention-integrate` workflow. This repository builds
 `public/` as the canonical, verified artifact; it does not deploy itself.
 
@@ -27,9 +27,9 @@ nightly via its `attention-integrate` workflow. This repository builds
 > when — and measures the gap between warning and response while the clock is
 > still running.
 
-Design and source audit: [`docs/2026-08-09-foreknown-001-audit-und-entwurf.md`](docs/2026-08-09-foreknown-001-audit-und-entwurf.md).
+Design and source audit: [`docs/2026-08-08-foreknown-001-audit-und-entwurf.md`](docs/2026-08-08-foreknown-001-audit-und-entwurf.md).
 Every night the notary reads the world's public warning feeds (V0: GDACS
-hazard alerts, NOAA NHC cyclone forecasts — both keyless, audited 2026-08-09),
+hazard alerts, NOAA NHC cyclone forecasts — both keyless, audited 2026-08-08),
 preserves the original bytes with SHA-256 at the moment of issue, and folds
 them into the registry of announced futures:
 
@@ -78,10 +78,10 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
 
 - `sentinel.yml` — nightly notary run (05:45 UTC), commits as
   `Machine Attention <attention@machine-attention.invalid>`.
-- **Discovery pass** — since 2026-08-09 a nightly cloud routine (06:30 UTC)
+- **Discovery pass** — since 2026-08-08 a nightly cloud routine (06:30 UTC)
   in the maintainer's Claude UI, visible and manually startable there;
   `discovery.yml` stays as a manual fallback (`workflow_dispatch`, repo
-  secret). No hard budget cap (decision 2026-08-09); every run appends to
+  secret). No hard budget cap (decision 2026-08-08); every run appends to
   the autonomy protocol — for routine runs the token usage lives in the
   Claude UI and the log entry says so.
 - `ci.yml` — tests + `verify.py` + append-only guard.

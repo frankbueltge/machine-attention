@@ -34,7 +34,7 @@ def test_storm_token_extraction():
 def test_episode_verdict_measures_duration_revisions_and_escalation():
     future = _tc_future(history=[
         {"ts": "2026-08-08T05:46:00+00:00", "event": "NOTARIZED", "snapshot": "a"},
-        {"ts": "2026-08-09T05:46:00+00:00", "event": "REVISED",
+        {"ts": "2026-08-08T05:46:00+00:00", "event": "REVISED",
          "changes": {"severity": {"from": "Orange", "to": "Red"}}, "snapshot": "b"},
         {"ts": "2026-08-10T05:46:00+00:00", "event": "CLOSED_BY_SOURCE"},
     ])
@@ -111,7 +111,7 @@ def test_nightly_run_resolves_a_dissipated_forecast(tmp_path: Path):
         sources.NHC_URL: (json.dumps({"activeStorms": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
     }
-    run(tmp_path, "2026-08-09", FakeClient(night1))
+    run(tmp_path, "2026-08-08", FakeClient(night1))
     summary = run(tmp_path, "2026-08-10", FakeClient(night2))
     assert summary["closed"] == 1 and summary["resolved"] == 1
 
