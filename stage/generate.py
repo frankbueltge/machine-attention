@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the practice stage deterministically from committed records.
 
-V2 (2026-08-09, after Frank's ten-second test): the first screen must be
+V2 (2026-08-08, after Frank's ten-second test): the first screen must be
 understood by a first-time visitor in ten seconds — one plain sentence, one
 real phenomenon (the next-expiring warning, ticking), one action. House
 vocabulary ("practice", "notarized", "announced futures") appears only after

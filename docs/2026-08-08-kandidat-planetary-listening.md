@@ -1,6 +1,6 @@
 # Kandidat: Planetary Listening
 
-**Status:** Exposé zur Mitnahme in eine eigene Session · 2026-08-09
+**Status:** Exposé zur Mitnahme in eine eigene Session · 2026-08-08
 **Kontext:** Zweitplatzierter Kandidat für Project 001 der machine investigative practice
 (gewählt wurde The Foreknown). Atlas-Lücke: Familie „Erkenntnis/Sinne" — kein Werk im
 Atlas (494 Einträge) betreibt kontinuierliches maschinelles Zuhören als Untersuchung.
@@ -26,7 +26,7 @@ planetaren Signal maschinell isolieren, beweisbar und in Echtzeit?
   Muster wie „Steinbruch sprengt regelmäßig außerhalb der genehmigten Zeiten" oder
   „Bombardement-Rhythmus einer Region" sind reine machine attention.
 
-## Datenlage (Kurzcheck 2026-08-09, vor Bau volles Go/No-Go-Protokoll)
+## Datenlage (Kurzcheck 2026-08-08, vor Bau volles Go/No-Go-Protokoll)
 
 | Quelle | Status | Notiz |
 |---|---|---|

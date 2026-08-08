@@ -26,7 +26,7 @@ def _fixture_repo(tmp_path: Path) -> Path:
         sources.NHC_URL: (json.dumps({"activeStorms": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
     }
-    run(tmp_path, "2026-08-09", FakeClient(responses))
+    run(tmp_path, "2026-08-08", FakeClient(responses))
     return tmp_path
 
 
@@ -52,7 +52,7 @@ def test_verify_catches_tampering_and_stale_stage(tmp_path):
     verify = _load("verify_t2", REPO_ROOT / "verify.py")
     assert verify.check(root) == []
 
-    preserved = root / "foreknown/snapshots/2026-08-09/gdacs.json"
+    preserved = root / "foreknown/snapshots/2026-08-08/gdacs.json"
     original = preserved.read_bytes()
     preserved.write_bytes(b"{}")
     assert any("do not match manifest sha256" in p for p in verify.check(root))
