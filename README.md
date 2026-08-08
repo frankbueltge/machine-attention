@@ -70,10 +70,12 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
 
 - `sentinel.yml` — nightly notary run (05:45 UTC), commits as
   `Machine Attention <attention@machine-attention.invalid>`.
-- `discovery.yml` — nightly discovery pass (06:30 UTC) on the maintainer's
-  subscription (`CLAUDE_CODE_OAUTH_TOKEN` secret; `ANTHROPIC_API_KEY` as
-  fallback). No hard budget cap (decision 2026-08-09), but every run logs
-  model and tokens — the trace obligation is not optional.
+- **Discovery pass** — since 2026-08-09 a nightly cloud routine (06:30 UTC)
+  in the maintainer's Claude UI, visible and manually startable there;
+  `discovery.yml` stays as a manual fallback (`workflow_dispatch`, repo
+  secret). No hard budget cap (decision 2026-08-09); every run appends to
+  the autonomy protocol — for routine runs the token usage lives in the
+  Claude UI and the log entry says so.
 - `ci.yml` — tests + `verify.py` + append-only guard.
 - `automerge.yml` — discovery deliveries merge themselves once CI is green.
 - Publishing: frankbueltge.de pulls `public/` nightly (no deployer here —
