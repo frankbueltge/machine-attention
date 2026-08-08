@@ -1,0 +1,43 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install practice
+        run: python -m pip install --quiet -e './practice[dev]'
+
+      - name: Tests
+        run: cd practice && python -m pytest -q
+
+      - name: Verify provenance chain
+        run: python verify.py --repo-root .
+
+  append-only:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Refuse modifications to preserved snapshots (I3)
+        run: |
+          changed=$(git diff --name-status --diff-filter=MD \
+            "origin/${{ github.base_ref }}...HEAD" -- foreknown/snapshots/ || true)
+          if [ -n "$changed" ]; then
+            echo "preserved snapshots are append-only (I3):" >&2
+            echo "$changed" >&2
+            exit 1
+          fi

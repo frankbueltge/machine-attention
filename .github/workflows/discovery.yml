@@ -1,0 +1,98 @@
+# The nightly discovery pass — the intelligence layer of the practice.
+# Runs on the maintainer's subscription (CLAUDE_CODE_OAUTH_TOKEN) or an API
+# key. Decision 2026-08-09 (Frank): no hard budget cap for now; the full
+# trace obligation stays — every run logs model and tokens to the autonomy
+# protocol. Delivers via pull request; ci gates, automerge completes.
+name: discovery
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: discovery
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Require model access
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::Neither CLAUDE_CODE_OAUTH_TOKEN nor ANTHROPIC_API_KEY is configured — discovery cannot run tonight. Nothing is invented."
+            exit 1
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install tooling
+        run: |
+          python -m pip install --quiet -e ./practice
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Discovery pass
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          BRANCH="discovery/$(date -u +%F)"
+          git checkout -b "$BRANCH"
+          claude -p "$(cat discovery/PROMPT.md)" \
+            --permission-mode bypassPermissions \
+            --output-format json \
+            > "$RUNNER_TEMP/result.json" || true
+          jq -r '.result // empty' "$RUNNER_TEMP/result.json" | tail -c 1500 || true
+
+      - name: Record run in the autonomy protocol
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from practice import autonomy
+
+          model, cost, tokens = None, 0.0, 0
+          try:
+              result = json.loads((Path(os.environ["RUNNER_TEMP"]) / "result.json").read_text())
+              model = ",".join(result.get("modelUsage", {}).keys()) or None
+              cost = float(result.get("total_cost_usd") or 0.0)
+              usage = result.get("usage") or {}
+              tokens = int(usage.get("input_tokens", 0)) + int(usage.get("output_tokens", 0))
+          except Exception:
+              pass
+          autonomy.append(Path("."), "discovery-pass", "machine", model=model,
+                          tokens=tokens, cost=cost, currency="USD",
+                          detail={"workflow": "discovery.yml"})
+          PY
+
+      - name: Deliver as pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "Machine Attention"
+          git config user.email "attention@machine-attention.invalid"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "an empty night is honest — no proposals"
+            exit 0
+          fi
+          git commit -m "discovery: pass of $(date -u +%F)"
+          git push -u origin "HEAD"
+          gh pr create \
+            --title "discovery: $(date -u +%F)" \
+            --body "Nightly discovery pass. Observations and proposals cite committed evidence; ci (tests + verify.py) is the gate. Model and tokens are recorded in autonomy/log.jsonl."
