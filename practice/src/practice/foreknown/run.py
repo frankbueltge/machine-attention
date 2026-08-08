@@ -16,6 +16,7 @@ from ..fetch import Client, SourceUnavailable
 from ..preserve import Snapshot, read_json, write_json
 from . import sources
 from .futures import is_overdue, update_registry
+from .resolve import resolve_pending
 
 FEEDS = (
     ("GDACS", sources.GDACS_URL, "gdacs.json", sources.gdacs_futures),
@@ -66,6 +67,10 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
     summary = update_registry(registry, observed, snapshot_files)
     write_json(registry_path, registry)
 
+    # The resolver measures what the notary recorded: every closed-but-
+    # unresolved future gets its verdict, derived from committed records only.
+    resolutions = resolve_pending(repo_root, registry)
+
     open_futures = [f for f in registry["futures"].values() if f["status"] == "OPEN"]
     overdue = [f["id"] for f in open_futures if is_overdue(f)]
 
@@ -77,6 +82,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "observed": len(observed),
         "failures": failures,
         **{k: sorted(v) for k, v in summary.items()},
+        "resolved": sorted(r["future"] for r in resolutions),
         "open_total": len(open_futures),
         "overdue": sorted(overdue),
     })
@@ -84,9 +90,11 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "date": day, "requests": client.requests,
         "observed": len(observed), "notarized": len(summary["notarized"]),
         "revised": len(summary["revised"]), "closed": len(summary["closed"]),
+        "resolved": len(resolutions),
         "open_total": len(open_futures), "failures": len(failures)})
     return {"date": day, "observed": len(observed), "failures": len(failures),
             **{k: len(v) for k, v in summary.items()},
+            "resolved": len(resolutions),
             "open_total": len(open_futures)}
 
 

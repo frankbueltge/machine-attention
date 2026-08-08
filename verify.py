@@ -20,6 +20,7 @@ from pathlib import Path
 VALID_STATUS = {"OPEN", "CLOSED_BY_SOURCE", "DISSIPATED"}
 VALID_EVENTS = {"NOTARIZED", "REVISED", "REAPPEARED", "CLOSED_BY_SOURCE",
                 "DISSIPATED"}
+VALID_VERDICTS = {"EPISODE_ENDED", "MATERIALIZED_AS_ALERT", "NO_ALERT_MATCH"}
 MANIFEST_KEYS = ("file", "url", "retrieved_at", "http_status", "sha256")
 
 
@@ -87,6 +88,27 @@ def check(root: Path) -> list[str]:
             anchor = event.get("snapshot")
             if anchor and anchor not in registry_files:
                 problems.append(f"{fid}: history anchor {anchor} not manifested")
+
+    for res_file in sorted(root.glob("foreknown/resolutions/*.json")):
+        resolution = load(res_file)
+        fid = resolution.get("future", res_file.stem)
+        future = registry["futures"].get(fid)
+        if future is None:
+            problems.append(f"resolution {fid}: unknown future")
+            continue
+        if future.get("status") == "OPEN":
+            problems.append(f"resolution {fid}: future is still OPEN")
+        if resolution.get("verdict") not in VALID_VERDICTS:
+            problems.append(f"resolution {fid}: illegal verdict "
+                            f"{resolution.get('verdict')!r}")
+        if not resolution.get("resolved_at"):
+            problems.append(f"resolution {fid}: missing resolved_at")
+        if not isinstance(resolution.get("measured"), dict):
+            problems.append(f"resolution {fid}: measured is not a record")
+        for anchor in resolution.get("evidence", []):
+            if anchor not in registry_files:
+                problems.append(f"resolution {fid}: evidence {anchor} "
+                                "not manifested")
 
     log_path = root / "autonomy" / "log.jsonl"
     run_dates = {load(p)["date"] for p in root.glob("foreknown/snapshots/*/run.json")}

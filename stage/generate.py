@@ -44,11 +44,17 @@ def collect(root: Path) -> dict:
     open_futures = sorted((f for f in futures.values() if f["status"] == "OPEN"),
                           key=lambda f: (f.get("window", {}).get("to") or "9999",
                                          f["id"]))
-    events = sorted(((h, f) for f in futures.values() for h in f["history"]),
-                    key=lambda pair: pair[0]["ts"], reverse=True)[:12]
+    resolutions = [read_json(p)
+                   for p in sorted(root.glob("foreknown/resolutions/*.json"))]
+    event_pairs = [(h, f) for f in futures.values() for h in f["history"]]
+    event_pairs += [({"ts": r["resolved_at"], "event": f"RESOLVED_{r['verdict']}"},
+                     futures[r["future"]])
+                    for r in resolutions if r.get("future") in futures]
+    events = sorted(event_pairs, key=lambda pair: pair[0]["ts"],
+                    reverse=True)[:12]
     return {"registry": registry, "runs": runs, "first_byte": first_byte,
             "open": open_futures, "events": events,
-            "total": len(futures)}
+            "resolved": len(resolutions), "total": len(futures)}
 
 
 def _clock(future: dict) -> str:
@@ -147,7 +153,8 @@ def build(root: Path, out: Path | None = None) -> Path:
   {featured_html}
 
   <p class="counts"><strong>{len(open_futures)} warnings under watch right now</strong>
-  — {esc(counts_line)} · recording since {esc(since)} · next reading in
+  — {esc(counts_line)}{f" · {data['resolved']} resolved with a measured verdict" if data['resolved'] else ''}
+  · recording since {esc(since)} · next reading in
   <span id="countdown">—</span></p>
 
   <section class="futures" aria-label="More warnings under watch">

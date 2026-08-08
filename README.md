@@ -38,8 +38,16 @@ them into the registry of announced futures:
 - **REVISED** — window or severity changed; the original stays in the history.
 - **CLOSED_BY_SOURCE / DISSIPATED** — the feed let go of it.
 - **overdue** — the window passed but the warning is still fed: a flag worth
-  watching, not an error. V0 does not judge ARRIVED/NOT_ARRIVED — that verdict
-  needs outcome resolvers and is honestly deferred.
+  watching, not an error.
+
+Once a future closes, the **resolver** measures its verdict — derived from
+committed records only, never from a model or a fresh fetch: alert episodes
+get `EPISODE_ENDED` with duration, revision count and severity trajectory
+(escalations Orange→Red are first-class); dissipated forecasts are matched
+against the registry's own alert episodes — `MATERIALIZED_AS_ALERT` with the
+measured lead time, or `NO_ALERT_MATCH`, which is a statement about the
+record, not about the world. Cold-start bias is flagged per resolution.
+Resolutions live in `foreknown/resolutions/` and are append-only.
 
 The funding axis (OCHA FTS response plans) is preserved daily, so the money's
 movement between warning and event accumulates as a committed time series.
