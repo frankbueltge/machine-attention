@@ -53,10 +53,17 @@ class Client:
                 self._sleep(MIN_INTERVAL_S - elapsed)
         self._last_request_at = self._clock()
 
-    def fetch(self, url: str) -> tuple[bytes, int]:
-        """Fetch a document. Returns (bytes, status); retries retriable codes."""
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT,
-                                                   "Accept": "application/json"})
+    def fetch(self, url: str, headers: dict | None = None) -> tuple[bytes, int]:
+        """Fetch a document. Returns (bytes, status); retries retriable codes.
+        Extra headers are additive (e.g. a source that insists on gzip);
+        callers that ask for compression decompress themselves — what gets
+        preserved is the document, and the preserver hashes what it is given.
+        """
+        request_headers = {"User-Agent": USER_AGENT,
+                           "Accept": "application/json"}
+        if headers:
+            request_headers.update(headers)
+        req = urllib.request.Request(url, headers=request_headers)
         attempts = [0.0, *BACKOFF_S]
         last_detail = "unknown error"
         for wait in attempts:

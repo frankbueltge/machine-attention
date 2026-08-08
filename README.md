@@ -91,11 +91,33 @@ forecasts of our own. Sobriety is the register.
 **Background project:** [state-before-interface](https://github.com/frankbueltge/state-before-interface)
 (public AI procurement) keeps observing nightly and feeds the practice.
 
+## Dark Ocean — V0, admitted 2026-08-09
+
+> Ships tell the world where they are. Satellites can see where they
+> actually are. The two views do not always agree.
+
+Second investigation, at V0 of the admission path (audit:
+[`docs/2026-08-08-dark-ocean-audit.md`](docs/2026-08-08-dark-ocean-audit.md),
+Frank's GO in the autonomy protocol). **Coverage vs Declaration**, fully
+keyless: each night the machine notarizes which Sentinel-1 acquisitions
+covered which half-degree bins of the Baltic (catalog rows with the
+issuer's own checksums — scene bytes are never fetched) against how the
+declared ocean distributed itself in one agency AIS sample. Counts only,
+no vessel identities; the per-moment axis (DMA day dumps) is probed
+nightly and its outage recorded, never bridged. Records live in
+`darkocean/`; **no stage presence until the project passes its
+E-experiment** (admission path, stage 5). Origin:
+[The Ghost Fleet](https://frankbueltge.de/ghost-fleet/), which keeps
+running unchanged.
+
 ## Layout
 
 ```
 practice/                 shared substrate (fetch, preserve, autonomy) +
-                          project runtimes (practice.foreknown)
+                          project runtimes (practice.foreknown,
+                          practice.darkocean)
+darkocean/snapshots/      preserved catalog pages + AIS samples (append-only)
+darkocean/readings/       nightly Coverage-vs-Declaration records
 foreknown/snapshots/      preserved bytes, manifests, run records (append-only)
 foreknown/registry.json   the notary's ledger of announced futures
 foreknown/resolutions/    measured verdicts for closed futures (append-only)
@@ -112,6 +134,8 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
 
 - `sentinel.yml` — nightly notary run (05:45 UTC), commits as
   `Machine Attention <attention@machine-attention.invalid>`.
+- `darkocean.yml` — nightly Coverage-vs-Declaration reading (04:50 UTC),
+  same machine identity.
 - **Discovery pass** — since 2026-08-08 a nightly cloud routine (06:30 UTC)
   in the maintainer's Claude UI, visible and manually startable there;
   `discovery.yml` stays as a manual fallback (`workflow_dispatch`, repo

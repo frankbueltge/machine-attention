@@ -43,7 +43,9 @@ jobs:
             foreknown/resolutions/ \
             foreknown/reaction/snapshots/ \
             foreknown/reaction/attention/ \
-            foreknown/reaction/readings/ || true)
+            foreknown/reaction/readings/ \
+            darkocean/snapshots/ \
+            darkocean/readings/ || true)
           if [ -n "$changed" ]; then
             echo "these records are append-only (I3):" >&2
             echo "$changed" >&2
