@@ -18,7 +18,8 @@ function nextReading(now) {
 }
 function tick() {
   var now = Date.now();
-  document.getElementById('countdown').textContent = fmt(nextReading(now) - now);
+  var countdown = document.getElementById('countdown');
+  if (countdown) countdown.textContent = fmt(nextReading(now) - now);
   document.querySelectorAll('.clock').forEach(function (c) {
     var to = parseUTC(c.getAttribute('data-to'));
     var from = parseUTC(c.getAttribute('data-from'));

@@ -16,6 +16,23 @@ The public face is not documentation but a stage: monumental true statements,
 real clocks, the ledger as fading traces. Every figure is a real system state;
 quiet nights are shown as exactly that.
 
+Since 2026-08-08 (late UTC) the work carries its four depths — depth on
+demand, because evidence is infinite and attention is not:
+
+- **ATTRACT** — `index.html`, the ten-second stage.
+- **ENTER** — `future/<id>.html`, one dossier per announced future: its whole
+  life from the record, every event anchored in a preserved snapshot, the
+  world's reaction while it ran, the verdict once it closed.
+- **INVESTIGATE** — `ledger.html`, the full register night by night — and
+  what the machine itself has noticed (its observations and sensor
+  proposals, with their promotion status).
+- **VERIFY** — `verify.html`, where the claims meet the bytes: manifests,
+  hashes, and the commands to re-run the chain.
+
+All four levels are static, deterministic builds from the same committed
+records, so `verify.py` covers them byte for byte — and "no dead ends" is a
+test, not an intention.
+
 **Live:** https://frankbueltge.de/attention/ — published on frankbueltge.de
 (Frank's decision, 2026-08-08), where the site pulls the committed stage build
 nightly via its `attention-integrate` workflow. This repository builds
