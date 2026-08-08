@@ -1,0 +1,53 @@
+# Dark Ocean V0 (admission stage 3, Frank's GO 2026-08-08/09): the nightly
+# Coverage-vs-Declaration reading over the Baltic. Fully keyless by design —
+# the reading notarizes catalog rows and one agency AIS sample; scene bytes
+# are never fetched. Runs before the foreknown sentinel so the two commits
+# stay apart; both push with pull --rebase retries anyway.
+name: darkocean
+
+on:
+  schedule:
+    - cron: "50 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: darkocean
+
+jobs:
+  reading:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install practice
+        run: python -m pip install --quiet -e ./practice
+
+      - name: Coverage-vs-Declaration reading (yesterday, UTC)
+        run: python -m practice.darkocean.run --repo-root .
+
+      - name: Verify provenance chain
+        run: python verify.py --repo-root .
+
+      - name: Commit reading
+        run: |
+          git config user.name "Machine Attention"
+          git config user.email "attention@machine-attention.invalid"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "darkocean: reading of $(date -u -d 'yesterday' +%F)"
+          for attempt in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            git pull --rebase
+          done
+          echo "push failed after 5 attempts" >&2
+          exit 1

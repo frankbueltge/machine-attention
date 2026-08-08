@@ -1,0 +1,21 @@
+{
+  "entries": [
+    {
+      "bytes": 104679,
+      "file": "darkocean/snapshots/2026-08-07/cdse-catalog-p1.json",
+      "http_status": 200,
+      "retrieved_at": "2026-08-08T23:57:33+00:00",
+      "sha256": "81d1aba7807c23e33a2b0e97f471a9b7241f986dc0b2b41fcd19b214bf5beb1b",
+      "url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$top=1000&$orderby=ContentDate/Start%20asc&$filter=Collection/Name%20eq%20%27SENTINEL-1%27%20and%20contains(Name,%27GRD%27)%20and%20ContentDate/Start%20ge%202026-08-07T00:00:00.000Z%20and%20ContentDate/Start%20lt%202026-08-08T00:00:00.000Z%20and%20OData.CSC.Intersects(area=geography%27SRID=4326;POLYGON((9%2053.5,30%2053.5,30%2066,9%2066,9%2053.5))%27)"
+    },
+    {
+      "bytes": 396933,
+      "file": "darkocean/snapshots/2026-08-07/digitraffic-locations.json",
+      "http_status": 200,
+      "retrieved_at": "2026-08-08T23:57:33+00:00",
+      "sha256": "f9553d788ecdbb66862b58c5456770fc095792ae84e18bdd05a2f7f05a6ef972",
+      "url": "https://meri.digitraffic.fi/api/ais/v1/locations"
+    }
+  ],
+  "run_date": "2026-08-07"
+}

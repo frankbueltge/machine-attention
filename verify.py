@@ -222,6 +222,169 @@ def check_reaction(root: Path, registry: dict, registry_files: dict,
                             f"is not the {matched_episodes} recounted")
 
 
+# Dark Ocean's grid, restated on purpose: the verifier must not import the
+# code under audit, so the region constants and the point test live twice.
+_DO_LON0, _DO_LON1, _DO_LAT0, _DO_LAT1, _DO_CELL = 9.0, 30.0, 53.5, 66.0, 0.5
+
+
+def _do_cells():
+    lat = _DO_LAT0
+    while lat < _DO_LAT1 - 1e-9:
+        lon = _DO_LON0
+        while lon < _DO_LON1 - 1e-9:
+            yield f"E{lon:.1f}_N{lat:.1f}", lon + _DO_CELL / 2, lat + _DO_CELL / 2
+            lon += _DO_CELL
+        lat += _DO_CELL
+
+
+def _do_point_in_ring(lon, lat, ring):
+    inside = False
+    j = len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if (yi > lat) != (yj > lat) and \
+                lon < (xj - xi) * (lat - yi) / (yj - yi) + xi:
+            inside = not inside
+        j = i
+    return inside
+
+
+def _do_covered_cells(geojson):
+    if not geojson:
+        return []
+    kind, coords = geojson.get("type"), geojson.get("coordinates") or []
+    rings = [coords[0]] if kind == "Polygon" and coords else \
+        [poly[0] for poly in coords if poly] if kind == "MultiPolygon" else []
+    covered = []
+    for cid, clon, clat in _do_cells():
+        for ring in rings:
+            lons = [p[0] for p in ring]
+            lats = [p[1] for p in ring]
+            if min(lons) <= clon <= max(lons) and \
+                    min(lats) <= clat <= max(lats) and \
+                    _do_point_in_ring(clon, clat, ring):
+                covered.append(cid)
+                break
+    return covered
+
+
+def _do_cell_id(lon, lat):
+    if not (_DO_LON0 <= lon < _DO_LON1 and _DO_LAT0 <= lat < _DO_LAT1):
+        return None
+    return (f"E{_DO_LON0 + int((lon - _DO_LON0) / _DO_CELL) * _DO_CELL:.1f}"
+            f"_N{_DO_LAT0 + int((lat - _DO_LAT0) / _DO_CELL) * _DO_CELL:.1f}")
+
+
+def check_darkocean(root: Path, registry_files: dict,
+                    problems: list[str]) -> None:
+    """Redo each Coverage-vs-Declaration reading from its preserved bytes."""
+    base = root / "darkocean"
+    if not base.exists():
+        return
+    for path in sorted(base.glob("readings/*.json")):
+        reading = load(path)
+        name = f"darkocean {path.stem}"
+        if reading.get("date") != path.stem:
+            problems.append(f"{name}: date field disagrees with file name")
+        refs = reading.get("sources", {})
+        catalog_refs = refs.get("CDSE-catalog", [])
+        for ref in [*catalog_refs,
+                    *([refs["Digitraffic-AIS"]]
+                      if "Digitraffic-AIS" in refs else [])]:
+            if not (root / ref).exists():
+                problems.append(f"{name}: source {ref} is missing")
+            elif ref not in registry_files:
+                problems.append(f"{name}: source {ref} is not manifested")
+
+        # Observation axis, recomputed.
+        products = 0
+        acquisitions: dict = {}
+        for ref in catalog_refs:
+            if not (root / ref).exists():
+                continue
+            for product in load(root / ref).get("value", []):
+                if "GRD" not in product.get("Name", ""):
+                    continue
+                products += 1
+                key = (product.get("Name", "")[:3],
+                       (product.get("ContentDate") or {}).get("Start", ""),
+                       (product.get("ContentDate") or {}).get("End", ""))
+                acquisitions.setdefault(
+                    key, _do_covered_cells(product.get("GeoFootprint")))
+        observed: dict[str, int] = {}
+        for cells in acquisitions.values():
+            for cell in cells:
+                observed[cell] = observed.get(cell, 0) + 1
+
+        coverage = reading.get("coverage", {})
+        if coverage.get("catalog_products") != products:
+            problems.append(f"{name}: catalog_products "
+                            f"{coverage.get('catalog_products')} is not the "
+                            f"{products} recounted from preserved pages")
+        if coverage.get("acquisitions") != len(acquisitions):
+            problems.append(f"{name}: acquisitions "
+                            f"{coverage.get('acquisitions')} is not the "
+                            f"{len(acquisitions)} recounted")
+        got_acq = {(a.get("platform"), a.get("start"), a.get("end")):
+                   sorted(a.get("cells", []))
+                   for a in reading.get("acquisitions", [])}
+        want_acq = {key: sorted(cells)
+                    for key, cells in acquisitions.items()}
+        if got_acq != want_acq:
+            problems.append(f"{name}: acquisition cells do not match the "
+                            "footprints in the preserved catalog pages")
+
+        # Declared axis, recomputed.
+        declared_cells: dict[str, int] = {}
+        in_region = None
+        digitraffic_ref = refs.get("Digitraffic-AIS")
+        if digitraffic_ref and (root / digitraffic_ref).exists():
+            in_region = 0
+            for feature in load(root / digitraffic_ref).get("features", []):
+                coords = (feature.get("geometry") or {}).get("coordinates") or []
+                if len(coords) < 2:
+                    continue
+                cid = _do_cell_id(coords[0], coords[1])
+                if cid:
+                    in_region += 1
+                    declared_cells[cid] = declared_cells.get(cid, 0) + 1
+            declared = reading.get("declared_axis") or {}
+            if declared.get("cells") != declared_cells:
+                problems.append(f"{name}: declared cells do not match the "
+                                "preserved Digitraffic document")
+            if declared.get("vessels_in_region") != in_region:
+                problems.append(f"{name}: vessels_in_region "
+                                f"{declared.get('vessels_in_region')} is not "
+                                f"the {in_region} recounted")
+
+        expected_cells = {cid: {"observed_passes": observed.get(cid, 0),
+                                "declared_sample": declared_cells.get(cid, 0)}
+                          for cid in sorted(set(observed) | set(declared_cells))}
+        if reading.get("cells") != expected_cells:
+            problems.append(f"{name}: per-cell figures do not match the "
+                            "recomputation from preserved bytes")
+        expected_coverage = {
+            "catalog_products": products,
+            "acquisitions": len(acquisitions),
+            "cells_observed": len(observed),
+            "cells_declared_sample": len(declared_cells),
+            "cells_observed_and_declared_sample":
+                len(set(observed) & set(declared_cells)),
+            "cells_observed_silent_in_sample":
+                len(set(observed) - set(declared_cells)),
+            "cells_declared_unobserved_today":
+                len(set(declared_cells) - set(observed)),
+        }
+        if coverage != expected_coverage:
+            problems.append(f"{name}: coverage block does not match the "
+                            "recomputation")
+        text = json.dumps(reading, ensure_ascii=False)
+        if '"mmsi"' in text.lower():
+            problems.append(f"{name}: a vessel identity leaked into a "
+                            "derived record")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -229,6 +392,8 @@ def check(root: Path) -> list[str]:
     check_snapshots(root, "foreknown/snapshots", problems, registry_files, True)
     check_snapshots(root, "foreknown/reaction/snapshots", problems,
                     registry_files, False)
+    check_snapshots(root, "darkocean/snapshots", problems, registry_files,
+                    False)
 
     registry = load(root / "foreknown" / "registry.json") \
         if (root / "foreknown" / "registry.json").exists() else {"futures": {}}
@@ -274,6 +439,7 @@ def check(root: Path) -> list[str]:
                                 "not manifested")
 
     check_reaction(root, registry, registry_files, problems)
+    check_darkocean(root, registry_files, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
     run_dates = {load(p)["date"] for p in root.glob("foreknown/snapshots/*/run.json")}
