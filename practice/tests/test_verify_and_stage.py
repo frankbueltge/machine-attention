@@ -36,7 +36,9 @@ def test_stage_builds_from_real_records_and_verifies_clean(tmp_path):
     stagegen.build(root)
     page = (root / "public" / "index.html").read_text()
     assert "DOLPHIN-26" in page
-    assert "announced futures" in page.lower()
+    assert "warnings under watch" in page.lower()
+    # the ten-second rule: plain words before house vocabulary
+    assert "Disasters are announced before" in page
     assert (root / "public" / "fonts" / "plexcond600.woff2").exists()
 
     verify = _load("verify_t", REPO_ROOT / "verify.py")

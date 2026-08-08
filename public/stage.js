@@ -10,7 +10,7 @@ function parseUTC(iso) {
   if (!iso) return NaN;
   return Date.parse(/Z|[+-]\d\d:\d\d$/.test(iso) ? iso : iso + 'Z');
 }
-function nextObservation(now) {
+function nextReading(now) {
   var next = new Date(now);
   next.setUTCHours(5, 45, 0, 0);
   if (next.getTime() <= now) next.setUTCDate(next.getUTCDate() + 1);
@@ -18,16 +18,14 @@ function nextObservation(now) {
 }
 function tick() {
   var now = Date.now();
-  var el = document.getElementById('elapsed');
-  var first = parseUTC(el.getAttribute('data-first'));
-  el.textContent = isNaN(first) ? 'first observation pending' : fmt(now - first);
-  document.getElementById('countdown').textContent = fmt(nextObservation(now) - now);
+  document.getElementById('countdown').textContent = fmt(nextReading(now) - now);
   document.querySelectorAll('.clock').forEach(function (c) {
     var to = parseUTC(c.getAttribute('data-to'));
     var from = parseUTC(c.getAttribute('data-from'));
     if (!isNaN(to)) {
-      c.textContent = to > now ? fmt(to - now) + ' remain in the announced window'
-        : 'window passed ' + fmt(now - to) + ' ago — still fed';
+      c.textContent = to > now
+        ? fmt(to - now) + ' left in the announced danger window'
+        : 'danger window passed ' + fmt(now - to) + ' ago — warning still active';
     } else if (!isNaN(from)) {
       c.textContent = 'ongoing for ' + fmt(now - from);
     }
@@ -36,20 +34,7 @@ function tick() {
 tick(); setInterval(tick, 1000);
 
 var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var statements = JSON.parse(document.getElementById('statements').textContent);
-var stmtEl = document.getElementById('statement');
 var traces = Array.prototype.slice.call(document.querySelectorAll('.trace[data-cycle]'));
-if (!reduced && statements.length > 1) {
-  var si = 0;
-  setInterval(function () {
-    stmtEl.classList.add('is-fading');
-    setTimeout(function () {
-      si = (si + 1) % statements.length;
-      stmtEl.innerHTML = statements[si];
-      stmtEl.classList.remove('is-fading');
-    }, 1400);
-  }, 9500);
-}
 if (!reduced && traces.length > 3) {
   traces.forEach(function (t, i) { if (i >= 3) t.classList.add('is-hidden'); });
   var ti = 0;
