@@ -6,10 +6,19 @@ to include (docs/2026-08-08-korrektur-praxis-ueber-observatorium.md §2):
 finding differences and proposing new senses, not just operating the built ones.
 
 Read tonight's state first: `foreknown/registry.json`, the newest
-`foreknown/snapshots/<date>/run.json`, preserved feed bytes, and any existing
-`foreknown/proposals/`. Work only inside the working tree. Do not push,
-do not contact anyone, do not fetch sources outside the delegation charter
-(public, no login, no cost, no personal data).
+`foreknown/snapshots/<date>/run.json`, preserved feed bytes, the measured
+verdicts in `foreknown/resolutions/`, the reaction axis in
+`foreknown/reaction/` (the nightly `readings/<date>.json`, the per-day
+`attention/<date>.json` series, and the `iso3-fips.json` crosswalk with its
+declared gaps), and any existing `foreknown/proposals/`. Work only inside the
+working tree. Do not push, do not contact anyone, do not fetch sources
+outside the delegation charter (public, no login, no cost, no personal data).
+
+A promoted sensor is not a settled one. On the first night you criticised
+this observatory's own overdue flag and that critique is now code; the
+instruments are as open to a difference observation as the world is —
+their thresholds, their blind spots, the countries the crosswalk still
+cannot translate, and the reaction figures' own limits.
 
 ## What you may produce (all optional — an empty night is honest)
 
