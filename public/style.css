@@ -37,6 +37,8 @@ header { display: flex; justify-content: space-between; gap: 2rem; color: var(--
 .futures { display: grid; grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
   gap: 1px; background: var(--line); border: 1px solid var(--line); align-self: start; }
 .future { background: var(--ink); padding: 0.9rem 1rem; }
+a.future { text-decoration: none; display: block; }
+a.future:hover h3 { color: var(--signal); }
 .future-kind { color: var(--faint); font-size: 0.78em; letter-spacing: 0.1em;
   text-transform: uppercase; }
 .future h3 { font-family: 'Plex Cond','Arial Narrow',sans-serif; font-weight: 600;
@@ -57,12 +59,59 @@ footer { display: flex; justify-content: space-between; align-items: flex-end;
   gap: 2rem; border-top: 1px solid var(--line); padding-top: clamp(10px,2vmin,18px); }
 .state-line { color: var(--faint); max-width: 72ch; }
 .state-line strong, .state-line em { color: var(--paper); font-style: normal; }
-.enter-nav { display: flex; gap: 1.4rem; }
+.enter-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
 .enter { font-family: 'Plex Cond','Arial Narrow',sans-serif; font-weight: 600;
   text-transform: uppercase; font-size: clamp(14px,1.5vw,21px); letter-spacing: 0.06em;
   text-decoration: none; border-bottom: 2px solid var(--signal);
   padding-bottom: 2px; white-space: nowrap; }
 .enter:hover { color: var(--signal); }
+.plain { text-decoration: none; }
+.plain:hover { color: var(--signal); }
+
+/* the deeper levels: enter (dossier), investigate (ledger), verify */
+.stage.doc { display: block; max-width: 86ch; margin: 0 auto; }
+.doc header { margin-bottom: clamp(16px,2.6vmin,28px); }
+.crumb { display: inline-block; color: var(--faint); text-decoration: none;
+  margin-bottom: 1.2rem; }
+.crumb:hover { color: var(--signal); }
+.kicker { color: var(--faint); letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 0.8em; margin: 1.2rem 0 0.4rem; }
+.doc h1 { font-family: 'Plex Cond','Arial Narrow',sans-serif; font-weight: 600;
+  text-transform: uppercase; font-size: clamp(26px,4.6vw,58px); line-height: 1.02;
+  margin: 0.1rem 0 0.3rem; text-wrap: balance; }
+.doc h2 { color: var(--faint); letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 0.8em; font-weight: 400; margin: 2.2rem 0 0.6rem; }
+.doc section p { max-width: 74ch; margin: 0.35rem 0; }
+.note { color: var(--faint); font-size: 0.85em; max-width: 70ch; }
+.trace-list { list-style: none; padding: 0; margin: 0.4rem 0 0;
+  border-left: 2px solid var(--line); }
+.trace-list li { padding: 0.5rem 0 0.5rem 1.1rem; position: relative;
+  max-width: 72ch; }
+.trace-list li::before { content: ''; position: absolute; left: -5px; top: 1.1em;
+  width: 8px; height: 8px; background: var(--signal); }
+.trace-list .when { color: var(--faint); font-size: 0.8em;
+  letter-spacing: 0.08em; display: block; }
+.evidence { display: block; color: var(--faint); font-size: 0.78em;
+  margin-top: 0.15rem; }
+.evidence a { color: inherit; }
+.plans { margin: 0.3rem 0 0.4rem 1.1rem; padding: 0; }
+.plans li { margin: 0.2rem 0; max-width: 70ch; }
+.tbl { width: 100%; border-collapse: collapse; margin: 0.4rem 0 1rem; }
+.tbl th { text-align: left; color: var(--faint); font-weight: 400;
+  font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.12em; }
+.tbl th, .tbl td { padding: 0.4rem 0.9rem 0.4rem 0;
+  border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl a { color: inherit; text-decoration: none;
+  border-bottom: 1px solid var(--signal); }
+.tbl a:hover { color: var(--signal); }
+.hash { color: var(--trace); font-size: 0.75em; word-break: break-all; }
+.badge { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75em;
+  color: var(--paper); border: 1px solid var(--line); padding: 0.1rem 0.45rem; }
+.badge-standing { color: var(--signal); border-color: var(--signal); }
+.doc pre { background: var(--line); padding: 0.8rem 1rem; overflow-x: auto;
+  font-size: 0.85em; max-width: 74ch; }
+.doc footer { margin-top: 2.6rem; }
+
 @media (prefers-reduced-motion: reduce) { .trace { transition: none; } }
 @media (max-width: 640px) {
   .trace { white-space: normal; }

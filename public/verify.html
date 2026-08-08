@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify — The Foreknown</title>
+<meta name="description" content="The provenance level: preserved bytes, hashes, and how to re-run the whole chain.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage doc">
+  <header>
+    <span>The Foreknown — a machine records the world&#8217;s warnings</span>
+    <span>every figure on this page is real</span>
+  </header>
+  <a class="crumb" href="index.html">&larr; the stage</a>
+
+  <p class="kicker">Verify — where the claims meet the bytes</p>
+  <h1>Nothing here asks to be believed</h1>
+  <p>Every figure on these pages is derived from bytes preserved at the
+  moment of reading — hashed, manifested, committed. This page is the bottom
+  of the work: the chain itself.</p>
+
+  <section>
+    <h2>How the chain holds</h2>
+    <p>Each night the machine fetches the public feeds and preserves the
+    original bytes with URL, UTC time and SHA-256. The registry of announced
+    futures is folded from those bytes; revisions append, nothing is
+    overwritten. Verdicts and reaction figures are derived from committed
+    records only. The stage — including this page — is a deterministic
+    rebuild: the verifier recomputes every page and every reaction figure
+    from the bytes and fails if one byte differs.</p>
+  </section>
+
+  <section>
+    <h2>Run it yourself</h2>
+    <pre><code>git clone https://github.com/frankbueltge/machine-attention
+cd machine-attention &amp;&amp; python verify.py --repo-root .
+cd practice &amp;&amp; python -m pip install -e '.[dev]' &amp;&amp; python -m pytest</code></pre>
+  </section>
+
+  <section>
+    <h2>The preserved bytes</h2>
+    
+    <h3 class="kicker">2026-08-08</h3><table class="tbl"><thead><tr><th>preserved file</th><th>bytes</th><th>sha-256</th></tr></thead><tbody><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/snapshots/2026-08-08/gdacs.json">foreknown/snapshots/2026-08-08/gdacs.json</a></td><td>142203</td><td class="hash">4754958fb43df72c98a69ebf18e286a5433c61a801277806388bddf33825a04d</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/snapshots/2026-08-08/nhc-current-storms.json">foreknown/snapshots/2026-08-08/nhc-current-storms.json</a></td><td>24</td><td class="hash">faea5cf4718512d456018c5081c2b274d7709e4f7f69e4d0bb2556d0d33360d7</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/snapshots/2026-08-08/fts-plans-2026.json">foreknown/snapshots/2026-08-08/fts-plans-2026.json</a></td><td>191583</td><td class="hash">a5477f92ac68116b77f7991b7eff0be2d49f12079d208b6cdd15cf122b2b0fcc</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/reaction/snapshots/2026-08-08/fts-funding-2026.json">foreknown/reaction/snapshots/2026-08-08/fts-funding-2026.json</a></td><td>65226</td><td class="hash">d79d4077c2803d9193265b6ef81e5d4d35243bef3e2b2766eee7ac3d54697e3a</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/reaction/snapshots/2026-08-08/fips-country.txt">foreknown/reaction/snapshots/2026-08-08/fips-country.txt</a></td><td>4268</td><td class="hash">5c749d1e447b47be45de78702ab49e9697cc54a0bf058f13664cdbe5c71beec1</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>Bytes referenced, not stored</h2>
+    <p>The attention series reads GDELT&#8217;s daily export — about six
+    megabytes a day, immutable once published. The bytes are not kept here;
+    each committed day carries the url, length and SHA-256 of what was read,
+    so the derivation can be redone by anyone. A hash that stops matching is
+    not a broken link — it is the finding.</p>
+    <table class="tbl"><thead><tr><th>day</th><th>world articles</th>
+    <th>source</th><th>sha-256 of the bytes read</th></tr></thead>
+    <tbody><tr><td>2026-08-07</td><td>1,134,791</td><td><a href="http://data.gdeltproject.org/events/20260807.export.CSV.zip">source file</a></td><td class="hash">2e82cdd14df032489c6177c1a2666c437f7f38b37b2885d6f9eb9fc0761bebe1</td></tr><tr><td>2026-08-06</td><td>1,185,421</td><td><a href="http://data.gdeltproject.org/events/20260806.export.CSV.zip">source file</a></td><td class="hash">f2bf7343cf268766aae169bcad37f3fa54796b9ad187a68f4d98e913d8a5b0df</td></tr><tr><td>2026-08-05</td><td>1,236,267</td><td><a href="http://data.gdeltproject.org/events/20260805.export.CSV.zip">source file</a></td><td class="hash">2e7a081a92a1f34fef5174e37e36cd56c99cd97ac83e6171952e0023cf925eda</td></tr><tr><td>2026-08-04</td><td>1,166,239</td><td><a href="http://data.gdeltproject.org/events/20260804.export.CSV.zip">source file</a></td><td class="hash">f8e1c67baf228d27388dd112e616a1676a8965de5cf9460bb2a19c853d5d9802</td></tr><tr><td>2026-08-03</td><td>1,019,579</td><td><a href="http://data.gdeltproject.org/events/20260803.export.CSV.zip">source file</a></td><td class="hash">abee42b805b2a2b380576a65a646cc2b3326c4828a41b694ca810ded552f8558</td></tr><tr><td>2026-08-02</td><td>665,613</td><td><a href="http://data.gdeltproject.org/events/20260802.export.CSV.zip">source file</a></td><td class="hash">9f66270d375eb3ebee8b70106f68fa4bef85efcc59e2e081682d755a0e370830</td></tr><tr><td>2026-08-01</td><td>739,646</td><td><a href="http://data.gdeltproject.org/events/20260801.export.CSV.zip">source file</a></td><td class="hash">7dc804b5c95e7863557b2e52a523e047f130e71c573a079c7a71a6ec3fa5fb32</td></tr><tr><td>2026-07-31</td><td>1,339,145</td><td><a href="http://data.gdeltproject.org/events/20260731.export.CSV.zip">source file</a></td><td class="hash">277a55fa64eab142a4980c8e2cb06f2883beaa7471047d863d49ac495d84b147</td></tr><tr><td>2026-07-30</td><td>1,337,870</td><td><a href="http://data.gdeltproject.org/events/20260730.export.CSV.zip">source file</a></td><td class="hash">94fd07f01cc0d76be366ce243909596b1d7ddb11374ce410d013b5d017f4e295</td></tr><tr><td>2026-07-29</td><td>1,286,610</td><td><a href="http://data.gdeltproject.org/events/20260729.export.CSV.zip">source file</a></td><td class="hash">8f23c97d9f81a8472f9795138b1697f156c1320e827227796ac7475a09dd6fec</td></tr></tbody></table>
+    <p class="note">Showing the newest 10 of 60 committed days; every one carries url, byte count and SHA-256 in <a href="https://github.com/frankbueltge/machine-attention/tree/main/foreknown/reaction/attention">foreknown/reaction/attention</a>.</p>
+  </section>
+
+  <section><h2>The one hand-authored link</h2><p>The country crosswalk translates 75 iso3 codes to the FIPS codes GDELT locates events with. It is the only hand-written joint in the chain, so it carries its own evidence: every code is checked against <a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/reaction/iso3-fips.json">the committed record</a>, name by name. The check against the issuer&#8217;s own code list has recorded 1 finding about the instrument itself — kept in the file, not silently corrected.</p></section>
+
+  <section>
+    <h2>The machine&#8217;s own steps</h2>
+    <p>Every run, every discovery pass and every human intervention appends
+    to the <a href="https://github.com/frankbueltge/machine-attention/blob/main/autonomy/log.jsonl">autonomy protocol</a> —
+    actor, model, tokens, cost. No aggregate score is computed, by
+    design.</p>
+  </section>
+  <footer>
+    <p class="state-line">Every statement above is derived from committed
+    records; the archive is public and the whole chain can be re-run.</p>
+    <nav class="enter-nav"><a class="enter" href="index.html">Stage &rarr;</a><a class="enter" href="ledger.html">Ledger &rarr;</a><a class="enter" href="verify.html">Verify &rarr;</a><a class="enter" href="https://frankbueltge.de/werke/attention">Method &rarr;</a><a class="enter" href="https://github.com/frankbueltge/machine-attention">Archive &rarr;</a></nav>
+  </footer>
+</div>
+<script src="stage.js"></script>
+</body>
+</html>

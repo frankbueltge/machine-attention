@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -115,3 +116,71 @@ def test_verify_redoes_the_reaction_arithmetic_from_the_committed_bytes(tmp_path
         {"entries": {"ETH": {"fips": "ZZ"}}}), encoding="utf-8")
     assert any("not in the preserved GDELT code list" in p
                for p in verify.check(root))
+
+
+def test_the_deeper_levels_build_from_the_records(tmp_path):
+    """ENTER (dossier), INVESTIGATE (ledger), VERIFY (provenance) — every
+    page a deterministic function of committed records, plain words first."""
+    root = _fixture_repo(tmp_path)
+    _load("stagegen_t4", root / "stage" / "generate.py").build(root)
+    out = root / "public"
+
+    dossier = (out / "future" / "gdacs-dr-1027450.html").read_text()
+    assert "first seen" in dossier                       # the life, plainly
+    assert "foreknown/snapshots/2026-08-08/gdacs.json" in dossier  # anchored
+    assert "Somalia 2026" in dossier                     # the plan, by name
+    assert "not money raised for this hazard" in dossier  # the limit rides along
+    assert "news mentions from these countries" in dossier
+    # the drought's window (to 2026-08-06) passed before first sight
+    assert "artefact of when observation began" in dossier
+
+    ledger = (out / "ledger.html").read_text()
+    assert "Everything the machine has recorded so far" in ledger
+    assert 'future/gdacs-tc-1001297.html' in ledger      # rows link down
+    assert "No warning has closed yet" in ledger         # honest empty state
+    assert "an empty night is honest" in ledger          # no proposals yet
+
+    verify_html = (out / "verify.html").read_text()
+    assert "Nothing here asks to be believed" in verify_html
+    manifest = json.loads(
+        (root / "foreknown/snapshots/2026-08-08/manifest.json").read_text())
+    assert manifest["entries"][0]["sha256"] in verify_html
+    assert "it is the finding" in verify_html            # referenced, not stored
+
+
+def test_no_page_has_a_dead_end(tmp_path):
+    """The exhibition rule as a test: every relative link on every generated
+    page resolves to a generated file."""
+    root = _fixture_repo(tmp_path)
+    _load("stagegen_t5", root / "stage" / "generate.py").build(root)
+    out = root / "public"
+    pages = list(out.rglob("*.html"))
+    assert len(pages) >= 5  # index, ledger, verify, two dossiers
+    for page in pages:
+        for link in re.findall(r'(?:href|src)="([^"]+)"', page.read_text()):
+            if link.startswith(("http", "#", "mailto:")):
+                continue
+            assert (page.parent / link).exists(), \
+                f"{page.relative_to(out)} -> {link}"
+
+
+def test_the_ledger_shows_what_the_machine_itself_proposed(tmp_path):
+    root = _fixture_repo(tmp_path)
+    proposals = root / "foreknown" / "proposals"
+    proposals.mkdir(parents=True)
+    (proposals / "sensor-x.json").write_text(json.dumps({
+        "name": "x-sensor", "definition": "Watches x against y.",
+        "test_rule": "t", "falsification": "f", "status": "STANDING",
+        "promotion": {"why_standing": "It measures nightly."}}),
+        encoding="utf-8")
+    (proposals / "obs-1.json").write_text(json.dumps({
+        "kind": "difference_observation", "title": "An asymmetry",
+        "statement": "The record shows an asymmetry.",
+        "derived_from": ["foreknown/registry.json"]}), encoding="utf-8")
+    _load("stagegen_t6", root / "stage" / "generate.py").build(root)
+
+    ledger = (root / "public" / "ledger.html").read_text()
+    assert "x-sensor" in ledger and "STANDING" in ledger
+    assert "It measures nightly." in ledger              # the promotion story
+    assert "An asymmetry" in ledger
+    assert "derived from: foreknown/registry.json" in ledger
