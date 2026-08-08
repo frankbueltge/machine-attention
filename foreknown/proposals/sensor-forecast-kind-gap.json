@@ -10,5 +10,10 @@
     "practice/src/practice/foreknown/sources.py",
     "practice/src/practice/foreknown/resolve.py"
   ],
-  "status": "PROPOSED"
+  "status": "PROPOSED",
+  "review": {
+    "date": "2026-08-08",
+    "outcome": "stays PROPOSED",
+    "why": "The proposal asks for N=14 consecutive nights before it fires. This is night 1. Promoting it now would mean overriding the machine's own condition with a human's impatience, and the blind spot it watches cannot be measured faster than it fills."
+  }
 }

@@ -8,5 +8,19 @@
     "foreknown/snapshots/2026-08-08/fts-plans-2026.json",
     "foreknown/proposals/obs-2026-08-08-3.json"
   ],
-  "status": "PROPOSED"
+  "status": "STANDING",
+  "promotion": {
+    "date": "2026-08-08",
+    "decided_by": "maintainer",
+    "implemented_in": [
+      "practice/src/practice/foreknown/reaction.py",
+      "verify.py"
+    ],
+    "first_measurement": "foreknown/reaction/readings/2026-08-08.json",
+    "firing": "DEFERRED",
+    "why_standing": "The check now runs on every nightly run and its value is committed: has_fts_plan_match per open alert episode, plus the aggregate match rate. First measured value, 2026-08-08: 37 of 100 open alert episodes (37%). The sensor stands because it measures, not because it has found anything.",
+    "why_firing_is_deferred": "The proposal refuses to set thresholds from a single sample, and that refusal is kept as written: no firing before three nights of baseline. The implementation counts the nights in each reading and arms itself on the third — the machine's own condition enforced in code rather than remembered by a human.",
+    "kept_unchanged": "Definition, test rule and falsification are the machine's text and were implemented as written, including the explicit refusal to judge funding adequacy. The money figures built around the check are named plan_requirements_usd and plan_funded_usd in every record because they are the plans' annual totals for every country a plan lists — never sums raised for the hazard.",
+    "note": "This axis was proposed by the machine's own discovery pass before any human had built it. The order is recorded on purpose."
+  }
 }

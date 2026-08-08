@@ -46,6 +46,8 @@ def collect(root: Path) -> dict:
                                          f["id"]))
     resolutions = [read_json(p)
                    for p in sorted(root.glob("foreknown/resolutions/*.json"))]
+    readings = sorted(root.glob("foreknown/reaction/readings/*.json"))
+    reaction = read_json(readings[-1]) if readings else None
     event_pairs = [(h, f) for f in futures.values() for h in f["history"]]
     event_pairs += [({"ts": r["resolved_at"], "event": f"RESOLVED_{r['verdict']}"},
                      futures[r["future"]])
@@ -53,8 +55,54 @@ def collect(root: Path) -> dict:
     events = sorted(event_pairs, key=lambda pair: pair[0]["ts"],
                     reverse=True)[:12]
     return {"registry": registry, "runs": runs, "first_byte": first_byte,
-            "open": open_futures, "events": events,
+            "open": open_futures, "events": events, "reaction": reaction,
             "resolved": len(resolutions), "total": len(futures)}
+
+
+def _usd(value: int) -> str:
+    if value >= 1_000_000_000:
+        return f"${value / 1_000_000_000:.1f}bn"
+    if value >= 1_000_000:
+        return f"${value / 1_000_000:.0f}m"
+    return f"${value:,}"
+
+
+def reaction_line(reading: dict | None, future_id: str) -> str:
+    """One sentence on what moved while this warning ran — attention first,
+    then money. Deliberately not a dashboard: the deep figures live in
+    foreknown/reaction/, this is the one line that fits the ten seconds.
+
+    Money is named as the plans' annual figures ("requested for 2026"), never
+    as money for this hazard: the plans list the country, not the warning.
+    """
+    entry = (reading or {}).get("futures", {}).get(future_id)
+    if not entry:
+        return ""
+    parts = []
+    attention = entry.get("attention")
+    if attention and attention.get("articles"):
+        sentence = (f"the world published <strong>{attention['articles']:,}</strong> "
+                    f"news mentions from these countries on "
+                    f"{esc(reading.get('attention_day', ''))}")
+        ratio = attention.get("ratio_to_baseline")
+        if ratio:
+            sentence += f" — {ratio:.1f}&#215; their 28-day normal"
+        parts.append(sentence)
+    money = entry.get("money", {})
+    if money.get("has_fts_plan_match"):
+        count = len(money["plans"])
+        parts.append(
+            f"{count} UN humanitarian plan{'s' if count != 1 else ''} "
+            f"list{'' if count != 1 else 's'} these countries: "
+            f"{_usd(money['plan_requirements_usd'])} requested for 2026, "
+            f"{_usd(money['plan_funded_usd'])} recorded as funded")
+    elif money:
+        parts.append("no UN humanitarian plan for 2026 lists these countries")
+    if not parts:
+        return ""
+    sentences = [f"Meanwhile, {parts[0]}."]
+    sentences += [f"{clause[0].upper()}{clause[1:]}." for clause in parts[1:]]
+    return f'<p class="featured-reaction">{" ".join(sentences)}</p>'
 
 
 def _clock(future: dict) -> str:
@@ -103,6 +151,7 @@ def build(root: Path, out: Path | None = None) -> Path:
   <h2>{esc(_short(featured['what'] or featured['id'], 80))}</h2>
   <p class="featured-where">{esc(_short(featured['where'], 90))}</p>
   {_clock(featured)}
+  {reaction_line(data["reaction"], featured["id"])}
   <p class="featured-provenance">warning recorded {esc(announced)} UTC · original bytes preserved, SHA-256 on file</p>
 </section>"""
 
@@ -224,6 +273,8 @@ header { display: flex; justify-content: space-between; gap: 2rem; color: var(--
   margin: 0.25rem 0 0.15rem; text-wrap: balance; }
 .featured-where { color: var(--trace); }
 .featured .clock { font-size: clamp(16px,2vw,26px); }
+.featured-reaction { margin-top: 0.55rem; max-width: 74ch; }
+.featured-reaction strong { color: var(--signal); font-weight: 400; }
 .featured-provenance { color: var(--faint); font-size: 0.85em; margin-top: 0.4rem; }
 .counts { color: var(--faint); max-width: 90ch; }
 .counts strong { color: var(--paper); font-weight: 400; }

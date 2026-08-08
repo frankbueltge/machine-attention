@@ -7,5 +7,14 @@
     "foreknown/snapshots/2026-08-08/run.json",
     "practice/src/practice/foreknown/futures.py"
   ],
-  "status": "PROPOSED"
+  "status": "IMPLEMENTED",
+  "implementation": {
+    "date": "2026-08-08",
+    "implemented_in": [
+      "practice/src/practice/foreknown/futures.py"
+    ],
+    "how": "overdue_kind() decides the split from committed records alone: a future is cold_start_overdue when the window end it was announced with already lay in the past at its own announced_at, and drift_overdue otherwise. The window end as of notarization is read back through the revision history, which is append-only, so a later window extension cannot relabel a cold start. Nightly runs record both lists in run.json from the next run on.",
+    "not_promoted_because": "The proposal asks for promotion only after at least one drift_overdue case has been observed and its history inspected by hand. Tonight there are none and there cannot be: every future in the registry was notarized on the observatory's first night, so all 100 overdue flags are cold starts by construction. Building the split now and promoting it later keeps the two decisions apart — the code exists so the evidence can appear, and the evidence still has to appear.",
+    "watch_for": "the first entry in run.json's overdue_drift list"
+  }
 }
