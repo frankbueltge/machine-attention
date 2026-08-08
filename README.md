@@ -16,7 +16,10 @@ The public face is not documentation but a stage: monumental true statements,
 real clocks, the ledger as fading traces. Every figure is a real system state;
 quiet nights are shown as exactly that.
 
-**Live:** https://frankbueltge.github.io/machine-attention/
+**Live:** https://frankbueltge.de/attention/ — published on frankbueltge.de
+(Frank's decision, 2026-08-09), where the site pulls the committed stage build
+nightly via its `attention-integrate` workflow. This repository builds
+`public/` as the canonical, verified artifact; it does not deploy itself.
 
 ## Project 001 — The Foreknown
 
@@ -73,7 +76,8 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
   model and tokens — the trace obligation is not optional.
 - `ci.yml` — tests + `verify.py` + append-only guard.
 - `automerge.yml` — discovery deliveries merge themselves once CI is green.
-- `deploy.yml` — GitHub Pages, zero secrets, exactly one deployer.
+- Publishing: frankbueltge.de pulls `public/` nightly (no deployer here —
+  the site's Cloudflare Pages deploy is the single deployer).
 
 Local:
 
