@@ -33,6 +33,13 @@ jobs:
       - name: Rebuild stage
         run: python stage/generate.py --repo-root .
 
+      # What the house may know about this practice: projects, statuses and
+      # dated scalars, recomputed from committed records. The site mirrors it
+      # beside the rendered stage (attention-export/1).
+      - name: Export for frankbueltge.de
+        if: always()
+        run: python -m practice.export --repo-root .
+
       - name: Verify provenance chain
         run: python verify.py --repo-root .
 

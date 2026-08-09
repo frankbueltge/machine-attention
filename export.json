@@ -1,0 +1,66 @@
+{
+  "$contract": "attention-export/1",
+  "figures": [
+    {
+      "as_of": "2026-08-09",
+      "key": "futures_under_watch",
+      "value": 100
+    },
+    {
+      "as_of": "2026-08-09",
+      "key": "futures_notarized_total",
+      "value": 100
+    },
+    {
+      "as_of": "2026-08-09",
+      "key": "futures_resolved",
+      "value": 0
+    },
+    {
+      "as_of": "2026-08-09",
+      "key": "materialized",
+      "value": 0
+    },
+    {
+      "as_of": "2026-08-09",
+      "key": "nights_on_record",
+      "value": 2
+    },
+    {
+      "as_of": "2026-08-08",
+      "key": "darkocean_nights_on_record",
+      "value": 2
+    }
+  ],
+  "generated_from": {
+    "commit": "60c5b45",
+    "repo": "machine-attention"
+  },
+  "practice": {
+    "id": "machine-attention",
+    "label": "Machine Attention"
+  },
+  "projects": [
+    {
+      "id": "foreknown",
+      "since": "2026-08-08",
+      "site_route": "/attention",
+      "status": "running",
+      "title": "The Foreknown"
+    },
+    {
+      "id": "darkocean",
+      "since": "2026-08-07",
+      "site_route": null,
+      "status": "e-experiment",
+      "title": "Dark Ocean"
+    },
+    {
+      "id": "state-before-interface",
+      "since": "2026-08-08",
+      "site_route": "/observatory",
+      "status": "running",
+      "title": "The State Before the Interface"
+    }
+  ]
+}
