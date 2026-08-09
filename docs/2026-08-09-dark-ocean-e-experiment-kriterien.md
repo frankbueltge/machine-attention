@@ -27,6 +27,14 @@ verschiebt, während der Ball fliegt, misst nichts — er erzählt nur.
 > bleiben deutsch wie ihre Geschwister; alles, was öffentliche Kopie werden kann —
 > README, `darkocean/METHOD.md`, Bühnentexte — ist englisch. Der Nachtrag und das
 > Methodenblatt stehen damit korrekt.
+>
+> **Option 1 eingelöst, 2026-08-09 (vor Fensterstart):** `practice.darkocean.continuity`
+> ist gebaut, getestet (drei Tests auf die tragenden Disziplinen), live gegen den
+> Katalog gelaufen (79 Produkte, 2 Batches, 79 beantwortet, 0 Divergenzen, 79
+> etablierte Baselines, 0 Ausfälle) und vom Verifikator als Zweitimplementierung
+> nachgerechnet; nächtlich verdrahtet in `darkocean.yml`. **Das Fenster öffnet
+> planmäßig** — Option 3 (Verschiebung) entfällt. Ab hier gilt §0 ohne Ausnahme:
+> geschlossen.
 
 ## 1. Das Fenster
 
