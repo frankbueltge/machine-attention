@@ -103,14 +103,23 @@ with a second independent implementation recomputing every figure, and with dete
 deliberately refused. Every operational neighbour jumps to detections or identities;
 the refusal is the position.
 
-**A gap in that daylight, as the register stands today.** The nightly run writes the
-day it just read and never looks back — `run.py` reads no earlier reading. So the
-register cannot currently show the one thing its claim rests on: that something it
-held has since changed or gone. The catalogue supports the look-back keylessly (a
-`Products(<id>)` query returns the current `online`, `EvictionDate` and
-`ModificationDate`; verified 2026-08-09), so this is a missing step, not a missing
-possibility. Until it exists, the notarial act is asserted rather than demonstrated —
-which is why it belongs in the acceptance criteria (§7).
+**That gap was real until 2026-08-09, and is now closed.** The nightly run wrote the
+day it had just read and never looked back — `run.py` read no earlier reading — so the
+register could not show the one thing its claim rests on: that something it held has
+since changed or gone. Criteria group N was accepted the same day and
+`practice.darkocean.continuity` built before the window opened: every product the
+register holds is re-probed each night by catalogue Id, keylessly, in batches of forty
+(`Id eq X or Id eq Y`; the OData `in` operator is refused with HTTP 400). Divergences
+are committed with both values side by side and never reconciled to the newer one; a
+value the register never held becomes a named baseline, not an unchanged result; a
+product missing from an answered batch is its own kind of catch. `verify.py` recomputes
+the catches from the preserved look-back pages as a second implementation.
+
+First live look-back, 2026-08-09: **79 products, 79 answered, zero divergences, 79
+baselines established** — the machine had never recorded `ModificationDate` before that
+night, and says so rather than reporting seventy-nine unchanged values it never had.
+Zero divergences is a result, not a failure (N3): the preservation claim rests on the
+mechanism, not yet on an event.
 
 **And the honest converse:** read as a dark-ship instrument, this register is a
 degraded subset of what GFW already publishes, and it loses. The per-bin overlap
