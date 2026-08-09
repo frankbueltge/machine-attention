@@ -26,7 +26,7 @@ function tick() {
     if (!isNaN(to)) {
       c.textContent = to > now
         ? fmt(to - now) + ' left in the announced danger window'
-        : 'danger window passed ' + fmt(now - to) + ' ago — warning still active';
+        : 'announced window passed ' + fmt(now - to) + ' ago — still open at its source';
     } else if (!isNaN(from)) {
       c.textContent = 'ongoing for ' + fmt(now - from);
     }
