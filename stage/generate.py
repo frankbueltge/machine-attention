@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -90,6 +91,11 @@ def collect(root: Path) -> dict:
                     if p and p.get("kind") == "difference_observation"]
     sensors = [p for p in proposals if p and p.get("test_rule")]
     crosswalk = read_json(root / "foreknown" / "reaction" / "iso3-fips.json")
+    # Anchors: only this work's own. Other registers are anchored by the same tool, but
+    # naming them here would put a project on the stage ahead of its admission gate.
+    anchor_ledger = read_json(root / "anchors" / "ledger.json", {"anchors": []})
+    anchors = [a for a in anchor_ledger.get("anchors", [])
+               if str(a.get("manifest", "")).startswith("foreknown/")]
 
     return {"registry": registry, "runs": runs, "first_byte": first_byte,
             "open": open_futures, "events": events,
@@ -98,7 +104,7 @@ def collect(root: Path) -> dict:
             "reading": reading, "plans_meta": plans_meta, "funded": funded,
             "attention_days": attention_days,
             "observations": observations, "sensors": sensors,
-            "crosswalk": crosswalk,
+            "crosswalk": crosswalk, "anchors": anchors,
             "manifests": manifests, "reaction_manifests": reaction_manifests,
             "run_date": runs[-1]["date"] if runs else "",
             "first_run_date": runs[0]["date"] if runs else ""}
@@ -687,6 +693,53 @@ def verify_page(data: dict) -> str:
             f'<a href="{_gh("foreknown/reaction/iso3-fips.json")}">the '
             f'committed record</a>, name by name.{finding_note}</p></section>')
 
+
+    # --- the anchors (D2) ---------------------------------------------------
+    anchors = data.get("anchors", [])
+    anchors_html = ""
+    if anchors:
+        complete = [a for a in anchors if a.get("state") == "complete"]
+        pending = [a for a in anchors if a.get("state") == "pending"]
+        blocks = sorted({int(b) for a in complete
+                         for b in re.findall(r"\d{6,}", a.get("evidence", ""))})
+        rows = "".join(
+            f'<tr><td><a href="{_gh(esc(a["manifest"]))}">{esc(a["manifest"])}</a></td>'
+            f'<td>{esc(a.get("state", ""))}</td>'
+            f'<td>{esc(a.get("evidence", ""))}</td></tr>'
+            for a in reversed(anchors))
+        pending_note = (f' {len(pending)} of them are still pending: a fresh stamp is '
+                        f'a calendar&#8217;s promise until its transaction confirms, and '
+                        f'this page says so rather than counting it as proof.'
+                        if pending else "")
+        block_note = (f' The completed proofs rest on Bitcoin '
+                      f'block{"s" if len(blocks) != 1 else ""} '
+                      f'{", ".join(str(b) for b in blocks)}.' if blocks else "")
+        anchors_html = f"""
+  <section>
+    <h2>Why the dates are not just our word</h2>
+    <p>This work claims to have notarized what was knowable <em>when</em> — so the dates
+    carry the claim. A git commit date does not: it is set by the committer&#8217;s clock
+    and can be rewritten. So each night&#8217;s manifest, which already holds the SHA-256
+    of every byte preserved that night, is stamped into the Bitcoin blockchain with
+    <a href="https://opentimestamps.org">OpenTimestamps</a> — keyless, free, and
+    checkable without us. {len(complete)} of {len(anchors)} nights carry a completed
+    proof.{block_note}{pending_note}</p>
+    <p><strong>What an anchor proves:</strong> those exact bytes existed no later than
+    that block. <strong>What it does not:</strong> that they are true, that they came from
+    the publisher they name, or that they did not exist earlier. It makes the record
+    unrevisable after the fact; it does not make it correct.</p>
+    <pre><code>ots verify -f foreknown/snapshots/&lt;day&gt;/manifest.json \\
+  anchors/foreknown/snapshots/&lt;day&gt;/manifest.json.ots</code></pre>
+    <p class="note">The <code>-f</code> is needed because proofs are stored apart from the
+    records: <code>ots upgrade</code> rewrites a proof once, when its Bitcoin path arrives,
+    and the record trees never change. Checking the Bitcoin side needs a Bitcoin node
+    (<code>--bitcoin-node</code>); a block explorer would put a third party back into a
+    chain built to remove them. Without the client, <code>verify.py</code> still binds each
+    proof to its manifest from the proof&#8217;s own header.</p>
+    <table class="tbl"><thead><tr><th>night</th><th>state</th>
+    <th>evidence</th></tr></thead><tbody>{rows}</tbody></table>
+  </section>"""
+
     body = f"""
   <p class="kicker">Verify — where the claims meet the bytes</p>
   <h1>Nothing here asks to be believed</h1>
@@ -732,6 +785,7 @@ cd practice &amp;&amp; python -m pip install -e '.[dev]' &amp;&amp; python -m py
   </section>
 
   {crosswalk_html}
+  {anchors_html}
 
   <section>
     <h2>The machine&#8217;s own steps</h2>
