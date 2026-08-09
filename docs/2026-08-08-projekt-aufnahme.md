@@ -19,6 +19,13 @@ mit live verifizierten Daten.
 EXPOSÉ → AUDIT → V0 → E-EXPERIMENT → RUNNING        (jederzeit: RETIRED)
 ```
 
+> **Nachtrag 2026-08-09 (Frank, vor dem Dark-Ocean-Fenster):** Der Review am Ende des
+> E-Experiments kennt **drei** Ausgänge, nicht zwei — RUNNING · Flagship (Bühne),
+> RUNNING · Instrument (läuft leise weiter, keine Bühne), RETIRED. Anlass und Wortlaut:
+> `2026-08-09-dark-ocean-e-experiment-kriterien.md` §2. Grund: Trägt die Messung, aber
+> nicht die Form, wären beide Zwei-Wege-Antworten gelogen — Bühne erzwingen oder ein
+> funktionierendes Instrument töten. Gilt ab sofort für alle Kandidaten.
+
 1. **EXPOSÉ** — Forschungsfrage, Maschinen-Überlegenheit, Datenlage-Kurzcheck, Grenzen,
    V0-Skizze, offene Fragen (Muster: die beiden vorhandenen Kandidaten-Exposés).
 2. **AUDIT** — Go/No-Go-Protokoll je Quelle mit Live-Probes (dataset-hub-Methode; Lehre
