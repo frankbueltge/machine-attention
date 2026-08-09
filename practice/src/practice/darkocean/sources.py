@@ -72,6 +72,11 @@ def cdse_scenes(pages: list[dict]) -> list[dict]:
                 "checksums": checksums,
                 "online": product.get("Online"),
                 "eviction_date": product.get("EvictionDate"),
+                # Recorded since 2026-08-09 so the continuity probe has a
+                # preserved baseline to compare against rather than one it
+                # established itself (criteria group N).
+                "modification_date": product.get("ModificationDate"),
+                "publication_date": product.get("PublicationDate"),
                 "cells": covered_cells(product.get("GeoFootprint")),
             })
     scenes.sort(key=lambda s: (s["start"], s["name"]))

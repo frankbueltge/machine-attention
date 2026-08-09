@@ -385,6 +385,103 @@ def check_darkocean(root: Path, registry_files: dict,
                             "derived record")
 
 
+def check_darkocean_continuity(root: Path, registry_files: dict,
+                               problems: list[str]) -> None:
+    """Redo each continuity record from the preserved look-back pages.
+
+    Second implementation of criteria group N: the catches are recomputed
+    against what the readings preserved, so a record cannot claim a
+    divergence the bytes do not show — nor quietly drop one they do.
+    """
+    base = root / "darkocean" / "continuity"
+    if not base.exists():
+        return
+    compared = ("online", "eviction_date", "modification_date", "checksums")
+
+    # What the readings preserved, first sighting wins — the same origin the
+    # probe uses, rebuilt independently here.
+    preserved: dict[str, dict] = {}
+    for path in sorted((root / "darkocean" / "readings").glob("*.json")):
+        for acquisition in load(path).get("acquisitions", []):
+            pid = acquisition.get("id")
+            if pid and pid not in preserved:
+                preserved[pid] = acquisition
+
+    for path in sorted(base.glob("*.json")):
+        record = load(path)
+        name = f"darkocean continuity {path.stem}"
+        if record.get("date") != path.stem:
+            problems.append(f"{name}: date field disagrees with file name")
+        for ref in record.get("sources", {}).get("CDSE-lookback", []):
+            if not (root / ref).exists():
+                problems.append(f"{name}: source {ref} is missing")
+            elif ref not in registry_files:
+                problems.append(f"{name}: source {ref} is not manifested")
+
+        answered: dict[str, dict] = {}
+        for ref in record.get("sources", {}).get("CDSE-lookback", []):
+            if not (root / ref).exists():
+                continue
+            for product in load(root / ref).get("value", []):
+                checksums = {c.get("Algorithm", "?").lower(): c.get("Value", "")
+                             for c in (product.get("Checksum") or [])
+                             if isinstance(c, dict) and c.get("Value")}
+                answered[product.get("Id", "")] = {
+                    "online": product.get("Online"),
+                    "eviction_date": product.get("EvictionDate"),
+                    "modification_date": product.get("ModificationDate"),
+                    "checksums": checksums,
+                }
+
+        # Baselines this record established are part of the comparison basis
+        # for the fields the readings never carried.
+        basis = {pid: dict(entry) for pid, entry in preserved.items()}
+        for baseline in record.get("baselines_established", []):
+            entry = basis.get(baseline.get("id", ""))
+            if entry is not None and entry.get(baseline["field"]) in (None, {}):
+                entry[baseline["field"]] = baseline["value"]
+
+        wanted: set = set()
+        for pid, current in answered.items():
+            entry = basis.get(pid)
+            if entry is None:
+                problems.append(f"{name}: the look-back answered for {pid}, "
+                                "which no reading ever recorded")
+                continue
+            for field in compared:
+                then = entry.get(field)
+                if then in (None, {}):
+                    continue
+                if then != current.get(field):
+                    wanted.add((pid, field))
+
+        got = {(catch.get("id"), catch.get("field"))
+               for catch in record.get("catches", [])
+               if catch.get("kind") == "changed"}
+        if got != wanted:
+            problems.append(f"{name}: the recorded changes do not match the "
+                            "recomputation from the preserved look-back "
+                            f"({sorted(got)} vs {sorted(wanted)})")
+
+        for catch in record.get("catches", []):
+            if catch.get("kind") != "changed":
+                continue
+            entry = preserved.get(catch.get("id"), {})
+            baselines = {b["field"]: b["value"]
+                         for b in record.get("baselines_established", [])
+                         if b.get("id") == catch.get("id")}
+            was = entry.get(catch.get("field"), baselines.get(catch.get("field")))
+            if catch.get("preserved") != was:
+                problems.append(f"{name}: catch on {catch.get('id')} reports a "
+                                "preserved value the register does not hold — "
+                                "a reconciliation, which group N forbids")
+
+        text = json.dumps(record, ensure_ascii=False)
+        if '"mmsi"' in text.lower():
+            problems.append(f"{name}: a vessel identity leaked into a "
+                            "derived record")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -440,6 +537,7 @@ def check(root: Path) -> list[str]:
 
     check_reaction(root, registry, registry_files, problems)
     check_darkocean(root, registry_files, problems)
+    check_darkocean_continuity(root, registry_files, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
     run_dates = {load(p)["date"] for p in root.glob("foreknown/snapshots/*/run.json")}
