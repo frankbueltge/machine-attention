@@ -52,7 +52,10 @@ def test_stage_builds_from_real_records_and_verifies_clean(tmp_path):
     stagegen.build(root)
     page = (root / "public" / "index.html").read_text()
     assert "DOLPHIN-26" in page
-    assert "warnings under watch" in page.lower()
+    # The honest count: only the cyclone's window is still open under the
+    # run date; the drought's had already passed at first sight.
+    assert "1 warning under watch inside its announced danger window" in page
+    assert "a cold start, not foreknowledge" in page
     # the ten-second rule: plain words before house vocabulary
     assert "Disasters are announced before" in page
     assert (root / "public" / "fonts" / "plexcond600.woff2").exists()
@@ -139,6 +142,9 @@ def test_the_deeper_levels_build_from_the_records(tmp_path):
     assert 'future/gdacs-tc-1001297.html' in ledger      # rows link down
     assert "No warning has closed yet" in ledger         # honest empty state
     assert "an empty night is honest" in ledger          # no proposals yet
+    # The source-open register is split by what the machine can claim.
+    assert "Inside the announced window" in ledger
+    assert "Cold start — windows already past at first sight" in ledger
 
     verify_html = (out / "verify.html").read_text()
     assert "Nothing here asks to be believed" in verify_html

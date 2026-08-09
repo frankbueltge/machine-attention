@@ -48,6 +48,7 @@ a.future:hover h3 { color: var(--signal); }
 .clock { display: block; margin-top: 0.5rem; font-variant-numeric: tabular-nums;
   color: var(--signal); }
 .clock[data-from] { color: var(--faint); }
+.clock-past { color: var(--faint); }
 .ledger { border-top: 1px solid var(--line); padding-top: clamp(10px,2vmin,18px); }
 .trace { color: var(--trace); overflow: hidden; text-overflow: ellipsis;
   white-space: nowrap; transition: opacity 2.2s ease; }

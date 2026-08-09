@@ -97,6 +97,14 @@ def collect(root: Path) -> dict:
     anchors = [a for a in anchor_ledger.get("anchors", [])
                if str(a.get("manifest", "")).startswith("foreknown/")]
 
+    run_date = runs[-1]["date"] if runs else ""
+    # The public state of every open future, derived once and consumed
+    # everywhere: window_open (the announced future has not yet elapsed),
+    # cold_start (already historical at first sight — an artefact of when
+    # observation began), drift (outlived its window under this machine's
+    # watch). Source-open is the umbrella: status == OPEN.
+    states = {f["id"]: (_overdue_state(f, run_date) or "window_open")
+              for f in open_futures}
     return {"registry": registry, "runs": runs, "first_byte": first_byte,
             "open": open_futures, "events": events,
             "resolutions": resolutions, "resolved": len(resolutions),
@@ -106,7 +114,8 @@ def collect(root: Path) -> dict:
             "observations": observations, "sensors": sensors,
             "crosswalk": crosswalk, "anchors": anchors,
             "manifests": manifests, "reaction_manifests": reaction_manifests,
-            "run_date": runs[-1]["date"] if runs else "",
+            "states": states,
+            "run_date": run_date,
             "first_run_date": runs[0]["date"] if runs else ""}
 
 
@@ -146,9 +155,14 @@ def _usd(value: int) -> str:
     return f"${value:,}"
 
 
-def _clock(future: dict) -> str:
+def _clock(future: dict, state: str | None = None) -> str:
     window = future.get("window") or {}
     to, frm = window.get("to"), window.get("from")
+    if state == "cold_start" and to:
+        # No ticking clock for a cold start: a countdown stages a present
+        # the record does not claim. A static line says what is known.
+        return (f'<span class="clock clock-past">announced window ended '
+                f'{esc(to[:10])} — before observation began</span>')
     if to:
         return f'<span class="clock" data-to="{esc(to)}">—</span>'
     if frm:
@@ -408,8 +422,10 @@ def dossier_page(future: dict, data: dict) -> str:
     status_words = {"OPEN": "open", "CLOSED_BY_SOURCE": "closed by its source",
                     "DISSIPATED": "dissipated"}.get(status, status.lower())
     overdue = _overdue_state(future, data["run_date"])
-    if overdue:
-        status_words = "open — announced window passed"
+    if overdue == "cold_start":
+        status_words = "open — window already past at first sight"
+    elif overdue == "drift":
+        status_words = "open — outlived its announced window"
     kicker = (f"{esc(future.get('severity', ''))} alert · "
               f"{esc(future.get('hazard', ''))} · source "
               f"{esc(future.get('source', ''))} · {status_words}")
@@ -453,7 +469,7 @@ def dossier_page(future: dict, data: dict) -> str:
                      f'measured from committed records only</li>')
 
     entry = (data["reading"] or {}).get("futures", {}).get(fid)
-    clock = _clock(future) if status == "OPEN" else ""
+    clock = _clock(future, overdue) if status == "OPEN" else ""
 
     iso3 = ", ".join(esc(c) for c in future.get("iso3", [])) or "—"
     source_ref = future.get("source_ref") or ""
@@ -488,6 +504,34 @@ def dossier_page(future: dict, data: dict) -> str:
                   "and the evidence.", body, depth=1)
 
 
+def _hazard_tables(members: list, reading_futures: dict) -> str:
+    groups: dict[str, list] = {}
+    for future in members:
+        groups.setdefault(future["hazard"], []).append(future)
+    group_html = []
+    for hazard, futures in sorted(groups.items(),
+                                  key=lambda kv: (-len(kv[1]), kv[0])):
+        rows = []
+        for future in futures:
+            entry = reading_futures.get(future["id"], {})
+            money = entry.get("money", {})
+            plan = ("yes" if money.get("has_fts_plan_match")
+                    else "no" if money else "—")
+            to = ((future.get("window") or {}).get("to") or "")[:10] or "—"
+            rows.append(
+                f'<tr><td><a href="future/{esc(future["id"])}.html">'
+                f'{esc(_short(future.get("what") or future["id"], 56))}</a></td>'
+                f'<td>{esc(_short(future.get("where", ""), 36))}</td>'
+                f'<td>{esc(future.get("severity", ""))}</td>'
+                f'<td>{esc(to)}</td><td>{plan}</td></tr>')
+        group_html.append(
+            f'<h3 class="kicker">{esc(hazard)} · {len(futures)}</h3>'
+            f'<table class="tbl"><thead><tr><th>warning</th><th>where</th>'
+            f'<th>alert</th><th>window ends</th><th>2026 plan</th></tr>'
+            f'</thead><tbody>{"".join(rows)}</tbody></table>')
+    return "".join(group_html)
+
+
 def ledger_page(data: dict) -> str:
     futures = data["registry"]["futures"]
     open_futures = data["open"]
@@ -508,30 +552,44 @@ def ledger_page(data: dict) -> str:
             f"<td>{len(run.get('resolved', []))}</td>"
             f"<td>{f'{rate:.0%}' if rate is not None else '—'}</td></tr>")
 
-    groups: dict[str, list] = {}
-    for future in open_futures:
-        groups.setdefault(future["hazard"], []).append(future)
-    group_html = []
     reading_futures = (data["reading"] or {}).get("futures", {})
-    for hazard, members in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0])):
-        rows = []
-        for future in members:
-            entry = reading_futures.get(future["id"], {})
-            money = entry.get("money", {})
-            plan = ("yes" if money.get("has_fts_plan_match")
-                    else "no" if money else "—")
-            to = ((future.get("window") or {}).get("to") or "")[:10] or "—"
-            rows.append(
-                f'<tr><td><a href="future/{esc(future["id"])}.html">'
-                f'{esc(_short(future.get("what") or future["id"], 56))}</a></td>'
-                f'<td>{esc(_short(future.get("where", ""), 36))}</td>'
-                f'<td>{esc(future.get("severity", ""))}</td>'
-                f'<td>{esc(to)}</td><td>{plan}</td></tr>')
-        group_html.append(
-            f'<h3 class="kicker">{esc(hazard)} · {len(members)}</h3>'
-            f'<table class="tbl"><thead><tr><th>warning</th><th>where</th>'
-            f'<th>alert</th><th>window ends</th><th>2026 plan</th></tr>'
-            f'</thead><tbody>{"".join(rows)}</tbody></table>')
+    states = data["states"]
+    by_state: dict[str, list] = {"window_open": [], "drift": [],
+                                 "cold_start": []}
+    for future in open_futures:
+        by_state[states[future["id"]]].append(future)
+
+    if by_state["window_open"]:
+        window_html = _hazard_tables(by_state["window_open"], reading_futures)
+    else:
+        window_html = ('<p class="trace">No source-open warning is inside '
+                       'its announced window tonight — an honest zero, not '
+                       'an empty register.</p>')
+
+    drift_html = ""
+    if by_state["drift"]:
+        drift_html = (
+            '<section>\n    <h2>Outlived under watch — drift</h2>\n'
+            '    <p class="note">These warnings were inside their announced '
+            'windows when first seen and outlived them under this '
+            'machine&#8217;s own eyes — the difference the overdue flag '
+            'exists to catch.</p>\n    '
+            + _hazard_tables(by_state["drift"], reading_futures)
+            + '\n  </section>')
+
+    cold_html = ""
+    if by_state["cold_start"]:
+        cold_html = (
+            '<section>\n    <h2>Cold start — windows already past at first '
+            'sight</h2>\n'
+            f'    <p class="note">The announced windows of these '
+            f'{len(by_state["cold_start"])} warnings already lay in the past '
+            f'when observation began on {esc(data["first_run_date"])}. They '
+            f'stay preserved and source-open, but they are an artefact of '
+            f'when the machine started looking — baseline material, not '
+            f'evidence of foreknowledge.</p>\n    '
+            + _hazard_tables(by_state["cold_start"], reading_futures)
+            + '\n  </section>')
 
     closed_rows = []
     for fid, future in sorted(futures.items()):
@@ -602,8 +660,10 @@ def ledger_page(data: dict) -> str:
   <h1>The ledger</h1>
   <p>Everything the machine has recorded so far: <strong>{data['total']}
   announced futures</strong> over {nights} night{'s' if nights != 1 else ''}
-  — {len(open_futures)} open, {closed} closed, {data['resolved']} resolved
-  with a measured verdict.</p>
+  — {len(open_futures)} source-open ({len(by_state['window_open'])} inside
+  the announced window, {len(by_state['drift'])} outlived under watch,
+  {len(by_state['cold_start'])} cold start), {closed} closed,
+  {data['resolved']} resolved with a measured verdict.</p>
 
   <section>
     <h2>The nights</h2>
@@ -613,9 +673,12 @@ def ledger_page(data: dict) -> str:
   </section>
 
   <section>
-    <h2>Open — the clocks still running</h2>
-    {''.join(group_html)}
+    <h2>Inside the announced window — the clocks still running</h2>
+    {window_html}
   </section>
+
+  {drift_html}
+  {cold_html}
 
   <section>
     <h2>Closed — and what the record says happened</h2>
@@ -818,8 +881,17 @@ def build(root: Path, out: Path | None = None) -> Path:
         return (0 if to[:10] >= run_date else 1, to, f["id"])
 
     display = sorted(open_futures, key=display_rank)
-    featured = display[0] if display else None
-    grid = display[1:7]
+
+    # The stage centres only prospective observation: warnings whose
+    # announced future has not yet elapsed under the last committed run.
+    # Cold starts and drift stay source-open in the ledger; putting their
+    # clocks on the front would stage foreknowledge the record cannot claim.
+    states = data["states"]
+    prospective = [f for f in display if states[f["id"]] == "window_open"]
+    drifting = [f for f in open_futures if states[f["id"]] == "drift"]
+    cold = [f for f in open_futures if states[f["id"]] == "cold_start"]
+    featured = prospective[0] if prospective else None
+    grid = prospective[1:7]
 
     hazard_counts: dict[str, int] = {}
     for f in open_futures:
@@ -827,6 +899,31 @@ def build(root: Path, out: Path | None = None) -> Path:
     counts_line = " · ".join(
         f"{n} {h}{'s' if n != 1 and not h.endswith('s') else ''}"
         for h, n in sorted(hazard_counts.items(), key=lambda kv: -kv[1]))
+
+    if featured:
+        n = len(prospective)
+        lead = (f"<strong>{n} warning{'s' if n != 1 else ''} under watch "
+                f"inside "
+                f"{'their announced danger windows' if n != 1 else 'its announced danger window'}"
+                f"</strong>")
+    else:
+        lead = ("<strong>No announced danger window is open right now"
+                "</strong> — the machine keeps watching")
+    count_bits = []
+    if drifting:
+        nd = len(drifting)
+        count_bits.append(
+            f"{nd} outlived {'their windows' if nd != 1 else 'its window'} "
+            f"under this machine&#8217;s watch")
+    if cold:
+        nc = len(cold)
+        count_bits.append(
+            f"{nc} more source-open, "
+            f"{'their windows' if nc != 1 else 'its window'} already past "
+            f"at first sight — a cold start, not foreknowledge")
+    if data["resolved"]:
+        count_bits.append(f"{data['resolved']} resolved with a measured "
+                          f"verdict")
 
     featured_html = ""
     if featured:
@@ -862,6 +959,26 @@ def build(root: Path, out: Path | None = None) -> Path:
 
     since = (data["first_byte"] or "")[:10]
 
+    counts_tail = " · ".join(
+        count_bits
+        + [f"recording since {esc(since)}",
+           'next reading in <span id="countdown">—</span>'])
+
+    others = len(cold) + len(drifting)
+    if cards:
+        futures_html = "".join(cards)
+    elif others:
+        futures_html = (
+            f'<p class="trace">No {"other " if featured else ""}announced '
+            f'window is open tonight — the {others} source-open warning'
+            f'{"s" if others != 1 else ""} stand'
+            f'{"" if others != 1 else "s"} in '
+            f'<a href="ledger.html">the ledger</a>, '
+            f'{"their windows" if others != 1 else "its window"} already '
+            f'past.</p>')
+    else:
+        futures_html = ""
+
     page = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -887,17 +1004,15 @@ def build(root: Path, out: Path | None = None) -> Path:
 
   {featured_html}
 
-  <p class="counts"><strong>{len(open_futures)} warnings under watch right now</strong>
-  — {esc(counts_line)}{f" · {data['resolved']} resolved with a measured verdict" if data['resolved'] else ''}
-  · recording since {esc(since)} · next reading in
-  <span id="countdown">—</span></p>
+  <p class="counts">{lead}
+  — {counts_tail}</p>
 
-  <section class="futures" aria-label="More warnings under watch">
-    {''.join(cards) if cards else ''}
+  <section class="futures" aria-label="More warnings inside their windows">
+    {futures_html}
   </section>
 
   <section class="ledger" aria-label="The ledger">
-    <p class="label">The ledger — every warning&#8217;s life, on the record · <a class="plain" href="ledger.html">all {data['total']} &rarr;</a></p>
+    <p class="label">The ledger — every warning&#8217;s life, on the record · {esc(counts_line)} · <a class="plain" href="ledger.html">all {data['total']} &rarr;</a></p>
     {''.join(ledger_rows) if ledger_rows else '<p class="trace">The ledger is empty; the first reading has not run.</p>'}
   </section>
 
@@ -992,6 +1107,7 @@ a.future:hover h3 { color: var(--signal); }
 .clock { display: block; margin-top: 0.5rem; font-variant-numeric: tabular-nums;
   color: var(--signal); }
 .clock[data-from] { color: var(--faint); }
+.clock-past { color: var(--faint); }
 .ledger { border-top: 1px solid var(--line); padding-top: clamp(10px,2vmin,18px); }
 .trace { color: var(--trace); overflow: hidden; text-overflow: ellipsis;
   white-space: nowrap; transition: opacity 2.2s ease; }
@@ -1092,7 +1208,7 @@ function tick() {
     if (!isNaN(to)) {
       c.textContent = to > now
         ? fmt(to - now) + ' left in the announced danger window'
-        : 'danger window passed ' + fmt(now - to) + ' ago — warning still active';
+        : 'announced window passed ' + fmt(now - to) + ' ago — still open at its source';
     } else if (!isNaN(from)) {
       c.textContent = 'ongoing for ' + fmt(now - from);
     }

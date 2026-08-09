@@ -20,6 +20,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from .foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
+                                overdue_kind)
 from .preserve import read_json, write_json
 
 CONTRACT = "attention-export/1"
@@ -72,9 +74,26 @@ def figures(repo_root: Path) -> list[dict]:
                     if p.is_dir())
     readings = sorted((repo_root / "darkocean" / "readings").glob("*.json"))
     as_of = nights[-1] if nights else ""
+    # The epistemic split of the source-open register, by the same rule the
+    # stage uses (deterministic against the last run date, never the wall
+    # clock): window_open — the announced future has not yet elapsed;
+    # cold_start — already historical at first sight; drift — outlived its
+    # window under this machine's watch.
+    open_futures = [f for f in futures.values() if f.get("status") == "OPEN"]
+    kinds = {f["id"]: overdue_kind(f, f"{as_of}T00:00:00")
+             for f in open_futures} if as_of else {}
     return [
         {"key": "futures_under_watch",
-         "value": sum(1 for f in futures.values() if f.get("status") == "OPEN"),
+         "value": len(open_futures),
+         "as_of": as_of},
+        {"key": "futures_window_open",
+         "value": sum(1 for k in kinds.values() if k is None),
+         "as_of": as_of},
+        {"key": "futures_cold_start",
+         "value": sum(1 for k in kinds.values() if k == COLD_START_OVERDUE),
+         "as_of": as_of},
+        {"key": "futures_drift",
+         "value": sum(1 for k in kinds.values() if k == DRIFT_OVERDUE),
          "as_of": as_of},
         {"key": "futures_notarized_total", "value": len(futures),
          "as_of": as_of},

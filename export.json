@@ -8,6 +8,21 @@
     },
     {
       "as_of": "2026-08-09",
+      "key": "futures_window_open",
+      "value": 1
+    },
+    {
+      "as_of": "2026-08-09",
+      "key": "futures_cold_start",
+      "value": 99
+    },
+    {
+      "as_of": "2026-08-09",
+      "key": "futures_drift",
+      "value": 0
+    },
+    {
+      "as_of": "2026-08-09",
       "key": "futures_notarized_total",
       "value": 100
     },
@@ -33,7 +48,7 @@
     }
   ],
   "generated_from": {
-    "commit": "60c5b45",
+    "commit": "c1cbb6a",
     "repo": "machine-attention"
   },
   "practice": {
