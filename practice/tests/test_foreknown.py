@@ -155,3 +155,69 @@ def test_notary_run_end_to_end(tmp_path: Path):
 
     with pytest.raises(SystemExit):
         run(tmp_path, "2026-08-08", FakeClient(responses))
+
+
+# --- the machine's proposal sensor-primary-iso3-gap ----------------------
+
+GDACS_PRIMARY_GAP = {"features": [
+    {"properties": {
+        "eventid": 1001297, "eventtype": "TC", "alertlevel": "Orange",
+        "name": "Storm X", "country": "Marshall Islands, Japan, China",
+        "iso3": "MHL",
+        "affectedcountries": [{"iso3": "CHN"}, {"iso3": "JPN"}],
+        "fromdate": "2026-08-05T00:00:00", "todate": "2026-08-12T00:00:00",
+        "url": {"report": "https://gdacs.example/report"}}},
+]}
+
+
+def test_extraction_folds_the_feeds_own_primary_country_into_iso3():
+    from practice.foreknown import sources as src
+
+    future = src.gdacs_futures(GDACS_PRIMARY_GAP)[0]
+    assert future["iso3"] == ["CHN", "JPN", "MHL"]
+    assert src.primary_iso3({"iso3": "  "}) == set()
+    assert src.primary_iso3({}) == set()
+
+
+def test_correction_repairs_committed_futures_as_ours_not_as_a_revision(
+        tmp_path):
+    """A country the register dropped is a CORRECTED event naming the cause —
+    never a REVISED one, which would blame the source for our error."""
+    import json as _json
+
+    from practice.foreknown.correct import apply
+
+    (tmp_path / "foreknown/snapshots/2026-08-09").mkdir(parents=True)
+    (tmp_path / "foreknown/snapshots/2026-08-09/gdacs.json").write_text(
+        _json.dumps(GDACS_PRIMARY_GAP))
+    registry = {"futures": {"gdacs-tc-1001297": {
+        "id": "gdacs-tc-1001297", "kind": "ALERT_EPISODE", "source": "GDACS",
+        "status": "OPEN", "where": "Marshall Islands, Japan, China",
+        "iso3": ["CHN", "JPN"],
+        "history": [{"ts": "2026-08-08T05:45:00+00:00", "event": "NOTARIZED"}],
+    }}}
+    (tmp_path / "foreknown").mkdir(exist_ok=True)
+    (tmp_path / "foreknown/registry.json").write_text(_json.dumps(registry))
+
+    result = apply(tmp_path)
+    assert [c["added"] for c in result["corrected"]] == [["MHL"]]
+
+    repaired = _json.loads(
+        (tmp_path / "foreknown/registry.json").read_text())["futures"]
+    future = repaired["gdacs-tc-1001297"]
+    assert future["iso3"] == ["CHN", "JPN", "MHL"]
+    events = [h["event"] for h in future["history"]]
+    assert events == ["NOTARIZED", "CORRECTED"]      # never REVISED
+    assert "extraction" in future["history"][-1]["cause"]
+
+    # idempotent: nothing is left to correct, and no second event appears
+    again = apply(tmp_path)
+    assert again["corrected"] == []
+    repaired_again = _json.loads(
+        (tmp_path / "foreknown/registry.json").read_text())["futures"]
+    assert len(repaired_again["gdacs-tc-1001297"]["history"]) == 2
+
+    # a closed future is left alone: the correction touches open records only
+    log = (tmp_path / "autonomy/log.jsonl").read_text().splitlines()
+    assert _json.loads(log[0])["step"] == "foreknown-correct-primary-iso3"
+    assert _json.loads(log[0])["corrected_by"].startswith("the machine's")
