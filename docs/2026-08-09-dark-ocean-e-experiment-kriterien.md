@@ -111,6 +111,36 @@ oder Projekt töten. Beides wäre gelogen, wenn die Messung trägt und die Form 
 **C entscheidet dann nur noch zwischen Flagship und Instrument** — nicht über Leben und
 Tod des Projekts.
 
+### C3 — erster Entwurf steht (2026-08-09, während des Fensters)
+
+`stage/darkocean_draft.py` → `darkocean/draft/index.html`. Kein Bühnenstück: Banner,
+`noindex`, nicht gespiegelt, außerhalb von `public/`. Bewusst **nicht** in den nächtlichen
+Workflow verdrahtet — ein Entwurf, der sich jede Nacht selbst neu schreibt, füllt die
+Historie mit Rauschen für ein Artefakt, das bis zum Review niemand liest. Vor dem Review
+neu erzeugen.
+
+**Was das Bauen sofort gelehrt hat — und genau dafür verlangt C3 einen gebauten Entwurf:**
+
+1. **Der erste Satz war sechs Zeilen lang.** Ein Absatz in Verkleidung. Die
+   Zehn-Sekunden-Regel fängt so etwas nur, wenn man den Satz wirklich setzt und ansieht.
+   Jetzt: *„Every night this machine asks a public archive whether it still says what it
+   said."* Die Zahlen stehen in der Zeile darunter, nicht im Satz.
+2. **Zwei Figuren waren falsch, bevor die dritte trug.** Eine Reihe Marken je Produkt sagte
+   „ein Register existiert" — nicht, dass es *geführt* wird. Produkte nach unten, Nächte
+   nach rechts machte die interessante Achse zur kurzen: 79 Zeilen gegen 3 Spalten, ein
+   grauer Streifen. Transponiert stimmt es: **eine Nacht ist eine Zeile**, das Register ist
+   ihre Länge, die Seite wächst nach unten wie ein Journal, und eine Divergenz ist eine
+   farbige Zelle in der Zeile ihrer Nacht.
+3. **Ehrliche Restschwäche, für den Review notiert:** Bei null Divergenzen sind alle Zeilen
+   gleich. Das ist der Zustand, und N3 nennt ihn ein Ergebnis — aber die Figur wird erst
+   zwingend an dem Tag, an dem sich etwas ändert. Ob das reicht, ist genau die
+   Flagship-oder-Instrument-Frage des Reviews; der Entwurf beantwortet sie nicht, er macht
+   sie entscheidbar.
+
+Geprüft wurde die Form gegen echte Spalten: drei simulierte Nächte in einer Arbeitskopie
+(Live-Probes gegen den Katalog, 79/79 beantwortet), damit die Figur nicht nur im leeren
+Zustand beurteilt wird. Der Archivstand blieb unberührt.
+
 ## 4. Was dieses E-Experiment nicht entscheidet
 
 Den V1-Detektionspfad · die Earth-Engine-Frage (konditionales GO liegt, gehört in eigene

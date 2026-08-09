@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dark Ocean — draft (not published)</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#111; --muted:#555; --faint:#888;
+           --line:#ddd; --panel:#f6f6f6; --held:#9aa7b1; --diverged:#c2410c; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0e0f10; --fg:#eee; --muted:#aaa; --faint:#777; --line:#2a2c2e;
+             --panel:#151719; --held:#4a5560; --diverged:#f97316; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  main { max-width:44rem; margin:0 auto; padding:2rem 1.25rem 5rem; }
+  .banner { border:1px solid var(--diverged); color:var(--diverged);
+             padding:.6rem .8rem; font-size:.72rem; letter-spacing:.12em;
+             text-transform:uppercase; }
+  h1 { font-size:1.05rem; letter-spacing:.18em; text-transform:uppercase;
+        color:var(--faint); font-weight:600; margin:2.5rem 0 .5rem; }
+  .sentence { font-size:clamp(1.35rem,3.6vw,2rem); line-height:1.3; margin:.5rem 0 2rem;
+               font-weight:600; letter-spacing:-.01em; }
+  .field { padding:1rem; border:1px solid var(--line); background:var(--panel);
+            overflow-x:auto; }
+  .second { color:var(--muted); font-size:.9rem; margin:-1.25rem 0 2rem; }
+  .ledger { display:flex; flex-direction:column; gap:6px; min-width:min-content; }
+  .row { display:flex; align-items:center; gap:.6rem; }
+  .d { font-size:.62rem; color:var(--faint); width:5.2em; flex:none; }
+  .t { font-size:.62rem; color:var(--faint); white-space:nowrap; flex:none; }
+  .cells { display:flex; gap:1px; flex:none; }
+  .c { width:5px; height:16px; display:block; background:var(--held); }
+  .c-before { background:transparent; box-shadow:inset 0 0 0 1px var(--line); }
+  .c-diverged { background:var(--diverged); }
+  .empty { color:var(--faint); font-size:.8rem; margin:0; }
+  .note { color:var(--faint); font-size:.78rem; margin-top:.6rem; }
+  table { width:100%; border-collapse:collapse; font-size:.8rem; margin-top:.75rem; }
+  th,td { text-align:left; padding:.35rem .5rem; border-bottom:1px solid var(--line);
+           color:var(--muted); }
+  th { color:var(--faint); font-weight:600; font-size:.7rem; letter-spacing:.1em;
+        text-transform:uppercase; }
+  details { border:1px solid var(--line); padding:.75rem 1rem; margin-top:1rem;
+             background:var(--panel); }
+  summary { cursor:pointer; font-size:.82rem; color:var(--fg); }
+  .scroll { overflow-x:auto; }
+  p { color:var(--muted); }
+  code { color:var(--fg); }
+</style>
+</head>
+<body>
+<main>
+  <p class="banner">Draft for the acceptance review of 2026-08-24 — criterion C3.
+  Not published, not a stage. The E-experiment runs 2026-08-09/10 → 2026-08-22/23.</p>
+
+  <p class="sentence">Every night this machine asks a public archive whether it still says what it said.</p>
+  <p class="second">79 statements written down. The asking has not run yet in this checkout.</p>
+
+  <h1>Every night, asked again</h1>
+  <div class="field"><p class="empty">No line yet: the look-back has not run in this checkout. The first night of asking writes the first line — and lines are what this figure is made of.</p></div>
+  <p class="note">79 products held · the look-back has not run yet in this checkout. One line per night, one cell per statement held
+  that night. A filled cell is a statement the archive still stood by; an outlined one
+  did not exist yet. A change would be a single coloured cell in the line of the night
+  it happened — this page has no event until the world gives it one, and does not
+  manufacture one.</p>
+
+  <details>
+    <summary>Open the register — every product, what it said, whether it still says it</summary>
+    <div class="scroll">
+      <table>
+        <tr><th>Product</th><th>First seen</th><th>State</th></tr>
+        <tr><td>S1C_IW_GRDH_1SDV_20260807T040923_20260807T040948_008884_0119F6_5BB2.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T040948_20260807T041013_008884_0119F6_8CE0.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T041013_20260807T041038_008884_0119F6_5A57.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054521_20260807T054546_008885_0119FB_30F9_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054546_20260807T054611_008885_0119FB_7FB4.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054611_20260807T054636_008885_0119FB_E4A7.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054636_20260807T054701_008885_0119FB_1184.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054701_20260807T054726_008885_0119FB_6834.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054726_20260807T054751_008885_0119FB_15DB.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054751_20260807T054816_008885_0119FB_A3D6.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T054816_20260807T054841_008885_0119FB_8E0B_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T152408_20260807T152433_008891_011A2E_2B83_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T152433_20260807T152458_008891_011A2E_186B.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T165948_20260807T170013_008892_011A34_0335.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170013_20260807T170038_008892_011A34_8CA1_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170038_20260807T170103_008892_011A34_1CC4_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170103_20260807T170128_008892_011A34_12F3.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170128_20260807T170153_008892_011A34_5439.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170153_20260807T170218_008892_011A34_5176.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170218_20260807T170243_008892_011A34_AE36.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170243_20260807T170308_008892_011A34_94F7.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170308_20260807T170333_008892_011A34_568F.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260807T170333_20260807T170358_008892_011A34_8A29.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T044754_20260808T044819_008899_011A6D_37EE_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T044819_20260808T044844_008899_011A6D_51D0.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T044844_20260808T044909_008899_011A6D_04EB.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T044909_20260808T044934_008899_011A6D_35E4.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T044934_20260808T044959_008899_011A6D_0F31_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T044959_20260808T045024_008899_011A6D_017A.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T045024_20260808T045049_008899_011A6D_081D_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T045049_20260808T045114_008899_011A6D_5099_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T045114_20260808T045139_008899_011A6D_1B7D.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160226_20260808T160251_008906_011AA5_2637_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160251_20260808T160316_008906_011AA5_CA20.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160316_20260808T160341_008906_011AA5_04AC.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160341_20260808T160406_008906_011AA5_72E5_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160406_20260808T160431_008906_011AA5_1B4A.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160431_20260808T160456_008906_011AA5_3080_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160456_20260808T160521_008906_011AA5_2611.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160521_20260808T160546_008906_011AA5_3F6C_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1C_IW_GRDH_1SDV_20260808T160546_20260808T160611_008906_011AA5_58D8.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045618_20260807T045643_004015_0074CC_E24F_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045643_20260807T045708_004015_0074CC_9C29_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045708_20260807T045733_004015_0074CC_0568_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045733_20260807T045758_004015_0074CC_5300.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045758_20260807T045823_004015_0074CC_FAD0.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045823_20260807T045848_004015_0074CC_023F_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045848_20260807T045913_004015_0074CC_36EC.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045913_20260807T045938_004015_0074CC_8D51.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T045938_20260807T050003_004015_0074CC_18D4_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161044_20260807T161109_004022_00750A_78F0_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161109_20260807T161134_004022_00750A_282F_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161134_20260807T161159_004022_00750A_202C.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161159_20260807T161224_004022_00750A_1B32.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161224_20260807T161249_004022_00750A_172A_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161249_20260807T161314_004022_00750A_CAB5.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161314_20260807T161339_004022_00750A_C607.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161339_20260807T161404_004022_00750A_91C0_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161404_20260807T161429_004022_00750A_86FC_COG.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260807T161429_20260807T161454_004022_00750A_4D3F.SAFE</td><td>2026-08-07</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053722_20260808T053747_004030_007548_2CC1.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053747_20260808T053812_004030_007548_87D2_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053812_20260808T053837_004030_007548_EF2D_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053837_20260808T053902_004030_007548_1EE6_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053902_20260808T053927_004030_007548_436D.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053927_20260808T053952_004030_007548_151C.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T053952_20260808T054017_004030_007548_B1A3_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T054017_20260808T054042_004030_007548_0611_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T054042_20260808T054107_004030_007548_1327_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165142_20260808T165207_004037_007585_7376.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165207_20260808T165232_004037_007585_48CB.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165232_20260808T165257_004037_007585_9AFE.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165257_20260808T165322_004037_007585_8DB9_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165322_20260808T165347_004037_007585_984C.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165347_20260808T165412_004037_007585_2531.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165412_20260808T165437_004037_007585_124B.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165437_20260808T165502_004037_007585_D2FF_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165502_20260808T165527_004037_007585_23B1_COG.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr><tr><td>S1D_IW_GRDH_1SDV_20260808T165527_20260808T165552_004037_007585_A279.SAFE</td><td>2026-08-08</td><td>not yet re-probed</td></tr>
+      </table>
+    </div>
+  </details>
+
+  <h1>The demonstration</h1>
+  <p>The per-bin overlap counts below are not the claim. Read as a measurement of
+  maritime reality they are a degraded subset of what Global Fishing Watch already
+  publishes; they exist to show what two committed registers can jointly say.</p>
+  <div class="scroll">
+    <table>
+      <tr><th>Night</th><th>Passes</th><th>Bins observed</th><th>Bins declared</th>
+          <th>Vessels declared</th><th>Moment axis</th></tr>
+      <tr><td>2026-08-07</td><td>42</td><td>563</td><td>154</td><td>937</td><td>outage: URLError</td></tr><tr><td>2026-08-08</td><td>37</td><td>644</td><td>160</td><td>943</td><td>outage: URLError</td></tr>
+    </table>
+  </div>
+
+  <h1>What this is not</h1>
+  <p>The eviction premise is <b>structural, not observed</b>: every product probed so far
+  is online with an eviction date of 9999-12-31. Copernicus is not evicting this material
+  and names no date — the register measures whether that stays true.</p>
+  <p>The declared axis is <b>one agency's receiver range</b> off the Finnish coast, against
+  a radar box covering the whole Baltic. Until the discrepancy is reported inside a committed
+  declared-coverage envelope, the headline silence number measures receiver geography, not
+  disclosure.</p>
+  <p>Bins are half-degree cells over a bounding box, not sea masks. Counts only: no vessel
+  identity enters a derived record, and an "observed silent" bin is a statement about the
+  overlap of two registers, never about ships hiding.</p>
+
+  <h1>Check it</h1>
+  <p><code>python verify.py --repo-root .</code> recomputes every figure above from the
+  preserved bytes, in a second implementation.</p>
+</main>
+</body>
+</html>
