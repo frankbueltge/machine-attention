@@ -1,0 +1,98 @@
+{
+ "generated_at": "2026-08-09T15:00:42Z",
+ "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
+ "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
+ "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
+ "why_proofs_live_apart": "an .ots is rewritten once, by `ots upgrade`, when the Bitcoin path arrives — so it cannot live inside the append-only record trees the I3 guard protects",
+ "method": "docs/2026-08-09-opentimestamps-examination.md",
+ "counts": {
+  "manifests": 6,
+  "complete": 0,
+  "pending": 0,
+  "stamped_this_run": 0,
+  "upgraded_this_run": 0,
+  "failures": 6
+ },
+ "failures": [
+  {
+   "manifest": "darkocean/snapshots/2026-08-07/manifest.json",
+   "step": "read",
+   "at": "2026-08-09T15:00:42Z",
+   "detail": "ots client not installed"
+  },
+  {
+   "manifest": "darkocean/snapshots/2026-08-08/manifest.json",
+   "step": "read",
+   "at": "2026-08-09T15:00:42Z",
+   "detail": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/reaction/snapshots/2026-08-08/manifest.json",
+   "step": "read",
+   "at": "2026-08-09T15:00:42Z",
+   "detail": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/reaction/snapshots/2026-08-09/manifest.json",
+   "step": "read",
+   "at": "2026-08-09T15:00:42Z",
+   "detail": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/snapshots/2026-08-08/manifest.json",
+   "step": "read",
+   "at": "2026-08-09T15:00:42Z",
+   "detail": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/snapshots/2026-08-09/manifest.json",
+   "step": "read",
+   "at": "2026-08-09T15:00:42Z",
+   "detail": "ots client not installed"
+  }
+ ],
+ "anchors": [
+  {
+   "manifest": "darkocean/snapshots/2026-08-07/manifest.json",
+   "sha256": "e18dca3057a08f6a64e431a61e8249316c106a1e96771b82c2d056df5839f82b",
+   "proof": "anchors/darkocean/snapshots/2026-08-07/manifest.json.ots",
+   "state": "unreadable",
+   "evidence": "ots client not installed"
+  },
+  {
+   "manifest": "darkocean/snapshots/2026-08-08/manifest.json",
+   "sha256": "66b064824f3986e15c5389675c904927d8b368e8fa07c00979f7435c347f77dd",
+   "proof": "anchors/darkocean/snapshots/2026-08-08/manifest.json.ots",
+   "state": "unreadable",
+   "evidence": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/reaction/snapshots/2026-08-08/manifest.json",
+   "sha256": "c96d25931b16118301379ead910dd993f45ff8cc1985aff8cfa86f5b42c103d6",
+   "proof": "anchors/foreknown/reaction/snapshots/2026-08-08/manifest.json.ots",
+   "state": "unreadable",
+   "evidence": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/reaction/snapshots/2026-08-09/manifest.json",
+   "sha256": "dca57c412401da56c7e0f36bc158ba2257458799e5287ba6b416dd68d63833ce",
+   "proof": "anchors/foreknown/reaction/snapshots/2026-08-09/manifest.json.ots",
+   "state": "unreadable",
+   "evidence": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/snapshots/2026-08-08/manifest.json",
+   "sha256": "60aaf9411301b6fc765910acf147ffdd164f78b61bcac185fff6470f9b998cfc",
+   "proof": "anchors/foreknown/snapshots/2026-08-08/manifest.json.ots",
+   "state": "unreadable",
+   "evidence": "ots client not installed"
+  },
+  {
+   "manifest": "foreknown/snapshots/2026-08-09/manifest.json",
+   "sha256": "bf45554731207c7472a32413346d6922aac98ff955a59262f4c46888fde6a3ae",
+   "proof": "anchors/foreknown/snapshots/2026-08-09/manifest.json.ots",
+   "state": "unreadable",
+   "evidence": "ots client not installed"
+  }
+ ]
+}

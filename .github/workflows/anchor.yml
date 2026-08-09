@@ -1,0 +1,60 @@
+# Anchoring (decision D2, Frank's GO 2026-08-09 for Dark Ocean and The Foreknown):
+# put every night's manifest hash into a Bitcoin block via OpenTimestamps, so the
+# registers' dates stop resting on self-asserted git commit times.
+#
+# Deliberately a SEPARATE job, running after the registers have committed:
+# anchoring must never be able to break a register. If every calendar is down, the
+# night's reading still landed and this job records the outage in the ledger.
+#
+# 06:20 UTC — behind darkocean (04:50) and the foreknown sentinel (05:45), so the
+# manifests of the night are already on main. Each run also upgrades yesterday's
+# still-pending proofs: a fresh stamp is four calendar promises, and only a later
+# `ots upgrade` turns it into a proof that stands on Bitcoin alone.
+name: anchor
+
+on:
+  schedule:
+    - cron: "20 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: anchor
+
+jobs:
+  anchor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The client lives here and only here: practice/ stays dependency-free and keyless,
+      # and the anchoring tool shells out to `ots`. No account, no API key, no secret.
+      - name: Install the OpenTimestamps client
+        run: python -m pip install --quiet opentimestamps-client
+
+      - name: Stamp new manifests, upgrade pending proofs
+        run: python tools/anchor.py
+
+      # Only anchors/ is ever written. The record trees are untouched by design, and the
+      # append-only guard (I3) would refuse it anyway.
+      - name: Commit anchors
+        run: |
+          git config user.name "Machine Attention"
+          git config user.email "attention@machine-attention.invalid"
+          git add anchors
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "anchor: $(python -c 'import json;c=json.load(open("anchors/ledger.json"))["counts"];print(f"{c[\"stamped_this_run\"]} stamped, {c[\"upgraded_this_run\"]} upgraded, {c[\"complete\"]}/{c[\"manifests\"]} complete")')"
+          for attempt in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            git pull --rebase
+          done
+          exit 1

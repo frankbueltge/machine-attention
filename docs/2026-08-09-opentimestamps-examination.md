@@ -4,8 +4,10 @@
 (`frankbueltge.de/docs/design/2026-08-09-portfolio-audit.md` §7) — *"examine as a
 build: a bare git history is a weaker evidentiary claim than a Bitcoin-anchored hash
 of the publisher's checksums; cost ~zero, keyless, fits the ethic."*
-**Status: examined and tested, not yet wired into any nightly run** — the scope
-question in §6 is Frank's.
+**Status: examined, tested, and BUILT.** Frank's decision, 2026-08-09: *"Dark Ocean +
+The Foreknown"*. Both registers are anchored, the nightly job is in place
+(`.github/workflows/anchor.yml`, `tools/anchor.py`), and the first six proofs are in
+`anchors/`. What the build changed about the plan is recorded in §8.
 
 ## 1. Why the question exists
 
@@ -71,6 +73,19 @@ proof requires **a second pass later**: `ots upgrade` fetches the Merkle path do
 the confirmed block and bakes it into the file, after which the proof stands alone and
 needs no calendar ever again.
 
+**The timeline, measured on the same stamp.** Re-checked ~50 minutes after stamping,
+one calendar had moved:
+
+```
+alice.btc.calendar.opentimestamps.org: Timestamped by transaction
+  f1c29a282c43eb9327840f9e8ddac8ee54bb007297415174ade40afcf65c11f3;
+  waiting for 6 confirmations
+```
+
+So the hash reaches a Bitcoin transaction within the hour, and the calendar then holds
+the completed path back until six confirmations (~1 h more). A daily upgrade pass is
+therefore plenty, and yesterday's proofs will be complete by the time it runs.
+
 **Consequence for the design: anchoring is a two-phase commit.** Stamp on the night,
 upgrade on a later night, commit the upgraded file. A design that stamps and commits
 once, and never upgrades, ships permanently-pending proofs that still depend on
@@ -124,7 +139,7 @@ made by an unsigned Actions identity, so that path does not apply — and it wou
 anchor the commit rather than the preserved bytes, which is the weaker object. Stamp
 the manifest.
 
-## 6. The open question — scope (Frank)
+## 6. The scope question — answered
 
 The audit named Dark Ocean and asked "possibly the other registers". The registers
 this could cover, in descending order of how much the anchor adds:
@@ -135,12 +150,12 @@ this could cover, in descending order of how much the anchor adds:
 | **The Foreknown** (machine-attention) | a lot — "the machine notarized what was knowable, when" is a timing claim, and `announced_at` never changing is currently a promise |
 | **The Protocol / Parallax / Policy** (frankbueltge.de) | real but smaller — daily registers whose value is continuity; an anchor makes the "never backfilled" rule externally checkable |
 
-My recommendation: **Dark Ocean and The Foreknown first** (one shared step in
-machine-attention, where the timing claims are explicit), and the site's registers
-only if the same step ports without new machinery. Anchoring everything at once buys
-less than it costs in moving parts.
+My recommendation was **Dark Ocean and The Foreknown first**, and that is what Frank
+chose (2026-08-09). The site's registers stay unanchored for now; the tool is a single
+file with no practice dependency, so porting it is a later, small decision rather than
+a rewrite.
 
-## 7. Verdict
+## 7. Verdict on the examination
 
 **Worth building.** It is keyless, free, additive, small, needs no account and no
 secret, and it repairs the one genuinely weak joint in an evidentiary register — that
@@ -151,3 +166,34 @@ house holds itself to.
 
 Nothing is wired up. The live stamp above was a test against a copy of a committed
 manifest, made outside the repository; no `.ots` file has entered any register.
+
+## 8. What the build changed about the plan
+
+Three things the plan in §5 got wrong, found by building it:
+
+1. **Proofs cannot live beside the manifests.** `ots upgrade` **rewrites** the `.ots`
+   file when the Bitcoin path arrives — and CI's append-only guard (I3) rightly refuses
+   modifications under `*/snapshots/`. A proof is not an append-only record: it is
+   expected to change exactly once, from promise to proof. So proofs live in `anchors/`,
+   mirroring each record's path, and the record trees stay untouched. The cost is one
+   extra flag when verifying, recorded in the ledger:
+   `ots verify -f <manifest> anchors/<same path>.ots`.
+2. **The register list should be a glob, not a list.** `**/snapshots/*/manifest.json`
+   picks up a new register the first night it writes, and reached
+   `foreknown/reaction/snapshots/` without anyone remembering it existed.
+3. **A proof the client cannot read must be a recorded failure.** The first version
+   marked such rows `unreadable` and moved on — a silent degradation, exactly what the
+   house forbids of a source outage. The test for a missing client caught it; unreadable
+   proofs now land in the ledger's `failures`.
+
+**First run, 2026-08-09:** six manifests across both registers (Dark Ocean 2, Foreknown 2,
+Foreknown/reaction 2) — six stamped, four calendars each, all six pending, zero failures.
+Nothing is complete yet, and the ledger says so rather than implying a Bitcoin proof
+exists. The nightly job at 06:20 UTC will upgrade them.
+
+**Not done, deliberately:** `verify.py` does not yet check the anchors. The ledger's
+integrity is covered by `practice/tests/test_anchor.py` (which recomputes every digest
+from the manifest it names, and refuses orphan proofs), and the verifier belongs to the
+session working in it today. Also open: a line on the public verify surface telling a
+reader what an anchor does and does not prove, and which of the two verifications they
+are performing — that copy should land with the stage, not before it.
