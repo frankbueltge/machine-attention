@@ -196,6 +196,8 @@ EVENT_WORDS = {
     "REAPPEARED": "reappeared in its feed after having closed — itself a "
                   "difference worth the record",
     "CLOSED_BY_SOURCE": "the source let go of this warning",
+    "CORRECTED": "the machine corrected its own record — the source said "
+                 "nothing new",
     "DISSIPATED": "the forecast dissipated from its feed",
 }
 
@@ -207,6 +209,18 @@ VERDICT_LEADS = {
                       "registry — a statement about the record, not about "
                       "the world.",
 }
+
+
+def _correction_words(event: dict) -> str:
+    """A CORRECTED event is the register admitting its own error. It reads as
+    the machine's mistake, never as news from the feed."""
+    iso3 = (event.get("corrections") or {}).get("iso3") or {}
+    added = sorted(set(iso3.get("to") or []) - set(iso3.get("from") or []))
+    if not added:
+        return esc(event.get("cause", EVENT_WORDS["CORRECTED"]))
+    return ("the machine corrected its own record: the country list gained "
+            + esc(", ".join(added))
+            + " — the feed had named it all along, this register had not")
 
 
 def _revision_words(changes: dict) -> str:
@@ -416,6 +430,8 @@ def dossier_page(future: dict, data: dict) -> str:
         kind = event.get("event", "")
         if kind == "REVISED":
             words = _revision_words(event.get("changes", {}))
+        elif kind == "CORRECTED":
+            words = _correction_words(event)
         else:
             words = esc(EVENT_WORDS.get(kind, kind.replace("_", " ").lower()))
         anchor = event.get("snapshot")

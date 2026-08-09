@@ -18,7 +18,8 @@ import tempfile
 from pathlib import Path
 
 VALID_STATUS = {"OPEN", "CLOSED_BY_SOURCE", "DISSIPATED"}
-VALID_EVENTS = {"NOTARIZED", "REVISED", "REAPPEARED", "CLOSED_BY_SOURCE",
+VALID_EVENTS = {"NOTARIZED", "REVISED", "CORRECTED", "REAPPEARED",
+                "CLOSED_BY_SOURCE",
                 "DISSIPATED"}
 VALID_VERDICTS = {"EPISODE_ENDED", "MATERIALIZED_AS_ALERT", "NO_ALERT_MATCH"}
 MANIFEST_KEYS = ("file", "url", "retrieved_at", "http_status", "sha256")
