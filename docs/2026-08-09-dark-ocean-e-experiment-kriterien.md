@@ -132,12 +132,17 @@ eine Zahl das nicht hergibt, ist sie keine Abnahmezahl. E ist Prüfer-Ausgabe. C
 sind menschlich lesbare Urteile mit beigelegtem Entwurf; sie werden als Text committet,
 nicht als Score. Kein Aggregatwert, hier so wenig wie im Autonomie-Protokoll.
 
-## 7. Offen für Frank (änderbar bis Fensterstart, danach gebunden)
+## 7. Franks Entscheidungen (2026-08-09, vor Fensterstart — damit gebunden)
 
-1. **Die C-Latte:** Ich schlage vor, dass ein *gebauter* Entwurf Pflicht ist (C3) — die
-   teuerste, aber die einzige Lehre aus One Tap. Weicher wäre: Formskizze genügt.
-2. **Der Drei-Wege-Ausgang** (§2) — neu gegenüber dem Aufnahme-Pfad, der nur
-   RUNNING/RETIRED kennt. Wenn du das nicht willst, fällt „Instrument" weg und C wird
-   zum Todeskriterium.
-3. **Die zwei Vor-Fenster-Nächte** zählen nach meinem Vorschlag nicht mit (§1). Sie
-   mitzuzählen wäre bequem und würde den Review um zwei Tage vorziehen.
+1. **Die C-Latte bleibt hart:** ein *gebauter* Entwurf ist Pflicht (C3), keine
+   Formskizze. Die teuerste Variante, und die einzige, die die One-Tap-Lehre ernst
+   nimmt.
+2. **Der Drei-Wege-Ausgang gilt** (§2) — Flagship · Instrument · RETIRED. Damit
+   entscheidet C über die Form, nicht über die Existenz; das ist eine datierte
+   Erweiterung des Aufnahme-Pfads, der nur RUNNING/RETIRED kannte, und gilt ab jetzt
+   auch für künftige Kandidaten.
+3. **Die zwei Vor-Fenster-Nächte zählen nicht mit** (§1) — mein Vorschlag, nicht
+   widersprochen; steht damit.
+
+Ab der ersten Nacht des Fensters ist dieses Dokument geschlossen. Was danach noch
+auffällt, wird Befund des Reviews, nicht Änderung der Kriterien.
