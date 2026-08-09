@@ -1,0 +1,24 @@
+{
+  "id": "obs-2026-08-09-1",
+  "date": "2026-08-09",
+  "kind": "difference_observation",
+  "title": "GDACS's own primary country is dropped from six tropical-cyclone futures' iso3 lists — Vietnam never appears in the registry despite being named in five of them",
+  "statement": "GDACS's raw event feed carries two country fields per feature: a top-level singular `iso3` (the storm's current/reporting position, e.g. \"MHL\") and a list field `affectedcountries` (other countries in the episode's footprint). practice/src/practice/foreknown/sources.py (gdacs_futures, lines 48-50) builds the future's human-readable `where` text from a third field, `country` (free text naming every place GDACS mentions), but builds the machine-readable `iso3` array from `affectedcountries` alone — it never reads the top-level singular `iso3` field. In both preserved GDACS snapshots (2026-08-08 and 2026-08-09), six tropical-cyclone features carry a top-level `iso3` that is absent from their own `affectedcountries`, so the future's `where` text names one more country than its `iso3` array records: gdacs-tc-1001297 (\"Marshall Islands, Japan, China\" -> iso3 [CHN, JPN], missing MHL), gdacs-tc-1001281, gdacs-tc-1001219, gdacs-tc-1001214, gdacs-tc-1001199 (each \"Viet Nam, ...\" -> iso3 missing VNM), and gdacs-tc-1001270 (\"Northern Mariana Islands, Guam\" -> iso3 [GUM] only, missing MNP). The gap is stable, not a one-night glitch: identical for the same six event ids in both foreknown/snapshots/2026-08-08/gdacs.json and foreknown/snapshots/2026-08-09/gdacs.json, and it has held in foreknown/registry.json since the futures were first notarized on 2026-08-08. Across the full 100-future registry, Viet Nam is named in the `where` text of six tropical-cyclone futures (gdacs-tc-1001199, -1001214, -1001219, -1001229, -1001233, -1001281) and VNM appears in the `iso3` array of zero of them. The gap propagates downstream unlabeled: foreknown/reaction/readings/2026-08-09.json computes each future's `fips` list and GDELT attention-article count from the same `iso3` array (practice/src/practice/foreknown/reaction.py, build_reading, lines 191-202), so gdacs-tc-1001297's 24,742 attributed articles are counted only for China and Japan fips codes — Marshall Islands' news volume is never counted for that cyclone, and the same holds for Vietnam across its five entries. The FTS plan-match check (has_fts_plan_match, same lines) is computed from the identical incomplete iso3 array, so a funding plan naming Vietnam, the Marshall Islands or the Northern Mariana Islands could never register a match through these six futures even if one existed.",
+  "method": "Compared each GDACS feature's top-level properties.iso3 to the iso3 set derived from properties.affectedcountries, for both preserved snapshots. Reproducible with: python3 -c \"import json; d=json.load(open('foreknown/snapshots/2026-08-09/gdacs.json')); [print(p['eventtype'], p['eventid'], p['iso3'], p['country']) for p in (f['properties'] for f in d['features']) if p.get('iso3') and p['iso3'] not in {c.get('iso3') for c in p.get('affectedcountries', [])}]\". Cross-checked the same six ids in foreknown/registry.json and confirmed Viet Nam's absence from every future's iso3 array with: python3 -c \"import json; f=json.load(open('foreknown/registry.json'))['futures']; print([k for k,v in f.items() if 'VNM' in v.get('iso3',[])])\" (returns []).",
+  "figures": {
+    "tc_features_with_dropped_primary_country": 6,
+    "same_six_ids_both_nights": true,
+    "futures_naming_vietnam_in_where": 6,
+    "futures_with_vnm_in_iso3": 0,
+    "dropped_countries": ["MHL", "VNM", "MNP"]
+  },
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-08/gdacs.json",
+    "foreknown/snapshots/2026-08-09/gdacs.json",
+    "practice/src/practice/foreknown/sources.py",
+    "practice/src/practice/foreknown/reaction.py",
+    "foreknown/reaction/readings/2026-08-09.json"
+  ],
+  "worth_watching_because": "This is not a claim that Vietnam, the Marshall Islands or the Northern Mariana Islands are unaffected by these storms — GDACS's own `country` text says otherwise. It is a statement about how the extraction code reads GDACS's feed: a country GDACS itself names as primary can be silently absent from every downstream iso3-keyed measurement (FTS coverage match, GDELT attention count) without any failure, warning, or gap appearing in run.json. The six affected futures are all tropical cyclones; no mismatch of this kind was found among the 94 earthquake, flood, drought or wildfire features in either snapshot, which narrows where a fix (reading the top-level iso3 field alongside affectedcountries) would need to apply first."
+}

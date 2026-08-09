@@ -1,0 +1,14 @@
+{
+  "name": "primary-iso3-gap",
+  "definition": "For every GDACS-sourced future, whether the raw feed's top-level singular `properties.iso3` (the event's current/reporting-position country) is a member of the future's committed `iso3` array, which practice/src/practice/foreknown/sources.py (gdacs_futures, lines 48-50) builds only from `properties.affectedcountries`. obs-2026-08-09-1.json found six tropical-cyclone futures in both preserved GDACS snapshots (2026-08-08 and 2026-08-09) where the top-level iso3 is absent from affectedcountries and therefore absent from the future's iso3 array, even though the same country is named in the future's own `where` text. A purely mechanical field-membership check against already-preserved raw snapshot bytes — no judgement about which country is 'really' affected.",
+  "test_rule": "On each nightly notary run, after gdacs_futures() extracts the night's features, for every ALERT_EPISODE future compare its committed iso3 list to the raw snapshot feature's top-level properties.iso3 for the same event id. If properties.iso3 is non-empty and not present in the future's iso3 array, record {future_id, dropped_iso3} in that night's run summary under primary_iso3_dropped. The sensor fires (is worth a note) on any run where the list is non-empty, since a coverage gap in a country field does not need a threshold or multiple nights to be a real gap — unlike sensor-fts-country-coverage, which measures a rate that needs a baseline before a change means anything.",
+  "falsification": "Falsified as a live sensor once the underlying code is fixed (reading affectedcountries union the top-level iso3, or an equivalent correction) and primary_iso3_dropped stays empty for many subsequent nights purely because the bug is gone — at that point the sensor has done its one job and should be retired, not kept running for a case that can no longer occur. Also scoped, not general: NHC-sourced futures never carry affectedcountries or a comparable top-level/list split (practice/src/practice/foreknown/sources.py, nhc_futures, line 75 sets iso3 to [] unconditionally), so this sensor only ever applies to GDACS-sourced futures and would need a different check, not a wider threshold, if NHC's schema changes.",
+  "derived_from": [
+    "foreknown/proposals/obs-2026-08-09-1.json",
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-08/gdacs.json",
+    "foreknown/snapshots/2026-08-09/gdacs.json",
+    "practice/src/practice/foreknown/sources.py"
+  ],
+  "status": "PROPOSED"
+}
