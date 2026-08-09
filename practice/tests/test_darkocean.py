@@ -29,6 +29,8 @@ CDSE_PAGE = {"value": [
      "ContentDate": {"Start": "2026-08-07T04:10:00.000Z",
                      "End": "2026-08-07T04:10:25.000Z"},
      "Checksum": [{"Algorithm": "BLAKE3", "Value": "b2"}],
+     # what the live catalog answers today: online, no eviction date named
+     "Online": True, "EvictionDate": "9999-12-31T23:59:59.999999Z",
      "GeoFootprint": FOOTPRINT},
     # a different acquisition, farther north
     {"Name": "S1D_IW_GRDH_1SDV_20260807T165300_20260807T165325_Y",
@@ -150,3 +152,110 @@ def test_reading_refuses_to_overwrite_and_records_source_failures(tmp_path):
     reading = json.loads(
         (tmp_path / "darkocean/readings/2026-08-08.json").read_text())
     assert reading["declared_axis"] is None            # absent, not invented
+
+
+# --- criteria group N: the continuity probe -----------------------------
+
+class FakeLookbackClient:
+    """Answers the look-back with a catalog that has moved on: the product
+    the register recorded for the folded SAFE/COG pair has gone offline, has
+    gained a real eviction date and no longer carries the BLAKE3 that was
+    preserved — and the northern acquisition is gone from the catalog."""
+
+    requests = 0
+    http_429 = 0
+
+    def __init__(self, status=200, drop_ids=("ccc",)):
+        self._status = status
+        self._drop = set(drop_ids)
+
+    def fetch(self, url, headers=None):
+        self.requests += 1
+        if self._status != 200:
+            return b"", self._status
+        moved = []
+        for product in CDSE_PAGE["value"]:
+            pid = product.get("Id")
+            if "GRD" not in product.get("Name", "") or pid in self._drop:
+                continue
+            answer = dict(product)
+            answer["ModificationDate"] = "2026-08-09T00:00:00.000Z"
+            # "bbb" is the product the dedupe keeps for that acquisition —
+            # the register holds it, so it is the one worth moving.
+            if pid == "bbb":
+                answer["Online"] = False
+                answer["EvictionDate"] = "2026-08-20T00:00:00.000Z"
+                answer["Checksum"] = [{"Algorithm": "BLAKE3",
+                                       "Value": "b2-DIFFERENT"}]
+            moved.append(answer)
+        return json.dumps({"value": moved}).encode(), 200
+
+
+def _seed_reading(tmp_path):
+    run(tmp_path, "2026-08-07", FakeClient(), dma_probe=_dma_outage)
+
+
+def test_continuity_catches_divergence_and_never_reconciles_it(tmp_path):
+    from practice.darkocean.continuity import run as continuity_run
+
+    _seed_reading(tmp_path)
+    record = continuity_run(tmp_path, "2026-08-08", FakeLookbackClient())
+
+    kinds = {(c["kind"], c.get("field")) for c in record["catches"]}
+    assert ("changed", "online") in kinds
+    assert ("changed", "eviction_date") in kinds
+    assert ("changed", "checksums") in kinds
+    assert ("gone_from_catalog", None) in kinds
+
+    checksum_catch = next(c for c in record["catches"]
+                          if c.get("field") == "checksums")
+    assert checksum_catch["preserved"] == {"blake3": "b2"}
+    assert checksum_catch["current"] == {"blake3": "b2-DIFFERENT"}
+
+    # the reading it came from is untouched: nothing is reconciled
+    reading = json.loads(
+        (tmp_path / "darkocean/readings/2026-08-07.json").read_text())
+    preserved = {a["id"]: a for a in reading["acquisitions"]}
+    assert preserved["bbb"]["online"] is True
+    assert preserved["bbb"]["eviction_date"] == "9999-12-31T23:59:59.999999Z"
+
+    log_lines = (tmp_path / "autonomy/log.jsonl").read_text().splitlines()
+    assert json.loads(log_lines[-1])["step"] == "darkocean-continuity"
+
+
+def test_continuity_establishes_a_missing_baseline_instead_of_claiming_unchanged(
+        tmp_path):
+    """Readings written before 2026-08-09 carry no modification_date. The
+    probe may not report 'unchanged' for a value it never held."""
+    from practice.darkocean.continuity import run as continuity_run
+
+    _seed_reading(tmp_path)
+    reading_path = tmp_path / "darkocean/readings/2026-08-07.json"
+    reading = json.loads(reading_path.read_text())
+    for acquisition in reading["acquisitions"]:
+        acquisition.pop("modification_date", None)
+    reading_path.write_text(json.dumps(reading))
+
+    record = continuity_run(tmp_path, "2026-08-08",
+                            FakeLookbackClient(drop_ids=()))
+    established = {(b["id"], b["field"]) for b in record["baselines_established"]}
+    assert ("bbb", "modification_date") in established
+    assert not any(c.get("field") == "modification_date"
+                   for c in record["catches"])
+
+    # a later night compares against the baseline the first probe established
+    later = continuity_run(tmp_path, "2026-08-09",
+                           FakeLookbackClient(drop_ids=()))
+    assert not later["baselines_established"]
+
+
+def test_continuity_treats_a_failed_batch_as_a_failure_not_a_vanished_product(
+        tmp_path):
+    from practice.darkocean.continuity import run as continuity_run
+
+    _seed_reading(tmp_path)
+    record = continuity_run(tmp_path, "2026-08-08",
+                            FakeLookbackClient(status=503))
+    assert record["catches"] == []                     # nothing is claimed
+    assert record["failures"][0]["error"] == "HTTP 503"
+    assert record["answered"] == 0

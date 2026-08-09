@@ -32,6 +32,15 @@ jobs:
       - name: Coverage-vs-Declaration reading (yesterday, UTC)
         run: python -m practice.darkocean.run --repo-root .
 
+      # Criteria group N: re-probe every product the register already holds,
+      # so the preservation claim is measured rather than promised. Runs even
+      # if the reading above failed — the look-back is about what is already
+      # recorded, and a night without a new reading is exactly a night where
+      # the older rows still deserve their check.
+      - name: Continuity probe (the notarial act)
+        if: always()
+        run: python -m practice.darkocean.continuity --repo-root .
+
       - name: Verify provenance chain
         run: python verify.py --repo-root .
 
@@ -44,7 +53,7 @@ jobs:
             echo "nothing to commit"
             exit 0
           fi
-          git commit -m "darkocean: reading of $(date -u -d 'yesterday' +%F)"
+          git commit -m "darkocean: reading and continuity probe of $(date -u -d 'yesterday' +%F)"
           for attempt in 1 2 3 4 5; do
             if git push; then exit 0; fi
             git pull --rebase
