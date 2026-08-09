@@ -59,6 +59,31 @@ cd practice &amp;&amp; python -m pip install -e '.[dev]' &amp;&amp; python -m py
   </section>
 
   <section><h2>The one hand-authored link</h2><p>The country crosswalk translates 75 iso3 codes to the FIPS codes GDELT locates events with. It is the only hand-written joint in the chain, so it carries its own evidence: every code is checked against <a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/reaction/iso3-fips.json">the committed record</a>, name by name. The check against the issuer&#8217;s own code list has recorded 1 finding about the instrument itself — kept in the file, not silently corrected.</p></section>
+  
+  <section>
+    <h2>Why the dates are not just our word</h2>
+    <p>This work claims to have notarized what was knowable <em>when</em> — so the dates
+    carry the claim. A git commit date does not: it is set by the committer&#8217;s clock
+    and can be rewritten. So each night&#8217;s manifest, which already holds the SHA-256
+    of every byte preserved that night, is stamped into the Bitcoin blockchain with
+    <a href="https://opentimestamps.org">OpenTimestamps</a> — keyless, free, and
+    checkable without us. 4 of 4 nights carry a completed
+    proof. The completed proofs rest on Bitcoin blocks 961744, 961747.</p>
+    <p><strong>What an anchor proves:</strong> those exact bytes existed no later than
+    that block. <strong>What it does not:</strong> that they are true, that they came from
+    the publisher they name, or that they did not exist earlier. It makes the record
+    unrevisable after the fact; it does not make it correct.</p>
+    <pre><code>ots verify -f foreknown/snapshots/&lt;day&gt;/manifest.json \
+  anchors/foreknown/snapshots/&lt;day&gt;/manifest.json.ots</code></pre>
+    <p class="note">The <code>-f</code> is needed because proofs are stored apart from the
+    records: <code>ots upgrade</code> rewrites a proof once, when its Bitcoin path arrives,
+    and the record trees never change. Checking the Bitcoin side needs a Bitcoin node
+    (<code>--bitcoin-node</code>); a block explorer would put a third party back into a
+    chain built to remove them. Without the client, <code>verify.py</code> still binds each
+    proof to its manifest from the proof&#8217;s own header.</p>
+    <table class="tbl"><thead><tr><th>night</th><th>state</th>
+    <th>evidence</th></tr></thead><tbody><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/snapshots/2026-08-09/manifest.json">foreknown/snapshots/2026-08-09/manifest.json</a></td><td>complete</td><td>bitcoin block(s) 961744, 961747</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/snapshots/2026-08-08/manifest.json">foreknown/snapshots/2026-08-08/manifest.json</a></td><td>complete</td><td>bitcoin block(s) 961744, 961747</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/reaction/snapshots/2026-08-09/manifest.json">foreknown/reaction/snapshots/2026-08-09/manifest.json</a></td><td>complete</td><td>bitcoin block(s) 961744, 961747</td></tr><tr><td><a href="https://github.com/frankbueltge/machine-attention/blob/main/foreknown/reaction/snapshots/2026-08-08/manifest.json">foreknown/reaction/snapshots/2026-08-08/manifest.json</a></td><td>complete</td><td>bitcoin block(s) 961744, 961747</td></tr></tbody></table>
+  </section>
 
   <section>
     <h2>The machine&#8217;s own steps</h2>

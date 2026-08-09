@@ -3,8 +3,9 @@
 
 Checks: snapshot manifests ↔ bytes (SHA-256, both directions), registry
 history anchored in manifested snapshots, announced_at immutability rules,
-autonomy protocol coverage, and the stage as a byte-identical deterministic
-rebuild of the committed records. Stdlib only.
+autonomy protocol coverage, the OpenTimestamps anchors against the manifests
+they commit to, and the stage as a byte-identical deterministic rebuild of the
+committed records. Stdlib only.
 """
 
 from __future__ import annotations
@@ -13,6 +14,7 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -23,6 +25,11 @@ VALID_EVENTS = {"NOTARIZED", "REVISED", "CORRECTED", "REAPPEARED",
                 "DISSIPATED"}
 VALID_VERDICTS = {"EPISODE_ENDED", "MATERIALIZED_AS_ALERT", "NO_ALERT_MATCH"}
 MANIFEST_KEYS = ("file", "url", "retrieved_at", "http_status", "sha256")
+# An OpenTimestamps proof begins with this magic, then one version byte, then the hash op
+# and the digest of the file it commits to. Read from the format, not from the client, so
+# the pairing proof <-> manifest can be checked with the standard library alone.
+OTS_MAGIC = bytes.fromhex("004f70656e54696d657374616d7073000050726f6f6600bf89e2e884e89294")
+OTS_SHA256_OP = 0x08
 
 
 def sha256_file(path: Path) -> str:
@@ -483,6 +490,95 @@ def check_darkocean_continuity(root: Path, registry_files: dict,
                             "derived record")
 
 
+def check_anchors(root: Path, problems: list[str]) -> None:
+    """The OpenTimestamps anchors (D2): the ledger's claims against the bytes.
+
+    Deliberately WITHOUT the ots client — this verifier is stdlib-only, and a check that
+    needs an optional dependency is a check that quietly stops running. Everything below
+    is readable from the files themselves:
+
+      * a proof's own header carries the SHA-256 of the file it commits to, so the pairing
+        proof <-> manifest is provable here rather than taken from the ledger's word;
+      * the ledger's digests are recomputed from the manifests;
+      * every manifest in the registers appears in the ledger, so a night cannot be
+        silently dropped from the anchoring record (an unstamped night is legitimate and
+        must be listed as such);
+      * a proof declared complete names the Bitcoin blocks a reader can check.
+
+    What stays out of reach here, stated rather than implied: whether a block actually
+    contains the commitment. That needs a Bitcoin node — `ots verify -f <manifest> <proof>`
+    — and no verifier of ours can stand in for one.
+    """
+    proofs_dir = root / "anchors"
+    ledger_path = proofs_dir / "ledger.json"
+    if not proofs_dir.exists():
+        return  # nothing anchored yet — not a hole
+    if not ledger_path.exists():
+        problems.append("anchors/ exists without anchors/ledger.json")
+        return
+
+    ledger = load(ledger_path)
+    entries = ledger.get("anchors", [])
+    listed = {e.get("manifest") for e in entries}
+
+    # every register night must appear in the ledger, anchored or not
+    for manifest in sorted(root.glob("*/**/snapshots/*/manifest.json")):
+        rel = manifest.relative_to(root).as_posix()
+        if rel not in listed:
+            problems.append(f"anchor ledger omits {rel}")
+
+    counted = {"complete": 0, "pending": 0}
+    for entry in entries:
+        rel = entry.get("manifest", "?")
+        manifest = root / rel
+        if not manifest.exists():
+            problems.append(f"anchor ledger names a manifest that is gone: {rel}")
+            continue
+        digest = sha256_file(manifest)
+        if entry.get("sha256") != digest:
+            problems.append(f"anchor {rel}: ledger digest diverges from the bytes")
+        state = entry.get("state")
+        if state in counted:
+            counted[state] += 1
+        if state in {"pending", "complete"}:
+            proof = root / entry.get("proof", "")
+            if not proof.exists():
+                problems.append(f"anchor {rel}: proof {entry.get('proof')} missing")
+                continue
+            raw = proof.read_bytes()
+            if not raw.startswith(OTS_MAGIC):
+                problems.append(f"anchor {rel}: {entry.get('proof')} is not an "
+                                "OpenTimestamps proof")
+                continue
+            # magic, one version byte, then the hash op — 0x08 is SHA-256 — then 32 bytes
+            head = len(OTS_MAGIC) + 1
+            if raw[head] != OTS_SHA256_OP:
+                problems.append(f"anchor {rel}: proof commits with an unexpected "
+                                f"hash op {raw[head]:#04x}")
+                continue
+            committed = raw[head + 1:head + 33].hex()
+            if committed != digest:
+                problems.append(f"anchor {rel}: proof commits to {committed[:16]}…, "
+                                f"the manifest hashes to {digest[:16]}…")
+        if state == "complete" and not re.search(r"bitcoin block\(s\) \d{6,}",
+                                                 entry.get("evidence", "")):
+            # "attestation present" is our assertion; a height is checkable against a chain
+            problems.append(f"anchor {rel}: complete without a named Bitcoin block")
+
+    for key, claimed in (("complete", counted["complete"]), ("pending", counted["pending"])):
+        if ledger.get("counts", {}).get(key) != claimed:
+            problems.append(f"anchor ledger counts {key}={ledger.get('counts', {}).get(key)}, "
+                            f"the entries say {claimed}")
+
+    for orphan in sorted(proofs_dir.rglob("*.ots")):
+        rel = orphan.relative_to(proofs_dir)
+        if not (root / rel.parent / rel.name[:-4]).exists():
+            problems.append(f"orphan proof {orphan.relative_to(root)}: "
+                            "the manifest it commits to is gone")
+    for leftover in sorted(proofs_dir.rglob("*.bak")):
+        problems.append(f"client backup committed: {leftover.relative_to(root)}")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -539,6 +635,7 @@ def check(root: Path) -> list[str]:
     check_reaction(root, registry, registry_files, problems)
     check_darkocean(root, registry_files, problems)
     check_darkocean_continuity(root, registry_files, problems)
+    check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
     run_dates = {load(p)["date"] for p in root.glob("foreknown/snapshots/*/run.json")}
