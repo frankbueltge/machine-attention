@@ -1,0 +1,117 @@
+"""What this practice tells the house about itself.
+
+frankbueltge.de mirrors this practice as rendered HTML. Parsing those pages
+back into facts would be brittle re-derivation — a layout change would break
+the figure, and it would claim a precision the source never gave. So the
+practice exports what it wants known, in one small file, the same way the
+ecology's practices publish a work meta beside a work.
+
+Contract: `docs/design/2026-08-09-attention-export-contract.md` in the site
+repository (`attention-export/1`). Deliberately narrow: projects, statuses
+and dated scalars — never individual futures, readings or snapshots, never
+prose written for a page, never an address. The house records that the
+instrument exists and what it reports, never its rows.
+
+Every figure is recomputed here from committed records; nothing is typed.
+"""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+from .preserve import read_json, write_json
+
+CONTRACT = "attention-export/1"
+
+# One line per admitted project. `status` is this practice's own word, not a
+# term the consumer interprets; `site_route` is null while a project lives
+# only in this repository — which is the admission path's rule, not an
+# oversight (no stage presence before the E-experiment is passed).
+PROJECTS = (
+    {"id": "foreknown", "title": "The Foreknown", "since": "2026-08-08",
+     "site_route": "/attention", "status": "running"},
+    {"id": "darkocean", "title": "Dark Ocean", "since": "2026-08-07",
+     "site_route": None, "status": "e-experiment"},
+    {"id": "state-before-interface", "title": "The State Before the Interface",
+     "since": "2026-08-08", "site_route": "/observatory",
+     "status": "running"},
+)
+
+
+def head_commit(repo_root: Path) -> str:
+    """The commit this export was made from, read from the checkout itself —
+    no subprocess, so the deterministic rebuild stays deterministic."""
+    head = repo_root / ".git" / "HEAD"
+    if not head.exists():
+        return "unknown"
+    ref = head.read_text(encoding="utf-8").strip()
+    if ref.startswith("ref: "):
+        target = repo_root / ".git" / ref[5:]
+        if target.exists():
+            return target.read_text(encoding="utf-8").strip()[:7]
+        packed = repo_root / ".git" / "packed-refs"
+        if packed.exists():
+            for line in packed.read_text(encoding="utf-8").splitlines():
+                parts = line.split()
+                if len(parts) == 2 and parts[1] == ref[5:]:
+                    return parts[0][:7]
+        return "unknown"
+    return ref[:7]
+
+
+def figures(repo_root: Path) -> list[dict]:
+    """Dated scalars, each recounted from the records that carry them."""
+    registry = read_json(repo_root / "foreknown" / "registry.json",
+                         {"futures": {}})
+    futures = registry.get("futures", {})
+    resolutions = [read_json(p) for p in
+                   sorted((repo_root / "foreknown" / "resolutions").glob("*.json"))]
+    nights = sorted(p.name for p in
+                    (repo_root / "foreknown" / "snapshots").glob("*")
+                    if p.is_dir())
+    readings = sorted((repo_root / "darkocean" / "readings").glob("*.json"))
+    as_of = nights[-1] if nights else ""
+    return [
+        {"key": "futures_under_watch",
+         "value": sum(1 for f in futures.values() if f.get("status") == "OPEN"),
+         "as_of": as_of},
+        {"key": "futures_notarized_total", "value": len(futures),
+         "as_of": as_of},
+        {"key": "futures_resolved", "value": len(resolutions), "as_of": as_of},
+        {"key": "materialized",
+         "value": sum(1 for r in resolutions
+                      if r.get("verdict") == "MATERIALIZED_AS_ALERT"),
+         "as_of": as_of},
+        {"key": "nights_on_record", "value": len(nights), "as_of": as_of},
+        {"key": "darkocean_nights_on_record", "value": len(readings),
+         "as_of": readings[-1].stem if readings else as_of},
+    ]
+
+
+def build(repo_root: Path) -> dict:
+    return {
+        "$contract": CONTRACT,
+        "generated_from": {"repo": "machine-attention",
+                           "commit": head_commit(repo_root)},
+        "practice": {"id": "machine-attention", "label": "Machine Attention"},
+        "projects": [dict(project) for project in PROJECTS],
+        "figures": figures(repo_root),
+    }
+
+
+def main(argv=None) -> None:
+    parser = argparse.ArgumentParser(
+        description="Write the practice's export for frankbueltge.de.")
+    parser.add_argument("--repo-root", default=".", type=Path)
+    args = parser.parse_args(argv)
+    root = args.repo_root.resolve()
+    payload = build(root)
+    write_json(root / "export.json", payload)
+    print(f"export.json: {len(payload['projects'])} projects, "
+          f"{len(payload['figures'])} figures, from "
+          f"{payload['generated_from']['commit']}")
+
+
+if __name__ == "__main__":
+    main()
