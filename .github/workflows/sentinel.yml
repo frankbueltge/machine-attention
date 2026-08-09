@@ -40,6 +40,13 @@ jobs:
         if: always()
         run: python -m practice.export --repo-root .
 
+      # What the projects offer the shared stage: real, dated events with a
+      # plain statement and an address to enter (stage-moments/1). The site
+      # mirrors it beside the export.
+      - name: Stage moments
+        if: always()
+        run: python -m practice.moments --repo-root .
+
       - name: Verify provenance chain
         run: python verify.py --repo-root .
 
