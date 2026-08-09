@@ -38,14 +38,16 @@ a block explorer is a third party, which is the trust an anchor exists to remove
 See docs/2026-08-09-opentimestamps-examination.md.
 
 Usage:
-  python3 tools/anchor.py                 # stamp new manifests, upgrade incomplete ones
-  python3 tools/anchor.py --no-network    # ledger only, from the files on disk
+  python3 tools/anchor.py                    # stamp new manifests, upgrade incomplete ones
+  python3 tools/anchor.py --no-network       # ledger only, from the files on disk
+  python3 tools/anchor.py --ledger /tmp/x    # write the ledger elsewhere (tests)
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -107,16 +109,27 @@ def state_of(proof: Path) -> tuple[str, str]:
     if rc != 0 and COMPLETE_MARK not in out and PENDING_MARK not in out:
         return "unreadable", out.strip()[:400]
     if COMPLETE_MARK in out:
-        # keep the block heights: they are the actual evidence of the date
-        blocks = sorted({w for line in out.splitlines() if COMPLETE_MARK in line for w in line.split() if w.isdigit()})
-        return "complete", f"bitcoin block(s) {', '.join(blocks)}" if blocks else "bitcoin attestation present"
+        # Keep the block heights: they ARE the evidence of the date, and a reader checks
+        # them against a chain, not against us. The client prints them inside the
+        # attestation name — BitcoinBlockHeaderAttestation(961744) — so they have to be
+        # read out of the parentheses, not off a whitespace split.
+        blocks = sorted({int(h) for h in re.findall(rf"{COMPLETE_MARK}\((\d+)\)", out)})
+        if blocks:
+            return "complete", "bitcoin block(s) " + ", ".join(str(b) for b in blocks)
+        return "complete", "bitcoin attestation present, height not reported"
     return "pending", f"{out.count(PENDING_MARK)} calendar promise(s), no block yet"
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--no-network", action="store_true", help="only re-read the files on disk")
+    # The ledger path is an argument so a test can never write the real record. It once
+    # did: an offline end-to-end test ran this tool as a subprocess without the client on
+    # PATH and overwrote the committed ledger with six "unreadable" rows and six
+    # failures — a false record in a repository whose whole point is truthful records.
+    ap.add_argument("--ledger", type=Path, default=None, help="write the ledger elsewhere")
     args = ap.parse_args(argv)
+    ledger_path = args.ledger or LEDGER
 
     entries, failures = [], []
     stamped = upgraded = complete = pending = 0
@@ -192,8 +205,8 @@ def main(argv: list[str] | None = None) -> int:
         "failures": failures,
         "anchors": entries,
     }
-    LEDGER.parent.mkdir(parents=True, exist_ok=True)
-    LEDGER.write_text(json.dumps(ledger, indent=1, ensure_ascii=False) + "\n")
+    ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    ledger_path.write_text(json.dumps(ledger, indent=1, ensure_ascii=False) + "\n")
 
     print(f"anchors: {len(entries)} manifests · {complete} complete · {pending} pending "
           f"· +{stamped} stamped · +{upgraded} upgraded · {len(failures)} failure(s)")
