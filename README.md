@@ -88,8 +88,11 @@ Ethics, constitutive: the subject is the warning system and institutional
 time — never the victims. No natural persons, no accusations, no risk
 forecasts of our own. Sobriety is the register.
 
-**Background project:** [state-before-interface](https://github.com/frankbueltge/state-before-interface)
-(public AI procurement) keeps observing nightly and feeds the practice.
+**Instrument:** [state-before-interface](https://github.com/frankbueltge/state-before-interface)
+(public AI procurement) keeps observing nightly and feeds the practice. An instrument is a
+full project of this practice with no stage claim — it may produce nothing for a long time,
+and that is allowed. "Background project" was the wrong word for it and was dropped on
+2026-08-09 when the house settled its vocabulary.
 
 ## Dark Ocean — V0, admitted 2026-08-09
 
