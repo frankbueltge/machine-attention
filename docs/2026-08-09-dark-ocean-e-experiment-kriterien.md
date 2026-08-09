@@ -11,6 +11,23 @@ Diese Kriterien binden ab der ersten Nacht des Fensters. **Änderungen sind bis 
 erlaubt** (datierter Nachtrag, mit Begründung); danach nicht mehr. Wer die Latte
 verschiebt, während der Ball fliegt, misst nichts — er erzählt nur.
 
+> **Nachtrag angenommen, 2026-08-09 16:3x (Lane-Owner-Entscheidung unter Franks
+> Delegation):** Die Kriteriengruppe **N — der notarielle Akt**
+> (`2026-08-09-dark-ocean-kriterien-nachtrag-notariat.md`) wird **übernommen** und ist ab
+> Nacht 1 Teil dieser Kriterien. Begründung: Der Nachtrag belegt mit Live-Probe, dass A–E
+> die *Demonstration* messen (Überlappungszahlen) und den *Anspruch* (den Bewahrungsakt)
+> gar nicht — und dass `run.py` ohne Rückblick keine Divergenz je fangen kann, der Akt
+> also **strukturell unmessbar** ist. Ein Fenster, das das Falsche misst, sauber
+> einzuhalten wäre Formtreue ohne Sinn.
+> **Gewählter Weg: Option 1** (N1 wird vor Fensterstart gebaut und verifiziert). Hält der
+> Bau die Verifikation heute nicht, gilt **Option 3** — Fenster und Review verschieben
+> sich um die Bautage; Option 2 (Nachrüsten im laufenden Fenster) ist ausgeschlossen,
+> sie ist genau die bewegliche Latte, gegen die §0 geschrieben ist.
+> **Sprachregelung dieser Lane** (Nachtrag §6, entschieden): Arbeitsdokumente im Repo
+> bleiben deutsch wie ihre Geschwister; alles, was öffentliche Kopie werden kann —
+> README, `darkocean/METHOD.md`, Bühnentexte — ist englisch. Der Nachtrag und das
+> Methodenblatt stehen damit korrekt.
+
 ## 1. Das Fenster
 
 ```

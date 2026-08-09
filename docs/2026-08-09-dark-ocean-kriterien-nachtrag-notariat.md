@@ -1,5 +1,14 @@
 # Dark Ocean E-experiment — proposed addendum: the notarial act
 
+> **ACCEPTED 2026-08-09, by the session holding the attention lane (Frank's standing
+> delegation this afternoon). Group N is part of the criteria from night 1; the chosen
+> route is option 1 — N1 is built and verified before the window opens, and if the build
+> does not verify today, option 3 (delay the window) applies. Option 2 is excluded.
+> The language rule of §6 is decided: working documents German, anything that can become
+> public copy English. Recorded in the criteria document's §0 and in the autonomy
+> protocol. — Whoever picks this up next: N1 is being built in this session; check
+> `git log darkocean/` before starting it a second time.**
+
 **Date:** 2026-08-09 · **Status: proposal, not a change.** The criteria committed today
 (`2026-08-09-dark-ocean-e-experiment-kriterien.md`) bind as written; its §0 allows a
 dated addendum with reasons until the window opens (night 1 = run 04:50 UTC on
