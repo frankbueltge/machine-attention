@@ -43,6 +43,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
     failures: list[dict] = []
     observed: list[dict] = []
     snapshot_files: dict[str, str] = {}
+    parsed_feeds: dict[str, dict] = {}
 
     for name, url, filename, extract in FEEDS:
         try:
@@ -56,7 +57,9 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         entry = snap.preserve(filename, data, url, status)
         snapshot_files[name] = entry["file"]
         try:
-            observed.extend(extract(json.loads(data)))
+            parsed = json.loads(data)
+            parsed_feeds[name] = parsed
+            observed.extend(extract(parsed))
         except (json.JSONDecodeError, KeyError, TypeError) as err:
             failures.append({"scope": f"extract:{name}",
                              "error": err.__class__.__name__})
@@ -87,6 +90,27 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
     # that outlived its own window says nothing. Split, from tonight on.
     kinds = {f["id"]: overdue_kind(f) for f in open_futures}
 
+    # The machine's proposal sensor-primary-iso3-gap: is the feed's own
+    # primary country present in the future the registry committed? Since the
+    # extraction was corrected the expected answer is an empty list every
+    # night — which is the point. The guard stays so a regression, or a storm
+    # whose reporting position leaves its own footprint, appears as a row
+    # instead of a silence. It fires on any non-empty run, as the proposal
+    # asks: a missing country needs no threshold to be missing.
+    primary_iso3_dropped = []
+    for feature in (parsed_feeds.get("GDACS") or {}).get("features", []):
+        properties = feature.get("properties", {})
+        hazard = properties.get("eventtype")
+        fid = f"gdacs-{str(hazard).lower()}-{properties.get('eventid')}"
+        known = registry["futures"].get(fid)
+        if not known or known.get("kind") != "ALERT_EPISODE":
+            continue
+        dropped = sorted(sources.primary_iso3(properties)
+                         - set(known.get("iso3") or []))
+        if dropped:
+            primary_iso3_dropped.append({"future": fid,
+                                         "dropped_iso3": dropped})
+
     # The reaction axis: what moved while the warning was already running.
     # Its outages are recorded in its own block — a quiet GDELT day is not a
     # failure of the notary, and the two must stay legible apart.
@@ -109,6 +133,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "resolved": sorted(r["future"] for r in resolutions),
         "open_total": len(open_futures),
         "overdue": sorted(overdue),
+        "primary_iso3_dropped": primary_iso3_dropped,
         "overdue_cold_start": sorted(f for f, k in kinds.items()
                                      if k == COLD_START_OVERDUE),
         "overdue_drift": sorted(f for f, k in kinds.items()

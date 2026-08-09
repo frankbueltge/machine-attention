@@ -26,8 +26,22 @@ def _clean_date(value) -> str | None:
     return None
 
 
+def primary_iso3(properties: dict) -> set[str]:
+    """The feature's top-level singular `iso3` — the event's current reporting
+    position — as a set, empty when the feed leaves it blank.
+
+    Kept separate from the extraction so the guard in `run.py` can measure the
+    same field the registry is built from, rather than a second reading of it.
+    """
+    value = str(properties.get("iso3") or "").strip()
+    return {value} if value else set()
+
+
 def gdacs_futures(parsed: dict) -> list[dict]:
     """Map the GDACS active-alert feed to announced-future records.
+
+    The feature's own primary country is folded into `iso3`; see
+    `primary_iso3` and the note at the field.
 
     kind ALERT_EPISODE: GDACS mostly reports hazards already in motion whose
     episode window extends into the future — announced, dated, and revisable.
@@ -46,8 +60,16 @@ def gdacs_futures(parsed: dict) -> list[dict]:
             "hazard": HAZARD_NAMES[hazard],
             "what": str(p.get("name") or p.get("eventname") or "").strip(),
             "where": str(p.get("country") or "").strip(),
-            "iso3": sorted({c.get("iso3", "") for c in p.get("affectedcountries", [])
-                            if isinstance(c, dict) and c.get("iso3")}),
+            # The feed names the country twice: `affectedcountries` (the
+            # episode's footprint) and a top-level singular `iso3` (the event's
+            # current reporting position). Reading only the list dropped the
+            # primary country of six tropical cyclones — Vietnam never entered
+            # the registry although those futures' own `where` text named it.
+            # Found by the machine's own discovery pass, obs-2026-08-09-1.
+            "iso3": sorted(
+                {c.get("iso3", "") for c in p.get("affectedcountries", [])
+                 if isinstance(c, dict) and c.get("iso3")}
+                | primary_iso3(p)),
             "severity": str(p.get("alertlevel") or ""),
             "window": {"from": _clean_date(p.get("fromdate")),
                        "to": _clean_date(p.get("todate"))},
