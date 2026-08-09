@@ -188,8 +188,32 @@ Three things the plan in §5 got wrong, found by building it:
 
 **First run, 2026-08-09:** six manifests across both registers (Dark Ocean 2, Foreknown 2,
 Foreknown/reaction 2) — six stamped, four calendars each, all six pending, zero failures.
-Nothing is complete yet, and the ledger says so rather than implying a Bitcoin proof
-exists. The nightly job at 06:20 UTC will upgrade them.
+
+**And the cycle closed the same evening.** Re-run about two hours later: **six of six
+complete, zero pending, zero failures** — the proofs now carry Merkle paths into **Bitcoin
+blocks 961744 and 961747** and need no calendar ever again. The measured end-to-end time
+from stamp to standalone proof was therefore roughly two hours, which the daily 06:20 UTC
+pass covers with room to spare.
+
+Two defects of my own, both worth recording because both were the sort this house cares about:
+
+- **A test overwrote the record it was checking.** The offline end-to-end test ran the tool
+  as a subprocess without the client on `PATH`, so the default ledger path was rewritten
+  with six `unreadable` rows and six failures — and that false ledger was committed. The
+  registers were never affected (proofs and manifests were intact throughout), but for a
+  couple of hours the repository asserted an outage that had not happened. The ledger path
+  is now an argument, the test writes to a temp file and asserts the committed ledger is
+  byte-identical afterwards, and the true ledger has been regenerated.
+- **The block heights were being dropped.** `state_of` looked for a bare numeric token,
+  but the client prints `BitcoinBlockHeaderAttestation(961744)`, so every complete anchor
+  recorded the phrase "bitcoin attestation present" — an assertion by us — instead of the
+  height a reader can check against the chain. Fixed, and a test now refuses a complete
+  anchor that does not name its blocks.
+
+**Verified live, and it fails exactly as documented:**
+`ots verify -f <manifest> <proof>` on this machine returns *"Could not connect to Bitcoin
+node"*. The proof is complete; checking it needs a node. That is the caveat in §4, confirmed
+rather than assumed.
 
 **Not done, deliberately:** `verify.py` does not yet check the anchors. The ledger's
 integrity is covered by `practice/tests/test_anchor.py` (which recomputes every digest
