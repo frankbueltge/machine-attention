@@ -110,6 +110,15 @@ E-experiment** (admission path, stage 5). Origin:
 [The Ghost Fleet](https://frankbueltge.de/ghost-fleet/), which keeps
 running unchanged.
 
+The **E-experiment runs 2026-08-09/10 → 2026-08-22/23, review 2026-08-24**;
+its acceptance criteria were committed before the window opened and bind
+from its first night —
+[`docs/2026-08-09-dark-ocean-e-experiment-kriterien.md`](docs/2026-08-09-dark-ocean-e-experiment-kriterien.md).
+Three outcomes are possible, not two: RUNNING as flagship, RUNNING as a
+quiet instrument, or an honest RETIRED. The two readings already committed
+(2026-08-07, 2026-08-08) predate the criteria and count as baseline
+context, not as evidence.
+
 ## Layout
 
 ```
