@@ -1,0 +1,26 @@
+{
+  "id": "obs-2026-08-10-1",
+  "date": "2026-08-10",
+  "kind": "difference_observation",
+  "title": "GDACS's drought episodes split into two windowing behaviours that look identical in the registry but are not: two frozen months ago, four rolling forward one day per night",
+  "statement": "All 6 drought futures in foreknown/registry.json share source GDACS, severity Orange, status OPEN. Their `window.to` values fall into two distinct classes across the two preserved GDACS snapshots (2026-08-08, 2026-08-09), and the split is a property of GDACS's own feed, not of this observatory's extraction: gdacs-dr-1017863 (Kenya, Somalia) and gdacs-dr-1018327 (Argentina, Uruguay) carry window.to 2026-03-30 and 2026-04-20 respectively, unchanged byte-for-byte between both snapshots' `todate` field even though both dates already lay 4-5 months in the past on the first night the observatory looked (2026-08-08) — GDACS keeps reporting them as active without moving their stated end date. The other four (gdacs-dr-1018332 pan-European, gdacs-dr-1018431 Madagascar, gdacs-dr-1027450 Ethiopia/Kenya/Somalia, gdacs-dr-1027465 DR Congo/Kenya/Tanzania/Uganda) all had window.to 2026-08-06 in the 2026-08-08 snapshot and window.to 2026-08-07 in the 2026-08-09 snapshot — every one advancing by exactly one day, keeping pace with 'yesterday' relative to the run. foreknown/registry.json's REVISED history for these four (ts 2026-08-09T06:27:02+00:00) records the same +1-day shift. Nothing in the registry, run.json, or the overdue/cold_start flag distinguishes the two classes: all six read as OPEN, cold_start_overdue, Orange, drought — the same on the surface.",
+  "method": "Compared properties.todate for the six drought eventids across foreknown/snapshots/2026-08-08/gdacs.json and foreknown/snapshots/2026-08-09/gdacs.json, then cross-checked against foreknown/registry.json's window and history fields for the same ids. Reproducible with: python3 -c \"import json; [print(d, [(p['eventid'], p['todate']) for p in (f['properties'] for f in json.load(open(f'foreknown/snapshots/{d}/gdacs.json'))['features']) if p['eventtype']=='DR']) for d in ('2026-08-08','2026-08-09')]\"",
+  "figures": {
+    "frozen_class": {
+      "gdacs-dr-1017863": {"iso3": ["KEN", "SOM"], "window_to": "2026-03-30", "months_past_on_first_sight": 4},
+      "gdacs-dr-1018327": {"iso3": ["ARG", "URY"], "window_to": "2026-04-20", "months_past_on_first_sight": 3}
+    },
+    "rolling_class": {
+      "gdacs-dr-1018332": {"iso3_count": 28, "window_to_2026_08_08": "2026-08-06", "window_to_2026_08_09": "2026-08-07"},
+      "gdacs-dr-1018431": {"iso3": ["MDG"], "window_to_2026_08_08": "2026-08-06", "window_to_2026_08_09": "2026-08-07"},
+      "gdacs-dr-1027450": {"iso3": ["ETH", "KEN", "SOM"], "window_to_2026_08_08": "2026-08-06", "window_to_2026_08_09": "2026-08-07"},
+      "gdacs-dr-1027465": {"iso3": ["COD", "KEN", "TZA", "UGA"], "window_to_2026_08_08": "2026-08-06", "window_to_2026_08_09": "2026-08-07"}
+    }
+  },
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-08/gdacs.json",
+    "foreknown/snapshots/2026-08-09/gdacs.json"
+  ],
+  "worth_watching_because": "Once any of these six droughts eventually closes, the resolver (practice/src/practice/foreknown/resolve.py, resolve_future) computes episode_days directly from window.from/window.to. For the rolling class, episode_days will include every night the observatory happened to be watching, not a real forecast horizon — the window keeps sliding to meet 'now'. For the frozen class, episode_days will read as a fixed span GDACS stopped updating months ago, which may understate how long the drought is actually reported as ongoing. Both are honest readings of what the source said, but treating all six the same way in a future 'average drought duration' figure would silently mix two different measurement behaviours. This is a two-night, two-example-per-class observation and not proposed as a sensor yet — a third night distinguishing which class new droughts fall into, and whether frozen episodes ever resume rolling, would be needed before a test_rule could be written without curve-fitting to these six."
+}

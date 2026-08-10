@@ -1,0 +1,23 @@
+{
+  "id": "obs-2026-08-10-2",
+  "date": "2026-08-10",
+  "kind": "difference_observation",
+  "title": "sensor-primary-iso3-gap has been running as code every night since 2026-08-09, but its own proposal file still reads PROPOSED with no promotion or implementation record",
+  "statement": "Three sensor proposals exist from discovery night 1 (2026-08-08): sensor-cold-start-overdue-drift, sensor-forecast-kind-gap, sensor-fts-country-coverage. All three carry, inside their own file, either an `implementation` block (cold-start-overdue-drift, status IMPLEMENTED) or a `promotion` block (fts-country-coverage, status STANDING) or a `review` block explaining why status stays PROPOSED (forecast-kind-gap) — each written the same night a human reviewed it (autonomy/log.jsonl, step sensor-promotion, 2026-08-08T21:46:06+00:00). sensor-primary-iso3-gap.json, proposed the following night (2026-08-09, discovery pass #2), still reads `\"status\": \"PROPOSED\"` with no implementation or review block. But practice/src/practice/foreknown/run.py (lines 93-113) already implements exactly the check the proposal's test_rule describes — a per-run comparison of each GDACS feature's top-level `iso3` against the committed future's `iso3` array, writing the result to run.json's `primary_iso3_dropped` field — and the code's own comment names the proposal directly: 'The machine's proposal sensor-primary-iso3-gap: is the feed's own primary country present in the future the registry committed?' This code was added in the same commit (79f8a02, 2026-08-09T14:50 local commit time per autonomy/log.jsonl step foreknown-correct-primary-iso3) that corrected the six affected futures' iso3 arrays — a same-day fix, not a separately reviewed promotion. No autonomy/log.jsonl entry records a sensor-promotion decision for primary-iso3-gap the way one exists for the other three.",
+  "method": "Read all four sensor-*.json files under foreknown/proposals/ and compared their status/implementation/promotion/review fields against practice/src/practice/foreknown/run.py's actual code and autonomy/log.jsonl's step values. Reproducible with: python3 -c \"import json,glob; [print(f, json.load(open(f)).get('status'), 'implementation' in json.load(open(f)) or 'promotion' in json.load(open(f)) or 'review' in json.load(open(f))) for f in sorted(glob.glob('foreknown/proposals/sensor-*.json'))]\" and grepping autonomy/log.jsonl for '\"step\": \"sensor-promotion\"'.",
+  "figures": {
+    "sensor-cold-start-overdue-drift": {"file_status": "IMPLEMENTED", "has_decision_block": true},
+    "sensor-forecast-kind-gap": {"file_status": "PROPOSED", "has_decision_block": true, "block": "review"},
+    "sensor-fts-country-coverage": {"file_status": "STANDING", "has_decision_block": true, "block": "promotion"},
+    "sensor-primary-iso3-gap": {"file_status": "PROPOSED", "has_decision_block": false, "code_already_running_since": "2026-08-09T14:50:39+00:00 (commit 79f8a02)", "run_json_field": "primary_iso3_dropped"}
+  },
+  "derived_from": [
+    "foreknown/proposals/sensor-cold-start-overdue-drift.json",
+    "foreknown/proposals/sensor-forecast-kind-gap.json",
+    "foreknown/proposals/sensor-fts-country-coverage.json",
+    "foreknown/proposals/sensor-primary-iso3-gap.json",
+    "practice/src/practice/foreknown/run.py",
+    "autonomy/log.jsonl"
+  ],
+  "worth_watching_because": "The other three proposals show a consistent pattern: a promotion decision, however brief, is written into both the proposal file and the autonomy log before the code runs unreviewed in production. primary-iso3-gap's check has instead been live in every run.json since the fix commit without that same paper trail — the field has simply never fired yet, since no notary run has happened since the fix (foreknown/snapshots/ still holds only 2026-08-08 and 2026-08-09, both before or at the fix). This is not a claim that the check is wrong — it is a statement that the record's own bookkeeping about which proposals were reasoned over before running diverges, for this one proposal, from the pattern the other three set. It sets up a mechanical thing to check the first time a run.json exists after 2026-08-09: does primary_iso3_dropped appear as a field at all, and is it empty as the code's own comment expects."
+}
