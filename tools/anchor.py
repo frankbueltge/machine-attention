@@ -39,6 +39,7 @@ See docs/2026-08-09-opentimestamps-examination.md.
 
 Usage:
   python3 tools/anchor.py                    # stamp new manifests, upgrade incomplete ones
+  python3 tools/anchor.py --register         # notary jobs: list fresh nights as unstamped
   python3 tools/anchor.py --no-network       # ledger only, from the files on disk
   python3 tools/anchor.py --ledger /tmp/x    # write the ledger elsewhere (tests)
 """
@@ -120,9 +121,78 @@ def state_of(proof: Path) -> tuple[str, str]:
     return "pending", f"{out.count(PENDING_MARK)} calendar promise(s), no block yet"
 
 
+def write_ledger(ledger_path: Path, entries: list[dict], failures: list[dict],
+                 stamped: int, upgraded: int) -> dict:
+    """The one writer of the ledger document, shared by every mode, so the counts
+    can never drift from the entries they summarise."""
+    complete = sum(e.get("state") == "complete" for e in entries)
+    pending = sum(e.get("state") == "pending" for e in entries)
+    ledger = {
+        "generated_at": now(),
+        "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest "
+                "carries the SHA-256 of every preserved byte of its night, so one anchor "
+                "covers the night. Proofs are pending until upgraded; a pending proof is a "
+                "calendar's promise, a complete one stands on a Bitcoin block alone.",
+        "proves": "the manifest's bytes existed no later than the attested block — not that "
+                  "they are true, not that they came from the publisher they name, and not "
+                  "that they did not exist earlier",
+        "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof "
+                  "is stored apart from the file it commits to. The Bitcoin side needs a "
+                  "Bitcoin node (--bitcoin-node); a block explorer is a third party, which "
+                  "is the trust an anchor exists to remove",
+        "why_proofs_live_apart": "an .ots is rewritten once, by `ots upgrade`, when the "
+                                 "Bitcoin path arrives — so it cannot live inside the "
+                                 "append-only record trees the I3 guard protects",
+        "method": "docs/2026-08-09-opentimestamps-examination.md",
+        "counts": {"manifests": len(entries), "complete": complete, "pending": pending,
+                   "stamped_this_run": stamped, "upgraded_this_run": upgraded,
+                   "failures": len(failures)},
+        "failures": failures,
+        "anchors": entries,
+    }
+    ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    ledger_path.write_text(json.dumps(ledger, indent=1, ensure_ascii=False) + "\n")
+    return ledger
+
+
+def register(ledger_path: Path) -> int:
+    """List the register nights the ledger does not know yet, as "unstamped".
+
+    The notary jobs' half of the anchoring handshake. verify.py rightly refuses a
+    register night the ledger does not LIST — a night silently absent from the
+    anchoring record would be a hole. But stamping needs the ots client, which only
+    the anchor job installs, and that job can only reach manifests already on main.
+    Left as two halves with no handshake the jobs deadlock, and they did: 2026-08-10
+    to 2026-08-12 every sentinel and darkocean run failed at verify, and the
+    registers recorded nothing for three nights.
+
+    So a night's own run lists its fresh manifests as "unstamped" — the disclosed,
+    legitimate state the verifier already accepts — and the anchor job later turns
+    them into proofs. Stdlib-only, offline, and existing rows (above all the
+    completed Bitcoin proofs) are never rewritten: this mode may only append.
+    """
+    known = json.loads(ledger_path.read_text()) if ledger_path.exists() else {}
+    entries = list(known.get("anchors", []))
+    failures = list(known.get("failures", []))
+    listed = {e.get("manifest") for e in entries}
+    fresh = [m for m in manifests() if str(m.relative_to(ROOT)) not in listed]
+    if not fresh:
+        print("anchors: every register night is already listed — ledger untouched")
+        return 0
+    for m in fresh:
+        rel = str(m.relative_to(ROOT))
+        entries.append({"manifest": rel, "sha256": sha256(m), "state": "unstamped"})
+        print(f"anchors: listed {rel} as unstamped — the anchor job stamps it later")
+    entries.sort(key=lambda e: e.get("manifest") or "")
+    write_ledger(ledger_path, entries, failures, 0, 0)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--no-network", action="store_true", help="only re-read the files on disk")
+    ap.add_argument("--register", action="store_true",
+                    help="only list fresh manifests as unstamped; existing rows stay untouched")
     # The ledger path is an argument so a test can never write the real record. It once
     # did: an offline end-to-end test ran this tool as a subprocess without the client on
     # PATH and overwrote the committed ledger with six "unreadable" rows and six
@@ -130,6 +200,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--ledger", type=Path, default=None, help="write the ledger elsewhere")
     args = ap.parse_args(argv)
     ledger_path = args.ledger or LEDGER
+
+    if args.register:
+        return register(ledger_path)
 
     entries, failures = [], []
     stamped = upgraded = complete = pending = 0
@@ -182,31 +255,7 @@ def main(argv: list[str] | None = None) -> int:
         pending += state == "pending"
         entries.append(entry)
 
-    ledger = {
-        "generated_at": now(),
-        "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest "
-                "carries the SHA-256 of every preserved byte of its night, so one anchor "
-                "covers the night. Proofs are pending until upgraded; a pending proof is a "
-                "calendar's promise, a complete one stands on a Bitcoin block alone.",
-        "proves": "the manifest's bytes existed no later than the attested block — not that "
-                  "they are true, not that they came from the publisher they name, and not "
-                  "that they did not exist earlier",
-        "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof "
-                  "is stored apart from the file it commits to. The Bitcoin side needs a "
-                  "Bitcoin node (--bitcoin-node); a block explorer is a third party, which "
-                  "is the trust an anchor exists to remove",
-        "why_proofs_live_apart": "an .ots is rewritten once, by `ots upgrade`, when the "
-                                 "Bitcoin path arrives — so it cannot live inside the "
-                                 "append-only record trees the I3 guard protects",
-        "method": "docs/2026-08-09-opentimestamps-examination.md",
-        "counts": {"manifests": len(entries), "complete": complete, "pending": pending,
-                   "stamped_this_run": stamped, "upgraded_this_run": upgraded,
-                   "failures": len(failures)},
-        "failures": failures,
-        "anchors": entries,
-    }
-    ledger_path.parent.mkdir(parents=True, exist_ok=True)
-    ledger_path.write_text(json.dumps(ledger, indent=1, ensure_ascii=False) + "\n")
+    write_ledger(ledger_path, entries, failures, stamped, upgraded)
 
     print(f"anchors: {len(entries)} manifests · {complete} complete · {pending} pending "
           f"· +{stamped} stamped · +{upgraded} upgraded · {len(failures)} failure(s)")
