@@ -1,0 +1,580 @@
+{
+  "answered": 122,
+  "baselines_established": [
+    {
+      "field": "modification_date",
+      "id": "002356b9-b7e2-46ac-9753-9c7c4b3611c9",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161134_20260807T161159_004022_00750A_202C.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:26:24.455859Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "013412ea-c4ce-4eb0-945b-bbe17dfda6e9",
+      "name": "S1C_IW_GRDH_1SDV_20260808T045049_20260808T045114_008899_011A6D_5099_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:49:11.246118Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "03c9d2c6-3846-458f-b3ea-7682fb590c38",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160546_20260808T160611_008906_011AA5_58D8.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T16:58:49.470761Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "07793d5b-d7f0-4290-b9b6-68bad5164d2f",
+      "name": "S1C_IW_GRDH_1SDV_20260808T045114_20260808T045139_008899_011A6D_1B7D.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:44:13.799645Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "1068114e-79b8-4e83-ab38-7a6036d5b9bb",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170103_20260807T170128_008892_011A34_12F3.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T18:12:40.485927Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "1129fc90-8354-45b7-9de7-3c02afd41897",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170243_20260807T170308_008892_011A34_94F7.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T18:12:37.265540Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "114b9660-ecae-4859-9cba-71ba9c270e02",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045823_20260807T045848_004015_0074CC_023F_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:12:34.622524Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "159dd593-8caa-45c7-9116-a38f279be0db",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165257_20260808T165322_004037_007585_8DB9_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T18:03:59.491447Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "1771d6e0-f5f8-4d5e-8280-2f2814229025",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165502_20260808T165527_004037_007585_23B1_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T18:08:47.327753Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "183016cf-2efe-453e-8801-b79dfb9f0762",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045938_20260807T050003_004015_0074CC_18D4_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:18:41.202468Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "1a1573b7-693f-46f8-9f4a-545b84d84bf5",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160251_20260808T160316_008906_011AA5_CA20.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:00:50.994442Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "1bf0c634-d20f-4e9a-8292-bccd88a8c755",
+      "name": "S1C_IW_GRDH_1SDV_20260807T152433_20260807T152458_008891_011A2E_186B.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T16:12:26.618833Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "1f13a5d3-292a-4b5b-a6ae-5180b49cbabf",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161429_20260807T161454_004022_00750A_4D3F.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:18:25.378588Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "21ab612c-4f54-4b35-b737-63bfabe8af8a",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045733_20260807T045758_004015_0074CC_5300.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:09:24.937623Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "26bed946-fb08-4b78-b2e4-f4e87ce5e82f",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045758_20260807T045823_004015_0074CC_FAD0.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T05:58:07.783166Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "30e9e36a-c2a4-4d13-8948-5ff56b4a7436",
+      "name": "S1C_IW_GRDH_1SDV_20260808T044934_20260808T044959_008899_011A6D_0F31_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:39:04.889473Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "3286cc29-32e5-4bda-a3cd-56b2d07e95ac",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170308_20260807T170333_008892_011A34_568F.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T18:02:53.240850Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "3617c27f-027b-4943-bd4d-5a5441234e92",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160226_20260808T160251_008906_011AA5_2637_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T16:50:46.559550Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "3beb2cb2-bf58-4c93-86c9-1dabe34a0c52",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160341_20260808T160406_008906_011AA5_72E5_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:00:42.856728Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "41f78495-df85-47c8-902b-4b9803291d6f",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170333_20260807T170358_008892_011A34_8A29.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:57:39.847892Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "45d42dfb-4e51-4c20-b2a7-218ad99db7cc",
+      "name": "S1C_IW_GRDH_1SDV_20260808T044754_20260808T044819_008899_011A6D_37EE_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:39:17.177070Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "4999acb4-27a1-4b73-a5fb-b86ada6e9e3b",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053812_20260808T053837_004030_007548_EF2D_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:45:20.589588Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "4b6fa27b-a29d-450b-99f1-ca7cba117fcd",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045618_20260807T045643_004015_0074CC_E24F_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:10:49.675293Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "513a1c1a-b3c9-42b5-a9bc-4bf4ba44e768",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170013_20260807T170038_008892_011A34_8CA1_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:52:21.952247Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "53e63bb9-65c5-4840-8466-8ffad58d294f",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170218_20260807T170243_008892_011A34_AE36.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T18:12:49.312276Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "55f8cf50-b27f-4aa9-b4c9-58261f467a5f",
+      "name": "S1C_IW_GRDH_1SDV_20260807T152408_20260807T152433_008891_011A2E_2B83_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T16:10:46.425213Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "567029c5-f448-4adc-981f-d09c71663bee",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053952_20260808T054017_004030_007548_B1A3_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:43:53.373964Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "5809e263-65c3-4363-bf54-1c605fbb201b",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161404_20260807T161429_004022_00750A_86FC_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:25:39.554664Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "5a21be4f-4633-40d0-bf20-4ec2ab8550a3",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054726_20260807T054751_008885_0119FB_15DB.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:46:48.645214Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "5d15aa46-84fa-42e6-8287-09ac7b102dee",
+      "name": "S1C_IW_GRDH_1SDV_20260807T040923_20260807T040948_008884_0119F6_5BB2.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T04:57:24.384562Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "5d1aeb01-ff1e-4aaa-9879-d24539bb7485",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165527_20260808T165552_004037_007585_A279.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T18:04:16.663154Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "62b77f6b-85f3-4b38-9c0d-f2fdc63dc5e6",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165347_20260808T165412_004037_007585_2531.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:50:11.596534Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "63ca2fdf-6c10-4625-89a8-9e65f29a5c32",
+      "name": "S1C_IW_GRDH_1SDV_20260808T044819_20260808T044844_008899_011A6D_51D0.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:28:34.076327Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "71e44511-5c1f-45e5-98ff-4cc26fb6f8af",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160431_20260808T160456_008906_011AA5_3080_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:00:34.591140Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "74d43378-783d-43bb-8f40-3b77e87c1db7",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161044_20260807T161109_004022_00750A_78F0_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:27:16.522832Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "77eeb12b-8e26-4218-9e90-210e30a52655",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054816_20260807T054841_008885_0119FB_8E0B_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T07:03:47.408161Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "793fd56b-3496-4bf9-b09b-38b34ce7e871",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054636_20260807T054701_008885_0119FB_1184.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:30:33.960544Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "7a4400d7-b443-4a09-ac6e-a5f269d83035",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160521_20260808T160546_008906_011AA5_3F6C_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T16:59:38.393697Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "7ab139ce-6fbf-43dc-9433-6c7eb55c0ae8",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161249_20260807T161314_004022_00750A_CAB5.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:23:38.209723Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "7d52cb5a-c571-41c5-a80f-306c5fbfe0c4",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054701_20260807T054726_008885_0119FB_6834.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T07:00:52.043408Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "7eadabc4-eed3-4beb-bb77-7c79662f5f3f",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170153_20260807T170218_008892_011A34_5176.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:59:57.626637Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "81e448d0-bb52-429f-807c-145376903d27",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054546_20260807T054611_008885_0119FB_7FB4.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:30:38.146268Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "864906cb-538c-45da-9752-1e1fd7d9a7d4",
+      "name": "S1D_IW_GRDH_1SDV_20260808T054017_20260808T054042_004030_007548_0611_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:46:55.351794Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "86c904ac-6753-4dde-930e-3466c7d70fa0",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053927_20260808T053952_004030_007548_151C.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:37:53.884292Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "876bda45-1633-4af9-8834-765d315f9cbd",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045848_20260807T045913_004015_0074CC_36EC.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:18:42.377230Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "8a819762-6992-4894-a750-fd80d393e556",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053747_20260808T053812_004030_007548_87D2_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:43:03.220794Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "8ce2c175-1572-4c7a-b6dd-14ee851aac86",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165142_20260808T165207_004037_007585_7376.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:47:07.544500Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "8d918aa6-1e03-4ef4-87e9-8d85d2d01d74",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160456_20260808T160521_008906_011AA5_2611.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:11:55.841752Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "93ba5c74-582a-4b15-8c96-33490f184364",
+      "name": "S1C_IW_GRDH_1SDV_20260807T041013_20260807T041038_008884_0119F6_5A57.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T04:47:24.230230Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "96b6e0d4-79d5-4176-960c-b9e974769800",
+      "name": "S1C_IW_GRDH_1SDV_20260808T044909_20260808T044934_008899_011A6D_35E4.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:46:35.432201Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "981df5b4-db63-40a8-bd68-188ca82b3fd6",
+      "name": "S1C_IW_GRDH_1SDV_20260808T044844_20260808T044909_008899_011A6D_04EB.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:31:43.998733Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "99c94977-dab9-4bba-b637-d38b1c661ccf",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054521_20260807T054546_008885_0119FB_30F9_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T07:01:06.089321Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "9ab28acf-0a27-4325-9329-a477bff0b739",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045643_20260807T045708_004015_0074CC_9C29_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:03:50.484083Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a081226b-5ffd-4066-829c-90f4ec9fd496",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053837_20260808T053902_004030_007548_1EE6_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:45:26.657445Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a0e3cf85-39f0-479e-bffb-43cbebf64978",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161224_20260807T161249_004022_00750A_172A_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:29:12.995549Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a6068019-22cd-4a45-93f0-038cec984cef",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161159_20260807T161224_004022_00750A_1B32.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:20:18.436449Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a67a3666-a8b5-4780-905e-aff3802a6f5d",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053722_20260808T053747_004030_007548_2CC1.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:33:28.128112Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a87a39da-77bd-4d08-a847-a1819e065504",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170038_20260807T170103_008892_011A34_1CC4_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T18:05:33.537665Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a912cc95-f1cf-406c-97a9-adfe6f3618f2",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161314_20260807T161339_004022_00750A_C607.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:20:04.103411Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "a99e48b2-3a73-4a43-ba96-9fe2bb7b3716",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165207_20260808T165232_004037_007585_48CB.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:46:58.677976Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "add88dc5-6652-4c5b-b325-61f831236d0d",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160406_20260808T160431_008906_011AA5_1B4A.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T16:40:43.139579Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "bbc3a743-9d60-488b-925c-235702495c01",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161109_20260807T161134_004022_00750A_282F_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:27:20.569070Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "bc014062-bcd1-4c18-b7af-006695278244",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165437_20260808T165502_004037_007585_D2FF_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T18:10:48.588762Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "bff4eef0-f491-43de-84bf-e5e8cca96dae",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165412_20260808T165437_004037_007585_124B.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:53:09.172850Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "c40e40ed-c574-41ed-bfc0-f28660996914",
+      "name": "S1C_IW_GRDH_1SDV_20260808T044959_20260808T045024_008899_011A6D_017A.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:37:10.378504Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "c8998f9e-b0d3-4686-a32b-577ea89e98f0",
+      "name": "S1C_IW_GRDH_1SDV_20260807T170128_20260807T170153_008892_011A34_5439.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T18:11:44.514590Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "cd9bae2a-ea50-4387-ae26-cb43db067939",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054611_20260807T054636_008885_0119FB_E4A7.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:50:34.470160Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "d0d96eb4-b721-4166-8cad-5d52c122cdec",
+      "name": "S1C_IW_GRDH_1SDV_20260808T045024_20260808T045049_008899_011A6D_081D_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T05:42:12.111753Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "da86fb17-9a60-4671-b01b-d8cce653c265",
+      "name": "S1C_IW_GRDH_1SDV_20260807T165948_20260807T170013_008892_011A34_0335.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:58:28.478771Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "dc7f7aee-5531-4237-ad8b-7ce306614e45",
+      "name": "S1D_IW_GRDH_1SDV_20260807T161339_20260807T161404_004022_00750A_91C0_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T17:26:11.879313Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "dca231a7-8a4a-4d83-8e00-e8242101bb36",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045913_20260807T045938_004015_0074CC_8D51.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:00:40.541796Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "de5dcda5-dd11-4d60-9736-21ba0ce92d07",
+      "name": "S1D_IW_GRDH_1SDV_20260808T054042_20260808T054107_004030_007548_1327_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:45:01.569945Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "e9002de8-e207-4b14-be21-224710b2ccfd",
+      "name": "S1D_IW_GRDH_1SDV_20260808T053902_20260808T053927_004030_007548_436D.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T06:37:54.414145Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "ea9a1762-b478-477b-a0ad-93a9d887c32e",
+      "name": "S1C_IW_GRDH_1SDV_20260808T160316_20260808T160341_008906_011AA5_04AC.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:09:45.005841Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "ef337b93-5500-4f6f-8837-7bbe88482107",
+      "name": "S1C_IW_GRDH_1SDV_20260807T054751_20260807T054816_008885_0119FB_A3D6.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:52:48.838743Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "f0d06e60-32a5-4e0e-91f4-5a87f499f7a6",
+      "name": "S1D_IW_GRDH_1SDV_20260807T045708_20260807T045733_004015_0074CC_0568_COG.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T06:02:46.122153Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "f3914e76-05a5-414b-8464-0f606f6c0f74",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165232_20260808T165257_004037_007585_9AFE.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:47:00.329876Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "f633b0cd-fb2f-4fb4-9d31-11d3e2477543",
+      "name": "S1C_IW_GRDH_1SDV_20260807T040948_20260807T041013_008884_0119F6_8CE0.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-07T05:13:31.284574Z"
+    },
+    {
+      "field": "modification_date",
+      "id": "fe564b23-ec9b-4ee5-80b5-a6bb57b6dd22",
+      "name": "S1D_IW_GRDH_1SDV_20260808T165322_20260808T165347_004037_007585_984C.SAFE",
+      "reason": "not recorded when the product was first seen",
+      "value": "2026-08-08T17:45:01.053386Z"
+    }
+  ],
+  "batches": 4,
+  "catches": [],
+  "date": "2026-08-11",
+  "failures": [],
+  "generated_at": "2026-08-12T22:09:55+00:00",
+  "notes": [
+    "the look-back re-probes products the register already recorded; it never widens the catch to products it never held",
+    "a divergence is committed with both values side by side and is never reconciled to the newer one — the overwrite is the forgetting this register exists to catch",
+    "readings before 2026-08-09 carry no modification_date; for their products the first probe establishes the baseline and says so, rather than reporting an unchanged value it never had",
+    "the eviction premise is structural, not observed: every product probed so far is online with EvictionDate 9999-12-31 (darkocean/METHOD.md). The probe measures whether that stays true",
+    "a product absent from the catalog's answer is the strongest divergence the register can record, and is committed as its own kind of catch"
+  ],
+  "probed": 122,
+  "products_unchanged": 122,
+  "sources": {
+    "CDSE-lookback": [
+      "darkocean/snapshots/2026-08-11/cdse-lookback-b1.json",
+      "darkocean/snapshots/2026-08-11/cdse-lookback-b2.json",
+      "darkocean/snapshots/2026-08-11/cdse-lookback-b3.json",
+      "darkocean/snapshots/2026-08-11/cdse-lookback-b4.json"
+    ]
+  }
+}
