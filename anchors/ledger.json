@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-12T22:14:22Z",
+ "generated_at": "2026-08-12T22:14:57Z",
  "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
  "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
  "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
@@ -8,8 +8,8 @@
  "counts": {
   "manifests": 9,
   "complete": 6,
-  "pending": 0,
-  "stamped_this_run": 0,
+  "pending": 3,
+  "stamped_this_run": 3,
   "upgraded_this_run": 0,
   "failures": 0
  },
@@ -32,7 +32,10 @@
   {
    "manifest": "darkocean/snapshots/2026-08-11/manifest.json",
    "sha256": "93f7b90ce3fb9822e85e596c8664ab270d7566ecb03d9aea9848c27bd32ce34f",
-   "state": "unstamped"
+   "stamped_at": "2026-08-12T22:14:49Z",
+   "proof": "anchors/darkocean/snapshots/2026-08-11/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   },
   {
    "manifest": "foreknown/reaction/snapshots/2026-08-08/manifest.json",
@@ -51,7 +54,10 @@
   {
    "manifest": "foreknown/reaction/snapshots/2026-08-12/manifest.json",
    "sha256": "ea5d097e759b761da13e74e734a3f0935544942f0b4b8215fe09226151753da4",
-   "state": "unstamped"
+   "stamped_at": "2026-08-12T22:14:52Z",
+   "proof": "anchors/foreknown/reaction/snapshots/2026-08-12/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   },
   {
    "manifest": "foreknown/snapshots/2026-08-08/manifest.json",
@@ -70,7 +76,10 @@
   {
    "manifest": "foreknown/snapshots/2026-08-12/manifest.json",
    "sha256": "d2d2840cb8146bc7b7f211451862c50cd3d02c4d805aada482bc376b97c9c8cb",
-   "state": "unstamped"
+   "stamped_at": "2026-08-12T22:14:55Z",
+   "proof": "anchors/foreknown/snapshots/2026-08-12/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   }
  ]
 }
