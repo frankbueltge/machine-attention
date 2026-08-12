@@ -79,6 +79,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-09/gdacs.json",
           "ts": "2026-08-09T06:27:02+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-07T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -121,7 +138,7 @@
       "where": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
       "window": {
         "from": "2025-12-11T00:00:00",
-        "to": "2026-08-07T00:00:00"
+        "to": "2026-08-10T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -149,6 +166,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-09/gdacs.json",
           "ts": "2026-08-09T06:27:02+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-07T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -164,7 +198,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-08-07T00:00:00"
+        "to": "2026-08-10T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -192,6 +226,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-09/gdacs.json",
           "ts": "2026-08-09T06:27:02+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-07T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-dr-1027450",
@@ -209,7 +260,7 @@
       "where": "Ethiopia, Kenya, Somalia",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-08-07T00:00:00"
+        "to": "2026-08-10T00:00:00"
       }
     },
     "gdacs-dr-1027465": {
@@ -237,6 +288,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-09/gdacs.json",
           "ts": "2026-08-09T06:27:02+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-07T00:00:00"
+              },
+              "to": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-dr-1027465",
@@ -255,7 +323,7 @@
       "where": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
       "window": {
         "from": "2026-05-21T00:00:00",
-        "to": "2026-08-07T00:00:00"
+        "to": "2026-08-10T00:00:00"
       }
     },
     "gdacs-eq-1494848": {
@@ -266,6 +334,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-eq-1494848",
@@ -276,7 +348,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1494848&episodeid=1654189&eventtype=EQ",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Earthquake in Türkiye",
       "where": "Türkiye",
       "window": {
@@ -1038,6 +1110,32 @@
         "to": "2026-08-05T04:14:06"
       }
     },
+    "gdacs-eq-1557236": {
+      "announced_at": "2026-08-12T22:14:16+00:00",
+      "hazard": "earthquake",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
+        }
+      ],
+      "id": "gdacs-eq-1557236",
+      "iso3": [
+        "COL"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Red",
+      "source": "GDACS",
+      "source_ref": "https://www.gdacs.org/report.aspx?eventid=1557236&episodeid=1724218&eventtype=EQ",
+      "status": "OPEN",
+      "what": "Earthquake in Colombia",
+      "where": "Colombia",
+      "window": {
+        "from": "2026-08-10T12:34:28",
+        "to": "2026-08-10T12:34:28"
+      }
+    },
     "gdacs-fl-1103277": {
       "announced_at": "2026-08-08T17:40:13+00:00",
       "hazard": "flood",
@@ -1150,6 +1248,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-fl-1103461",
@@ -1160,7 +1262,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1103461&episodeid=1&eventtype=FL",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood in Cape Verde",
       "where": "Cape Verde",
       "window": {
@@ -1665,6 +1767,32 @@
       "window": {
         "from": "2026-07-25T01:00:00",
         "to": "2026-07-31T01:00:00"
+      }
+    },
+    "gdacs-fl-1104081": {
+      "announced_at": "2026-08-12T22:14:16+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
+        }
+      ],
+      "id": "gdacs-fl-1104081",
+      "iso3": [
+        "CHN"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Orange",
+      "source": "GDACS",
+      "source_ref": "https://www.gdacs.org/report.aspx?eventid=1104081&episodeid=7&eventtype=FL",
+      "status": "OPEN",
+      "what": "Flood in China",
+      "where": "China",
+      "window": {
+        "from": "2026-07-31T01:00:00",
+        "to": "2026-08-13T01:00:00"
       }
     },
     "gdacs-tc-1001194": {
@@ -2327,6 +2455,23 @@
           "event": "CORRECTED",
           "snapshot": "foreknown/snapshots/2026-08-09/gdacs.json",
           "ts": "2026-08-09T14:50:39+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-07-27T00:00:00",
+                "to": "2026-08-09T00:00:00"
+              },
+              "to": {
+                "from": "2026-07-27T00:00:00",
+                "to": "2026-08-09T12:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-12/gdacs.json",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-tc-1001297",
@@ -2344,7 +2489,7 @@
       "where": "Marshall Islands, Japan, China",
       "window": {
         "from": "2026-07-27T00:00:00",
-        "to": "2026-08-09T00:00:00"
+        "to": "2026-08-09T12:00:00"
       }
     },
     "gdacs-wf-1024555": {
@@ -2355,6 +2500,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-wf-1024555",
@@ -2365,7 +2514,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1024555&episodeid=2&eventtype=WF",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Forest fires in Montenegro",
       "where": "Montenegro",
       "window": {
@@ -2407,6 +2556,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-12T22:14:16+00:00"
         }
       ],
       "id": "gdacs-wf-1024567",
@@ -2417,7 +2570,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1024567&episodeid=1&eventtype=WF",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Forest fires in Greece",
       "where": "Greece",
       "window": {
@@ -2865,6 +3018,54 @@
       "window": {
         "from": "2026-07-31T00:00:00",
         "to": "2026-08-05T00:00:00"
+      }
+    },
+    "nhc-al032026": {
+      "announced_at": "2026-08-12T22:14:16+00:00",
+      "hazard": "tropical cyclone",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-12/nhc-current-storms.json",
+          "ts": "2026-08-12T22:14:16+00:00"
+        }
+      ],
+      "id": "nhc-al032026",
+      "iso3": [],
+      "kind": "FORECAST",
+      "severity": "40",
+      "source": "NHC",
+      "source_ref": "https://www.nhc.noaa.gov/",
+      "status": "OPEN",
+      "what": "Cristobal (TS)",
+      "where": "AT3",
+      "window": {
+        "from": "2026-08-12T21:00:00.000Z",
+        "to": null
+      }
+    },
+    "nhc-cp012026": {
+      "announced_at": "2026-08-12T22:14:16+00:00",
+      "hazard": "tropical cyclone",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-12/nhc-current-storms.json",
+          "ts": "2026-08-12T22:14:16+00:00"
+        }
+      ],
+      "id": "nhc-cp012026",
+      "iso3": [],
+      "kind": "FORECAST",
+      "severity": "35",
+      "source": "NHC",
+      "source_ref": "https://www.nhc.noaa.gov/",
+      "status": "OPEN",
+      "what": "One-C (PC)",
+      "where": "CP2",
+      "window": {
+        "from": "2026-08-12T21:00:00.000Z",
+        "to": null
       }
     }
   }
