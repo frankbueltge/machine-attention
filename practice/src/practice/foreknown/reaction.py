@@ -41,6 +41,16 @@ BASELINE_DAYS = 28
 # The proposal refuses to set firing thresholds before three nights of
 # baseline exist. Kept as the machine wrote it; the sensor arms itself.
 BASELINE_NIGHTS_REQUIRED = 3
+# A day GDELT has not published yet is retried out to `backfill` nights —
+# but a fixed trailing window forgets any day older than that, even one
+# GDELT has since published, because days_before(day, backfill) never looks
+# further back than `backfill` regardless of what is still missing. The
+# machine's discovery pass found this: 2026-08-08 fell out of the window
+# during the 2026-08-10/11 registry stall and no run since has ever asked
+# for it again (foreknown/proposals/obs-2026-08-12-2.json). The cap below
+# bounds how far a real gap widens the window, so a day GDELT genuinely
+# never publishes is not retried forever.
+MAX_ATTENTION_CATCHUP_DAYS = 30
 LOW_MATCH_RATE = 0.25
 HIGH_MATCH_RATE = 0.50
 MATCH_RATE_JUMP = 0.10
@@ -291,10 +301,20 @@ def run_reaction(repo_root: Path, day: str, registry: dict,
 
     # The attention series: every missing day between backfill and yesterday.
     # GDELT publishes a day's file the following morning, so the most recent
-    # day is routinely absent — an absence, not a failure.
+    # day is routinely absent — an absence, not a failure. The window widens
+    # past `backfill` when the newest committed day is further behind than
+    # that — e.g. after a night the notary itself did not run — so a gap
+    # closes on the first run that can reach it, capped at
+    # MAX_ATTENTION_CATCHUP_DAYS so a day GDELT never publishes is not
+    # retried forever.
     committed = load_attention_days(repo_root)
+    window = backfill
+    if committed:
+        since_newest = (datetime.fromisoformat(day)
+                        - datetime.fromisoformat(max(committed))).days - 1
+        window = max(backfill, min(since_newest, MAX_ATTENTION_CATCHUP_DAYS))
     fetched = 0
-    for target in attention.days_before(day, backfill):
+    for target in attention.days_before(day, window):
         if target in committed:
             continue
         url = attention.day_url(target)

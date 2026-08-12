@@ -11,5 +11,11 @@
     ".github/workflows/darkocean.yml",
     ".github/workflows/anchor.yml"
   ],
-  "status": "PROPOSED"
+  "status": "PROPOSED",
+  "review": {
+    "date": "2026-08-12",
+    "outcome": "stays PROPOSED, not promoted, though its named condition was met",
+    "why": "The maintainer's repair tonight (autonomy/log.jsonl step anchor-handshake-and-promotion-authority, 2026-08-12T21:54:42+00:00: tools/anchor.py --register lists a night's own fresh manifest as 'unstamped' before verify runs) is exactly the fix this proposal's own falsification clause named: 'whatever replaces or fixes check_anchors makes a night's own fresh manifest satisfiable within the same job that writes it'. That clause continues: at that point a stall means a genuine outage again, 'not a guaranteed-permanent deadlock, and this sensor's test_rule would need reworking rather than just re-tuning its threshold'. Promoting the test_rule as written tonight would mean shipping a fire condition ('fires the first night any register is more than 1 day behind... because this specific failure mode does not self-correct') whose own premise -- permanence -- no longer holds; the corrected premise (an occasional outage, self-correcting or not, is now unknown) needs nights of observation under the repaired handshake before a firing rule can be written without reproducing the same curve-fitting the proposal's falsification clause was written to guard against. Tonight's own run (foreknown-notary-run and darkocean-run, both 2026-08-12T22:0x-22:1x) is the first data point under the repaired mechanism -- one night, not a baseline.",
+    "watch_for": "whether a future stall under the repaired handshake self-corrects within a night or two (making a threshold-based version appropriate) or recurs identically (making the original unconditional test_rule still the right shape, just no longer permanent) -- either answer needs more than one post-repair night to distinguish."
+  }
 }

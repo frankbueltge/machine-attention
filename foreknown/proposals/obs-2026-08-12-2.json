@@ -1,0 +1,36 @@
+{
+  "id": "obs-2026-08-12-2",
+  "date": "2026-08-12",
+  "kind": "difference_observation",
+  "title": "The attention series' fixed trailing window let 2026-08-08 fall out of reach permanently, unflagged, until repaired tonight",
+  "statement": "practice/src/practice/foreknown/reaction.py's run_reaction fetched missing GDELT attention days with `for target in attention.days_before(day, backfill)`, and attention.days_before(day, count) (practice/src/practice/foreknown/attention.py, lines 50-54) always returns exactly the `count` UTC days immediately before `day` -- a fixed trailing window, not 'every day still missing since we last succeeded' despite the surrounding comment's own words ('every missing day between backfill and yesterday'). REACTION_BACKFILL_DAYS is 3 (practice/src/practice/foreknown/run.py, line 28). The first attempt at 2026-08-08's file happened on the very next run, 2026-08-09 (foreknown/reaction/readings/2026-08-09.json, failures: [{'scope': 'attention:2026-08-08', 'error': 'not published yet'}]) -- an honest miss, GDELT had not published it yet at that run's hour. No run happened on 2026-08-10 or 2026-08-11 (the anchor deadlock obs-2026-08-11-1.json and obs-2026-08-12-1.json already found and the maintainer repaired tonight, autonomy/log.jsonl step anchor-handshake-and-promotion-authority, 2026-08-12T21:54:42+00:00). The next successful run was tonight, 2026-08-12 (foreknown-notary-run, 2026-08-12T22:14:22+00:00): its trailing window was days_before('2026-08-12', 3) = [2026-08-09, 2026-08-10, 2026-08-11] -- 2026-08-08 was four days back, one day past the fixed window's reach, so it was never requested, never recorded as a failure, and never will be by the unmodified code: every future run's window is anchored to that run's own date, not to the oldest gap still open. foreknown/reaction/attention/2026-08-08.json does not exist; the directory holds 2026-06-09 through 2026-08-07 and 2026-08-09 through 2026-08-11 (`ls foreknown/reaction/attention`). Tonight's run.json reaction block (foreknown/snapshots/2026-08-12/run.json) shows attention_days_fetched: 3, failures: [] -- the gap produced no failure entry anywhere, because the code never considered 2026-08-08 a candidate at all. GDELT's own file is documented as immutable once published and fetchable after the fact (attention.py's module docstring, and the 60-day initial backfill the maintainer ran by hand on 2026-08-08 per autonomy/log.jsonl step reaction-axis-built) -- so this was not a case where the underlying day could no longer be known, unlike the registry snapshots for the three lost nights, which the maintainer's repair explicitly left unbackfilled ('the lost nights stay lost, on the record -- the registers preserve what the machine saw, not what it should have seen', autonomy/log.jsonl step anchor-handshake-and-promotion-authority). The attention axis was designed from night 1 to catch up after the fact; only the fixed window's width made this one day unreachable.",
+  "method": "Read attention.days_before (practice/src/practice/foreknown/attention.py, lines 50-54) and run_reaction's attention loop (practice/src/practice/foreknown/reaction.py, prior to tonight's fix). Confirmed the gap directly: `ls foreknown/reaction/attention | sort` (2026-08-08 absent between 2026-08-07 and 2026-08-09). Read foreknown/reaction/readings/2026-08-09.json's failures field for the first, honest miss. Read foreknown/snapshots/2026-08-12/run.json's reaction block (attention_days_fetched: 3, failures: []) to confirm tonight's run window was [2026-08-09, 2026-08-10, 2026-08-11] and never touched 2026-08-08. Cross-checked against autonomy/log.jsonl for the last successful notary run before tonight (2026-08-09T06:27:05+00:00) and the anchor-deadlock repair (2026-08-12T21:54:42+00:00).",
+  "figures": {
+    "missing_day": "2026-08-08",
+    "first_attempt": "2026-08-09 (failed: not published yet)",
+    "nights_with_no_run": ["2026-08-10", "2026-08-11"],
+    "next_successful_run": "2026-08-12T22:14:22+00:00",
+    "trailing_window_that_night": ["2026-08-09", "2026-08-10", "2026-08-11"],
+    "attention_days_committed_before_fix_scenario": 63,
+    "reaction_failures_recorded_for_the_gap": 0
+  },
+  "derived_from": [
+    "practice/src/practice/foreknown/attention.py",
+    "practice/src/practice/foreknown/reaction.py",
+    "practice/src/practice/foreknown/run.py",
+    "foreknown/reaction/attention",
+    "foreknown/reaction/readings/2026-08-09.json",
+    "foreknown/snapshots/2026-08-12/run.json",
+    "autonomy/log.jsonl",
+    "foreknown/proposals/obs-2026-08-11-1.json",
+    "foreknown/proposals/obs-2026-08-12-1.json"
+  ],
+  "worth_watching_because": "This is not a claim that GDELT's news volume for 2026-08-08 is unknowable -- it is a statement that this code's own fixed-width retry window could silently drop a day it was designed to eventually catch, with no failure entry anywhere to show it happened, the first time a stall outlasted the window's width. Left alone this would recur on every future stall longer than REACTION_BACKFILL_DAYS=3 nights, and each time would look identical to a clean run: attention_days_fetched matching the window size, zero failures, no trace that a day was skipped rather than absent.",
+  "repair": {
+    "date": "2026-08-12",
+    "changed": "practice/src/practice/foreknown/reaction.py: run_reaction now widens the attention fetch window past `backfill` when the newest committed attention day is further behind `day` than that -- computed from load_attention_days' own committed set, floored at `backfill` and capped at the new MAX_ATTENTION_CATCHUP_DAYS=30 so a day GDELT genuinely never publishes is not retried forever.",
+    "why_safe": "committed days are still skipped (no re-fetch, no re-write of an append-only record); the window only ever grows relative to the unmodified behaviour, so no previously-attempted day stops being attempted; the cap bounds worst-case request count to 30 extra HTTP calls on a very long-stalled register, each a plain GET already handled by the existing failure path.",
+    "tested_in": "practice/tests/test_reaction.py, test_reaction_run_widens_the_window_past_a_multi_night_gap -- reproduces this exact scenario (a day committed 2026-08-07, a run on 2026-08-12 with backfill=3) and asserts 2026-08-08 is fetched and written.",
+    "not_backfilled": "2026-08-08 is not fetched by this observation itself -- the repair only changes what future runs will request. Whether 2026-08-08's GDELT file is still fetchable after this repair is left for the next successful nightly run to show, not asserted here."
+  }
+}
