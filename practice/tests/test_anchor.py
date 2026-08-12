@@ -141,3 +141,55 @@ def test_the_tool_runs_offline_end_to_end_without_touching_the_real_ledger(tmp_p
     assert "manifests" in p.stdout
     assert out.is_file()
     assert (real.read_bytes() if real.exists() else None) == before, "the committed ledger was modified"
+
+
+def test_register_lists_every_night_the_ledger_does_not_know(tmp_path):
+    """The notary jobs' half of the anchoring handshake (the deadlock of 2026-08-10..12):
+    a fresh night can never already be stamped, but it can and must be LISTED. From an
+    empty ledger, register mode lists every register night as "unstamped" — the disclosed
+    state the verifier already accepts as legitimate, never as a hole."""
+    out = tmp_path / "ledger.json"
+    rc = anchor.main(["--register", "--ledger", str(out)])
+    assert rc == 0
+    written = json.loads(out.read_text())
+    rels = [e["manifest"] for e in written["anchors"]]
+    assert rels == sorted(str(m.relative_to(REPO)) for m in anchor.manifests())
+    for e in written["anchors"]:
+        assert e["state"] == "unstamped"
+        assert e["sha256"] == anchor.sha256(REPO / e["manifest"])
+    assert written["counts"]["manifests"] == len(rels)
+    assert written["counts"]["complete"] == 0
+
+
+def test_register_never_rewrites_an_existing_row(tmp_path):
+    """Register mode may only append. A completed Bitcoin proof's row — digest, state,
+    evidence — is the record of an act already performed; the night job holds no client
+    and must not touch it, and recorded failures stay on the record too."""
+    out = tmp_path / "ledger.json"
+    ms = anchor.manifests()
+    first = str(ms[0].relative_to(REPO))
+    seeded = {"anchors": [{"manifest": first, "sha256": "seeded-digest",
+                           "state": "complete", "proof": "anchors/x.ots",
+                           "evidence": "bitcoin block(s) 961744"}],
+              "failures": [{"manifest": first, "step": "stamp", "at": "t", "detail": "kept"}]}
+    out.write_text(json.dumps(seeded))
+    rc = anchor.main(["--register", "--ledger", str(out)])
+    assert rc == 0
+    written = json.loads(out.read_text())
+    kept = [e for e in written["anchors"] if e["manifest"] == first]
+    assert kept == seeded["anchors"], "the existing row must survive byte for byte"
+    assert written["failures"] == seeded["failures"]
+    assert len(written["anchors"]) == len(ms)
+    assert all(e["state"] == "unstamped"
+               for e in written["anchors"] if e["manifest"] != first)
+
+
+def test_register_with_nothing_new_leaves_the_ledger_bytes_alone(tmp_path):
+    """A run that learns nothing must change nothing: a generated_at-only diff is the
+    kind of empty commit the record does not need (main, 2026-08-11, moved exactly one
+    timestamp and nothing else)."""
+    out = tmp_path / "ledger.json"
+    assert anchor.main(["--register", "--ledger", str(out)]) == 0
+    before = out.read_bytes()
+    assert anchor.main(["--register", "--ledger", str(out)]) == 0
+    assert out.read_bytes() == before

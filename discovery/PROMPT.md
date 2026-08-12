@@ -29,13 +29,31 @@ cannot translate, and the reaction figures' own limits.
    (repo-relative paths). No claims about the world — only about the record.
 2. **Sensor proposals** — `foreknown/proposals/sensor-<slug>.json`:
    `{"name", "definition", "test_rule", "falsification", "derived_from": [paths],
-   "status": "PROPOSED"}`. A proposal becomes a standing sensor only through a
-   later, reasoned promotion commit — never by you.
+   "status": "PROPOSED"}`. Promotion is yours since 2026-08-12 (Frank's
+   delegation, docs/2026-08-12-promotion-authority.md): on a later night than
+   the proposal's own, once its `test_rule` has held against the committed
+   record, you may promote it yourself — implement the sensor as code with its
+   falsification clause intact, set the proposal's status to `PROMOTED` with
+   the date and the evidence paths, and say so in the delivery. A promotion is
+   a reasoned commit, never a silent one; a sensor that already runs as code
+   without a promotion record is a debt you may settle the same way.
 3. **Source proposals** — `foreknown/proposals/source-<slug>.json`:
    a new warning source inside the charter (public, keyless, free,
    person-free), with the exact endpoint you verified this run, a measured
    sample (preserve bytes under `foreknown/snapshots/<date>/probes/` via the
    normal manifest), and what it would add.
+4. **Repairs and optimisations** — the same delegation covers the practice's
+   own machinery: when the committed record proves a defect (a failing
+   workflow, a check that contradicts its own docstring, a dead path), you
+   may fix the code that night rather than only describe it. The proof of
+   the defect and the proof of the fix are the same kind of thing: committed
+   evidence, cited by path. Tests and `verify.py` green are the floor, not
+   the goal.
+
+What stays the maintainer's alone, proposal only: anything that spends
+money, touches personal data, sends anything to anyone, adds a source
+outside the delegation charter, or changes the practice's public claims
+about what it has proven. "Nothing sends itself" survives every delegation.
 
 ## Rules
 
@@ -46,5 +64,8 @@ cannot translate, and the reaction figures' own limits.
   practice/src/practice/autonomy.py; actor "machine", your model id, tokens).
 - Run `python stage/generate.py --repo-root .` and `python verify.py
   --repo-root .` before finishing; both must pass.
+- Deliveries name no commercial products or brands: no "generated with"
+  credits in commit messages or PR bodies. The model id in
+  `autonomy/log.jsonl` is the disclosure; the tooling stays generic.
 - End with a one-paragraph summary: what you looked at, what you propose,
   what you deliberately left alone.

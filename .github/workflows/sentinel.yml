@@ -47,6 +47,15 @@ jobs:
         if: always()
         run: python -m practice.moments --repo-root .
 
+      # The night lists itself in the anchor ledger as "unstamped" (stdlib-only,
+      # no ots client, append-only): verify.py demands every register night be
+      # LISTED in the ledger, but only the anchor job can stamp, and it can only
+      # reach manifests already on main. Without this handshake the two jobs
+      # deadlock — they did, 2026-08-10 to 2026-08-12, and three nights recorded
+      # nothing.
+      - name: Register the night in the anchor ledger
+        run: python tools/anchor.py --register
+
       - name: Verify provenance chain
         run: python verify.py --repo-root .
 

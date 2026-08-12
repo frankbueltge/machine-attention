@@ -41,6 +41,12 @@ jobs:
         if: always()
         run: python -m practice.darkocean.continuity --repo-root .
 
+      # Same handshake as the sentinel: the night lists its fresh manifests in
+      # the anchor ledger as "unstamped" so verify passes and the commit lands;
+      # the anchor job stamps them later. See tools/anchor.py, register().
+      - name: Register the night in the anchor ledger
+        run: python tools/anchor.py --register
+
       - name: Verify provenance chain
         run: python verify.py --repo-root .
 
