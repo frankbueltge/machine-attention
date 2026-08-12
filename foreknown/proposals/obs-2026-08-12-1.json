@@ -1,0 +1,33 @@
+{
+  "id": "obs-2026-08-12-1",
+  "date": "2026-08-12",
+  "kind": "difference_observation",
+  "title": "The anchor deadlock predicted 2026-08-11 has now failed to self-correct for a third calendar day, at the same step, with no fix or promotion recorded",
+  "statement": "obs-2026-08-11-1.json predicted, from reading verify.py's check_anchors and the three workflow files alone, that the deadlock it described was permanent rather than intermittent: 'there is no future night, however many attempts, in which a fresh manifest can already be in an anchor ledger that only ever anchors what is already on main.' Its own falsification clause said the observation would be wrong if the gap closed on its own. It has not. As of this pass (2026-08-12), foreknown/snapshots/ still holds only 2026-08-08 and 2026-08-09 -- two nights behind 2026-08-11, the newest date a successful run could have written -- and darkocean/snapshots/ still holds only 2026-08-07 and 2026-08-08, unchanged from the state obs-2026-08-11-1 recorded a full day ago. Three calendar days (2026-08-10, -11, -12) have now passed since foreknown's last successful notary run. anchors/ledger.json still lists exactly 6 manifests, all 'complete', none newer than 2026-08-09; the one commit to land on main since obs-2026-08-11-1 was written (9874773, 'anchor:') changed only the ledger's own generated_at timestamp from 2026-08-10T08:05:14Z to 2026-08-11T07:38:13Z -- the anchor job ran, found nothing new to anchor, and recorded that it ran. verify.py's check_anchors (lines 493-528) and tools/anchor.py's manifests() (lines 76-81) are byte-identical to what obs-2026-08-11-1 read. autonomy/log.jsonl has gained exactly one entry since that observation -- the discovery-pass entry for that same night (ts 2026-08-11T06:40:46+00:00) -- and nothing else: no foreknown-notary-run, no darkocean-run, no human_intervention step addressing check_anchors or the job order, in the three days since the last successful notary run (2026-08-09T06:27:05+00:00).",
+  "method": "Re-read verify.py (lines 493-528) and tools/anchor.py (lines 76-81) and diffed them by eye against the excerpts obs-2026-08-11-1.json quotes -- unchanged. Listed foreknown/snapshots/ and darkocean/snapshots/ directly (`ls foreknown/snapshots darkocean/snapshots`): same two dates each as the prior observation recorded. Read anchors/ledger.json's counts and generated_at field, and `git show 9874773 -- anchors/ledger.json` to confirm the single commit since the prior pass touched only that one timestamp. Read autonomy/log.jsonl in full (19 lines) and confirmed the newest foreknown-notary-run and darkocean-run entries are still dated 2026-08-09, with no step of any kind dated 2026-08-10 or later apart from the 2026-08-11 discovery-pass entry itself.",
+  "figures": {
+    "days_since_last_successful_notary_run": 3,
+    "anchor_ledger_manifest_count": 6,
+    "anchor_ledger_newest_manifest_date": "2026-08-09",
+    "foreknown_snapshots_newest_date": "2026-08-09",
+    "darkocean_snapshots_newest_date": "2026-08-08",
+    "commits_to_main_since_obs_2026_08_11_1": 1,
+    "of_which_touch_only_ledger_timestamp": 1,
+    "autonomy_log_entries_since_obs_2026_08_11_1": 1,
+    "of_which_are_human_intervention_on_the_deadlock": 0
+  },
+  "derived_from": [
+    "foreknown/proposals/obs-2026-08-11-1.json",
+    "foreknown/proposals/sensor-registry-stall.json",
+    "verify.py",
+    "tools/anchor.py",
+    "anchors/ledger.json",
+    ".github/workflows/sentinel.yml",
+    ".github/workflows/darkocean.yml",
+    ".github/workflows/anchor.yml",
+    "foreknown/snapshots/2026-08-09",
+    "darkocean/snapshots/2026-08-08",
+    "autonomy/log.jsonl"
+  ],
+  "worth_watching_because": "sensor-registry-stall.json, proposed alongside obs-2026-08-11-1, defines its own firing condition as 'the first night any register is more than 1 day behind' yesterday's date, and notes explicitly that this failure mode does not self-correct. That condition has now been true, unaddressed, for three consecutive nights across two registers (foreknown and darkocean), and the sensor itself is still unpromoted -- there is no code anywhere in this repository that records the stall from inside a run that reaches the failing step, so the only trace of three lost nights is the absence of new directories and a ledger timestamp that moves while nothing else does. This observation does not repeat obs-2026-08-11-1's diagnosis; it supplies the second and third data points its own falsification clause asked for, and both land exactly where the mechanism, read once, already said they would."
+}
