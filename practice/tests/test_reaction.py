@@ -214,3 +214,45 @@ def test_reaction_run_records_outages_and_refuses_to_overwrite(tmp_path):
         assert "append-only" in str(err)
     else:
         raise AssertionError("a second reading for the same day must be refused")
+
+
+def test_reaction_run_widens_the_window_past_a_multi_night_gap(tmp_path):
+    """A fixed `backfill`-day trailing window forgets a day older than that,
+    even one GDELT has since published, once enough nights pass without a
+    run (e.g. the anchor deadlock of 2026-08-10/11 — obs-2026-08-12-2). The
+    window must widen to reach a day still missing since the newest one
+    already committed, not just the last `backfill` nights before today."""
+    attention_dir = tmp_path / "foreknown/reaction/attention"
+    attention_dir.mkdir(parents=True)
+    (attention_dir / "2026-08-07.json").write_text(json.dumps({
+        "date": "2026-08-07", "source": {"url": attention.day_url("2026-08-07")},
+        "world": dict(attention.EMPTY), "unlocated": dict(attention.EMPTY),
+        "countries": {},
+    }), encoding="utf-8")
+
+    fetched = []
+
+    class FakeClient:
+        requests = 0
+        http_429 = 0
+
+        def fetch(self, url):
+            if url == reaction.FTS_FUNDING_URL:
+                return json.dumps(FUNDING).encode(), 200
+            if url == attention.FIPS_LOOKUP_URL:
+                return b"", 404
+            fetched.append(url)
+            return gdelt_zip([_row("SO", 1, 1)]), 200
+
+    (tmp_path / "foreknown/snapshots/2026-08-12").mkdir(parents=True)
+    (tmp_path / "foreknown/snapshots/2026-08-12/fts-plans-2026.json").write_text(
+        json.dumps(PLANS), encoding="utf-8")
+    registry = registry_with(episode("a", ["SOM"]))
+
+    # backfill=3 alone would only reach 08-09..08-11 and never ask for
+    # 08-08 again — the bug the discovery pass found.
+    reaction.run_reaction(tmp_path, "2026-08-12", registry,
+                          client=FakeClient(), backfill=3)
+
+    assert attention.day_url("2026-08-08") in fetched
+    assert (attention_dir / "2026-08-08.json").exists()
