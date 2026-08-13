@@ -85,6 +85,31 @@ def _median(values: list[float]) -> float | None:
     return (ordered[mid - 1] + ordered[mid]) / 2
 
 
+def _crosswalk_as_of(doc: dict, day: str) -> dict[str, str]:
+    """The iso3->FIPS crosswalk as it stood on `day`.
+
+    iso3-fips.json's own scope note says the table "grows when the record
+    shows it must" (foreknown/reaction/iso3-fips.json), so a reading from
+    before a later growth was computed against a smaller table than the
+    file holds today. Checking every historical reading against today's
+    full table would flag every such reading as wrong forever, the day
+    after the table did exactly what it says it does. `revisions` (each
+    `{"date", "added": {iso3: fips}}`) names when each later entry joined,
+    so a reading is checked against what existed on its own day."""
+    revised_iso3 = {iso3 for rev in doc.get("revisions", [])
+                    for iso3 in rev.get("added", {})}
+    authored = doc.get("authored")
+    result: dict[str, str] = {}
+    if not authored or authored <= day:
+        result = {iso3: entry.get("fips")
+                   for iso3, entry in doc.get("entries", {}).items()
+                   if iso3 not in revised_iso3}
+    for rev in sorted(doc.get("revisions", []), key=lambda r: r.get("date", "")):
+        if rev.get("date", "") <= day:
+            result.update(rev.get("added", {}))
+    return result
+
+
 def check_reaction(root: Path, registry: dict, registry_files: dict,
                    problems: list[str]) -> None:
     """Redo the reaction axis from the committed bytes it claims to rest on.
@@ -106,10 +131,12 @@ def check_reaction(root: Path, registry: dict, registry_files: dict,
                 fips_codes.add(parts[0])
 
     crosswalk_path = base / "iso3-fips.json"
+    crosswalk_doc: dict = {}
     crosswalk: dict[str, str] = {}
     if crosswalk_path.exists():
+        crosswalk_doc = load(crosswalk_path)
         seen: dict[str, str] = {}
-        for iso3, entry in sorted(load(crosswalk_path).get("entries", {}).items()):
+        for iso3, entry in sorted(crosswalk_doc.get("entries", {}).items()):
             code = entry.get("fips")
             crosswalk[iso3] = code
             if fips_codes and code not in fips_codes:
@@ -174,6 +201,9 @@ def check_reaction(root: Path, registry: dict, registry_files: dict,
         window = reading.get("attention_baseline_window", [])
         if day and day not in days:
             problems.append(f"{name}: attention day {day} has no committed record")
+        reading_day = reading.get("date", path.stem)
+        crosswalk_then = (_crosswalk_as_of(crosswalk_doc, reading_day)
+                          if crosswalk_doc else crosswalk)
         matched_episodes = 0
         for fid, entry in sorted(reading.get("futures", {}).items()):
             future = registry["futures"].get(fid)
@@ -199,10 +229,10 @@ def check_reaction(root: Path, registry: dict, registry_files: dict,
             if future.get("kind") == "ALERT_EPISODE" and expected:
                 matched_episodes += 1
 
-            expected_fips = sorted({crosswalk[c] for c in iso3 if c in crosswalk})
-            if crosswalk and entry.get("fips") != expected_fips:
+            expected_fips = sorted({crosswalk_then[c] for c in iso3 if c in crosswalk_then})
+            if crosswalk_then and entry.get("fips") != expected_fips:
                 problems.append(f"{name}/{fid}: fips {entry.get('fips')} is not "
-                                f"the crosswalk's {expected_fips}")
+                                f"the crosswalk's {expected_fips} as of {reading_day}")
             att = entry.get("attention")
             if not att or day not in days:
                 continue
