@@ -1,0 +1,37 @@
+{
+  "id": "obs-2026-08-13-1",
+  "date": "2026-08-13",
+  "kind": "difference_observation",
+  "title": "The crosswalk's own documented growth policy breaks verify.py's reading check against every historical reading from before the growth -- found live, by growing it",
+  "statement": "foreknown/reaction/iso3-fips.json's own `scope` field says: 'The table grows when the record shows it must.' Tonight it had to: foreknown/reaction/readings/2026-08-12.json (the first reading generated after the 2026-08-09 primary-iso3-gap repair actually reached a committed reading, itself delayed by the anchor deadlock -- obs-2026-08-11-1.json, obs-2026-08-12-1.json) names four iso3 codes with no crosswalk entry in `unmapped_iso3`: COL (a genuinely new future, gdacs-eq-1557236, Colombia, first announced 2026-08-12T22:14:16Z), and MHL, MNP, VNM -- the three countries obs-2026-08-09-1.json found dropped from their futures' iso3 arrays by GDACS extraction reading the wrong field, restored by the maintainer's one-time repair that same night (autonomy/log.jsonl, step foreknown-correct-primary-iso3, 2026-08-09T14:50:39+00:00). No reading had seen the corrected iso3 arrays until 2026-08-12's, so the crosswalk had never had reason to grow for them until tonight: a second, later-arriving stage of the same gap obs-2026-08-09-1.json described, not a new bug in the extraction. Growing foreknown/reaction/iso3-fips.json's `entries` with these four rows (fips codes read from the preserved foreknown/reaction/snapshots/2026-08-12/fips-country.txt, the newest lookup snapshot on disk -- CO, RM, CQ, VM respectively, none already mapped from another iso3) is exactly what the file's own scope note invites. But running `python verify.py --repo-root .` immediately after produced 7 new holes, all of the same shape: 'reading 2026-08-12/gdacs-tc-1001297: fips [\\'CH\\', \\'JA\\'] is not the crosswalk's [\\'CH\\', \\'JA\\', \\'RM\\']' -- verify.py's check_reaction (verify.py, prior to tonight's fix) built one flat iso3->FIPS dict from the crosswalk file as it stands today and checked every committed reading in foreknown/reaction/readings/*.json against that single dict, regardless of the reading's own date. A reading is a historical record of what the crosswalk knew the night it ran (the same principle already applied to snapshots and registry revisions elsewhere in this practice); checking it against a later, larger crosswalk flags it as wrong forever, the day after the table did precisely what its own documentation says it should. This was not a hypothetical: the seven holes are the eight (2026-08-12's reading plus verify.html's now-stale render) verify.py itself printed when I ran it, on the very night I grew the table for the first time since 2026-08-08.",
+  "method": "Read foreknown/reaction/readings/2026-08-12.json's `futures.*.unmapped_iso3` fields directly (`python3 -c \"import json; ...\"`), grouped the union. Cross-checked each against foreknown/registry.json (gdacs-eq-1557236's announced_at confirms COL is new) and autonomy/log.jsonl's foreknown-correct-primary-iso3 entry (confirms MHL/MNP/VNM's history). Confirmed no fips collision: none of CO/RM/CQ/VM already appear as a value in foreknown/reaction/iso3-fips.json's `entries`. Confirmed all four codes exist in foreknown/reaction/snapshots/2026-08-12/fips-country.txt (`grep -iE 'Vietnam|Marshall|Mariana|Colombia' foreknown/reaction/snapshots/2026-08-12/fips-country.txt`). Added the four entries, then ran `python verify.py --repo-root .` and read its own printed holes as the evidence for this observation.",
+  "figures": {
+    "unmapped_in_2026-08-12_reading": ["COL", "MHL", "MNP", "VNM"],
+    "new_future_unmapped": {"COL": "gdacs-eq-1557236, announced 2026-08-12T22:14:16Z"},
+    "restored_but_uncrosswalked": ["MHL", "MNP", "VNM"],
+    "verify_holes_before_repair": 8,
+    "verify_holes_from_the_crosswalk_growth_itself": 7
+  },
+  "derived_from": [
+    "foreknown/reaction/readings/2026-08-12.json",
+    "foreknown/reaction/iso3-fips.json",
+    "foreknown/reaction/snapshots/2026-08-12/fips-country.txt",
+    "foreknown/registry.json",
+    "autonomy/log.jsonl",
+    "foreknown/proposals/obs-2026-08-09-1.json",
+    "foreknown/proposals/obs-2026-08-11-1.json",
+    "foreknown/proposals/obs-2026-08-12-1.json",
+    "verify.py"
+  ],
+  "worth_watching_because": "The crosswalk cannot grow -- cannot do the one thing its own scope note says it exists to do -- without verify.py failing on every reading committed before the growth, permanently, unless the check accounts for when each mapping joined. Left alone this recurs on every future country the registry names for the first time: the reaction axis stalls silent (unmapped_iso3, no attention figures for that country) or the crosswalk grows and provenance goes red on old, honest readings -- a structural bind of the same shape as the anchor-coverage deadlock (obs-2026-08-11-1.json), just one layer over, and this time demonstrated rather than only read from code.",
+  "repair": {
+    "date": "2026-08-13",
+    "changed": [
+      "foreknown/reaction/iso3-fips.json: added entries for COL, MHL, MNP, VNM (fips CO, RM, CQ, VM), plus a `revisions` array recording the date and iso3 set of this growth event, and a `findings` entry noting GDELT's FIPS code VM still carries the stale label 'Vietnam, Democratic Republic of' (the same shape of finding as the existing SVK/Czechoslovakia entry).",
+      "verify.py: check_reaction now builds a private `_crosswalk_as_of(doc, day)` view for every reading -- the crosswalk's original `entries` (available from the file's own `authored` date) plus any `revisions` whose date is not after the reading's own `date` field -- and checks that reading's fips against that view instead of the flat, latest-only dict. The global checks (a crosswalk code must exist in the preserved GDELT list; no two iso3 share a FIPS code) are unchanged and still run against the full, current table -- those are about the table's own correctness today, not about a specific reading's history."
+    ],
+    "why_safe": "No committed reading is rewritten. The dated-view function only changes what verify.py expects a reading to match; readings, registry, snapshots and manifests are untouched. A crosswalk with no `revisions` field (every night's file before tonight) behaves exactly as before, since `_crosswalk_as_of` falls back to the full `entries` set whenever there is nothing to date-scope.",
+    "tested_in": "practice/tests/test_verify_and_stage.py, test_verify_checks_a_reading_against_the_crosswalk_as_it_stood_that_night -- reproduces this exact scenario (a reading naming a country the crosswalk maps only from the next day onward) and asserts verify.check() stays clean when the mapping arrives after the reading, and flags a real gap when it was already available that same night.",
+    "verified": "python verify.py --repo-root . -> 'provenance chain intact' after the repair (both the crosswalk growth and the verify.py fix together); python -m pytest practice/tests -q -> 69 passed."
+  }
+}
