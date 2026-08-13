@@ -68,6 +68,10 @@
       "fips": "CG",
       "gdelt_name": "Democratic Republic of the Congo"
     },
+    "COL": {
+      "fips": "CO",
+      "gdelt_name": "Colombia"
+    },
     "CPV": {
       "fips": "CV",
       "gdelt_name": "Cape Verde"
@@ -172,6 +176,10 @@
       "fips": "MA",
       "gdelt_name": "Madagascar"
     },
+    "MHL": {
+      "fips": "RM",
+      "gdelt_name": "Marshall Islands"
+    },
     "MKD": {
       "fips": "MK",
       "gdelt_name": "Macedonia"
@@ -179,6 +187,10 @@
     "MNE": {
       "fips": "MJ",
       "gdelt_name": "Montenegro"
+    },
+    "MNP": {
+      "fips": "CQ",
+      "gdelt_name": "Northern Mariana Islands"
     },
     "MOZ": {
       "fips": "MZ",
@@ -292,6 +304,10 @@
       "fips": "VE",
       "gdelt_name": "Venezuela"
     },
+    "VNM": {
+      "fips": "VM",
+      "gdelt_name": "Vietnam, Democratic Republic of"
+    },
     "YEM": {
       "fips": "YM",
       "gdelt_name": "Yemen"
@@ -311,9 +327,34 @@
       "gdelt_name": "Czechoslovakia",
       "iso3": "SVK",
       "note": "GDELT's own code list still labels FIPS LO 'Czechoslovakia', a state that ceased to exist in 1992. The data under LO is Slovak (sample of 2026-08-07: 'Slovak Republic', 'Bratislava, Bratislavsky Kraj'), and FIPS 10-4 assigns LO to Slovakia, so the mapping SVK->LO is correct and the label is stale. Recorded rather than silently corrected: it is a small, dated fact about the instrument we are reading the world with."
+    },
+    {
+      "fips": "VM",
+      "gdelt_name": "Vietnam, Democratic Republic of",
+      "iso3": "VNM",
+      "note": "GDELT's own code list still labels FIPS VM 'Vietnam, Democratic Republic of' — the name of North Vietnam, a state that ceased to exist at reunification in 1976. FIPS 10-4 assigns VM to the whole of Vietnam and GDACS's iso3 VNM covers the same territory, so the mapping VNM->VM is correct and the label is stale, the same shape of finding as SVK/Czechoslovakia above. Recorded rather than silently corrected."
     }
   ],
   "method": "Hand-authored, then checked against the issuer's own code list: every FIPS code below exists in GDELT's FIPS.country.txt, no two iso3 codes map to the same FIPS code, and the name GDELT gives each code is recorded beside it so a wrong row is visible to a reader without any lookup.",
+  "revisions": [
+    {
+      "date": "2026-08-13",
+      "added": {
+        "COL": "CO",
+        "MHL": "RM",
+        "MNP": "CQ",
+        "VNM": "VM"
+      },
+      "why": "foreknown/reaction/readings/2026-08-12.json is the first reading naming these four iso3 codes, so this is the table's own documented policy ('grows when the record shows it must') acting, not a correction to a wrong row. COL is a genuinely new future (gdacs-eq-1557236, Colombia, first announced 2026-08-12T22:14:16Z, foreknown/registry.json) — routine growth. MHL, MNP and VNM are the three countries obs-2026-08-09-1.json found dropped from their futures' iso3 arrays by a since-fixed extraction bug and restored by the 2026-08-09 one-time repair (autonomy/log.jsonl, step foreknown-correct-primary-iso3, 2026-08-09T14:50:39+00:00); no reading saw the corrected iso3 arrays until 2026-08-12's (the two nights between were lost to the anchor deadlock, obs-2026-08-11-1.json / obs-2026-08-12-1.json), so the crosswalk had never had reason to grow for them until now — this closes a second, later-arriving stage of the same gap obs-2026-08-09-1.json described, not a new bug.",
+      "derived_from": [
+        "foreknown/reaction/readings/2026-08-12.json",
+        "foreknown/reaction/snapshots/2026-08-12/fips-country.txt",
+        "foreknown/registry.json",
+        "autonomy/log.jsonl",
+        "foreknown/proposals/obs-2026-08-09-1.json"
+      ]
+    }
+  ],
   "scope": "Only the countries that have appeared in the registry so far. This is deliberate: an iso3 with no entry is recorded as `unmapped_iso3` in every reaction reading that touches it, so a gap is visible in the record instead of silently reading as zero attention. The table grows when the record shows it must.",
   "source_url": "https://www.gdeltproject.org/data/lookups/FIPS.country.txt",
   "what": "iso3 -> FIPS 10-4 country codes, the join between the notary's registry (GDACS gives iso3) and the attention series (GDELT locates events by FIPS 10-4)."

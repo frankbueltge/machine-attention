@@ -12,7 +12,7 @@ from .test_reaction import FUNDING, PLANS, _row, gdelt_zip
 
 REPO_ROOT = Path(__file__).parents[2]
 
-FIPS_LOOKUP = b"ET\tEthiopia\nKE\tKenya\nJA\tJapan\nRM\tMarshall Islands\n"
+FIPS_LOOKUP = b"ET\tEthiopia\nKE\tKenya\nJA\tJapan\nRM\tMarshall Islands\nSO\tSomalia\n"
 CROSSWALK_RECORD = {"entries": {"ETH": {"fips": "ET"}, "KEN": {"fips": "KE"},
                                 "JPN": {"fips": "JA"}, "MHL": {"fips": "RM"}}}
 
@@ -119,6 +119,46 @@ def test_verify_redoes_the_reaction_arithmetic_from_the_committed_bytes(tmp_path
         {"entries": {"ETH": {"fips": "ZZ"}}}), encoding="utf-8")
     assert any("not in the preserved GDELT code list" in p
                for p in verify.check(root))
+
+
+def test_verify_checks_a_reading_against_the_crosswalk_as_it_stood_that_night(tmp_path):
+    """iso3-fips.json's own scope note says the table 'grows when the record
+    shows it must' (foreknown/proposals; the file's own `scope` field). A
+    reading is a historical record of what the crosswalk knew the night it
+    ran — checking it against a *later*, larger crosswalk would flag every
+    such reading as wrong forever, the day after the table did exactly what
+    it says it does (found live, 2026-08-13, by growing the table for
+    Colombia/Marshall Islands/Northern Mariana Islands/Vietnam and rerunning
+    verify.py against 2026-08-12's already-committed reading)."""
+    root = _fixture_repo(tmp_path)
+    _load("stagegen_t3b", root / "stage" / "generate.py").build(root)
+    verify = _load("verify_t3b", REPO_ROOT / "verify.py")
+    assert verify.check(root) == []
+
+    path = root / "foreknown/reaction/readings/2026-08-08.json"
+    reading = json.loads(path.read_text())
+    drought = reading["futures"]["gdacs-dr-1027450"]
+    # A later repair adds Somalia to the drought's iso3 (as the real
+    # 2026-08-09 primary-iso3-gap repair added Vietnam/Marshall Islands/
+    # Northern Mariana Islands) without a matching crosswalk entry that
+    # night, so `fips` legitimately does not include it yet.
+    drought["iso3"].append("SOM")
+    path.write_text(json.dumps(reading))
+
+    crosswalk_path = root / "foreknown/reaction/iso3-fips.json"
+    grown = dict(CROSSWALK_RECORD, authored="2026-08-08",
+                 revisions=[{"date": "2026-08-09", "added": {"SOM": "SO"}}])
+    crosswalk_path.write_text(json.dumps(grown), encoding="utf-8")
+
+    # The crosswalk grew the day AFTER this reading: the reading is still
+    # correct as of its own night.
+    assert verify.check(root) == []
+
+    # Grown on the SAME night instead: now the reading should have carried
+    # the mapping and its omission is a real gap, not a historical fact.
+    grown["revisions"][0]["date"] = "2026-08-08"
+    crosswalk_path.write_text(json.dumps(grown), encoding="utf-8")
+    assert any("is not the crosswalk's" in p for p in verify.check(root))
 
 
 def test_the_deeper_levels_build_from_the_records(tmp_path):
