@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-13T06:07:55Z",
+ "generated_at": "2026-08-13T07:03:13Z",
  "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
  "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
  "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
  "why_proofs_live_apart": "an .ots is rewritten once, by `ots upgrade`, when the Bitcoin path arrives — so it cannot live inside the append-only record trees the I3 guard protects",
  "method": "docs/2026-08-09-opentimestamps-examination.md",
  "counts": {
-  "manifests": 10,
+  "manifests": 12,
   "complete": 6,
   "pending": 3,
   "stamped_this_run": 0,
@@ -65,6 +65,11 @@
    "evidence": "4 calendar promise(s), no block yet"
   },
   {
+   "manifest": "foreknown/reaction/snapshots/2026-08-13/manifest.json",
+   "sha256": "f68056558372b55a063a85d33bd6fc0ab2c142d57d80c8b95ee2d47f2e5e221f",
+   "state": "unstamped"
+  },
+  {
    "manifest": "foreknown/snapshots/2026-08-08/manifest.json",
    "sha256": "60aaf9411301b6fc765910acf147ffdd164f78b61bcac185fff6470f9b998cfc",
    "proof": "anchors/foreknown/snapshots/2026-08-08/manifest.json.ots",
@@ -85,6 +90,11 @@
    "proof": "anchors/foreknown/snapshots/2026-08-12/manifest.json.ots",
    "state": "pending",
    "evidence": "4 calendar promise(s), no block yet"
+  },
+  {
+   "manifest": "foreknown/snapshots/2026-08-13/manifest.json",
+   "sha256": "9040e3f7db65f0e3ad52e6b46b356ed185f6942c19b96fbe5c34254bba0e18ee",
+   "state": "unstamped"
   }
  ]
 }
