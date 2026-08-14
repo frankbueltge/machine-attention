@@ -41,13 +41,24 @@ jobs:
       - name: Stamp new manifests, upgrade pending proofs
         run: python tools/anchor.py
 
-      # Only anchors/ is ever written. The record trees are untouched by design, and the
-      # append-only guard (I3) would refuse it anyway.
-      - name: Commit anchors
+      # verify.html reads the ledger this job just changed — how many nights carry a
+      # completed proof, which blocks they rest on, which are still pending. Stamping
+      # without rebuilding leaves the stage a stale render of a state that no longer
+      # exists, and verify.py's deterministic-rebuild check (I1) fails from here until
+      # something else happens to rebuild. The generator is stdlib-only and reads only
+      # committed records, so this cannot fail on anchoring's account.
+      - name: Rebuild the stage the ledger is rendered on
+        run: python stage/generate.py --repo-root .
+
+      # anchors/ and public/ and nothing else. The record trees are untouched by design,
+      # and the append-only guard (I3) would refuse it anyway. public/ belongs in the same
+      # commit as the ledger it renders, so no commit of this job's ever leaves the chain
+      # with a hole in it.
+      - name: Commit anchors and the stage they are rendered on
         run: |
           git config user.name "Machine Attention"
           git config user.email "attention@machine-attention.invalid"
-          git add anchors
+          git add anchors public
           if git diff --cached --quiet; then
             echo "nothing to commit"
             exit 0
@@ -58,3 +69,13 @@ jobs:
             git pull --rebase
           done
           exit 1
+
+      # The night's anchoring says for itself whether the chain is whole, instead of
+      # leaving the next job to discover it. It runs AFTER the commit on purpose: a hole
+      # found here is reported, never used to withhold a stamp — anchoring still cannot
+      # break a register. Until today the only scheduled job that ran this check without
+      # rebuilding first was darkocean, so an anchor run that outdated the stage surfaced
+      # the next morning, in a project that is not even on the page that went stale.
+      - name: Verify provenance chain
+        if: always()
+        run: python verify.py --repo-root .
