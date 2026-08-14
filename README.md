@@ -122,14 +122,43 @@ quiet instrument, or an honest RETIRED. The two readings already committed
 (2026-08-07, 2026-08-08) predate the criteria and count as baseline
 context, not as evidence.
 
+## Memory Hole — V0, admitted 2026-08-15
+
+> What does power change about its own public past?
+
+Third investigation, at V0 of the admission path (audit:
+[`docs/2026-08-14-memory-hole-audit.md`](docs/2026-08-14-memory-hole-audit.md),
+Frank's GO on 2026-08-15). **The institutional wording, rechecked**, fully
+keyless: each night one proven CDX query per institution asks the Internet
+Archive which pages of that host it touched on the completed UTC day —
+domain scope, many pages of few institutions, not a longer curated list.
+A deterministic sample of those pages is read back, every capture passes a
+validity gate before it may mean anything (challenge pages, consent banners
+and bot-walls are counted as `unverifiable` and never diffed), the text diff
+is typed by versioned rules into operations on text — `number_revised`,
+`date_shifted`, `negation_flipped`, `commitment_removed`,
+`attribution_removed` — and every deletion candidate is rechecked live before
+the word "gone" appears. A model layer runs only where the rules abstain,
+capped at 40 classifications a night, batched, every verdict marked as an
+estimate; without a key it says so and the night proceeds.
+
+Records live in `memoryhole/`; **no stage presence until the project passes
+its E-experiment** (admission path, stage 5). Origin:
+[Editorial Deadline / The Redaction](https://frankbueltge.de/redaction/),
+which keeps running unchanged — Memory Hole doubles none of its 32 pages.
+
 ## Layout
 
 ```
 practice/                 shared substrate (fetch, preserve, autonomy) +
                           project runtimes (practice.foreknown,
-                          practice.darkocean)
+                          practice.darkocean, practice.memoryhole)
 darkocean/snapshots/      preserved catalog pages + AIS samples (append-only)
 darkocean/readings/       nightly Coverage-vs-Declaration records
+memoryhole/watchlist.json institutions and control pages, each with the live
+                          probe that justifies its query strategy
+memoryhole/snapshots/     preserved CDX answers + archived pages (append-only)
+memoryhole/readings/      nightly records of the institutional wording
 foreknown/snapshots/      preserved bytes, manifests, run records (append-only)
 foreknown/registry.json   the notary's ledger of announced futures
 foreknown/resolutions/    measured verdicts for closed futures (append-only)
@@ -148,6 +177,10 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
   `Machine Attention <attention@machine-attention.invalid>`.
 - `darkocean.yml` — nightly Coverage-vs-Declaration reading (04:50 UTC),
   same machine identity.
+- `memoryhole.yml` — nightly reading of the institutional wording (02:30 UTC,
+  early because the archive is slow: the audit budgets one to three hours),
+  same machine identity. Optional `ANTHROPIC_API_KEY` for the capped model
+  layer; without it the reading records `off: no key configured`.
 - **Discovery pass** — since 2026-08-08 a nightly cloud routine (06:30 UTC)
   in the maintainer's Claude UI, visible and manually startable there;
   `discovery.yml` stays as a manual fallback (`workflow_dispatch`, repo

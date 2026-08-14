@@ -1,0 +1,1152 @@
+{
+  "version": "2026-08-14",
+  "note": "Memory Hole V0 watchlist. Domain scope: many pages of few institutions (audit condition 1). Every entry carries the live probe that justifies its query strategy; a host that answers no scope query is excluded rather than guessed at.",
+  "categories": {
+    "A": "German federal level",
+    "B": "EU regulators and Commission",
+    "C": "German regulators and supervision",
+    "D": "corporations with public self-commitments",
+    "E": "control group — pages without commitment character; every event on one is a fault of the instrument by construction"
+  },
+  "excluded": {
+    "note": "Chamber 1 of the origin (Editorial Deadline, frankbueltge.de) watches these 32 pages. The origin keeps them untouched; Memory Hole doubles none of them. US federal environment and health hosts are excluded wholesale as an EDGI duplicate (audit finding 4).",
+    "urls": [
+      "https://www.who.int/news-room/fact-sheets/detail/climate-change-and-health",
+      "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+      "https://www.who.int/news-room/fact-sheets/detail/tobacco",
+      "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+      "https://www.un.org/en/climatechange/science/causes-effects-climate-change",
+      "https://www.un.org/en/global-issues/human-rights",
+      "https://www.un.org/en/climatechange/net-zero-coalition",
+      "https://www.unhcr.org/refugee-statistics/",
+      "https://www.ipcc.ch/sr15/",
+      "https://www.ipcc.ch/report/ar6/wg1/",
+      "https://climate.ec.europa.eu/eu-action/climate-strategies-targets/2030-climate-targets_en",
+      "https://climate.ec.europa.eu/eu-action/climate-strategies-targets/2050-long-term-strategy_en",
+      "https://commission.europa.eu/strategy-and-policy/priorities-2024-2029_en",
+      "https://climate.nasa.gov/evidence/",
+      "https://climate.nasa.gov/vital-signs/carbon-dioxide/",
+      "https://climate.nasa.gov/vital-signs/global-temperature/",
+      "https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature",
+      "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide",
+      "https://www.epa.gov/climate-change",
+      "https://www.epa.gov/ghgemissions/overview-greenhouse-gases",
+      "https://www.epa.gov/climateindicators",
+      "https://www.cdc.gov/climate-health/php/effects/index.html",
+      "https://www.cdc.gov/tobacco/data_statistics/fact_sheets/fast_facts/index.htm",
+      "https://www.bls.gov/cps/",
+      "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "https://www.state.gov/policy-issues/climate-and-environment/",
+      "https://www.census.gov/topics/income-poverty/poverty.html",
+      "https://www.whitehouse.gov/priorities/",
+      "https://www.gov.uk/government/publications/net-zero-strategy",
+      "https://www.gov.uk/guidance/climate-change-explained",
+      "https://www.bundesregierung.de/breg-de/schwerpunkte/klimaschutz",
+      "https://www.iea.org/reports/net-zero-by-2050"
+    ]
+  },
+  "institutions": [
+    {
+      "slug": "bmwe",
+      "category": "A",
+      "name": "Bundesministerium für Wirtschaft und Energie",
+      "host": "bundeswirtschaftsministerium.de",
+      "strategy": "domain",
+      "query": "bundeswirtschaftsministerium.de",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 228,
+        "urls": 228,
+        "latency_s": 6.4,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bundeswirtschaftsministerium.de",
+            "http_status": 200,
+            "rows": 228,
+            "urls": 228,
+            "latency_s": 6.4,
+            "error": null
+          }
+        ]
+      },
+      "warning": "WAF challenge pages: the audit's finding 1 came from this host — the validity gate exists because of it"
+    },
+    {
+      "slug": "bmg",
+      "category": "A",
+      "name": "Bundesministerium für Gesundheit",
+      "host": "bundesgesundheitsministerium.de",
+      "strategy": "domain",
+      "query": "bundesgesundheitsministerium.de",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 170,
+        "urls": 170,
+        "latency_s": 7.3,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bundesgesundheitsministerium.de",
+            "http_status": 200,
+            "rows": 170,
+            "urls": 170,
+            "latency_s": 7.3,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bmuv",
+      "category": "A",
+      "name": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz",
+      "host": "bmuv.de",
+      "strategy": "domain",
+      "query": "bmuv.de",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 25,
+        "urls": 25,
+        "latency_s": 2.9,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bmuv.de",
+            "http_status": 200,
+            "rows": 25,
+            "urls": 25,
+            "latency_s": 2.9,
+            "error": null
+          }
+        ]
+      },
+      "warning": "504 in two audit probes (2026-08-14); the production form answered on 2026-08-15"
+    },
+    {
+      "slug": "rki",
+      "category": "A",
+      "name": "Robert Koch-Institut",
+      "host": "rki.de",
+      "strategy": "prefix",
+      "query": "rki.de/",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 368,
+        "urls": 368,
+        "latency_s": 55.1,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "rki.de",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.5,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "rki.de/",
+            "http_status": 200,
+            "rows": 368,
+            "urls": 368,
+            "latency_s": 55.1,
+            "error": null
+          }
+        ]
+      },
+      "warning": "crawl-delay 30 in robots.txt; 25,267 archived 404 on the start page and a live 404 on 2026-08-14 — this host really deletes"
+    },
+    {
+      "slug": "uba",
+      "category": "A",
+      "name": "Umweltbundesamt",
+      "host": "umweltbundesamt.de",
+      "strategy": "domain",
+      "query": "umweltbundesamt.de",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 329,
+        "urls": 329,
+        "latency_s": 46.5,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "umweltbundesamt.de",
+            "http_status": 200,
+            "rows": 329,
+            "urls": 329,
+            "latency_s": 46.5,
+            "error": null
+          }
+        ]
+      },
+      "warning": "the audit's 30-day domain query returned 0 rows; the day-scoped production form answers — the trap is the query form, not the host"
+    },
+    {
+      "slug": "destatis",
+      "category": "A",
+      "name": "Statistisches Bundesamt",
+      "host": "destatis.de",
+      "strategy": "prefix",
+      "query": "destatis.de/",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 1440,
+        "urls": 1440,
+        "latency_s": 49.9,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "destatis.de",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.6,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "destatis.de/",
+            "http_status": 200,
+            "rows": 1440,
+            "urls": 1440,
+            "latency_s": 49.9,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ec-climate",
+      "category": "B",
+      "name": "European Commission, DG Climate Action",
+      "host": "climate.ec.europa.eu",
+      "strategy": "domain",
+      "query": "climate.ec.europa.eu",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 415,
+        "urls": 415,
+        "latency_s": 5.5,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "climate.ec.europa.eu",
+            "http_status": 200,
+            "rows": 415,
+            "urls": 415,
+            "latency_s": 5.5,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "esma",
+      "category": "B",
+      "name": "European Securities and Markets Authority",
+      "host": "esma.europa.eu",
+      "strategy": "domain",
+      "query": "esma.europa.eu",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 28,
+        "urls": 28,
+        "latency_s": 56.3,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "esma.europa.eu",
+            "http_status": 200,
+            "rows": 28,
+            "urls": 28,
+            "latency_s": 56.3,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "eba",
+      "category": "B",
+      "name": "European Banking Authority",
+      "host": "eba.europa.eu",
+      "strategy": "prefix",
+      "query": "eba.europa.eu/regulation-and-policy/",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 3,
+        "urls": 3,
+        "latency_s": 12.6,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "eba.europa.eu",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.5,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "eba.europa.eu/",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.7,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "eba.europa.eu/regulation-and-policy/",
+            "http_status": 200,
+            "rows": 3,
+            "urls": 3,
+            "latency_s": 12.6,
+            "error": null,
+            "partition": true
+          }
+        ]
+      }
+    },
+    {
+      "slug": "eiopa",
+      "category": "B",
+      "name": "European Insurance and Occupational Pensions Authority",
+      "host": "eiopa.europa.eu",
+      "strategy": "domain",
+      "query": "eiopa.europa.eu",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 12,
+        "urls": 12,
+        "latency_s": 15.2,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "eiopa.europa.eu",
+            "http_status": 200,
+            "rows": 12,
+            "urls": 12,
+            "latency_s": 15.2,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ema",
+      "category": "B",
+      "name": "European Medicines Agency",
+      "host": "ema.europa.eu",
+      "strategy": "prefix",
+      "query": "ema.europa.eu/",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 563,
+        "urls": 563,
+        "latency_s": 59.5,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "ema.europa.eu",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.5,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "ema.europa.eu/",
+            "http_status": 200,
+            "rows": 563,
+            "urls": 563,
+            "latency_s": 59.5,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "acer",
+      "category": "B",
+      "name": "EU Agency for the Cooperation of Energy Regulators",
+      "host": "acer.europa.eu",
+      "strategy": "domain",
+      "query": "acer.europa.eu",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 30,
+        "urls": 30,
+        "latency_s": 39.8,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "acer.europa.eu",
+            "http_status": 200,
+            "rows": 30,
+            "urls": 30,
+            "latency_s": 39.8,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bnetza",
+      "category": "C",
+      "name": "Bundesnetzagentur",
+      "host": "bundesnetzagentur.de",
+      "strategy": "domain",
+      "query": "bundesnetzagentur.de",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 402,
+        "urls": 402,
+        "latency_s": 15.4,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bundesnetzagentur.de",
+            "http_status": 200,
+            "rows": 402,
+            "urls": 402,
+            "latency_s": 15.4,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bafin",
+      "category": "C",
+      "name": "Bundesanstalt für Finanzdienstleistungsaufsicht",
+      "host": "bafin.de",
+      "strategy": "prefix",
+      "query": "bafin.de/DE/",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 16,
+        "urls": 16,
+        "latency_s": 57.5,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bafin.de",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.5,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "bafin.de/",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.5,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "bafin.de/DE/",
+            "http_status": 200,
+            "rows": 16,
+            "urls": 16,
+            "latency_s": 57.5,
+            "error": null,
+            "partition": true
+          }
+        ]
+      },
+      "warning": "domain scope 504s (audit and this probe); the archived 403 that the origin read as a deletion came from here"
+    },
+    {
+      "slug": "bundesbank",
+      "category": "C",
+      "name": "Deutsche Bundesbank",
+      "host": "bundesbank.de",
+      "strategy": "domain",
+      "query": "bundesbank.de",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 156,
+        "urls": 156,
+        "latency_s": 25.2,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bundesbank.de",
+            "http_status": 200,
+            "rows": 156,
+            "urls": 156,
+            "latency_s": 25.2,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "google-sustainability",
+      "category": "D",
+      "name": "Google (sustainability)",
+      "host": "sustainability.google",
+      "strategy": "domain",
+      "query": "sustainability.google",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 33,
+        "urls": 33,
+        "latency_s": 5.1,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "sustainability.google",
+            "http_status": 200,
+            "rows": 33,
+            "urls": 33,
+            "latency_s": 5.1,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "exxonmobil",
+      "category": "D",
+      "name": "ExxonMobil (corporate)",
+      "host": "corporate.exxonmobil.com",
+      "strategy": "domain",
+      "query": "corporate.exxonmobil.com",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 489,
+        "urls": 489,
+        "latency_s": 32.4,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "corporate.exxonmobil.com",
+            "http_status": 200,
+            "rows": 489,
+            "urls": 489,
+            "latency_s": 32.4,
+            "error": null
+          }
+        ]
+      },
+      "warning": "robots.txt explicitly allows GPTBot/ChatGPT-User/OAI-SearchBot — the host is not machine-shy"
+    },
+    {
+      "slug": "shell",
+      "category": "D",
+      "name": "Shell",
+      "host": "shell.com",
+      "strategy": "domain",
+      "query": "shell.com",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 1804,
+        "urls": 1804,
+        "latency_s": 17.2,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "shell.com",
+            "http_status": 200,
+            "rows": 1804,
+            "urls": 1804,
+            "latency_s": 17.2,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "vw",
+      "category": "D",
+      "name": "Volkswagen Group",
+      "host": "volkswagen-group.com",
+      "strategy": "domain",
+      "query": "volkswagen-group.com",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 109,
+        "urls": 109,
+        "latency_s": 2.3,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "volkswagen-group.com",
+            "http_status": 200,
+            "rows": 109,
+            "urls": 109,
+            "latency_s": 2.3,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "basf",
+      "category": "D",
+      "name": "BASF",
+      "host": "basf.com",
+      "strategy": "domain",
+      "query": "basf.com",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 311,
+        "urls": 311,
+        "latency_s": 49.4,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "basf.com",
+            "http_status": 200,
+            "rows": 311,
+            "urls": 311,
+            "latency_s": 49.4,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bayer",
+      "category": "D",
+      "name": "Bayer",
+      "host": "bayer.com",
+      "strategy": "domain",
+      "query": "bayer.com",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 28,
+        "urls": 28,
+        "latency_s": 21.0,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bayer.com",
+            "http_status": 200,
+            "rows": 28,
+            "urls": 28,
+            "latency_s": 21.0,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bp",
+      "category": "D",
+      "name": "BP",
+      "host": "bp.com",
+      "strategy": "prefix",
+      "query": "bp.com/",
+      "probe": {
+        "at": "2026-08-14T22:17:42+00:00",
+        "form": "day-scoped discovery (probe window 7 days), matchType + mimetype:text/html + collapse=urlkey",
+        "window_days": 7,
+        "http_status": 200,
+        "rows": 104,
+        "urls": 104,
+        "latency_s": 21.7,
+        "error": null,
+        "attempts": [
+          {
+            "strategy": "domain",
+            "query_url": "bp.com",
+            "http_status": 504,
+            "rows": 0,
+            "urls": 0,
+            "latency_s": 60.7,
+            "error": "HTTP 504"
+          },
+          {
+            "strategy": "prefix",
+            "query_url": "bp.com/",
+            "http_status": 200,
+            "rows": 104,
+            "urls": 104,
+            "latency_s": 21.7,
+            "error": null
+          }
+        ]
+      },
+      "warning": "answers our client with 403 on the page and on robots.txt — enters as an expected `unverifiable`, never as a finding"
+    }
+  ],
+  "not_admitted": [],
+  "controls": [
+    {
+      "id": "bmg-contact-00",
+      "institution": "bmg",
+      "source_category": "A",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt",
+      "probe": {
+        "at": "2026-08-14T22:53:53+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 24,
+        "urls": 1,
+        "latency_s": 10.4,
+        "error": null,
+        "oldest": "20230606072902",
+        "newest": "20260811125351"
+      }
+    },
+    {
+      "id": "rki-privacy-01",
+      "institution": "rki",
+      "source_category": "A",
+      "category": "E",
+      "kind": "privacy",
+      "url": "https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html",
+      "probe": {
+        "at": "2026-08-14T22:54:01+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 6.7,
+        "error": null,
+        "oldest": "20150328104533",
+        "newest": "20260807233558"
+      }
+    },
+    {
+      "id": "uba-accessibility-02",
+      "institution": "uba",
+      "source_category": "A",
+      "category": "E",
+      "kind": "accessibility",
+      "url": "https://www.umweltbundesamt.de/barrierefreiheit",
+      "probe": {
+        "at": "2026-08-14T22:54:20+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 17.9,
+        "error": null,
+        "oldest": "20240628043955",
+        "newest": "20260812143451"
+      }
+    },
+    {
+      "id": "destatis-sitemap-03",
+      "institution": "destatis",
+      "source_category": "A",
+      "category": "E",
+      "kind": "sitemap",
+      "url": "https://www.destatis.de/DE/Service/Sitemap/sitemap_node.html",
+      "probe": {
+        "at": "2026-08-14T22:54:53+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 31.6,
+        "error": null,
+        "oldest": "20251030122628",
+        "newest": "20260810083125"
+      }
+    },
+    {
+      "id": "ec-climate-accessibility-04",
+      "institution": "ec-climate",
+      "source_category": "B",
+      "category": "E",
+      "kind": "accessibility",
+      "url": "https://climate.ec.europa.eu/accessibility-statement_en",
+      "probe": {
+        "at": "2026-08-14T22:55:11+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 17.4,
+        "error": null,
+        "oldest": "20240626233137",
+        "newest": "20260811040943"
+      }
+    },
+    {
+      "id": "bnetza-sitemap-05",
+      "institution": "bnetza",
+      "source_category": "C",
+      "category": "E",
+      "kind": "sitemap",
+      "url": "https://www.bundesnetzagentur.de/DE/Service/Sitemap/sitemap_node.html",
+      "probe": {
+        "at": "2026-08-14T22:55:16+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 3.8,
+        "error": null,
+        "oldest": "20260531112010",
+        "newest": "20260812170159"
+      }
+    },
+    {
+      "id": "bundesbank-privacy-06",
+      "institution": "bundesbank",
+      "source_category": "C",
+      "category": "E",
+      "kind": "privacy",
+      "url": "https://www.bundesbank.de/de/bundesbank/forschung/studie-zur-wirtschaftlichen-lage-privater-haushalte-phf/datenschutz-604914",
+      "probe": {
+        "at": "2026-08-14T22:55:41+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 13,
+        "urls": 1,
+        "latency_s": 23.3,
+        "error": null,
+        "oldest": "20250409123558",
+        "newest": "20260809012701"
+      }
+    },
+    {
+      "id": "shell-contact-07",
+      "institution": "shell",
+      "source_category": "D",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://www.shell.com/about-us/contact-us/contact-ecuador.html",
+      "probe": {
+        "at": "2026-08-14T22:56:00+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 18.3,
+        "error": null,
+        "oldest": "20210126131910",
+        "newest": "20260807082316"
+      }
+    },
+    {
+      "id": "vw-privacy-08",
+      "institution": "vw",
+      "source_category": "D",
+      "category": "E",
+      "kind": "privacy",
+      "url": "https://www.volkswagen-group.com/de/datenschutzerklaerung-15677",
+      "probe": {
+        "at": "2026-08-14T22:56:11+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 9.0,
+        "error": null,
+        "oldest": "20241208015858",
+        "newest": "20260813062038"
+      }
+    },
+    {
+      "id": "basf-legal-09",
+      "institution": "basf",
+      "source_category": "D",
+      "category": "E",
+      "kind": "legal",
+      "url": "https://products.basf.com/global/en/TermsConditionsofSales",
+      "probe": {
+        "at": "2026-08-14T22:56:23+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 39,
+        "urls": 1,
+        "latency_s": 11.1,
+        "error": null,
+        "oldest": "20251029162317",
+        "newest": "20260809120221"
+      }
+    },
+    {
+      "id": "bp-contact-10",
+      "institution": "bp",
+      "source_category": "D",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://www.bp.com/en/global/corporate/contact-us.html",
+      "probe": {
+        "at": "2026-08-14T22:56:46+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 21.4,
+        "error": null,
+        "oldest": "20250501132737",
+        "newest": "20260811221705"
+      }
+    },
+    {
+      "id": "bmwe-privacy-11",
+      "institution": "bmwe",
+      "source_category": "A",
+      "category": "E",
+      "kind": "privacy",
+      "url": "https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Datenschutzerklaerung/datenschutzerklaerung.html",
+      "probe": {
+        "at": "2026-08-14T22:56:53+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 6.0,
+        "error": null,
+        "oldest": "20260512202236",
+        "newest": "20260812025316"
+      }
+    },
+    {
+      "id": "bmg-contact-12",
+      "institution": "bmg",
+      "source_category": "A",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt-1",
+      "probe": {
+        "at": "2026-08-14T22:57:18+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 1,
+        "urls": 1,
+        "latency_s": 24.1,
+        "error": null,
+        "oldest": "20260811125351",
+        "newest": "20260811125351"
+      }
+    },
+    {
+      "id": "destatis-sitemap-13",
+      "institution": "destatis",
+      "source_category": "A",
+      "category": "E",
+      "kind": "sitemap",
+      "url": "https://www.destatis.de/EN/Service/Sitemap/sitemap_node.html",
+      "probe": {
+        "at": "2026-08-14T22:57:48+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 29.1,
+        "error": null,
+        "oldest": "20250416010330",
+        "newest": "20260812101032"
+      }
+    },
+    {
+      "id": "ec-climate-contact-14",
+      "institution": "ec-climate",
+      "source_category": "B",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://climate.ec.europa.eu/citizens-stakeholders/contact-us_en",
+      "probe": {
+        "at": "2026-08-14T22:58:19+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 7,
+        "urls": 1,
+        "latency_s": 29.0,
+        "error": null,
+        "oldest": "20260401001233",
+        "newest": "20260813130051"
+      }
+    },
+    {
+      "id": "shell-contact-15",
+      "institution": "shell",
+      "source_category": "D",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://www.shell.com/about-us/contact-us/contact-honduras.html",
+      "probe": {
+        "at": "2026-08-14T22:59:32+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 10.4,
+        "error": null,
+        "oldest": "20210918104127",
+        "newest": "20260807082316"
+      }
+    },
+    {
+      "id": "vw-legal-16",
+      "institution": "vw",
+      "source_category": "D",
+      "category": "E",
+      "kind": "legal",
+      "url": "https://www.volkswagen-group.com/de/goto/terms-of-service",
+      "probe": {
+        "at": "2026-08-14T22:59:38+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 2,
+        "urls": 1,
+        "latency_s": 4.8,
+        "error": null,
+        "oldest": "20241024091121",
+        "newest": "20260810151440"
+      }
+    },
+    {
+      "id": "basf-contact-17",
+      "institution": "basf",
+      "source_category": "D",
+      "category": "E",
+      "kind": "contact",
+      "url": "https://www.basf.com/global/en/legal/contact",
+      "probe": {
+        "at": "2026-08-14T23:00:26+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 47.1,
+        "error": null,
+        "oldest": "20250809124817",
+        "newest": "20260807050809"
+      }
+    },
+    {
+      "id": "bp-legal-18",
+      "institution": "bp",
+      "source_category": "D",
+      "category": "E",
+      "kind": "legal",
+      "url": "https://www.bp.com/en/global/corporate/disclaimer.html",
+      "probe": {
+        "at": "2026-08-14T23:00:30+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 40,
+        "urls": 1,
+        "latency_s": 2.5,
+        "error": null,
+        "oldest": "20250502022342",
+        "newest": "20260809223055"
+      }
+    },
+    {
+      "id": "bnetza-privacy-19",
+      "institution": "bnetza",
+      "source_category": "C",
+      "category": "E",
+      "kind": "privacy",
+      "url": "https://www.bundesnetzagentur.de/datenschutz",
+      "probe": {
+        "at": "2026-08-14T23:00:49+00:00",
+        "form": "single-url history",
+        "http_status": 200,
+        "rows": 14,
+        "urls": 1,
+        "latency_s": 17.9,
+        "error": null,
+        "oldest": "20240705194341",
+        "newest": "20260813061026"
+      }
+    }
+  ]
+}
