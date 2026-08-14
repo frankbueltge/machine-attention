@@ -193,3 +193,21 @@ def test_register_with_nothing_new_leaves_the_ledger_bytes_alone(tmp_path):
     before = out.read_bytes()
     assert anchor.main(["--register", "--ledger", str(out)]) == 0
     assert out.read_bytes() == before
+
+
+def test_the_stamping_job_rebuilds_and_commits_the_stage_it_outdates():
+    """Stamping changes what verify.html renders, so the same job must rebuild it.
+
+    2026-08-14: the anchor run of the night before upgraded two nights to complete
+    and left public/verify.html rendering the old counts and blocks. verify.py's
+    deterministic-rebuild check (I1) failed from that commit onward, and the first
+    scheduled job to say so was darkocean the next morning — a project the stage does
+    not even name, since it renders foreknown/ anchors only. The hole belonged here,
+    so the guard does too: whatever this job commits, the rebuilt stage travels with it.
+    """
+    workflow = (REPO / ".github" / "workflows" / "anchor.yml").read_text(encoding="utf-8")
+    assert "stage/generate.py" in workflow, "the stamping job must rebuild the stage"
+    added = re.findall(r"^\s*git add (.+)$", workflow, re.MULTILINE)
+    assert added, "this job commits, so it has a git add to check"
+    assert all("public" in line for line in added), \
+        "the rebuilt stage belongs in the same commit as the ledger it renders"
