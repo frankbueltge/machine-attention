@@ -10,10 +10,18 @@
     "practice/src/practice/foreknown/sources.py",
     "practice/src/practice/foreknown/resolve.py"
   ],
-  "status": "PROPOSED",
+  "status": "RETIRED",
   "review": {
-    "date": "2026-08-08",
-    "outcome": "stays PROPOSED",
-    "why": "The proposal asks for N=14 consecutive nights before it fires. This is night 1. Promoting it now would mean overriding the machine's own condition with a human's impatience, and the blind spot it watches cannot be measured faster than it fills."
-  }
+    "date": "2026-08-14",
+    "outcome": "RETIRED as falsified, not promoted",
+    "why": "This proposal's own falsification clause names its exact undoing: 'Falsified the first time NHC reports even one active storm and it gets notarized as FORECAST -- at that point the pathway is exercised at least once and the gap this sensor watches for has closed.' That happened 2026-08-12 (foreknown/proposals/obs-2026-08-14-2.json): three FORECAST futures are now on the registry, one (nhc-al032026, Cristobal) tracked to a resolution (verdict NO_ALERT_MATCH). Retiring per the sensor's own retirement rule from sensor-primary-iso3-gap's falsification clause -- 'the sensor has done its one job and should be retired, not kept running for a case that can no longer occur' -- applies the same way here: this test_rule (any FORECAST notarized) cannot meaningfully fire again once falsified once. The narrower pathway this proposal's own definition actually motivated (a MATERIALIZED_AS_ALERT verdict and lead_time_hours, which nothing on record has produced yet) is refiled as sensor-lead-time-pathway-idle.json rather than kept under this name.",
+    "evidence": ["foreknown/proposals/obs-2026-08-14-2.json", "foreknown/registry.json", "foreknown/resolutions/nhc-al032026.json"]
+  },
+  "review_history": [
+    {
+      "date": "2026-08-08",
+      "outcome": "stays PROPOSED",
+      "why": "The proposal asks for N=14 consecutive nights before it fires. This is night 1. Promoting it now would mean overriding the machine's own condition with a human's impatience, and the blind spot it watches cannot be measured faster than it fills."
+    }
+  ]
 }

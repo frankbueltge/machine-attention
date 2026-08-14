@@ -1,0 +1,39 @@
+{
+  "id": "obs-2026-08-14-1",
+  "date": "2026-08-14",
+  "kind": "difference_observation",
+  "title": "The first drift_overdue case has appeared and held for two nights: gdacs-fl-1104081, inspected by hand",
+  "statement": "sensor-cold-start-overdue-drift.json (discovery night 1, 2026-08-08) split the observatory's undivided overdue flag into cold_start_overdue (already overdue the night a future was first notarized -- an artefact of when observation began) and drift_overdue (still inside its window at notarization, and only became overdue later while still OPEN under this observatory's own eyes -- 'the case the flag was meant to catch'). The code (practice/src/practice/foreknown/futures.py, overdue_kind) shipped on night 1, but its own implementation record said promotion would wait 'once at least one drift_overdue case has actually been observed and its window/severity history inspected by hand' -- none could exist on night 1, since every future was cold-start by construction. That case now exists. foreknown/snapshots/2026-08-13/run.json is the first run.json to carry a non-empty overdue_drift list: exactly one id, gdacs-fl-1104081. foreknown/snapshots/2026-08-14/run.json carries the same single id again. Read by hand from foreknown/registry.json: gdacs-fl-1104081 (GDACS flood, China) was NOTARIZED 2026-08-12T22:14:16+00:00 with window.to = 2026-08-13T01:00:00 -- a window that still lay about two and a half hours in the future at the moment of notarization, so overdue_kind correctly does not classify it cold_start_overdue (first_to '2026-08-13T01:00:00' is not less than announced_at '2026-08-12T22:14:16'). Its history holds exactly one event, NOTARIZED -- no REVISED entry exists, so the window was never extended by the source. The future simply outlived the window it was announced with, silently, between the 2026-08-12 and 2026-08-13 notary runs, and GDACS kept feeding it as OPEN past that point: it is still OPEN and still carrying window.to = 2026-08-13T01:00:00 tonight, now well over a day past its own stated end. This is the drift the sensor was built to catch, undiluted by any window revision that might otherwise blur cold-start from drift.",
+  "method": "Read foreknown/snapshots/2026-08-13/run.json and foreknown/snapshots/2026-08-14/run.json's overdue_drift fields directly (both: ['gdacs-fl-1104081']). Read foreknown/registry.json's futures.gdacs-fl-1104081 record in full: announced_at, window, status, and the complete one-entry history list. Re-applied overdue_kind's own logic by hand against those two fields (window_to_at_notarization falls back to the current window.to when no REVISED event touched window, per futures.py lines 40-50) to confirm the drift_overdue classification is not an artefact of a later window edit.",
+  "figures": {
+    "future": "gdacs-fl-1104081",
+    "hazard": "flood",
+    "where": "China",
+    "announced_at": "2026-08-12T22:14:16+00:00",
+    "window_to_at_notarization": "2026-08-13T01:00:00",
+    "history_events": 1,
+    "revised_events": 0,
+    "first_appeared_in_overdue_drift": "2026-08-13",
+    "still_in_overdue_drift": "2026-08-14",
+    "nights_observed_as_drift_overdue": 2
+  },
+  "derived_from": [
+    "foreknown/snapshots/2026-08-13/run.json",
+    "foreknown/snapshots/2026-08-14/run.json",
+    "foreknown/registry.json",
+    "practice/src/practice/foreknown/futures.py",
+    "foreknown/proposals/sensor-cold-start-overdue-drift.json"
+  ],
+  "worth_watching_because": "sensor-cold-start-overdue-drift.json named this exact condition as its own bar for promotion, and named the opposite outcome as grounds to drop the sensor instead: 'If, once a second night exists, every single overdue future turns out to be cold_start_overdue for many consecutive nights ... the drift_overdue class would be empty by construction and this sensor would add a label that never fires -- worth dropping rather than promoting.' Six nights after the split shipped, the class is not empty: one real case exists, inspected above, and it has now held across two consecutive nightly runs rather than appearing once and closing. That is the evidence the proposal itself asked for before a promotion decision could be made honestly rather than assumed.",
+  "promotion": {
+    "date": "2026-08-14",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the proposal's own stated bar for promotion -- at least one drift_overdue case observed and inspected by hand -- against the case found and inspected above.",
+    "kept_unchanged": "definition, test_rule and falsification are the machine's original text (2026-08-08) and match the running code (overdue_kind, futures.py) as written; no threshold changed.",
+    "evidence": [
+      "foreknown/snapshots/2026-08-13/run.json",
+      "foreknown/snapshots/2026-08-14/run.json",
+      "foreknown/registry.json"
+    ]
+  }
+}
