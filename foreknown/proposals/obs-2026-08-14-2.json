@@ -1,0 +1,30 @@
+{
+  "id": "obs-2026-08-14-2",
+  "date": "2026-08-14",
+  "kind": "difference_observation",
+  "title": "NHC named a storm, the observatory tracked and resolved it, and the resolver's other verdict fired for the first time -- but the lead-time pathway sensor-forecast-kind-gap actually cared about is still untouched",
+  "statement": "sensor-forecast-kind-gap.json (proposed 2026-08-08, still PROPOSED as of last review 2026-08-12) named its own falsification condition: 'Falsified the first time NHC reports even one active storm and it gets notarized as FORECAST -- at that point the pathway is exercised at least once and the gap this sensor watches for has closed, at least for that episode.' That happened on 2026-08-12: foreknown/registry.json shows three FORECAST-kind futures now on record -- nhc-al032026 (Cristobal, TS), nhc-cp012026, nhc-ep082026 -- all first notarized 2026-08-12 or 2026-08-13, none possible before then since every NHC snapshot from 2026-08-08 through 2026-08-11 returned activeStorms: [] (the quiet state the proposal itself was written from). nhc-al032026 ran its full course under observation: NOTARIZED 2026-08-12T22:14:16Z at severity 40, REVISED 2026-08-13T07:03:10Z to severity 35 with a narrowed window, DISSIPATED 2026-08-14T06:58:12Z. foreknown/resolutions/nhc-al032026.json is the first resolution this observatory has ever produced for a FORECAST-kind future -- verdict NO_ALERT_MATCH: 'no alert-grade episode for this storm in the observatory's registry.' Checked against every GDACS tropical-cyclone future in the registry by storm_token (resolve.py's own matching function, first three letters excluded as stopwords) at the moment of resolution: none carried the token CRISTOBAL. This is the resolver's second verdict kind ever produced, after EPISODE_ENDED (six GDACS resolutions, all before tonight) -- but it is not the verdict the proposal's own justification named as the point of the pathway. The proposal's definition motivates the sensor by the resolver's MATERIALIZED_AS_ALERT verdict and its lead_time_hours measurement specifically ('the lead-time measurement this project was built to eventually produce ... has never had a case to run on') -- and that narrower pathway is still exactly where it was on night 1: zero MATERIALIZED_AS_ALERT verdicts exist among all seven resolutions on record (six EPISODE_ENDED, one NO_ALERT_MATCH, grep-checked directly), so lead_time_hours has still never been computed once. The coarse condition the sensor's test_rule literally counts (any FORECAST notarized) closed on 2026-08-12; the finer gap its own prose said mattered has not.",
+  "method": "Read foreknown/registry.json's three FORECAST-kind futures in full (announced_at, history, status). Read foreknown/resolutions/nhc-al032026.json directly for its verdict and note. Read resolve.py's resolve_future and storm_token to re-check the NO_ALERT_MATCH result by hand: no GDACS tropical-cyclone future in the registry shares CRISTOBAL as a storm_token with nhc-al032026 at the time of its DISSIPATED event (2026-08-14T06:58:12Z; the registry's open GDACS-tc futures were read at the same commit). Grepped every file in foreknown/resolutions/ for its verdict field: six EPISODE_ENDED, one NO_ALERT_MATCH, zero MATERIALIZED_AS_ALERT.",
+  "figures": {
+    "forecast_futures_on_record": 3,
+    "forecast_futures_resolved": 1,
+    "resolved_verdict": "NO_ALERT_MATCH",
+    "materialized_as_alert_verdicts_ever": 0,
+    "lead_time_hours_ever_computed": 0,
+    "first_forecast_notarized": "2026-08-12",
+    "nights_the_coarse_gap_held": 4
+  },
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/resolutions/nhc-al032026.json",
+    "foreknown/resolutions",
+    "practice/src/practice/foreknown/resolve.py",
+    "foreknown/proposals/sensor-forecast-kind-gap.json"
+  ],
+  "worth_watching_because": "A sensor whose test_rule is looser than the gap it was written to describe can go quiet exactly when its subject is still open. If sensor-forecast-kind-gap were promoted as literally written, tonight's three notarized FORECAST futures would already read as the gap closed -- but the specific pathway the proposal's own definition and derived_from (resolve.py lines 96-121, the MATERIALIZED_AS_ALERT branch) pointed at is untouched, and NO_ALERT_MATCH is itself informative only once there is more than one case to compare it against.",
+  "review": {
+    "date": "2026-08-14",
+    "outcome": "sensor-forecast-kind-gap.json's coarse test_rule condition is retired as falsified (a FORECAST future was notarized, tracked and resolved); a narrower proposal replacing it is filed as sensor-lead-time-pathway-idle.json, watching the pathway the original proposal's own prose actually cared about",
+    "why_not_just_edit_the_original": "the machine's own proposal text is left as it was written and dated -- what it said on 2026-08-08 was accurate for that night's record. The gap it named under one description (any FORECAST notarized) has closed; the gap under the more specific description in the same file's own definition (a MATERIALIZED_AS_ALERT case) has not. Retiring the first and proposing the second keeps both facts on the record rather than quietly rewriting the first into the second."
+  }
+}

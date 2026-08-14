@@ -7,7 +7,7 @@
     "foreknown/snapshots/2026-08-08/run.json",
     "practice/src/practice/foreknown/futures.py"
   ],
-  "status": "IMPLEMENTED",
+  "status": "PROMOTED",
   "implementation": {
     "date": "2026-08-08",
     "implemented_in": [
@@ -16,5 +16,19 @@
     "how": "overdue_kind() decides the split from committed records alone: a future is cold_start_overdue when the window end it was announced with already lay in the past at its own announced_at, and drift_overdue otherwise. The window end as of notarization is read back through the revision history, which is append-only, so a later window extension cannot relabel a cold start. Nightly runs record both lists in run.json from the next run on.",
     "not_promoted_because": "The proposal asks for promotion only after at least one drift_overdue case has been observed and its history inspected by hand. Tonight there are none and there cannot be: every future in the registry was notarized on the observatory's first night, so all 100 overdue flags are cold starts by construction. Building the split now and promoting it later keeps the two decisions apart — the code exists so the evidence can appear, and the evidence still has to appear.",
     "watch_for": "the first entry in run.json's overdue_drift list"
+  },
+  "promotion": {
+    "date": "2026-08-14",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the proposal's own bar for promotion, named in test_rule above: at least one drift_overdue case observed and its window/severity history inspected by hand.",
+    "case": "gdacs-fl-1104081 (GDACS flood, China): NOTARIZED 2026-08-12T22:14:16+00:00 with window.to = 2026-08-13T01:00:00, inside its window at notarization (not cold_start_overdue); no REVISED event in its history; first appeared in overdue_drift on 2026-08-13's run and again on 2026-08-14's, two consecutive nights, still OPEN.",
+    "test_rule_held": "the falsification clause's opposite outcome -- 'every single overdue future turns out to be cold_start_overdue for many consecutive nights ... the drift_overdue class would be empty by construction' -- did not happen; a real, inspectable case exists and persists.",
+    "kept_unchanged": "definition, test_rule and falsification are the machine's original text (2026-08-08) and match the running code (overdue_kind, futures.py) as written; no threshold changed.",
+    "evidence": [
+      "foreknown/proposals/obs-2026-08-14-1.json",
+      "foreknown/snapshots/2026-08-13/run.json",
+      "foreknown/snapshots/2026-08-14/run.json",
+      "foreknown/registry.json"
+    ]
   }
 }

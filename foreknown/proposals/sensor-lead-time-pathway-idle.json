@@ -1,0 +1,15 @@
+{
+  "name": "lead-time-pathway-idle",
+  "definition": "Successor to sensor-forecast-kind-gap.json (2026-08-08, RETIRED 2026-08-14 as falsified), narrowed to the specific pathway that proposal's own definition and derived_from actually pointed at: resolve.py's resolve_future MATERIALIZED_AS_ALERT branch and its lead_time_hours measurement (practice/src/practice/foreknown/resolve.py, lines 96-121), which fires only when a resolved FORECAST-kind future's storm_token matches an ALERT_EPISODE future already in the registry. The predecessor sensor watched a coarser condition -- any FORECAST future notarized -- and that condition closed on 2026-08-12 when NHC first named a storm (obs-2026-08-14-2.json). But the finer pathway remains exactly where it was on night 1: as of tonight, seven resolutions exist (six EPISODE_ENDED from GDACS, one NO_ALERT_MATCH from the first resolved NHC forecast, nhc-al032026/Cristobal), and lead_time_hours has never been computed once. Two FORECAST futures are still OPEN (nhc-cp012026, nhc-ep082026) and have not yet been resolved either way.",
+  "test_rule": "On each nightly run, count resolutions with verdict==MATERIALIZED_AS_ALERT across all of foreknown/resolutions/ (append-only; the count only grows). If the count is still zero after N=10 total FORECAST-kind resolutions have accumulated (NO_ALERT_MATCH or MATERIALIZED_AS_ALERT combined -- not calendar nights, since NHC's activity is seasonal and bursty, as tonight's three-storms-in-two-nights arrival after four quiet nights already shows), the sensor fires as a note that this observatory's registry has never yet contained a storm named by NHC as a forecast and later also reported by GDACS as an alert episode under a matching name -- worth surfacing as a fact about the two sources' overlap (or NHC's Atlantic/Pacific scope versus GDACS's global one) before anyone reads the lead-time measurement as a live, exercised part of the practice. N=10 resolved forecasts chosen rather than a night count because the predecessor sensor's N=14-nights threshold was never actually tested against real NHC activity, and tonight shows nights are a poor proxy for how fast forecast resolutions accumulate once a storm season is active.",
+  "falsification": "Falsified the first time any resolution reads MATERIALIZED_AS_ALERT with a lead_time_hours value -- at that point the pathway this sensor watches has been exercised at least once and the specific gap closes, independent of how many total resolutions exist. Also worth revisiting the N=10 threshold once the two currently-OPEN forecasts (nhc-cp012026, nhc-ep082026) resolve one way or the other -- if both also come back NO_ALERT_MATCH, three consecutive misses is a smaller and possibly more informative sample than N=10, and the threshold may be set too high to say anything before the season passes.",
+  "derived_from": [
+    "foreknown/proposals/obs-2026-08-14-2.json",
+    "foreknown/proposals/sensor-forecast-kind-gap.json",
+    "foreknown/resolutions/nhc-al032026.json",
+    "foreknown/resolutions",
+    "foreknown/registry.json",
+    "practice/src/practice/foreknown/resolve.py"
+  ],
+  "status": "PROPOSED"
+}
