@@ -1,0 +1,19 @@
+{
+  "cold_start": false,
+  "evidence": [
+    "foreknown/snapshots/2026-08-12/nhc-current-storms.json",
+    "foreknown/snapshots/2026-08-13/nhc-current-storms.json"
+  ],
+  "future": "nhc-al032026",
+  "measured": {
+    "escalated": false,
+    "revisions": 1,
+    "severity_path": [
+      "40",
+      "35"
+    ]
+  },
+  "note": "no alert-grade episode for this storm in the observatory's registry — a statement about the record, not about the world",
+  "resolved_at": "2026-08-14T06:58:12+00:00",
+  "verdict": "NO_ALERT_MATCH"
+}

@@ -2,44 +2,44 @@
   "$contract": "attention-export/1",
   "figures": [
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "futures_under_watch",
-      "value": 101
+      "value": 98
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "futures_window_open",
-      "value": 4
+      "value": 2
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "futures_cold_start",
-      "value": 97
+      "value": 95
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "futures_drift",
-      "value": 0
+      "value": 1
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "futures_notarized_total",
       "value": 105
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "futures_resolved",
-      "value": 4
+      "value": 7
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "materialized",
       "value": 0
     },
     {
-      "as_of": "2026-08-13",
+      "as_of": "2026-08-14",
       "key": "nights_on_record",
-      "value": 4
+      "value": 5
     },
     {
       "as_of": "2026-08-12",
@@ -48,7 +48,7 @@
     }
   ],
   "generated_from": {
-    "commit": "5b16e7f",
+    "commit": "b7878a4",
     "repo": "machine-attention"
   },
   "practice": {
