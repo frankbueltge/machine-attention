@@ -17,6 +17,7 @@ import json
 import re
 import sys
 import tempfile
+from html.parser import HTMLParser
 from pathlib import Path
 
 VALID_STATUS = {"OPEN", "CLOSED_BY_SOURCE", "DISSIPATED"}
@@ -520,6 +521,481 @@ def check_darkocean_continuity(root: Path, registry_files: dict,
                             "derived record")
 
 
+# ---------------------------------------------------------------------------
+# Memory Hole: the institutional wording, rechecked.
+#
+# Restated on purpose, like Dark Ocean's grid above: the verifier must not
+# import the code under audit. Everything below — the tag strip, the validity
+# gate, the sentence diff, the event rules, the sampling draw — is a second
+# implementation of the same written specification, so a reading that agrees
+# with itself still has to agree with an independent recomputation from the
+# preserved bytes.
+# ---------------------------------------------------------------------------
+_MH_SAMPLE_PER_INSTITUTION = 5
+_MH_MIN_TOKENS = 60
+_MH_MIN_PROSE_SENTENCES = 3
+_MH_CONSENT_MAX_TOKENS = 400
+_MH_CONSENT_MIN_MARKERS = 2
+_MH_ALIGN_FLOOR = 0.5
+_MH_PROSE_MIN_TOKENS = 5
+_MH_PROSE_MAX_TOKENS = 60
+_MH_PROSE_MIN_STOPWORD_RATIO = 0.18
+
+_MH_CHALLENGE = (
+    "verifying your browser", "incident id", "attention required",
+    "just a moment", "checking your browser",
+    "enable javascript and cookies to continue", "please enable cookies",
+    "ray id", "access denied", "request unsuccessful", "bot detection",
+    "ihre anfrage konnte nicht verarbeitet werden", "zugriff verweigert")
+_MH_CONSENT = (
+    "cookie", "cookies", "consent", "einwilligung", "datenschutzerklärung",
+    "privacy policy", "matomo", "google analytics", "tracking", "opt-out",
+    "opt out", "notwendige", "essenziell", "third-party")
+_MH_STOPWORDS = set(
+    "the a an of and or to in on for with as by that this is are was were be "
+    "been has have had it its their they we you at from which who will not no "
+    "but than into under over between about can may should would these those "
+    "our your how der die das und oder zu im auf für mit als von dem den des "
+    "ein eine einer ist sind war waren sein hat haben es sie wir an aus durch "
+    "über unter zwischen nicht kein keine aber dass wird werden soll sollen "
+    "muss diese dieser ihre unser wie".split())
+
+_MH_WS = re.compile(r"\s+")
+_MH_SENT = re.compile(r"(?<=[.!?])\s+")
+_MH_WORD_ONLY = re.compile(r"[^\W\d_]+", re.UNICODE)
+_MH_TOKEN = re.compile(r"[^\W_]+", re.UNICODE)
+_MH_NUMERIC = re.compile(r"^\d[\d.,]*$")
+_MH_YEAR = re.compile(r"^(?:19|20)\d{2}$")
+_MH_MONTH = re.compile(
+    r"\b(?:january|february|march|april|may|june|july|august|september"
+    r"|october|november|december|januar|februar|märz|mai|juni|juli|august"
+    r"|september|oktober|november|dezember)\b", re.I)
+_MH_NEGATION = re.compile(
+    r"\b(?:no|not|never|none|kein|keine|keinen|nicht|niemals)\b", re.I)
+_MH_COMMIT = re.compile(
+    r"\b(?:will|shall|must|commit|commits|committed|pledge|pledged|pledges"
+    r"|wird|werden|muss|müssen|soll|sollen|verpflichtet)\b", re.I)
+_MH_ATTRIBUTION = re.compile(
+    r"\b(?:according to|as stated by|said|says|stated|told|announced by"
+    r"|spokesperson|spokeswoman|spokesman|director|minister|president"
+    r"|commissioner|chairman|chairwoman|chair of|head of|dr\.|prof\."
+    r"|laut|zufolge|sagte|sagt|erklärte|betonte|teilte mit|nach angaben"
+    r"|sprecher|sprecherin|präsident|präsidentin|minister|ministerin"
+    r"|staatssekretär|direktor|direktorin|leiter|leiterin|vorstand)\b", re.I)
+_MH_NUMBER_SIG = re.compile(
+    r"(?<!\w)\d[\d.,]*\s?(?:%|percent|prozent|mio|million|millionen|mrd"
+    r"|billion|bn)?", re.I)
+_MH_DATE_SIG = re.compile(
+    r"\b(?:19|20)\d{2}\b"
+    r"|\b\d{1,2}\.\s?\d{1,2}\.\s?(?:19|20)\d{2}\b"
+    r"|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec"
+    r"|januar|februar|märz|mai|juni|juli|oktober|dezember)\b", re.I)
+_MH_CAPWORD = re.compile(r"[A-ZÄÖÜ][\wÄÖÜäöüß]+")
+_MH_WEIGHTS = {"number": 2, "date": 2, "named_entity": 1, "negation": 2,
+               "commitment_verb": 3}
+_MH_SKIP_TAGS = {"script", "style", "nav", "header", "footer", "aside",
+                 "noscript", "title", "head", "svg", "form"}
+
+
+class _MhStrip(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self._skip = 0
+        self._buf: list[str] = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in _MH_SKIP_TAGS:
+            self._skip += 1
+
+    def handle_endtag(self, tag):
+        if tag in _MH_SKIP_TAGS and self._skip:
+            self._skip -= 1
+
+    def handle_data(self, data):
+        if not self._skip:
+            self._buf.append(data)
+
+    def text(self) -> str:
+        return _MH_WS.sub(" ", " ".join(self._buf)).strip()
+
+
+def _mh_text(data: bytes) -> str:
+    for encoding in ("utf-8", "cp1252"):
+        try:
+            html = data.decode(encoding)
+            break
+        except UnicodeDecodeError:
+            continue
+    else:
+        html = data.decode("utf-8", errors="replace")
+    if not html.strip():
+        return ""
+    parser = _MhStrip()
+    try:
+        parser.feed(html)
+    except Exception:  # noqa: BLE001
+        pass
+    return parser.text()
+
+
+def _mh_sentences(text: str) -> list[str]:
+    return [s.strip() for s in _MH_SENT.split(text.strip()) if s.strip()]
+
+
+def _mh_is_prose(text: str) -> bool:
+    n = len(text.split())
+    if n < _MH_PROSE_MIN_TOKENS or n > _MH_PROSE_MAX_TOKENS:
+        return False
+    words = [w.lower() for w in _MH_WORD_ONLY.findall(text)]
+    if not words:
+        return False
+    stop = sum(1 for w in words if w in _MH_STOPWORDS)
+    return stop / len(words) >= _MH_PROSE_MIN_STOPWORD_RATIO
+
+
+def _mh_gate(text: str, status) -> tuple[bool, str]:
+    if str(status) != "200":
+        return False, f"status_{status}"
+    low = text.lower()
+    if any(m in low for m in _MH_CHALLENGE):
+        return False, "challenge_fingerprint"
+    tokens = len(text.split())
+    if tokens < _MH_MIN_TOKENS:
+        return False, "too_short"
+    markers = sum(1 for m in _MH_CONSENT if m in low)
+    if markers >= _MH_CONSENT_MIN_MARKERS and tokens < _MH_CONSENT_MAX_TOKENS:
+        return False, "consent_boilerplate"
+    prose = [s for s in _mh_sentences(text) if _mh_is_prose(s)]
+    if len(prose) < _MH_MIN_PROSE_SENTENCES:
+        return False, "not_prose"
+    return True, "ok"
+
+
+def _mh_similarity(a: str, b: str) -> float:
+    ta = {t.casefold() for t in _MH_TOKEN.findall(a)}
+    tb = {t.casefold() for t in _MH_TOKEN.findall(b)}
+    union = ta | tb
+    return len(ta & tb) / len(union) if union else 0.0
+
+
+def _mh_diff(before: str, after: str):
+    import difflib
+    a, b = _mh_sentences(before), _mh_sentences(after)
+    removed: list[str] = []
+    added: list[str] = []
+    pairs: list[tuple[str, str]] = []
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(
+            a=a, b=b, autojunk=False).get_opcodes():
+        if tag == "delete":
+            removed.extend(a[i1:i2])
+        elif tag == "insert":
+            added.extend(b[j1:j2])
+        elif tag == "replace":
+            left, right = a[i1:i2], b[j1:j2]
+            free = list(range(len(right)))
+            taken: set[int] = set()
+            for i, sentence in enumerate(left):
+                best, best_score = None, _MH_ALIGN_FLOOR
+                for j in free:
+                    score = _mh_similarity(sentence, right[j])
+                    if score > best_score:
+                        best, best_score = j, score
+                if best is not None:
+                    pairs.append((sentence, right[best]))
+                    free.remove(best)
+                    taken.add(i)
+            removed.extend(s for i, s in enumerate(left) if i not in taken)
+            added.extend(right[j] for j in free)
+    return removed, added, pairs
+
+
+def _mh_salience(text: str) -> int:
+    counts = {
+        "number": len(_MH_NUMBER_SIG.findall(text)),
+        "date": len(_MH_DATE_SIG.findall(text)),
+        "negation": len(_MH_NEGATION.findall(text)),
+        "commitment_verb": len(_MH_COMMIT.findall(text)),
+        "named_entity": sum(
+            1 for sentence in _MH_SENT.split(text)
+            for word in sentence.split()[1:] if _MH_CAPWORD.match(word)),
+    }
+    return sum(_MH_WEIGHTS[k] * min(v, 5) for k, v in counts.items() if v > 0)
+
+
+def _mh_numeric(tokens: list[str]) -> dict[str, int]:
+    counted: dict[str, int] = {}
+    for token in tokens:
+        if _MH_NUMERIC.match(token):
+            counted[token] = counted.get(token, 0) + 1
+    return counted
+
+
+def _mh_pair_types(before: str, after: str) -> list[str]:
+    found: list[str] = []
+    nb = _mh_numeric(_MH_TOKEN.findall(before))
+    na = _mh_numeric(_MH_TOKEN.findall(after))
+    if nb != na:
+        changed = [t for t, n in nb.items() for _ in range(max(0, n - na.get(t, 0)))]
+        changed += [t for t, n in na.items() for _ in range(max(0, n - nb.get(t, 0)))]
+        if any(_MH_YEAR.match(t) for t in changed):
+            found.append("date_shifted")
+        if any(not _MH_YEAR.match(t) for t in changed):
+            found.append("number_revised")
+    elif _MH_MONTH.search(before) and not _MH_MONTH.search(after):
+        found.append("date_shifted")
+    if len(_MH_NEGATION.findall(before)) != len(_MH_NEGATION.findall(after)):
+        found.append("negation_flipped")
+    if _MH_COMMIT.findall(before) and not _MH_COMMIT.findall(after):
+        found.append("commitment_removed")
+    if _MH_ATTRIBUTION.search(before) and not _MH_ATTRIBUTION.search(after):
+        found.append("attribution_removed")
+    return found
+
+
+def _mh_removal_types(text: str) -> list[str]:
+    found: list[str] = []
+    if _MH_COMMIT.findall(text):
+        found.append("commitment_removed")
+    if _MH_ATTRIBUTION.search(text):
+        found.append("attribution_removed")
+    return found
+
+
+def _mh_events(removed: list[str], pairs: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """(type, sha256 of the before passage), sorted — the projection a reading
+    is held to."""
+    out: list[tuple[str, str]] = []
+    for before, after in pairs:
+        if not (_mh_is_prose(before) or _mh_is_prose(after)):
+            continue
+        digest = hashlib.sha256(before.encode("utf-8")).hexdigest()
+        out.extend((kind, digest) for kind in _mh_pair_types(before, after))
+    for passage in removed:
+        if not _mh_is_prose(passage):
+            continue
+        digest = hashlib.sha256(passage.encode("utf-8")).hexdigest()
+        out.extend((kind, digest) for kind in _mh_removal_types(passage))
+    return sorted(out)
+
+
+def _mh_rows(path: Path) -> list[dict]:
+    raw = path.read_bytes().decode("utf-8", errors="replace").strip()
+    if not raw:
+        return []
+    try:
+        parsed = json.loads(raw)
+    except json.JSONDecodeError:
+        return []
+    if not parsed or len(parsed) < 2:
+        return []
+    rows = [{"timestamp": str(r[0]), "original": str(r[1]),
+             "statuscode": str(r[2]), "digest": str(r[3])}
+            for r in parsed[1:] if len(r) >= 4]
+    rows.sort(key=lambda r: r["timestamp"])
+    return rows
+
+
+def _mh_history_class(rows: list[dict], day: str) -> tuple[str, str]:
+    stamp = day.replace("-", "")
+    rows = [r for r in rows if r["timestamp"] <= stamp + "235959"]
+    if not rows:
+        return "unverifiable", "no_capture_in_archive"
+    newest = rows[-1]
+    if not newest["timestamp"].startswith(stamp):
+        return "unchanged", "no_new_digest_on_day"
+    earlier_ok = [r for r in rows[:-1] if r["statuscode"] == "200"]
+    if newest["statuscode"] == "200":
+        if not earlier_ok:
+            return "unverifiable", "no_earlier_capture"
+        return "changed_candidate", "new_digest"
+    if newest["statuscode"].startswith("4"):
+        return "deletion_candidate", f"archive_status_{newest['statuscode']}"
+    return "unverifiable", f"archive_status_{newest['statuscode']}"
+
+
+def check_memoryhole(root: Path, registry_files: dict,
+                     problems: list[str]) -> None:
+    """Recompute every Memory Hole reading from the bytes it rests on."""
+    base = root / "memoryhole"
+    if not base.exists():
+        return
+    watchlist_path = base / "watchlist.json"
+    if not watchlist_path.exists():
+        problems.append("memoryhole/ exists without watchlist.json")
+        return
+    watchlist = load(watchlist_path)
+    excluded = set(watchlist.get("excluded", {}).get("urls", []))
+    control_urls = {c["url"] for c in watchlist.get("controls", [])}
+    if not excluded:
+        problems.append("memoryhole watchlist: chamber 1's pages are not "
+                        "named, so nothing proves they are avoided")
+    for entry in watchlist.get("institutions", []):
+        if not isinstance(entry.get("probe"), dict):
+            problems.append(f"memoryhole watchlist {entry.get('slug')}: no "
+                            "recorded live probe for its query strategy")
+
+    for path in sorted(base.glob("readings/*.json")):
+        reading = load(path)
+        day = path.stem
+        name = f"memoryhole {day}"
+        if reading.get("date") != day:
+            problems.append(f"{name}: date field disagrees with file name")
+
+        entries = reading.get("entries", [])
+        # every referenced byte must exist and be manifested
+        for entry in entries:
+            refs = [entry.get("history")]
+            for side in ("before", "after"):
+                capture = (entry.get("captures") or {}).get(side) or {}
+                refs.append(capture.get("file"))
+            for ref in [r for r in refs if r]:
+                if not (root / ref).exists():
+                    problems.append(f"{name}: source {ref} is missing")
+                elif ref not in registry_files:
+                    problems.append(f"{name}: source {ref} is not manifested")
+
+        # the day's sample, redrawn from the preserved discovery answers
+        sampled = {e["url"] for e in entries if e.get("kind") == "sampled"}
+        expected: set[str] = set()
+        for institution in reading.get("institutions", []):
+            source = institution.get("source")
+            if not source or not (root / source).exists():
+                continue
+            urls = sorted({r["original"] for r in _mh_rows(root / source)})
+            if institution.get("urls_seen") != len(urls):
+                problems.append(
+                    f"{name}/{institution.get('slug')}: urls_seen "
+                    f"{institution.get('urls_seen')} is not the {len(urls)} "
+                    "recounted from the preserved discovery answer")
+            eligible = [u for u in urls if u not in excluded]
+            eligible.sort(key=lambda u: hashlib.sha256(
+                f"{day}|{u}".encode("utf-8")).hexdigest())
+            drawn = {u for u in eligible[:_MH_SAMPLE_PER_INSTITUTION]
+                     if u not in control_urls}
+            expected |= drawn
+        if expected != sampled:
+            problems.append(f"{name}: the sampled pages are not the "
+                            "deterministic draw from the preserved discovery "
+                            f"answers ({len(sampled)} recorded, "
+                            f"{len(expected)} redrawn)")
+
+        for entry in entries:
+            eid = f"{name}/{entry.get('id')}"
+            if entry.get("url") in excluded:
+                problems.append(f"{eid}: is a page chamber 1 already watches")
+            history = entry.get("history")
+            if not history or not (root / history).exists():
+                continue
+            kind, reason = _mh_history_class(_mh_rows(root / history), day)
+            recorded = entry.get("class")
+
+            if kind == "deletion_candidate":
+                result = entry.get("recheck") or {}
+                if recorded == "gone" and result.get("class") not in (
+                        "gone_404", "gone_410"):
+                    problems.append(f"{eid}: called gone without a live "
+                                    "recheck saying so")
+                if recorded not in ("gone", "unverifiable"):
+                    problems.append(f"{eid}: a 4xx candidate ended as "
+                                    f"{recorded!r} instead of gone or "
+                                    "unverifiable")
+                continue
+            if recorded == "gone":
+                problems.append(f"{eid}: gone, but the preserved history shows "
+                                f"{kind}")
+                continue
+            if kind == "unchanged" and recorded != "unchanged":
+                problems.append(f"{eid}: recorded {recorded!r}, the preserved "
+                                "history shows no new digest that day")
+            if kind == "changed_candidate" and recorded == "unchanged":
+                problems.append(f"{eid}: recorded unchanged, the preserved "
+                                "history shows a new digest that day")
+            if kind == "unverifiable" and recorded == "changed":
+                problems.append(f"{eid}: recorded changed on a history that "
+                                f"is {reason}")
+
+            captures = entry.get("captures") or {}
+            if not captures:
+                continue
+            texts = {}
+            gates = {}
+            for side in ("before", "after"):
+                ref = (captures.get(side) or {}).get("file")
+                if not ref or not (root / ref).exists():
+                    texts = {}
+                    break
+                texts[side] = _mh_text((root / ref).read_bytes())
+                gates[side] = _mh_gate(texts[side],
+                                       captures[side].get("archive_status"))
+            if len(texts) != 2:
+                continue
+            for side, (valid, gate_reason) in gates.items():
+                recorded_gate = (entry.get("gate") or {}).get(side) or {}
+                if recorded_gate.get("valid") != valid or \
+                        recorded_gate.get("reason") != gate_reason:
+                    problems.append(
+                        f"{eid}: the {side} gate verdict "
+                        f"{recorded_gate.get('reason')!r} is not the "
+                        f"{gate_reason!r} recomputed from the preserved bytes")
+            if not (gates["before"][0] and gates["after"][0]):
+                if recorded == "changed":
+                    problems.append(f"{eid}: recorded changed although a "
+                                    "capture fails the validity gate")
+                continue
+
+            removed, _added, pairs = _mh_diff(texts["before"], texts["after"])
+            tokens = sum(len(p.split()) for p in removed)
+            if entry.get("removed_tokens") != tokens:
+                problems.append(f"{eid}: removed_tokens "
+                                f"{entry.get('removed_tokens')} is not the "
+                                f"{tokens} recomputed")
+            expected_events = _mh_events(removed, pairs)
+            got_events = sorted((e.get("type"), e.get("before_sha256"))
+                                for e in entry.get("events", []))
+            if got_events != expected_events:
+                problems.append(f"{eid}: the typed events do not match the "
+                                "recomputation from the preserved bytes "
+                                f"({len(got_events)} recorded, "
+                                f"{len(expected_events)} recomputed)")
+            for event in entry.get("events", []):
+                for field in ("before", "after"):
+                    text = event.get(field)
+                    if text and _MH_ATTRIBUTION.search(text):
+                        problems.append(
+                            f"{eid}: an event carries a passage with an "
+                            "ascription to a person as text (I8 says digest)")
+
+        # rates, recounted
+        counts = {"unchanged": 0, "changed": 0, "unverifiable": 0, "gone": 0}
+        for entry in entries:
+            if entry.get("class") in counts:
+                counts[entry["class"]] += 1
+            else:
+                problems.append(f"{name}: entry {entry.get('id')} has class "
+                                f"{entry.get('class')!r}")
+        recorded_rates = reading.get("rates", {})
+        if recorded_rates.get("counts") != counts:
+            problems.append(f"{name}: class counts {recorded_rates.get('counts')} "
+                            f"are not the {counts} recounted")
+        if recorded_rates.get("examined") != len(entries):
+            problems.append(f"{name}: examined "
+                            f"{recorded_rates.get('examined')} is not "
+                            f"{len(entries)}")
+
+        # the model layer never becomes a finding on its own
+        model = reading.get("model") or {}
+        if model.get("state", "").startswith("on"):
+            if not all(v.get("estimated") for v in model.get("verdicts", [])):
+                problems.append(f"{name}: a model verdict is not marked "
+                                "estimated")
+            if model.get("submitted", 0) > model.get("cap", 0):
+                problems.append(f"{name}: the model layer exceeded its "
+                                "nightly cap")
+        elif model.get("verdicts"):
+            problems.append(f"{name}: model verdicts without a running model "
+                            "layer")
+
+
 def check_anchors(root: Path, problems: list[str]) -> None:
     """The OpenTimestamps anchors (D2): the ledger's claims against the bytes.
 
@@ -618,6 +1094,8 @@ def check(root: Path) -> list[str]:
                     registry_files, False)
     check_snapshots(root, "darkocean/snapshots", problems, registry_files,
                     False)
+    check_snapshots(root, "memoryhole/snapshots", problems, registry_files,
+                    False)
 
     registry = load(root / "foreknown" / "registry.json") \
         if (root / "foreknown" / "registry.json").exists() else {"futures": {}}
@@ -665,6 +1143,7 @@ def check(root: Path) -> list[str]:
     check_reaction(root, registry, registry_files, problems)
     check_darkocean(root, registry_files, problems)
     check_darkocean_continuity(root, registry_files, problems)
+    check_memoryhole(root, registry_files, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
