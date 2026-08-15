@@ -813,6 +813,58 @@ def _mh_history_class(rows: list[dict], day: str) -> tuple[str, str]:
     return "unverifiable", f"archive_status_{newest['statuscode']}"
 
 
+def check_memoryhole_verdicts(root: Path, problems: list[str]) -> None:
+    """Verdict files are estimates delivered by the discovery pass — the
+    routine channel, Frank's decision of 2026-08-15: one channel for all the
+    practice's model work instead of a second billing path. A verdicts file
+    annotates a committed reading, it never amends one. Checked here: every
+    verdict points at an abstention its reading actually carries, stays
+    inside the committed type set and the nightly cap, names its model, and
+    wears the estimated flag — a verdict without one would read as a
+    finding, which it is not."""
+    allowed = {"number_revised", "date_shifted", "negation_flipped",
+               "commitment_removed", "attribution_removed", "none_of_these"}
+    for path in sorted(root.glob("memoryhole/verdicts/*.json")):
+        name = path.stem
+        try:
+            block = load(path)
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            problems.append(f"memoryhole verdicts {name}: unparseable")
+            continue
+        if block.get("date") != name:
+            problems.append(f"memoryhole verdicts {name}: date field "
+                            f"disagrees with filename")
+        reading_path = root / "memoryhole" / "readings" / f"{name}.json"
+        if not reading_path.exists():
+            problems.append(f"memoryhole verdicts {name}: no reading to "
+                            f"annotate")
+            continue
+        reading = load(reading_path)
+        abstained = {a.get("before_sha256")
+                     for entry in reading.get("entries", [])
+                     for a in entry.get("abstentions", [])}
+        if block.get("estimated") is not True:
+            problems.append(f"memoryhole verdicts {name}: not labelled "
+                            f"estimated")
+        if not block.get("model"):
+            problems.append(f"memoryhole verdicts {name}: no model id")
+        cap = block.get("cap")
+        verdicts = block.get("verdicts", [])
+        if not isinstance(cap, int) or len(verdicts) > cap:
+            problems.append(f"memoryhole verdicts {name}: {len(verdicts)} "
+                            f"verdicts against cap {cap!r}")
+        for i, item in enumerate(verdicts):
+            if item.get("estimated") is not True:
+                problems.append(f"memoryhole verdicts {name}[{i}]: not "
+                                f"labelled estimated")
+            if item.get("type") not in allowed:
+                problems.append(f"memoryhole verdicts {name}[{i}]: unknown "
+                                f"type {item.get('type')!r}")
+            if item.get("before_sha256") not in abstained:
+                problems.append(f"memoryhole verdicts {name}[{i}]: no "
+                                f"matching abstention in the reading")
+
+
 def check_memoryhole(root: Path, registry_files: dict,
                      problems: list[str]) -> None:
     """Recompute every Memory Hole reading from the bytes it rests on."""
@@ -1144,6 +1196,7 @@ def check(root: Path) -> list[str]:
     check_darkocean(root, registry_files, problems)
     check_darkocean_continuity(root, registry_files, problems)
     check_memoryhole(root, registry_files, problems)
+    check_memoryhole_verdicts(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"

@@ -10,7 +10,8 @@ Read tonight's state first: `foreknown/registry.json`, the newest
 verdicts in `foreknown/resolutions/`, the reaction axis in
 `foreknown/reaction/` (the nightly `readings/<date>.json`, the per-day
 `attention/<date>.json` series, and the `iso3-fips.json` crosswalk with its
-declared gaps), and any existing `foreknown/proposals/`. Work only inside the
+declared gaps), any existing `foreknown/proposals/`, and the newest
+`memoryhole/readings/<date>.json` with its rule-layer abstentions. Work only inside the
 working tree. Do not push, do not contact anyone, do not fetch sources
 outside the delegation charter (public, no login, no cost, no personal data).
 
@@ -49,6 +50,24 @@ cannot translate, and the reaction figures' own limits.
    the defect and the proof of the fix are the same kind of thing: committed
    evidence, cited by path. Tests and `verify.py` green are the floor, not
    the goal.
+5. **Memory-hole verdicts** — `memoryhole/verdicts/<date>.json` (since
+   2026-08-15, Frank's decision: the memory-hole semantic layer runs through
+   this pass — one channel for all the practice's model work, visible in his
+   own overview — not through a second billing path). If the newest
+   `memoryhole/readings/<date>.json` carries rule-layer abstentions
+   (`entries[].abstentions`) and no verdicts file for that date exists yet,
+   classify at most 40 of them, highest salience first, into the committed
+   types of `practice/src/practice/memoryhole/events.py` — `number_revised`,
+   `date_shifted`, `negation_flipped`, `commitment_removed`,
+   `attribution_removed` — or `none_of_these` where none fits. Write
+   `{"date", "source_reading", "model": <your model id>, "prompt_version":
+   "memoryhole-classify-routine-v1", "cap": 40, "estimated": true,
+   "unclassified_at_cap": <n>, "verdicts": [{"before_sha256", "type",
+   "confidence": "low"|"medium"|"high", "estimated": true}]}` — the verifier
+   holds you to exactly this shape. Verdicts are estimates by construction:
+   they never edit a reading, never mint an event the rules did not, and any
+   surface that ever cites them says so. The reading is the record; your
+   file is its annotation.
 
 What stays the maintainer's alone, proposal only: anything that spends
 money, touches personal data, sends anything to anyone, adds a source
