@@ -2,53 +2,53 @@
   "$contract": "attention-export/1",
   "figures": [
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "futures_under_watch",
-      "value": 98
+      "value": 99
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "futures_window_open",
       "value": 2
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "futures_cold_start",
-      "value": 95
+      "value": 96
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "futures_drift",
       "value": 1
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "futures_notarized_total",
-      "value": 105
+      "value": 106
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "futures_resolved",
       "value": 7
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "materialized",
       "value": 0
     },
     {
-      "as_of": "2026-08-14",
+      "as_of": "2026-08-15",
       "key": "nights_on_record",
-      "value": 5
+      "value": 6
     },
     {
-      "as_of": "2026-08-12",
+      "as_of": "2026-08-14",
       "key": "darkocean_nights_on_record",
-      "value": 4
+      "value": 6
     }
   ],
   "generated_from": {
-    "commit": "b7878a4",
+    "commit": "fb467a5",
     "repo": "machine-attention"
   },
   "practice": {
