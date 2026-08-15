@@ -288,6 +288,64 @@ def test_the_cap_is_franks_forty():
     assert model.NIGHTLY_CAP == 40
 
 
+def test_the_batch_path_submits_polls_reads_and_costs():
+    """The plumbing, against a scripted batch API. No key exists in the repo,
+    so this is the only place the path can be exercised at all — and it is
+    honest about being a simulation, not a live proof."""
+    calls = []
+
+    def opener(request, timeout=0):
+        calls.append((request.method, request.full_url))
+        if request.method == "POST":
+            body = json.loads(request.data.decode("utf-8"))
+            assert len(body["requests"]) == model.NIGHTLY_CAP, "the cap holds"
+            assert body["requests"][0]["params"]["model"] == model.MODEL_ID
+            return _FakeResponse(200, json.dumps(
+                {"id": "msgbatch_1", "processing_status": "ended"}
+            ).encode("utf-8"))
+        if request.full_url.endswith("/results"):
+            return _FakeResponse(200, json.dumps([
+                {"custom_id": f"{i:032d}",
+                 "result": {"type": "succeeded", "message": {
+                     "usage": {"input_tokens": 1800, "output_tokens": 40},
+                     "content": [{"type": "text", "text": json.dumps(
+                         {"type": "commitment_removed",
+                          "confidence": "medium",
+                          "reason": "obligation dropped"})}]}}}
+                for i in range(model.NIGHTLY_CAP)]).encode("utf-8"))
+        return _FakeResponse(200, json.dumps(
+            {"id": "msgbatch_1", "processing_status": "ended"}).encode("utf-8"))
+
+    abstentions = [{"before_sha256": f"{i:064d}", "before": "The company "
+                    "will reach net zero.", "after": None} for i in range(45)]
+    block = model.classify(abstentions, key="test-key", opener=opener,
+                           sleep=lambda _s: None, clock=lambda: 0.0)
+
+    assert block["state"] == "on"
+    assert block["submitted"] == 40
+    assert block["considered"] == 45
+    assert block["unclassified_at_cap"] == 5, "the remainder is disclosed"
+    assert len(block["verdicts"]) == 40
+    assert all(v["estimated"] for v in block["verdicts"])
+    assert block["usage"] == {"input_tokens": 72000, "output_tokens": 1600}
+    assert block["cost_usd"] == model.cost_usd(72000, 1600)
+    assert calls[0][0] == "POST"
+
+
+def test_a_failing_batch_call_does_not_take_the_night_with_it():
+    import urllib.error
+
+    def opener(request, timeout=0):
+        raise urllib.error.URLError("no route")
+
+    block = model.classify([{"before_sha256": "a" * 64, "before": "x"}],
+                           key="test-key", opener=opener,
+                           sleep=lambda _s: None, clock=lambda: 0.0)
+    assert block["available"] is True
+    assert block["state"].startswith("off: batch call failed")
+    assert block["cost_usd"] == 0.0
+
+
 # --- the watchlist ---------------------------------------------------------
 
 def _repo_root():
