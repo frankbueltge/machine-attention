@@ -8,11 +8,8 @@
 
 ## Franks Entscheidungen (protokolliert)
 
-Das Go kam in der Nacht zum 2026-08-15, im Wortlaut:
-
-> „[Wortlaut privat]"
-
-Damit sind, wie im Audit zur Entscheidung gestellt:
+Das Go kam in der Nacht zum 2026-08-15 (Wortlaut privat: Freigabe des Vorschlags
+wie vorgelegt). Damit sind, wie im Audit zur Entscheidung gestellt:
 
 1. **GO für die V0 in Domain-Scope-Architektur** (Auflage 1). Eine längere
    kuratierte Liste ist ausdrücklich *nicht* dieses Projekt — die wäre eine
