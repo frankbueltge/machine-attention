@@ -37,11 +37,18 @@ class Client:
     """Injectable-for-tests HTTP client (see state-before-interface heritage)."""
 
     def __init__(self, opener=urllib.request.urlopen, sleep=time.sleep,
-                 clock=time.monotonic, timeout: int = 90):
+                 clock=time.monotonic, timeout: int = 90,
+                 backoff: tuple[float, ...] = BACKOFF_S):
         self._opener = opener
         self._sleep = sleep
         self._clock = clock
         self._timeout = timeout
+        # The default ladder was tuned against scarce, precious JSON APIs where
+        # waiting two minutes is cheaper than being turned away. A slow, flaky
+        # bulk archive is the opposite case: Wayback answers in 1-60 s and
+        # returns 504 often enough that a long ladder spends the night waiting.
+        # Callers that read such a source pass a shorter one (memoryhole).
+        self._backoff = backoff
         self._last_request_at: float | None = None
         self.requests = 0
         self.http_429 = 0
@@ -64,7 +71,7 @@ class Client:
         if headers:
             request_headers.update(headers)
         req = urllib.request.Request(url, headers=request_headers)
-        attempts = [0.0, *BACKOFF_S]
+        attempts = [0.0, *self._backoff]
         last_detail = "unknown error"
         for wait in attempts:
             if wait:
