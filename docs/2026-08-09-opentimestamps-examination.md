@@ -4,8 +4,8 @@
 (`frankbueltge.de/docs/design/2026-08-09-portfolio-audit.md` §7) — *"examine as a
 build: a bare git history is a weaker evidentiary claim than a Bitcoin-anchored hash
 of the publisher's checksums; cost ~zero, keyless, fits the ethic."*
-**Status: examined, tested, and BUILT.** Frank's decision, 2026-08-09: *"Dark Ocean +
-The Foreknown"*. Both registers are anchored, the nightly job is in place
+**Status: examined, tested, and BUILT.** Frank's decision, 2026-08-09 (wording private): anchor
+Dark Ocean and The Foreknown. Both registers are anchored, the nightly job is in place
 (`.github/workflows/anchor.yml`, `tools/anchor.py`), and the first six proofs are in
 `anchors/`. What the build changed about the plan is recorded in §8.
 

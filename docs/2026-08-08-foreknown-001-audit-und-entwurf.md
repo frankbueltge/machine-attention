@@ -1,6 +1,7 @@
 # The Foreknown — Project 001: Quellen-Audit & V0-Entwurf
 
-**Datum:** 2026-08-08 · **Status:** Entwurf nach Franks Zuschlag („lass the foreknown nehmen")
+**Datum:** 2026-08-08 · **Status:** Entwurf nach Franks Zuschlag (2026-08-08, Wortlaut privat —
+seine Entscheidung: The Foreknown nehmen)
 **Einordnung:** Project 001 der machine investigative practice (Korrektur-Dokument
 2026-08-08). Bühne: Prototyp A. SBTI läuft parallel als Hintergrund-Observatorium weiter.
 **Ablage-Hinweis:** Dieses Dokument zieht um, sobald die Praxis ihr eigenes Repo hat.

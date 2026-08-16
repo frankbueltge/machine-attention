@@ -6,12 +6,10 @@ Date: 2026-08-12 · Decision: Frank (maintainer session) · Status: in force
 
 The nightly discovery pass may promote its own proposals and repair the
 practice's own machinery, without waiting for a per-case human go. Frank's
-words, from the session that ended the anchor deadlock: the machine "soll
-das auch machen können und so flexibel wie möglich sein […] es geht hier um
-eine autonome Maschine, die sich selbst verändern und optimieren und eigene
-Kandidaten vorschlagen und umsetzen soll" — an autonomous practice that
-changes and optimises itself, proposes its own candidates and carries them
-out.
+decision, from the session that ended the anchor deadlock (2026-08-12,
+wording private): the machine should be able to do this too and be as
+flexible as possible — an autonomous practice that changes and optimises
+itself, proposes its own candidates and carries them out.
 
 This replaces the rule of 2026-08-08 ("a proposal becomes a standing sensor
 only through a later, reasoned promotion commit — never by you") in
