@@ -204,10 +204,18 @@ def test_the_stamping_job_rebuilds_and_commits_the_stage_it_outdates():
     scheduled job to say so was darkocean the next morning — a project the stage does
     not even name, since it renders foreknown/ anchors only. The hole belonged here,
     so the guard does too: whatever this job commits, the rebuilt stage travels with it.
+
+    2026-08-16: the commit step moved into the shared tools/commit-and-push.sh (a
+    separate repair — see that script's own docstring), so the workflow no longer
+    spells `git add` itself; it passes its pathspec as trailing arguments instead.
+    The assertion moves with it: the call must still name "public" explicitly rather
+    than fall back to the script's `-A` default, or a future edit that drops it would
+    stop failing loudly and start rendering a stale stage again.
     """
     workflow = (REPO / ".github" / "workflows" / "anchor.yml").read_text(encoding="utf-8")
     assert "stage/generate.py" in workflow, "the stamping job must rebuild the stage"
-    added = re.findall(r"^\s*git add (.+)$", workflow, re.MULTILINE)
-    assert added, "this job commits, so it has a git add to check"
-    assert all("public" in line for line in added), \
+    idx = workflow.index("tools/commit-and-push.sh")
+    assert idx != -1, "this job commits via the shared script, so it has a call to check"
+    call = workflow[idx:idx + workflow[idx:].index("\n\n")]
+    assert "public" in call, \
         "the rebuilt stage belongs in the same commit as the ledger it renders"

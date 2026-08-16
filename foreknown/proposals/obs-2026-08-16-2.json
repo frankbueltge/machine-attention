@@ -1,0 +1,25 @@
+{
+  "id": "obs-2026-08-16-2",
+  "date": "2026-08-16",
+  "kind": "difference_observation",
+  "title": "memoryhole/readings/ is missing 2026-08-15.json though the register has run nightly since 2026-08-13, and all four nightly workflows share a retry loop that cannot actually retry",
+  "statement": "memoryhole/readings/ holds 2026-08-13.json and 2026-08-14.json only; autonomy/log.jsonl's newest step=='memoryhole-run' entry is still dated 2026-08-14 (ts 2026-08-15T04:45:49+00:00), even though .github/workflows/memoryhole.yml is cron-scheduled nightly ('30 2 * * *') and this same run's own foreknown-notary-run (2026-08-16T05:58:58+00:00) and darkocean-run (2026-08-16T05:14:12+00:00) entries already landed earlier this morning. All four nightly workflows -- .github/workflows/sentinel.yml, darkocean.yml, memoryhole.yml, anchor.yml -- carried the identical commit step before tonight: `for attempt in 1 2 3 4 5; do if git push; then exit 0; fi; git pull --rebase; done`. GitHub Actions runs a `run:` block under `bash -eo pipefail` by default, and `git pull --rebase` returns non-zero on a real conflict (not merely a rejected fast-forward); under `set -e` that non-zero exit kills the step immediately, on attempt one, before the loop's second iteration ever runs -- the five-attempt retry the code reads as promising never happens. The two files every nightly job's commit touches are exactly the two shapes this failure mode cannot survive: autonomy/log.jsonl (each job appends one line -- two jobs both appending within the same window both diff as 'insert after the last line', which a plain line-based rebase reads as the same location) and anchors/ledger.json (each job's own `tools/anchor.py --register` call rewrites the whole file from a fresh scan of every manifest on disk, so two jobs' independent rewrites collide by construction, not by bad luck). memoryhole's reading step runs for up to three hours (the workflow's own comment: 'the audit budgets one to three hours for a night'), which is exactly the window in which foreknown's and darkocean's own nightly commits land -- the longest-running job is structurally the one most likely to find the shared files already moved out from under it by the time it reaches its own commit step.",
+  "method": "Compared `ls memoryhole/readings/` against the memoryhole.yml cron schedule and today's already-landed foreknown-notary-run/darkocean-run autonomy/log.jsonl entries to establish the register was overdue. Read the commit step of all four workflow files directly and confirmed the identical loop text with `grep -n -A5 'for attempt' .github/workflows/*.yml`. Reasoned the `set -e` failure mode from GitHub Actions' documented default shell for `run:` steps (bash -eo pipefail) applied to a `git pull --rebase` that can return non-zero on conflict -- a claim that does not depend on any one night's run, only on the committed script text and documented shell semantics. Locally reproduced the specific conflict shape (two branches independently appending different lines to the same file) in a throwaway git repository to confirm it produces an unresolvable rebase conflict under git's default merge, and that declaring `merge=union` for that path resolves it without manual intervention.",
+  "figures": {
+    "memoryhole_readings_committed_through": "2026-08-14",
+    "memoryhole_run_expected_since": "2026-08-16 (cron 30 2 * * *)",
+    "workflows_sharing_the_retry_loop": 4,
+    "retry_loop_actual_attempts_before_this_fix": 1,
+    "memoryhole_reading_step_typical_duration_hours": "1-3"
+  },
+  "derived_from": [
+    "memoryhole/readings/2026-08-14.json",
+    "autonomy/log.jsonl",
+    ".github/workflows/memoryhole.yml",
+    ".github/workflows/sentinel.yml",
+    ".github/workflows/darkocean.yml",
+    ".github/workflows/anchor.yml",
+    "tools/anchor.py"
+  ],
+  "worth_watching_because": "This is a second, distinct way for a register to go silently stale -- distinct from the anchor-coverage deadlock of 2026-08-10 to 2026-08-12 that sensor-registry-stall.json was written against (that one blocked the pre-commit verify step for every register at once; this one lets verify pass and the commit itself race and lose). sensor-registry-stall's test_rule ('any register's newest committed date more than 1 day behind yesterday') is cause-agnostic and would have caught this too, had it been promoted and scoped to include memoryhole -- updated below to name that. Repaired the same night rather than only described: tools/commit-and-push.sh replaces the broken loop in all four workflows, and .gitattributes declares autonomy/log.jsonl merge=union; anchors/ledger.json is rebuilt via tools/anchor.py --register on conflict rather than merged, since register() is documented as idempotent and append-only. practice/tests/test_commit_and_push.py exercises the union-merge resolution against the exact conflict shape found here."
+}

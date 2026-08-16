@@ -54,17 +54,4 @@ jobs:
 
       - name: Commit reading
         run: |
-          git config user.name "Machine Attention"
-          git config user.email "attention@machine-attention.invalid"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "nothing to commit"
-            exit 0
-          fi
-          git commit -m "memoryhole: reading of $(date -u -d 'yesterday' +%F)"
-          for attempt in 1 2 3 4 5; do
-            if git push; then exit 0; fi
-            git pull --rebase
-          done
-          echo "push failed after 5 attempts" >&2
-          exit 1
+          tools/commit-and-push.sh "memoryhole: reading of $(date -u -d 'yesterday' +%F)"

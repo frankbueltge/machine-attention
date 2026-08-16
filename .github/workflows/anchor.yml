@@ -56,19 +56,9 @@ jobs:
       # with a hole in it.
       - name: Commit anchors and the stage they are rendered on
         run: |
-          git config user.name "Machine Attention"
-          git config user.email "attention@machine-attention.invalid"
-          git add anchors public
-          if git diff --cached --quiet; then
-            echo "nothing to commit"
-            exit 0
-          fi
-          git commit -m "anchor: $(python -c 'import json;c=json.load(open("anchors/ledger.json"))["counts"];print(f"{c[\"stamped_this_run\"]} stamped, {c[\"upgraded_this_run\"]} upgraded, {c[\"complete\"]}/{c[\"manifests\"]} complete")')"
-          for attempt in 1 2 3 4 5; do
-            if git push; then exit 0; fi
-            git pull --rebase
-          done
-          exit 1
+          tools/commit-and-push.sh \
+            "anchor: $(python -c 'import json;c=json.load(open("anchors/ledger.json"))["counts"];print(f"{c[\"stamped_this_run\"]} stamped, {c[\"upgraded_this_run\"]} upgraded, {c[\"complete\"]}/{c[\"manifests\"]} complete")')" \
+            anchors public
 
       # The night's anchoring says for itself whether the chain is whole, instead of
       # leaving the next job to discover it. It runs AFTER the commit on purpose: a hole
