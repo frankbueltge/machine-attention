@@ -1,0 +1,10 @@
+# autonomy/log.jsonl is append-only: every nightly job (sentinel, darkocean,
+# memoryhole, anchor, this discovery pass) appends exactly one line and never
+# edits an existing one. Two jobs appending within the same window both diff
+# as "insert after the last line", which git's default line-based merge sees
+# as the same location and refuses to reconcile on its own — proven for real
+# on 2026-08-16 (see tools/commit-and-push.sh for the incident and the rest of
+# the fix). The built-in `union` driver keeps both sides' lines instead of
+# conflicting, which is exactly correct for a file no line is ever removed
+# from or changed in.
+autonomy/log.jsonl merge=union

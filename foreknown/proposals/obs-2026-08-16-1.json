@@ -1,0 +1,23 @@
+{
+  "id": "obs-2026-08-16-1",
+  "date": "2026-08-16",
+  "kind": "difference_observation",
+  "title": "The discovery pass's own protocol entry for 2026-08-15 is the one night since 2026-08-09 that does not say what the pass produced, though the pull request it landed in did substantial work",
+  "statement": "Every discovery-pass entry in autonomy/log.jsonl from 2026-08-09T06:37:10Z through 2026-08-14T08:54:02Z carries a detail object with a 'produced' list and a 'summary' string naming what that night's pass wrote, promoted, repaired, or retired -- six consecutive nights of self-documentation in the same shape (2026-08-08's entry predates this shape, using 'observations'/'sensor_proposals'/'source_proposals' counts instead, and 2026-08-12T22:40:30Z is a second, distinct entry that same night carrying only {'workflow': 'discovery.yml'}, evidently written by the CI step rather than the pass itself). The entry timestamped 2026-08-15T06:42:11Z breaks the six-night pattern: its detail object holds only {'note': '...', 'runner': 'cloud-routine'} -- no 'produced', no 'summary', nothing distinguishing it from what an empty night's entry would look like. But that night was not empty: the same commit (bbd15dd, 'discovery: nightly pass of 2026-08-15') that carries this bare log line also adds foreknown/proposals/obs-2026-08-15-1.json, foreknown/proposals/sensor-drought-window-class-crossing.json, and foreknown/proposals/sensor-source-reconfirmation-blind-spot.json -- three files, a difference observation spanning six nights of GDACS evidence and two new sensor proposals, all cited in that commit's own message but absent from the one place this practice's protocol says the night's work is recorded for a reader who does not read commit messages (practice/src/practice/autonomy.py's own docstring: 'every step is attributed, no aggregate score'; the ledger.html investigate depth reads this file, not git log). The record and the commit message disagree about how much this file discloses.",
+  "method": "Read every autonomy/log.jsonl line with step=='discovery-pass' and listed the keys of its detail object in timestamp order (python3 -c \"import json; [print(json.loads(l)['ts'], sorted(json.loads(l)['detail'].keys())) for l in open('autonomy/log.jsonl') if json.loads(l)['step']=='discovery-pass']\"). Confirmed the 2026-08-15T06:42:11Z entry is the sole line autonomy/log.jsonl gained in commit bbd15dd via `git show bbd15dd -- autonomy/log.jsonl`, and cross-checked that same commit's full file list via `git show --stat bbd15dd`, which lists the three proposal files and public/ledger.html alongside the one-line log diff.",
+  "figures": {
+    "discovery_pass_entries_with_produced_or_summary": 6,
+    "discovery_pass_entries_bare": 1,
+    "bare_entry_ts": "2026-08-15T06:42:11+00:00",
+    "same_commit_files_added": 3,
+    "same_commit_sha": "bbd15dd"
+  },
+  "derived_from": [
+    "autonomy/log.jsonl",
+    "foreknown/proposals/obs-2026-08-15-1.json",
+    "foreknown/proposals/sensor-drought-window-class-crossing.json",
+    "foreknown/proposals/sensor-source-reconfirmation-blind-spot.json",
+    "practice/src/practice/autonomy.py"
+  ],
+  "worth_watching_because": "The autonomy log is this practice's one committed, append-only account of what each actor did each night, read by the stage's investigate depth (docs/2026-08-08-werk-tiefe-vier-ebenen.md: 'the machine's own proposals in full text with promotion status'). A reader who trusts that file alone would conclude 2026-08-15's discovery pass found nothing, which is false -- the difference is between the protocol's disclosure and the commit history's, not between two nights of actual work. Nothing here proves a pattern (one thin entry among seven), so no sensor is proposed yet; if a future night's discovery-pass log entry again omits 'produced'/'summary' while its own commit adds proposal files, that would be worth a sensor of its own."
+}
