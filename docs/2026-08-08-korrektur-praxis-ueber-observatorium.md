@@ -7,9 +7,10 @@
 
 Die V0 beantwortet die Frage „Kann eine Maschine einen vorgegebenen öffentlichen Datenstrom
 zuverlässig überwachen und daraus autonom verifizierte Cases erzeugen?" — Franks eigentliche
-Frage ist aber: **„Kann eine Maschine selbst eine relevante investigative und künstlerische
-Praxis entwickeln, indem sie maschinelle Aufmerksamkeit, Skalierung, Persistenz und
-Computation ausnutzt?"** Die V0 hat der Maschine beim entscheidenden Akt — der
+Frage ist aber eine andere (2026-08-08, Wortlaut privat, sinngemäß): **ob eine Maschine selbst
+eine relevante investigative und künstlerische Praxis entwickeln kann, indem sie maschinelle
+Aufmerksamkeit, Skalierung, Persistenz und Computation ausnutzt.** Die V0 hat der Maschine
+beim entscheidenden Akt — der
 Problemfindung — fast keine Intelligenz gegeben und verlangt zugleich am Gate einen
 machine-scale advantage, für den sie ihr die Mittel (Historie, Quellenvielfalt, Gedächtnis)
 vorenthält. Ergebnis der ersten Nacht, konsequent: sieben Ablehnungen, u. a. mit der
