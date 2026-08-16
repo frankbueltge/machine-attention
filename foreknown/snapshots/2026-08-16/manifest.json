@@ -1,0 +1,29 @@
+{
+  "entries": [
+    {
+      "bytes": 137989,
+      "file": "foreknown/snapshots/2026-08-16/gdacs.json",
+      "http_status": 200,
+      "retrieved_at": "2026-08-16T05:58:52+00:00",
+      "sha256": "b371c41696915f3e7f2ca830e4a06a58102f93cd39aca4f77bcb9b4e387cc6e5",
+      "url": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventlist=EQ,TC,FL,DR,WF&alertlevel=Orange;Red"
+    },
+    {
+      "bytes": 5175,
+      "file": "foreknown/snapshots/2026-08-16/nhc-current-storms.json",
+      "http_status": 200,
+      "retrieved_at": "2026-08-16T05:58:52+00:00",
+      "sha256": "a2a2fd1ed039a675edd9fbaa8288c977e2bbdc18d5a168f7d7a8575901e90a24",
+      "url": "https://www.nhc.noaa.gov/CurrentStorms.json"
+    },
+    {
+      "bytes": 191583,
+      "file": "foreknown/snapshots/2026-08-16/fts-plans-2026.json",
+      "http_status": 200,
+      "retrieved_at": "2026-08-16T05:58:54+00:00",
+      "sha256": "a1c3ec46c111d30cefa9652b1aa212e2856c78b1bfe548fb00038856b933b7d5",
+      "url": "https://api.hpc.tools/v1/public/plan/year/2026"
+    }
+  ],
+  "run_date": "2026-08-16"
+}

@@ -1,10 +1,73 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "fb467a5",
+    "commit": "a6a574b",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nhc-ep082026.html",
+      "evidence": "foreknown/resolutions/nhc-ep082026.json",
+      "mode": "resolution",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A forecast passed without an alert in this register.",
+      "subject": "Hernan (TD)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep082026.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "dissipation",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A forecast dissipated from its source's feed.",
+      "subject": "Hernan (TD)"
+    },
+    {
+      "enter": "/attention/future/nhc-cp012026.html",
+      "evidence": "foreknown/snapshots/2026-08-16/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 3 days after it was first preserved.",
+      "subject": "Lala (HU)"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027465.html",
+      "evidence": "foreknown/snapshots/2026-08-16/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027450.html",
+      "evidence": "foreknown/snapshots/2026-08-16/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Ethiopia, Kenya, Somalia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-08-16/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-08-16/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-16T05:58:54+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+    },
     {
       "enter": "/attention/future/nhc-ep082026.html",
       "evidence": "foreknown/snapshots/2026-08-15/nhc-current-storms.json",
@@ -21,7 +84,7 @@
       "occurred_at": "2026-08-15T05:58:09+00:00",
       "project": "foreknown",
       "statement": "A warning changed 2 days after it was first preserved.",
-      "subject": "Lala (TS)"
+      "subject": "Lala (HU)"
     },
     {
       "enter": "/attention/future/gdacs-dr-1027465.html",
@@ -75,7 +138,7 @@
       "occurred_at": "2026-08-14T06:58:12+00:00",
       "project": "foreknown",
       "statement": "A warning changed 33 hours after it was first preserved.",
-      "subject": "Lala (TS)"
+      "subject": "Lala (HU)"
     },
     {
       "enter": "/attention/future/nhc-al032026.html",
@@ -183,7 +246,7 @@
       "occurred_at": "2026-08-13T07:03:10+00:00",
       "project": "foreknown",
       "statement": "A warning changed 9 hours after it was first preserved.",
-      "subject": "Lala (TS)"
+      "subject": "Lala (HU)"
     },
     {
       "enter": "/attention/future/nhc-al032026.html",
@@ -237,7 +300,7 @@
       "occurred_at": "2026-08-12T22:14:16+00:00",
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
-      "subject": "Lala (TS)"
+      "subject": "Lala (HU)"
     },
     {
       "enter": "/attention/future/nhc-al032026.html",
