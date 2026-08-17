@@ -5,8 +5,10 @@ import pytest
 
 from practice.foreknown import sources
 from practice.foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
-                                        is_overdue, overdue_kind,
-                                        update_registry,
+                                        DROUGHT_FROZEN, DROUGHT_IRREGULAR,
+                                        DROUGHT_ROLLING, drought_window_class,
+                                        drought_window_crossings, is_overdue,
+                                        overdue_kind, update_registry,
                                         window_to_at_notarization)
 from practice.foreknown.run import run
 from practice.preserve import read_json
@@ -123,6 +125,81 @@ def test_a_revised_window_does_not_relabel_a_cold_start():
     update_registry(registry, sources.gdacs_futures(extended), {"GDACS": "a"})
     assert window_to_at_notarization(drought) == "2026-08-06T00:00:00"
     assert overdue_kind(drought, "2026-08-25T00:00:00+00:00") == COLD_START_OVERDUE
+
+
+def _drought(window_to, history):
+    return {"hazard": "drought", "status": "OPEN",
+           "window": {"to": window_to}, "history": history}
+
+
+_ROLLING_HISTORY = [
+    {"ts": "2026-08-08T17:40:00+00:00", "event": "NOTARIZED"},
+    {"ts": "2026-08-09T06:27:00+00:00", "event": "REVISED",
+     "changes": {"window": {"from": {"to": "2026-08-06T00:00:00"},
+                            "to": {"to": "2026-08-07T00:00:00"}}}},
+    {"ts": "2026-08-10T05:57:00+00:00", "event": "REVISED",
+     "changes": {"window": {"from": {"to": "2026-08-07T00:00:00"},
+                            "to": {"to": "2026-08-08T00:00:00"}}}},
+]
+
+
+def test_drought_window_class_needs_two_nights_before_deciding():
+    """The proposal's own bar: frozen needs 'at least two consecutive
+    preserved snapshots' — a single night is not yet a difference."""
+    drought = _drought("2026-04-20T00:00:00",
+                       [{"ts": "2026-08-08T17:40:00+00:00", "event": "NOTARIZED"}])
+    assert drought_window_class(drought, "2026-08-08") is None
+
+
+def test_drought_window_class_frozen_when_window_to_never_changes():
+    drought = _drought("2026-04-20T00:00:00",
+                       [{"ts": "2026-08-08T17:40:00+00:00", "event": "NOTARIZED"}])
+    state = drought_window_class(drought, "2026-08-09")
+    assert state == {"class": DROUGHT_FROZEN, "nights_observed": 2,
+                     "window_to": "2026-04-20T00:00:00"}
+
+
+def test_drought_window_class_rolling_when_window_to_advances_a_day_a_night():
+    drought = _drought("2026-08-08T00:00:00", _ROLLING_HISTORY)
+    state = drought_window_class(drought, "2026-08-10")
+    assert state == {"class": DROUGHT_ROLLING, "nights_observed": 3,
+                     "window_to": "2026-08-08T00:00:00"}
+
+
+def test_drought_window_class_flags_a_stalled_rolling_drought_as_irregular():
+    """A night with no REVISED window event is still an observation: a
+    rolling drought whose window.to stops advancing must show up as a
+    broken step, not read as an unremarkable silence."""
+    drought = _drought("2026-08-08T00:00:00", _ROLLING_HISTORY)
+    state = drought_window_class(drought, "2026-08-11")
+    assert state["class"] == DROUGHT_IRREGULAR
+    assert state["since"] == "2026-08-11"
+    assert state["day_delta"] == 1 and state["todate_delta"] == 0
+
+
+def test_drought_window_class_ignores_non_drought_and_closed_futures():
+    cyclone = {"hazard": "tropical cyclone", "status": "OPEN",
+              "window": {"to": "2026-04-20T00:00:00"},
+              "history": [{"ts": "2026-08-08T17:40:00+00:00", "event": "NOTARIZED"}]}
+    assert drought_window_class(cyclone, "2026-08-09") is None
+    closed = _drought("2026-04-20T00:00:00",
+                      [{"ts": "2026-08-08T17:40:00+00:00", "event": "NOTARIZED"}])
+    closed["status"] = "CLOSED_BY_SOURCE"
+    assert drought_window_class(closed, "2026-08-09") is None
+
+
+def test_drought_window_crossings_catches_a_rolling_drought_that_stalls():
+    """Implements the machine's own proposal
+    sensor-drought-window-class-crossing.json: the crossing it exists to
+    catch, recomputed statelessly from the committed history alone."""
+    registry = {"futures": {"gdacs-dr-1000001": _drought(
+        "2026-08-08T00:00:00", _ROLLING_HISTORY)}}
+    assert drought_window_crossings(registry, "2026-08-10") == []
+    crossings = drought_window_crossings(registry, "2026-08-11")
+    assert crossings == [{"future": "gdacs-dr-1000001",
+                          "from_class": DROUGHT_ROLLING,
+                          "to_class": DROUGHT_IRREGULAR,
+                          "run_date": "2026-08-11"}]
 
 
 class FakeClient:

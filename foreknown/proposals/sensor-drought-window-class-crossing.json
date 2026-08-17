@@ -11,5 +11,29 @@
     "foreknown/registry.json",
     "practice/src/practice/foreknown/futures.py"
   ],
-  "status": "PROPOSED"
+  "status": "PROMOTED",
+  "implementation": {
+    "date": "2026-08-17",
+    "implemented_in": [
+      "practice/src/practice/foreknown/futures.py",
+      "practice/src/practice/foreknown/run.py"
+    ],
+    "how": "drought_window_class(future, day) reconstructs the whole window.to trajectory from the future's own committed history alone -- window is already a TRACKED_FIELD, so every change GDACS's todate ever carried is already an appended REVISED event; no state beyond the registry, no re-reading of raw snapshot files. A night with no REVISED window event still counts as an observation: the classifier carries the last known value forward to tonight's date before checking the calendar-day-per-calendar-day rule, so a rolling drought that stops advancing shows up as a broken step the night it happens rather than as silence. drought_window_crossings(registry, day) recomputes yesterday's classification by re-running the same function against the future's history with tonight's own events stripped out -- stateless by construction, matching I3 (no stored prior state to drift from the record). run.py records drought_window_class per OPEN drought and drought_window_crossings under new run.json fields, additive, alongside overdue_cold_start/overdue_drift's own pattern.",
+    "refined_from_proposal": "The proposal's own test_rule named two directions of crossing (rolling-to-frozen, frozen-to-rolling) as a binary split. The implementation adds a third class, irregular, for any step that does not match either clean pattern exactly (a day_delta that does not equal the todate_delta) -- a strictly more cautious generalisation, since a rolling drought's first stalled night lands in irregular rather than being force-fitted into 'frozen' before enough nights exist to say so. A transition into or out of irregular is itself recorded as a crossing (any today_state != prior_state), so the proposal's own fire condition -- any non-empty crossing list -- is unchanged in effect.",
+    "practice/tests/test_foreknown.py": "test_drought_window_class_needs_two_nights_before_deciding, test_drought_window_class_frozen_when_window_to_never_changes, test_drought_window_class_rolling_when_window_to_advances_a_day_a_night, test_drought_window_class_flags_a_stalled_rolling_drought_as_irregular, test_drought_window_class_ignores_non_drought_and_closed_futures, test_drought_window_crossings_catches_a_rolling_drought_that_stalls -- the last constructs a rolling history then checks one night past its last recorded change and confirms both the irregular classification and the crossing record the falsification-worried scenario (a rolling drought's todate stopping) actually produces."
+  },
+  "promotion": {
+    "date": "2026-08-17",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the proposal's test_rule, applied nightly since 2026-08-08 (via manual re-derivation from preserved snapshots each of the two prior observations) and now against tonight's committed registry: 9 nights (2026-08-08 through 2026-08-17) show the same clean two-class split with zero crossings -- four rolling droughts (gdacs-dr-1018332, gdacs-dr-1018431, gdacs-dr-1027450, gdacs-dr-1027465), two frozen (gdacs-dr-1017863, gdacs-dr-1018327).",
+    "why_promoted_before_a_crossing_happened": "sensor-primary-iso3-gap.json set the precedent: a sensor whose expected value is quiet is promotable once the code exists to turn a future crossing into a visible row instead of a silence, not only after it fires once. This proposal's own test_rule needs no threshold or baseline -- any crossing is itself the finding -- so there is nothing further to calibrate by waiting.",
+    "falsification_clause_checked_tonight": "the proposal's own first falsification risk -- 'a scheduled job that touches every drought episode below some ID cutoff regardless of activity' -- was directly tested tonight rather than assumed away: obs-2026-08-17-1.json found exactly this batch-artefact failure mode in a *different* GDACS field (properties.datemodified, 19 of 95 open futures across four hazard types sharing one of two exact-millisecond 2026-02-11 timestamps) and, in the same check, confirmed properties.todate does not show it -- only the four already-tracked rolling droughts, no other hazard type, carry todate == run_date-2 tonight. The two frozen droughts sit in the same hazard category as the rolling four and are untouched, which a hazard-wide or ID-range batch job could not produce. The clause's second risk (six examples being unusually stable, not generalisable to other hazard types) is unaffected by promotion: the code is scoped to hazard=='drought' exactly as GDACS reports it, the same scoping sensor-primary-iso3-gap.json and sensor-source-reconfirmation-blind-spot.json already apply to other GDACS-only fields, and extending it to other hazard types remains a separate, unproposed decision.",
+    "evidence": [
+      "foreknown/proposals/obs-2026-08-17-1.json",
+      "foreknown/snapshots/2026-08-17/gdacs.json",
+      "foreknown/registry.json",
+      "foreknown/proposals/obs-2026-08-15-1.json",
+      "foreknown/proposals/obs-2026-08-10-1.json"
+    ]
+  }
 }

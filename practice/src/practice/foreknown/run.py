@@ -18,8 +18,9 @@ from .. import autonomy
 from ..fetch import Client, SourceUnavailable
 from ..preserve import Snapshot, read_json, write_json
 from . import reaction, sources
-from .futures import (COLD_START_OVERDUE, DRIFT_OVERDUE, is_overdue,
-                      overdue_kind, update_registry)
+from .futures import (COLD_START_OVERDUE, DRIFT_OVERDUE, drought_window_class,
+                      drought_window_crossings, is_overdue, overdue_kind,
+                      update_registry)
 from .resolve import resolve_pending
 
 # How many past UTC days of the attention series a nightly run completes.
@@ -111,6 +112,15 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
             primary_iso3_dropped.append({"future": fid,
                                          "dropped_iso3": dropped})
 
+    # The machine's proposal sensor-drought-window-class-crossing: two
+    # classes of drought episode established across nights of observation
+    # (rolling — window.to advances a calendar day per calendar day elapsed;
+    # frozen — window.to never changes) from the future's own committed
+    # history, no extra state. Fires on any crossing between the classes.
+    drought_classes = {f["id"]: drought_window_class(f, day)
+                       for f in open_futures if f.get("hazard") == "drought"}
+    drought_crossings = drought_window_crossings(registry, day)
+
     # The reaction axis: what moved while the warning was already running.
     # Its outages are recorded in its own block — a quiet GDELT day is not a
     # failure of the notary, and the two must stay legible apart.
@@ -138,6 +148,9 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
                                      if k == COLD_START_OVERDUE),
         "overdue_drift": sorted(f for f, k in kinds.items()
                                 if k == DRIFT_OVERDUE),
+        "drought_window_class": {fid: state for fid, state in
+                                 sorted(drought_classes.items()) if state},
+        "drought_window_crossings": drought_crossings,
         "reaction": reaction_summary,
     })
     autonomy.append(repo_root, "foreknown-notary-run", "machine", detail={

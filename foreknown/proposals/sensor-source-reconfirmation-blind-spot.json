@@ -11,5 +11,12 @@
     "practice/src/practice/foreknown/sources.py",
     "foreknown/proposals/sensor-primary-iso3-gap.json"
   ],
-  "status": "PROPOSED"
+  "status": "PROPOSED",
+  "review": {
+    "date": "2026-08-17",
+    "outcome": "stays PROPOSED, not promoted -- the falsification clause's own named risk is now confirmed, not merely un-ruled-out",
+    "why": "obs-2026-08-17-1.json widened the single-night, two-event spot check this proposal's falsification clause admitted was too small, and found the batching risk it named: 19 of tonight's 95 open GDACS futures (20%), spanning four hazard types with unrelated fromdate/todate ranges, share one of exactly two millisecond-precision datemodified values dated 2026-02-11. That is not a per-record 'the source re-examined this' signal for those 19 -- it is one shared infrastructure event (a migration, re-index, or feed-generation batch) touching an unrelated group at once. Promoting the test_rule as written (fire on any OPEN future with days_since_datemodified_changed >= 30) would report those 19 as twenty independent findings on night one, all attributable to the same non-finding.",
+    "watch_for": "a version of this test_rule that excludes a datemodified value shared by more than one OPEN future in the same night's snapshot before counting it as a per-record staleness signal -- or that requires the changed value to be unique among that night's OPEN futures. Either narrowing would need its own nights of observation before promotion; this review does not attempt that narrowing itself.",
+    "derived_from": ["foreknown/proposals/obs-2026-08-17-1.json", "foreknown/snapshots/2026-08-17/gdacs.json"]
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "id": "obs-2026-08-17-1",
+  "date": "2026-08-17",
+  "kind": "difference_observation",
+  "title": "One-fifth of tonight's open GDACS futures share one of two exact-millisecond datemodified timestamps from 2026-02-11, spanning four unrelated hazard types -- direct evidence for the batch-artefact risk sensor-source-reconfirmation-blind-spot.json's own falsification clause named but had not yet found",
+  "statement": "foreknown/snapshots/2026-08-17/gdacs.json carries 95 features; 92 read properties.iscurrent=='false', 3 read 'true'. Among the 92, 19 (20%) share one of exactly two properties.datemodified values, both timestamped to the millisecond: 13 events read '2026-02-11T15:18:59.037' and 6 read '2026-02-11T12:10:14.497'. The 19 span four of GDACS's hazard types -- tropical cyclone (gdacs-tc-1001199/1206/1211/1214/1218/1219/1229/1230/1232/1233/1234/1238/1254), earthquake (gdacs-eq-1498339, gdacs-eq-1508467), flood (gdacs-fl-1103435/1103633/1103640) and wildfire (gdacs-wf-1027016) -- with fromdate/todate ranges scattered from 2025-08-14 through 2026-01-25, no two pairs adjacent in time or event id. All 19 are currently OPEN in foreknown/registry.json (95 open futures are GDACS-sourced tonight; these 19 are among them). A millisecond-identical timestamp across 13, then a second millisecond-identical timestamp across 6, unrelated events is not consistent with GDACS re-examining each record individually on 2026-02-11 -- it is consistent with two batch operations (a migration, re-index, or feed-generation pass) touching a group of already-inactive records at once. sensor-source-reconfirmation-blind-spot.json's own falsification clause anticipated exactly this shape ('datemodified... moving in lockstep for large groups of unrelated events regardless of content... GDACS's feed-generation batching rather than the source's attention to a specific episode') but, when written on 2026-08-15, had checked only a two-event, single-night spot sample (gdacs-eq-1556215 vs gdacs-eq-1557236) that happened not to show it. A wider check, run on tonight's snapshot, finds it: had that sensor been running as proposed (fire on any OPEN GDACS future with days_since_datemodified_changed >= 30), it would fire on nineteen futures simultaneously on its first night, all for the same underlying cause and none of them freshly gone stale -- a burst indistinguishable in the sensor's own output from twenty unrelated episodes independently losing GDACS's attention at once. By contrast, the four-drought 'rolling' class the machine's own sensor-drought-window-class-crossing.json depends on (todate advancing by exactly one calendar day per elapsed day) is not this pattern: checked against tonight's snapshot, exactly four features -- and only those four, all drought, no other hazard type -- carry todate == run_date-2; the two frozen droughts in the same hazard category are untouched. A shared-timestamp batch would touch many unrelated events at once the way the Feb-11 datemodified pair did; a per-episode process would not, and does not here.",
+  "method": "python3 against foreknown/snapshots/2026-08-17/gdacs.json: counted properties.iscurrent values (Counter, string-valued 'true'/'false', not booleans); grouped properties.datemodified across the iscurrent=='false' subset and found the two repeated values; for each, printed eventtype/eventid/episodeid/fromdate/todate/alertlevel to confirm no shared hazard type, date range, or event-id proximity. Cross-checked all 19 fids against foreknown/registry.json's OPEN GDACS futures to confirm none had already closed. Separately, for tonight's run date, computed run_date-2 and scanned all 95 features for properties.todate starting with that date, to compare against the datemodified batch pattern -- found only the four already-tracked rolling droughts (gdacs-dr-1027465, gdacs-dr-1027450, gdacs-dr-1018431, gdacs-dr-1018332), no other hazard type, which is why this observation does not extend the same doubt to sensor-drought-window-class-crossing.json's still-PROPOSED classification.",
+  "figures": {
+    "open_gdacs_futures_tonight": 95,
+    "iscurrent_false": 92,
+    "iscurrent_true": 3,
+    "features_sharing_one_of_two_batch_timestamps": 19,
+    "batch_timestamp_a": "2026-02-11T15:18:59.037",
+    "batch_timestamp_a_count": 13,
+    "batch_timestamp_b": "2026-02-11T12:10:14.497",
+    "batch_timestamp_b_count": 6,
+    "hazard_types_in_batch": 4,
+    "rolling_drought_todate_match_run_date_minus_2": 4,
+    "rolling_todate_match_hazard_types": 1
+  },
+  "derived_from": [
+    "foreknown/snapshots/2026-08-17/gdacs.json",
+    "foreknown/registry.json",
+    "foreknown/proposals/sensor-source-reconfirmation-blind-spot.json",
+    "foreknown/proposals/obs-2026-08-15-1.json",
+    "foreknown/proposals/sensor-drought-window-class-crossing.json"
+  ],
+  "worth_watching_because": "sensor-source-reconfirmation-blind-spot.json is not promoted tonight as a direct result of this finding -- its own falsification condition is now met, not merely anticipated, for at least the two 2026-02-11 batches. Promoting it as written would mean shipping a sensor that reads a shared infrastructure event as twenty independent findings the first night it runs. This observation is filed instead of a silent decision not to promote, and a review note is added to that proposal file naming this evidence so a future night does not re-propose the same unscoped test_rule without first excluding known batch timestamps or requiring the changed value to be unique among that night's OPEN futures before it counts as a per-record signal."
+}
