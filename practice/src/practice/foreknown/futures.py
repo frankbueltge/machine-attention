@@ -15,7 +15,7 @@ Rules (docs/2026-08-08-foreknown-001-audit-und-entwurf.md):
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from ..preserve import utc_now
 
@@ -25,6 +25,10 @@ DISSIPATED = "DISSIPATED"
 
 COLD_START_OVERDUE = "cold_start_overdue"
 DRIFT_OVERDUE = "drift_overdue"
+
+DROUGHT_ROLLING = "rolling"
+DROUGHT_FROZEN = "frozen"
+DROUGHT_IRREGULAR = "irregular"
 
 TRACKED_FIELDS = ("severity", "window", "what", "where")
 
@@ -74,6 +78,102 @@ def overdue_kind(future: dict, now_iso: str | None = None) -> str | None:
     if first_to and announced_at and first_to[:19] < announced_at[:19]:
         return COLD_START_OVERDUE
     return DRIFT_OVERDUE
+
+
+def _window_to_series(future: dict) -> list[tuple[str, str | None]]:
+    """(observation_date, window.to) pairs this future has carried, oldest
+    first — the NOTARIZED value followed by every REVISED window change.
+    Read from committed history alone (window is a TRACKED_FIELD, so every
+    change is already an appended event); no state beyond the registry."""
+    history = future.get("history") or []
+    if not history:
+        return []
+    series = [(history[0]["ts"][:10], window_to_at_notarization(future))]
+    for event in history:
+        change = (event.get("changes") or {}).get("window")
+        if change:
+            series.append((event["ts"][:10], (change.get("to") or {}).get("to")))
+    return series
+
+
+def drought_window_class(future: dict, day: str) -> dict | None:
+    """Classifies an OPEN drought's window.to trajectory as rolling, frozen
+    or irregular, from this future's own committed revision history — no
+    extra state, since window is a TRACKED_FIELD and every change it has
+    ever carried is already an appended REVISED event (I3).
+
+    Implements the machine's own proposal
+    `sensor-drought-window-class-crossing` (foreknown/proposals/, difference
+    observations of 2026-08-10 and 2026-08-15; promoted 2026-08-17):
+
+    - rolling — window.to has advanced by exactly one calendar day per
+      calendar day elapsed at every recorded change (GDACS keeps extending
+      the episode's stated end).
+    - frozen — window.to has not changed since NOTARIZED, across at least
+      two nights this future has been observed.
+    - irregular — a change occurred that did not match the rolling step
+      exactly. This is the crossing the sensor exists to catch (a rolling
+      drought whose window.to stops advancing, or any other rate never seen
+      in the two classes established so far) as well as any drought whose
+      trajectory never fit the two-class split at all.
+
+    Returns None when there is not yet enough committed history to decide
+    (fewer than two nights of observation) or the future is not an OPEN
+    drought.
+    """
+    if future.get("hazard") != "drought" or future.get("status") != OPEN:
+        return None
+    series = _window_to_series(future)
+    if not series:
+        return None
+    # A night with no REVISED window event still is an observation: carry
+    # the last known value forward so a rolling drought that stops advancing
+    # shows up as a broken step tonight, not as a silently unchanged series.
+    if series[-1][0] != day:
+        series = series + [(day, series[-1][1])]
+    nights_observed = (date.fromisoformat(day)
+                       - date.fromisoformat(series[0][0])).days + 1
+    if nights_observed < 2:
+        return None
+    if len({t for _, t in series}) == 1:
+        return {"class": DROUGHT_FROZEN, "nights_observed": nights_observed,
+                "window_to": series[-1][1]}
+    for (d1, t1), (d2, t2) in zip(series, series[1:]):
+        if not t1 or not t2:
+            return {"class": DROUGHT_IRREGULAR, "nights_observed": nights_observed}
+        day_delta = (date.fromisoformat(d2) - date.fromisoformat(d1)).days
+        to_delta = (date.fromisoformat(t2[:10]) - date.fromisoformat(t1[:10])).days
+        if day_delta != to_delta:
+            return {"class": DROUGHT_IRREGULAR, "nights_observed": nights_observed,
+                    "since": d2, "day_delta": day_delta, "todate_delta": to_delta}
+    return {"class": DROUGHT_ROLLING, "nights_observed": nights_observed,
+            "window_to": series[-1][1]}
+
+
+def drought_window_crossings(registry: dict, day: str) -> list[dict]:
+    """Every OPEN drought whose class (drought_window_class) changed between
+    yesterday and tonight — computed twice, statelessly, from the same
+    committed history with and without tonight's own events, rather than
+    stored, so the comparison stays recomputable from committed bytes alone.
+    """
+    yesterday = (date.fromisoformat(day) - timedelta(days=1)).isoformat()
+    crossings = []
+    for fid, future in sorted(registry.get("futures", {}).items()):
+        if future.get("hazard") != "drought" or future.get("status") != OPEN:
+            continue
+        today_state = drought_window_class(future, day)
+        prior_history = [e for e in (future.get("history") or [])
+                         if e["ts"][:10] != day]
+        if not prior_history:
+            continue
+        prior_future = {**future, "history": prior_history}
+        prior_state = drought_window_class(prior_future, yesterday)
+        if not today_state or not prior_state:
+            continue
+        if today_state["class"] != prior_state["class"]:
+            crossings.append({"future": fid, "from_class": prior_state["class"],
+                              "to_class": today_state["class"], "run_date": day})
+    return crossings
 
 
 def update_registry(registry: dict, observed: list[dict],
