@@ -1,0 +1,21 @@
+{
+  "cold_start": true,
+  "evidence": [
+    "foreknown/snapshots/2026-08-08/gdacs.json"
+  ],
+  "future": "gdacs-eq-1496100",
+  "measured": {
+    "episode_days": 0.0,
+    "episode_window": {
+      "from": "2025-08-16T22:38:52",
+      "to": "2025-08-16T22:38:52"
+    },
+    "escalated": false,
+    "revisions": 0,
+    "severity_path": [
+      "Red"
+    ]
+  },
+  "resolved_at": "2026-08-17T06:04:03+00:00",
+  "verdict": "EPISODE_ENDED"
+}

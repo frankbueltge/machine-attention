@@ -1,10 +1,100 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "a6a574b",
+    "commit": "1a1f22d",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nhc-cp012026.html",
+      "evidence": "foreknown/snapshots/2026-08-17/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 4 days after it was first preserved.",
+      "subject": "Lala (TS)"
+    },
+    {
+      "enter": "/attention/future/gdacs-wf-1024608.html",
+      "evidence": "foreknown/resolutions/gdacs-wf-1024608.json",
+      "mode": "resolution",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Forest fires in Spain"
+    },
+    {
+      "enter": "/attention/future/gdacs-wf-1024608.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Forest fires in Spain"
+    },
+    {
+      "enter": "/attention/future/gdacs-fl-1104081.html",
+      "evidence": "foreknown/snapshots/2026-08-17/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 4 days after it was first preserved.",
+      "subject": "Flood in China"
+    },
+    {
+      "enter": "/attention/future/gdacs-eq-1496100.html",
+      "evidence": "foreknown/resolutions/gdacs-eq-1496100.json",
+      "mode": "resolution",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Earthquake in Indonesia"
+    },
+    {
+      "enter": "/attention/future/gdacs-eq-1496100.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Earthquake in Indonesia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027465.html",
+      "evidence": "foreknown/snapshots/2026-08-17/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027450.html",
+      "evidence": "foreknown/snapshots/2026-08-17/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Ethiopia, Kenya, Somalia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-08-17/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-08-17/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-17T06:04:03+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+    },
     {
       "enter": "/attention/future/nhc-ep082026.html",
       "evidence": "foreknown/resolutions/nhc-ep082026.json",
@@ -30,7 +120,7 @@
       "occurred_at": "2026-08-16T05:58:54+00:00",
       "project": "foreknown",
       "statement": "A warning changed 3 days after it was first preserved.",
-      "subject": "Lala (HU)"
+      "subject": "Lala (TS)"
     },
     {
       "enter": "/attention/future/gdacs-dr-1027465.html",
@@ -84,7 +174,7 @@
       "occurred_at": "2026-08-15T05:58:09+00:00",
       "project": "foreknown",
       "statement": "A warning changed 2 days after it was first preserved.",
-      "subject": "Lala (HU)"
+      "subject": "Lala (TS)"
     },
     {
       "enter": "/attention/future/gdacs-dr-1027465.html",
@@ -138,7 +228,7 @@
       "occurred_at": "2026-08-14T06:58:12+00:00",
       "project": "foreknown",
       "statement": "A warning changed 33 hours after it was first preserved.",
-      "subject": "Lala (HU)"
+      "subject": "Lala (TS)"
     },
     {
       "enter": "/attention/future/nhc-al032026.html",
@@ -246,7 +336,7 @@
       "occurred_at": "2026-08-13T07:03:10+00:00",
       "project": "foreknown",
       "statement": "A warning changed 9 hours after it was first preserved.",
-      "subject": "Lala (HU)"
+      "subject": "Lala (TS)"
     },
     {
       "enter": "/attention/future/nhc-al032026.html",
@@ -300,7 +390,7 @@
       "occurred_at": "2026-08-12T22:14:16+00:00",
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
-      "subject": "Lala (HU)"
+      "subject": "Lala (TS)"
     },
     {
       "enter": "/attention/future/nhc-al032026.html",
