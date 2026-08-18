@@ -1,10 +1,73 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "1a1f22d",
+    "commit": "31d1fb5",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nhc-cp012026.html",
+      "evidence": "foreknown/snapshots/2026-08-18/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 5 days after it was first preserved.",
+      "subject": "Lala (TS)"
+    },
+    {
+      "enter": "/attention/future/gdacs-wf-1024558.html",
+      "evidence": "foreknown/resolutions/gdacs-wf-1024558.json",
+      "mode": "resolution",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Forest fires in Spain"
+    },
+    {
+      "enter": "/attention/future/gdacs-wf-1024558.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Forest fires in Spain"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027465.html",
+      "evidence": "foreknown/snapshots/2026-08-18/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 10 days after it was first preserved.",
+      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027450.html",
+      "evidence": "foreknown/snapshots/2026-08-18/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 10 days after it was first preserved.",
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-08-18/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 10 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-08-18/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 10 days after it was first preserved.",
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
+    },
     {
       "enter": "/attention/future/nhc-cp012026.html",
       "evidence": "foreknown/snapshots/2026-08-17/nhc-current-storms.json",
@@ -75,7 +138,7 @@
       "occurred_at": "2026-08-17T06:04:03+00:00",
       "project": "foreknown",
       "statement": "A warning changed 8 days after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -93,7 +156,7 @@
       "occurred_at": "2026-08-17T06:04:03+00:00",
       "project": "foreknown",
       "statement": "A warning changed 8 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     },
     {
       "enter": "/attention/future/nhc-ep082026.html",
@@ -138,7 +201,7 @@
       "occurred_at": "2026-08-16T05:58:54+00:00",
       "project": "foreknown",
       "statement": "A warning changed 8 days after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -156,7 +219,7 @@
       "occurred_at": "2026-08-16T05:58:54+00:00",
       "project": "foreknown",
       "statement": "A warning changed 8 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     },
     {
       "enter": "/attention/future/nhc-ep082026.html",
@@ -192,7 +255,7 @@
       "occurred_at": "2026-08-15T05:58:09+00:00",
       "project": "foreknown",
       "statement": "A warning changed 6 days after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -210,7 +273,7 @@
       "occurred_at": "2026-08-15T05:58:09+00:00",
       "project": "foreknown",
       "statement": "A warning changed 6 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     },
     {
       "enter": "/attention/future/nhc-ep082026.html",
@@ -300,7 +363,7 @@
       "occurred_at": "2026-08-14T06:58:12+00:00",
       "project": "foreknown",
       "statement": "A warning changed 6 days after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -318,7 +381,7 @@
       "occurred_at": "2026-08-14T06:58:12+00:00",
       "project": "foreknown",
       "statement": "A warning changed 6 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     },
     {
       "enter": "/attention/future/nhc-ep082026.html",
@@ -363,7 +426,7 @@
       "occurred_at": "2026-08-13T07:03:10+00:00",
       "project": "foreknown",
       "statement": "A warning changed 5 days after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -381,7 +444,7 @@
       "occurred_at": "2026-08-13T07:03:10+00:00",
       "project": "foreknown",
       "statement": "A warning changed 5 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     },
     {
       "enter": "/attention/future/nhc-cp012026.html",
@@ -507,7 +570,7 @@
       "occurred_at": "2026-08-12T22:14:16+00:00",
       "project": "foreknown",
       "statement": "A warning changed 4 days after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -525,7 +588,7 @@
       "occurred_at": "2026-08-12T22:14:16+00:00",
       "project": "foreknown",
       "statement": "A warning changed 4 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     },
     {
       "enter": "/attention/future/gdacs-tc-1001297.html",
@@ -606,7 +669,7 @@
       "occurred_at": "2026-08-09T06:27:02+00:00",
       "project": "foreknown",
       "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Drought in Ethiopia, Kenya, Somalia"
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -624,7 +687,7 @@
       "occurred_at": "2026-08-09T06:27:02+00:00",
       "project": "foreknown",
       "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     }
   ],
   "practice": {

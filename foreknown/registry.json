@@ -181,6 +181,31 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-17/gdacs.json",
           "ts": "2026-08-17T06:04:03+00:00"
+        },
+        {
+          "changes": {
+            "what": {
+              "from": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
+              "to": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
+            },
+            "where": {
+              "from": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
+              "to": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
+            },
+            "window": {
+              "from": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-15T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-16T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-18/gdacs.json",
+          "ts": "2026-08-18T05:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -219,11 +244,11 @@
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1018332&episodeid=18&eventtype=DR",
       "status": "OPEN",
-      "what": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
-      "where": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Italy, Liechtenstein, Luxembourg, Monaco, Montenegro, The Republic of North Macedonia, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
+      "what": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
+      "where": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
       "window": {
         "from": "2025-12-11T00:00:00",
-        "to": "2026-08-15T00:00:00"
+        "to": "2026-08-16T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -353,6 +378,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-17/gdacs.json",
           "ts": "2026-08-17T06:04:03+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-15T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-16T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-18/gdacs.json",
+          "ts": "2026-08-18T05:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -368,7 +410,38 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-08-15T00:00:00"
+        "to": "2026-08-16T00:00:00"
+      }
+    },
+    "gdacs-dr-1027449": {
+      "announced_at": "2026-08-18T05:59:34+00:00",
+      "hazard": "drought",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-18/gdacs.json",
+          "ts": "2026-08-18T05:59:34+00:00"
+        }
+      ],
+      "id": "gdacs-dr-1027449",
+      "iso3": [
+        "BLZ",
+        "GTM",
+        "HND",
+        "MEX",
+        "NIC",
+        "SLV"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Orange",
+      "source": "GDACS",
+      "source_ref": "https://www.gdacs.org/report.aspx?eventid=1027449&episodeid=6&eventtype=DR",
+      "status": "OPEN",
+      "what": "Drought in Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
+      "where": "Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
+      "window": {
+        "from": "2026-05-11T00:00:00",
+        "to": "2026-08-16T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -498,6 +571,31 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-17/gdacs.json",
           "ts": "2026-08-17T06:04:03+00:00"
+        },
+        {
+          "changes": {
+            "what": {
+              "from": "Drought in Ethiopia, Kenya, Somalia",
+              "to": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
+            },
+            "where": {
+              "from": "Ethiopia, Kenya, Somalia",
+              "to": "Eritrea, Ethiopia, Kenya, Somalia"
+            },
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-15T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-16T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-18/gdacs.json",
+          "ts": "2026-08-18T05:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1027450",
@@ -511,11 +609,11 @@
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1027450&episodeid=5&eventtype=DR",
       "status": "OPEN",
-      "what": "Drought in Ethiopia, Kenya, Somalia",
-      "where": "Ethiopia, Kenya, Somalia",
+      "what": "Drought in Eritrea, Ethiopia, Kenya, Somalia",
+      "where": "Eritrea, Ethiopia, Kenya, Somalia",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-08-15T00:00:00"
+        "to": "2026-08-16T00:00:00"
       }
     },
     "gdacs-dr-1027465": {
@@ -645,6 +743,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-17/gdacs.json",
           "ts": "2026-08-17T06:04:03+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-15T00:00:00"
+              },
+              "to": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-16T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-18/gdacs.json",
+          "ts": "2026-08-18T05:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1027465",
@@ -663,7 +778,7 @@
       "where": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
       "window": {
         "from": "2026-05-21T00:00:00",
-        "to": "2026-08-15T00:00:00"
+        "to": "2026-08-16T00:00:00"
       }
     },
     "gdacs-eq-1494848": {
@@ -2921,6 +3036,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-18T05:59:34+00:00"
         }
       ],
       "id": "gdacs-wf-1024558",
@@ -2931,7 +3050,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1024558&episodeid=15&eventtype=WF",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Forest fires in Spain",
       "where": "Spain",
       "window": {
@@ -3589,19 +3708,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-17/nhc-current-storms.json",
           "ts": "2026-08-17T06:04:03+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "50",
+              "to": "60"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-17T06:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-08-18T03:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-18/nhc-current-storms.json",
+          "ts": "2026-08-18T05:59:34+00:00"
         }
       ],
       "id": "nhc-cp012026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "50",
+      "severity": "60",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Lala (TS)",
       "where": "CP2",
       "window": {
-        "from": "2026-08-17T06:00:00.000Z",
+        "from": "2026-08-18T03:00:00.000Z",
         "to": null
       }
     },
