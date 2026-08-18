@@ -11,5 +11,25 @@
     "autonomy/log.jsonl",
     "practice/src/practice/foreknown/reaction.py"
   ],
-  "status": "PROPOSED"
+  "status": "PROMOTED",
+  "promotion": {
+    "date": "2026-08-18",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the test_rule's own firing condition -- N=5 consecutive nights with the same gap_days and a 'not published yet' failure for the newest missing day each time -- is now met against the committed record, not merely anticipated: foreknown/reaction/readings/2026-08-14.json through 2026-08-18.json (five consecutive files) each show gap_days=2 (attention_day two days behind the run's own date: 08-14 date=2026-08-14/attention_day=2026-08-12, 08-15 date=2026-08-15/attention_day=2026-08-13, 08-16 date=2026-08-16/attention_day=2026-08-14, 08-17 date=2026-08-17/attention_day=2026-08-15, 08-18 date=2026-08-18/attention_day=2026-08-16) and each carries exactly one failures entry of {'error': 'not published yet', 'scope': 'attention:<run_date-1>'} -- attention:2026-08-13, attention:2026-08-14, attention:2026-08-15, attention:2026-08-16, attention:2026-08-17 respectively, the newest missing day each night.",
+    "implemented_in": [
+      "practice/src/practice/foreknown/reaction.py, functions _catchup_gap, _newest_missing_day_failed, _catchup_latency_state, and the catchup_sensor field build_reading now writes on every reading",
+      "practice/tests/test_reaction.py, test_catchup_sensor_defers_before_five_nights_of_history, test_catchup_sensor_fires_on_five_consecutive_matching_nights, test_catchup_sensor_does_not_fire_when_the_gap_closes_early"
+    ],
+    "test_rule_held": "the N=5 firing condition is satisfied exactly as written, by the five readings named above under 'settles'. Neither falsification clause is met: the gap did not close on its own within a night or two of appearing -- it recurred at the identical gap_days=2 offset for five straight nights rather than the two-night pattern (2026-08-08/09) the proposal was written against, which did close by 2026-08-12 (that reading's gap_days=1) and is therefore not part of this run. And the notary's run time, unconfirmed as stable when the proposal was written, is now shown stable by autonomy/log.jsonl's own foreknown-notary-run timestamps for the five nights in question: 2026-08-14T06:58:15Z, 2026-08-15T05:58:13Z, 2026-08-16T05:58:58Z, 2026-08-17T06:04:07Z, 2026-08-18T05:59:38Z -- all within a roughly one-hour window around 06:00 UTC, not the ~11-hour shift the proposal flagged as unconfirmed between its only two recorded nights.",
+    "kept_unchanged": "definition, test_rule and falsification are the machine's text as written; N=5 is unchanged, and the sensor still counts only the exact 'not published yet' failure string as the proposal specified, diagnosing no new failure modes.",
+    "evidence": [
+      "foreknown/reaction/readings/2026-08-14.json",
+      "foreknown/reaction/readings/2026-08-15.json",
+      "foreknown/reaction/readings/2026-08-16.json",
+      "foreknown/reaction/readings/2026-08-17.json",
+      "foreknown/reaction/readings/2026-08-18.json",
+      "autonomy/log.jsonl",
+      "practice/src/practice/foreknown/reaction.py"
+    ]
+  }
 }

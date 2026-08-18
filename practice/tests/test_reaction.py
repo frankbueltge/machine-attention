@@ -170,6 +170,79 @@ def test_the_sensor_refuses_to_fire_before_the_baseline_the_proposal_demands():
     assert "moved" in moved["sensor"]["why"]
 
 
+def test_catchup_sensor_defers_before_five_nights_of_history():
+    registry = registry_with(episode("a", ["SOM"]))
+    reading = reaction.build_reading("2026-08-14", registry, PLANS, FUNDING,
+                                     CROSSWALK, {}, {},
+                                     failures=[{"scope": "attention:2026-08-13",
+                                               "error": "not published yet"}],
+                                     catchup_history=[
+                                         {"date": "2026-08-12",
+                                          "attention_day": "2026-08-11",
+                                          "failures": []},
+                                     ])
+    assert reading["catchup_sensor"]["firing"] == "DEFERRED"
+    assert reading["catchup_sensor"]["fired"] is False
+    assert reading["catchup_sensor"]["nights_recorded"] == 2
+
+
+def test_catchup_sensor_fires_on_five_consecutive_matching_nights():
+    # Mirrors the committed record 2026-08-14 through 2026-08-18: attention_day
+    # two days behind the run date every night, each with a "not published
+    # yet" failure for the newest missing day (foreknown/reaction/readings/).
+    prior = [
+        {"date": "2026-08-14", "attention_day": "2026-08-12",
+         "failures": [{"scope": "attention:2026-08-13",
+                      "error": "not published yet"}]},
+        {"date": "2026-08-15", "attention_day": "2026-08-13",
+         "failures": [{"scope": "attention:2026-08-14",
+                      "error": "not published yet"}]},
+        {"date": "2026-08-16", "attention_day": "2026-08-14",
+         "failures": [{"scope": "attention:2026-08-15",
+                      "error": "not published yet"}]},
+        {"date": "2026-08-17", "attention_day": "2026-08-15",
+         "failures": [{"scope": "attention:2026-08-16",
+                      "error": "not published yet"}]},
+    ]
+    registry = registry_with(episode("a", ["SOM"]))
+    days = {"2026-08-16": attention.aggregate(gdelt_zip([_row("SO", 1, 1)]))}
+    days["2026-08-16"]["date"] = "2026-08-16"
+    reading = reaction.build_reading("2026-08-18", registry, PLANS, FUNDING,
+                                     CROSSWALK, days, {},
+                                     failures=[{"scope": "attention:2026-08-17",
+                                               "error": "not published yet"}],
+                                     catchup_history=prior)
+    sensor = reading["catchup_sensor"]
+    assert sensor["firing"] == "ARMED"
+    assert sensor["fired"] is True
+    assert sensor["gap_days"] == 2
+
+
+def test_catchup_sensor_does_not_fire_when_the_gap_closes_early():
+    prior = [
+        {"date": "2026-08-14", "attention_day": "2026-08-12",
+         "failures": [{"scope": "attention:2026-08-13",
+                      "error": "not published yet"}]},
+        {"date": "2026-08-15", "attention_day": "2026-08-13",
+         "failures": [{"scope": "attention:2026-08-14",
+                      "error": "not published yet"}]},
+        {"date": "2026-08-16", "attention_day": "2026-08-14",
+         "failures": [{"scope": "attention:2026-08-15",
+                      "error": "not published yet"}]},
+        # the gap closes: this night's run reaches yesterday after all.
+        {"date": "2026-08-17", "attention_day": "2026-08-16", "failures": []},
+    ]
+    registry = registry_with(episode("a", ["SOM"]))
+    reading = reaction.build_reading("2026-08-18", registry, PLANS, FUNDING,
+                                     CROSSWALK, {}, {},
+                                     failures=[{"scope": "attention:2026-08-17",
+                                               "error": "not published yet"}],
+                                     catchup_history=prior)
+    sensor = reading["catchup_sensor"]
+    assert sensor["firing"] == "ARMED"
+    assert sensor["fired"] is False
+
+
 def test_reading_states_what_its_numbers_are_not(tmp_path):
     reading = reaction.build_reading("2026-08-08", registry_with(
         episode("a", ["SOM"])), PLANS, FUNDING, CROSSWALK, {}, {})
