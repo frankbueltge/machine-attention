@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import argparse
 import zipfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from ..fetch import Client, SourceUnavailable
@@ -54,6 +54,14 @@ MAX_ATTENTION_CATCHUP_DAYS = 30
 LOW_MATCH_RATE = 0.25
 HIGH_MATCH_RATE = 0.50
 MATCH_RATE_JUMP = 0.10
+# The machine's proposal sensor-attention-catchup-latency (promoted
+# 2026-08-18, foreknown/proposals/sensor-attention-catchup-latency.json):
+# fires once this many consecutive nights show the same gap_days between a
+# run's own date and its attention_day, each with a "not published yet"
+# failure recorded for the newest missing day — evidence the notary's fixed
+# run time structurally precedes GDELT's publication time for that day,
+# not an occasional miss. N=5 was chosen to match roughly one working week.
+CATCHUP_LATENCY_NIGHTS_REQUIRED = 5
 
 NOTES = [
     "plan requirements and funding are the plans' own annual figures for "
@@ -182,10 +190,69 @@ def _sensor_state(match_rate: float, nights: int,
     return state
 
 
+def _catchup_gap(reading: dict) -> int | None:
+    """Days between a reading's own run date and its attention_day, or None
+    if that run committed no attention day at all."""
+    if not reading.get("attention_day"):
+        return None
+    return (datetime.fromisoformat(reading["date"])
+            - datetime.fromisoformat(reading["attention_day"])).days
+
+
+def _newest_missing_day_failed(reading: dict) -> bool:
+    """Whether this run's failures record a 'not published yet' for the day
+    immediately before its own run date — the newest missing day."""
+    day_before = (datetime.fromisoformat(reading["date"])
+                 - timedelta(days=1)).date().isoformat()
+    return any(f.get("error") == "not published yet"
+              and f.get("scope") == f"attention:{day_before}"
+              for f in reading.get("failures", []))
+
+
+def _catchup_latency_state(history: list[dict]) -> dict:
+    """The machine's proposal, applied as written: no firing before
+    CATCHUP_LATENCY_NIGHTS_REQUIRED consecutive nights show the same
+    gap_days value, each with a 'not published yet' failure for the newest
+    missing day. `history` is prior readings oldest-to-newest, this run's
+    own reading last."""
+    state = {
+        "name": "attention-catchup-latency",
+        "proposal": "foreknown/proposals/sensor-attention-catchup-latency.json",
+        "nights_recorded": len(history),
+        "fired": False,
+    }
+    tail = history[-CATCHUP_LATENCY_NIGHTS_REQUIRED:]
+    if len(tail) < CATCHUP_LATENCY_NIGHTS_REQUIRED:
+        state["firing"] = "DEFERRED"
+        state["why"] = (f"the proposal requires "
+                        f"{CATCHUP_LATENCY_NIGHTS_REQUIRED} consecutive "
+                        f"nights of the same gap before it can fire; "
+                        f"night {len(tail)} of "
+                        f"{CATCHUP_LATENCY_NIGHTS_REQUIRED}")
+        return state
+    state["firing"] = "ARMED"
+    gaps = [_catchup_gap(r) for r in tail]
+    same_gap = gaps[0] is not None and len(set(gaps)) == 1
+    all_failed = all(_newest_missing_day_failed(r) for r in tail)
+    if same_gap and all_failed:
+        state["fired"] = True
+        state["gap_days"] = gaps[0]
+        state["why"] = (f"gap_days={gaps[0]} recurred every night for "
+                        f"{CATCHUP_LATENCY_NIGHTS_REQUIRED} consecutive "
+                        f"nights, each with a 'not published yet' failure "
+                        f"for the newest missing day")
+    else:
+        state["why"] = ("the gap or its failure pattern did not recur "
+                        "identically across the window")
+    return state
+
+
 def build_reading(day: str, registry: dict, plans_doc: dict, funding_doc: dict,
                   crosswalk: dict[str, str], attention_days: dict[str, dict],
                   refs: dict, prior: dict | None = None,
-                  nights: int = 1) -> dict:
+                  nights: int = 1,
+                  failures: list[dict] | None = None,
+                  catchup_history: list[dict] | None = None) -> dict:
     plans = plans_index(plans_doc)
     funding = funding_index(funding_doc)
     plan_iso3 = {pid: set(plan["iso3"]) for pid, plan in plans.items()}
@@ -227,6 +294,10 @@ def build_reading(day: str, registry: dict, plans_doc: dict, funding_doc: dict,
         }
 
     match_rate = round(matched_episodes / open_episodes, 4) if open_episodes else 0.0
+    failures = failures or []
+    this_run = {"date": day, "attention_day": attention_day,
+               "failures": failures}
+    history = (catchup_history or []) + [this_run]
     return {
         "date": day,
         "generated_at": utc_now(),
@@ -234,12 +305,14 @@ def build_reading(day: str, registry: dict, plans_doc: dict, funding_doc: dict,
         "attention_baseline_window": window,
         "attention_days_committed": len(attention_days),
         "sources": refs,
+        "failures": failures,
         "coverage": {
             "open_alert_episodes": open_episodes,
             "with_fts_plan_match": matched_episodes,
             "match_rate": match_rate,
         },
         "sensor": _sensor_state(match_rate, nights, prior),
+        "catchup_sensor": _catchup_latency_state(history),
         "notes": NOTES,
         "futures": entries,
     }
@@ -348,11 +421,14 @@ def run_reaction(repo_root: Path, day: str, registry: dict,
     prior_readings = sorted(readings_dir(repo_root).glob("*.json")) \
         if readings_dir(repo_root).exists() else []
     prior = read_json(prior_readings[-1]) if prior_readings else None
+    catchup_history = [read_json(p) for p in
+                       prior_readings[-(CATCHUP_LATENCY_NIGHTS_REQUIRED - 1):]]
 
     reading = build_reading(day, registry, plans_doc, funding_doc,
                             load_crosswalk(repo_root), committed, refs,
-                            prior=prior, nights=len(prior_readings) + 1)
-    reading["failures"] = failures
+                            prior=prior, nights=len(prior_readings) + 1,
+                            failures=failures,
+                            catchup_history=catchup_history)
     write_json(reading_path, reading)
     return {"attention_days_fetched": fetched,
             "attention_days_committed": len(committed),
