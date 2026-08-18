@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-18T05:59:38Z",
+ "generated_at": "2026-08-18T07:06:13Z",
  "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
  "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
  "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
@@ -7,10 +7,10 @@
  "method": "docs/2026-08-09-opentimestamps-examination.md",
  "counts": {
   "manifests": 31,
-  "complete": 23,
+  "complete": 27,
   "pending": 4,
-  "stamped_this_run": 0,
-  "upgraded_this_run": 0,
+  "stamped_this_run": 4,
+  "upgraded_this_run": 4,
   "failures": 0
  },
  "failures": [],
@@ -60,7 +60,6 @@
   {
    "manifest": "darkocean/snapshots/2026-08-15/manifest.json",
    "sha256": "e72e382f3b1df01c0ba5f2603125059e85c7afe9398cf939660142be0763e0cc",
-   "upgraded_at": "2026-08-17T07:17:13Z",
    "proof": "anchors/darkocean/snapshots/2026-08-15/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 962690, 962709, 962727"
@@ -68,15 +67,18 @@
   {
    "manifest": "darkocean/snapshots/2026-08-16/manifest.json",
    "sha256": "71bc7371b2908e55102200c061bdaa87a80d60889540a07346da6f385cf96cb9",
-   "stamped_at": "2026-08-17T07:17:15Z",
+   "upgraded_at": "2026-08-18T07:05:42Z",
    "proof": "anchors/darkocean/snapshots/2026-08-16/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 962856, 962893, 962912"
   },
   {
    "manifest": "darkocean/snapshots/2026-08-17/manifest.json",
    "sha256": "2a7ddce970cc243363d38ba20f2ddb6e614fc9efc3d44cbafdd9a7ac1cfd7273",
-   "state": "unstamped"
+   "stamped_at": "2026-08-18T07:05:43Z",
+   "proof": "anchors/darkocean/snapshots/2026-08-17/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   },
   {
    "manifest": "foreknown/reaction/snapshots/2026-08-08/manifest.json",
@@ -123,7 +125,6 @@
   {
    "manifest": "foreknown/reaction/snapshots/2026-08-16/manifest.json",
    "sha256": "50f3c8125ee4f0e0b80a3855e795e9748d6b749587db3d1c7b94d0b36bb8f495",
-   "upgraded_at": "2026-08-17T07:17:19Z",
    "proof": "anchors/foreknown/reaction/snapshots/2026-08-16/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 962690, 962709, 962727"
@@ -131,15 +132,18 @@
   {
    "manifest": "foreknown/reaction/snapshots/2026-08-17/manifest.json",
    "sha256": "036b1e7b8e567bb02a421b534781511554606b30cc7c3a8f8049dcf4accecf54",
-   "stamped_at": "2026-08-17T07:17:21Z",
+   "upgraded_at": "2026-08-18T07:05:49Z",
    "proof": "anchors/foreknown/reaction/snapshots/2026-08-17/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 962856, 962893, 962912"
   },
   {
    "manifest": "foreknown/reaction/snapshots/2026-08-18/manifest.json",
    "sha256": "7a0a309ab50a6b62444292ae051accee7f87dc5ce8efa925ad3a78ae36dfda96",
-   "state": "unstamped"
+   "stamped_at": "2026-08-18T07:05:52Z",
+   "proof": "anchors/foreknown/reaction/snapshots/2026-08-18/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   },
   {
    "manifest": "foreknown/snapshots/2026-08-08/manifest.json",
@@ -186,7 +190,6 @@
   {
    "manifest": "foreknown/snapshots/2026-08-16/manifest.json",
    "sha256": "229fdadbac9d53e1e251f7750aac398b427a47dd0bcc4b7501c9399f04d43f23",
-   "upgraded_at": "2026-08-17T07:17:28Z",
    "proof": "anchors/foreknown/snapshots/2026-08-16/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 962690, 962709, 962727"
@@ -194,15 +197,18 @@
   {
    "manifest": "foreknown/snapshots/2026-08-17/manifest.json",
    "sha256": "60926168d8384cbad4c3f883b2dca38098abaea34890cc14b6f60f47cf52ce22",
-   "stamped_at": "2026-08-17T07:17:30Z",
+   "upgraded_at": "2026-08-18T07:06:00Z",
    "proof": "anchors/foreknown/snapshots/2026-08-17/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 962856, 962893, 962912"
   },
   {
    "manifest": "foreknown/snapshots/2026-08-18/manifest.json",
    "sha256": "742371a1f98dcc26bc4ae2aa53b936ef0744f425a37c7a3d0f08e785f7187c85",
-   "state": "unstamped"
+   "stamped_at": "2026-08-18T07:06:02Z",
+   "proof": "anchors/foreknown/snapshots/2026-08-18/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   },
   {
    "manifest": "memoryhole/snapshots/2026-08-13/manifest.json",
@@ -221,15 +227,18 @@
   {
    "manifest": "memoryhole/snapshots/2026-08-16/manifest.json",
    "sha256": "e813c17d90927546bfeab629fc423a4265fdf1e02e1fd5f4dd67ca30ece42304",
-   "stamped_at": "2026-08-17T07:17:35Z",
+   "upgraded_at": "2026-08-18T07:06:09Z",
    "proof": "anchors/memoryhole/snapshots/2026-08-16/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 962856, 962893, 962912"
   },
   {
    "manifest": "memoryhole/snapshots/2026-08-17/manifest.json",
    "sha256": "9cab56eb91fc81b722c496268a569ebd7d5d8828d11909e067ca84fe21110e24",
-   "state": "unstamped"
+   "stamped_at": "2026-08-18T07:06:10Z",
+   "proof": "anchors/memoryhole/snapshots/2026-08-17/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   }
  ]
 }
