@@ -1,0 +1,21 @@
+{
+  "cold_start": true,
+  "evidence": [
+    "foreknown/snapshots/2026-08-08/gdacs.json"
+  ],
+  "future": "gdacs-fl-1103277",
+  "measured": {
+    "episode_days": 94.5,
+    "episode_window": {
+      "from": "2025-05-16T01:00:00",
+      "to": "2025-08-18T13:00:00"
+    },
+    "escalated": false,
+    "revisions": 0,
+    "severity_path": [
+      "Orange"
+    ]
+  },
+  "resolved_at": "2026-08-19T06:01:03+00:00",
+  "verdict": "EPISODE_ENDED"
+}
