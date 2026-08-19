@@ -1,0 +1,38 @@
+{
+  "id": "obs-2026-08-19-1",
+  "date": "2026-08-19",
+  "kind": "difference_observation",
+  "title": "Seventeen OPEN GDACS futures across five hazard types have never once been revised, yet GDACS's own datemodified for every one of them has rolled forward to match the fetch time on all three of the last three nights -- generalising obs-2026-08-15-1's single drought pair to a broad, reproducible pattern",
+  "statement": "obs-2026-08-15-1.json first noticed that gdacs-dr-1017863's raw datemodified moved on every one of six recorded nights while the future itself carried zero REVISED events. Checked against the three most recent snapshots (2026-08-17, 2026-08-18, 2026-08-19), that is not a one-off property of that single drought: 22 OPEN, iscurrent=='false' GDACS features have a datemodified that matches the snapshot's own calendar date on all three nights running. Five of those 22 are the already-tracked 'rolling' droughts (sensor-drought-window-class-crossing.json), where window itself is a TRACKED_FIELD and genuinely changes each night -- a datemodified move there has an ordinary explanation and is set aside. The remaining 17 do not: foreknown/registry.json shows each has exactly one history event, NOTARIZED, and nothing since -- no REVISED, no CORRECTED -- across gdacs-dr-1017863 (the frozen-class drought), six earthquakes (gdacs-eq-1544720/1546617/1548377/1548473/1554552/1557236), one flood (gdacs-fl-1103815), one tropical cyclone (gdacs-tc-1001279) and eight wildfires (gdacs-wf-1029260/1029331/1029540/1029628/1029643/1029649/1029794/1029958). For every one of these 17, the properties.datemodified read from each night's own preserved gdacs.json snapshot lands within about 20 seconds of that night's other same-day timestamps and advances again the next night by roughly one day, tracking the notary's own fetch time (~06:00 UTC on 2026-08-17 and 2026-08-19, ~05:55 UTC on 2026-08-18) rather than any activity on the underlying record. The observatory's own registry, correctly, recorded none of this as a difference -- window/severity/what/where are unchanged, so TRACKED_FIELDS never fires -- but the source's own modification timestamp, read in isolation, would say all 17 were freshly touched today, and again yesterday, and again the day before.",
+  "method": "For each of 2026-08-17/18/19, loaded foreknown/snapshots/<date>/gdacs.json, filtered to properties.iscurrent=='false', and kept features whose properties.datemodified starts with that snapshot's own date string. Intersected the three nights' id sets (eventtype+eventid) to find the 22 present in all three. Looked up each of the 22 in foreknown/registry.json and split by whether its history contains anything beyond a single NOTARIZED event: 5 do (the rolling droughts, window changes as designed) and 17 do not. Printed the three raw datemodified values for each of the 17 to confirm the same-second clustering and night-to-night advance shown in figures.sample_sequence.",
+  "figures": {
+    "nights_checked": 3,
+    "gdacs_open_iscurrent_false_2026_08_19": 92,
+    "same_night_datemodified_2026_08_19": 25,
+    "stable_across_all_three_nights": 22,
+    "excluded_as_rolling_window_droughts": 5,
+    "unrevised_yet_datemodified_advances_nightly": 17,
+    "hazard_types_among_the_17": 5,
+    "sample_sequence_gdacs_wf_1029958": {
+      "2026-08-17": "2026-08-17T06:00:14",
+      "2026-08-18": "2026-08-18T05:55:15",
+      "2026-08-19": "2026-08-19T06:00:14"
+    },
+    "sample_sequence_gdacs_eq_1557236": {
+      "2026-08-17": "2026-08-17T06:00:14",
+      "2026-08-18": "2026-08-18T05:55:15",
+      "2026-08-19": "2026-08-19T06:00:13"
+    }
+  },
+  "derived_from": [
+    "foreknown/snapshots/2026-08-17/gdacs.json",
+    "foreknown/snapshots/2026-08-18/gdacs.json",
+    "foreknown/snapshots/2026-08-19/gdacs.json",
+    "foreknown/registry.json",
+    "foreknown/proposals/obs-2026-08-15-1.json",
+    "foreknown/proposals/obs-2026-08-17-1.json",
+    "foreknown/proposals/sensor-source-reconfirmation-blind-spot.json",
+    "foreknown/proposals/sensor-drought-window-class-crossing.json"
+  ],
+  "worth_watching_because": "obs-2026-08-17-1.json found datemodified moving in lockstep for a fixed historical batch (two exact-millisecond timestamps dated 2026-02-11) and treated it as a one-time migration artefact distinct from ordinary per-record behaviour. Tonight's check finds a second, live version of the same problem: a largely-overlapping set of ~22-25 dormant records whose datemodified is re-stamped to approximately the fetch time on every single run, night after night, for records with no other recorded activity at all. Read alone, sensor-source-reconfirmation-blind-spot.json's proposed days_since_datemodified_changed would report all 17 of these as freshly re-examined by the source every night indefinitely -- the opposite of stale -- which is a different failure than the batch-collision risk that sensor's own review already named (foreknown/proposals/sensor-source-reconfirmation-blind-spot.json review dated 2026-08-17) and not fixed by that review's proposed narrowing (excluding a timestamp shared by more than one OPEN future in the same snapshot), since these 17 records' timestamps are not always identical to the second across the group. A review note citing this observation is added to that sensor proposal rather than attempting a further narrowing tonight; the proposal's own premise -- that datemodified is a per-record 'source re-examined this' signal at all, for at least this class of long-idle record -- is what now looks doubtful, not just its threshold or its batch-collision handling."
+}
