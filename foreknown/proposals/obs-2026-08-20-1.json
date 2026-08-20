@@ -1,0 +1,35 @@
+{
+  "id": "obs-2026-08-20-1",
+  "date": "2026-08-20",
+  "kind": "difference_observation",
+  "title": "gdacs-dr-1027450's committed iso3 array disagrees with its own committed where/what text -- the same field gap sensor-primary-iso3-gap.json was promoted to retire, recurring by a second, non-transient mechanism its promotion record did not anticipate",
+  "statement": "foreknown/registry.json's entry for gdacs-dr-1027450 currently reads iso3: [\"ETH\", \"KEN\", \"SOM\"] but where: \"Eritrea, Ethiopia, Kenya, Somalia\" and what: \"Drought in Eritrea, Ethiopia, Kenya, Somalia\" -- the future's own structured country list and its own free-text description now name a different set of countries. This did not happen at notarization: foreknown/snapshots/2026-08-08/gdacs.json through 2026-08-17/gdacs.json all show properties.affectedcountries == ['ETH','KEN','SOM'] and properties.iso3 == 'ETH' for this event, no gap. On 2026-08-18 GDACS's own feed changed: foreknown/snapshots/2026-08-18/gdacs.json (and 19, 20) show affectedcountries == ['ERI','ETH','KEN','SOM'] and top-level iso3 == 'ERI', and properties.country/name moved from 'Ethiopia, Kenya, Somalia' to 'Eritrea, Ethiopia, Kenya, Somalia'. The registry's history for this future records that as a REVISED event on 2026-08-18T05:59:34+00:00 with changes.what and changes.where both updated to include Eritrea (window also changed, its ordinary nightly step) -- because what/where are TRACKED_FIELDS (practice/src/practice/foreknown/futures.py line 33). iso3 is not in TRACKED_FIELDS, so update_registry's revision loop (futures.py, update_registry, the `for field in TRACKED_FIELDS` block) never compares or rewrites it; iso3 is set once via `**record` at NOTARIZED (2026-08-08) and stays exactly as first written, however far the source's own affectedcountries list moves afterward. The already-promoted sensor-primary-iso3-gap.json compares tonight's raw top-level iso3 against this frozen array and has correctly reported the gap in foreknown/snapshots/2026-08-18/run.json, .../2026-08-19/run.json and .../2026-08-20/run.json alike: primary_iso3_dropped == [{\"dropped_iso3\": [\"ERI\"], \"future\": \"gdacs-dr-1027450\"}], unchanged for three consecutive nights and the first time that field has been non-empty since the six tropical-cyclone futures obs-2026-08-09-1.json found were hand-corrected (autonomy/log.jsonl, foreknown-correct-primary-iso3, 2026-08-09T14:50:39+00:00) -- the field read [] on every one of the six nights 2026-08-12 through 2026-08-17.",
+  "method": "Read foreknown/snapshots/<date>/run.json for every committed date and printed primary_iso3_dropped, finding it empty 2026-08-12..17 and identically {\"dropped_iso3\": [\"ERI\"], \"future\": \"gdacs-dr-1027450\"} on 2026-08-18/19/20. Looked up gdacs-dr-1027450 in foreknown/registry.json: committed iso3 is ['ETH','KEN','SOM']; where/what name Eritrea. Read properties.iso3, properties.affectedcountries and properties.country for eventid 1027450/eventtype DR across every preserved foreknown/snapshots/<date>/gdacs.json from 2026-08-08 to 2026-08-20 to establish when and how the raw feed itself changed. Read the registry entry's full history array to find the 2026-08-18 REVISED event and confirm which fields it touched. Read practice/src/practice/foreknown/futures.py's TRACKED_FIELDS constant and update_registry function to confirm iso3 is excluded from the revision comparison and therefore from every REVISED event this future has ever recorded.",
+  "figures": {
+    "primary_iso3_dropped_empty_nights": ["2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17"],
+    "primary_iso3_dropped_firing_nights": ["2026-08-18", "2026-08-19", "2026-08-20"],
+    "raw_affectedcountries_before_2026_08_18": ["ETH", "KEN", "SOM"],
+    "raw_affectedcountries_from_2026_08_18": ["ERI", "ETH", "KEN", "SOM"],
+    "registry_iso3_all_nights": ["ETH", "KEN", "SOM"],
+    "registry_where_2026_08_20": "Eritrea, Ethiopia, Kenya, Somalia",
+    "revised_event_ts_adding_eritrea_to_where_what": "2026-08-18T05:59:34+00:00",
+    "tracked_fields": ["severity", "window", "what", "where"]
+  },
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-08/gdacs.json",
+    "foreknown/snapshots/2026-08-17/gdacs.json",
+    "foreknown/snapshots/2026-08-18/gdacs.json",
+    "foreknown/snapshots/2026-08-19/gdacs.json",
+    "foreknown/snapshots/2026-08-20/gdacs.json",
+    "foreknown/snapshots/2026-08-12/run.json",
+    "foreknown/snapshots/2026-08-18/run.json",
+    "foreknown/snapshots/2026-08-19/run.json",
+    "foreknown/snapshots/2026-08-20/run.json",
+    "practice/src/practice/foreknown/futures.py",
+    "foreknown/proposals/sensor-primary-iso3-gap.json",
+    "foreknown/proposals/obs-2026-08-09-1.json",
+    "autonomy/log.jsonl"
+  ],
+  "worth_watching_because": "sensor-primary-iso3-gap.json's own falsification clause reads: 'Falsified as a live sensor once the underlying code is fixed ... and primary_iso3_dropped stays empty for many subsequent nights purely because the bug is gone -- at that point the sensor has done its one job and should be retired.' Six clean nights (2026-08-12..17) after the 2026-08-09 hand-correction looked like exactly that trajectory. Tonight's finding shows a second, mechanistically distinct pathway to the identical symptom, one the sensor's own definition does not describe: obs-2026-08-09-1's six tropical-cyclone cases were a source-side extraction gap present already at notarization (top-level iso3 never in affectedcountries at all); gdacs-dr-1027450's gap opened three months into the future's life, after GDACS itself added a country to affectedcountries, because the registry's iso3 field is not a TRACKED_FIELD and so never re-syncs once notarized -- even though where/what, which are tracked, updated the same night. That makes the gap permanent for this future, not a one-time artefact awaiting a hand fix: it will keep reporting dropped_iso3 every night gdacs-dr-1027450 stays OPEN, regardless of any correction to the notarization-time extraction logic obs-2026-08-09-1 and the sensor's own promotion record addressed. The sensor is doing exactly its named job and should keep running; what no longer holds is the assumption, implicit in its falsification clause, that an empty run of nights means the underlying condition is closing rather than merely between recurrences. A second consequence sits beside the coverage gap: this future's own committed where/what text and its own committed iso3 array now assert two different sets of affected countries, a same-record contradiction the registry's current field design cannot resolve without either tracking iso3 (a design change, not a bug fix, and outside tonight's remit) or accepting that iso3 answers 'who was affected at notarization', not 'who is affected now' -- a distinction the future's own schema does not currently document anywhere. A review note is added to sensor-primary-iso3-gap.json citing this finding rather than retiring or altering the sensor tonight."
+}
