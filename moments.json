@@ -1,10 +1,100 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "c96af82",
+    "commit": "031119f",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nhc-cp022026.html",
+      "evidence": "foreknown/snapshots/2026-08-21/nhc-current-storms.json",
+      "mode": "notarization",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Two-C (TD)"
+    },
+    {
+      "enter": "/attention/future/nhc-cp012026.html",
+      "evidence": "foreknown/snapshots/2026-08-21/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Lala (HU)"
+    },
+    {
+      "enter": "/attention/future/gdacs-wf-1024622.html",
+      "evidence": "foreknown/resolutions/gdacs-wf-1024622.json",
+      "mode": "resolution",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Forest fires in Spain"
+    },
+    {
+      "enter": "/attention/future/gdacs-wf-1024622.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Forest fires in Spain"
+    },
+    {
+      "enter": "/attention/future/gdacs-fl-1104081.html",
+      "evidence": "foreknown/snapshots/2026-08-21/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Flood in China"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027465.html",
+      "evidence": "foreknown/snapshots/2026-08-21/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 12 days after it was first preserved.",
+      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027450.html",
+      "evidence": "foreknown/snapshots/2026-08-21/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 12 days after it was first preserved.",
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027449.html",
+      "evidence": "foreknown/snapshots/2026-08-21/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 3 days after it was first preserved.",
+      "subject": "Drought in Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-08-21/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 12 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-08-21/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-21T06:02:20+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 12 days after it was first preserved.",
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
+    },
     {
       "enter": "/attention/future/nhc-cp012026.html",
       "evidence": "foreknown/snapshots/2026-08-20/nhc-current-storms.json",
@@ -211,6 +301,15 @@
       "project": "foreknown",
       "statement": "A warning changed 10 days after it was first preserved.",
       "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027449.html",
+      "evidence": "foreknown/snapshots/2026-08-18/gdacs.json",
+      "mode": "notarization",
+      "occurred_at": "2026-08-18T05:59:34+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Drought in Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
     },
     {
       "enter": "/attention/future/gdacs-dr-1018431.html",
@@ -805,51 +904,6 @@
       "project": "foreknown",
       "statement": "The machine corrected its own record — the feed had said it all along.",
       "subject": "Tropical Cyclone KAJIKI-25"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001297.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-09T06:27:02+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Tropical Cyclone DOLPHIN-26"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1027465.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-09T06:27:02+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1027450.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-09T06:27:02+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018431.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-09T06:27:02+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Drought in Madagascar"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018332.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-09T06:27:02+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 13 hours after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
     }
   ],
   "practice": {
