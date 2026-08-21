@@ -1,0 +1,34 @@
+{
+  "id": "obs-2026-08-21-1",
+  "date": "2026-08-21",
+  "kind": "difference_observation",
+  "title": "attention-catchup-latency's own committed field 'nights_recorded' cannot exceed 5 by construction, so it silently stops describing how long the gap it fired on has actually persisted the moment it fires",
+  "statement": "foreknown/reaction/readings/2026-08-21.json's catchup_sensor reads {\"fired\": true, \"firing\": \"ARMED\", \"gap_days\": 2, \"nights_recorded\": 5, ...}. Reading that field name plainly, 5 looks like a running count of how many nights the condition has been observed. It is not: practice/src/practice/foreknown/reaction.py's run_reaction builds catchup_history at lines 424-425 as `[read_json(p) for p in prior_readings[-(CATCHUP_LATENCY_NIGHTS_REQUIRED - 1):]]` -- always the newest 4 prior reading files, however many prior readings actually exist -- and build_reading appends the current run's own reading to that list at line 300 (`history = (catchup_history or []) + [this_run]`), so `history` is always exactly length 5 once at least 4 prior readings exist. _catchup_latency_state then writes `\"nights_recorded\": len(history)` (line 221) and evaluates only `tail = history[-CATCHUP_LATENCY_NIGHTS_REQUIRED:]` (line 224, CATCHUP_LATENCY_NIGHTS_REQUIRED = 5 at line 64) -- both fixed at 5 for as long as the sensor keeps firing. The committed record shows the underlying condition gap_days=2 with a 'not published yet' failure for the newest missing day has actually recurred every single night since foreknown/reaction/readings/2026-08-14.json first showed it (2026-08-14 through 2026-08-21 inclusive: 8 consecutive nights, not 5), yet nights_recorded reads 5 in every one of the three readings that carry the field at all (2026-08-19.json, 2026-08-20.json, 2026-08-21.json -- the field itself did not exist in 2026-08-14.json through 2026-08-18.json, the code having gone live for the reading generated the night after its 2026-08-18 promotion). nights_recorded will read 5 tonight, on night 30 of an unbroken gap, and on night 300: it is a fixed evaluation-window size, not a duration counter, and nothing in the committed record distinguishes 'just crossed the threshold' from 'has been like this for months' once fired is true.",
+  "method": "Read foreknown/reaction/readings/2026-08-21.json's catchup_sensor field and cross-checked it against practice/src/practice/foreknown/reaction.py's _catchup_latency_state (lines 212-247), build_reading's history assembly (line 300) and run_reaction's catchup_history construction (lines 421-431), plus the CATCHUP_LATENCY_NIGHTS_REQUIRED constant (line 64). Read every foreknown/reaction/readings/<date>.json from 2026-08-13.json through 2026-08-21.json and, for each, computed gap_days from date/attention_day, read catchup_sensor.fired and catchup_sensor.nights_recorded where present, and read the failures array to confirm the 'not published yet' pattern for the newest missing day held every night from 2026-08-14 onward without a break. Cross-checked against the sensor's own promotion record in foreknown/proposals/sensor-attention-catchup-latency.json, whose promotion.settles section cites exactly the five readings 2026-08-14 through 2026-08-18 as satisfying the N=5 firing condition -- confirming the field was designed and evidenced as a fixed five-night evaluation window, not extended afterward to also report how long a since-fired condition has actually run.",
+  "figures": {
+    "catchup_latency_nights_required": 5,
+    "gap_days_2_first_night": "2026-08-14",
+    "gap_days_2_consecutive_nights_through_2026_08_21": 8,
+    "nights_recorded_field_present_since": "2026-08-19",
+    "nights_recorded_values_2026_08_19_through_21": [5, 5, 5],
+    "readings_with_field_absent": ["2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17", "2026-08-18"],
+    "reaction_py_history_append_line": 300,
+    "reaction_py_catchup_history_slice_lines": [424, 425],
+    "reaction_py_nights_recorded_line": 221,
+    "reaction_py_tail_slice_line": 224
+  },
+  "derived_from": [
+    "foreknown/reaction/readings/2026-08-13.json",
+    "foreknown/reaction/readings/2026-08-14.json",
+    "foreknown/reaction/readings/2026-08-15.json",
+    "foreknown/reaction/readings/2026-08-16.json",
+    "foreknown/reaction/readings/2026-08-17.json",
+    "foreknown/reaction/readings/2026-08-18.json",
+    "foreknown/reaction/readings/2026-08-19.json",
+    "foreknown/reaction/readings/2026-08-20.json",
+    "foreknown/reaction/readings/2026-08-21.json",
+    "practice/src/practice/foreknown/reaction.py",
+    "foreknown/proposals/sensor-attention-catchup-latency.json"
+  ],
+  "worth_watching_because": "The sensor itself is doing exactly the job its promotion record describes and nothing here disputes that it correctly fired. What the committed record shows is narrower and easy to miss precisely because the field looks self-explanatory: 'nights_recorded' reads as a running tally a human or a later pass could use to gauge how stale or urgent the underlying structural mismatch (the notary's fixed run time versus GDELT's publish time) has become, but it is architecturally incapable of ever reading anything other than 5 from the first fired night onward, no matter how many further nights the identical gap persists. A reader -- human or a future discovery pass -- comparing nights_recorded across readings to judge whether the condition is worsening, stable, or newly recurring after a gap would draw no signal from a field that cannot move. This is not the same finding as the sensor's own falsification clause (which asks whether the gap closes and reopens) or as obs-2026-08-20-1's iso3 finding (a field excluded from a revision loop); it is a display/labeling gap in an already-promoted sensor's own state, worth a name because the next person to reach for 'how long has this been going on' in this record will find a number that cannot answer that question, and nothing in the reading or the sensor's proposal currently says so. No code change is proposed tonight: renaming or extending the field is a design choice about what the sensor should report, not a defect the committed record proves wrong (the field does exactly what its implementation says), so it is left as an observation rather than a repair."
+}
