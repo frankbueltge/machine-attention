@@ -120,3 +120,80 @@ def test_nightly_run_resolves_a_dissipated_forecast(tmp_path: Path):
     assert resolution["measured"]["matched"] == "gdacs-tc-1001297"
     run_record = read_json(tmp_path / "foreknown/snapshots/2026-08-10/run.json")
     assert run_record["resolved"] == ["nhc-al052026"]
+
+
+def _reaction_reading(day: str, futures: dict, attention_day: str) -> dict:
+    return {"date": day, "attention_day": attention_day, "futures": futures}
+
+
+def _write_readings(root: Path, readings: list[dict]) -> None:
+    directory = root / "foreknown" / "reaction" / "readings"
+    directory.mkdir(parents=True, exist_ok=True)
+    for reading in readings:
+        (directory / f"{reading['date']}.json").write_text(
+            json.dumps(reading), encoding="utf-8")
+
+
+def _entry(articles: int, ratio: float, funded: int, requirements: int) -> dict:
+    return {"attention": {"articles": articles, "ratio_to_baseline": ratio,
+                          "baseline_median_articles": 100.0,
+                          "share_per_10k": 1.0},
+            "money": {"has_fts_plan_match": True, "plans": [1516],
+                      "plan_requirements_usd": requirements,
+                      "plan_funded_usd": funded},
+            "iso3": ["KEN"], "fips": ["KE"], "unmapped_iso3": []}
+
+
+def test_reaction_series_reads_only_the_nights_that_carried_the_future(tmp_path: Path):
+    fid = "gdacs-dr-1017863"
+    _write_readings(tmp_path, [
+        _reaction_reading("2026-08-08", {fid: _entry(800, 1.2, 100, 900)}, "2026-08-06"),
+        _reaction_reading("2026-08-09", {"other": _entry(1, 1.0, 0, 0)}, "2026-08-07"),
+        _reaction_reading("2026-08-10", {fid: _entry(2400, 3.4, 160, 900)}, "2026-08-08"),
+    ])
+    series = resolve.reaction_series(tmp_path, fid)
+    assert [night["date"] for night in series["nights"]] == ["2026-08-08",
+                                                             "2026-08-10"]
+    assert series["nights"][0]["attention_day"] == "2026-08-06"
+    assert series["measured"]["nights_watched"] == 2
+    # The peak is the loudest night against the country's own baseline, not
+    # the night with the most articles in absolute terms.
+    assert series["measured"]["attention_peak"]["date"] == "2026-08-10"
+    assert series["measured"]["money_funded_delta_usd"] == 60
+    assert series["measured"]["money_requirements_last_usd"] == 900
+    assert series["limits"], "a series without its limits is a claim"
+
+
+def test_reaction_series_is_absent_not_empty_for_an_unwatched_future(tmp_path: Path):
+    _write_readings(tmp_path, [
+        _reaction_reading("2026-08-08", {"other": _entry(1, 1.0, 0, 0)}, "2026-08-06"),
+    ])
+    assert resolve.reaction_series(tmp_path, "gdacs-tc-1001297") is None
+
+
+def test_reaction_series_says_so_when_no_plan_lists_the_countries(tmp_path: Path):
+    fid = "gdacs-eq-1494848"
+    entry = _entry(50, 0.9, 0, 0)
+    entry["money"] = {"has_fts_plan_match": False, "plans": [],
+                      "plan_requirements_usd": 0, "plan_funded_usd": 0}
+    _write_readings(tmp_path, [_reaction_reading("2026-08-08", {fid: entry},
+                                                 "2026-08-06")])
+    series = resolve.reaction_series(tmp_path, fid)
+    assert series["measured"]["money_plan_match"] is False
+    assert "money_funded_delta_usd" not in series["measured"]
+
+
+def test_resolution_carries_what_moved_while_the_clock_ran(tmp_path: Path):
+    future = _tc_future()
+    fid = future["id"]
+    registry = {"futures": {fid: future}}
+    (tmp_path / "foreknown").mkdir(parents=True, exist_ok=True)
+    _write_readings(tmp_path, [
+        _reaction_reading("2026-08-08", {fid: _entry(300, 1.1, 10, 500)}, "2026-08-06"),
+        _reaction_reading("2026-08-09", {fid: _entry(900, 2.6, 45, 500)}, "2026-08-07"),
+    ])
+    resolutions = resolve.resolve_pending(tmp_path, registry)
+    assert len(resolutions) == 1
+    written = read_json(tmp_path / "foreknown" / "resolutions" / f"{fid}.json")
+    assert written["reaction"]["measured"]["money_funded_delta_usd"] == 35
+    assert written["reaction"]["measured"]["attention_peak"]["ratio_to_baseline"] == 2.6

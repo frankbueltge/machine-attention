@@ -1048,6 +1048,101 @@ def check_memoryhole(root: Path, registry_files: dict,
                             "layer")
 
 
+def check_foreknown_reaction_series(root: Path, problems: list[str]) -> None:
+    """The reaction series in a resolution, recomputed from the readings.
+
+    A second implementation on purpose (added 2026-08-22 with the join
+    itself): the resolver's summary is checked against the committed nights,
+    not against the resolver. A claim about what money and attention did while
+    a warning ran is worth exactly as much as its arithmetic survives.
+    """
+    readings = {}
+    for path in sorted(root.glob("foreknown/reaction/readings/*.json")):
+        doc = load(path)
+        readings[doc.get("date") or path.stem] = doc
+
+    for res_file in sorted(root.glob("foreknown/resolutions/*.json")):
+        resolution = load(res_file)
+        series = resolution.get("reaction")
+        if series is None:
+            continue
+        fid = resolution.get("future", res_file.stem)
+        nights = series.get("nights")
+        if not isinstance(nights, list) or not nights:
+            problems.append(f"resolution {fid}: reaction block without nights")
+            continue
+
+        carried = sorted(date for date, doc in readings.items()
+                         if (doc.get("futures") or {}).get(fid))
+        listed = [night.get("date") for night in nights]
+        if listed != sorted(listed):
+            problems.append(f"resolution {fid}: reaction nights out of order")
+        # Every watched night up to the resolution must be listed, and nothing
+        # may be listed that no reading carries. Nights *after* the resolution
+        # are deliberately not demanded: a future can REAPPEAR and re-enter the
+        # readings, and an append-only resolution cannot grow to follow it —
+        # requiring equality would turn that legal event into a red verifier on
+        # an untouched record, which is the deadlock shape that cost this
+        # practice two nights in August.
+        cutoff = (resolution.get("resolved_at") or "9999")[:10]
+        owed = [date for date in carried if date < cutoff]
+        missing = sorted(set(owed) - set(listed))
+        extra = sorted(set(listed) - set(carried))
+        if missing or extra:
+            problems.append(
+                f"resolution {fid}: reaction nights do not match the committed "
+                f"readings (missing {missing}, not in any reading {extra})")
+
+        for night in nights:
+            doc = readings.get(night.get("date"))
+            if doc is None:
+                problems.append(f"resolution {fid}: reaction night "
+                                f"{night.get('date')} has no committed reading")
+                continue
+            entry = (doc.get("futures") or {}).get(fid) or {}
+            money = entry.get("money") or {}
+            attention = entry.get("attention") or {}
+            for key, actual in (
+                    ("attention_day", doc.get("attention_day")),
+                    ("articles", attention.get("articles")),
+                    ("ratio_to_baseline", attention.get("ratio_to_baseline")),
+                    ("has_fts_plan_match", money.get("has_fts_plan_match")),
+                    ("plan_requirements_usd", money.get("plan_requirements_usd")),
+                    ("plan_funded_usd", money.get("plan_funded_usd"))):
+                if night.get(key) != actual:
+                    problems.append(
+                        f"resolution {fid}: reaction night {night.get('date')} "
+                        f"{key} says {night.get(key)!r}, the reading says "
+                        f"{actual!r}")
+
+        measured = series.get("measured") or {}
+        if measured.get("nights_watched") != len(nights):
+            problems.append(f"resolution {fid}: nights_watched "
+                            f"{measured.get('nights_watched')!r} against "
+                            f"{len(nights)} nights")
+        rated = [n for n in nights if n.get("ratio_to_baseline") is not None]
+        if rated:
+            top = max(rated, key=lambda n: (n["ratio_to_baseline"], n["date"]))
+            if (measured.get("attention_peak") or {}).get("date") != top["date"]:
+                problems.append(f"resolution {fid}: attention peak is not the "
+                                f"loudest committed night ({top['date']})")
+        funded = [n for n in nights if n.get("plan_funded_usd") is not None
+                  and n.get("has_fts_plan_match")]
+        if funded:
+            delta = funded[-1]["plan_funded_usd"] - funded[0]["plan_funded_usd"]
+            if measured.get("money_funded_delta_usd") != delta:
+                problems.append(
+                    f"resolution {fid}: money delta "
+                    f"{measured.get('money_funded_delta_usd')!r} against {delta} "
+                    "from the readings")
+        elif measured.get("money_plan_match") is not False:
+            problems.append(f"resolution {fid}: no funded night, but the "
+                            "record does not say the plan match is absent")
+        if not series.get("limits"):
+            problems.append(f"resolution {fid}: reaction series without its "
+                            "own limits in the record")
+
+
 def check_anchors(root: Path, problems: list[str]) -> None:
     """The OpenTimestamps anchors (D2): the ledger's claims against the bytes.
 
@@ -1193,6 +1288,7 @@ def check(root: Path) -> list[str]:
                                 "not manifested")
 
     check_reaction(root, registry, registry_files, problems)
+    check_foreknown_reaction_series(root, problems)
     check_darkocean(root, registry_files, problems)
     check_darkocean_continuity(root, registry_files, problems)
     check_memoryhole(root, registry_files, problems)
