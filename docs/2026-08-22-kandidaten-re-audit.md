@@ -32,7 +32,19 @@ durch die Aktivierungs-Unterlagen sogar **härter** geworden. Der dritte steht u
 ## 2. Was seit dem 2026-08-09 tatsächlich erlaubt ist
 
 GCP darf **nur in Batch-Schritten der Pipelines** vorkommen, nie zur Laufzeit der Site;
-Git bleibt das Archiv. Aktiviert sind **G1 BigQuery-GDELT** (live geprüft am 09.08.,
+Git bleibt das Archiv.
+
+> **Anmerkung 2026-08-22, abends — der zweite Halbsatz zitiert eine zurückgezogene
+> Klausel.** Für GCP stimmt der Satz weiter: die Aktivierung handelt von BigQuery und von
+> Pipelines, und die Site liest zur Laufzeit nicht aus BigQuery. Verallgemeinert wurde
+> daraus im Site-Repo ein „nie zur Laufzeit der Site", das **kein Beschluss Franks war**
+> und am selben Abend zurückgezogen wurde (Site-PR #728): die Site hat eine Laufzeit und
+> hatte immer eine, die Archivpflicht bindet **Befunde**, und Werke dürfen Zustand halten —
+> unter sechs Beweispflichten, auf Cloudflare, nicht auf GCP. Hier steht die
+> verallgemeinerte Fassung, weil sie zur Mittagszeit noch in der Wortlaut-Datei stand. Der
+> Absatz bleibt stehen, wie er geschrieben wurde; korrigiert wird er datiert, nicht
+> überschrieben. Für diesen Re-Audit ändert das nichts: kein Kandidat hier hängt an
+> Laufzeit-Zustand, und die drei Blocker liegen sämtlich vor der Frage. Aktiviert sind **G1 BigQuery-GDELT** (live geprüft am 09.08.,
 30,4 MB billed ≈ 0,003 % des monatlichen Freikontingents, 0 €) und **G5 Earth Engine
 Sentinel-1** unter Null-Kosten-Vorbehalt und ausdrücklich **nur für den
 Dark-Ocean-V1-Pfad**. Bedingungen je Schritt: Trace committen (Query, Job-ID, bytes
