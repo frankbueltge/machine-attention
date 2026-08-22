@@ -84,6 +84,26 @@ hazard; attention is measured for the *country*, not the hazard. Design,
 source probes and the honest limits:
 [`docs/2026-08-08-reaktions-achse.md`](docs/2026-08-08-reaktions-achse.md).
 
+### E1, reviewed 2026-08-22
+
+The first end-to-end experiment **did not pass — on two of four criteria,
+and both are build gaps, not findings**
+([`docs/2026-08-22-foreknown-e1-review.md`](docs/2026-08-22-foreknown-e1-review.md)).
+E1 asked for announced futures from at least three sources; there are 112 of
+them, from two. It asked for one full cycle from warning to resolution
+carrying a money and an attention time series; 15 resolutions exist and not
+one of them carries either — while both have been measured per future
+every night since 2026-08-08 and never joined to the resolution record. The
+stage, the provenance verifier and the autonomy trace hold, and the honesty
+criterion is met well past its minimum: of 15 resolutions, **none
+materialized as an alert**.
+
+The register's own headline says the rest. Of 97 source-open futures, **93
+were already announced before this machine first looked** — 4 arose under
+watch. A repeat window will therefore count closed cycles rather than nights,
+and its criteria will be committed only after the third source and the
+reaction join exist, not before.
+
 Ethics, constitutive: the subject is the warning system and institutional
 time — never the victims. No natural persons, no accusations, no risk
 forecasts of our own. Sobriety is the register.
@@ -94,7 +114,7 @@ full project of this practice with no stage claim — it may produce nothing for
 and that is allowed. "Background project" was the wrong word for it and was dropped on
 2026-08-09 when the house settled its vocabulary.
 
-## Dark Ocean — V0, admitted 2026-08-09
+## Dark Ocean — instrument since 2026-08-22 (V0 admitted 2026-08-09)
 
 > Ships tell the world where they are. Satellites can see where they
 > actually are. The two views do not always agree.
@@ -108,19 +128,37 @@ issuer's own checksums — scene bytes are never fetched) against how the
 declared ocean distributed itself in one agency AIS sample. Counts only,
 no vessel identities; the per-moment axis (DMA day dumps) is probed
 nightly and its outage recorded, never bridged. Records live in
-`darkocean/`; **no stage presence until the project passes its
-E-experiment** (admission path, stage 5). Origin:
+`darkocean/`; there is no stage presence, and after the review of 2026-08-22
+there will not be one. Origin:
 [The Ghost Fleet](https://frankbueltge.de/ghost-fleet/), which keeps
 running unchanged.
 
-The **E-experiment runs 2026-08-09/10 → 2026-08-22/23, review 2026-08-24**;
-its acceptance criteria were committed before the window opened and bind
-from its first night —
-[`docs/2026-08-09-dark-ocean-e-experiment-kriterien.md`](docs/2026-08-09-dark-ocean-e-experiment-kriterien.md).
-Three outcomes are possible, not two: RUNNING as flagship, RUNNING as a
-quiet instrument, or an honest RETIRED. The two readings already committed
-(2026-08-07, 2026-08-08) predate the criteria and count as baseline
-context, not as evidence.
+**Reviewed 2026-08-22: the E-experiment did not pass, and the stage
+ambition ends here** —
+[`docs/2026-08-22-dark-ocean-e-review.md`](docs/2026-08-22-dark-ocean-e-review.md),
+against criteria committed before the window opened
+([`docs/2026-08-09-dark-ocean-e-experiment-kriterien.md`](docs/2026-08-09-dark-ocean-e-experiment-kriterien.md)).
+Two things failed, and only one of them was bad luck. The sample-hour
+criterion became unreachable after two nights were lost to a deadlock in
+this repository's own machinery and two repair runs pulled their samples
+hours off schedule — at most 10 of the required 12 disciplined nights
+remained, an arithmetic that was computed and committed on 2026-08-14, eight
+days before the review. The structural failure weighs more: the per-moment
+declared axis never arrived. DMA's day dumps were unreachable on every one of
+the 13 nights on record, so the headline number stayed a statement about
+receiver geography and one sampling instant, and the strongest true sentence
+after the window was that two registers overlap and one of them never
+contradicts itself.
+
+That sentence is an instrument reading, not a stage moment — which the
+criteria had said in advance, in the negative, so that it would bite. So the
+**continuity notary keeps running as an instrument**: every night it asks a
+public archive whether it still says what it said, keyless, at no cost, with
+**0 divergences in 3,571 re-asked catalog rows** over 11 nights. That null is
+carried in the practice's export, not left implicit in a green run. The
+built draft stays under `darkocean/draft/`, `noindex`, as a dated artefact of
+the window; nothing is deleted, nothing is backfilled. The two pre-window
+readings (2026-08-07, 2026-08-08) never counted as evidence.
 
 ## Memory Hole — V0, admitted 2026-08-15
 
@@ -142,8 +180,27 @@ the word "gone" appears. A model layer runs only where the rules abstain,
 capped at 40 classifications a night, batched, every verdict marked as an
 estimate; without a key it says so and the night proceeds.
 
-Records live in `memoryhole/`; **no stage presence until the project passes
-its E-experiment** (admission path, stage 5). Origin:
+**Acceptance criteria committed 2026-08-22** —
+[`docs/2026-08-22-memory-hole-e-experiment-kriterien.md`](docs/2026-08-22-memory-hole-e-experiment-kriterien.md).
+They arrive seven days late: the nightly readings started on 2026-08-13
+without a declared window, so **those eight nights count as context, not as
+evidence**, the same discipline Dark Ocean applied to its own pre-window
+nights. The window does not open on the criteria's date either — three
+build conditions come first, each one a lesson from the review published the
+same day: the two deletion-detection bugs this project found in its own
+origin get fixed there first; the archive fetch gets retry discipline and
+proves three consecutive nights of real sample pairs, because otherwise every
+yield number measures the Wayback Machine's availability instead of an
+institution's behaviour; and the semantic layer's verdict route produces one
+committed file, because a criterion about rules-versus-model cannot be
+measured while no verdict exists. The yield bar (≥ 4 nights of 14 with a
+validated semantic event) stays exactly where the audit put it, although the
+eight context nights suggest it will be missed — lowering a threshold in
+the knowledge of the data is the moving bar that just cost the sibling
+project its stage.
+
+Records live in `memoryhole/`; no stage presence until the project passes its
+E-experiment (admission path, stage 5). Origin:
 [Editorial Deadline / The Redaction](https://frankbueltge.de/redaction/),
 which keeps running unchanged — Memory Hole doubles none of its 32 pages.
 
