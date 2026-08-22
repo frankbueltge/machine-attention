@@ -94,6 +94,13 @@ def figures(repo_root: Path) -> list[dict]:
     # A resolution whose future was already historical at first sight closes
     # a record, not a cycle. The practice reports both numbers or neither.
     watched = sum(1 for r in resolutions if r.get("cold_start") is False)
+    # Composition, because the third source arrived on 2026-08-22 and a
+    # register that grows without saying where the growth came from is a
+    # figure that misleads while every number in it is true.
+    by_source: dict[str, int] = {}
+    for future in futures.values():
+        name = str(future.get("source") or "unknown").lower()
+        by_source[name] = by_source.get(name, 0) + 1
     as_of = nights[-1] if nights else ""
     # The epistemic split of the source-open register, by the same rule the
     # stage uses (deterministic against the last run date, never the wall
@@ -134,6 +141,11 @@ def figures(repo_root: Path) -> list[dict]:
          "as_of": continuity[-1].stem if continuity else as_of},
         {"key": "memoryhole_nights_on_record", "value": len(memoryhole),
          "as_of": memoryhole[-1].stem if memoryhole else as_of},
+        {"key": "sources_in_register", "value": len(by_source),
+         "as_of": as_of},
+    ] + [
+        {"key": f"futures_notarized_{name}", "value": count, "as_of": as_of}
+        for name, count in sorted(by_source.items())
     ]
 
 

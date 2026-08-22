@@ -34,6 +34,7 @@ def _fixture_repo(tmp_path: Path) -> Path:
     responses = {
         sources.GDACS_URL: (json.dumps(GDACS_FIXTURE).encode(), 200),
         sources.NHC_URL: (json.dumps({"activeStorms": []}).encode(), 200),
+        sources.NWS_URL: (json.dumps({"features": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps(PLANS).encode(), 200),
         reaction.FTS_FUNDING_URL: (json.dumps(FUNDING).encode(), 200),
         attention.FIPS_LOOKUP_URL: (FIPS_LOOKUP, 200),
