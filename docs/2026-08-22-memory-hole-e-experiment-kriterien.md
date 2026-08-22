@@ -26,11 +26,12 @@ dessen tragendes Kriterium von der eigenen, noch reparaturbedürftigen Infrastru
 abhängt, misst die Infrastruktur; und ein Kriterium, das eine nicht erreichbare Quelle
 voraussetzt, ist ein Versprechen. Beide Fehler drohen hier unmittelbar. Deshalb:
 
-**B-1 — Auflage 5 des GO ist eingelöst.** Die zwei im Audit gefundenen Origin-Bugs
-(4xx-Aufnahme als Löschung ohne Nachprüfung; WAF-Challenge-Seite als HTTP 200 archiviert)
-werden im Origin behoben, als eigener PR, bevor Memory Hole ein Fenster eröffnet. Offen
-seit dem 2026-08-15. Wer ein Instrument über die Vergangenheit anderer betreibt, während
-sein eigener Vorläufer nachweislich falsch löscht, misst nichts.
+**B-1 — Auflage 5 des GO ist eingelöst. ERFÜLLT, siehe Nachtrag §8.** Die zwei im Audit
+gefundenen Origin-Bugs (4xx-Aufnahme als Löschung ohne Nachprüfung; WAF-Challenge-Seite als
+HTTP 200 archiviert) sind im Origin behoben — als eigener PR, am Abend desselben Tages, an
+dem das Audit sie fand. Diese Bedingung war bei Abfassung dieses Dokuments bereits
+eingelöst; sie stand acht Tage lang nur deshalb als offen, weil niemand es aufgeschrieben
+hat.
 
 **B-2 — Die Abruf-Zuverlässigkeit ist gebaut und belegt.** In den acht Vor-Fenster-Nächten
 lagen die Ausfälle zwischen 1 und 30 je Nacht (überwiegend HTTP 504 der Wayback-Machine),
@@ -144,3 +145,37 @@ das täglich nichts findet und trotzdem täglich spricht.
    nicht die Idee. Steht so im Methodenblatt, bevor irgendetwas behauptet wird.
 4. **19 % HTTP 504 bei Nebenläufigkeit 4**, Latenzen 1,3–60 s, keine 429er: Unzuverlässigkeit
    ist die Fehlerform, nicht Throttling. Genau dagegen steht B-2.
+
+## 8. Nachtrag, 2026-08-22 abends: B-1 war längst erfüllt
+
+Zulässig nach §0 — das Fenster ist nicht eröffnet, und ein datierter Nachtrag mit
+Begründung ist bis Nacht 1 erlaubt.
+
+**Der Befund.** Die Origin-Reparatur, die dieses Dokument heute Mittag als offene
+Bedingung geführt hat, ist am **2026-08-14, 22:23 UTC** gemergt worden (PR #624 im
+Site-Repo, „page-validity gate + live-checked deletions") — rund eine Stunde nach dem
+Audit, das die zwei Fehler gefunden hatte. Gebaut sind genau die verlangten Teile: ein
+Gültigkeitsgate mit versionierter Challenge-Fingerprint-Liste, und ein 4xx, das nur nach
+Live-Nachprüfung „gone" heißen darf, mit den Disclosure-Klassen getrennt. Sechs Tests
+sichern beides, die Pipeline-Suite läuft grün.
+
+**Warum es acht Tage lang offen aussah.** Der V0-Baubericht vom 2026-08-15 führte Auflage 5
+als „noch nicht erledigt", und niemand hat den Eintrag angefasst, nachdem sie erledigt war.
+Im Entscheidungs-Log der Site steht zu diesem PR **keine Zeile**. Eine Reparatur, die
+gebaut, getestet und ausgeliefert ist, aber in keinem Record steht, ist für jeden
+Nachfolgenden nicht passiert — das ist dieselbe Krankheit wie die Parkzettel der Kandidaten
+(Re-Audit vom selben Tag) und wie Memory Hole, das zwei Wochen lang nicht im Export stand.
+Dreimal an einem Tag dasselbe Muster: nicht fehlende Arbeit, sondern nicht nachgeführte
+Records.
+
+**Was der Fix im Archiv sichtbar macht — und was bleibt.** Aus den committeten Tages-Records
+nachgerechnet: **50 Nächte vor dem Fix tragen 98 Records der Art `deletion`; 97 davon
+stehen auf HTTP 403 der jüngsten Aufnahme** — exakt das Bot-Wall-Muster, das heute
+ausgeschlossen wird — und einer auf 404 ohne Live-Bestätigung. In den **9 Nächten seit dem
+Fix: null Löschbehauptungen.** Die alten Records werden **nicht umgeschrieben** — das Archiv
+ist append-only, und ein Instrument über die Umschreibung von Vergangenheit schreibt seine
+eigene nicht um. Die Zahl gehört stattdessen offengelegt, datiert, im Methodenblatt des
+Origin; das geschieht in derselben Sitzung.
+
+**Für dieses Fenster gilt damit:** B-1 ist erfüllt. Es bleiben **B-2** (Retry-Disziplin,
+über drei Nächte belegt) und **B-3** (ein committetes Verdikt-File) vor Nacht 1.
