@@ -13,8 +13,10 @@ Two public axes, both keyless (audited 2026-08-08, live probes):
   visibility boundary, which is part of the subject, not a nuisance.
 
 DMA (Denmark) day dumps would carry the per-moment declared axis; the
-source failed three probes on 2026-08-08 and is probed (never fetched)
-each night until it answers — an outage is recorded, not bridged.
+source failed its first three probes on 2026-08-08 and has not answered
+on any night recorded since (foreknown/proposals/obs-2026-08-22-1.json)
+— it is probed (never fetched) each night until it answers; an ongoing
+outage is recorded, not bridged.
 """
 
 from __future__ import annotations
@@ -33,8 +35,9 @@ DIGITRAFFIC_URL = "https://meri.digitraffic.fi/api/ais/v1/locations"
 DMA_URL = "http://web.ais.dk/aisdata/"
 
 DMA_NOTE = ("would carry the per-moment declared axis (full-day position "
-            "dumps); reachability is probed nightly and the adapter is the "
-            "recorded next step for the first night the source answers")
+            "dumps); reachability is probed nightly and has not once "
+            "answered since probing began (2026-08-08); the adapter is "
+            "the recorded next step for the first night the source answers")
 
 
 def cdse_url(day: str) -> str:

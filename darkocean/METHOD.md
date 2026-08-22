@@ -134,9 +134,11 @@ finding. If the notarial act is not the headline, the work has no case.
 | [Digitraffic](https://meri.digitraffic.fi) AIS locations (Fintraffic) | positions at read time, reduced to per-bin counts before anything is written | Fintraffic open data, CC BY 4.0 — attribution travels with the derived records |
 | Danish Maritime Authority daily AIS dumps | the moment axis — **probed nightly, not yet fetched** | probed only; the source's return becomes visible in the record |
 
-**Failures are recorded, never bridged.** The DMA outage of 2026-08-08 stands in the
-record as an outage; a source that stops answering makes the register smaller and says
-so. `http_status` and `retrieved_at` are preserved per file in each day's manifest.
+**Failures are recorded, never bridged.** The DMA source has failed every probe since
+its first on 2026-08-08 and has not answered on any night recorded since
+(`foreknown/proposals/obs-2026-08-22-1.json`); a source that stops answering makes the
+register smaller and says so. `http_status` and `retrieved_at` are preserved per file
+in each day's manifest.
 
 **Compute footprint.** Keyless HTTP only: two documents per night (~0.5 MB), no scene
 bytes, no cloud service, a few seconds of a GitHub Actions runner. Nothing in the V0
