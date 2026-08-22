@@ -1,10 +1,73 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "031119f",
+    "commit": "eef7658",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nhc-cp022026.html",
+      "evidence": "foreknown/snapshots/2026-08-22/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 24 hours after it was first preserved.",
+      "subject": "Moke (TS)"
+    },
+    {
+      "enter": "/attention/future/nhc-cp012026.html",
+      "evidence": "foreknown/snapshots/2026-08-22/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 9 days after it was first preserved.",
+      "subject": "Lala (HU)"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027465.html",
+      "evidence": "foreknown/snapshots/2026-08-22/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 14 days after it was first preserved.",
+      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027450.html",
+      "evidence": "foreknown/snapshots/2026-08-22/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 14 days after it was first preserved.",
+      "subject": "Drought in Eritrea, Ethiopia, Kenya, Somalia"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027449.html",
+      "evidence": "foreknown/snapshots/2026-08-22/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 4 days after it was first preserved.",
+      "subject": "Drought in Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-08-22/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 14 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-08-22/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-08-22T05:58:52+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 14 days after it was first preserved.",
+      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
+    },
     {
       "enter": "/attention/future/nhc-cp022026.html",
       "evidence": "foreknown/snapshots/2026-08-21/nhc-current-storms.json",
@@ -12,7 +75,7 @@
       "occurred_at": "2026-08-21T06:02:20+00:00",
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
-      "subject": "Two-C (TD)"
+      "subject": "Moke (TS)"
     },
     {
       "enter": "/attention/future/nhc-cp012026.html",
@@ -841,69 +904,6 @@
       "project": "foreknown",
       "statement": "A warning changed 4 days after it was first preserved.",
       "subject": "Drought in Madagascar"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018332.html",
-      "evidence": "foreknown/snapshots/2026-08-12/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-12T22:14:16+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 4 days after it was first preserved.",
-      "subject": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001297.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "correction",
-      "occurred_at": "2026-08-09T14:50:39+00:00",
-      "project": "foreknown",
-      "statement": "The machine corrected its own record — the feed had said it all along.",
-      "subject": "Tropical Cyclone DOLPHIN-26"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001281.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "correction",
-      "occurred_at": "2026-08-09T14:50:39+00:00",
-      "project": "foreknown",
-      "statement": "The machine corrected its own record — the feed had said it all along.",
-      "subject": "Tropical Cyclone MAYSAK-26"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001270.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "correction",
-      "occurred_at": "2026-08-09T14:50:39+00:00",
-      "project": "foreknown",
-      "statement": "The machine corrected its own record — the feed had said it all along.",
-      "subject": "Tropical Cyclone SINLAKU-26"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001219.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "correction",
-      "occurred_at": "2026-08-09T14:50:39+00:00",
-      "project": "foreknown",
-      "statement": "The machine corrected its own record — the feed had said it all along.",
-      "subject": "Tropical Cyclone MATMO-25"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001214.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "correction",
-      "occurred_at": "2026-08-09T14:50:39+00:00",
-      "project": "foreknown",
-      "statement": "The machine corrected its own record — the feed had said it all along.",
-      "subject": "Tropical Cyclone BUALOI-25"
-    },
-    {
-      "enter": "/attention/future/gdacs-tc-1001199.html",
-      "evidence": "foreknown/snapshots/2026-08-09/gdacs.json",
-      "mode": "correction",
-      "occurred_at": "2026-08-09T14:50:39+00:00",
-      "project": "foreknown",
-      "statement": "The machine corrected its own record — the feed had said it all along.",
-      "subject": "Tropical Cyclone KAJIKI-25"
     }
   ],
   "practice": {
