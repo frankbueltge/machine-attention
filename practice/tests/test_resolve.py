@@ -104,11 +104,13 @@ def test_nightly_run_resolves_a_dissipated_forecast(tmp_path: Path):
     night1 = {
         sources.GDACS_URL: (json.dumps(GDACS_FIXTURE).encode(), 200),
         sources.NHC_URL: (json.dumps(NHC_STORM).encode(), 200),
+        sources.NWS_URL: (json.dumps({"features": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
     }
     night2 = {
         sources.GDACS_URL: (json.dumps(GDACS_FIXTURE).encode(), 200),
         sources.NHC_URL: (json.dumps({"activeStorms": []}).encode(), 200),
+        sources.NWS_URL: (json.dumps({"features": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
     }
     run(tmp_path, "2026-08-08", FakeClient(night1))
@@ -197,3 +199,36 @@ def test_resolution_carries_what_moved_while_the_clock_ran(tmp_path: Path):
     written = read_json(tmp_path / "foreknown" / "resolutions" / f"{fid}.json")
     assert written["reaction"]["measured"]["money_funded_delta_usd"] == 35
     assert written["reaction"]["measured"]["attention_peak"]["ratio_to_baseline"] == 2.6
+
+
+def test_escalation_reads_the_top_of_whichever_ladder_the_source_uses():
+    # CAP climbs to Extreme, GDACS to Red. The third source arrived on
+    # 2026-08-22 with its own ladder; neither is mixed into the other.
+    cap = _tc_future(id="nws-koun-tow-0012-26", source="NWS", severity="Extreme",
+                     history=[
+        {"ts": "2026-08-22T05:00:00+00:00", "event": "NOTARIZED", "snapshot": "a"},
+        {"ts": "2026-08-22T07:00:00+00:00", "event": "REVISED",
+         "changes": {"severity": {"from": "Severe", "to": "Extreme"}},
+         "snapshot": "b"},
+    ])
+    resolution = resolve.resolve_future(cap, {cap["id"]: cap}, "2026-08-22")
+    assert resolution["measured"]["severity_path"] == ["Severe", "Extreme"]
+    assert resolution["measured"]["escalated"] is True
+
+    # The existing reading is unchanged: a level reached after the first
+    # sighting counts even if the alert later stepped back down.
+    gdacs = _tc_future(history=[
+        {"ts": "2026-08-08T05:46:00+00:00", "event": "NOTARIZED", "snapshot": "a"},
+        {"ts": "2026-08-09T05:46:00+00:00", "event": "REVISED",
+         "changes": {"severity": {"from": "Orange", "to": "Red"}}, "snapshot": "b"},
+        {"ts": "2026-08-10T05:46:00+00:00", "event": "REVISED",
+         "changes": {"severity": {"from": "Red", "to": "Orange"}}, "snapshot": "c"},
+    ])
+    resolution = resolve.resolve_future(gdacs, {gdacs["id"]: gdacs}, "2026-08-08")
+    assert resolution["measured"]["escalated"] is True
+
+    calm = _tc_future(history=[
+        {"ts": "2026-08-08T05:46:00+00:00", "event": "NOTARIZED", "snapshot": "a"},
+    ])
+    resolution = resolve.resolve_future(calm, {calm["id"]: calm}, "2026-08-08")
+    assert resolution["measured"]["escalated"] is False

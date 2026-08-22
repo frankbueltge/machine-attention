@@ -31,6 +31,9 @@ REACTION_BACKFILL_DAYS = 3
 FEEDS = (
     ("GDACS", sources.GDACS_URL, "gdacs.json", sources.gdacs_futures),
     ("NHC", sources.NHC_URL, "nhc-current-storms.json", sources.nhc_futures),
+    # Third source since 2026-08-22, the day E1 was reviewed and found short of
+    # the three it asked for (docs/2026-08-22-foreknown-e1-review.md).
+    ("NWS", sources.NWS_URL, "nws-alerts-active.json", sources.nws_futures),
 )
 
 

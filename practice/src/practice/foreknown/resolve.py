@@ -24,6 +24,7 @@ EPISODE_ENDED = "EPISODE_ENDED"
 MATERIALIZED_AS_ALERT = "MATERIALIZED_AS_ALERT"
 NO_ALERT_MATCH = "NO_ALERT_MATCH"
 VERDICTS = (EPISODE_ENDED, MATERIALIZED_AS_ALERT, NO_ALERT_MATCH)
+TOP_OF_LADDER = frozenset({"Red", "Extreme"})
 
 _STORM_STOPWORDS = {"TROPICAL", "CYCLONE", "HURRICANE", "STORM", "TYPHOON",
                     "DEPRESSION", "POTENTIAL", "SUBTROPICAL", "SUPER"}
@@ -79,7 +80,12 @@ def resolve_future(future: dict, registry_futures: dict,
         "measured": {
             "revisions": revisions,
             "severity_path": severity_path,
-            "escalated": "Red" in severity_path[1:] and severity_path[0] != "Red",
+            # The top of whichever ladder the source uses. GDACS climbs to
+            # Red, CAP to Extreme; the ladders are never mixed, and the
+            # existing reading is unchanged — a level reached after the first
+            # sighting counts even if the alert later stepped back down.
+            "escalated": (any(s in TOP_OF_LADDER for s in severity_path[1:])
+                          and severity_path[0] not in TOP_OF_LADDER),
         },
         "evidence": _evidence(future),
     }

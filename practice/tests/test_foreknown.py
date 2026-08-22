@@ -217,13 +217,16 @@ def test_notary_run_end_to_end(tmp_path: Path):
     responses = {
         sources.GDACS_URL: (json.dumps(GDACS_FIXTURE).encode(), 200),
         sources.NHC_URL: (json.dumps({"activeStorms": []}).encode(), 200),
+        sources.NWS_URL: (json.dumps({"features": []}).encode(), 200),
         sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
     }
     summary = run(tmp_path, "2026-08-08", FakeClient(responses))
     assert summary["notarized"] == 2 and summary["failures"] == 0
 
     manifest = read_json(tmp_path / "foreknown/snapshots/2026-08-08/manifest.json")
-    assert len(manifest["entries"]) == 3
+    # Three warning feeds and the funding axis, since the third source was
+    # added on 2026-08-22.
+    assert len(manifest["entries"]) == 4
     registry = read_json(tmp_path / "foreknown/registry.json")
     anchor = registry["futures"]["gdacs-tc-1001297"]["history"][0]["snapshot"]
     assert anchor == "foreknown/snapshots/2026-08-08/gdacs.json"
@@ -298,3 +301,87 @@ def test_correction_repairs_committed_futures_as_ours_not_as_a_revision(
     log = (tmp_path / "autonomy/log.jsonl").read_text().splitlines()
     assert _json.loads(log[0])["step"] == "foreknown-correct-primary-iso3"
     assert _json.loads(log[0])["corrected_by"].startswith("the machine's")
+
+
+# --- the third source, added 2026-08-22 after the E1 review ---------------
+
+def _nws_alert(vtec: str, event: str = "Flood Warning", severity: str = "Severe",
+               onset: str = "2026-08-22T10:11:00-05:00",
+               ends: str = "2026-08-23T01:00:00-05:00",
+               area: str = "Piatt, IL", ident: str = "urn:oid:1.001.1") -> dict:
+    return {"properties": {
+        "@id": f"https://api.weather.gov/alerts/{ident}", "id": ident,
+        "event": event, "severity": severity, "urgency": "Expected",
+        "certainty": "Likely", "onset": onset, "effective": onset,
+        "ends": ends, "expires": ends, "areaDesc": area,
+        "senderName": "NWS Lincoln IL", "messageType": "Alert",
+        "parameters": {"VTEC": [vtec]}}}
+
+
+def test_vtec_identity_follows_the_event_not_the_message():
+    # An extension is a new CAP message with a new identifier; the office's own
+    # tracking number is the same, and so is the future.
+    first = sources.vtec_id("/O.NEW.KILX.FL.W.0039.260822T1511Z-260823T0600Z/")
+    extended = sources.vtec_id("/O.EXT.KILX.FL.W.0039.000000T0000Z-260824T0600Z/")
+    assert first == extended == "nws-kilx-flw-0039-26"
+
+
+def test_vtec_identity_refuses_watches_endings_and_nonsense():
+    # A watch is not a warning; CAN/EXP/UPG announce an ending, not a future.
+    assert sources.vtec_id("/O.CON.KMFR.FW.A.0012.260822T2100Z-260823T0400Z/") is None
+    assert sources.vtec_id("/O.EXP.KOUN.FF.W.0085.000000T0000Z-260822T1530Z/") is None
+    assert sources.vtec_id("/O.CAN.KOUN.FF.W.0085.260822T1524Z-260822T1530Z/") is None
+    assert sources.vtec_id("no vtec here") is None
+
+
+def test_nws_extraction_keeps_one_future_per_event():
+    feed = {"features": [
+        _nws_alert("/O.NEW.KILX.FL.W.0039.260822T1511Z-260823T0600Z/"),
+        # the same event, extended: one future, not two
+        _nws_alert("/O.EXT.KILX.FL.W.0039.000000T0000Z-260824T0600Z/",
+                   ends="2026-08-24T01:00:00-05:00", ident="urn:oid:1.002.1"),
+        _nws_alert("/O.NEW.KMSO.FW.W.0009.260822T2300Z-260823T1200Z/",
+                   event="Red Flag Warning", area="Western Lolo"),
+        # a watch never enters the register
+        _nws_alert("/O.NEW.KMFR.FW.A.0012.260822T2100Z-260823T0400Z/",
+                   event="Fire Weather Watch"),
+    ]}
+    futures = sources.nws_futures(feed)
+    assert [f["id"] for f in futures] == ["nws-kilx-flw-0039-26",
+                                          "nws-kmso-fww-0009-26"]
+    flood = futures[0]
+    assert flood["source"] == "NWS" and flood["kind"] == "ALERT_EPISODE"
+    assert flood["hazard"] == "flood" and flood["what"] == "Flood Warning"
+    assert flood["iso3"] == ["USA"]
+    # First message wins: the window is the one this practice first saw.
+    assert flood["window"]["to"] == "2026-08-23T01:00:00-05:00"
+    assert sources.nws_futures({"features": []}) == []
+
+
+def test_an_alert_without_a_vtec_number_is_not_notarized():
+    alert = _nws_alert("/O.NEW.KILX.FL.W.0039.260822T1511Z-260823T0600Z/")
+    alert["properties"]["parameters"] = {}
+    assert sources.nws_futures({"features": [alert]}) == []
+
+
+def test_a_warning_extended_over_two_nights_is_revised_not_renotarized(tmp_path: Path):
+    night_one = {"features": [
+        _nws_alert("/O.NEW.KILX.FL.W.0039.260822T1511Z-260823T0600Z/")]}
+    night_two = {"features": [
+        _nws_alert("/O.EXT.KILX.FL.W.0039.000000T0000Z-260824T0600Z/",
+                   ends="2026-08-24T01:00:00-05:00", ident="urn:oid:1.002.1")]}
+    quiet = {"activeStorms": []}
+    for day, feed in (("2026-08-22", night_one), ("2026-08-23", night_two)):
+        responses = {
+            sources.GDACS_URL: (json.dumps({"features": []}).encode(), 200),
+            sources.NHC_URL: (json.dumps(quiet).encode(), 200),
+            sources.NWS_URL: (json.dumps(feed).encode(), 200),
+            sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
+        }
+        summary = run(tmp_path, day, FakeClient(responses))
+    registry = read_json(tmp_path / "foreknown/registry.json")
+    assert list(registry["futures"]) == ["nws-kilx-flw-0039-26"]
+    future = registry["futures"]["nws-kilx-flw-0039-26"]
+    assert [e["event"] for e in future["history"]] == ["NOTARIZED", "REVISED"]
+    assert future["announced_at"][:10] == "2026-08-22"
+    assert future["window"]["to"] == "2026-08-24T01:00:00-05:00"
