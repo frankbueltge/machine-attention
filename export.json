@@ -33,6 +33,11 @@
     },
     {
       "as_of": "2026-08-22",
+      "key": "futures_resolved_under_watch",
+      "value": 2
+    },
+    {
+      "as_of": "2026-08-22",
       "key": "materialized",
       "value": 0
     },
@@ -45,10 +50,25 @@
       "as_of": "2026-08-21",
       "key": "darkocean_nights_on_record",
       "value": 13
+    },
+    {
+      "as_of": "2026-08-21",
+      "key": "darkocean_continuity_rechecks",
+      "value": 3571
+    },
+    {
+      "as_of": "2026-08-21",
+      "key": "darkocean_continuity_divergences",
+      "value": 0
+    },
+    {
+      "as_of": "2026-08-21",
+      "key": "memoryhole_nights_on_record",
+      "value": 8
     }
   ],
   "generated_from": {
-    "commit": "eef7658",
+    "commit": "95792cd",
     "repo": "machine-attention"
   },
   "practice": {
@@ -67,8 +87,15 @@
       "id": "darkocean",
       "since": "2026-08-07",
       "site_route": null,
-      "status": "e-experiment",
+      "status": "instrument",
       "title": "Dark Ocean"
+    },
+    {
+      "id": "memoryhole",
+      "since": "2026-08-15",
+      "site_route": null,
+      "status": "v0",
+      "title": "Memory Hole"
     },
     {
       "id": "state-before-interface",
