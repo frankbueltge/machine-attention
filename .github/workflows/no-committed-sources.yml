@@ -1,0 +1,88 @@
+name: no committed sources
+
+# Guards a repository against committed source material — the failure class that
+# a link audit cannot see. Installed as .github/workflows/no-committed-sources.yml
+#
+# Why: quotation right covers short, attributed quotations, never whole works.
+# A committed PDF or a full-text extraction is the whole work, and on a public
+# repo it is a making-available. Git history is permanent, and this check exists
+# because two cases (a whole book in a private repo, two journal articles on a
+# public night branch) went unnoticed for days in 2026-08.
+#
+# Runs on every push to every branch — not just main. That is the point: both
+# incidents lived outside main.
+#
+# Escape hatch: .sources-allow in the repo root, one glob per line, each with a
+# reason after '#'. Use it for your OWN documents and for texts whose licence
+# permits redistribution (CC BY, CC BY-NC-ND verbatim, public domain) — and name
+# the licence in the reason.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: scan tracked files
+        shell: bash
+        run: |
+          set -uo pipefail
+
+          MAX_TEXT_BYTES=409600   # 400 KB of prose is a dump, not a note — warning only
+
+          allowed() {
+            local f="$1"
+            [ -f .sources-allow ] || return 1
+            while IFS= read -r line; do
+              line="${line%%#*}"
+              line="$(echo "$line" | xargs 2>/dev/null || true)"
+              [ -z "$line" ] && continue
+              case "$f" in
+                $line) return 0 ;;
+              esac
+            done < .sources-allow
+            return 1
+          }
+
+          findings=0
+
+          # 1) source-document file types, whatever their size
+          while IFS= read -r f; do
+            [ -n "$f" ] || continue
+            if allowed "$f"; then
+              echo "note: allowed by .sources-allow — $f"
+            else
+              echo "FAIL: committed source document — $f"
+              findings=$((findings+1))
+            fi
+          done < <(git ls-files | grep -iE '\.(pdf|epub|djvu|mobi|azw3|chm|docx?)$' || true)
+
+          # 2) oversized prose — the full-text-extraction pattern. A WARNING, never
+          #    a failure: practices legitimately commit long traces and journals,
+          #    and a check that cries wolf gets switched off. Only .txt/.md are
+          #    looked at; large .json/.csv are generated data by design.
+          while IFS= read -r f; do
+            [ -n "$f" ] || continue
+            [ -f "$f" ] || continue
+            size=$(wc -c < "$f" | tr -d ' ')
+            [ "$size" -gt "$MAX_TEXT_BYTES" ] || continue
+            allowed "$f" && continue
+            echo "warn: oversized prose file, look once — $f ($size bytes)"
+          done < <(git ls-files | grep -iE '\.(txt|md)$' || true)
+
+          echo
+          if [ "$findings" -gt 0 ]; then
+            echo "$findings finding(s). Sources are read from a local copy and cited by"
+            echo "edition and page; they are not committed. If a file is legitimately"
+            echo "yours or openly licensed, add it to .sources-allow with the reason."
+            exit 1
+          fi
+          echo "clean: no committed source documents, no oversized text dumps."
