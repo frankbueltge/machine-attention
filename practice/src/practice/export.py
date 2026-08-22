@@ -33,8 +33,18 @@ CONTRACT = "attention-export/1"
 PROJECTS = (
     {"id": "foreknown", "title": "The Foreknown", "since": "2026-08-08",
      "site_route": "/attention", "status": "running"},
+    # Reviewed 2026-08-22: the E-experiment did not pass, and the stage
+    # ambition ended with it (docs/2026-08-22-dark-ocean-e-review.md). What
+    # runs on is narrower than the project was — the nightly continuity
+    # notary — so the status word is `instrument`, and the two figures below
+    # carry its null result rather than leaving a green run to imply a find.
     {"id": "darkocean", "title": "Dark Ocean", "since": "2026-08-07",
-     "site_route": None, "status": "e-experiment"},
+     "site_route": None, "status": "instrument"},
+    # Nightly since 2026-08-13, admitted 2026-08-15, absent from this list
+    # until 2026-08-22 — which is why the house could not see it. Its
+    # acceptance criteria are committed; the window has not opened.
+    {"id": "memoryhole", "title": "Memory Hole", "since": "2026-08-15",
+     "site_route": None, "status": "v0"},
     {"id": "state-before-interface", "title": "The State Before the Interface",
      "since": "2026-08-08", "site_route": "/observatory",
      "status": "running"},
@@ -73,6 +83,17 @@ def figures(repo_root: Path) -> list[dict]:
                     (repo_root / "foreknown" / "snapshots").glob("*")
                     if p.is_dir())
     readings = sorted((repo_root / "darkocean" / "readings").glob("*.json"))
+    continuity = sorted((repo_root / "darkocean" / "continuity").glob("*.json"))
+    memoryhole = sorted((repo_root / "memoryhole" / "readings").glob("*.json"))
+    # The continuity notary's whole output is a count and a null. Both are
+    # summed over every committed night, so the figure cannot quietly become
+    # "last night was fine" — a divergence, once found, stays on the record.
+    probes = [read_json(path, {}) for path in continuity]
+    rechecks = sum(int(probe.get("answered") or 0) for probe in probes)
+    divergences = sum(int(probe.get("catches") or 0) for probe in probes)
+    # A resolution whose future was already historical at first sight closes
+    # a record, not a cycle. The practice reports both numbers or neither.
+    watched = sum(1 for r in resolutions if r.get("cold_start") is False)
     as_of = nights[-1] if nights else ""
     # The epistemic split of the source-open register, by the same rule the
     # stage uses (deterministic against the last run date, never the wall
@@ -98,6 +119,8 @@ def figures(repo_root: Path) -> list[dict]:
         {"key": "futures_notarized_total", "value": len(futures),
          "as_of": as_of},
         {"key": "futures_resolved", "value": len(resolutions), "as_of": as_of},
+        {"key": "futures_resolved_under_watch", "value": watched,
+         "as_of": as_of},
         {"key": "materialized",
          "value": sum(1 for r in resolutions
                       if r.get("verdict") == "MATERIALIZED_AS_ALERT"),
@@ -105,6 +128,12 @@ def figures(repo_root: Path) -> list[dict]:
         {"key": "nights_on_record", "value": len(nights), "as_of": as_of},
         {"key": "darkocean_nights_on_record", "value": len(readings),
          "as_of": readings[-1].stem if readings else as_of},
+        {"key": "darkocean_continuity_rechecks", "value": rechecks,
+         "as_of": continuity[-1].stem if continuity else as_of},
+        {"key": "darkocean_continuity_divergences", "value": divergences,
+         "as_of": continuity[-1].stem if continuity else as_of},
+        {"key": "memoryhole_nights_on_record", "value": len(memoryhole),
+         "as_of": memoryhole[-1].stem if memoryhole else as_of},
     ]
 
 
