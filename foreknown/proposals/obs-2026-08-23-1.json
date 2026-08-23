@@ -1,0 +1,28 @@
+{
+  "id": "obs-2026-08-23-1",
+  "date": "2026-08-23",
+  "kind": "difference_observation",
+  "title": "Six consecutive nights of zero attention-axis coverage for an open Orange drought episode, because none of its six countries had ever reached the iso3-FIPS crosswalk",
+  "statement": "foreknown/reaction/readings/2026-08-18.json through foreknown/reaction/readings/2026-08-23.json -- six consecutive nightly readings, the entire life of the future so far -- all record gdacs-dr-1027449 (announced 2026-08-18T05:59:34+00:00, kind ALERT_EPISODE, severity Orange, status OPEN, window revised forward every single night since: 2026-08-19 through 2026-08-23, all six countries the same rolling-window pattern sensor-drought-window-class-crossing.json already tracks) with `fips: []`, `unmapped_iso3: [\"BLZ\", \"GTM\", \"HND\", \"MEX\", \"NIC\", \"SLV\"]`, and `attention: null`. practice/src/practice/foreknown/reaction.py's attention_entry (line ~143) returns None outright when the fips list is empty, so this is not partial degraded coverage -- it is complete: every one of the future's six countries (Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador) was simply absent from foreknown/reaction/iso3-fips.json's entries table before tonight, so the crosswalk had nothing to offer this future from the night it was first notarized.",
+  "method": "python3 read of every foreknown/reaction/readings/2026-08-1[8-9].json and 2026-08-2[0-3].json, extracting futures['gdacs-dr-1027449'].fips/unmapped_iso3/attention from each. Cross-checked foreknown/registry.json's futures['gdacs-dr-1027449'] to confirm it is the only future carrying this shape (looped unmapped_iso3 over every entry in the newest reading; gdacs-dr-1027449 was the sole non-empty result). Read practice/src/practice/foreknown/reaction.py's attention_entry and build_reading to confirm an empty fips list produces attention: null rather than a partial figure. Checked all six missing codes' FIPS 10-4 equivalents against the newest preserved GDELT list, foreknown/reaction/snapshots/2026-08-23/fips-country.txt, and against every fips value already in the crosswalk's entries, to rule out a collision before proposing the addition.",
+  "figures": {
+    "future": "gdacs-dr-1027449",
+    "consecutive_readings_with_zero_coverage": 6,
+    "readings_span": ["2026-08-18", "2026-08-23"],
+    "countries_missing_from_crosswalk": ["BLZ", "GTM", "HND", "MEX", "NIC", "SLV"],
+    "other_futures_with_unmapped_iso3_tonight": 0
+  },
+  "derived_from": [
+    "foreknown/reaction/readings/2026-08-18.json",
+    "foreknown/reaction/readings/2026-08-19.json",
+    "foreknown/reaction/readings/2026-08-20.json",
+    "foreknown/reaction/readings/2026-08-21.json",
+    "foreknown/reaction/readings/2026-08-22.json",
+    "foreknown/reaction/readings/2026-08-23.json",
+    "foreknown/registry.json",
+    "foreknown/reaction/snapshots/2026-08-23/fips-country.txt",
+    "practice/src/practice/foreknown/reaction.py"
+  ],
+  "worth_watching_because": "The crosswalk's own scope note already treats this as an expected, visible-not-silent condition ('an iso3 with no entry is recorded as unmapped_iso3 ... so a gap is visible in the record instead of silently reading as zero attention. The table grows when the record shows it must') -- the mechanism worked exactly as designed, six times over, and nothing acted on what it surfaced until tonight. That gap between 'visible' and 'acted on' is the difference worth recording: a per-reading field that only a reader who diffs readings against the crosswalk would ever notice is not the same as a field a person is looking at nightly, and six nights is roughly the same order of magnitude as the 2026-08-13 revision's own gap (that one closed one day after its triggering reading; this one had six days to close and did not, until this pass).",
+  "left_alone": "The crosswalk addition itself is proposed and applied as a repair below (foreknown/reaction/iso3-fips.json, revision dated 2026-08-24 rather than 2026-08-23 because foreknown/reaction/readings/2026-08-23.json is already committed and reaction.py's run_reaction refuses to regenerate a written reading -- I3, append-only -- so the fix takes effect from the next reading rather than retroactively). Not proposing a sensor for the general shape (a future whose entire country list sits outside the crosswalk) -- with only one instance observed and the crosswalk's stated policy already surfacing every case as unmapped_iso3 in the committed record, a threshold has nothing yet to distinguish from a one-off, the same reasoning obs-2026-08-13-2.json and obs-2026-08-22-1.json gave for not proposing a sensor over a single-shape, small-sample gap. Not widening the check to non-GDACS sources or to iso3 codes that have not yet appeared in any future -- the crosswalk's own scope note commits it to growing reactively, not preemptively, and this observation does not second-guess that."
+}

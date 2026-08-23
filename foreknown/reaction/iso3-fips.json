@@ -40,6 +40,10 @@
       "fips": "BO",
       "gdelt_name": "Belarus"
     },
+    "BLZ": {
+      "fips": "BH",
+      "gdelt_name": "Belize"
+    },
     "BMU": {
       "fips": "BD",
       "gdelt_name": "Bermuda"
@@ -108,9 +112,17 @@
       "fips": "GR",
       "gdelt_name": "Greece"
     },
+    "GTM": {
+      "fips": "GT",
+      "gdelt_name": "Guatemala"
+    },
     "GUM": {
       "fips": "GQ",
       "gdelt_name": "Guam"
+    },
+    "HND": {
+      "fips": "HO",
+      "gdelt_name": "Honduras"
     },
     "HRV": {
       "fips": "HR",
@@ -176,6 +188,10 @@
       "fips": "MA",
       "gdelt_name": "Madagascar"
     },
+    "MEX": {
+      "fips": "MX",
+      "gdelt_name": "Mexico"
+    },
     "MHL": {
       "fips": "RM",
       "gdelt_name": "Marshall Islands"
@@ -203,6 +219,10 @@
     "NGA": {
       "fips": "NI",
       "gdelt_name": "Nigeria"
+    },
+    "NIC": {
+      "fips": "NU",
+      "gdelt_name": "Nicaragua"
     },
     "NPL": {
       "fips": "NP",
@@ -235,6 +255,10 @@
     "RUS": {
       "fips": "RS",
       "gdelt_name": "Russia"
+    },
+    "SLV": {
+      "fips": "ES",
+      "gdelt_name": "El Salvador"
     },
     "SMR": {
       "fips": "SM",
@@ -352,6 +376,24 @@
         "foreknown/registry.json",
         "autonomy/log.jsonl",
         "foreknown/proposals/obs-2026-08-09-1.json"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "added": {
+        "BLZ": "BH",
+        "GTM": "GT",
+        "HND": "HO",
+        "MEX": "MX",
+        "NIC": "NU",
+        "SLV": "ES"
+      },
+      "why": "foreknown/reaction/readings/2026-08-18.json through 2026-08-23.json (six consecutive nights) all show gdacs-dr-1027449 (Orange, open, revised every night as a rolling drought window) with fips: [] and unmapped_iso3 holding all six of its countries -- BLZ, GTM, HND, MEX, NIC, SLV -- so the attention axis has had zero visibility into this hazard since it was first notarized (foreknown/registry.json). Checked each code against the newest preserved GDELT list, foreknown/reaction/snapshots/2026-08-23/fips-country.txt: BH Belize, GT Guatemala, HO Honduras, MX Mexico, NU Nicaragua, ES El Salvador -- none collides with a FIPS code already mapped from a different iso3 in this table. Dated 2026-08-24 rather than 2026-08-23 (the day this gap was found) because foreknown/reaction/readings/2026-08-23.json is already committed and reaction.py's run_reaction refuses to regenerate a reading once written (I3, append-only) -- the addition takes effect from the next unwritten reading rather than retroactively, the same reason the 2026-08-13 revision above is dated a day after the reading that first showed its gap.",
+      "derived_from": [
+        "foreknown/reaction/readings/2026-08-18.json",
+        "foreknown/reaction/readings/2026-08-23.json",
+        "foreknown/reaction/snapshots/2026-08-23/fips-country.txt",
+        "foreknown/registry.json"
       ]
     }
   ],

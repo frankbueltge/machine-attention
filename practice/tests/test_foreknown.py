@@ -371,6 +371,7 @@ def test_a_warning_extended_over_two_nights_is_revised_not_renotarized(tmp_path:
         _nws_alert("/O.EXT.KILX.FL.W.0039.000000T0000Z-260824T0600Z/",
                    ends="2026-08-24T01:00:00-05:00", ident="urn:oid:1.002.1")]}
     quiet = {"activeStorms": []}
+    announced_at_after_night_one = None
     for day, feed in (("2026-08-22", night_one), ("2026-08-23", night_two)):
         responses = {
             sources.GDACS_URL: (json.dumps({"features": []}).encode(), 200),
@@ -379,9 +380,19 @@ def test_a_warning_extended_over_two_nights_is_revised_not_renotarized(tmp_path:
             sources.FTS_PLANS_URL: (json.dumps({"data": []}).encode(), 200),
         }
         summary = run(tmp_path, day, FakeClient(responses))
+        if announced_at_after_night_one is None:
+            registry = read_json(tmp_path / "foreknown/registry.json")
+            announced_at_after_night_one = (
+                registry["futures"]["nws-kilx-flw-0039-26"]["announced_at"])
     registry = read_json(tmp_path / "foreknown/registry.json")
     assert list(registry["futures"]) == ["nws-kilx-flw-0039-26"]
     future = registry["futures"]["nws-kilx-flw-0039-26"]
     assert [e["event"] for e in future["history"]] == ["NOTARIZED", "REVISED"]
-    assert future["announced_at"][:10] == "2026-08-22"
+    # announced_at is the retrieval time of the first sighting (futures.py's
+    # module docstring) and never changes afterwards (I3) -- checked against
+    # what night one actually recorded, not a hardcoded calendar date, since
+    # update_registry stamps it from the real clock (utc_now()) rather than
+    # from the `day` argument, and a literal date here would only ever be
+    # true on the one real-world day this test happened to be written on.
+    assert future["announced_at"] == announced_at_after_night_one
     assert future["window"]["to"] == "2026-08-24T01:00:00-05:00"
