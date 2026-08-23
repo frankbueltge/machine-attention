@@ -1,0 +1,35 @@
+{
+  "date": "2026-08-22",
+  "source_reading": "memoryhole/readings/2026-08-22.json",
+  "model": "claude-sonnet-5",
+  "prompt_version": "memoryhole-classify-routine-v1",
+  "cap": 40,
+  "estimated": true,
+  "unclassified_at_cap": 0,
+  "verdicts": [
+    {
+      "before_sha256": "0a4c3ac30a8a843f99bfb18c9c0c819164b1b8923eea7b6168e91af767bb9cfa",
+      "type": "none_of_these",
+      "confidence": "high",
+      "estimated": true
+    },
+    {
+      "before_sha256": "a0f59bb3aeab3bd973610cb573cb759fe08d09cd61ff9ef0d2479328aa63b31a",
+      "type": "none_of_these",
+      "confidence": "medium",
+      "estimated": true
+    },
+    {
+      "before_sha256": "d25d5b30d3d6fea1aa38d3cd1e4e21f4ee948e11ccf67628c747e93179527cda",
+      "type": "none_of_these",
+      "confidence": "medium",
+      "estimated": true
+    },
+    {
+      "before_sha256": "b6bdc14d31bc52c970975d077bc2e1793672142aeaa689c775bf111ffbddb011",
+      "type": "none_of_these",
+      "confidence": "high",
+      "estimated": true
+    }
+  ]
+}
