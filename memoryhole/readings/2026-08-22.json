@@ -1,0 +1,2221 @@
+{
+  "date": "2026-08-22",
+  "entries": [
+    {
+      "archive_status": "404",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-00154afe2cbb36cd.json",
+      "id": "00154afe2cbb36cd",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822061536/https://www.bundeswirtschaftsministerium.de/Redak-tion/DE/Downloads/Gesetz/entwurf-enefg.pdf?__blob=publicationFile&v=6",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.bundeswirtschaftsministerium.de/Redak-tion/DE/Downloads/Gesetz/entwurf-enefg.pdf?__blob=publicationFile&v=6"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "336O6IKVNACYZT6MLMYKO3OIYXCRCYTZ",
+          "file": "memoryhole/snapshots/2026-08-22/after-a8c19dc4443a2a71.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822044834/https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Aussenwirtschaft/investitionsgarantien.html",
+          "timestamp": "20260822044834"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "NXW6MWLM256DSBMF35DEWCNF73ZFXI5H",
+          "file": "memoryhole/snapshots/2026-08-22/before-a8c19dc4443a2a71.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20251006064457/https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Aussenwirtschaft/investitionsgarantien.html",
+          "timestamp": "20251006064457"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1540,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 44,
+          "reason": "ok",
+          "tokens": 896,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-a8c19dc4443a2a71.json",
+      "id": "a8c19dc4443a2a71",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "reason": "gate_after_not_prose",
+      "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Aussenwirtschaft/investitionsgarantien.html"
+    },
+    {
+      "archive_status": "404",
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-04c5a5bcad9004a4.json",
+      "id": "04c5a5bcad9004a4",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822095113/https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Industrie/energieintensive-industrien.html",
+      "reason": "deletion_candidate_survived_recheck_ok",
+      "recheck": {
+        "class": "ok",
+        "http_code": 200
+      },
+      "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Industrie/energieintensive-industrien.html"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "ZTAZVQV2ARREP2VBATX5LJZCYNF6BJS3",
+          "file": "memoryhole/snapshots/2026-08-22/after-4c4cf47a2fce49fc.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822062038/https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Service/impressum.html",
+          "timestamp": "20260822062038"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "I4YS2BWCEU2VHFLSNK2C76T25BLQZD2Q",
+          "file": "memoryhole/snapshots/2026-08-22/before-4c4cf47a2fce49fc.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260710113846/https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Service/impressum.html",
+          "timestamp": "20260710113846"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1461,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1573,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-4c4cf47a2fce49fc.json",
+      "id": "4c4cf47a2fce49fc",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Service/impressum.html"
+    },
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-b1078fd05294c90e.json",
+      "id": "b1078fd05294c90e",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "reason": "archive_status_302",
+      "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Pressemitteilungen/2026/06/20260624-bundeskabinett-beschliesst-eeg.html"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "NCUSHB56N44PLWXQGJDNBKCTZ5LWVBDT",
+          "file": "memoryhole/snapshots/2026-08-22/after-79013eb10caeea6b.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822024822/https://www.bundesgesundheitsministerium.de/e-rezept/faq-e-rezept-egk",
+          "timestamp": "20260822024822"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "B2L2ANGIYFBHB3ESRMCCIX5S27QKAEWP",
+          "file": "memoryhole/snapshots/2026-08-22/before-79013eb10caeea6b.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260510074106/https://www.bundesgesundheitsministerium.de/e-rezept/faq-e-rezept-egk",
+          "timestamp": "20260510074106"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2608,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 71,
+          "reason": "ok",
+          "tokens": 1105,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-79013eb10caeea6b.json",
+      "id": "79013eb10caeea6b",
+      "institution": "bmg",
+      "kind": "sampled",
+      "reason": "gate_after_not_prose",
+      "url": "https://www.bundesgesundheitsministerium.de/e-rezept/faq-e-rezept-egk"
+    },
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-de0d81c0cbd5a88a.json",
+      "id": "de0d81c0cbd5a88a",
+      "institution": "bmg",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://www.bundesgesundheitsministerium.de/service/begriffe-von-a-z/a/alkohol.html"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "ZT74RRUHBHKZVZHFQ4W4ZZIYPIJWBG2V",
+          "file": "memoryhole/snapshots/2026-08-22/after-260db5b913106384.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822025733/https://www.bundesgesundheitsministerium.de/service/begriffe-von-a-z/s/samenspenderregister/faqs-samenspenderregistergesetz",
+          "timestamp": "20260822025733"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "RVNKBUT6VVDMQX7X4LIGWU3M5N6ENOT4",
+          "file": "memoryhole/snapshots/2026-08-22/before-260db5b913106384.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260725191512/https://www.bundesgesundheitsministerium.de/service/begriffe-von-a-z/s/samenspenderregister/faqs-samenspenderregistergesetz",
+          "timestamp": "20260725191512"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2538,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2476,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-260db5b913106384.json",
+      "id": "260db5b913106384",
+      "institution": "bmg",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.bundesgesundheitsministerium.de/service/begriffe-von-a-z/s/samenspenderregister/faqs-samenspenderregistergesetz"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-8c7d9bcda0cd524c.json",
+      "id": "8c7d9bcda0cd524c",
+      "institution": "rki",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822063728/https://www.rki.de/DE/Aktuelles/Publikationen/Journal-of-Health-Monitoring/GBEDownloadsJ/FactSheets/johm_11_14_DE.pdf?__blob=publicationFile&v=3%29",
+      "reason": "deletion_candidate_survived_recheck_ok",
+      "recheck": {
+        "class": "ok",
+        "http_code": 200
+      },
+      "url": "https://www.rki.de/DE/Aktuelles/Publikationen/Journal-of-Health-Monitoring/GBEDownloadsJ/FactSheets/johm_11_14_DE.pdf?__blob=publicationFile&v=3%29"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-0d7db430a3d78983.json",
+      "id": "0d7db430a3d78983",
+      "institution": "rki",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822011948/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Downloads/control-covid-2021-12-21.pdf?__blob=publicationFile",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Downloads/control-covid-2021-12-21.pdf?__blob=publicationFile"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-a5f45a94f7afad0e.json",
+      "id": "a5f45a94f7afad0e",
+      "institution": "rki",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822030245/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/COVIMO_Reports/covimo_studie_bericht_7.pdf?__blob=publicationFile",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/COVIMO_Reports/covimo_studie_bericht_7.pdf?__blob=publicationFile"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-c6a5c281d181c1cc.json",
+      "id": "c6a5c281d181c1cc",
+      "institution": "rki",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822041304/https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Wochenbericht/Wochenbericht_2021-08-26.pdf?__blob=publicationFile",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Wochenbericht/Wochenbericht_2021-08-26.pdf?__blob=publicationFile"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-246f99231279074d.json",
+      "id": "246f99231279074d",
+      "institution": "rki",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822022839/https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/34_20.pdf?__blob=publicationFile",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/34_20.pdf?__blob=publicationFile"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "2PICV45S7Y2WYSJ2SR2LOUN2CJVCRAPQ",
+          "file": "memoryhole/snapshots/2026-08-22/after-e5dfa7e197a6ebb0.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822010942/https://www.umweltbundesamt.de/publikationen/klimawandel-gesundheit-tipps-fuer-sommerliche-hitze",
+          "timestamp": "20260822010942"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "G4A5KYPSIQLCZOXYROGWK5S4SJQVDILS",
+          "file": "memoryhole/snapshots/2026-08-22/before-e5dfa7e197a6ebb0.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260622180413/https://www.umweltbundesamt.de/publikationen/klimawandel-gesundheit-tipps-fuer-sommerliche-hitze",
+          "timestamp": "20260622180413"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1976,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2012,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-e5dfa7e197a6ebb0.json",
+      "id": "e5dfa7e197a6ebb0",
+      "institution": "uba",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.umweltbundesamt.de/publikationen/klimawandel-gesundheit-tipps-fuer-sommerliche-hitze"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "72LXSPBCLFSBV2OAKJDF43Y6Y5MKKBL4",
+          "file": "memoryhole/snapshots/2026-08-22/after-520fead561903674.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822062038/https://www.umweltbundesamt.de/themen/digitalisierung/gruene-informationstechnik-green-it/rechenzentren",
+          "timestamp": "20260822062038"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "KQYSKMJ6VHQ6UIRZZJDYW4MP6ZE54XB6",
+          "file": "memoryhole/snapshots/2026-08-22/before-520fead561903674.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260722222132/https://www.umweltbundesamt.de/themen/digitalisierung/gruene-informationstechnik-green-it/rechenzentren",
+          "timestamp": "20260722222132"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1880,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1864,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-520fead561903674.json",
+      "id": "520fead561903674",
+      "institution": "uba",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.umweltbundesamt.de/themen/digitalisierung/gruene-informationstechnik-green-it/rechenzentren"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "XOPVATJ3W73ZTED7QAIDXK6EGMPV2YVW",
+          "file": "memoryhole/snapshots/2026-08-22/after-039c5c698dc03a0e.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822092539/https://www.umweltbundesamt.de/themen/klima-energie/klimaschutz-energiepolitik-in-deutschland/wasserstoff-schluessel-im-kuenftigen-energiesystem",
+          "timestamp": "20260822092539"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "4XJIHTTQVOPL2KXO3LNGCIXZTBF56P3Q",
+          "file": "memoryhole/snapshots/2026-08-22/before-039c5c698dc03a0e.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260814000354/https://www.umweltbundesamt.de/themen/klima-energie/klimaschutz-energiepolitik-in-deutschland/wasserstoff-schluessel-im-kuenftigen-energiesystem",
+          "timestamp": "20260814000354"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2419,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2498,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-039c5c698dc03a0e.json",
+      "id": "039c5c698dc03a0e",
+      "institution": "uba",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.umweltbundesamt.de/themen/klima-energie/klimaschutz-energiepolitik-in-deutschland/wasserstoff-schluessel-im-kuenftigen-energiesystem"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "WO32AVJ3QUAHMJKXTNVEFNDLQXWQZV6K",
+          "file": "memoryhole/snapshots/2026-08-22/after-8f8400f7c3b1c3eb.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822074143/https://www.umweltbundesamt.de/themen/wirtschaft-konsum",
+          "timestamp": "20260822074143"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "LQSKFB4SCYJC7JVTHXVMD6GC7NJ2TOWT",
+          "file": "memoryhole/snapshots/2026-08-22/before-8f8400f7c3b1c3eb.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260807111439/https://www.umweltbundesamt.de/themen/wirtschaft-konsum",
+          "timestamp": "20260807111439"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2287,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2421,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-8f8400f7c3b1c3eb.json",
+      "id": "8f8400f7c3b1c3eb",
+      "institution": "uba",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.umweltbundesamt.de/themen/wirtschaft-konsum"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "KR57YMULOEMOZK32BR5MDFZPT4KBGFXI",
+          "file": "memoryhole/snapshots/2026-08-22/after-80eab98cb22b6612.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822025453/https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/pelletkessel",
+          "timestamp": "20260822025453"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "TMNJUHKTVMGQPE5D5ETW3STMAYQZLQ5H",
+          "file": "memoryhole/snapshots/2026-08-22/before-80eab98cb22b6612.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260716120059/https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/pelletkessel",
+          "timestamp": "20260716120059"
+        }
+      },
+      "category": "A",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2183,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2195,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-80eab98cb22b6612.json",
+      "id": "80eab98cb22b6612",
+      "institution": "uba",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/pelletkessel"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-bca6e815f5977aeb.json",
+      "id": "bca6e815f5977aeb",
+      "institution": "destatis",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822091632/https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/01/PD25_N004_51_32.html",
+      "reason": "deletion_candidate_survived_recheck_ok",
+      "recheck": {
+        "class": "ok",
+        "http_code": 200
+      },
+      "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/01/PD25_N004_51_32.html"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-fb80458681b17327.json",
+      "id": "fb80458681b17327",
+      "institution": "destatis",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822112247/https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/08/PD26_291_3111.html&quot;",
+      "reason": "deletion_candidate_survived_recheck_ok",
+      "recheck": {
+        "class": "ok",
+        "http_code": 200
+      },
+      "url": "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/08/PD26_291_3111.html&quot;"
+    },
+    {
+      "archive_status": "403",
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-054b4647d3484a90.json",
+      "id": "054b4647d3484a90",
+      "institution": "destatis",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822095459/https://www.destatis.de/DE/Themen/Laender-Regionen/Internationales/Thema/bevoelkerung-arbeit-soziales/bevoelkerung/Stadtbevoelkerung.html",
+      "reason": "deletion_candidate_survived_recheck_ok",
+      "recheck": {
+        "class": "ok",
+        "http_code": 200
+      },
+      "url": "https://www.destatis.de/DE/Themen/Laender-Regionen/Internationales/Thema/bevoelkerung-arbeit-soziales/bevoelkerung/Stadtbevoelkerung.html"
+    },
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-4f9a82fc158d5aff.json",
+      "id": "4f9a82fc158d5aff",
+      "institution": "destatis",
+      "kind": "sampled",
+      "reason": "archive_status_303",
+      "url": "https://www.destatis.de/EN/Press/2026/08/PE26_298_61241.html%5C&quot;&gt;Germany%E2%80%99s"
+    },
+    {
+      "archive_status": "400",
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-ace85445821752e3.json",
+      "id": "ace85445821752e3",
+      "institution": "destatis",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822014046/https://www.destatis.de/error_path/400.html?al_req_id=aoj-HmMnJUXGeF_UuGrdDQAACnI",
+      "reason": "deletion_candidate_survived_recheck_other",
+      "recheck": {
+        "class": "other",
+        "http_code": 400
+      },
+      "url": "https://www.destatis.de/error_path/400.html?al_req_id=aoj-HmMnJUXGeF_UuGrdDQAACnI"
+    },
+    {
+      "category": "B",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-26ae09ae5ff6b5a4.json",
+      "id": "26ae09ae5ff6b5a4",
+      "institution": "ec-climate",
+      "kind": "sampled",
+      "reason": "no_earlier_capture",
+      "url": "https://climate.ec.europa.eu/areas-action/climate-disinformation/restoring-wetlands-finland_en"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "CNKWHTJF2J2CCK5HS5JO35W7RFJDY3ZH",
+          "file": "memoryhole/snapshots/2026-08-22/after-c98d8ae16cc13edb.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822044111/https://climate.ec.europa.eu/areas-action/climate-strategies-targets/2030-climate-targets_en",
+          "timestamp": "20260822044111"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "DKHAZIEDFNTT2D7LOUPFI3FOAWHAG74I",
+          "file": "memoryhole/snapshots/2026-08-22/before-c98d8ae16cc13edb.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260816211818/https://climate.ec.europa.eu/areas-action/climate-strategies-targets/2030-climate-targets_en",
+          "timestamp": "20260816211818"
+        }
+      },
+      "category": "B",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 589,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 662,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-c98d8ae16cc13edb.json",
+      "id": "c98d8ae16cc13edb",
+      "institution": "ec-climate",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://climate.ec.europa.eu/areas-action/climate-strategies-targets/2030-climate-targets_en"
+    },
+    {
+      "category": "B",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-3369bf887662a816.json",
+      "id": "3369bf887662a816",
+      "institution": "ec-climate",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://climate.ec.europa.eu/eu-action/climate-disinformation/popka-pushes-back-against-environmental-degradation_en"
+    },
+    {
+      "category": "B",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-23a5fc3d6c2d0282.json",
+      "id": "23a5fc3d6c2d0282",
+      "institution": "ec-climate",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://climate.ec.europa.eu/eu-action/climate-strategies-targets/2030-climate-energy-framework_en"
+    },
+    {
+      "archive_status": "404",
+      "category": "B",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-d7cb42cf5cb0070d.json",
+      "id": "d7cb42cf5cb0070d",
+      "institution": "ec-climate",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822034432/https://climate.ec.europa.eu/sites/default/files/international/paris_protocol/images/agriculture.jpg",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://climate.ec.europa.eu/sites/default/files/international/paris_protocol/images/agriculture.jpg"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "ENGTBVGSHNU5RGEVZ6A55VRULTRB7DKQ",
+          "file": "memoryhole/snapshots/2026-08-22/after-b52d231da821a0a9.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822060952/https://www.eiopa.europa.eu/media/videos-and-explainer-films_en",
+          "timestamp": "20260822060952"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "PTIKQVN2OLFPLUSEE5OX5L5PF7EL5AR5",
+          "file": "memoryhole/snapshots/2026-08-22/before-b52d231da821a0a9.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260730160639/https://www.eiopa.europa.eu/media/videos-and-explainer-films_en",
+          "timestamp": "20260730160639"
+        }
+      },
+      "category": "B",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 622,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 625,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-b52d231da821a0a9.json",
+      "id": "b52d231da821a0a9",
+      "institution": "eiopa",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.eiopa.europa.eu/media/videos-and-explainer-films_en"
+    },
+    {
+      "abstentions": [
+        {
+          "after": "Read More 18th June 2026 ACER will consult on details of how to report energy derivative transactions under REMIT On Thursday 16 July 2026, ACER will open a public consultation on an Annex to the Guideline on REMIT transaction reporting, covering energy derivative transactions.",
+          "before": "​ Related Documents MoU with NRAs MoU with ESMA MoUs with organised market places MoU with the US Federal Energy Regulatory Commission (FERC) ↓ Find out more about ACER’s cooperation with: National regulatory authorities (NRAs) Reporting parties REMIT Expert Group Academia and institutions ↓ Related News 18th June 2026 ACER will consult on details of how to report energy derivative transactions under REMIT On Thursday 16 July 2026, ACER will open a public consultation on an Annex to the Guideline on REMIT transaction reporting, covering energy derivative transactions.",
+          "before_sha256": "0a4c3ac30a8a843f99bfb18c9c0c819164b1b8923eea7b6168e91af767bb9cfa",
+          "salience": 23,
+          "signals": [
+            "commitment_verb",
+            "date",
+            "named_entity",
+            "number"
+          ]
+        },
+        {
+          "before": "Read More 21st May 2026 ACER’s latest REMIT Quarterly is out The 44th edition covers the first quarter of 2026, including insights into the updated REMIT framework and details on the upcoming ACER and European Commission REMIT workshop, scheduled for 11 June 2026.",
+          "before_sha256": "a0f59bb3aeab3bd973610cb573cb759fe08d09cd61ff9ef0d2479328aa63b31a",
+          "salience": 23,
+          "signals": [
+            "date",
+            "named_entity",
+            "number"
+          ]
+        }
+      ],
+      "added_sentences": 1,
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "ECOKP4O4R4MQCI73KTKBFWRFX44SMRBW",
+          "file": "memoryhole/snapshots/2026-08-22/after-0dba885539605e93.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822060302/https://www.acer.europa.eu/remit/cooperation",
+          "timestamp": "20260822060302"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "5U63ETBOBVLCWS5EVSZNQK7RGGY4RLHV",
+          "file": "memoryhole/snapshots/2026-08-22/before-0dba885539605e93.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260806155751/https://www.acer.europa.eu/remit/cooperation",
+          "timestamp": "20260806155751"
+        }
+      },
+      "category": "B",
+      "class": "changed",
+      "events": [],
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 14,
+          "reason": "ok",
+          "tokens": 452,
+          "valid": true
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 14,
+          "reason": "ok",
+          "tokens": 459,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-0dba885539605e93.json",
+      "id": "0dba885539605e93",
+      "institution": "acer",
+      "kind": "sampled",
+      "reason": "new digest, both captures passed the gate",
+      "removed_tokens": 43,
+      "rewritten_pairs": 1,
+      "url": "https://www.acer.europa.eu/remit/cooperation"
+    },
+    {
+      "abstentions": [
+        {
+          "before": "Read More 17th June 2025 Closure of a REMIT cross-border investigatory group set up during the energy crisis ACER and the national regulatory authorities of Austria, Germany and the Netherlands have closed the cross-border investigatory group established in 2022.",
+          "before_sha256": "d25d5b30d3d6fea1aa38d3cd1e4e21f4ee948e11ccf67628c747e93179527cda",
+          "salience": 15,
+          "signals": [
+            "date",
+            "named_entity",
+            "number"
+          ]
+        },
+        {
+          "after": "Configure cookies The key role of NRAs National regulatory authorities (NRAs) have a key role to play in ensuring that each European country meets its targets for energy markets and implements the relevant EU regulatory policy.",
+          "before": "Skip to main content National regulatory authorities (NRAs) Share on: The key role of NRAs National regulatory authorities (NRAs) have a key role to play in ensuring that each European country meets its targets for energy markets and implements the relevant EU regulatory policy.",
+          "before_sha256": "b6bdc14d31bc52c970975d077bc2e1793672142aeaa689c775bf111ffbddb011",
+          "salience": 5,
+          "signals": [
+            "named_entity"
+          ]
+        }
+      ],
+      "added_sentences": 2,
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "MR4CI6WNL2OJS7QZFZI34WFKZRYA2RMG",
+          "file": "memoryhole/snapshots/2026-08-22/after-ded46695cf563fea.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822060300/https://www.acer.europa.eu/remit/cooperation/national-regulatory-authorities",
+          "timestamp": "20260822060300"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "ZXD7NJM52NDBLRHUZCJYNEYXGNAVIPU7",
+          "file": "memoryhole/snapshots/2026-08-22/before-ded46695cf563fea.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20250813110619/https://www.acer.europa.eu/remit/cooperation/national-regulatory-authorities",
+          "timestamp": "20250813110619"
+        }
+      },
+      "category": "B",
+      "class": "changed",
+      "events": [
+        {
+          "after": "↓ See Also Cooperation Coordination on cases Events ↓ Related News 14th August 2026 Algorithmic trading in energy markets features again in ACER's latest REMIT Quarterly ACER has published it’s 45th REMIT Quarterly, covering second quarter of 2026 and the latest developments under the regulation.",
+          "after_sha256": "765afc80197c399810f1981b9c27800a9adeaefcd61e231da5869b1f659d82b1",
+          "before": "↓ See Also Cooperation Coordination on cases Events ↓ Related News 8th August 2025 ACER’s latest REMIT Quarterly is out ACER has published it’s 41st REMIT Quarterly, covering second quarter of 2025 and the latest developments under the regulation.",
+          "before_sha256": "0272d0c887d15a19de69af6c1cc7ea9c07c2c9a31128083a0815e4bde81f672f",
+          "rule": "year rewritten in place",
+          "salience": 17,
+          "signals": [
+            "date",
+            "named_entity",
+            "number"
+          ],
+          "type": "date_shifted"
+        }
+      ],
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 19,
+          "reason": "ok",
+          "tokens": 487,
+          "valid": true
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 18,
+          "reason": "ok",
+          "tokens": 466,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-ded46695cf563fea.json",
+      "id": "ded46695cf563fea",
+      "institution": "acer",
+      "kind": "sampled",
+      "reason": "new digest, both captures passed the gate",
+      "removed_tokens": 39,
+      "rewritten_pairs": 2,
+      "url": "https://www.acer.europa.eu/remit/cooperation/national-regulatory-authorities"
+    },
+    {
+      "archive_status": "404",
+      "category": "C",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-8003655982bd92eb.json",
+      "id": "8003655982bd92eb",
+      "institution": "bnetza",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822114202/https://www.bundesnetzagentur.de/DE/Gasversorgung/Krisenvorbereitung/Down",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.bundesnetzagentur.de/DE/Gasversorgung/Krisenvorbereitung/Down"
+    },
+    {
+      "category": "C",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-81ba62e3ed6cb83c.json",
+      "id": "81ba62e3ed6cb83c",
+      "institution": "bnetza",
+      "kind": "sampled",
+      "reason": "archive_status_302",
+      "url": "https://www.bundesnetzagentur.de/DE/Vportal/TK/Aerger/Faelle/UEW/start.html"
+    },
+    {
+      "category": "C",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-c2ca1b7bb3ef4e55.json",
+      "id": "c2ca1b7bb3ef4e55",
+      "institution": "bnetza",
+      "kind": "sampled",
+      "reason": "archive_status_302",
+      "url": "https://www.bundesnetzagentur.de/DE/Vportal/Verbraucher-Radar/start.html"
+    },
+    {
+      "category": "C",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-e94aa2a4b3173fc7.json",
+      "id": "e94aa2a4b3173fc7",
+      "institution": "bnetza",
+      "kind": "sampled",
+      "reason": "archive_status_-",
+      "url": "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/DE/2025/20251209_TB_TK_Post.html"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "JWFTLDOPV75A7MS5WAHTI2FZ5OIS5BN7",
+          "file": "memoryhole/snapshots/2026-08-22/after-42aef31719b7c908.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822065132/https://www.bundesnetzagentur.de/_tools/_forms/01_Telekommunikation/RumitelStart/Form03PredictiveDialer/node.html",
+          "timestamp": "20260822065132"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "YGYV2M3JYG4CVO4BRYDHWRM7USFZ72U7",
+          "file": "memoryhole/snapshots/2026-08-22/before-42aef31719b7c908.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822041659/https://www.bundesnetzagentur.de/_tools/_forms/01_Telekommunikation/RumitelStart/Form03PredictiveDialer/node.html",
+          "timestamp": "20260822041659"
+        }
+      },
+      "category": "C",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1222,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1167,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-42aef31719b7c908.json",
+      "id": "42aef31719b7c908",
+      "institution": "bnetza",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.bundesnetzagentur.de/_tools/_forms/01_Telekommunikation/RumitelStart/Form03PredictiveDialer/node.html"
+    },
+    {
+      "archive_status": "404",
+      "category": "C",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-ff542fc2c4d55e36.json",
+      "id": "ff542fc2c4d55e36",
+      "institution": "bundesbank",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822015248/https://www.bundesbank.de/Navigation/EN/Service/Glossary/Functions/glossary.html%3Flv2%3D129524%26lv3%3D145662%23145662",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.bundesbank.de/Navigation/EN/Service/Glossary/Functions/glossary.html%3Flv2%3D129524%26lv3%3D145662%23145662"
+    },
+    {
+      "archive_status": "404",
+      "category": "C",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-f87ca555d5fbc000.json",
+      "id": "f87ca555d5fbc000",
+      "institution": "bundesbank",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822034747/https://www.bundesbank.de/Redaktion/DE/Lebenslaeufe/klasen_karl.html",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.bundesbank.de/Redaktion/DE/Lebenslaeufe/klasen_karl.html"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "VGMUJN73EVWBDEJQLEV5K476KTEUGBA6",
+          "file": "memoryhole/snapshots/2026-08-22/after-02d69c603e8fb0e7.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822101824/https://www.bundesbank.de/de/aufgaben/themen/bundespraesident-steinmeier-bestellt-joachim-nagel-zum-bundesbankpraesidenten-856412",
+          "timestamp": "20260822101824"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "WKZPQK6OAH5ZWZID5ZRQBG6CH45J434Y",
+          "file": "memoryhole/snapshots/2026-08-22/before-02d69c603e8fb0e7.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260801094948/https://www.bundesbank.de/de/aufgaben/themen/bundespraesident-steinmeier-bestellt-joachim-nagel-zum-bundesbankpraesidenten-856412",
+          "timestamp": "20260801094948"
+        }
+      },
+      "category": "C",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1261,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1134,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-02d69c603e8fb0e7.json",
+      "id": "02d69c603e8fb0e7",
+      "institution": "bundesbank",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.bundesbank.de/de/aufgaben/themen/bundespraesident-steinmeier-bestellt-joachim-nagel-zum-bundesbankpraesidenten-856412"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "XAAGVTXI4XWE2OLGJWBEVLVLHRUY3ESL",
+          "file": "memoryhole/snapshots/2026-08-22/after-5ac6d64340ff7ee5.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822090959/https://www.bundesbank.de/de/publikationen/berichte/studien/kosten-von-zahlungsmitteln-im-einzelhandel-972294",
+          "timestamp": "20260822090959"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "ADK6UBD2QXUOO75R57XVRLABE2W6PFYS",
+          "file": "memoryhole/snapshots/2026-08-22/before-5ac6d64340ff7ee5.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260821141352/https://www.bundesbank.de/de/publikationen/berichte/studien/kosten-von-zahlungsmitteln-im-einzelhandel-972294",
+          "timestamp": "20260821141352"
+        }
+      },
+      "category": "C",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1202,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1162,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-5ac6d64340ff7ee5.json",
+      "id": "5ac6d64340ff7ee5",
+      "institution": "bundesbank",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.bundesbank.de/de/publikationen/berichte/studien/kosten-von-zahlungsmitteln-im-einzelhandel-972294"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "JUKV7S3GHDGPGIWI2UGJJURN7VMMF5EF",
+          "file": "memoryhole/snapshots/2026-08-22/after-95ccec7643d370ef.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822011453/https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/pspp-auctions/pspp-auctions-626008",
+          "timestamp": "20260822011453"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "D3Q2MMIBWC7KLXKG5W2GMRME4R7KTPCE",
+          "file": "memoryhole/snapshots/2026-08-22/before-95ccec7643d370ef.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260122161046/https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/pspp-auctions/pspp-auctions-626008",
+          "timestamp": "20260122161046"
+        }
+      },
+      "category": "C",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 1047,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 36,
+          "reason": "ok",
+          "tokens": 883,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-95ccec7643d370ef.json",
+      "id": "95ccec7643d370ef",
+      "institution": "bundesbank",
+      "kind": "sampled",
+      "reason": "gate_after_not_prose",
+      "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/pspp-auctions/pspp-auctions-626008"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "2XP7DLZER5IVNQSAELJJCALWJAL63JPR",
+          "file": "memoryhole/snapshots/2026-08-22/after-7d185725434dd1d8.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822110409/https://insights.sustainability.google/",
+          "timestamp": "20260822110409"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "GGBATQPEFTGBBALPSMKWNY2IAGXMTJ2V",
+          "file": "memoryhole/snapshots/2026-08-22/before-7d185725434dd1d8.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260807165341/https://insights.sustainability.google/",
+          "timestamp": "20260807165341"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 112,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 113,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-7d185725434dd1d8.json",
+      "id": "7d185725434dd1d8",
+      "institution": "google-sustainability",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://insights.sustainability.google/"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-06cf279b0e6aca4a.json",
+      "id": "06cf279b0e6aca4a",
+      "institution": "shell",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://www.shell.com/home/content/motorsport/ferrari/"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-d86562d5a392a5c5.json",
+      "id": "d86562d5a392a5c5",
+      "institution": "shell",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822101744/https://xn------100-ib888-9s3bc0xra0gye5a7bbde5nphe3g7a53a.svhyperautoazt.shell.com/images/icon/account/icon-map-pin-green.svg",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://xn------100-ib888-9s3bc0xra0gye5a7bbde5nphe3g7a53a.svhyperautoazt.shell.com/images/icon/account/icon-map-pin-green.svg"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-faa54895c2664a15.json",
+      "id": "faa54895c2664a15",
+      "institution": "shell",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822101739/https://xn------100-ib888-9s3bc0xra0gye5a7bbde5nphe3g7a53a.svhyperautoazt.shell.com/images/icon/icon-arrow-left.svg",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://xn------100-ib888-9s3bc0xra0gye5a7bbde5nphe3g7a53a.svhyperautoazt.shell.com/images/icon/icon-arrow-left.svg"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-48b6f9bd6b745135.json",
+      "id": "48b6f9bd6b745135",
+      "institution": "shell",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822092529/https://xn----5-50----0h2arkb9a0b2b2g0anc9a1ct4cn8guar3ozi3g3b.svhyperautoazt.shell.com/images/order/checkout/credit_card_v2.svg",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://xn----5-50----0h2arkb9a0b2b2g0anc9a1ct4cn8guar3ozi3g3b.svhyperautoazt.shell.com/images/order/checkout/credit_card_v2.svg"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-08-22/history-6c36145ec7fce534.json",
+      "id": "6c36145ec7fce534",
+      "institution": "shell",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822092527/https://xn----5-50----0h2arkb9a0b2b2g0anc9a1ct4cn8guar3ozi3g3b.svhyperautoazt.shell.com/images/order/shipping/ship_pending_green.svg",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://xn----5-50----0h2arkb9a0b2b2g0anc9a1ct4cn8guar3ozi3g3b.svhyperautoazt.shell.com/images/order/shipping/ship_pending_green.svg"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-ca3177ac8fc967de.json",
+      "id": "ca3177ac8fc967de",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://www.volkswagen-group.com/de/privacy-policy-15677"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "F6BNXKUUIC5OWTRSYBDPZZYQHNUCPQVT",
+          "file": "memoryhole/snapshots/2026-08-22/after-b3650a8ea5a61b95.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822063722/https://www.volkswagen-group.com/en/images/detail/oliver-blume-ceo-volkswagen-group-rj-scaringe-founder-and-ceo-rivian-82103",
+          "timestamp": "20260822063722"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "XNTDQGLJRYH747NJ5B3CIBLXSPUGMEIN",
+          "file": "memoryhole/snapshots/2026-08-22/before-b3650a8ea5a61b95.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260718031733/https://www.volkswagen-group.com/en/images/detail/oliver-blume-ceo-volkswagen-group-rj-scaringe-founder-and-ceo-rivian-82103",
+          "timestamp": "20260718031733"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 458,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 486,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-b3650a8ea5a61b95.json",
+      "id": "b3650a8ea5a61b95",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.volkswagen-group.com/en/images/detail/oliver-blume-ceo-volkswagen-group-rj-scaringe-founder-and-ceo-rivian-82103"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "W6VLKOVGP5ZOPJTQVGJEC3QNAMPLMZQH",
+          "file": "memoryhole/snapshots/2026-08-22/after-9a54f265c629d625.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822020822/https://www.volkswagen-group.com/en/initiatives-18186",
+          "timestamp": "20260822020822"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "7OQX5PLFOT25YMJJMIM6Z32QBSBRXJCC",
+          "file": "memoryhole/snapshots/2026-08-22/before-9a54f265c629d625.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260815114408/https://www.volkswagen-group.com/en/initiatives-18186",
+          "timestamp": "20260815114408"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 382,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 468,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-9a54f265c629d625.json",
+      "id": "9a54f265c629d625",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.volkswagen-group.com/en/initiatives-18186"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "HWPTIAWLC7CM6X2BVKLHCWOEJDJ6HJZO",
+          "file": "memoryhole/snapshots/2026-08-22/after-6d5700e32951d7d9.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822063716/https://www.volkswagen-group.com/en/partnership-volkswagen-group-and-rivian-18383",
+          "timestamp": "20260822063716"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "JDCH4P5GKTKUPPTVEIPMCMSX643L442G",
+          "file": "memoryhole/snapshots/2026-08-22/before-6d5700e32951d7d9.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260718031727/https://www.volkswagen-group.com/en/partnership-volkswagen-group-and-rivian-18383",
+          "timestamp": "20260718031727"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 1,
+          "reason": "not_prose",
+          "tokens": 649,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 521,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-6d5700e32951d7d9.json",
+      "id": "6d5700e32951d7d9",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.volkswagen-group.com/en/partnership-volkswagen-group-and-rivian-18383"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "VPKMBSIROT3G2IGEDGM4MSGMBBOZDLCS",
+          "file": "memoryhole/snapshots/2026-08-22/after-d57d171b353c735b.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822020831/https://www.volkswagen-group.com/en/privacy-policy-15677",
+          "timestamp": "20260822020831"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "UYVVVXUOVPTGUGJ6JMNDVIDFQYC56FZ6",
+          "file": "memoryhole/snapshots/2026-08-22/before-d57d171b353c735b.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260815114420/https://www.volkswagen-group.com/en/privacy-policy-15677",
+          "timestamp": "20260815114420"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 961,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 986,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-d57d171b353c735b.json",
+      "id": "d57d171b353c735b",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.volkswagen-group.com/en/privacy-policy-15677"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "JKLDIYPFKGADCJMYBCWCEDT6W2EMM6X3",
+          "file": "memoryhole/snapshots/2026-08-22/after-5abd9105755aabc6.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822110427/https://www.basf.com/cz/cs/who-we-are/history/1902-1924",
+          "timestamp": "20260822110427"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "VDDF5AID4SN3GP5DLYTGS3HARS7BTCQB",
+          "file": "memoryhole/snapshots/2026-08-22/before-5abd9105755aabc6.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260330204927/https://www.basf.com/cz/cs/who-we-are/history/1902-1924",
+          "timestamp": "20260330204927"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2270,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 1,
+          "reason": "not_prose",
+          "tokens": 1363,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-5abd9105755aabc6.json",
+      "id": "5abd9105755aabc6",
+      "institution": "basf",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.basf.com/cz/cs/who-we-are/history/1902-1924"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "BZGTTNXKXKJU4JL4XWUUBC4EIBZMPMUG",
+          "file": "memoryhole/snapshots/2026-08-22/after-ab22d1763c894880.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822033232/https://www.basf.com/global/en/who-we-are/organization",
+          "timestamp": "20260822033232"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "RFZ4YUAUMLMEBC5IQSQTAIVQNS7BCYLB",
+          "file": "memoryhole/snapshots/2026-08-22/before-ab22d1763c894880.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260819070823/https://www.basf.com/global/en/who-we-are/organization",
+          "timestamp": "20260819070823"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2087,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2020,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-ab22d1763c894880.json",
+      "id": "ab22d1763c894880",
+      "institution": "basf",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.basf.com/global/en/who-we-are/organization"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "NLN7ZKKUH2UYLDLYEFUZ2SQA6WOQKJNW",
+          "file": "memoryhole/snapshots/2026-08-22/after-2f269c8d32cc241c.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822033231/https://www.basf.com/global/en/who-we-are/organization/suppliers-and-partners",
+          "timestamp": "20260822033231"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "P2PUOZ2LEUONJ5NXLDLW45VFFNMK5Y6F",
+          "file": "memoryhole/snapshots/2026-08-22/before-2f269c8d32cc241c.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260819070820/https://www.basf.com/global/en/who-we-are/organization/suppliers-and-partners",
+          "timestamp": "20260819070820"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2210,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2162,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-2f269c8d32cc241c.json",
+      "id": "2f269c8d32cc241c",
+      "institution": "basf",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.basf.com/global/en/who-we-are/organization/suppliers-and-partners"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-1619231862f6bbf4.json",
+      "id": "1619231862f6bbf4",
+      "institution": "bayer",
+      "kind": "sampled",
+      "reason": "archive_status_-",
+      "url": "https://www.bayer.com/en/agriculture"
+    },
+    {
+      "archive_status": "403",
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-444ff9e4808a5b8d.json",
+      "id": "444ff9e4808a5b8d",
+      "institution": "bp",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822105901/https://www.bp.com/en/global/corporate/news-and-insights/press-releases/bp-and-iraq-finalize-contract-for-kirkuk-redevelopment.html",
+      "reason": "deletion_candidate_survived_recheck_botwall",
+      "recheck": {
+        "class": "botwall",
+        "http_code": 403
+      },
+      "url": "https://www.bp.com/en/global/corporate/news-and-insights/press-releases/bp-and-iraq-finalize-contract-for-kirkuk-redevelopment.html"
+    },
+    {
+      "archive_status": "403",
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-4575ac816c08754c.json",
+      "id": "4575ac816c08754c",
+      "institution": "bp",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822074239/https://www.bp.com/en_gb/target-neutral/home/calculate-and-offset-your-emissions/travel.html",
+      "reason": "deletion_candidate_survived_recheck_botwall",
+      "recheck": {
+        "class": "botwall",
+        "http_code": 403
+      },
+      "url": "https://www.bp.com/en_gb/target-neutral/home/calculate-and-offset-your-emissions/travel.html"
+    },
+    {
+      "archive_status": "403",
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-a8c8cecb1036dbfb.json",
+      "id": "a8c8cecb1036dbfb",
+      "institution": "bp",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822120642/https://www.bp.com/genericarticle.do?categoryId=2012968",
+      "reason": "deletion_candidate_survived_recheck_botwall",
+      "recheck": {
+        "class": "botwall",
+        "http_code": 403
+      },
+      "url": "https://www.bp.com/genericarticle.do?categoryId=2012968"
+    },
+    {
+      "archive_status": "403",
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-d8e2f56c7a53b91e.json",
+      "id": "d8e2f56c7a53b91e",
+      "institution": "bp",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822053033/https://www.bp.com/liveassets/bp_internet/globalbp/globalbp_uk_english/reports_and_publications/statistical_energy_review_2009/STAGING/local_assets/downloads/spreadsheets/statistical_review_full_report_workbook_2009.xls",
+      "reason": "deletion_candidate_survived_recheck_botwall",
+      "recheck": {
+        "class": "botwall",
+        "http_code": 403
+      },
+      "url": "https://www.bp.com/liveassets/bp_internet/globalbp/globalbp_uk_english/reports_and_publications/statistical_energy_review_2009/STAGING/local_assets/downloads/spreadsheets/statistical_review_full_report_workbook_2009.xls"
+    },
+    {
+      "archive_status": "403",
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-08-22/history-c8b1603ef903d3da.json",
+      "id": "c8b1603ef903d3da",
+      "institution": "bp",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260822105146/https://www.bp.com/press-and-publications/press-releases/bp-starts-up-atlantis-major-facility-expansion-project-in-gulf-of-america",
+      "reason": "deletion_candidate_survived_recheck_botwall",
+      "recheck": {
+        "class": "botwall",
+        "http_code": 403
+      },
+      "url": "https://www.bp.com/press-and-publications/press-releases/bp-starts-up-atlantis-major-facility-expansion-project-in-gulf-of-america"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-dbe0f096619f5e8e.json",
+      "id": "dbe0f096619f5e8e",
+      "institution": "bmg",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-e130846662a12f87.json",
+      "id": "e130846662a12f87",
+      "institution": "rki",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-c8622e70da28decb.json",
+      "id": "c8622e70da28decb",
+      "institution": "uba",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.umweltbundesamt.de/barrierefreiheit"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-9c16981977ddf4b2.json",
+      "id": "9c16981977ddf4b2",
+      "institution": "destatis",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.destatis.de/DE/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-9d50b4ba45fa1a1b.json",
+      "id": "9d50b4ba45fa1a1b",
+      "institution": "ec-climate",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://climate.ec.europa.eu/accessibility-statement_en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-49f1ccae7b87cdc8.json",
+      "id": "49f1ccae7b87cdc8",
+      "institution": "bnetza",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesnetzagentur.de/DE/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-7b813ae60a9465ad.json",
+      "id": "7b813ae60a9465ad",
+      "institution": "bundesbank",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesbank.de/de/bundesbank/forschung/studie-zur-wirtschaftlichen-lage-privater-haushalte-phf/datenschutz-604914"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-83ae0473fbac2146.json",
+      "id": "83ae0473fbac2146",
+      "institution": "shell",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.shell.com/about-us/contact-us/contact-ecuador.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-2ee1d7cf60f4f1ed.json",
+      "id": "2ee1d7cf60f4f1ed",
+      "institution": "vw",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.volkswagen-group.com/de/datenschutzerklaerung-15677"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-2f0dd7d6a087b05d.json",
+      "id": "2f0dd7d6a087b05d",
+      "institution": "basf",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://products.basf.com/global/en/TermsConditionsofSales"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-c6b487f2b088586d.json",
+      "id": "c6b487f2b088586d",
+      "institution": "bp",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bp.com/en/global/corporate/contact-us.html"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "DXMG6OW3U3FJCZSVVM7CW5MFQSWVINST",
+          "file": "memoryhole/snapshots/2026-08-22/after-8593dfddae266d9a.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260822122400/https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Datenschutzerklaerung/datenschutzerklaerung.html",
+          "timestamp": "20260822122400"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "QHF4AKFAUYTAA55MK45JNNCVBCJKEMNB",
+          "file": "memoryhole/snapshots/2026-08-22/before-8593dfddae266d9a.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260820011900/https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Datenschutzerklaerung/datenschutzerklaerung.html",
+          "timestamp": "20260820011900"
+        }
+      },
+      "category": "E",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2421,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 2673,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-08-22/history-8593dfddae266d9a.json",
+      "id": "8593dfddae266d9a",
+      "institution": "bmwe",
+      "kind": "control",
+      "reason": "gate_before_not_prose",
+      "url": "https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Datenschutzerklaerung/datenschutzerklaerung.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-a311042b780d7e38.json",
+      "id": "a311042b780d7e38",
+      "institution": "bmg",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt-1"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-22cab31b7d00bcd6.json",
+      "id": "22cab31b7d00bcd6",
+      "institution": "destatis",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.destatis.de/EN/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-68f584e6350b91d4.json",
+      "id": "68f584e6350b91d4",
+      "institution": "ec-climate",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://climate.ec.europa.eu/citizens-stakeholders/contact-us_en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-9505ba4febeea90d.json",
+      "id": "9505ba4febeea90d",
+      "institution": "shell",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.shell.com/about-us/contact-us/contact-honduras.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-822331e0a30a63eb.json",
+      "id": "822331e0a30a63eb",
+      "institution": "vw",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.volkswagen-group.com/de/goto/terms-of-service"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-35a9d704a7102374.json",
+      "id": "35a9d704a7102374",
+      "institution": "basf",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.basf.com/global/en/legal/contact"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-e1744886dfe68a8a.json",
+      "id": "e1744886dfe68a8a",
+      "institution": "bp",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bp.com/en/global/corporate/disclaimer.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-08-22/history-7760a5da50e6c440.json",
+      "id": "7760a5da50e6c440",
+      "institution": "bnetza",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesnetzagentur.de/datenschutz"
+    }
+  ],
+  "failures": [
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:esma"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:ema"
+    }
+  ],
+  "generated_at": "2026-08-23T06:21:00+00:00",
+  "institutions": [
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "bmwe",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bmwe.json",
+      "strategy": "domain",
+      "urls_seen": 18
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 3,
+      "slug": "bmg",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bmg.json",
+      "strategy": "domain",
+      "urls_seen": 3
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bmuv",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bmuv.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "rki",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-rki.json",
+      "strategy": "prefix",
+      "urls_seen": 24
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "uba",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-uba.json",
+      "strategy": "domain",
+      "urls_seen": 17
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "destatis",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-destatis.json",
+      "strategy": "prefix",
+      "urls_seen": 37
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "ec-climate",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-ec-climate.json",
+      "strategy": "domain",
+      "urls_seen": 5
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "esma",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "eba",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-eba.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "eiopa",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-eiopa.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "ema",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 2,
+      "slug": "acer",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-acer.json",
+      "strategy": "domain",
+      "urls_seen": 2
+    },
+    {
+      "category": "C",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "bnetza",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bnetza.json",
+      "strategy": "domain",
+      "urls_seen": 18
+    },
+    {
+      "category": "C",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bafin",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bafin.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "bundesbank",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bundesbank.json",
+      "strategy": "domain",
+      "urls_seen": 12
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "google-sustainability",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-google-sustainability.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "exxonmobil",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-exxonmobil.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "shell",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-shell.json",
+      "strategy": "domain",
+      "urls_seen": 150
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "vw",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-vw.json",
+      "strategy": "domain",
+      "urls_seen": 8
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 3,
+      "slug": "basf",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-basf.json",
+      "strategy": "domain",
+      "urls_seen": 3
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "bayer",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bayer.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "bp",
+      "source": "memoryhole/snapshots/2026-08-22/discovery-bp.json",
+      "strategy": "prefix",
+      "urls_seen": 5
+    }
+  ],
+  "method_versions": {
+    "cdx": "cdx-v1",
+    "events": "events-v1",
+    "extract": "extract-v1",
+    "gate": "gate-v1",
+    "model_layer": "model-v1",
+    "prose": "prose-v1",
+    "recheck": "recheck-v1",
+    "salience": "salience-v1",
+    "textdiff": "textdiff-v1"
+  },
+  "model": {
+    "available": false,
+    "cap": 40,
+    "considered": 4,
+    "cost_usd": 0.0,
+    "currency": "USD",
+    "model": "claude-haiku-4-5",
+    "prompt_version": "memoryhole-classify-v1",
+    "state": "off: no key configured",
+    "submitted": 0,
+    "unclassified_at_cap": 0,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "verdicts": []
+  },
+  "notes": [
+    "domain scope: many pages of few institutions, the architecture the audit made condition 1 — a longer curated list would be the origin with more rows and belongs in the origin",
+    "the archive's cadence is the resolution: institutional pages are crawled weekly to never, so 'nightly' is the protocol frequency, not the observation frequency; a night without a finding is a measurement and is written",
+    "a capture counts as a page only after the validity gate; challenge, consent and bot-wall pages are counted as unverifiable and never diffed",
+    "'gone' is a live-rechecked assertion, never a CDX row; bot-walls, server errors and 451 stay out of the gone-rate denominator and are disclosed as counts",
+    "event types name operations on text, never intent — 'commitment_removed' says a commitment verb left a sentence, nothing about why",
+    "passages carrying an ascription to a person are recorded as digests, not as text: the name stays in the preserved bytes as evidence and never becomes the subject of the record",
+    "model verdicts, when the layer runs, are estimates recorded beside the deterministic record and never inside it",
+    "control pages (category E) carry no commitments; every event on one is a fault of the instrument by construction"
+  ],
+  "rates": {
+    "changed_ci95": [
+      0.0265,
+      0.2891
+    ],
+    "changed_rate": 0.0952,
+    "counts": {
+      "changed": 2,
+      "gone": 13,
+      "unchanged": 19,
+      "unverifiable": 47
+    },
+    "decided": 21,
+    "deletion": {
+      "candidates": 24,
+      "counts": {
+        "botwall": 5,
+        "gone_404": 13,
+        "gone_410": 0,
+        "legal_451": 0,
+        "ok": 5,
+        "other": 1,
+        "server_error": 0,
+        "unreachable": 0
+      },
+      "decided": 19,
+      "excluded_unverifiable": 5,
+      "gone": 13,
+      "gone_ci95": [
+        0.4601,
+        0.8464
+      ],
+      "gone_rate": 0.6842
+    },
+    "examined": 81,
+    "unverifiable_ci95": [
+      0.4715,
+      0.6817
+    ],
+    "unverifiable_rate": 0.5802,
+    "unverifiable_reasons": {
+      "archive_status_-": 2,
+      "archive_status_301": 5,
+      "archive_status_302": 3,
+      "archive_status_303": 1,
+      "deletion_candidate_survived_recheck_botwall": 5,
+      "deletion_candidate_survived_recheck_ok": 5,
+      "deletion_candidate_survived_recheck_other": 1,
+      "gate_after_not_prose": 3,
+      "gate_before_not_prose": 21,
+      "no_earlier_capture": 1
+    }
+  },
+  "sampling": {
+    "fetch_cap": 40,
+    "over_fetch_cap": 0,
+    "pairs_fetched": 26,
+    "per_institution": 5,
+    "rank": "sha256(day|url), ascending"
+  },
+  "watchlist_version": "2026-08-14"
+}
