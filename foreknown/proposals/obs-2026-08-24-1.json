@@ -1,0 +1,46 @@
+{
+  "id": "obs-2026-08-24-1",
+  "date": "2026-08-24",
+  "kind": "difference_observation",
+  "title": "primary_iso3_dropped fires on a second future, a second hazard type, with the identical mechanism the 2026-08-20 review asked to watch for",
+  "statement": "foreknown/snapshots/2026-08-24/run.json's primary_iso3_dropped grew from one entry (gdacs-dr-1027450/ERI, unchanged every night 2026-08-18 through 2026-08-23) to two: gdacs-tc-1001305/CHN appears for the first time tonight. The mechanism is not merely similar to the ERI case -- it is the identical shape on different raw data. gdacs-tc-1001305 was NOTARIZED 2026-08-22 with properties.iso3='JPN', affectedcountries=['JPN'], and the registry committed iso3: ['JPN']. On 2026-08-24 the raw GDACS feature's top-level properties.iso3 flipped to 'CHN' and affectedcountries grew to ['JPN','CHN'] as the storm reached China; the same night's REVISED event updated the future's TRACKED where field from 'Northern Mariana Islands, Japan' to 'Northern Mariana Islands, Japan, China', but iso3 is not one of futures.py's TRACKED_FIELDS, so the committed iso3 array stayed ['JPN'] -- exactly as first written two nights earlier. This is the same divergence the 2026-08-20 review described for gdacs-dr-1027450/ERI: there too, properties.iso3 flipped from ETH to ERI on 2026-08-18 as affectedcountries grew from ['ETH','KEN','SOM'] to ['ERI','ETH','KEN','SOM'], while the committed iso3 array stayed at whatever NOTARIZED first wrote and a same-night REVISED event updated where/what without touching it.",
+  "method": "python3 read of foreknown/snapshots/2026-08-20.json through foreknown/snapshots/2026-08-24/run.json's primary_iso3_dropped field to find the night the second entry first appears (2026-08-24). Read foreknown/registry.json's futures['gdacs-tc-1001305'] to confirm its NOTARIZED/REVISED history and committed iso3. Read foreknown/snapshots/2026-08-22/gdacs.json, 2026-08-23/gdacs.json and 2026-08-24/gdacs.json, extracting properties.iso3 and properties.affectedcountries for eventid 1001305 across the three nights the future has existed, to locate exactly when and how the raw top-level field moved. Repeated the same read against foreknown/snapshots/2026-08-17 through 2026-08-20/gdacs.json for eventid 1027450 (the ERI case the 2026-08-20 review already described) to confirm the two cases share the identical shape rather than only the identical symptom.",
+  "figures": {
+    "second_entry_first_seen": "2026-08-24",
+    "future": "gdacs-tc-1001305",
+    "hazard": "tropical cyclone",
+    "notarized_committed_iso3": ["JPN"],
+    "raw_iso3_before_flip": "JPN",
+    "raw_iso3_after_flip": "CHN",
+    "flip_night": "2026-08-24",
+    "days_between_notarization_and_flip": 2,
+    "comparison_case": {
+      "future": "gdacs-dr-1027450",
+      "hazard": "drought",
+      "raw_iso3_before_flip": "ETH",
+      "raw_iso3_after_flip": "ERI",
+      "flip_night": "2026-08-18",
+      "nights_seen_since": 7
+    }
+  },
+  "derived_from": [
+    "foreknown/snapshots/2026-08-20/run.json",
+    "foreknown/snapshots/2026-08-21/run.json",
+    "foreknown/snapshots/2026-08-22/run.json",
+    "foreknown/snapshots/2026-08-23/run.json",
+    "foreknown/snapshots/2026-08-24/run.json",
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-17/gdacs.json",
+    "foreknown/snapshots/2026-08-18/gdacs.json",
+    "foreknown/snapshots/2026-08-19/gdacs.json",
+    "foreknown/snapshots/2026-08-20/gdacs.json",
+    "foreknown/snapshots/2026-08-22/gdacs.json",
+    "foreknown/snapshots/2026-08-23/gdacs.json",
+    "foreknown/snapshots/2026-08-24/gdacs.json",
+    "practice/src/practice/foreknown/futures.py",
+    "practice/src/practice/foreknown/run.py",
+    "foreknown/proposals/sensor-primary-iso3-gap.json"
+  ],
+  "worth_watching_because": "sensor-primary-iso3-gap.json's 2026-08-20 review named exactly this as the open question -- 'whether other OPEN GDACS futures whose affectedcountries grows after notarization show the same permanent (not self-correcting) firing pattern -- that would confirm this as a second, standing cause of primary_iso3_dropped distinct from the original extraction bug'. Tonight answers it: a second future, a second hazard type (tropical cyclone rather than drought), the same three-part shape (top-level iso3 moves to a country absent from the committed array, affectedcountries grows to match, a same-night REVISED event touches where/what but not iso3). Two instances from two different hazard streams is a pattern, not a coincidence limited to one drought's slow-moving countries. The registry-side gap the 2026-08-20 review described as a design question for the maintainer (iso3 is not a TRACKED_FIELD) is not something this pass has authority to settle, but the review's own falsification clause treated primary_iso3_dropped staying empty as the sensor's eventual retirement condition -- tonight's second, mechanically identical instance is evidence against retirement being near, and the sensor's proposal file is updated below to record it.",
+  "left_alone": "Not proposing a new sensor for this shape -- sensor-primary-iso3-gap.json already exists, is PROMOTED, and already fires on exactly this condition; the observation belongs in that proposal's review history, not a new instrument. Not making iso3 a TRACKED_FIELD or otherwise changing futures.py -- the 2026-08-20 review already named that as a design question for the registry's field model, not a bug this sensor's scope covers, and one more confirming instance does not change who gets to decide a schema change with cost implications (a REVISED event on every country-list edit). Not touching the three PROPOSED sensors (lead-time-pathway-idle, registry-stall, source-reconfirmation-blind-spot) -- lead-time-pathway-idle still has only 2 of the 10 FORECAST-kind resolutions its test_rule waits for (foreknown/resolutions/nhc-al032026.json, foreknown/resolutions/nhc-ep082026.json; the three OPEN NHC forecasts nhc-cp012026, nhc-cp022026, nhc-ep092026 have not yet resolved), and the other two both carry open reviews asking for a firing-rule redesign, not more nights of the same data."
+}

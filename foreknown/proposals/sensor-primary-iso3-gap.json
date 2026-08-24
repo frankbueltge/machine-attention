@@ -28,17 +28,33 @@
     ]
   },
   "review": {
-    "date": "2026-08-20",
-    "outcome": "stays PROMOTED and keeps running unchanged -- the falsification clause's retirement condition ('primary_iso3_dropped stays empty for many subsequent nights purely because the bug is gone') should not be read as within reach for gdacs-dr-1027450, since a second, non-transient mechanism is now on record for the identical symptom",
-    "why": "obs-2026-08-20-1.json found primary_iso3_dropped non-empty for the first time since the 2026-08-09 hand-correction, reporting gdacs-dr-1027450/ERI on three consecutive nights (2026-08-18, 19, 20). Unlike the six tropical-cyclone futures this sensor was written and promoted against -- where the raw feed's top-level iso3 was already absent from affectedcountries at notarization, a source-side extraction gap -- this drought's affectedcountries included ERI in every preserved raw snapshot from 2026-08-18 onward; the gap is registry-side. iso3 is not one of futures.py's TRACKED_FIELDS (severity, window, what, where), so update_registry never re-syncs it once a future is notarized, even as the same night's REVISED event (2026-08-18T05:59:34+00:00) updated this future's tracked where/what to name Eritrea. The committed iso3 array therefore stays exactly as first written on 2026-08-08 for as long as this future remains OPEN, whatever the source does afterward -- a permanent divergence, not a transient one awaiting a fix of the kind obs-2026-08-09-1's cases received.",
-    "watch_for": "whether other OPEN GDACS futures whose affectedcountries grows after notarization show the same permanent (not self-correcting) firing pattern -- that would confirm this as a second, standing cause of primary_iso3_dropped distinct from the original extraction bug, and would mean the sensor's falsification clause needs a second condition (or removal of the single-cause retirement premise) rather than a threshold change. This review does not attempt that rewrite tonight; no code change is made, since whether iso3 should become a TRACKED_FIELD (making the future's own text and country list agree, at the cost of a REVISED event on every country-list edit) is a design question for the registry's field model, not a bug this sensor's own scope covers.",
+    "date": "2026-08-24",
+    "outcome": "stays PROMOTED, no code change -- the 2026-08-20 review's watch_for is answered: a second future, a second hazard type, the identical mechanism",
+    "why": "obs-2026-08-24-1.json found primary_iso3_dropped's second-ever entry, gdacs-tc-1001305/CHN, first appearing tonight -- and its shape is not merely similar to gdacs-dr-1027450/ERI, it is mechanically identical: raw properties.iso3 flips from the country present at NOTARIZED (JPN) to a new one (CHN) as properties.affectedcountries grows to include it, a same-night REVISED event updates the TRACKED where field to name the new country, and the committed iso3 array -- not a TRACKED_FIELD -- stays at whatever NOTARIZED first wrote. Two independent hazard streams (drought, tropical cyclone) producing the identical three-part pattern is what the 2026-08-20 review named as the condition that would confirm a second, standing cause distinct from the original 2026-08-09 extraction bug; that condition is now met.",
+    "watch_for": "further instances would make this the dominant cause of primary_iso3_dropped going forward (the original extraction bug's six cases were hand-corrected once, on 2026-08-09, and have not recurred since); if the count keeps growing across further hazard types and countries, the falsification clause's single-cause retirement premise ('the bug is gone, stays empty for many nights') should be read as no longer reachable by a code fix at the extraction layer, since the standing cause is registry-side, not source-side. No code change is made tonight: whether iso3 should become a TRACKED_FIELD remains a design question for the registry's field model (a REVISED event on every country-list edit is a real cost), not a bug this sensor's own scope covers, and this review does not decide it.",
     "derived_from": [
-      "foreknown/proposals/obs-2026-08-20-1.json",
+      "foreknown/proposals/obs-2026-08-24-1.json",
       "foreknown/registry.json",
-      "foreknown/snapshots/2026-08-18/gdacs.json",
-      "foreknown/snapshots/2026-08-19/gdacs.json",
-      "foreknown/snapshots/2026-08-20/gdacs.json",
+      "foreknown/snapshots/2026-08-22/gdacs.json",
+      "foreknown/snapshots/2026-08-23/gdacs.json",
+      "foreknown/snapshots/2026-08-24/gdacs.json",
       "practice/src/practice/foreknown/futures.py"
+    ],
+    "history": [
+      {
+        "date": "2026-08-20",
+        "outcome": "stays PROMOTED and keeps running unchanged -- the falsification clause's retirement condition ('primary_iso3_dropped stays empty for many subsequent nights purely because the bug is gone') should not be read as within reach for gdacs-dr-1027450, since a second, non-transient mechanism is now on record for the identical symptom",
+        "why": "obs-2026-08-20-1.json found primary_iso3_dropped non-empty for the first time since the 2026-08-09 hand-correction, reporting gdacs-dr-1027450/ERI on three consecutive nights (2026-08-18, 19, 20). Unlike the six tropical-cyclone futures this sensor was written and promoted against -- where the raw feed's top-level iso3 was already absent from affectedcountries at notarization, a source-side extraction gap -- this drought's affectedcountries included ERI in every preserved raw snapshot from 2026-08-18 onward; the gap is registry-side. iso3 is not one of futures.py's TRACKED_FIELDS (severity, window, what, where), so update_registry never re-syncs it once a future is notarized, even as the same night's REVISED event (2026-08-18T05:59:34+00:00) updated this future's tracked where/what to name Eritrea. The committed iso3 array therefore stays exactly as first written on 2026-08-08 for as long as this future remains OPEN, whatever the source does afterward -- a permanent divergence, not a transient one awaiting a fix of the kind obs-2026-08-09-1's cases received.",
+        "watch_for": "whether other OPEN GDACS futures whose affectedcountries grows after notarization show the same permanent (not self-correcting) firing pattern -- that would confirm this as a second, standing cause of primary_iso3_dropped distinct from the original extraction bug, and would mean the sensor's falsification clause needs a second condition (or removal of the single-cause retirement premise) rather than a threshold change. This review does not attempt that rewrite tonight; no code change is made, since whether iso3 should become a TRACKED_FIELD (making the future's own text and country list agree, at the cost of a REVISED event on every country-list edit) is a design question for the registry's field model, not a bug this sensor's own scope covers.",
+        "derived_from": [
+          "foreknown/proposals/obs-2026-08-20-1.json",
+          "foreknown/registry.json",
+          "foreknown/snapshots/2026-08-18/gdacs.json",
+          "foreknown/snapshots/2026-08-19/gdacs.json",
+          "foreknown/snapshots/2026-08-20/gdacs.json",
+          "practice/src/practice/foreknown/futures.py"
+        ]
+      }
     ]
   }
 }
