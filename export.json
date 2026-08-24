@@ -2,93 +2,93 @@
   "$contract": "attention-export/1",
   "figures": [
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_under_watch",
-      "value": 130
+      "value": 128
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_window_open",
-      "value": 36
+      "value": 33
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_cold_start",
-      "value": 93
+      "value": 94
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_drift",
       "value": 1
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_notarized_total",
-      "value": 145
+      "value": 157
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_resolved",
-      "value": 15
+      "value": 29
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_resolved_under_watch",
-      "value": 2
+      "value": 16
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "materialized",
       "value": 0
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "nights_on_record",
-      "value": 14
+      "value": 15
     },
     {
-      "as_of": "2026-08-22",
+      "as_of": "2026-08-23",
       "key": "darkocean_nights_on_record",
-      "value": 14
+      "value": 15
     },
     {
-      "as_of": "2026-08-22",
+      "as_of": "2026-08-23",
       "key": "darkocean_continuity_rechecks",
-      "value": 4132
+      "value": 4736
     },
     {
-      "as_of": "2026-08-22",
+      "as_of": "2026-08-23",
       "key": "darkocean_continuity_divergences",
       "value": 0
     },
     {
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-23",
       "key": "memoryhole_nights_on_record",
-      "value": 8
+      "value": 10
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "sources_in_register",
       "value": 3
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_notarized_gdacs",
       "value": 108
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_notarized_nhc",
-      "value": 4
+      "value": 5
     },
     {
-      "as_of": "2026-08-23",
+      "as_of": "2026-08-24",
       "key": "futures_notarized_nws",
-      "value": 33
+      "value": 44
     }
   ],
   "generated_from": {
-    "commit": "15647fe",
+    "commit": "ab229ed",
     "repo": "machine-attention"
   },
   "practice": {

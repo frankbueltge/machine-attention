@@ -1,0 +1,49 @@
+{
+  "cold_start": false,
+  "evidence": [
+    "foreknown/snapshots/2026-08-23/nws-alerts-active.json"
+  ],
+  "future": "nws-kvef-xhw-0004-26",
+  "measured": {
+    "episode_days": 1.2,
+    "episode_window": {
+      "from": "2026-08-22T15:31:00-07:00",
+      "to": "2026-08-23T20:00:00-07:00"
+    },
+    "escalated": false,
+    "revisions": 0,
+    "severity_path": [
+      "Severe"
+    ]
+  },
+  "reaction": {
+    "limits": [
+      "the money figures are the response plans' own annual totals for every country they list; none of it was raised for this hazard and no part of it is attributable to this future",
+      "attention is measured for the future's countries, not for the hazard — a second event in the same country moves the same number",
+      "the series covers the nights this future was source-open under watch, which for a cold start is shorter than its announced window",
+      "a funding movement inside the watch happened in the same period as the warning, which is not the same as because of it"
+    ],
+    "measured": {
+      "attention_peak": {
+        "articles": 428948,
+        "date": "2026-08-23",
+        "ratio_to_baseline": 1.1
+      },
+      "money_plan_match": false,
+      "nights_watched": 1
+    },
+    "nights": [
+      {
+        "articles": 428948,
+        "attention_day": "2026-08-21",
+        "date": "2026-08-23",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.1
+      }
+    ]
+  },
+  "resolved_at": "2026-08-24T06:07:53+00:00",
+  "verdict": "EPISODE_ENDED"
+}
