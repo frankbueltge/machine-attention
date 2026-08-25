@@ -28,19 +28,34 @@
     ]
   },
   "review": {
-    "date": "2026-08-24",
-    "outcome": "stays PROMOTED, no code change -- the 2026-08-20 review's watch_for is answered: a second future, a second hazard type, the identical mechanism",
-    "why": "obs-2026-08-24-1.json found primary_iso3_dropped's second-ever entry, gdacs-tc-1001305/CHN, first appearing tonight -- and its shape is not merely similar to gdacs-dr-1027450/ERI, it is mechanically identical: raw properties.iso3 flips from the country present at NOTARIZED (JPN) to a new one (CHN) as properties.affectedcountries grows to include it, a same-night REVISED event updates the TRACKED where field to name the new country, and the committed iso3 array -- not a TRACKED_FIELD -- stays at whatever NOTARIZED first wrote. Two independent hazard streams (drought, tropical cyclone) producing the identical three-part pattern is what the 2026-08-20 review named as the condition that would confirm a second, standing cause distinct from the original 2026-08-09 extraction bug; that condition is now met.",
-    "watch_for": "further instances would make this the dominant cause of primary_iso3_dropped going forward (the original extraction bug's six cases were hand-corrected once, on 2026-08-09, and have not recurred since); if the count keeps growing across further hazard types and countries, the falsification clause's single-cause retirement premise ('the bug is gone, stays empty for many nights') should be read as no longer reachable by a code fix at the extraction layer, since the standing cause is registry-side, not source-side. No code change is made tonight: whether iso3 should become a TRACKED_FIELD remains a design question for the registry's field model (a REVISED event on every country-list edit is a real cost), not a bug this sensor's own scope covers, and this review does not decide it.",
+    "date": "2026-08-25",
+    "outcome": "stays PROMOTED, no code change -- a new observation about the sensor's own blind spot, not about the gap's cause: closure removes a future from the check's view without correcting it",
+    "why": "obs-2026-08-25-1.json found that gdacs-tc-1001305, the CHN case the 2026-08-24 review had just confirmed as a second standing cause, was CLOSED_BY_SOURCE tonight (foreknown/registry.json history, 2026-08-25T06:04:45+00:00) with iso3 still ['JPN'] and where still naming China -- the divergence was never corrected, only rendered permanent. primary_iso3_dropped shrank from two entries to one (gdacs-dr-1027450/ERI only) not because the CHN gap closed but because run.py's check (practice/src/practice/foreknown/run.py) iterates tonight's raw GDACS feed features, and eventid 1001305 is absent from foreknown/snapshots/2026-08-25/gdacs.json's 95 features -- confirmed directly. A future that leaves the feed is exactly how futures.py already decides CLOSED_BY_SOURCE (line 231), so the check has nothing left to compare for it, ever again: a closed future cannot reopen into the feed. The list getting shorter and a gap getting fixed produce the identical run-summary signature -- the field alone cannot distinguish them.",
+    "watch_for": "whether this is the general fate of every primary_iso3_dropped entry whose future eventually closes without the extraction being corrected -- if gdacs-dr-1027450 (still OPEN, still diverging on ERI every night since 2026-08-18) closes the same way, that would be a third instance and would make 'closes without correction, drops silently from view' the sensor's normal lifecycle for a registry-side case rather than a one-off. This review does not propose scanning CLOSED futures for a stale gap, or snapshotting a final iso3-vs-where diff into the CLOSED_BY_SOURCE event -- either would be a real fix for the blind spot, but deciding whether iso3 becomes a TRACKED_FIELD or the closure event grows a new comparison is the same design question for the registry's field model the 2026-08-20 review already left to the maintainer, not one this review settles by adding one more confirming instance.",
     "derived_from": [
-      "foreknown/proposals/obs-2026-08-24-1.json",
+      "foreknown/proposals/obs-2026-08-25-1.json",
       "foreknown/registry.json",
-      "foreknown/snapshots/2026-08-22/gdacs.json",
-      "foreknown/snapshots/2026-08-23/gdacs.json",
-      "foreknown/snapshots/2026-08-24/gdacs.json",
+      "foreknown/snapshots/2026-08-24/run.json",
+      "foreknown/snapshots/2026-08-25/run.json",
+      "foreknown/snapshots/2026-08-25/gdacs.json",
+      "practice/src/practice/foreknown/run.py",
       "practice/src/practice/foreknown/futures.py"
     ],
     "history": [
+      {
+        "date": "2026-08-24",
+        "outcome": "stays PROMOTED, no code change -- the 2026-08-20 review's watch_for is answered: a second future, a second hazard type, the identical mechanism",
+        "why": "obs-2026-08-24-1.json found primary_iso3_dropped's second-ever entry, gdacs-tc-1001305/CHN, first appearing tonight -- and its shape is not merely similar to gdacs-dr-1027450/ERI, it is mechanically identical: raw properties.iso3 flips from the country present at NOTARIZED (JPN) to a new one (CHN) as properties.affectedcountries grows to include it, a same-night REVISED event updates the TRACKED where field to name the new country, and the committed iso3 array -- not a TRACKED_FIELD -- stays at whatever NOTARIZED first wrote. Two independent hazard streams (drought, tropical cyclone) producing the identical three-part pattern is what the 2026-08-20 review named as the condition that would confirm a second, standing cause distinct from the original 2026-08-09 extraction bug; that condition is now met.",
+        "watch_for": "further instances would make this the dominant cause of primary_iso3_dropped going forward (the original extraction bug's six cases were hand-corrected once, on 2026-08-09, and have not recurred since); if the count keeps growing across further hazard types and countries, the falsification clause's single-cause retirement premise ('the bug is gone, stays empty for many nights') should be read as no longer reachable by a code fix at the extraction layer, since the standing cause is registry-side, not source-side. No code change is made tonight: whether iso3 should become a TRACKED_FIELD remains a design question for the registry's field model (a REVISED event on every country-list edit is a real cost), not a bug this sensor's own scope covers, and this review does not decide it.",
+        "derived_from": [
+          "foreknown/proposals/obs-2026-08-24-1.json",
+          "foreknown/registry.json",
+          "foreknown/snapshots/2026-08-22/gdacs.json",
+          "foreknown/snapshots/2026-08-23/gdacs.json",
+          "foreknown/snapshots/2026-08-24/gdacs.json",
+          "practice/src/practice/foreknown/futures.py"
+        ]
+      },
       {
         "date": "2026-08-20",
         "outcome": "stays PROMOTED and keeps running unchanged -- the falsification clause's retirement condition ('primary_iso3_dropped stays empty for many subsequent nights purely because the bug is gone') should not be read as within reach for gdacs-dr-1027450, since a second, non-transient mechanism is now on record for the identical symptom",
