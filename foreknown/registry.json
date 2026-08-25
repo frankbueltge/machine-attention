@@ -308,6 +308,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/gdacs.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-22T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-23T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -350,7 +367,7 @@
       "where": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
       "window": {
         "from": "2025-12-11T00:00:00",
-        "to": "2026-08-22T00:00:00"
+        "to": "2026-08-23T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -599,6 +616,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/gdacs.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-22T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-23T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -614,7 +648,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-08-22T00:00:00"
+        "to": "2026-08-23T00:00:00"
       }
     },
     "gdacs-dr-1027449": {
@@ -727,6 +761,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/gdacs.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-05-11T00:00:00",
+                "to": "2026-08-22T00:00:00"
+              },
+              "to": {
+                "from": "2026-05-11T00:00:00",
+                "to": "2026-08-23T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -747,7 +798,7 @@
       "where": "Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
       "window": {
         "from": "2026-05-11T00:00:00",
-        "to": "2026-08-22T00:00:00"
+        "to": "2026-08-23T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -1004,6 +1055,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/gdacs.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-22T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-23T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-dr-1027450",
@@ -1021,7 +1089,7 @@
       "where": "Eritrea, Ethiopia, Kenya, Somalia",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-08-22T00:00:00"
+        "to": "2026-08-23T00:00:00"
       }
     },
     "gdacs-dr-1027465": {
@@ -1270,6 +1338,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/gdacs.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-22T00:00:00"
+              },
+              "to": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-23T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-dr-1027465",
@@ -1288,7 +1373,7 @@
       "where": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
       "window": {
         "from": "2026-05-21T00:00:00",
-        "to": "2026-08-22T00:00:00"
+        "to": "2026-08-23T00:00:00"
       }
     },
     "gdacs-eq-1494848": {
@@ -2131,6 +2216,32 @@
         "to": "2026-08-14T21:58:21"
       }
     },
+    "gdacs-eq-1561626": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "earthquake",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "gdacs-eq-1561626",
+      "iso3": [
+        "AFG"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Orange",
+      "source": "GDACS",
+      "source_ref": "https://www.gdacs.org/report.aspx?eventid=1561626&episodeid=1729008&eventtype=EQ",
+      "status": "OPEN",
+      "what": "Earthquake in Afghanistan",
+      "where": "Afghanistan",
+      "window": {
+        "from": "2026-08-25T01:18:46",
+        "to": "2026-08-25T01:18:46"
+      }
+    },
     "gdacs-fl-1103277": {
       "announced_at": "2026-08-08T17:40:13+00:00",
       "hazard": "flood",
@@ -2810,6 +2921,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-21/gdacs.json",
           "ts": "2026-08-21T06:02:20+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-07-31T01:00:00",
+                "to": "2026-08-19T01:00:00"
+              },
+              "to": {
+                "from": "2026-07-31T01:00:00",
+                "to": "2026-08-25T01:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/gdacs.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-fl-1104081",
@@ -2825,7 +2953,7 @@
       "where": "China",
       "window": {
         "from": "2026-07-31T01:00:00",
-        "to": "2026-08-19T01:00:00"
+        "to": "2026-08-25T01:00:00"
       }
     },
     "gdacs-tc-1001194": {
@@ -3575,6 +3703,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/gdacs.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "gdacs-tc-1001305",
@@ -3585,7 +3717,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1001305&episodeid=15&eventtype=TC",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Tropical Cyclone SAUDEL-26",
       "where": "Northern Mariana Islands, Japan, China",
       "window": {
@@ -4548,19 +4680,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nhc-current-storms.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "55",
+              "to": "50"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-24T03:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-08-25T03:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nhc-current-storms.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nhc-cp012026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "55",
+      "severity": "50",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Lala (TS)",
       "where": "CP2",
       "window": {
-        "from": "2026-08-24T03:00:00.000Z",
+        "from": "2026-08-25T03:00:00.000Z",
         "to": null
       }
     },
@@ -4639,6 +4792,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nhc-current-storms.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-24T03:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-08-25T03:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nhc-current-storms.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nhc-cp022026",
@@ -4651,7 +4821,7 @@
       "what": "Moke (TD)",
       "where": "CP3",
       "window": {
-        "from": "2026-08-24T03:00:00.000Z",
+        "from": "2026-08-25T03:00:00.000Z",
         "to": null
       }
     },
@@ -4741,20 +4911,91 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nhc-current-storms.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "45",
+              "to": "60"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-24T03:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-08-25T03:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nhc-current-storms.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nhc-ep092026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "45",
+      "severity": "60",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Iselle (TS)",
       "where": "EP4",
       "window": {
-        "from": "2026-08-24T03:00:00.000Z",
+        "from": "2026-08-25T03:00:00.000Z",
         "to": null
+      }
+    },
+    "nhc-ep102026": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "tropical cyclone",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nhc-current-storms.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nhc-ep102026",
+      "iso3": [],
+      "kind": "FORECAST",
+      "severity": "30",
+      "source": "NHC",
+      "source_ref": "https://www.nhc.noaa.gov/",
+      "status": "OPEN",
+      "what": "Ten-E (TD)",
+      "where": "EP5",
+      "window": {
+        "from": "2026-08-25T03:00:00.000Z",
+        "to": null
+      }
+    },
+    "nws-kabr-faw-0022-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-kabr-faw-0022-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.439ba4c76fe995f88c606156289232d1125a2a1f.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Jones, SD",
+      "window": {
+        "from": "2026-08-24T22:51:00-05:00",
+        "to": "2026-08-25T01:45:00-05:00"
       }
     },
     "nws-kama-xhw-0007-26": {
@@ -4795,6 +5036,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kbuf-maw-0103-26",
@@ -4805,7 +5050,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fac9032b5e829e529fda752dd3a315cfa17965c8.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Dunkirk to Buffalo NY; Ripley to Buffalo NY extending from 5NM off shoreline to US-Canadian border",
       "window": {
@@ -4872,6 +5117,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kewx-xhw-0003-26",
@@ -4882,12 +5131,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd7e4a655c57503f06ee28ddbc7158f50dfd6087.001.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Llano; Burnet; Williamson; Travis; Bastrop",
       "window": {
         "from": "2026-08-23T19:11:00-05:00",
         "to": "2026-08-24T19:00:00-05:00"
+      }
+    },
+    "nws-kfgz-xhw-0014-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-kfgz-xhw-0014-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d9219af0218b3d8728749fb5383b2e3df76d039.002.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Yavapai County Valleys and Basins",
+      "window": {
+        "from": "2026-08-26T10:00:00-07:00",
+        "to": "2026-08-28T20:00:00-07:00"
       }
     },
     "nws-kfwd-xhw-0003-26": {
@@ -4919,6 +5194,27 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Montague; Cooke; Grayson; Fannin; Lamar; Young; Jack; Wise; Denton; Collin; Hunt; Delta; Hopkins; Stephens; Palo Pinto; Parker; Tarrant; Dallas; Rockwall; Kaufman; Van Zandt; Rains; Eastland; Erath; Hood; Somervell; Johnson; Ellis; Henderson; Comanche; Mills; Hamilton; Bosque; Hill; Navarro; Freestone; Anderson; Lampasas; Coryell; Bell; McLennan; Falls; Limestone; Leon; Milam; Robertson",
+              "to": "Montague; Cooke; Grayson; Fannin; Young; Jack; Wise; Denton; Collin; Hunt; Stephens; Palo Pinto; Parker; Tarrant; Dallas; Rockwall; Kaufman; Eastland; Erath; Hood; Somervell; Johnson; Ellis; Comanche; Mills; Hamilton; Bosque; Hill; Navarro; Lampasas; Coryell; McLennan"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-24T00:44:00-05:00",
+                "to": "2026-08-24T21:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-08-25T00:51:00-05:00",
+                "to": "2026-08-25T21:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kfwd-xhw-0003-26",
@@ -4931,10 +5227,10 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1a552b3a50688d9493329e8f206d27696cb995c.002.1",
       "status": "OPEN",
       "what": "Extreme Heat Warning",
-      "where": "Montague; Cooke; Grayson; Fannin; Lamar; Young; Jack; Wise; Denton; Collin; Hunt; Delta; Hopkins; Stephens; Palo Pinto; Parker; Tarrant; Dallas; Rockwall; Kaufman; Van Zandt; Rains; Eastland; Erath; Hood; Somervell; Johnson; Ellis; Henderson; Comanche; Mills; Hamilton; Bosque; Hill; Navarro; Freestone; Anderson; Lampasas; Coryell; Bell; McLennan; Falls; Limestone; Leon; Milam; Robertson",
+      "where": "Montague; Cooke; Grayson; Fannin; Young; Jack; Wise; Denton; Collin; Hunt; Stephens; Palo Pinto; Parker; Tarrant; Dallas; Rockwall; Kaufman; Eastland; Erath; Hood; Somervell; Johnson; Ellis; Comanche; Mills; Hamilton; Bosque; Hill; Navarro; Lampasas; Coryell; McLennan",
       "window": {
-        "from": "2026-08-24T00:44:00-05:00",
-        "to": "2026-08-24T21:00:00-05:00"
+        "from": "2026-08-25T00:51:00-05:00",
+        "to": "2026-08-25T21:00:00-05:00"
       }
     },
     "nws-khnx-xhw-0003-26": {
@@ -4945,6 +5241,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-24T05:00:00-07:00",
+                "to": "2026-08-26T23:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-08-24T19:58:00-07:00",
+                "to": "2026-08-26T23:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-khnx-xhw-0003-26",
@@ -4959,7 +5272,7 @@
       "what": "Extreme Heat Warning",
       "where": "Indian Wells Valley; Mojave Desert Slopes; Mojave Desert",
       "window": {
-        "from": "2026-08-24T05:00:00-07:00",
+        "from": "2026-08-24T19:58:00-07:00",
         "to": "2026-08-26T23:00:00-07:00"
       }
     },
@@ -4988,6 +5301,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T20:25:00-05:00",
+                "to": "2026-08-28T07:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-08-24T21:28:00-05:00",
+                "to": "2026-08-28T01:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kilx-flw-0037-26",
@@ -5002,8 +5332,8 @@
       "what": "Flood Warning",
       "where": "Cass, IL; Fulton, IL; Mason, IL",
       "window": {
-        "from": "2026-08-23T20:25:00-05:00",
-        "to": "2026-08-28T07:00:00-05:00"
+        "from": "2026-08-24T21:28:00-05:00",
+        "to": "2026-08-28T01:00:00-05:00"
       }
     },
     "nws-kilx-flw-0038-00": {
@@ -5044,6 +5374,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T20:25:00-05:00",
+                "to": "2026-08-30T13:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-08-24T21:28:00-05:00",
+                "to": "2026-08-31T13:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kilx-flw-0038-26",
@@ -5058,8 +5405,8 @@
       "what": "Flood Warning",
       "where": "Brown, IL; Cass, IL; Morgan, IL; Schuyler, IL",
       "window": {
-        "from": "2026-08-23T20:25:00-05:00",
-        "to": "2026-08-30T13:00:00-05:00"
+        "from": "2026-08-24T21:28:00-05:00",
+        "to": "2026-08-31T13:00:00-05:00"
       }
     },
     "nws-kind-flw-0151-26": {
@@ -5087,6 +5434,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0151-26",
@@ -5097,7 +5448,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.005.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Fountain, IN; Parke, IN; Vermillion, IN; Warren, IN",
       "window": {
@@ -5130,6 +5481,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:48:00-04:00",
+                "to": "2026-08-26T09:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-26T02:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0152-26",
@@ -5144,8 +5512,8 @@
       "what": "Flood Warning",
       "where": "Parke, IN; Vermillion, IN; Vigo, IN",
       "window": {
-        "from": "2026-08-23T21:48:00-04:00",
-        "to": "2026-08-26T09:00:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-26T02:30:00-05:00"
       }
     },
     "nws-kind-flw-0160-26": {
@@ -5173,6 +5541,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:48:00-04:00",
+                "to": "2026-08-29T01:08:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-29T09:24:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0160-26",
@@ -5187,8 +5572,8 @@
       "what": "Flood Warning",
       "where": "Crawford, IL; Lawrence, IL; Knox, IN; Sullivan, IN",
       "window": {
-        "from": "2026-08-23T21:48:00-04:00",
-        "to": "2026-08-29T01:08:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-29T09:24:00-05:00"
       }
     },
     "nws-kind-flw-0161-26": {
@@ -5216,6 +5601,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:48:00-04:00",
+                "to": "2026-08-26T20:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-26T19:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0161-26",
@@ -5230,8 +5632,8 @@
       "what": "Flood Warning",
       "where": "Clark, IL; Crawford, IL; Sullivan, IN; Vigo, IN",
       "window": {
-        "from": "2026-08-23T21:48:00-04:00",
-        "to": "2026-08-26T20:00:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-26T19:00:00-05:00"
       }
     },
     "nws-kind-flw-0162-26": {
@@ -5259,6 +5661,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:48:00-04:00",
+                "to": "2026-08-29T03:20:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-29T11:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0162-26",
@@ -5273,8 +5692,8 @@
       "what": "Flood Warning",
       "where": "Crawford, IL; Lawrence, IL; Knox, IN; Sullivan, IN",
       "window": {
-        "from": "2026-08-23T21:48:00-04:00",
-        "to": "2026-08-29T03:20:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-29T11:00:00-05:00"
       }
     },
     "nws-kind-flw-0165-26": {
@@ -5302,6 +5721,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0165-26",
@@ -5312,7 +5735,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e369d74c9aa3888503a809d3996ea1790fdc169b.006.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Daviess, IN; Greene, IN; Knox, IN",
       "window": {
@@ -5375,6 +5798,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0170-26",
@@ -5385,7 +5812,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e369d74c9aa3888503a809d3996ea1790fdc169b.004.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Daviess, IN; Greene, IN; Knox, IN",
       "window": {
@@ -5418,6 +5845,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:53:00-04:00",
+                "to": "2026-08-26T21:17:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-26T19:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0171-26",
@@ -5432,8 +5876,8 @@
       "what": "Flood Warning",
       "where": "Daviess, IN; Gibson, IN; Knox, IN; Pike, IN",
       "window": {
-        "from": "2026-08-23T21:53:00-04:00",
-        "to": "2026-08-26T21:17:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-26T19:30:00-05:00"
       }
     },
     "nws-kind-flw-0172-26": {
@@ -5461,6 +5905,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:53:00-04:00",
+                "to": "2026-08-27T07:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-27T15:10:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0172-26",
@@ -5475,8 +5936,8 @@
       "what": "Flood Warning",
       "where": "Daviess, IN; Gibson, IN; Knox, IN; Pike, IN",
       "window": {
-        "from": "2026-08-23T21:53:00-04:00",
-        "to": "2026-08-27T07:00:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-27T15:10:00-05:00"
       }
     },
     "nws-kind-flw-0174-26": {
@@ -5504,6 +5965,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:48:00-04:00",
+                "to": "2026-08-28T20:27:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-28T23:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0174-26",
@@ -5518,8 +5996,8 @@
       "what": "Flood Warning",
       "where": "Lawrence, IL; Wabash, IL; Knox, IN",
       "window": {
-        "from": "2026-08-23T21:48:00-04:00",
-        "to": "2026-08-28T20:27:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-28T23:30:00-05:00"
       }
     },
     "nws-kind-flw-0175-26": {
@@ -5547,6 +6025,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:53:00-04:00",
+                "to": "2026-08-28T23:20:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-28T18:15:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0175-26",
@@ -5561,8 +6056,8 @@
       "what": "Flood Warning",
       "where": "Gibson, IN; Knox, IN",
       "window": {
-        "from": "2026-08-23T21:53:00-04:00",
-        "to": "2026-08-28T23:20:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-28T18:15:00-05:00"
       }
     },
     "nws-kind-flw-0183-26": {
@@ -5620,6 +6115,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:48:00-04:00",
+                "to": "2026-08-29T11:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-08-24T20:54:00-05:00",
+                "to": "2026-08-29T13:40:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kind-flw-0185-26",
@@ -5634,8 +6146,60 @@
       "what": "Flood Warning",
       "where": "Edwards, IL; Gallatin, IL; Wabash, IL; White, IL; Gibson, IN; Knox, IN; Posey, IN",
       "window": {
-        "from": "2026-08-23T21:48:00-04:00",
-        "to": "2026-08-29T11:00:00-04:00"
+        "from": "2026-08-24T20:54:00-05:00",
+        "to": "2026-08-29T13:40:00-05:00"
+      }
+    },
+    "nws-klox-fww-0003-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-klox-fww-0003-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34f7235049329b24ab0a815d221c2db0d8df9a04.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Cuyama Valley; San Luis Obispo County Mountains; Santa Barbara County Interior Mountains; Southern Ventura County Mountains; Northern Ventura County Mountains; Interstate 5 Corridor; Western San Gabriel Mountains and Highway 14 Corridor",
+      "window": {
+        "from": "2026-08-25T10:00:00-07:00",
+        "to": "2026-08-28T15:00:00-07:00"
+      }
+    },
+    "nws-klox-xhw-0006-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-klox-xhw-0006-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.97061869a302f13492dae7a08e76d857129f36b1.001.2",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Cuyama Valley",
+      "window": {
+        "from": "2026-08-25T10:00:00-07:00",
+        "to": "2026-08-28T20:00:00-07:00"
       }
     },
     "nws-klub-xhw-0001-26": {
@@ -5676,6 +6240,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-klub-xhw-0002-26",
@@ -5686,7 +6254,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.653c56a4a5ac0509db3ba3920367aa92707d6072.002.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Dickens; King; Garza; Kent; Stonewall",
       "window": {
@@ -5702,6 +6270,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kmfr-fww-0019-26",
@@ -5712,7 +6284,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.545b8ca900861909e2ee7ddfd32df855ffea5bf7.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Western Klamath National Forest; Central Siskiyou County Including Shasta Valley; Siskiyou Mountains; Eastern Rogue Valley; Southern Oregon Cascades",
       "window": {
@@ -5728,6 +6300,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kmhx-maw-0346-26",
@@ -5738,7 +6314,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.198ef57270276fa20a76e9d5190de7bee2682615.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "S of Oregon Inlet NC to Cape Hatteras NC out to 20 NM; S of Cape Hatteras NC to Ocracoke Inlet NC out to 20 NM; S of Ocracoke Inlet NC to Cape Lookout NC out to 20 NM; Waters from Oregon Inlet to Cape Hatteras NC from 20 to 60 NM; Waters from Cape Hatteras to Ocracoke Inlet NC from 20 to 60 NM; Waters from Ocracoke Inlet to Cape Lookout NC from 20 to 60 NM",
       "window": {
@@ -5874,6 +6450,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-koun-xhw-0016-26",
@@ -5884,12 +6464,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c0925f628bb7b2478577b53fa93f32a0b756419d.003.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Harmon; Jackson; Tillman; Cotton; Jefferson; Hardeman; Foard; Wilbarger; Wichita; Knox; Baylor; Archer; Clay",
       "window": {
         "from": "2026-08-24T12:00:00-05:00",
         "to": "2026-08-24T20:00:00-05:00"
+      }
+    },
+    "nws-koun-xhw-0017-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-koun-xhw-0017-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.642c2714d0ecf46c05def3ff25a6fdcc557e9cc7.001.2",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Jackson; Tillman; Cotton; Jefferson; Wilbarger; Wichita; Clay",
+      "window": {
+        "from": "2026-08-25T13:00:00-05:00",
+        "to": "2026-08-25T19:00:00-05:00"
       }
     },
     "nws-kpah-flw-0022-26": {
@@ -5900,6 +6506,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-25T10:00:00-05:00",
+                "to": "2026-08-29T12:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-08-25T07:00:00-05:00",
+                "to": "2026-08-29T20:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kpah-flw-0022-26",
@@ -5914,8 +6537,8 @@
       "what": "Flood Warning",
       "where": "Gallatin, IL; Wabash, IL; White, IL; Gibson, IN; Posey, IN",
       "window": {
-        "from": "2026-08-25T10:00:00-05:00",
-        "to": "2026-08-29T12:00:00-05:00"
+        "from": "2026-08-25T07:00:00-05:00",
+        "to": "2026-08-29T20:30:00-05:00"
       }
     },
     "nws-kpbz-flw-0010-26": {
@@ -5943,6 +6566,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kpbz-flw-0010-26",
@@ -5953,7 +6580,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.81dc90b3ae1ab654aa5465f9fc3fb37555e45f93.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Guernsey, OH",
       "window": {
@@ -5986,6 +6613,27 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "San Carlos",
+              "to": "Parker Valley; Kofa; Yuma; Central La Paz; Southeast Yuma County; Gila River Valley; Imperial County Southwest; Imperial County Southeast; Imperial County West; Imperial Valley; Palo Verde Valley; Chuckwalla Valley"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-23T10:23:00-07:00",
+                "to": "2026-08-29T20:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-08-24T13:57:00-07:00",
+                "to": "2026-08-29T20:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-kpsr-xhw-0008-26",
@@ -5998,9 +6646,9 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f7fcaf9a18c9cb74aa0611f4f043cb3d04a9b5f.004.1",
       "status": "OPEN",
       "what": "Extreme Heat Warning",
-      "where": "San Carlos",
+      "where": "Parker Valley; Kofa; Yuma; Central La Paz; Southeast Yuma County; Gila River Valley; Imperial County Southwest; Imperial County Southeast; Imperial County West; Imperial Valley; Palo Verde Valley; Chuckwalla Valley",
       "window": {
-        "from": "2026-08-23T10:23:00-07:00",
+        "from": "2026-08-24T13:57:00-07:00",
         "to": "2026-08-29T20:00:00-07:00"
       }
     },
@@ -6119,6 +6767,27 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Coachella Valley; San Diego County Deserts; San Gorgonio Pass Near Banning",
+              "to": "Orange County Inland"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-23T21:40:00-07:00",
+                "to": "2026-08-28T20:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-08-25T10:00:00-07:00",
+                "to": "2026-08-28T20:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-ksgx-xhw-0008-26",
@@ -6131,9 +6800,9 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cdba2d2437b1a37af449313a2377a5076cea7614.001.1",
       "status": "OPEN",
       "what": "Extreme Heat Warning",
-      "where": "Coachella Valley; San Diego County Deserts; San Gorgonio Pass Near Banning",
+      "where": "Orange County Inland",
       "window": {
-        "from": "2026-08-23T21:40:00-07:00",
+        "from": "2026-08-25T10:00:00-07:00",
         "to": "2026-08-28T20:00:00-07:00"
       }
     },
@@ -6145,6 +6814,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-ksjt-xhw-0002-26",
@@ -6155,12 +6828,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0f7f3bfc7466a1808add0916d3354721b51cab50.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Fisher; Nolan; Haskell; Throckmorton; Jones; Shackelford; Taylor; Callahan",
       "window": {
         "from": "2026-08-24T13:00:00-05:00",
         "to": "2026-08-24T19:00:00-05:00"
+      }
+    },
+    "nws-kslc-ffw-0086-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "flash flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-kslc-ffw-0086-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e082bf6b6196f819dee38f9a19294bbf4047cfe1.001.1",
+      "status": "OPEN",
+      "what": "Flash Flood Warning",
+      "where": "Kane, UT",
+      "window": {
+        "from": "2026-08-24T22:22:00-06:00",
+        "to": "2026-08-25T01:00:00-06:00"
       }
     },
     "nws-ktwc-ffw-0151-26": {
@@ -6171,6 +6870,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-ktwc-ffw-0151-26",
@@ -6181,7 +6884,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f46255c4f2b3313844145b2de9c5e04a67b03e6f.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Pima, AZ; Pinal, AZ",
       "window": {
@@ -6197,6 +6900,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-24/nws-alerts-active.json",
           "ts": "2026-08-24T06:07:53+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-25T06:04:45+00:00"
         }
       ],
       "id": "nws-ktwc-ffw-0152-26",
@@ -6207,7 +6914,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.56358884629183c7241639fef599ac075f9a010d.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Pima, AZ; Pinal, AZ",
       "window": {
@@ -6290,6 +6997,32 @@
       "window": {
         "from": "2026-08-22T15:31:00-07:00",
         "to": "2026-08-23T20:00:00-07:00"
+      }
+    },
+    "nws-kvef-xhw-0005-26": {
+      "announced_at": "2026-08-25T06:04:45+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-25/nws-alerts-active.json",
+          "ts": "2026-08-25T06:04:45+00:00"
+        }
+      ],
+      "id": "nws-kvef-xhw-0005-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e004aafdb22c2bea70e7cbf880f8dc63101b79e9.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Lake Havasu and Fort Mohave; Lake Mead - AZ side; Lake Mohave - AZ side; Hualapai Mountains; Northwest Deserts; Death Valley National Park; Western Mojave Desert; Eastern Mojave Desert, Including the Mojave National Preserve; Morongo Basin; Cadiz Basin; San Bernardino County-Upper Colorado River Valley; Northeast Clark County; Western Clark and Southern Nye County; Las Vegas Valley; Southern Clark County; Lake Mead - NV side; Lake Mohave - NV side",
+      "window": {
+        "from": "2026-08-24T07:24:00-07:00",
+        "to": "2026-08-28T20:00:00-07:00"
       }
     }
   }
