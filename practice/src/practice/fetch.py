@@ -8,6 +8,7 @@ project of the practice.
 
 from __future__ import annotations
 
+import http.client
 import time
 import urllib.error
 import urllib.parse
@@ -91,4 +92,16 @@ class Client:
                 last_detail = f"network error: {getattr(e, 'reason', e).__class__.__name__}"
             except TimeoutError:
                 last_detail = "timeout"
+            except (OSError, http.client.HTTPException) as e:
+                # A connection that dies mid-exchange is the same weather as a
+                # 504, but it does not arrive as a URLError: CPython wraps only
+                # h.request(...) in `except OSError -> URLError`, while
+                # h.getresponse() sits outside that guard. So
+                # RemoteDisconnected and IncompleteRead used to escape this
+                # ladder entirely — past every `except SourceUnavailable` in
+                # run.py, which are written to cost one unverifiable source and
+                # never the night. That is how the reading of 2026-08-25 was
+                # lost an hour in. Retried here; if it persists it still ends as
+                # SourceUnavailable, so I4 holds and nothing is invented.
+                last_detail = f"connection error: {e.__class__.__name__}"
         raise SourceUnavailable(url, f"{last_detail} after {len(attempts)} attempts")
