@@ -30,5 +30,19 @@
       "foreknown/snapshots/2026-08-14/run.json",
       "foreknown/registry.json"
     ]
+  },
+  "review": {
+    "date": "2026-08-26",
+    "outcome": "stays PROMOTED; the cold_start/drift split itself is unaffected, but the is_overdue check it is built on was wrong for every NWS future it has ever classified -- repaired the same night",
+    "why": "obs-2026-08-26-1.json found that is_overdue (this sensor's own implementation, futures.py) compared window.to against now_iso by truncating both to their first 19 characters, which drops NWS's real UTC offset while leaving GDACS's already-naive-UTC values unaffected. Every one of the 13 NWS futures this observatory has flagged overdue since NWS was audited in (2026-08-22 through tonight) recomputes as not overdue once both timestamps are converted to real UTC instants -- a 100% false-positive rate for one source, invisible against GDACS because GDACS's window fields never carried an offset to test the bug against. This proposal's own definition and falsification clause were written and reviewed entirely against GDACS data; adding a second, differently-formatted source silently invalidated an assumption neither the proposal nor the promotion review had reason to name.",
+    "watch_for": "any other function that reads a raw source timestamp and could carry the same naive-comparison assumption the next time a source with a different timestamp convention is added -- named but not fully audited in obs-2026-08-26-1.json's left_alone.",
+    "derived_from": [
+      "foreknown/proposals/obs-2026-08-26-1.json",
+      "foreknown/registry.json",
+      "practice/src/practice/foreknown/futures.py",
+      "practice/src/practice/foreknown/sources.py",
+      "practice/tests/test_foreknown.py",
+      "autonomy/log.jsonl"
+    ]
   }
 }

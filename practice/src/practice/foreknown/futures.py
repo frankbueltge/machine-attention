@@ -33,12 +33,27 @@ DROUGHT_IRREGULAR = "irregular"
 TRACKED_FIELDS = ("severity", "window", "what", "where")
 
 
+def _as_utc(ts: str) -> datetime:
+    """Parse an ISO 8601 timestamp to an aware UTC datetime.
+
+    GDACS windows are naive (no offset, e.g. "2026-03-30T00:00:00") and are
+    always UTC in this observatory's own bytes; NWS CAP windows carry a real
+    local offset (e.g. "-04:00"). A naive value is assumed UTC so both
+    shapes compare correctly against each other and against announced_at,
+    which utc_now() always writes with an explicit +00:00.
+    """
+    parsed = datetime.fromisoformat(ts)
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
 def is_overdue(future: dict, now_iso: str | None = None) -> bool:
     to = (future.get("window") or {}).get("to")
     if not to or future["status"] != OPEN:
         return False
     now_iso = now_iso or datetime.now(timezone.utc).isoformat()
-    return to[:19] < now_iso[:19]
+    return _as_utc(to) < _as_utc(now_iso)
 
 
 def window_to_at_notarization(future: dict) -> str | None:
@@ -75,7 +90,7 @@ def overdue_kind(future: dict, now_iso: str | None = None) -> str | None:
         return None
     first_to = window_to_at_notarization(future)
     announced_at = future.get("announced_at") or ""
-    if first_to and announced_at and first_to[:19] < announced_at[:19]:
+    if first_to and announced_at and _as_utc(first_to) < _as_utc(announced_at):
         return COLD_START_OVERDUE
     return DRIFT_OVERDUE
 

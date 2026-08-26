@@ -127,6 +127,25 @@ def test_a_revised_window_does_not_relabel_a_cold_start():
     assert overdue_kind(drought, "2026-08-25T00:00:00+00:00") == COLD_START_OVERDUE
 
 
+def test_overdue_compares_a_real_offset_not_a_truncated_string():
+    """NWS CAP windows carry a real local offset (e.g. -04:00); GDACS
+    windows are naive UTC. A future notarized 2026-08-26T06:04:14+00:00
+    with window.to 2026-08-26T02:30:00-04:00 (== 06:30:00 UTC, 26 minutes
+    after notarization) is not overdue — the same shape as
+    nws-kmlb-maw-0267-26 in foreknown/registry.json, which the
+    string-truncating comparison this replaces misread as
+    cold_start_overdue because "02:30:00" < "06:04:14" lexically."""
+    future = {"status": "OPEN", "window": {"to": "2026-08-26T02:30:00-04:00"},
+              "announced_at": "2026-08-26T06:04:14+00:00",
+              "history": [{"event": "NOTARIZED",
+                          "ts": "2026-08-26T06:04:14+00:00"}]}
+    assert not is_overdue(future, "2026-08-26T06:04:14+00:00")
+    assert overdue_kind(future, "2026-08-26T06:04:14+00:00") is None
+    # 40 minutes later, in real UTC terms, it genuinely has closed.
+    assert is_overdue(future, "2026-08-26T06:44:14+00:00")
+    assert overdue_kind(future, "2026-08-26T06:44:14+00:00") == DRIFT_OVERDUE
+
+
 def _drought(window_to, history):
     return {"hazard": "drought", "status": "OPEN",
            "window": {"to": window_to}, "history": history}
