@@ -1,7 +1,7 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "79f7e74",
+    "commit": "9957367",
     "repo": "machine-attention"
   },
   "moments": [
@@ -103,6 +103,15 @@
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
       "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kmlb-maw-0267-26.html",
+      "evidence": "foreknown/snapshots/2026-08-26/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-08-26T06:04:14+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Special Marine Warning"
     },
     {
       "enter": "/attention/future/nws-kmfr-fww-0020-26.html",
@@ -895,15 +904,6 @@
       "project": "foreknown",
       "statement": "A warning changed 24 hours after it was first preserved.",
       "subject": "Iselle (TS)"
-    },
-    {
-      "enter": "/attention/future/nhc-cp022026.html",
-      "evidence": "foreknown/snapshots/2026-08-25/nhc-current-storms.json",
-      "mode": "revision",
-      "occurred_at": "2026-08-25T06:04:45+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 4 days after it was first preserved.",
-      "subject": "Moke (TD)"
     }
   ],
   "practice": {

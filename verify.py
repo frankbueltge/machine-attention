@@ -1273,7 +1273,18 @@ def check(root: Path) -> list[str]:
         if future is None:
             problems.append(f"resolution {fid}: unknown future")
             continue
-        if future.get("status") == "OPEN":
+        # A resolution is a claim about the moment it was written
+        # (resolved_at), not a claim that binds the future forever: futures.py
+        # already models a closed future reappearing in its own feed later
+        # (REAPPEARED, status flips back to OPEN) as a legitimate difference,
+        # not an error. So the hole this check watches for is a resolution
+        # with no matching closure in history at all — not a future that was
+        # genuinely closed at resolved_at and only later came back.
+        closed_at_resolution = any(
+            event.get("event") in ("CLOSED_BY_SOURCE", "DISSIPATED")
+            and event.get("ts") == resolution.get("resolved_at")
+            for event in future.get("history", []))
+        if future.get("status") == "OPEN" and not closed_at_resolution:
             problems.append(f"resolution {fid}: future is still OPEN")
         if resolution.get("verdict") not in VALID_VERDICTS:
             problems.append(f"resolution {fid}: illegal verdict "
