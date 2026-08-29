@@ -1,0 +1,2557 @@
+{
+  "attention_baseline_window": [
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-09",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-22",
+    "2026-08-23",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27"
+  ],
+  "attention_day": "2026-08-28",
+  "attention_days_committed": 80,
+  "catchup_sensor": {
+    "fired": false,
+    "firing": "ARMED",
+    "name": "attention-catchup-latency",
+    "nights_recorded": 5,
+    "proposal": "foreknown/proposals/sensor-attention-catchup-latency.json",
+    "why": "the gap or its failure pattern did not recur identically across the window"
+  },
+  "coverage": {
+    "match_rate": 0.3774,
+    "open_alert_episodes": 106,
+    "with_fts_plan_match": 40
+  },
+  "date": "2026-08-29",
+  "failures": [],
+  "futures": {
+    "gdacs-dr-1017863": {
+      "attention": {
+        "articles": 4339,
+        "baseline_median_articles": 4627.0,
+        "ratio_to_baseline": 0.94,
+        "share_per_10k": 36.1
+      },
+      "fips": [
+        "KE",
+        "SO"
+      ],
+      "iso3": [
+        "KEN",
+        "SOM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 303050590,
+        "plan_requirements_usd": 904990581,
+        "plans": [
+          1516,
+          1527
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-dr-1018327": {
+      "attention": {
+        "articles": 629,
+        "baseline_median_articles": 681.0,
+        "ratio_to_baseline": 0.92,
+        "share_per_10k": 5.2
+      },
+      "fips": [
+        "AR",
+        "UY"
+      ],
+      "iso3": [
+        "ARG",
+        "URY"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 100047468,
+        "plan_requirements_usd": 763092338,
+        "plans": [
+          1525
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-dr-1018332": {
+      "attention": {
+        "articles": 51383,
+        "baseline_median_articles": 58051.5,
+        "ratio_to_baseline": 0.89,
+        "share_per_10k": 427.4
+      },
+      "fips": [
+        "AL",
+        "AU",
+        "BE",
+        "BK",
+        "BO",
+        "BU",
+        "DA",
+        "EZ",
+        "FR",
+        "GM",
+        "HR",
+        "HU",
+        "IT",
+        "LO",
+        "LS",
+        "LU",
+        "MJ",
+        "MK",
+        "MN",
+        "PL",
+        "RI",
+        "RO",
+        "SI",
+        "SM",
+        "SP",
+        "SW",
+        "SZ",
+        "UP"
+      ],
+      "iso3": [
+        "ALB",
+        "AUT",
+        "BEL",
+        "BGR",
+        "BIH",
+        "BLR",
+        "CHE",
+        "CZE",
+        "DEU",
+        "DNK",
+        "ESP",
+        "FRA",
+        "HRV",
+        "HUN",
+        "ITA",
+        "LIE",
+        "LUX",
+        "MCO",
+        "MKD",
+        "MNE",
+        "POL",
+        "ROU",
+        "SMR",
+        "SRB",
+        "SVK",
+        "SVN",
+        "SWE",
+        "UKR"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 1664538592,
+        "plan_requirements_usd": 2303961975,
+        "plans": [
+          1515
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-dr-1018431": {
+      "attention": {
+        "articles": 83,
+        "baseline_median_articles": 47.5,
+        "ratio_to_baseline": 1.75,
+        "share_per_10k": 0.7
+      },
+      "fips": [
+        "MA"
+      ],
+      "iso3": [
+        "MDG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 45285434,
+        "plan_requirements_usd": 67953475,
+        "plans": [
+          1567
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-dr-1027449": {
+      "attention": {
+        "articles": 6242,
+        "baseline_median_articles": 6504.0,
+        "ratio_to_baseline": 0.96,
+        "share_per_10k": 51.9
+      },
+      "fips": [
+        "BH",
+        "ES",
+        "GT",
+        "HO",
+        "MX",
+        "NU"
+      ],
+      "iso3": [
+        "BLZ",
+        "GTM",
+        "HND",
+        "MEX",
+        "NIC",
+        "SLV"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 100047468,
+        "plan_requirements_usd": 763092338,
+        "plans": [
+          1525
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-dr-1027450": {
+      "attention": {
+        "articles": 5019,
+        "baseline_median_articles": 5733.0,
+        "ratio_to_baseline": 0.88,
+        "share_per_10k": 41.7
+      },
+      "fips": [
+        "ET",
+        "KE",
+        "SO"
+      ],
+      "iso3": [
+        "ETH",
+        "KEN",
+        "SOM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 420851693,
+        "plan_requirements_usd": 1401908505,
+        "plans": [
+          1516,
+          1523,
+          1527
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-dr-1027465": {
+      "attention": {
+        "articles": 8429,
+        "baseline_median_articles": 6898.5,
+        "ratio_to_baseline": 1.22,
+        "share_per_10k": 70.1
+      },
+      "fips": [
+        "CG",
+        "KE",
+        "TZ",
+        "UG"
+      ],
+      "iso3": [
+        "COD",
+        "KEN",
+        "TZA",
+        "UGA"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 1462509784,
+        "plan_requirements_usd": 3511249661,
+        "plans": [
+          1509,
+          1523,
+          1526,
+          1527
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1498339": {
+      "attention": {
+        "articles": 2203,
+        "baseline_median_articles": 2712.5,
+        "ratio_to_baseline": 0.81,
+        "share_per_10k": 18.3
+      },
+      "fips": [
+        "AF"
+      ],
+      "iso3": [
+        "AFG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 512934072,
+        "plan_requirements_usd": 1714181496,
+        "plans": [
+          1502
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1498907": {
+      "attention": {
+        "articles": 2203,
+        "baseline_median_articles": 2712.5,
+        "ratio_to_baseline": 0.81,
+        "share_per_10k": 18.3
+      },
+      "fips": [
+        "AF"
+      ],
+      "iso3": [
+        "AFG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 512934072,
+        "plan_requirements_usd": 1714181496,
+        "plans": [
+          1502
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1499045": {
+      "attention": {
+        "articles": 2203,
+        "baseline_median_articles": 2712.5,
+        "ratio_to_baseline": 0.81,
+        "share_per_10k": 18.3
+      },
+      "fips": [
+        "AF"
+      ],
+      "iso3": [
+        "AFG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 512934072,
+        "plan_requirements_usd": 1714181496,
+        "plans": [
+          1502
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1500178": {
+      "attention": {
+        "articles": 45910,
+        "baseline_median_articles": 53874.0,
+        "ratio_to_baseline": 0.85,
+        "share_per_10k": 381.8
+      },
+      "fips": [
+        "IN"
+      ],
+      "iso3": [
+        "IND"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1500811": {
+      "attention": {
+        "articles": 20821,
+        "baseline_median_articles": 21372.5,
+        "ratio_to_baseline": 0.97,
+        "share_per_10k": 173.2
+      },
+      "fips": [
+        "RS"
+      ],
+      "iso3": [
+        "RUS"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1501915": {
+      "attention": {
+        "articles": 2784,
+        "baseline_median_articles": 1530.5,
+        "ratio_to_baseline": 1.82,
+        "share_per_10k": 23.2
+      },
+      "fips": [
+        "VE"
+      ],
+      "iso3": [
+        "VEN"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 401083549,
+        "plan_requirements_usd": 931304121,
+        "plans": [
+          1517
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1501948": {
+      "attention": {
+        "articles": 2784,
+        "baseline_median_articles": 1530.5,
+        "ratio_to_baseline": 1.82,
+        "share_per_10k": 23.2
+      },
+      "fips": [
+        "VE"
+      ],
+      "iso3": [
+        "VEN"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 401083549,
+        "plan_requirements_usd": 931304121,
+        "plans": [
+          1517
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1502713": {
+      "attention": {
+        "articles": 3016,
+        "baseline_median_articles": 4526.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 25.1
+      },
+      "fips": [
+        "RP"
+      ],
+      "iso3": [
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1504188": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1504268": {
+      "attention": {
+        "articles": 3016,
+        "baseline_median_articles": 4526.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 25.1
+      },
+      "fips": [
+        "RP"
+      ],
+      "iso3": [
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1504616": {
+      "attention": {
+        "articles": 680,
+        "baseline_median_articles": 717.5,
+        "ratio_to_baseline": 0.95,
+        "share_per_10k": 5.7
+      },
+      "fips": [
+        "ET"
+      ],
+      "iso3": [
+        "ETH"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 161267053,
+        "plan_requirements_usd": 549908505,
+        "plans": [
+          1523,
+          1527
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1504796": {
+      "attention": {
+        "articles": 3016,
+        "baseline_median_articles": 4526.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 25.1
+      },
+      "fips": [
+        "RP"
+      ],
+      "iso3": [
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1507329": {
+      "attention": {
+        "articles": 3154,
+        "baseline_median_articles": 4603.0,
+        "ratio_to_baseline": 0.69,
+        "share_per_10k": 26.2
+      },
+      "fips": [
+        "TU"
+      ],
+      "iso3": [
+        "TUR"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 325753475,
+        "plan_requirements_usd": 2800721613,
+        "plans": [
+          1528
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1508467": {
+      "attention": {
+        "articles": 2203,
+        "baseline_median_articles": 2712.5,
+        "ratio_to_baseline": 0.81,
+        "share_per_10k": 18.3
+      },
+      "fips": [
+        "AF"
+      ],
+      "iso3": [
+        "AFG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 512934072,
+        "plan_requirements_usd": 1714181496,
+        "plans": [
+          1502
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1511252": {
+      "attention": {
+        "articles": 1756,
+        "baseline_median_articles": 4364.0,
+        "ratio_to_baseline": 0.4,
+        "share_per_10k": 14.6
+      },
+      "fips": [
+        "BG"
+      ],
+      "iso3": [
+        "BGD"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 352173567,
+        "plan_requirements_usd": 710508363,
+        "plans": [
+          1524
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1526507": {
+      "attention": {
+        "articles": 1756,
+        "baseline_median_articles": 4364.0,
+        "ratio_to_baseline": 0.4,
+        "share_per_10k": 14.6
+      },
+      "fips": [
+        "BG"
+      ],
+      "iso3": [
+        "BGD"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 352173567,
+        "plan_requirements_usd": 710508363,
+        "plans": [
+          1524
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1536386": {
+      "attention": {
+        "articles": 5486,
+        "baseline_median_articles": 8128.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 45.6
+      },
+      "fips": [
+        "JA"
+      ],
+      "iso3": [
+        "JPN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1541314": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1544720": {
+      "attention": {
+        "articles": 3016,
+        "baseline_median_articles": 4526.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 25.1
+      },
+      "fips": [
+        "RP"
+      ],
+      "iso3": [
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1546617": {
+      "attention": {
+        "articles": 3273,
+        "baseline_median_articles": 3215.0,
+        "ratio_to_baseline": 1.02,
+        "share_per_10k": 27.2
+      },
+      "fips": [
+        "ID"
+      ],
+      "iso3": [
+        "IDN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1546719": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1548377": {
+      "attention": {
+        "articles": 2784,
+        "baseline_median_articles": 1530.5,
+        "ratio_to_baseline": 1.82,
+        "share_per_10k": 23.2
+      },
+      "fips": [
+        "VE"
+      ],
+      "iso3": [
+        "VEN"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 401083549,
+        "plan_requirements_usd": 931304121,
+        "plans": [
+          1517
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1548473": {
+      "attention": {
+        "articles": 2784,
+        "baseline_median_articles": 1530.5,
+        "ratio_to_baseline": 1.82,
+        "share_per_10k": 23.2
+      },
+      "fips": [
+        "VE"
+      ],
+      "iso3": [
+        "VEN"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 401083549,
+        "plan_requirements_usd": 931304121,
+        "plans": [
+          1517
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1548668": {
+      "attention": {
+        "articles": 3016,
+        "baseline_median_articles": 4526.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 25.1
+      },
+      "fips": [
+        "RP"
+      ],
+      "iso3": [
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1552752": {
+      "attention": {
+        "articles": 1004,
+        "baseline_median_articles": 735.5,
+        "ratio_to_baseline": 1.37,
+        "share_per_10k": 8.4
+      },
+      "fips": [
+        "PE"
+      ],
+      "iso3": [
+        "PER"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 100047468,
+        "plan_requirements_usd": 763092338,
+        "plans": [
+          1525
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1554510": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1554552": {
+      "attention": {
+        "articles": 5486,
+        "baseline_median_articles": 8128.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 45.6
+      },
+      "fips": [
+        "JA"
+      ],
+      "iso3": [
+        "JPN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1556215": {
+      "attention": {
+        "articles": 3016,
+        "baseline_median_articles": 4526.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 25.1
+      },
+      "fips": [
+        "RP"
+      ],
+      "iso3": [
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1557236": {
+      "attention": {
+        "articles": 1469,
+        "baseline_median_articles": 1358.0,
+        "ratio_to_baseline": 1.08,
+        "share_per_10k": 12.2
+      },
+      "fips": [
+        "CO"
+      ],
+      "iso3": [
+        "COL"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 393118565,
+        "plan_requirements_usd": 1382876738,
+        "plans": [
+          1500,
+          1525
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1558059": {
+      "attention": {
+        "articles": 3273,
+        "baseline_median_articles": 3215.0,
+        "ratio_to_baseline": 1.02,
+        "share_per_10k": 27.2
+      },
+      "fips": [
+        "ID"
+      ],
+      "iso3": [
+        "IDN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-eq-1562260": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103339": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103434": {
+      "attention": {
+        "articles": 45910,
+        "baseline_median_articles": 53874.0,
+        "ratio_to_baseline": 0.85,
+        "share_per_10k": 381.8
+      },
+      "fips": [
+        "IN"
+      ],
+      "iso3": [
+        "IND"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103479": {
+      "attention": {
+        "articles": 19322,
+        "baseline_median_articles": 22593.5,
+        "ratio_to_baseline": 0.86,
+        "share_per_10k": 160.7
+      },
+      "fips": [
+        "NI"
+      ],
+      "iso3": [
+        "NGA"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 358794201,
+        "plan_requirements_usd": 516399423,
+        "plans": [
+          1508
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103504": {
+      "attention": {
+        "articles": 220,
+        "baseline_median_articles": 2048.0,
+        "ratio_to_baseline": 0.11,
+        "share_per_10k": 1.8
+      },
+      "fips": [
+        "YM"
+      ],
+      "iso3": [
+        "YEM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427252984,
+        "plan_requirements_usd": 2162563336,
+        "plans": [
+          1520
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103506": {
+      "attention": {
+        "articles": 572,
+        "baseline_median_articles": 408.0,
+        "ratio_to_baseline": 1.4,
+        "share_per_10k": 4.8
+      },
+      "fips": [
+        "OD"
+      ],
+      "iso3": [
+        "SSD"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 637797734,
+        "plan_requirements_usd": 1959963980,
+        "plans": [
+          1512,
+          1523
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103514": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103540": {
+      "attention": {
+        "articles": 73563,
+        "baseline_median_articles": 1941.5,
+        "ratio_to_baseline": 37.89,
+        "share_per_10k": 611.8
+      },
+      "fips": [
+        "NP"
+      ],
+      "iso3": [
+        "NPL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103585": {
+      "attention": {
+        "articles": 1456,
+        "baseline_median_articles": 1783.0,
+        "ratio_to_baseline": 0.82,
+        "share_per_10k": 12.1
+      },
+      "fips": [
+        "CU"
+      ],
+      "iso3": [
+        "CUB"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 26275699,
+        "plan_requirements_usd": 81755350,
+        "plans": [
+          1601
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103621": {
+      "attention": {
+        "articles": 2079,
+        "baseline_median_articles": 3219.5,
+        "ratio_to_baseline": 0.65,
+        "share_per_10k": 17.3
+      },
+      "fips": [
+        "TH"
+      ],
+      "iso3": [
+        "THA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103633": {
+      "attention": {
+        "articles": 3273,
+        "baseline_median_articles": 3215.0,
+        "ratio_to_baseline": 1.02,
+        "share_per_10k": 27.2
+      },
+      "fips": [
+        "ID"
+      ],
+      "iso3": [
+        "IDN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103640": {
+      "attention": {
+        "articles": 1531,
+        "baseline_median_articles": 1914.5,
+        "ratio_to_baseline": 0.8,
+        "share_per_10k": 12.7
+      },
+      "fips": [
+        "CE"
+      ],
+      "iso3": [
+        "LKA"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 25123221,
+        "plan_requirements_usd": 35300000,
+        "plans": [
+          1565
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103646": {
+      "attention": {
+        "articles": 8851,
+        "baseline_median_articles": 9514.0,
+        "ratio_to_baseline": 0.93,
+        "share_per_10k": 73.6
+      },
+      "fips": [
+        "ID",
+        "MY",
+        "TH"
+      ],
+      "iso3": [
+        "IDN",
+        "MYS",
+        "THA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103663": {
+      "attention": {
+        "articles": 5578,
+        "baseline_median_articles": 5953.5,
+        "ratio_to_baseline": 0.94,
+        "share_per_10k": 46.4
+      },
+      "fips": [
+        "MY",
+        "TH"
+      ],
+      "iso3": [
+        "MYS",
+        "THA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103694": {
+      "attention": {
+        "articles": 134,
+        "baseline_median_articles": 150.5,
+        "ratio_to_baseline": 0.89,
+        "share_per_10k": 1.1
+      },
+      "fips": [
+        "MZ"
+      ],
+      "iso3": [
+        "MOZ"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 227501197,
+        "plan_requirements_usd": 534342584,
+        "plans": [
+          1506
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103735": {
+      "attention": {
+        "articles": 7846,
+        "baseline_median_articles": 8256.0,
+        "ratio_to_baseline": 0.95,
+        "share_per_10k": 65.3
+      },
+      "fips": [
+        "MZ",
+        "SF",
+        "ZI"
+      ],
+      "iso3": [
+        "MOZ",
+        "ZAF",
+        "ZWE"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 227501197,
+        "plan_requirements_usd": 534342584,
+        "plans": [
+          1506
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103757": {
+      "attention": {
+        "articles": 4917,
+        "baseline_median_articles": 2069.5,
+        "ratio_to_baseline": 2.38,
+        "share_per_10k": 40.9
+      },
+      "fips": [
+        "BR"
+      ],
+      "iso3": [
+        "BRA"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 100047468,
+        "plan_requirements_usd": 763092338,
+        "plans": [
+          1525
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103784": {
+      "attention": {
+        "articles": 225,
+        "baseline_median_articles": 355.0,
+        "ratio_to_baseline": 0.63,
+        "share_per_10k": 1.9
+      },
+      "fips": [
+        "CG"
+      ],
+      "iso3": [
+        "COD"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 1023048895,
+        "plan_requirements_usd": 2132641156,
+        "plans": [
+          1509
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103798": {
+      "attention": {
+        "articles": 680,
+        "baseline_median_articles": 717.5,
+        "ratio_to_baseline": 0.95,
+        "share_per_10k": 5.7
+      },
+      "fips": [
+        "ET"
+      ],
+      "iso3": [
+        "ETH"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 161267053,
+        "plan_requirements_usd": 549908505,
+        "plans": [
+          1523,
+          1527
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103815": {
+      "attention": {
+        "articles": 2203,
+        "baseline_median_articles": 2712.5,
+        "ratio_to_baseline": 0.81,
+        "share_per_10k": 18.3
+      },
+      "fips": [
+        "AF"
+      ],
+      "iso3": [
+        "AFG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 512934072,
+        "plan_requirements_usd": 1714181496,
+        "plans": [
+          1502
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1103933": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1104051": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1104081": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1104121": {
+      "attention": {
+        "articles": 45910,
+        "baseline_median_articles": 53874.0,
+        "ratio_to_baseline": 0.85,
+        "share_per_10k": 381.8
+      },
+      "fips": [
+        "IN"
+      ],
+      "iso3": [
+        "IND"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1104123": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-fl-1104124": {
+      "attention": {
+        "articles": 73563,
+        "baseline_median_articles": 1941.5,
+        "ratio_to_baseline": 37.89,
+        "share_per_10k": 611.8
+      },
+      "fips": [
+        "NP"
+      ],
+      "iso3": [
+        "NPL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001206": {
+      "attention": {
+        "articles": 40512,
+        "baseline_median_articles": 22027.5,
+        "ratio_to_baseline": 1.84,
+        "share_per_10k": 336.9
+      },
+      "fips": [
+        "CH"
+      ],
+      "iso3": [
+        "CHN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001211": {
+      "attention": {
+        "articles": 43528,
+        "baseline_median_articles": 26604.5,
+        "ratio_to_baseline": 1.64,
+        "share_per_10k": 362.0
+      },
+      "fips": [
+        "CH",
+        "RP"
+      ],
+      "iso3": [
+        "CHN",
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001214": {
+      "attention": {
+        "articles": 5208,
+        "baseline_median_articles": 7555.0,
+        "ratio_to_baseline": 0.69,
+        "share_per_10k": 43.3
+      },
+      "fips": [
+        "LA",
+        "RP",
+        "VM"
+      ],
+      "iso3": [
+        "LAO",
+        "PHL",
+        "VNM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 5351609,
+        "plan_requirements_usd": 61132366,
+        "plans": [
+          1522
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001218": {
+      "attention": {
+        "articles": 45910,
+        "baseline_median_articles": 53874.0,
+        "ratio_to_baseline": 0.85,
+        "share_per_10k": 381.8
+      },
+      "fips": [
+        "IN"
+      ],
+      "iso3": [
+        "IND"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001219": {
+      "attention": {
+        "articles": 45331,
+        "baseline_median_articles": 30753.0,
+        "ratio_to_baseline": 1.47,
+        "share_per_10k": 377.0
+      },
+      "fips": [
+        "CH",
+        "RP",
+        "VM"
+      ],
+      "iso3": [
+        "CHN",
+        "PHL",
+        "VNM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 5351609,
+        "plan_requirements_usd": 61132366,
+        "plans": [
+          1522
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001229": {
+      "attention": {
+        "articles": 46688,
+        "baseline_median_articles": 32987.5,
+        "ratio_to_baseline": 1.42,
+        "share_per_10k": 388.3
+      },
+      "fips": [
+        "CB",
+        "CH",
+        "LA",
+        "RP",
+        "TH"
+      ],
+      "iso3": [
+        "CHN",
+        "KHM",
+        "LAO",
+        "PHL",
+        "THA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001230": {
+      "attention": {
+        "articles": 50947,
+        "baseline_median_articles": 34722.0,
+        "ratio_to_baseline": 1.47,
+        "share_per_10k": 423.7
+      },
+      "fips": [
+        "BD",
+        "CA",
+        "CU",
+        "HA",
+        "JM"
+      ],
+      "iso3": [
+        "BMU",
+        "CAN",
+        "CUB",
+        "HTI",
+        "JAM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 452116974,
+        "plan_requirements_usd": 962082776,
+        "plans": [
+          1503,
+          1601
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001232": {
+      "attention": {
+        "articles": 45910,
+        "baseline_median_articles": 53874.0,
+        "ratio_to_baseline": 0.85,
+        "share_per_10k": 381.8
+      },
+      "fips": [
+        "IN"
+      ],
+      "iso3": [
+        "IND"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001233": {
+      "attention": {
+        "articles": 4097,
+        "baseline_median_articles": 5537.0,
+        "ratio_to_baseline": 0.74,
+        "share_per_10k": 34.1
+      },
+      "fips": [
+        "CB",
+        "LA",
+        "RP"
+      ],
+      "iso3": [
+        "KHM",
+        "LAO",
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001234": {
+      "attention": {
+        "articles": 49014,
+        "baseline_median_articles": 36578.0,
+        "ratio_to_baseline": 1.34,
+        "share_per_10k": 407.7
+      },
+      "fips": [
+        "CH",
+        "JA",
+        "RP"
+      ],
+      "iso3": [
+        "CHN",
+        "JPN",
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001238": {
+      "attention": {
+        "articles": 47441,
+        "baseline_median_articles": 56341.0,
+        "ratio_to_baseline": 0.84,
+        "share_per_10k": 394.6
+      },
+      "fips": [
+        "CE",
+        "IN"
+      ],
+      "iso3": [
+        "IND",
+        "LKA"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 25123221,
+        "plan_requirements_usd": 35300000,
+        "plans": [
+          1565
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001254": {
+      "attention": {
+        "articles": 83,
+        "baseline_median_articles": 47.5,
+        "ratio_to_baseline": 1.75,
+        "share_per_10k": 0.7
+      },
+      "fips": [
+        "MA"
+      ],
+      "iso3": [
+        "MDG"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 45285434,
+        "plan_requirements_usd": 67953475,
+        "plans": [
+          1567
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001256": {
+      "attention": {
+        "articles": 217,
+        "baseline_median_articles": 202.0,
+        "ratio_to_baseline": 1.07,
+        "share_per_10k": 1.8
+      },
+      "fips": [
+        "MA",
+        "MZ"
+      ],
+      "iso3": [
+        "MDG",
+        "MOZ"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 272786631,
+        "plan_requirements_usd": 602296059,
+        "plans": [
+          1506,
+          1567
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001270": {
+      "attention": {
+        "articles": 134,
+        "baseline_median_articles": 206.0,
+        "ratio_to_baseline": 0.65,
+        "share_per_10k": 1.1
+      },
+      "fips": [
+        "CQ",
+        "GQ"
+      ],
+      "iso3": [
+        "GUM",
+        "MNP"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001279": {
+      "attention": {
+        "articles": 51076,
+        "baseline_median_articles": 35491.0,
+        "ratio_to_baseline": 1.44,
+        "share_per_10k": 424.8
+      },
+      "fips": [
+        "CH",
+        "GQ",
+        "JA",
+        "TW"
+      ],
+      "iso3": [
+        "CHN",
+        "GUM",
+        "JPN",
+        "TWN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001281": {
+      "attention": {
+        "articles": 42704,
+        "baseline_median_articles": 24714.5,
+        "ratio_to_baseline": 1.73,
+        "share_per_10k": 355.2
+      },
+      "fips": [
+        "CH",
+        "LA",
+        "VM"
+      ],
+      "iso3": [
+        "CHN",
+        "LAO",
+        "VNM"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 5351609,
+        "plan_requirements_usd": 61132366,
+        "plans": [
+          1522
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001294": {
+      "attention": {
+        "articles": 43528,
+        "baseline_median_articles": 26604.5,
+        "ratio_to_baseline": 1.64,
+        "share_per_10k": 362.0
+      },
+      "fips": [
+        "CH",
+        "RP"
+      ],
+      "iso3": [
+        "CHN",
+        "PHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001297": {
+      "attention": {
+        "articles": 46146,
+        "baseline_median_articles": 32705.5,
+        "ratio_to_baseline": 1.41,
+        "share_per_10k": 383.8
+      },
+      "fips": [
+        "CH",
+        "JA",
+        "RM"
+      ],
+      "iso3": [
+        "CHN",
+        "JPN",
+        "MHL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-tc-1001305": {
+      "attention": {
+        "articles": 5486,
+        "baseline_median_articles": 8128.0,
+        "ratio_to_baseline": 0.67,
+        "share_per_10k": 45.6
+      },
+      "fips": [
+        "JA"
+      ],
+      "iso3": [
+        "JPN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1027016": {
+      "attention": {
+        "articles": 699,
+        "baseline_median_articles": 678.0,
+        "ratio_to_baseline": 1.03,
+        "share_per_10k": 5.8
+      },
+      "fips": [
+        "CI"
+      ],
+      "iso3": [
+        "CHL"
+      ],
+      "money": {
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 100047468,
+        "plan_requirements_usd": 763092338,
+        "plans": [
+          1525
+        ]
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029260": {
+      "attention": {
+        "articles": 698,
+        "baseline_median_articles": 893.0,
+        "ratio_to_baseline": 0.78,
+        "share_per_10k": 5.8
+      },
+      "fips": [
+        "PO"
+      ],
+      "iso3": [
+        "PRT"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029331": {
+      "attention": {
+        "articles": 8199,
+        "baseline_median_articles": 7252.5,
+        "ratio_to_baseline": 1.13,
+        "share_per_10k": 68.2
+      },
+      "fips": [
+        "FR"
+      ],
+      "iso3": [
+        "FRA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029448": {
+      "attention": {
+        "articles": 4331,
+        "baseline_median_articles": 5634.0,
+        "ratio_to_baseline": 0.77,
+        "share_per_10k": 36.0
+      },
+      "fips": [
+        "SP"
+      ],
+      "iso3": [
+        "ESP"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029489": {
+      "attention": {
+        "articles": 8199,
+        "baseline_median_articles": 7252.5,
+        "ratio_to_baseline": 1.13,
+        "share_per_10k": 68.2
+      },
+      "fips": [
+        "FR"
+      ],
+      "iso3": [
+        "FRA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029540": {
+      "attention": {
+        "articles": 4331,
+        "baseline_median_articles": 5634.0,
+        "ratio_to_baseline": 0.77,
+        "share_per_10k": 36.0
+      },
+      "fips": [
+        "SP"
+      ],
+      "iso3": [
+        "ESP"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029628": {
+      "attention": {
+        "articles": 8199,
+        "baseline_median_articles": 7252.5,
+        "ratio_to_baseline": 1.13,
+        "share_per_10k": 68.2
+      },
+      "fips": [
+        "FR"
+      ],
+      "iso3": [
+        "FRA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029643": {
+      "attention": {
+        "articles": 4331,
+        "baseline_median_articles": 5634.0,
+        "ratio_to_baseline": 0.77,
+        "share_per_10k": 36.0
+      },
+      "fips": [
+        "SP"
+      ],
+      "iso3": [
+        "ESP"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029649": {
+      "attention": {
+        "articles": 52,
+        "baseline_median_articles": 147.0,
+        "ratio_to_baseline": 0.35,
+        "share_per_10k": 0.4
+      },
+      "fips": [
+        "TS"
+      ],
+      "iso3": [
+        "TUN"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029794": {
+      "attention": {
+        "articles": 4331,
+        "baseline_median_articles": 5634.0,
+        "ratio_to_baseline": 0.77,
+        "share_per_10k": 36.0
+      },
+      "fips": [
+        "SP"
+      ],
+      "iso3": [
+        "ESP"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029958": {
+      "attention": {
+        "articles": 1705,
+        "baseline_median_articles": 2034.5,
+        "ratio_to_baseline": 0.84,
+        "share_per_10k": 14.2
+      },
+      "fips": [
+        "GR"
+      ],
+      "iso3": [
+        "GRC"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1029987": {
+      "attention": {
+        "articles": 1705,
+        "baseline_median_articles": 2034.5,
+        "ratio_to_baseline": 0.84,
+        "share_per_10k": 14.2
+      },
+      "fips": [
+        "GR"
+      ],
+      "iso3": [
+        "GRC"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1030252": {
+      "attention": {
+        "articles": 235,
+        "baseline_median_articles": 178.0,
+        "ratio_to_baseline": 1.32,
+        "share_per_10k": 2.0
+      },
+      "fips": [
+        "RI"
+      ],
+      "iso3": [
+        "SRB"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1030410": {
+      "attention": {
+        "articles": 4331,
+        "baseline_median_articles": 5634.0,
+        "ratio_to_baseline": 0.77,
+        "share_per_10k": 36.0
+      },
+      "fips": [
+        "SP"
+      ],
+      "iso3": [
+        "ESP"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "gdacs-wf-1030534": {
+      "attention": {
+        "articles": 1384,
+        "baseline_median_articles": 1003.5,
+        "ratio_to_baseline": 1.38,
+        "share_per_10k": 11.5
+      },
+      "fips": [
+        "BE"
+      ],
+      "iso3": [
+        "BEL"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nhc-ep112026": {
+      "attention": null,
+      "fips": [],
+      "iso3": [],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nhc-ep122026": {
+      "attention": null,
+      "fips": [],
+      "iso3": [],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-kchs-maw-0123-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-kilx-flw-0038-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-kind-flw-0160-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-kind-flw-0162-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-kind-flw-0174-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-kpsr-xhw-0008-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-ksgx-xhw-0008-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-ktae-maw-0345-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    },
+    "nws-ktwc-xhw-0006-26": {
+      "attention": {
+        "articles": 393046,
+        "baseline_median_articles": 390731.0,
+        "ratio_to_baseline": 1.01,
+        "share_per_10k": 3269.0
+      },
+      "fips": [
+        "US"
+      ],
+      "iso3": [
+        "USA"
+      ],
+      "money": {
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "plans": []
+      },
+      "unmapped_iso3": []
+    }
+  },
+  "generated_at": "2026-08-29T11:47:20+00:00",
+  "notes": [
+    "plan requirements and funding are the plans' own annual figures for every country they list — not attributable to this hazard, and not a statement about adequacy, need or responsibility",
+    "attention counts sum GDELT article mentions across events located in the country: a volume proxy, not distinct articles",
+    "attention is measured for the country, not for the hazard — a country's news volume moves for many reasons at once, and this axis cannot tell them apart",
+    "a country with no matching plan is a fact about two registers, not a finding about the world"
+  ],
+  "sensor": {
+    "fired": false,
+    "firing": "ARMED",
+    "name": "fts-country-coverage",
+    "nights_recorded": 19,
+    "proposal": "foreknown/proposals/sensor-fts-country-coverage.json",
+    "why": "inside the proposal's thresholds"
+  },
+  "sources": {
+    "FTS-funding": "foreknown/reaction/snapshots/2026-08-29/fts-funding-2026.json",
+    "FTS-plans": "foreknown/snapshots/2026-08-29/fts-plans-2026.json",
+    "GDELT-fips": "foreknown/reaction/snapshots/2026-08-29/fips-country.txt"
+  }
+}
