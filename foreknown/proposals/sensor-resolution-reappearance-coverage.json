@@ -1,0 +1,16 @@
+{
+  "name": "resolution-reappearance-coverage",
+  "definition": "For every future in foreknown/registry.json whose history contains a REAPPEARED event, whether the observatory's outcome-measurement layer (foreknown/resolutions/*.json, written by practice/src/practice/foreknown/resolve.py's resolve_pending) has a resolution covering every closure the future's own history records, or only its first. resolve_pending is keyed per future id, not per episode: `path = out_dir / f\"{fid}.json\"; if path.exists(): continue` (resolve.py, lines 145-147). A future that closes, reappears, and closes again therefore gets exactly one resolution file -- the first one -- however many later closures its registry history shows. obs-2026-08-30-1.json found the first instance of this shape (gdacs-tc-1001305: CLOSED_BY_SOURCE 2026-08-25, REAPPEARED 2026-08-28, still OPEN as of 2026-08-29) and the prediction that its eventual second closure will produce no second resolution and no reaction-series join for its second life.",
+  "test_rule": "On each discovery pass, for every future id with a REAPPEARED event in foreknown/registry.json's history: count CLOSED_BY_SOURCE/DISSIPATED events in that future's history occurring strictly after the REAPPEARED event's timestamp (a second-or-later closure). If that count is greater than zero, check whether foreknown/resolutions/{fid}.json's own `resolved_at` matches any of those later closure timestamps. If it does not (the resolution still bears the first closure's resolved_at, or the file's evidence list contains no snapshot dated on or after the REAPPEARED event), the sensor fires: a future has closed a second time and the observatory's resolution layer never recorded it. No threshold or multiple-night wait is needed -- like sensor-primary-iso3-gap.json, this is a mechanical membership check against already-committed registry and resolution files, and a single confirmed instance is itself the finding.",
+  "falsification": "Falsified as a description of a live gap the moment either (a) resolve_pending is changed to key resolutions per-episode rather than per-future-id (e.g. `{fid}-{resolved_at}.json`) and a future that reappeared then closed again produces a second resolution file covering its second life, in which case the sensor should be retired as settled rather than kept firing against a fixed condition, or (b) the maintainer decides one resolution per future id is the intended, permanent design (a future's first outcome stands for the id) and documents that choice, in which case this sensor should be retired as not-a-bug rather than promoted. Until either happens, the sensor's only live case (gdacs-tc-1001305) has not yet fired under its own test_rule -- the future has not closed a second time yet -- so it starts PROPOSED, not promotable, and stays that way until the prediction in obs-2026-08-30-1.json is tested by a real second closure.",
+  "derived_from": [
+    "foreknown/proposals/obs-2026-08-30-1.json",
+    "foreknown/proposals/obs-2026-08-27-1.json",
+    "foreknown/registry.json",
+    "foreknown/resolutions/gdacs-tc-1001305.json",
+    "practice/src/practice/foreknown/resolve.py",
+    "practice/src/practice/foreknown/series.py",
+    "foreknown/proposals/sensor-primary-iso3-gap.json"
+  ],
+  "status": "PROPOSED"
+}
