@@ -1,0 +1,836 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.decc3485a0ca8f8f7aa2893e50deab747f378294.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -103.28,
+                            47.82
+                        ],
+                        [
+                            -103.29,
+                            47.99
+                        ],
+                        [
+                            -103.29,
+                            48.04
+                        ],
+                        [
+                            -103.28,
+                            48.04
+                        ],
+                        [
+                            -103.27,
+                            48.06
+                        ],
+                        [
+                            -103.24,
+                            48.06
+                        ],
+                        [
+                            -103.23,
+                            48.07
+                        ],
+                        [
+                            -103.23,
+                            48.08
+                        ],
+                        [
+                            -103.25,
+                            48.09
+                        ],
+                        [
+                            -103.21,
+                            48.13
+                        ],
+                        [
+                            -103.16,
+                            48.14
+                        ],
+                        [
+                            -103.13,
+                            48.14
+                        ],
+                        [
+                            -103.1,
+                            48.15
+                        ],
+                        [
+                            -103.09,
+                            48.14
+                        ],
+                        [
+                            -103.09,
+                            48.12
+                        ],
+                        [
+                            -103.07,
+                            48.13
+                        ],
+                        [
+                            -103.03,
+                            48.14
+                        ],
+                        [
+                            -102.98,
+                            47.78
+                        ],
+                        [
+                            -103.28,
+                            47.82
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.decc3485a0ca8f8f7aa2893e50deab747f378294.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.decc3485a0ca8f8f7aa2893e50deab747f378294.001.1",
+                "areaDesc": "McKenzie, ND",
+                "geocode": {
+                    "SAME": [
+                        "038053"
+                    ],
+                    "UGC": [
+                        "NDC053"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/NDC053"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.875bf3e6dfbc5da09837dbaf9d9f491fbeafaa2b.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.875bf3e6dfbc5da09837dbaf9d9f491fbeafaa2b.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-30T05:13:00-05:00"
+                    }
+                ],
+                "sent": "2026-08-30T05:36:00-05:00",
+                "effective": "2026-08-30T05:36:00-05:00",
+                "onset": "2026-08-30T05:36:00-05:00",
+                "expires": "2026-08-30T06:15:00-05:00",
+                "ends": "2026-08-30T06:15:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Severe Thunderstorm Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Bismarck ND",
+                "headline": "Severe Thunderstorm Warning issued August 30 at 5:36AM CDT until August 30 at 6:15AM CDT by NWS Bismarck ND",
+                "description": "At 536 AM CDT, a severe thunderstorm was located 12 miles northeast\nof Watford City, moving east at 10 mph.\n\nHAZARD...60 mph wind gusts and quarter size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Hail damage to vehicles is expected. Expect wind damage to\nroofs, siding, and trees.\n\nLocations impacted include...\nTobacco Garden Bay Recreation Area.",
+                "instruction": "Seek shelter inside a well-built structure and stay away from\nwindows. This storm is capable of producing damaging winds and large\nhail.\n\nTorrential rainfall is also occurring with this storm and may lead to\nflash flooding. Do not drive your vehicle through flooded roadways.",
+                "response": "Shelter",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "SVSBIS"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS53 KBIS 301036"
+                    ],
+                    "NWSheadline": [
+                        "SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 615 AM CDT FOR NORTH CENTRAL MCKENZIE COUNTY"
+                    ],
+                    "eventMotionDescription": [
+                        "2026-08-30T10:13:00-00:00...storm...264DEG...8KT...47.95,-103.26"
+                    ],
+                    "windThreat": [
+                        "RADAR INDICATED"
+                    ],
+                    "maxWindGust": [
+                        "60 MPH"
+                    ],
+                    "hailThreat": [
+                        "RADAR INDICATED"
+                    ],
+                    "maxHailSize": [
+                        "1.00"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KBIS.SV.W.0305.000000T0000Z-260830T1115Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-30T06:15:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "SVS"
+                    ],
+                    "NationalWeatherService": [
+                        "SVW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.835273dbd35bebaf3a98623162dc7ca3cdd51d27.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            144.6,
+                            13.44
+                        ],
+                        [
+                            144.6,
+                            13.46
+                        ],
+                        [
+                            144.68,
+                            13.48
+                        ],
+                        [
+                            144.7,
+                            13.47
+                        ],
+                        [
+                            144.7,
+                            13.46
+                        ],
+                        [
+                            144.66,
+                            13.34
+                        ],
+                        [
+                            144.71,
+                            13.25
+                        ],
+                        [
+                            144.68,
+                            13.25
+                        ],
+                        [
+                            144.72,
+                            13.22
+                        ],
+                        [
+                            144.69,
+                            13.22
+                        ],
+                        [
+                            144.65,
+                            13.21
+                        ],
+                        [
+                            144.63,
+                            13.23
+                        ],
+                        [
+                            144.64,
+                            13.26
+                        ],
+                        [
+                            144.65,
+                            13.27
+                        ],
+                        [
+                            144.63,
+                            13.32
+                        ],
+                        [
+                            144.61,
+                            13.33
+                        ],
+                        [
+                            144.63,
+                            13.4
+                        ],
+                        [
+                            144.62,
+                            13.42
+                        ],
+                        [
+                            144.6,
+                            13.44
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.835273dbd35bebaf3a98623162dc7ca3cdd51d27.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.835273dbd35bebaf3a98623162dc7ca3cdd51d27.001.1",
+                "areaDesc": "Guam, GU",
+                "geocode": {
+                    "SAME": [
+                        "066010"
+                    ],
+                    "UGC": [
+                        "GUC010"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/GUC010"
+                ],
+                "references": [],
+                "sent": "2026-08-30T19:35:00+10:00",
+                "effective": "2026-08-30T19:35:00+10:00",
+                "onset": "2026-08-30T19:35:00+10:00",
+                "expires": "2026-08-30T22:30:00+10:00",
+                "ends": "2026-08-30T22:30:00+10:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tiyan GU",
+                "headline": "Flash Flood Warning issued August 30 at 7:35PM ChST until August 30 at 10:30PM ChST by NWS Tiyan GU",
+                "description": "FFWGUM\n\nThe National Weather Service in Tiyan has issued a\n\n* Flash Flood Warning for...\nSouthwestern coasts of Guam...\n\n* Until 1030 PM ChST.\n\n* At 735 PM ChST, Doppler radar indicated heavy rain across the\nwarned area. Additional rainfall amounts of 2 to 3 inches are\npossible in the warned area. Flash flooding is ongoing or expected\nto begin shortly.\n\nHAZARD...Flash flooding caused by heavy rain.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nMerizo, Piti, Santa Rita and Umatac.\n\nApra Harbor and Naval Base Guam.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWGUM"
+                    ],
+                    "WMOidentifier": [
+                        "WGMY50 PGUM 300935"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.PGUM.FF.W.0027.260830T0935Z-260830T1230Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-30T22:30:00+10:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1d0545b231342db8b11883c2a2fd51249bb65200.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1d0545b231342db8b11883c2a2fd51249bb65200.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1d0545b231342db8b11883c2a2fd51249bb65200.001.1",
+                "areaDesc": "Wallowa County",
+                "geocode": {
+                    "SAME": [
+                        "041061",
+                        "041063"
+                    ],
+                    "UGC": [
+                        "ORZ050"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ORZ050"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d777a81d793d7848c08972288d6a40ca359ca587.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.d777a81d793d7848c08972288d6a40ca359ca587.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-29T11:35:00-07:00"
+                    }
+                ],
+                "sent": "2026-08-29T20:50:00-07:00",
+                "effective": "2026-08-29T20:50:00-07:00",
+                "onset": "2026-08-30T01:00:00-07:00",
+                "expires": "2026-08-30T09:00:00-07:00",
+                "ends": "2026-08-30T09:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Freeze Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Pendleton OR",
+                "headline": "Freeze Warning issued August 29 at 8:50PM PDT until August 30 at 9:00AM PDT by NWS Pendleton OR",
+                "description": "* WHAT...Sub-freezing temperatures as low as 30 degrees possible in\nWallowa Valley.\n\n* WHERE...Wallowa County.\n\n* WHEN...From 1 AM to 9 AM PDT Sunday.\n\n* IMPACTS...Frost and freeze conditions could kill crops, other\nsensitive vegetation and possibly damage unprotected outdoor\nplumbing.",
+                "instruction": "Take steps now to protect tender plants from the cold.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWPDT"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS76 KPDT 300350"
+                    ],
+                    "NWSheadline": [
+                        "FREEZE WARNING REMAINS IN EFFECT FROM 1 AM TO 9 AM PDT SUNDAY FOR THE WALLOWA VALLEY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KPDT.FZ.W.0005.260830T0800Z-260830T1600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-30T09:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FZW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -87.5,
+                            38.87
+                        ],
+                        [
+                            -87.46,
+                            38.74
+                        ],
+                        [
+                            -87.64,
+                            38.46
+                        ],
+                        [
+                            -87.78,
+                            38.47
+                        ],
+                        [
+                            -87.56,
+                            38.73
+                        ],
+                        [
+                            -87.56,
+                            38.86
+                        ],
+                        [
+                            -87.5,
+                            38.87
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.001.1",
+                "areaDesc": "Lawrence, IL; Wabash, IL; Knox, IN",
+                "geocode": {
+                    "SAME": [
+                        "017101",
+                        "017185",
+                        "018083"
+                    ],
+                    "UGC": [
+                        "ILC101",
+                        "ILC185",
+                        "INC083"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ILC101",
+                    "https://api.weather.gov/zones/county/ILC185",
+                    "https://api.weather.gov/zones/county/INC083"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f12e54866dbe297df5336b1953067bd10aeed14.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1f12e54866dbe297df5336b1953067bd10aeed14.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-29T10:11:00-05:00"
+                    }
+                ],
+                "sent": "2026-08-29T17:29:00-05:00",
+                "effective": "2026-08-29T17:29:00-05:00",
+                "onset": "2026-08-29T17:29:00-05:00",
+                "expires": "2026-08-30T09:15:00-05:00",
+                "ends": "2026-08-30T09:10:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Indianapolis IN",
+                "headline": "Flood Warning issued August 29 at 5:29PM CDT until August 30 at 9:10AM CDT by NWS Indianapolis IN",
+                "description": "...The Flood Warning continues for the following river in Illinois...\nIndiana...\n\nWabash River at Hutsonville to Vincennes\n\n.Minor flooding continues on the Wabash River from Hutsonville down\nto Vincennes. The river has crested. Flooding should come to an end\non the Wabash over the weekend.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Wabash River at Vincennes.\n\n* WHEN...Until Sunday morning.\n\n* IMPACTS...At 17.0 feet, Considerable agricultural flooding extends\nfrom just north of the junction of Illinois 33 with Business 50 to\nthe St. Francesville, Illinois area.  River Road from Lincoln\nMemorial Bridge to Billett Rd is impassable.  Extensive seep water\nforms behind Illinois levees extending from Russellville to U.S.\nHighway 50.  Flooding of agricultural land begins in Knox County\nIndiana west of the railroad extending for the Oaktown area to the\nnorth side of Vincennes.  Extensive flooding of Small Creek.\n\n* ADDITIONAL DETAILS...\n- At 4:45 PM CDT /5:45 PM EDT/ Saturday the stage was 16.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 4:45 PM CDT /5:45 PM EDT/ Saturday was 17.8 feet.\n- Forecast...The river is expected to fall below flood stage late\nthis evening and continue falling to 4.4 feet Tuesday, September\n08.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov/ind.\n\nThe next statement will be issued Sunday morning at 915 AM CDT /1015\nAM EDT/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSIND"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KIND 292229"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL SUNDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KIND.FL.W.0174.000000T0000Z-260830T1410Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-30T09:10:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.55513f7e9c408f5bc1ea8c3d4b8ca021151f81f3.001.1,2026-08-28T20:36:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7d6d2ad6897bfc2053b7ba54c44a8a9b438cb92a.001.1,2026-08-28T09:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.cd9499db912cf41eedf6e7ed89ab331259907008.002.1,2026-08-27T20:38:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6315cb2dc8d0f54eaa778ad01fb00cd0c181d340.002.1,2026-08-27T10:04:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.370c270d7d1b162addcf02dc7258854c454ad061.002.1,2026-08-26T13:04:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.12919d77a71ad3fa4d2d46fe4c889e8395a827c1.003.1,2026-08-26T09:14:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.21fed40f8a4270468743863bc5d2282950a3b72d.003.1,2026-08-25T13:12:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.966efdc66b3086f5aa2b21cb1cfbfa88e06cea31.004.1,2026-08-25T08:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.485716edaea873f78d95b8660a4bf26eec3149e1.003.1,2026-08-24T12:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d17042b1f0925f697c4f2f6f4a97ea6a0fc7af62.003.1,2026-08-24T20:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e611d888f0b860bf842f3076e8bd792348b6b8d0.003.1,2026-08-24T08:54:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.946a70c1dd6536458e250ec5f6d5adee0ba9c93c.006.1,2026-08-23T21:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.80aefc3a77c6080a84755a24ef28fd6d4a72367f.003.1,2026-08-23T11:49:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.001.1,2026-08-22T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8beb7680892e9f3433e60c223c36cdb1b3362d0f.001.1,2026-08-22T12:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2dd1e07970bc06393d2c562e4f2d2172fe81d431.007.1,2026-08-21T20:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8c805899a9e9613e1f00d135d8938937553c8d3a.007.1,2026-08-21T13:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.dac5a34f4239d39fb3ad5864d36547795df9a98f.007.1,2026-08-21T00:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c23883c76b53f4a666f94759ab9eb559957d3f3e.008.1,2026-08-20T12:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5ce47d6512dd4b1121d5d2bf61d9669dae99b725.005.1,2026-08-19T23:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e388dd3dfaef4ea3ac0cdbec955a878eb1f6eddc.006.1,2026-08-19T11:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.61fd5c818f19ef897f7371e3fdd0dd85ce4fbe12.007.1,2026-08-18T19:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d2a8bfa51d532600f9fd3aed33db16522a1b8e66.008.1,2026-08-18T12:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd2a553870978a6300b65927cce38d08224952b8.005.1,2026-08-17T23:33:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fb2bc23cb2729a8318a0e732e3655cc12afc27cf.008.1,2026-08-17T12:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3cb69c9dfc2e7d883402fba08f00d8dd540f8061.001.1,2026-08-17T03:14:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.003.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -87.57,
+                            39.3
+                        ],
+                        [
+                            -87.54,
+                            39.23
+                        ],
+                        [
+                            -87.62,
+                            39.12
+                        ],
+                        [
+                            -87.68,
+                            39.12
+                        ],
+                        [
+                            -87.62,
+                            39.22
+                        ],
+                        [
+                            -87.63,
+                            39.32
+                        ],
+                        [
+                            -87.57,
+                            39.3
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.003.1",
+                "areaDesc": "Crawford, IL; Lawrence, IL; Knox, IN; Sullivan, IN",
+                "geocode": {
+                    "SAME": [
+                        "017033",
+                        "017101",
+                        "018083",
+                        "018153"
+                    ],
+                    "UGC": [
+                        "ILC033",
+                        "ILC101",
+                        "INC083",
+                        "INC153"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ILC033",
+                    "https://api.weather.gov/zones/county/ILC101",
+                    "https://api.weather.gov/zones/county/INC083",
+                    "https://api.weather.gov/zones/county/INC153"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f12e54866dbe297df5336b1953067bd10aeed14.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1f12e54866dbe297df5336b1953067bd10aeed14.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-29T10:11:00-05:00"
+                    }
+                ],
+                "sent": "2026-08-29T17:29:00-05:00",
+                "effective": "2026-08-29T17:29:00-05:00",
+                "onset": "2026-08-29T17:29:00-05:00",
+                "expires": "2026-08-30T10:00:00-05:00",
+                "ends": "2026-08-30T10:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Indianapolis IN",
+                "headline": "Flood Warning issued August 29 at 5:29PM CDT until August 30 at 10:00AM CDT by NWS Indianapolis IN",
+                "description": "...The Flood Warning continues for the following river in Illinois...\nIndiana...\n\nWabash River at Hutsonville to Vincennes\n\n.Minor flooding continues on the Wabash River from Hutsonville down\nto Vincennes. The river has crested. Flooding should come to an end\non the Wabash over the weekend.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Wabash River at Hutsonville Legacy Power Plant Site.\n\n* WHEN...Until Sunday morning.\n\n* IMPACTS...At 16.0 feet, Old Darwin Road and a few low rural roads\nbetween York and Hutsonville, Illinois begin to flood.\nAgricultural flooding begins along portions of the river.\n\n* ADDITIONAL DETAILS...\n- There is no current observed data.\n- Forecast...The river is expected to fall below flood stage late\nthis evening and continue falling to 6.6 feet Tuesday, September\n08.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov/ind.\n\nThe next statement will be issued Sunday morning at 915 AM CDT /1015\nAM EDT/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSIND"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KIND 292229"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL SUNDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KIND.FL.W.0160.000000T0000Z-260830T1500Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-30T10:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.55513f7e9c408f5bc1ea8c3d4b8ca021151f81f3.003.1,2026-08-28T20:36:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7d6d2ad6897bfc2053b7ba54c44a8a9b438cb92a.003.1,2026-08-28T09:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.cd9499db912cf41eedf6e7ed89ab331259907008.003.1,2026-08-27T20:38:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6315cb2dc8d0f54eaa778ad01fb00cd0c181d340.004.1,2026-08-27T10:04:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.370c270d7d1b162addcf02dc7258854c454ad061.005.1,2026-08-26T13:04:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.12919d77a71ad3fa4d2d46fe4c889e8395a827c1.007.1,2026-08-26T09:14:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.21fed40f8a4270468743863bc5d2282950a3b72d.008.1,2026-08-25T13:12:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.966efdc66b3086f5aa2b21cb1cfbfa88e06cea31.009.1,2026-08-25T08:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.485716edaea873f78d95b8660a4bf26eec3149e1.010.1,2026-08-24T12:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d17042b1f0925f697c4f2f6f4a97ea6a0fc7af62.008.1,2026-08-24T20:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e611d888f0b860bf842f3076e8bd792348b6b8d0.010.1,2026-08-24T08:54:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.946a70c1dd6536458e250ec5f6d5adee0ba9c93c.003.1,2026-08-23T21:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.80aefc3a77c6080a84755a24ef28fd6d4a72367f.009.1,2026-08-23T11:49:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.003.1,2026-08-22T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8beb7680892e9f3433e60c223c36cdb1b3362d0f.004.1,2026-08-22T12:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2dd1e07970bc06393d2c562e4f2d2172fe81d431.004.1,2026-08-21T20:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8c805899a9e9613e1f00d135d8938937553c8d3a.004.1,2026-08-21T13:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.dac5a34f4239d39fb3ad5864d36547795df9a98f.008.1,2026-08-21T00:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c23883c76b53f4a666f94759ab9eb559957d3f3e.005.1,2026-08-20T12:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5ce47d6512dd4b1121d5d2bf61d9669dae99b725.003.1,2026-08-19T23:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e388dd3dfaef4ea3ac0cdbec955a878eb1f6eddc.003.1,2026-08-19T11:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.61fd5c818f19ef897f7371e3fdd0dd85ce4fbe12.003.1,2026-08-18T19:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d2a8bfa51d532600f9fd3aed33db16522a1b8e66.003.1,2026-08-18T12:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd2a553870978a6300b65927cce38d08224952b8.007.1,2026-08-17T23:33:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fb2bc23cb2729a8318a0e732e3655cc12afc27cf.007.1,2026-08-17T12:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9de04a4951429c9442d11de6209f4f4820b09ab4.006.1,2026-08-16T21:52:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9b98412c837c47bb1687581eaa04f6e6907869cb.008.1,2026-08-16T11:49:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d5d4644ab8deccea801b3be26389b3ddda0ecc7.011.1,2026-08-15T23:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f9fbf90fbe9b1580e579040cafb7e19f2149febd.003.1,2026-08-15T12:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a1aa8b15f1da227c3abf57a25e4a34f9b69dccd9.004.1,2026-08-15T10:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.64218afb34df966fbcb3962d3026b2b73daf6b25.002.1,2026-08-15T01:01:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.39ddae9864763324cc61e17883f574078fa51e00.005.1,2026-08-14T17:54:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.96a3507f6d688f90113df5bcce2cbf3c6e09937a.006.1,2026-08-14T11:00:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.937ec1b615d2fe1b69d6ebb6279293eb9fa20bb7.005.1,2026-08-14T05:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c22fe89d6c044e8eab5af578625cfe2a2eff39b7.004.1,2026-08-13T18:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5fcd3e339b20c92ca7f4b9bb7caf1c639faa1434.001.1,2026-08-13T12:22:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.002.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -87.61,
+                            39.13
+                        ],
+                        [
+                            -87.48,
+                            38.99
+                        ],
+                        [
+                            -87.5,
+                            38.86
+                        ],
+                        [
+                            -87.56,
+                            38.85
+                        ],
+                        [
+                            -87.59,
+                            38.98
+                        ],
+                        [
+                            -87.68,
+                            39.13
+                        ],
+                        [
+                            -87.61,
+                            39.13
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0a43560fddf6a3a82ffea67dc14c36f61179d0bd.002.1",
+                "areaDesc": "Crawford, IL; Lawrence, IL; Knox, IN; Sullivan, IN",
+                "geocode": {
+                    "SAME": [
+                        "017033",
+                        "017101",
+                        "018083",
+                        "018153"
+                    ],
+                    "UGC": [
+                        "ILC033",
+                        "ILC101",
+                        "INC083",
+                        "INC153"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ILC033",
+                    "https://api.weather.gov/zones/county/ILC101",
+                    "https://api.weather.gov/zones/county/INC083",
+                    "https://api.weather.gov/zones/county/INC153"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f12e54866dbe297df5336b1953067bd10aeed14.003.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1f12e54866dbe297df5336b1953067bd10aeed14.003.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-29T10:11:00-05:00"
+                    }
+                ],
+                "sent": "2026-08-29T17:29:00-05:00",
+                "effective": "2026-08-29T17:29:00-05:00",
+                "onset": "2026-08-29T17:29:00-05:00",
+                "expires": "2026-08-30T13:00:00-05:00",
+                "ends": "2026-08-31T13:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Indianapolis IN",
+                "headline": "Flood Warning issued August 29 at 5:29PM CDT until August 31 at 1:00PM CDT by NWS Indianapolis IN",
+                "description": "...The Flood Warning continues for the following river in Illinois...\nIndiana...\n\nWabash River at Hutsonville to Vincennes\n\n.Minor flooding continues on the Wabash River from Hutsonville down\nto Vincennes. The river has crested. Flooding should come to an end\non the Wabash over the weekend.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Wabash River at Riverton.\n\n* WHEN...Until Monday afternoon.\n\n* IMPACTS...At 18.0 feet, Extensive lowland flooding is in progress.\nHigh water surrounds many river cabins.  Access to most river\ncabins is by boat only.  Levees begin to protect farmland.\nExtensive flooding of Leaverton Park occurs in Palestine, Illinois.\n\n* ADDITIONAL DETAILS...\n- At 5:00 PM CDT /6:00 PM EDT/ Saturday the stage was 17.6 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 5:00 PM CDT /6:00 PM EDT/ Saturday was 19.0 feet.\n- Forecast...The river is expected to fall below flood stage early\nMonday morning and continue falling to 5.1 feet Tuesday,\nSeptember 08.\n- Flood stage is 15.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov/ind.\n\nThe next statement will be issued Sunday morning at 915 AM CDT /1015\nAM EDT/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSIND"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KIND 292229"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL MONDAY AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KIND.FL.W.0162.000000T0000Z-260831T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-31T13:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.55513f7e9c408f5bc1ea8c3d4b8ca021151f81f3.002.1,2026-08-28T20:36:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.7d6d2ad6897bfc2053b7ba54c44a8a9b438cb92a.002.1,2026-08-28T09:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.cd9499db912cf41eedf6e7ed89ab331259907008.004.1,2026-08-27T20:38:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6315cb2dc8d0f54eaa778ad01fb00cd0c181d340.003.1,2026-08-27T10:04:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.370c270d7d1b162addcf02dc7258854c454ad061.003.1,2026-08-26T13:04:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.12919d77a71ad3fa4d2d46fe4c889e8395a827c1.005.1,2026-08-26T09:14:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.21fed40f8a4270468743863bc5d2282950a3b72d.006.1,2026-08-25T13:12:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.966efdc66b3086f5aa2b21cb1cfbfa88e06cea31.007.1,2026-08-25T08:35:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.485716edaea873f78d95b8660a4bf26eec3149e1.008.1,2026-08-24T12:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d17042b1f0925f697c4f2f6f4a97ea6a0fc7af62.006.1,2026-08-24T20:54:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e611d888f0b860bf842f3076e8bd792348b6b8d0.008.1,2026-08-24T08:54:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.946a70c1dd6536458e250ec5f6d5adee0ba9c93c.002.1,2026-08-23T21:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.80aefc3a77c6080a84755a24ef28fd6d4a72367f.008.1,2026-08-23T11:49:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.002.1,2026-08-22T21:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8beb7680892e9f3433e60c223c36cdb1b3362d0f.002.1,2026-08-22T12:07:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2dd1e07970bc06393d2c562e4f2d2172fe81d431.002.1,2026-08-21T20:32:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8c805899a9e9613e1f00d135d8938937553c8d3a.002.1,2026-08-21T13:41:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.dac5a34f4239d39fb3ad5864d36547795df9a98f.003.1,2026-08-21T00:12:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c23883c76b53f4a666f94759ab9eb559957d3f3e.003.1,2026-08-20T12:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5ce47d6512dd4b1121d5d2bf61d9669dae99b725.001.1,2026-08-19T23:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e388dd3dfaef4ea3ac0cdbec955a878eb1f6eddc.001.1,2026-08-19T11:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.61fd5c818f19ef897f7371e3fdd0dd85ce4fbe12.001.1,2026-08-18T19:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d2a8bfa51d532600f9fd3aed33db16522a1b8e66.001.1,2026-08-18T12:21:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd2a553870978a6300b65927cce38d08224952b8.006.1,2026-08-17T23:33:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fb2bc23cb2729a8318a0e732e3655cc12afc27cf.006.1,2026-08-17T12:14:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.81712acd21b37ef7832e67c8a6853a8f10412961.001.1,2026-08-16T21:52:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9b98412c837c47bb1687581eaa04f6e6907869cb.007.1,2026-08-16T11:49:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d5d4644ab8deccea801b3be26389b3ddda0ecc7.010.1,2026-08-15T23:16:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f9fbf90fbe9b1580e579040cafb7e19f2149febd.002.1,2026-08-15T12:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a1aa8b15f1da227c3abf57a25e4a34f9b69dccd9.002.1,2026-08-15T10:34:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.64218afb34df966fbcb3962d3026b2b73daf6b25.010.1,2026-08-15T01:01:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.39ddae9864763324cc61e17883f574078fa51e00.006.1,2026-08-14T17:54:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.96a3507f6d688f90113df5bcce2cbf3c6e09937a.007.1,2026-08-14T11:00:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.937ec1b615d2fe1b69d6ebb6279293eb9fa20bb7.006.1,2026-08-14T05:27:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c22fe89d6c044e8eab5af578625cfe2a2eff39b7.006.1,2026-08-13T18:03:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5fcd3e339b20c92ca7f4b9bb7caf1c639faa1434.003.1,2026-08-13T12:22:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-08-30T10:37:41+00:00"
+}
