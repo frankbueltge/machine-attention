@@ -1,0 +1,232 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6bffee23cc1e94cc1e6f9ef9997250a9362b74ae.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -111.25,
+                            31.85
+                        ],
+                        [
+                            -111.15,
+                            32.02
+                        ],
+                        [
+                            -111.17,
+                            32.26
+                        ],
+                        [
+                            -111.32,
+                            32.25
+                        ],
+                        [
+                            -111.38,
+                            32.2
+                        ],
+                        [
+                            -111.44,
+                            31.81
+                        ],
+                        [
+                            -111.25,
+                            31.85
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6bffee23cc1e94cc1e6f9ef9997250a9362b74ae.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6bffee23cc1e94cc1e6f9ef9997250a9362b74ae.001.1",
+                "areaDesc": "Pima, AZ",
+                "geocode": {
+                    "SAME": [
+                        "004019"
+                    ],
+                    "UGC": [
+                        "AZC019"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/AZC019"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.751ecd6eaac5ef73a1d2374d149df744cf155c5b.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.751ecd6eaac5ef73a1d2374d149df744cf155c5b.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-31T04:00:00-07:00"
+                    }
+                ],
+                "sent": "2026-08-31T04:43:00-07:00",
+                "effective": "2026-08-31T04:43:00-07:00",
+                "onset": "2026-08-31T04:43:00-07:00",
+                "expires": "2026-08-31T07:00:00-07:00",
+                "ends": "2026-08-31T07:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tucson AZ",
+                "headline": "Flash Flood Warning issued August 31 at 4:43AM MST until August 31 at 7:00AM MST by NWS Tucson AZ",
+                "description": "At 443 AM MST, Doppler radar and automated rain gauges indicated\nthunderstorms producing heavy rain across the warned area. Between 1\nand 2 inches of rain have fallen. The AZGFD3 and Diamond Bell Ranch\nalert gauges have recorded 1.5 inches in the last hour and a half.\nFlash flooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar and automated gauges.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\nSome locations that will experience flash flooding include...\nThree Points, Tucson Estates, Tucson Mountain Park and Ryan\nAirField.\n\nThis includes the following highways...\nRoute 86 between mile markers 146 and 160. Route 286 between mile\nmarkers 25 and 45.\n\nThis includes the following streams and drainages...\nAlambre Wash, Cerro Prieto Wash, Saucito Wash, Altar Wash, Brown\nWash, Brawley Wash, Banner Wash, Fresno Wash, Mendoza Wash, South\nMendoza Wash and Soto Wash.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFSTWC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS75 KTWC 311143"
+                    ],
+                    "NWSheadline": [
+                        "FLASH FLOOD WARNING REMAINS IN EFFECT UNTIL 7 AM MST THIS MORNING FOR CENTRAL PIMA COUNTY"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR AND GAUGE INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTWC.FF.W.0174.000000T0000Z-260831T1400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-31T07:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFS"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d51df304b7c89a70b674b1414d3cff841f5777.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d51df304b7c89a70b674b1414d3cff841f5777.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.87d51df304b7c89a70b674b1414d3cff841f5777.001.1",
+                "areaDesc": "Western Klamath National Forest; Central Siskiyou County Including Shasta Valley; Siskiyou County from the Cascade Mountains East and South to Mt Shasta; Modoc County Except for the Surprise Valley; Klamath Basin and the Fremont-Winema National Forest",
+                "geocode": {
+                    "SAME": [
+                        "006093",
+                        "006049",
+                        "041035",
+                        "041037"
+                    ],
+                    "UGC": [
+                        "CAZ280",
+                        "CAZ281",
+                        "CAZ284",
+                        "CAZ285",
+                        "ORZ624"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ280",
+                    "https://api.weather.gov/zones/fire/CAZ281",
+                    "https://api.weather.gov/zones/fire/CAZ284",
+                    "https://api.weather.gov/zones/fire/CAZ285",
+                    "https://api.weather.gov/zones/fire/ORZ624"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d3d19744b7dd903ea0c45b77a0f4b7f2015ec292.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.d3d19744b7dd903ea0c45b77a0f4b7f2015ec292.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-08-30T12:56:00-07:00"
+                    }
+                ],
+                "sent": "2026-08-31T04:39:00-07:00",
+                "effective": "2026-08-31T04:39:00-07:00",
+                "onset": "2026-08-31T12:00:00-07:00",
+                "expires": "2026-08-31T16:45:00-07:00",
+                "ends": "2026-08-31T20:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Medford OR",
+                "headline": "Red Flag Warning issued August 31 at 4:39AM PDT until August 31 at 8:00PM PDT by NWS Medford OR",
+                "description": "* AFFECTED AREA...In California...The Scott Valley in Fire\nweather zone 280, Fire weather zone 281, Fire weather zone 284\nexcepting the southeast portion of the zone, and Fire weather\nzone 285. In Oregon...Fire weather zone 624, excepting the\nHighway 97 corridor from Modoc Point to Chemult.\n\n* WIND...South winds 10 to 20 mph with gusts to 30 mph in the\nScott Valley, and 15 to 25 mph with gusts to 35 mph in the\nShasta Valley. Elsewhere, southwest winds 10 to 20 mph with\ngusts to 30 mph.\n\n* HUMIDITY...Minimum humidity 9 to 15 percent.\n\n* DETAILED URL...View the hazard area in detail at\nhttps://weather.gov/wrh/hazards?wfo=mfr",
+                "instruction": "Follow all fire restrictions. You can find your county's\nemergency sign up form as well as links to fire restrictions at\nweather.gov/medford/wildfire. One less spark, one less wildfire.\n\nBe sure you're signed up for your county's emergency alert\nsystem. Familiarize yourself with your emergency plan and make\nsure you listen to emergency services. Visit ready.gov/plan for\nmore information.\n\nA Red Flag Warning is issued when we identify weather conditions\nthat promote rapid spread of fire which may become life-\nthreatening. This does not mean there is a fire. These conditions\nare either occurring now or will begin soon. It is important to\nhave multiple ways to receive information from authorities.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWMFR"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS86 KMFR 311139"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM NOON TODAY TO 8 PM PDT THIS EVENING FOR STRONG GUSTY WIND AND LOW RH FOR FIRE WEATHER ZONES 280, 281, 284, 285, AND 624"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMFR.FW.W.0022.260831T1900Z-260901T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-08-31T20:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-08-31T11:47:22+00:00"
+}

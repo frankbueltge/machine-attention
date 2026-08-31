@@ -393,6 +393,31 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/gdacs.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "what": {
+              "from": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
+              "to": "Drought in Austria, Bosnia  and  Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+            },
+            "where": {
+              "from": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
+              "to": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+            },
+            "window": {
+              "from": {
+                "from": "2025-12-11T00:00:00",
+                "to": "2026-08-28T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-08-31T08:23:02"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -431,11 +456,11 @@
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1018332&episodeid=18&eventtype=DR",
       "status": "OPEN",
-      "what": "Drought in Albania, Austria, Bosnia  and  Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
-      "where": "Albania, Austria, Bosnia & Herzegovina, Belgium, Bulgaria, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Montenegro, The Republic of North Macedonia, Netherlands, Poland, Romania, Serbia, Slovenia, Slovakia, Ukraine,",
+      "what": "Drought in Austria, Bosnia  and  Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
+      "where": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
       "window": {
-        "from": "2025-12-11T00:00:00",
-        "to": "2026-08-28T00:00:00"
+        "from": "2025-12-21T00:00:00",
+        "to": "2026-08-31T08:23:02"
       }
     },
     "gdacs-dr-1018431": {
@@ -769,6 +794,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/gdacs.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-28T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-08-31T08:19:44"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -784,7 +826,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-08-28T00:00:00"
+        "to": "2026-08-31T08:19:44"
       }
     },
     "gdacs-dr-1027449": {
@@ -982,6 +1024,31 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/gdacs.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "what": {
+              "from": "Drought in Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
+              "to": "Drought in The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
+            },
+            "where": {
+              "from": "Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
+              "to": "The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
+            },
+            "window": {
+              "from": {
+                "from": "2026-05-11T00:00:00",
+                "to": "2026-08-28T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-31T08:19:26"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -998,11 +1065,11 @@
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1027449&episodeid=6&eventtype=DR",
       "status": "OPEN",
-      "what": "Drought in Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
-      "where": "Belize, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
+      "what": "Drought in The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
+      "where": "The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
       "window": {
-        "from": "2026-05-11T00:00:00",
-        "to": "2026-08-28T00:00:00"
+        "from": "2026-04-21T00:00:00",
+        "to": "2026-08-31T08:19:26"
       }
     },
     "gdacs-dr-1027450": {
@@ -1344,6 +1411,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/gdacs.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-08-28T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-07-30T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-dr-1027450",
@@ -1361,7 +1445,7 @@
       "where": "Eritrea, Ethiopia, Kenya, Somalia",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-08-28T00:00:00"
+        "to": "2026-07-30T00:00:00"
       }
     },
     "gdacs-dr-1027465": {
@@ -1695,6 +1779,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/gdacs.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-08-28T00:00:00"
+              },
+              "to": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-07-30T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-dr-1027465",
@@ -1713,7 +1814,7 @@
       "where": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
       "window": {
         "from": "2026-05-21T00:00:00",
-        "to": "2026-08-28T00:00:00"
+        "to": "2026-07-30T00:00:00"
       }
     },
     "gdacs-eq-1494848": {
@@ -3329,6 +3430,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-28/gdacs.json",
           "ts": "2026-08-28T17:41:45+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-07-31T01:00:00",
+                "to": "2026-08-26T01:00:00"
+              },
+              "to": {
+                "from": "2026-07-31T01:00:00",
+                "to": "2026-09-01T01:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-fl-1104081",
@@ -3344,7 +3462,7 @@
       "where": "China",
       "window": {
         "from": "2026-07-31T01:00:00",
-        "to": "2026-08-26T01:00:00"
+        "to": "2026-09-01T01:00:00"
       }
     },
     "gdacs-fl-1104121": {
@@ -3355,6 +3473,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-28/gdacs.json",
           "ts": "2026-08-28T17:41:45+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-09T01:00:00",
+                "to": "2026-08-26T01:00:00"
+              },
+              "to": {
+                "from": "2026-08-09T01:00:00",
+                "to": "2026-08-30T01:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/gdacs.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "gdacs-fl-1104121",
@@ -3370,7 +3505,7 @@
       "where": "India",
       "window": {
         "from": "2026-08-09T01:00:00",
-        "to": "2026-08-26T01:00:00"
+        "to": "2026-08-30T01:00:00"
       }
     },
     "gdacs-fl-1104123": {
@@ -5628,19 +5763,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/nhc-current-storms.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "70",
+              "to": "125"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-30T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-08-31T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/nhc-current-storms.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nhc-ep112026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "70",
+      "severity": "125",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Karina (HU)",
       "where": "EP1",
       "window": {
-        "from": "2026-08-30T09:00:00.000Z",
+        "from": "2026-08-31T09:00:00.000Z",
         "to": null
       }
     },
@@ -5690,19 +5846,44 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/nhc-current-storms.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "45",
+              "to": "50"
+            },
+            "where": {
+              "from": "EP2",
+              "to": "CP4"
+            },
+            "window": {
+              "from": {
+                "from": "2026-08-30T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-08-31T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-08-31/nhc-current-storms.json",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nhc-ep122026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "45",
+      "severity": "50",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Lowell (TS)",
-      "where": "EP2",
+      "where": "CP4",
       "window": {
-        "from": "2026-08-30T09:00:00.000Z",
+        "from": "2026-08-31T09:00:00.000Z",
         "to": null
       }
     },
@@ -5804,6 +5985,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-30/nws-alerts-active.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nws-kbis-svw-0305-26",
@@ -5814,7 +5999,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.decc3485a0ca8f8f7aa2893e50deab747f378294.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Severe Thunderstorm Warning",
       "where": "McKenzie, ND",
       "window": {
@@ -6670,6 +6855,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/nws-alerts-active.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nws-kind-flw-0160-26",
@@ -6680,7 +6869,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.003.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Crawford, IL; Lawrence, IL; Knox, IN; Sullivan, IN",
       "window": {
@@ -6879,6 +7068,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/nws-alerts-active.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nws-kind-flw-0162-26",
@@ -6889,7 +7082,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Crawford, IL; Lawrence, IL; Knox, IN; Sullivan, IN",
       "window": {
@@ -7293,6 +7486,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-08-30/nws-alerts-active.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nws-kind-flw-0174-26",
@@ -7303,7 +7500,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.edbe2de7e5035b03958c751aa8bc87fa20d1bfc9.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Lawrence, IL; Wabash, IL; Knox, IN",
       "window": {
@@ -7793,6 +7990,32 @@
         "to": "2026-08-26T20:00:00-07:00"
       }
     },
+    "nws-kmfr-fww-0022-26": {
+      "announced_at": "2026-08-31T11:49:28+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-31/nws-alerts-active.json",
+          "ts": "2026-08-31T11:49:28+00:00"
+        }
+      ],
+      "id": "nws-kmfr-fww-0022-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d51df304b7c89a70b674b1414d3cff841f5777.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Western Klamath National Forest; Central Siskiyou County Including Shasta Valley; Siskiyou County from the Cascade Mountains East and South to Mt Shasta; Modoc County Except for the Surprise Valley; Klamath Basin and the Fremont-Winema National Forest",
+      "window": {
+        "from": "2026-08-31T12:00:00-07:00",
+        "to": "2026-08-31T20:00:00-07:00"
+      }
+    },
     "nws-kmhx-maw-0346-26": {
       "announced_at": "2026-08-24T06:07:53+00:00",
       "hazard": "special marine",
@@ -8229,6 +8452,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-30/nws-alerts-active.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nws-kpdt-fzw-0005-26",
@@ -8239,7 +8466,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1d0545b231342db8b11883c2a2fd51249bb65200.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Freeze Warning",
       "where": "Wallowa County",
       "window": {
@@ -8865,6 +9092,32 @@
         "to": "2026-08-24T01:30:00-07:00"
       }
     },
+    "nws-ktwc-ffw-0174-26": {
+      "announced_at": "2026-08-31T11:49:28+00:00",
+      "hazard": "flash flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-08-31/nws-alerts-active.json",
+          "ts": "2026-08-31T11:49:28+00:00"
+        }
+      ],
+      "id": "nws-ktwc-ffw-0174-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6bffee23cc1e94cc1e6f9ef9997250a9362b74ae.001.1",
+      "status": "OPEN",
+      "what": "Flash Flood Warning",
+      "where": "Pima, AZ",
+      "window": {
+        "from": "2026-08-31T04:43:00-07:00",
+        "to": "2026-08-31T07:00:00-07:00"
+      }
+    },
     "nws-ktwc-xhw-0006-26": {
       "announced_at": "2026-08-23T06:00:16+00:00",
       "hazard": "extreme heat",
@@ -9107,6 +9360,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-30/nws-alerts-active.json",
           "ts": "2026-08-30T10:39:49+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-08-31T11:49:28+00:00"
         }
       ],
       "id": "nws-pgum-ffw-0027-26",
@@ -9117,7 +9374,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.835273dbd35bebaf3a98623162dc7ca3cdd51d27.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Guam, GU",
       "window": {
