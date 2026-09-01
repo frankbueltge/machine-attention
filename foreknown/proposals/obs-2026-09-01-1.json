@@ -1,0 +1,42 @@
+{
+  "id": "obs-2026-09-01-1",
+  "date": "2026-09-01",
+  "kind": "difference_observation",
+  "title": "The fts-country-coverage sensor's only fire to date was NWS's own onboarding night, not a change in matched need -- the falsification clause's named risk, realized by a second source rather than by GDACS",
+  "statement": "foreknown/reaction/readings/2026-08-23.json is the only reading in the sensor's whole recorded life (2026-08-08 through 2026-08-31, checked against every reading's top-level `sensor` field) where `sensor.fired` is true: `{\"fired\": true, \"firing\": \"ARMED\", \"why\": \"match rate moved 11% from the previous reading\"}`, a one-night drop from 0.4421 (2026-08-22) to 0.3281. The reading's own `coverage` block shows why: `with_fts_plan_match` is exactly 42 on both nights, unchanged -- the numerator did not move at all -- while `open_alert_episodes` jumped from 95 to 128, a rise of 33. Cross-checking foreknown/registry.json's history, all 33 futures notarized on 2026-08-23 are NWS-sourced, kind ALERT_EPISODE, iso3 ['USA'] (flood x18, extreme heat x9, red flag x3, plus one each of special marine, severe thunderstorm, flash flood) -- and 2026-08-23 is NWS's first-ever notarization date in the registry (checked: no NWS future has a NOTARIZED history event before it). foreknown/snapshots/2026-08-22/fts-plans-2026.json and .../2026-08-23/fts-plans-2026.json list the identical 35 plans and the identical 54-country iso3 set (USA is not among them, nor on any preserved FTS snapshot to date) -- the plan side of the ratio did not change either. The entire 11-point drop is accounted for by one source's onboarding adding 33 open episodes to the denominator that could not, by construction, ever add to the numerator: OCHA/FTS response plans are humanitarian appeals and the United States has never appeared as a plan location in any preserved snapshot.",
+  "method": "python3 read of every foreknown/reaction/readings/<date>.json's `sensor` key (2026-08-08 through 2026-08-31) to find the single `fired: true` night. Compared that night's and the prior night's `coverage` blocks directly (with_fts_plan_match, open_alert_episodes, match_rate). Cross-referenced autonomy/log.jsonl's foreknown-notary-run entries for notarized/closed/open_total on both dates (33 notarized, 0 closed, open_total 97->130 -- the log's open_total counts all kinds, not just ALERT_EPISODE, hence it differs slightly from coverage's open_alert_episodes). Scanned foreknown/registry.json's futures for every history entry with event==NOTARIZED and ts starting 2026-08-23, grouped by source, hazard and iso3 (python3 json load, one pass). Confirmed 2026-08-23 is NWS's first notarization date by collecting every NOTARIZED ts across all NWS-sourced futures and taking the min. Diffed foreknown/snapshots/2026-08-22/fts-plans-2026.json and .../2026-08-23/fts-plans-2026.json by extracting data[].locations[].iso3 into sets (identical, 54 codes, USA absent from both). Re-read practice/src/practice/foreknown/reaction.py's _sensor_state (lines 160-187) and the coverage computation above it (lines 260-296) to confirm open_episodes only counts kind==ALERT_EPISODE and the match test is set-intersection against fts_plan_iso3_set, so an NWS/USA future's has_fts_plan_match is unconditionally False by the check's own definition, not a data gap.",
+  "figures": {
+    "fired_readings_total": 1,
+    "fired_date": "2026-08-23",
+    "match_rate_2026_08_22": 0.4421,
+    "match_rate_2026_08_23": 0.3281,
+    "delta": -0.114,
+    "with_fts_plan_match_2026_08_22": 42,
+    "with_fts_plan_match_2026_08_23": 42,
+    "open_alert_episodes_2026_08_22": 95,
+    "open_alert_episodes_2026_08_23": 128,
+    "nws_futures_notarized_2026_08_23": 33,
+    "nws_first_notarization_date": "2026-08-23",
+    "nws_iso3_ever_seen": ["USA"],
+    "fts_plan_iso3_count_2026_08_22": 54,
+    "fts_plan_iso3_count_2026_08_23": 54,
+    "usa_in_fts_plans": false,
+    "nws_open_alert_episodes_2026_08_31": 2,
+    "gdacs_open_alert_episodes_2026_08_31": 97
+  },
+  "worth_watching_because": "sensor-fts-country-coverage.json's own falsification clause named this exact risk before NWS existed: the sensor 'is not useful if the match rate stays within a narrow band... regardless of which specific episodes open and close -- that would mean the signal is dominated by the fixed set of high-income/non-appeal countries GDACS always reports (see obs-2026-08-08-3) rather than by anything that moves.' The clause was written against GDACS's own composition; what actually tripped the sensor's one recorded fire was a second source's onboarding night, adding a country (USA) that is structurally incapable of ever matching an OCHA/FTS appeal, to the same denominator the sensor treats as need-coverage. No discovery pass wrote this up when it happened -- the 2026-08-23 pass (obs-2026-08-23-1.json) covered a different finding that same night (the iso3-fips crosswalk gap for the Central American drought) and did not mention the sensor firing at all; no other proposal file mentions match_rate or this sensor by name. The mechanism is now largely spent (NWS warnings are short-lived; only 2 of the original 33 remain OPEN as of 2026-08-31, against 97 GDACS episodes), so the one-time step is unlikely to recur at this size, but NWS's presence in the denominator is now permanent and every future NWS notarization batch will apply the same small downward drag the 2026-08-23 batch applied at scale -- a standing, source-attributable bias in a metric whose promotion note says 'the sensor stands because it measures, not because it has found anything.' Whether that bias should be corrected (e.g. scoping the coverage check to GDACS-sourced episodes only, since FTS plans by definition cannot cover NWS's domestic-US scope) or left as an honest reflection of a wider registry is a design question about what the metric is claiming to measure, not one this observation settles.",
+  "left_alone": "Not changing reaction.py's coverage computation or fts-country-coverage's thresholds -- narrowing the denominator to GDACS-only episodes, or documenting NWS as structurally exempt, are both real changes to what the metric claims to measure, and the sensor's own text says nothing about source scope one way or the other; deciding that is the maintainer's call, not something one diagnosed fire settles. Not adding a review entry to sensor-fts-country-coverage.json itself -- that file is a PROPOSED/STANDING sensor spec, not a running log, and its own status (STANDING, promoted 2026-08-08) predates NWS by two weeks; the finding belongs as a dated observation of the record, which is what this file is. Not touching the other PROPOSED sensors tonight: sensor-lead-time-pathway-idle is unchanged at 7 of the 10 FORECAST-kind resolutions its test_rule waits for (still 2 open NHC forecasts, nhc-ep112026/nhc-ep122026); sensor-registry-stall and sensor-source-reconfirmation-blind-spot both carry open reviews asking for a firing-rule redesign, and no register has gone stale (checked: foreknown/snapshots, foreknown/reaction/snapshots, darkocean/snapshots and memoryhole/readings are all within 1 day of yesterday, 2026-08-31); sensor-resolution-reappearance-coverage's only live case (gdacs-tc-1001305) is still OPEN and has not closed a second time, so its test_rule still has nothing to check. Not writing a memoryhole/verdicts file -- memoryhole/readings/2026-08-30.json, the newest reading, carries zero rule-layer abstentions across all 68 entries.",
+  "derived_from": [
+    "foreknown/reaction/readings/2026-08-08.json",
+    "foreknown/reaction/readings/2026-08-22.json",
+    "foreknown/reaction/readings/2026-08-23.json",
+    "foreknown/reaction/readings/2026-08-31.json",
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-22/fts-plans-2026.json",
+    "foreknown/snapshots/2026-08-23/fts-plans-2026.json",
+    "autonomy/log.jsonl",
+    "practice/src/practice/foreknown/reaction.py",
+    "foreknown/proposals/sensor-fts-country-coverage.json",
+    "foreknown/proposals/obs-2026-08-23-1.json"
+  ]
+}
