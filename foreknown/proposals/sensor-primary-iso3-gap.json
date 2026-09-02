@@ -28,20 +28,37 @@
     ]
   },
   "review": {
-    "date": "2026-08-25",
-    "outcome": "stays PROMOTED, no code change -- a new observation about the sensor's own blind spot, not about the gap's cause: closure removes a future from the check's view without correcting it",
-    "why": "obs-2026-08-25-1.json found that gdacs-tc-1001305, the CHN case the 2026-08-24 review had just confirmed as a second standing cause, was CLOSED_BY_SOURCE tonight (foreknown/registry.json history, 2026-08-25T06:04:45+00:00) with iso3 still ['JPN'] and where still naming China -- the divergence was never corrected, only rendered permanent. primary_iso3_dropped shrank from two entries to one (gdacs-dr-1027450/ERI only) not because the CHN gap closed but because run.py's check (practice/src/practice/foreknown/run.py) iterates tonight's raw GDACS feed features, and eventid 1001305 is absent from foreknown/snapshots/2026-08-25/gdacs.json's 95 features -- confirmed directly. A future that leaves the feed is exactly how futures.py already decides CLOSED_BY_SOURCE (line 231), so the check has nothing left to compare for it, ever again: a closed future cannot reopen into the feed. The list getting shorter and a gap getting fixed produce the identical run-summary signature -- the field alone cannot distinguish them.",
-    "watch_for": "whether this is the general fate of every primary_iso3_dropped entry whose future eventually closes without the extraction being corrected -- if gdacs-dr-1027450 (still OPEN, still diverging on ERI every night since 2026-08-18) closes the same way, that would be a third instance and would make 'closes without correction, drops silently from view' the sensor's normal lifecycle for a registry-side case rather than a one-off. This review does not propose scanning CLOSED futures for a stale gap, or snapshotting a final iso3-vs-where diff into the CLOSED_BY_SOURCE event -- either would be a real fix for the blind spot, but deciding whether iso3 becomes a TRACKED_FIELD or the closure event grows a new comparison is the same design question for the registry's field model the 2026-08-20 review already left to the maintainer, not one this review settles by adding one more confirming instance.",
+    "date": "2026-09-02",
+    "outcome": "stays PROMOTED, no code change -- a new observation about the sensor's own blind spot, structural rather than about any single gap's cause: the check's return type makes it incapable of ever reporting more than one dropped country per future per night",
+    "why": "obs-2026-09-02-1.json found that sources.primary_iso3 (practice/src/practice/foreknown/sources.py, lines 50-57) returns a set of at most one element, so run.py's `primary_iso3_dropped` computation (lines 97-116) can never name more than one missing country per future per night regardless of how many are actually missing -- a fact about the code, not about the data seen so far. Two currently-OPEN GDACS droughts show the consequence. gdacs-dr-1018332 gained 'Ireland' and 'Netherlands' in a single where/what-updating REVISED event on 2026-08-18T05:59:34+00:00; both are present in every preserved raw snapshot since (including tonight's), neither ever entered the committed iso3 array (28 entries, no IRL, no NLD), and primary_iso3_dropped has never named either across all six nights checked (2026-08-18, 19, 28, 30, 31, 09-01) because this future's singular reporting-position field has read 'ALB' or 'AUT' throughout -- both already committed. gdacs-dr-1027449 gained 'The Bahamas' and 'Cuba' in one REVISED event on 2026-08-31T11:49:28+00:00: BHS became the new primary and was correctly flagged (primary_iso3_dropped: [{future: gdacs-dr-1027449, dropped_iso3: [BHS]}] on both 2026-08-31 and 09-01), but CUB -- added by the identical event, the identical mechanism, the same night -- was never named, because it never became the primary. CUB is a clean same-night natural control: the only difference between it and the case the sensor did catch is which of the two simultaneously-added countries the feed happened to name as primary.",
+    "watch_for": "whether IRL/NLD's now-15-night uncaught gap, and CUB's, are joined by further non-primary countries the check structurally cannot name -- every prior review already established that iso3 is not a futures.py TRACKED_FIELD and so never re-syncs (2026-08-20, 2026-08-24) and that a future leaving the feed removes it from the check's view without correcting it (2026-08-25); this review adds that even while a future stays OPEN and in view, the check can still miss a real gap whenever more than one country is added at once. This review does not widen run.py's comparison to the full affectedcountries union (which would very likely surface IRL, NLD and CUB the next time it runs, and possibly close the registry-side gap the 2026-08-20/24 reviews left open) -- that is a real change to a running, PROMOTED sensor's behaviour and is left to the maintainer, the same deferral the 2026-08-20 and 2026-08-24 reviews already made for the underlying TRACKED_FIELD question.",
     "derived_from": [
-      "foreknown/proposals/obs-2026-08-25-1.json",
+      "foreknown/proposals/obs-2026-09-02-1.json",
       "foreknown/registry.json",
-      "foreknown/snapshots/2026-08-24/run.json",
-      "foreknown/snapshots/2026-08-25/run.json",
-      "foreknown/snapshots/2026-08-25/gdacs.json",
+      "foreknown/snapshots/2026-08-18/gdacs.json",
+      "foreknown/snapshots/2026-08-31/gdacs.json",
+      "foreknown/snapshots/2026-09-01/gdacs.json",
+      "foreknown/reaction/readings/2026-09-01.json",
+      "foreknown/reaction/iso3-fips.json",
       "practice/src/practice/foreknown/run.py",
-      "practice/src/practice/foreknown/futures.py"
+      "practice/src/practice/foreknown/sources.py"
     ],
     "history": [
+      {
+        "date": "2026-08-25",
+        "outcome": "stays PROMOTED, no code change -- a new observation about the sensor's own blind spot, not about the gap's cause: closure removes a future from the check's view without correcting it",
+        "why": "obs-2026-08-25-1.json found that gdacs-tc-1001305, the CHN case the 2026-08-24 review had just confirmed as a second standing cause, was CLOSED_BY_SOURCE tonight (foreknown/registry.json history, 2026-08-25T06:04:45+00:00) with iso3 still ['JPN'] and where still naming China -- the divergence was never corrected, only rendered permanent. primary_iso3_dropped shrank from two entries to one (gdacs-dr-1027450/ERI only) not because the CHN gap closed but because run.py's check (practice/src/practice/foreknown/run.py) iterates tonight's raw GDACS feed features, and eventid 1001305 is absent from foreknown/snapshots/2026-08-25/gdacs.json's 95 features -- confirmed directly. A future that leaves the feed is exactly how futures.py already decides CLOSED_BY_SOURCE (line 231), so the check has nothing left to compare for it, ever again: a closed future cannot reopen into the feed. The list getting shorter and a gap getting fixed produce the identical run-summary signature -- the field alone cannot distinguish them.",
+        "watch_for": "whether this is the general fate of every primary_iso3_dropped entry whose future eventually closes without the extraction being corrected -- if gdacs-dr-1027450 (still OPEN, still diverging on ERI every night since 2026-08-18) closes the same way, that would be a third instance and would make 'closes without correction, drops silently from view' the sensor's normal lifecycle for a registry-side case rather than a one-off. This review does not propose scanning CLOSED futures for a stale gap, or snapshotting a final iso3-vs-where diff into the CLOSED_BY_SOURCE event -- either would be a real fix for the blind spot, but deciding whether iso3 becomes a TRACKED_FIELD or the closure event grows a new comparison is the same design question for the registry's field model the 2026-08-20 review already left to the maintainer, not one this review settles by adding one more confirming instance.",
+        "derived_from": [
+          "foreknown/proposals/obs-2026-08-25-1.json",
+          "foreknown/registry.json",
+          "foreknown/snapshots/2026-08-24/run.json",
+          "foreknown/snapshots/2026-08-25/run.json",
+          "foreknown/snapshots/2026-08-25/gdacs.json",
+          "practice/src/practice/foreknown/run.py",
+          "practice/src/practice/foreknown/futures.py"
+        ],
+        "history": [
       {
         "date": "2026-08-24",
         "outcome": "stays PROMOTED, no code change -- the 2026-08-20 review's watch_for is answered: a second future, a second hazard type, the identical mechanism",
@@ -69,6 +86,8 @@
           "foreknown/snapshots/2026-08-20/gdacs.json",
           "practice/src/practice/foreknown/futures.py"
         ]
+      }
+    ]
       }
     ]
   }
