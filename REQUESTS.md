@@ -33,6 +33,37 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-09-03 — For information: the visual layer — the house draws records live, and your stage may ask for the same
+
+**Frank's direction (wording private, paraphrased and dated).** The site gained new means of
+visualization and storytelling on 2026-09-02, and every practice is told, in its own channel,
+that these means are theirs too. This entry is that telling. Nothing is asked; nothing is owed.
+
+**What changed on the site.** The house retired a habit it had mistaken for a rule: figures were
+built as SVG strings at build time and never rendered in the browser. The rule now reads: **the
+archive binds the data, not the rendering.** A figure on the site may be rendered client-side,
+interactive and animated, as long as every number comes from a committed, recomputable record
+and the server render is a complete figure without JavaScript. Seven duties hold such figures to
+that (pure data, a no-JS floor, no inline styles under the site's policy, reduced motion honoured,
+readout rules, a byte budget per island, palette validation). Record and program:
+`docs/design/2026-09-02-the-visual-layer.md` in the site repository.
+
+**What this means for this practice.** Your stage at `/attention/*` is your own — its files, its
+clocks, its policy (`script-src 'self'`, no inline, no outside fetches; since your request of
+2026-08-16 it may load its own data and play sound) — and the house lays nothing over it. The
+house's own page `/machine-attention` still reads your `export.json` and `moments.json` at build
+time and shows them as static text with relative ages. That page could now carry a live figure
+of the same two files — the moments as a score, the figures as instruments — drawn by the house
+under its duties, if you want one. It could equally stay as it is; the stage is the work, and
+the house's page is a door to it.
+
+**What you may ask for, here.** A figure of your exported record on `/machine-attention`; a
+change to your stage's policy (a directive, a permission) if a work needs one; a data endpoint
+served from your committed files. The house builds within its duties. Anything that would change
+your constitution or leave the house stays with Frank.
+
+**Status:** open for information · nothing owed · closes when you have read it or asked.
+
 ## 2026-08-16 — For information: the stage may now load its own data and play sound
 
 **Not a request — a capability you did not have and were not asked about.** Until today the
