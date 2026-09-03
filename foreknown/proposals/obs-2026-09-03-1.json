@@ -1,0 +1,25 @@
+{
+  "id": "obs-2026-09-03-1",
+  "date": "2026-09-03",
+  "kind": "difference_observation",
+  "title": "drought_window_class scans a future's whole history and returns at the first mismatch it ever finds, so all five droughts that turned irregular together on 2026-08-31 have stayed pinned to that one night's break for three nights running, regardless of what window.to has done since",
+  "statement": "practice/src/practice/foreknown/futures.py's drought_window_class (lines 114-165) rebuilds a drought's window.to series from foreknown/registry.json history, then walks it with `for (d1, t1), (d2, t2) in zip(series, series[1:])` and `return`s DROUGHT_IRREGULAR at the first step where day_delta != to_delta -- the loop starts from the future's NOTARIZED value, not from the most recent step, and stops at the first mismatch. All five of the six OPEN droughts that had been classified 'rolling' every night since 2026-08-08 (gdacs-dr-1018332, gdacs-dr-1018431, gdacs-dr-1027449, gdacs-dr-1027450, gdacs-dr-1027465) crossed to 'irregular' on the same night, 2026-08-31 (foreknown/snapshots/2026-08-31/run.json drought_window_crossings: all five, from_class rolling, to_class irregular). Two distinct source-side glitches produced that break: gdacs-dr-1018332 and gdacs-dr-1018431's window.to jumped from a midnight 2026-08-28T00:00:00 to an intraday 2026-08-31T08:23:02 / 2026-08-31T08:19:44 (the first intraday window.to timestamp either future has ever carried; every prior and subsequent value is midnight), while gdacs-dr-1027450 and gdacs-dr-1027465's window.to jumped backward 29 days, from 2026-08-28T00:00:00 to 2026-07-30T00:00:00 (foreknown/registry.json history, window changes, all four futures). foreknown/snapshots/2026-08-31/run.json's drought_window_class records this as the expected single-step irregular ({'day_delta': 1, 'todate_delta': 3} for the first pair, {'day_delta': 1, 'todate_delta': -29} for the second). What the loop's return-at-first-mismatch construction produces afterward is the actual finding: foreknown/snapshots/2026-09-01/run.json and .../2026-09-02/run.json both still report every one of the five with the identical {'since': '2026-08-31', 'day_delta': 1, 'todate_delta': 3 or -29} and both nights' drought_window_crossings are empty, even though window.to kept changing underneath. gdacs-dr-1018332's window.to moved again on both nights -- 2026-08-31T08:23:02 to 2026-08-30T00:00:00 on 09-01 (day_delta 1, to_delta -1, itself a mismatch the loop never reaches), then 2026-08-30T00:00:00 to 2026-08-31T00:00:00 on 09-02 (day_delta 1, to_delta 1, a step that would satisfy the rolling rule on its own). Because the function returns at the first pair in the whole series that fails, not the last, it cannot see either of these later steps: a future stuck reporting a stale 'since' date is indistinguishable, in the committed run.json, from one whose window.to genuinely has not moved since that date -- and a future whose trajectory has actually returned to a clean one-day-per-day rate (09-01 to 09-02, above) still reads 'irregular' with no way for a reader of run.json to tell the two cases apart without re-deriving the full series themselves.",
+  "method": "Read foreknown/snapshots/2026-08-30/run.json through .../2026-09-02/run.json's drought_window_class and drought_window_crossings fields directly (python3 json load) to find the simultaneous 2026-08-31 crossing of all five futures and confirm zero crossings recorded on 09-01 and 09-02 despite nights_observed continuing to increment. Extracted every history entry with a window change for all five affected futures plus the sixth (frozen) drought from foreknown/registry.json (python3, filtering history[].changes.window) to get each future's full window.to trajectory including the entries run.json's per-night snapshot does not itself show (09-01, 09-02 values). Computed day_delta/to_delta by hand for the 08-31-to-09-01 and 09-01-to-09-02 steps of gdacs-dr-1018332 to confirm the second step alone would satisfy the rolling rule, then re-read practice/src/practice/foreknown/futures.py's drought_window_class (lines 139-165) to confirm the loop returns at the first failing pair in `series` (built from index 0, the NOTARIZED value) rather than evaluating only the final step, which is why the 09-02 clean step never surfaces.",
+  "figures": {
+    "droughts_crossed_2026_08_31": 5,
+    "crossings_recorded_since_2026_08_31": 0,
+    "nights_stuck_on_stale_since_2026_08_31": 3,
+    "window_to_glitch_group_intraday_jump": ["gdacs-dr-1018332", "gdacs-dr-1018431"],
+    "window_to_glitch_group_29_day_backward_jump": ["gdacs-dr-1027450", "gdacs-dr-1027465"],
+    "gdacs_dr_1018332_09_01_to_09_02_step_would_satisfy_rolling_rule": true
+  },
+  "derived_from": [
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-08-30/run.json",
+    "foreknown/snapshots/2026-08-31/run.json",
+    "foreknown/snapshots/2026-09-01/run.json",
+    "foreknown/snapshots/2026-09-02/run.json",
+    "practice/src/practice/foreknown/futures.py",
+    "foreknown/proposals/sensor-drought-window-class-crossing.json"
+  ]
+}
