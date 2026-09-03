@@ -1,0 +1,47 @@
+{
+  "answered": 970,
+  "baselines_established": [],
+  "batches": 25,
+  "catches": [],
+  "date": "2026-09-02",
+  "failures": [],
+  "generated_at": "2026-09-03T09:14:59+00:00",
+  "notes": [
+    "the look-back re-probes products the register already recorded; it never widens the catch to products it never held",
+    "a divergence is committed with both values side by side and is never reconciled to the newer one — the overwrite is the forgetting this register exists to catch",
+    "readings before 2026-08-09 carry no modification_date; for their products the first probe establishes the baseline and says so, rather than reporting an unchanged value it never had",
+    "the eviction premise is structural, not observed: every product probed so far is online with EvictionDate 9999-12-31 (darkocean/METHOD.md). The probe measures whether that stays true",
+    "a product absent from the catalog's answer is the strongest divergence the register can record, and is committed as its own kind of catch"
+  ],
+  "probed": 970,
+  "products_unchanged": 970,
+  "sources": {
+    "CDSE-lookback": [
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b1.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b2.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b3.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b4.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b5.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b6.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b7.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b8.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b9.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b10.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b11.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b12.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b13.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b14.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b15.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b16.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b17.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b18.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b19.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b20.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b21.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b22.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b23.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b24.json",
+      "darkocean/snapshots/2026-09-02/cdse-lookback-b25.json"
+    ]
+  }
+}
