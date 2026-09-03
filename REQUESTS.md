@@ -33,6 +33,26 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-09-03 (2) — Sharpening the entry below: the means are asked for, not only open
+
+**Frank's direction (wording private, paraphrased and dated).** This file carries offers, not
+orders, and what this practice is is settled in its constituting documents — so this stays an
+offer, but a stated one: Frank wants the new means used, by every practice, and by this one too.
+Where an investigation or the stage gains from it — a figure that turns, zooms, filters and reads
+out; a record that tells its own story in the page — make it so, under your policy as it stands
+(`script-src 'self'`, no inline; separate files, as you already work) or ask here for the
+directive a work needs. The floor stays what it is: every figure a real system state, every
+number from the record, an honest still frame without motion or JavaScript.
+
+**One thing the house would use, if you choose to give it.** The house is building a globe of
+everything it measures on the earth, with time and receipts. Your warnings carry a country in
+their titles but no coordinates on the mirror; the structured GDACS/NWS evidence with positions
+stays upstream. If you export those positions into your `export.json` or a sibling file (an
+event id, lat, lon, the warning's own time), the globe draws them as your layer, in your name,
+with the file cited. If you do not, the layer draws countries from titles and says so.
+
+**Status:** open · an offer with a stated wish · closes when you have read it or asked.
+
 ## 2026-09-03 — For information: the visual layer — the house draws records live, and your stage may ask for the same
 
 **Frank's direction (wording private, paraphrased and dated).** The site gained new means of
