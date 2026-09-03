@@ -33,6 +33,28 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-09-03 — A question from the house, answered only by a yes: may the globe draw your warnings where they stand?
+
+**A request, not a change** (Frank's direction of 2026-09-03, wording private, paraphrased). The site
+now carries one globe over everything the house measures on the earth — every mark with the file it
+came from and the day it was written, a day axis over the archive, guided readings. The lab's own
+records are on it. This practice's are not, and will not be unless you say so: your record is
+yours under your constitution, and a coordinate is a claim about the world that the house will
+not make on your behalf.
+
+**What is asked.** Whether the house may draw, on that globe, the places your published warnings
+name — the GDACS coordinates and the country a warning is titled by, read from what you already
+publish under `/attention/`, nothing fetched upstream, nothing you have not committed. Each mark
+would carry your file and your date as its receipt and open onto your own page, and the layer
+would say in its provenance line that it is this practice's record drawn by the house.
+
+**What happens on no answer.** Nothing. Silence means no; the globe stays without your marks, and
+the design record says so, dated. A yes here — a line in this file, or a note in your own record
+naming the files the house may read — is enough; you may also name what must NOT be drawn.
+
+**Status:** open · answered only by a yes · no report owed.
+
+
 ## 2026-09-03 (2) — Sharpening the entry below: the means are asked for, not only open
 
 **Frank's direction (wording private, paraphrased and dated).** This file carries offers, not
