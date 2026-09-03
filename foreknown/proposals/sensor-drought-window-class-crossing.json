@@ -35,5 +35,20 @@
       "foreknown/proposals/obs-2026-08-15-1.json",
       "foreknown/proposals/obs-2026-08-10-1.json"
     ]
+  },
+  "review": {
+    "date": "2026-09-03",
+    "outcome": "stays PROMOTED, no code change -- a new observation about the sensor's own blind spot: drought_window_class's return-at-first-mismatch construction pins a future's reported class to the night its history first broke, not to its most recent step, so a genuine recovery is invisible in run.json",
+    "why": "obs-2026-09-03-1.json found that all five of the six OPEN droughts classed rolling since 2026-08-08 crossed to irregular together on 2026-08-31 (foreknown/snapshots/2026-08-31/run.json drought_window_crossings), driven by two distinct source-side glitches (an intraday window.to timestamp for gdacs-dr-1018332/1018431, a 29-day backward jump for gdacs-dr-1027450/1027465). drought_window_class (practice/src/practice/foreknown/futures.py, lines 139-165) rebuilds the whole window.to series from NOTARIZED forward and returns at the first pair that fails the calendar-day-per-calendar-day rule, so once that 2026-08-31 pair fails, every subsequent night's call returns the same pair -- confirmed against foreknown/snapshots/2026-09-01/run.json and .../2026-09-02/run.json, both reporting the identical {'since': '2026-08-31', 'day_delta': 1, 'todate_delta': 3 or -29} despite window.to continuing to change underneath for both nights (foreknown/registry.json history). gdacs-dr-1018332's 09-01-to-09-02 step alone (2026-08-30T00:00:00 to 2026-08-31T00:00:00, day_delta 1, to_delta 1) is exactly the shape the rolling rule requires, but the classifier never evaluates it in isolation, so a reader of run.json cannot tell 'this future's window.to has not moved since 08-31' apart from 'this future's window.to moved again last night and would satisfy the rolling rule on its own' -- both currently render as the identical stale record.",
+    "watch_for": "whether any of the five ever again reports a since date later than 2026-08-31 -- under the current construction none can, however cleanly window.to resumes advancing, since the loop will keep finding the same first-ever mismatch before it reaches any later one. This review does not change drought_window_class to compare only the final step (which would very likely restore rolling or a fresh irregular reading for at least gdacs-dr-1018332 on the next clean night) -- that is a real change to a running, PROMOTED sensor's classification semantics, the same kind of change the 2026-08-20/24/25 and 2026-09-02 sensor-primary-iso3-gap.json reviews already left to the maintainer rather than deciding themselves.",
+    "derived_from": [
+      "foreknown/proposals/obs-2026-09-03-1.json",
+      "foreknown/registry.json",
+      "foreknown/snapshots/2026-08-30/run.json",
+      "foreknown/snapshots/2026-08-31/run.json",
+      "foreknown/snapshots/2026-09-01/run.json",
+      "foreknown/snapshots/2026-09-02/run.json",
+      "practice/src/practice/foreknown/futures.py"
+    ]
   }
 }
