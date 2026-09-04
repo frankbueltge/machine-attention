@@ -1,0 +1,113 @@
+{
+  "answered": 1004,
+  "baselines_established": [],
+  "batches": 26,
+  "catches": [
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "25be18a1-5781-4e77-b481-a18db1df6ca7",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163850_20260816T163915_009023_011E98_5086.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "b2327105a83cdc737110cc23c96a222d65cd7e5dce1ba282b7c29505b32e0f2a",
+          "md5": "824702ea87372cda0e21449513060705"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:02:29.390664Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "9abc6a43-b849-4426-bc8f-a6ad953d22af",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163732_20260816T163800_009023_011E98_5EF6.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "12b3226025447b41dbd85e1ababb5b0aaa06a151b82184fcd98e3cb03f989685",
+          "md5": "35474012d8b8798eca5d240d10c4d03c"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:04:42.320997Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "d07251c2-1581-4fbb-994b-0c57eefc5972",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163825_20260816T163850_009023_011E98_276F.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "335760dea6b9ec0d64347def6db8117d4e0835398429a2c1f38f5f3824a1e7e4",
+          "md5": "f55339aec7e0e855a334d14d90edb2a1"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:04:33.007825Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "d2eea937-e4b5-48d1-a125-d5e1cb21b5fc",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163800_20260816T163825_009023_011E98_7F3B.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "f589075e90927bd12379a11fcf59cde73be2f1ece1827c7f2255512dd10bc7ea",
+          "md5": "4f49f1d7b07bce5a5b76e67a011eb50a"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:02:29.048833Z",
+        "online": true
+      }
+    }
+  ],
+  "date": "2026-09-03",
+  "failures": [],
+  "generated_at": "2026-09-04T09:07:20+00:00",
+  "notes": [
+    "the look-back re-probes products the register already recorded; it never widens the catch to products it never held",
+    "a divergence is committed with both values side by side and is never reconciled to the newer one — the overwrite is the forgetting this register exists to catch",
+    "readings before 2026-08-09 carry no modification_date; for their products the first probe establishes the baseline and says so, rather than reporting an unchanged value it never had",
+    "the eviction premise is structural, not observed: every product probed so far is online with EvictionDate 9999-12-31 (darkocean/METHOD.md). The probe measures whether that stays true",
+    "a product absent from the catalog's answer is the strongest divergence the register can record, and is committed as its own kind of catch"
+  ],
+  "probed": 1008,
+  "products_unchanged": 1004,
+  "sources": {
+    "CDSE-lookback": [
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b1.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b2.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b3.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b4.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b5.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b6.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b7.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b8.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b9.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b10.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b11.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b12.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b13.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b14.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b15.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b16.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b17.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b18.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b19.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b20.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b21.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b22.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b23.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b24.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b25.json",
+      "darkocean/snapshots/2026-09-03/cdse-lookback-b26.json"
+    ]
+  }
+}
