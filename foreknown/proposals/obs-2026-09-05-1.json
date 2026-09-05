@@ -1,0 +1,49 @@
+{
+  "id": "obs-2026-09-05-1",
+  "date": "2026-09-05",
+  "kind": "difference_observation",
+  "title": "darkocean's continuity register recorded its first-ever gone_from_catalog catch on 2026-09-03, after 24 nights of zero catches -- and verify.py's second implementation of criteria group N never checked that catch kind at all",
+  "statement": "darkocean/continuity/<date>.json holds a `catches` array for every night the register has re-probed products it recorded. Every continuity record from 2026-08-11 through 2026-09-02 inclusive (24 files: darkocean/continuity/2026-08-11.json through .../2026-09-02.json) carries an empty `catches` array. darkocean/continuity/2026-09-03.json is the first exception: 4 catches, all `\"kind\": \"gone_from_catalog\"`, out of 1008 products probed (1004 answered, 26 batches, 0 failures). All four are contiguous Sentinel-1C IW GRDH frames from the same datatake (product names carry the shared orbit/datatake token 009023_011E98), first recorded in darkocean/readings/2026-08-16.json with sequential start/end times (16:37:32-16:38:00, 16:38:00-16:38:25, 16:38:25-16:38:50, 16:38:50-16:39:15 UTC) -- a single unbroken four-frame swath. Each frame's preserved record from 2026-08-16 shows `\"online\": true` and `\"eviction_date\": \"9999-12-31T23:59:59.999999Z\"`; the 2026-09-03 look-back's catalog answer contained none of the four ids at all (`\"current\": null` on every catch), which is exactly the divergence kind darkocean/continuity.py's own NOTES array (line 56) names as 'the strongest divergence the register can record'. darkocean/METHOD.md §1 (lines 26-38) argued this design from the catalogue's EvictionDate field, measured that premise as 'structural, not observed' (every product probed as of 2026-08-09 read online/9999-12-31), and stated the register 'is positioned to catch it -- and until one does, that positioning is a mechanism, not a result' (lines 35-37). Tonight is the first committed record where it is a result, not only a mechanism: four permanently-declared products are absent from the catalogue's own answer, 18 days after they were first preserved. Separately, and independently of what happened to these four products: verify.py's `check_darkocean_continuity` (its docstring, lines 429-433, calls itself 'the second implementation of criteria group N', built 'so a record cannot claim a divergence the bytes do not show -- nor quietly drop one they do') only ever recomputed catches of `kind == \"changed\"` before tonight's repair -- its `wanted`/`got` comparison (former lines 483-503) iterated only `answered.items()`, which by construction excludes every id the catalogue's look-back never returned, and its reconciliation loop (former lines 505-516) explicitly skipped every catch whose kind was not 'changed'. A record could have invented a gone_from_catalog catch, dropped a real one, or reported a reconciled preserved value for one, and nothing in the second implementation would have said so -- for 24 nights this was untested against a real instance because none existed; tonight one did, landing on exactly the blind spot.",
+  "method": "Counted `catches` entries across every darkocean/continuity/*.json file (python3, json.load, len(catches)) to establish the 24-night run of zeros and the single 2026-09-03 exception. Read darkocean/continuity/2026-09-03.json in full: confirmed all 4 catches share kind gone_from_catalog, current: null, and read their `id`/`name`/`first_seen`/`preserved` fields. Cross-checked each of the 4 ids against darkocean/readings/2026-08-16.json's `acquisitions` array (python3 json.load, filter by id) to confirm the preserved online/eviction_date/checksums values match the catch's `preserved` field exactly, and read the four names/start/end times to establish they are one contiguous swath from a shared datatake. Read practice/src/practice/darkocean/continuity.py in full (`recorded_products`, `current_values`, `compare`, `run`) to understand exactly how a gone_from_catalog catch is produced (a product in the recorded set whose id is absent from every successfully-answered batch's response) and read its NOTES array (lines 41-58) and darkocean/METHOD.md §1 (lines 1-45) for the design's own stated premise and its own admission that the premise was structural rather than observed. Read verify.py's `check_darkocean_continuity` in full (pre-repair, lines 427-522) against its own docstring and confirmed by inspection that the `wanted`/`got` set comparison and the reconciliation loop both filter to `kind == \"changed\"` only, with no corresponding logic anywhere in the function for `kind == \"gone_from_catalog\"`. Confirmed there was one historical failed batch to test against (darkocean/continuity/2026-08-25.json, batch 8, HTTP 400, probed 650/answered 610, a clean 40-product gap matching one full batch, 0 catches) as a check that a failed-batch product is never wrongly treated as vanished.",
+  "figures": {
+    "continuity_records_with_zero_catches": 24,
+    "continuity_records_checked_range": ["2026-08-11", "2026-09-02"],
+    "first_nonzero_catch_date": "2026-09-03",
+    "catches_on_2026_09_03": 4,
+    "catch_kind": "gone_from_catalog",
+    "products_probed_2026_09_03": 1008,
+    "products_answered_2026_09_03": 1004,
+    "affected_product_ids": [
+      "25be18a1-5781-4e77-b481-a18db1df6ca7",
+      "9abc6a43-b849-4426-bc8f-a6ad953d22af",
+      "d07251c2-1581-4fbb-994b-0c57eefc5972",
+      "d2eea937-e4b5-48d1-a125-d5e1cb21b5fc"
+    ],
+    "affected_product_first_seen": "2026-08-16",
+    "affected_product_datatake_token": "009023_011E98",
+    "days_between_first_seen_and_catch": 18,
+    "preserved_eviction_date_all_four": "9999-12-31T23:59:59.999999Z",
+    "preserved_online_all_four": true,
+    "current_value_all_four": null,
+    "historical_failed_batch_case": "darkocean/continuity/2026-08-25.json batch 8, HTTP 400, 40 products excluded from comparison, 0 catches",
+    "pre_repair_verify_gap": "check_darkocean_continuity recomputed and reconciled kind==\"changed\" catches only; no logic covered kind==\"gone_from_catalog\""
+  },
+  "worth_watching_because": "This is the register doing exactly the job darkocean/METHOD.md §1 designed it for, and its own text already flagged the significance of the transition: from a mechanism argued only from a structural premise (every product probed to date reads permanent) to a mechanism with a first real catch. Whether these four frames are a genuine, permanent catalogue eviction, a transient outage in this one look-back, or something else about the archive's own behaviour is a claim about the world this observation does not make -- the record shows an absence on one probe night, not a settled disappearance, and the register's own discipline (nothing is reconciled, a missing baseline is not a silent pass) means next week's continuity record will show independently whether these four ids remain absent. What is settled tonight is the coverage gap in verify.py: `check_darkocean_continuity` calls itself the second, independent implementation of criteria group N specifically so a claimed divergence can never rest on the honesty of the one script that produces it, and for 24 nights that promise held vacuously for the gone_from_catalog kind because no real instance had ever exercised it -- the first time one did, it landed exactly on the untested path. That the check's own docstring already promises 'nor quietly drop one they do' and the code did not keep that promise for this catch kind is a fact about the committed function, not a design question deferred to a maintainer, so it is repaired the same night this observation is filed.",
+  "left_alone": "Not editing darkocean/METHOD.md's §1 framing -- updating 'until one does, that positioning is a mechanism, not a result' to reflect that one now has is a change to the practice's own public claim about what the register has proven, which is the maintainer's alone. Not asserting a cause for the four products' absence (archive-side eviction, a transient look-back gap, or something else) -- the committed record shows one probe's answer on one night; forming a claim about the archive's own behaviour from a single absence would be exactly the reconciliation this register's own discipline refuses to perform for itself. Not adding a new sensor-<slug>.json for this: the repair below closes a completeness gap in an existing verification mechanism (criteria group N's second implementation) rather than adding a new nightly indicator, so it belongs as a repair, not a proposal. Not touching practice/src/practice/darkocean/continuity.py itself -- the probe's own logic already produces and preserves the gone_from_catalog catch correctly (proven by test_continuity_catches_divergence_and_never_reconciles_it in practice/tests/test_darkocean.py, unchanged tonight); the gap was entirely in verify.py's independent recomputation, not in the register that writes the record. Left the other PROPOSED sensors alone: no new foreknown-side instance, crossing, or register staleness beyond what obs-2026-08-27-1.json, obs-2026-08-30-1.json, obs-2026-09-02-1.json and obs-2026-09-03-1.json already recorded, and no darkocean-domain sensor proposal exists yet to review. Not writing a memoryhole/verdicts file -- memoryhole/readings/2026-09-03.json, the newest reading, carries zero rule-layer abstentions across all 20 entries.",
+  "repaired": [
+    "verify.py"
+  ],
+  "derived_from": [
+    "darkocean/continuity/2026-08-11.json",
+    "darkocean/continuity/2026-08-25.json",
+    "darkocean/continuity/2026-09-02.json",
+    "darkocean/continuity/2026-09-03.json",
+    "darkocean/readings/2026-08-16.json",
+    "darkocean/METHOD.md",
+    "practice/src/practice/darkocean/continuity.py",
+    "verify.py",
+    "practice/tests/test_darkocean.py",
+    "practice/tests/test_verify_darkocean_gone_from_catalog.py",
+    "memoryhole/readings/2026-09-03.json"
+  ]
+}
