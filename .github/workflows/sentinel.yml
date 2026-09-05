@@ -58,9 +58,26 @@ jobs:
         if: always()
         run: python -m practice.moments --repo-root .
 
+      # Both of the steps above build derived mirror files for the house. Neither
+      # is the night's record, and verify.py reads neither — so neither may take
+      # a notarized night down with it. It did: python -m practice.export raised
+      # on 2026-09-04 and 2026-09-05, these two steps stayed red, and because the
+      # two steps below default to success() they never ran at all. Both nights
+      # were fetched, classified and then dropped with the container. Same shape
+      # as the push-retry casualty of 2026-08-16 that tools/commit-and-push.sh
+      # documents at its head: work completed, work never persisted, one step
+      # earlier in the chain.
+      #
+      # always() on the gate, and the gate's own outcome on the commit: a night
+      # that fails verify.py is still never committed, and a night that passes it
+      # is committed even while a mirror file is broken. The job stays red either
+      # way — the failure is reported, not absorbed.
       - name: Verify provenance chain
+        id: verify
+        if: always()
         run: python verify.py --repo-root .
 
       - name: Commit observation
+        if: always() && steps.verify.outcome == 'success'
         run: |
           tools/commit-and-push.sh "foreknown: notary run of $(date -u +%F)"
