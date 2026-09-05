@@ -436,15 +436,23 @@ def check_darkocean_continuity(root: Path, registry_files: dict,
     if not base.exists():
         return
     compared = ("online", "eviction_date", "modification_date", "checksums")
+    # Mirrors darkocean/continuity.py's own BATCH, independently reimplemented
+    # here rather than imported — this function is the second implementation
+    # of criteria group N and does not share code with the first.
+    batch_size = 40
 
     # What the readings preserved, first sighting wins — the same origin the
     # probe uses, rebuilt independently here.
     preserved: dict[str, dict] = {}
     for path in sorted((root / "darkocean" / "readings").glob("*.json")):
-        for acquisition in load(path).get("acquisitions", []):
+        reading = load(path)
+        day = reading.get("date", path.stem)
+        for acquisition in reading.get("acquisitions", []):
             pid = acquisition.get("id")
             if pid and pid not in preserved:
-                preserved[pid] = acquisition
+                entry = dict(acquisition)
+                entry["_first_seen"] = day
+                preserved[pid] = entry
 
     for path in sorted(base.glob("*.json")):
         record = load(path)
@@ -514,6 +522,44 @@ def check_darkocean_continuity(root: Path, registry_files: dict,
                 problems.append(f"{name}: catch on {catch.get('id')} reports a "
                                 "preserved value the register does not hold — "
                                 "a reconciliation, which group N forbids")
+
+        # A product only counts as absent if the batch it fell in was
+        # actually answered — the same rule run.py itself applies — and only
+        # products a reading dated on or before this record's own day could
+        # have been probed for at all (a later reading's products did not
+        # exist yet on this record's night).
+        day = record.get("date", path.stem)
+        ids = sorted(pid for pid, entry in preserved.items()
+                     if entry.get("_first_seen", "") <= day)
+        failed_batches = {failure.get("batch")
+                          for failure in record.get("failures", [])}
+        wanted_gone = {pid for index, pid in enumerate(ids)
+                      if (index // batch_size) + 1 not in failed_batches
+                      and pid not in answered}
+
+        got_gone = {catch.get("id") for catch in record.get("catches", [])
+                   if catch.get("kind") == "gone_from_catalog"}
+        if got_gone != wanted_gone:
+            problems.append(f"{name}: the recorded catalog-absences do not "
+                            "match the recomputation from the preserved "
+                            f"readings ({sorted(got_gone)} vs "
+                            f"{sorted(wanted_gone)})")
+
+        for catch in record.get("catches", []):
+            if catch.get("kind") != "gone_from_catalog":
+                continue
+            if catch.get("current") is not None:
+                problems.append(f"{name}: gone_from_catalog catch on "
+                                f"{catch.get('id')} names a current value — "
+                                "the catalog did not omit it")
+            entry = basis.get(catch.get("id"), {})
+            expected = {field: entry[field] for field in compared
+                       if field in entry}
+            if catch.get("preserved") != expected:
+                problems.append(f"{name}: gone_from_catalog catch on "
+                                f"{catch.get('id')} reports a preserved value "
+                                "the register does not hold — a "
+                                "reconciliation, which group N forbids")
 
         text = json.dumps(record, ensure_ascii=False)
         if '"mmsi"' in text.lower():
