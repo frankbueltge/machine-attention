@@ -1,0 +1,1603 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eef58e3a22e0c1563d3babc1ca8844e150abd9ea.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            144.6,
+                            13.43
+                        ],
+                        [
+                            144.62,
+                            13.44
+                        ],
+                        [
+                            144.65,
+                            13.41
+                        ],
+                        [
+                            144.66,
+                            13.39
+                        ],
+                        [
+                            144.66,
+                            13.41
+                        ],
+                        [
+                            144.62,
+                            13.45
+                        ],
+                        [
+                            144.7,
+                            13.49
+                        ],
+                        [
+                            144.75,
+                            13.5
+                        ],
+                        [
+                            144.79,
+                            13.55
+                        ],
+                        [
+                            144.8,
+                            13.51
+                        ],
+                        [
+                            144.8,
+                            13.54
+                        ],
+                        [
+                            144.9,
+                            13.47
+                        ],
+                        [
+                            144.81,
+                            13.41
+                        ],
+                        [
+                            144.79,
+                            13.31
+                        ],
+                        [
+                            144.63,
+                            13.35
+                        ],
+                        [
+                            144.63,
+                            13.34
+                        ],
+                        [
+                            144.65,
+                            13.33
+                        ],
+                        [
+                            144.65,
+                            13.32
+                        ],
+                        [
+                            144.61,
+                            13.33
+                        ],
+                        [
+                            144.63,
+                            13.4
+                        ],
+                        [
+                            144.6,
+                            13.43
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eef58e3a22e0c1563d3babc1ca8844e150abd9ea.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.eef58e3a22e0c1563d3babc1ca8844e150abd9ea.001.1",
+                "areaDesc": "Guam, GU",
+                "geocode": {
+                    "SAME": [
+                        "066010"
+                    ],
+                    "UGC": [
+                        "GUC010"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/GUC010"
+                ],
+                "references": [],
+                "sent": "2026-09-06T19:15:00+10:00",
+                "effective": "2026-09-06T19:15:00+10:00",
+                "onset": "2026-09-06T19:15:00+10:00",
+                "expires": "2026-09-06T20:45:00+10:00",
+                "ends": "2026-09-06T20:45:00+10:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tiyan GU",
+                "headline": "Flash Flood Warning issued September 6 at 7:15PM ChST until September 6 at 8:45PM ChST by NWS Tiyan GU",
+                "description": "FFWGUM\n\nThe National Weather Service in Tiyan has issued a\n\n* Flash Flood Warning for...\nSouthwestern Guam...\n\n* Until 845 PM ChST.\n\n* At 715 PM ChST, Doppler radar indicated heavy showers, with the\npotential for thunderstorms, producing heavy rain across the warned\narea. Between 2 and 3 inches of rain have fallen. Additional\nrainfall amounts of 1 to 3 inches are possible in the warned area.\nFlash flooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by heavy showers and possible\nthunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways and streets, as well as other poor drainage and\nlow-lying areas.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.\n\nReport flooding to law enforcement.\n\nPlease report observed flooding to local emergency services or law\nenforcement and request they pass this information to the National\nWeather Service when you can do so safely.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWGUM"
+                    ],
+                    "WMOidentifier": [
+                        "WGMY50 PGUM 060915"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.PGUM.FF.W.0028.260906T0915Z-260906T1045Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T20:45:00+10:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.002.1",
+                "areaDesc": "Doniphan; Buchanan; Clinton; Caldwell; Ray; Carroll; Lafayette; Saline; Howard; Johnson; Pettis; Cooper; Henry",
+                "geocode": {
+                    "SAME": [
+                        "020043",
+                        "029021",
+                        "029049",
+                        "029025",
+                        "029177",
+                        "029033",
+                        "029107",
+                        "029195",
+                        "029089",
+                        "029101",
+                        "029159",
+                        "029053",
+                        "029083"
+                    ],
+                    "UGC": [
+                        "KSZ102",
+                        "MOZ020",
+                        "MOZ021",
+                        "MOZ022",
+                        "MOZ030",
+                        "MOZ031",
+                        "MOZ038",
+                        "MOZ039",
+                        "MOZ040",
+                        "MOZ044",
+                        "MOZ045",
+                        "MOZ046",
+                        "MOZ054"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/KSZ102",
+                    "https://api.weather.gov/zones/forecast/MOZ020",
+                    "https://api.weather.gov/zones/forecast/MOZ021",
+                    "https://api.weather.gov/zones/forecast/MOZ022",
+                    "https://api.weather.gov/zones/forecast/MOZ030",
+                    "https://api.weather.gov/zones/forecast/MOZ031",
+                    "https://api.weather.gov/zones/forecast/MOZ038",
+                    "https://api.weather.gov/zones/forecast/MOZ039",
+                    "https://api.weather.gov/zones/forecast/MOZ040",
+                    "https://api.weather.gov/zones/forecast/MOZ044",
+                    "https://api.weather.gov/zones/forecast/MOZ045",
+                    "https://api.weather.gov/zones/forecast/MOZ046",
+                    "https://api.weather.gov/zones/forecast/MOZ054"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52461989ee0d6820f5478b5812e0b143056bd400.002.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.52461989ee0d6820f5478b5812e0b143056bd400.002.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T19:54:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-06T03:39:00-05:00",
+                "effective": "2026-09-06T03:39:00-05:00",
+                "onset": "2026-09-06T03:39:00-05:00",
+                "expires": "2026-09-06T17:00:00-05:00",
+                "ends": "2026-09-06T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Extreme Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Extreme Heat Warning issued September 6 at 3:39AM CDT until September 6 at 8:00PM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "* WHAT...Dangerously hot and prolonged conditions with heat index\nvalues in excess of 105 possible.\n\n* WHERE...Portions of northeast Kansas and central, north central,\nnorthwest, and west central Missouri.\n\n* WHEN...Until 8 PM CDT this evening.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nDo not leave young children and pets in unattended vehicles. Car\ninteriors will reach lethal temperatures in a matter of minutes.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS73 KEAX 060839"
+                    ],
+                    "NWSheadline": [
+                        "EXTREME HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM CDT THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KEAX.XH.W.0013.000000T0000Z-260907T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T20:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "XHW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.001.1",
+                "areaDesc": "Atchison; Miami; Linn; Leavenworth; Wyandotte; Johnson; Platte; Clay; Jackson; Cass; Bates",
+                "geocode": {
+                    "SAME": [
+                        "020005",
+                        "020121",
+                        "020107",
+                        "020103",
+                        "020209",
+                        "020091",
+                        "029165",
+                        "029047",
+                        "029095",
+                        "029037",
+                        "029013"
+                    ],
+                    "UGC": [
+                        "KSZ025",
+                        "KSZ057",
+                        "KSZ060",
+                        "KSZ103",
+                        "KSZ104",
+                        "KSZ105",
+                        "MOZ028",
+                        "MOZ029",
+                        "MOZ037",
+                        "MOZ043",
+                        "MOZ053"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/KSZ025",
+                    "https://api.weather.gov/zones/forecast/KSZ057",
+                    "https://api.weather.gov/zones/forecast/KSZ060",
+                    "https://api.weather.gov/zones/forecast/KSZ103",
+                    "https://api.weather.gov/zones/forecast/KSZ104",
+                    "https://api.weather.gov/zones/forecast/KSZ105",
+                    "https://api.weather.gov/zones/forecast/MOZ028",
+                    "https://api.weather.gov/zones/forecast/MOZ029",
+                    "https://api.weather.gov/zones/forecast/MOZ037",
+                    "https://api.weather.gov/zones/forecast/MOZ043",
+                    "https://api.weather.gov/zones/forecast/MOZ053"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.52461989ee0d6820f5478b5812e0b143056bd400.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.52461989ee0d6820f5478b5812e0b143056bd400.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T19:54:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-06T03:39:00-05:00",
+                "effective": "2026-09-06T03:39:00-05:00",
+                "onset": "2026-09-06T03:39:00-05:00",
+                "expires": "2026-09-06T17:00:00-05:00",
+                "ends": "2026-09-08T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Extreme Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Extreme Heat Warning issued September 6 at 3:39AM CDT until September 8 at 8:00PM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "* WHAT...Dangerously hot and prolonged conditions with heat index\nvalues in excess of 105 possible.\n\n* WHERE...Portions of east central and northeast Kansas and west\ncentral Missouri.\n\n* WHEN...Until 8 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nDo not leave young children and pets in unattended vehicles. Car\ninteriors will reach lethal temperatures in a matter of minutes.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS73 KEAX 060839"
+                    ],
+                    "NWSheadline": [
+                        "EXTREME HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM CDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KEAX.XH.W.0013.000000T0000Z-260909T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-08T20:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "XHW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96f256f4ae799b32e7361c7c86d3fcec7f0ab199.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -85.02,
+                            35.75
+                        ],
+                        [
+                            -85.03,
+                            35.85
+                        ],
+                        [
+                            -84.96,
+                            35.88
+                        ],
+                        [
+                            -84.95,
+                            35.88
+                        ],
+                        [
+                            -84.82,
+                            35.85
+                        ],
+                        [
+                            -84.84,
+                            35.8
+                        ],
+                        [
+                            -84.88,
+                            35.78
+                        ],
+                        [
+                            -84.91,
+                            35.77
+                        ],
+                        [
+                            -84.92,
+                            35.76
+                        ],
+                        [
+                            -84.92,
+                            35.77
+                        ],
+                        [
+                            -84.93,
+                            35.77
+                        ],
+                        [
+                            -85.02,
+                            35.75
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96f256f4ae799b32e7361c7c86d3fcec7f0ab199.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.96f256f4ae799b32e7361c7c86d3fcec7f0ab199.001.1",
+                "areaDesc": "Cumberland, TN",
+                "geocode": {
+                    "SAME": [
+                        "047035"
+                    ],
+                    "UGC": [
+                        "TNC035"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TNC035"
+                ],
+                "references": [],
+                "sent": "2026-09-06T03:05:00-05:00",
+                "effective": "2026-09-06T03:05:00-05:00",
+                "onset": "2026-09-06T03:05:00-05:00",
+                "expires": "2026-09-06T06:00:00-05:00",
+                "ends": "2026-09-06T06:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Nashville TN",
+                "headline": "Flash Flood Warning issued September 6 at 3:05AM CDT until September 6 at 6:00AM CDT by NWS Nashville TN",
+                "description": "FFWOHX\n\nThe National Weather Service in Nashville has issued a\n\n* Flash Flood Warning for...\nSouth Central Cumberland County in Middle Tennessee...\n\n* Until 600 AM CDT.\n\n* At 305 AM CDT, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 2.5 and 3 inches of rain\nhave fallen. Flash flooding is ongoing or expected to begin\nshortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nMainly rural areas of South Central Cumberland County.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWOHX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS54 KOHX 060805"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KOHX.FF.W.0072.260906T0805Z-260906T1100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T06:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7c15dbede3416b187b393973a2786751ed0336cd.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7c15dbede3416b187b393973a2786751ed0336cd.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.7c15dbede3416b187b393973a2786751ed0336cd.001.1",
+                "areaDesc": "Republic; Washington; Marshall; Nemaha; Brown; Cloud; Clay; Riley; Pottawatomie; Jackson; Jefferson; Ottawa; Dickinson; Geary; Morris; Wabaunsee; Shawnee; Douglas; Lyon; Osage; Franklin; Coffey; Anderson",
+                "geocode": {
+                    "SAME": [
+                        "020157",
+                        "020201",
+                        "020117",
+                        "020131",
+                        "020013",
+                        "020029",
+                        "020027",
+                        "020161",
+                        "020149",
+                        "020085",
+                        "020087",
+                        "020143",
+                        "020041",
+                        "020061",
+                        "020127",
+                        "020197",
+                        "020177",
+                        "020045",
+                        "020111",
+                        "020139",
+                        "020059",
+                        "020031",
+                        "020003"
+                    ],
+                    "UGC": [
+                        "KSZ008",
+                        "KSZ009",
+                        "KSZ010",
+                        "KSZ011",
+                        "KSZ012",
+                        "KSZ020",
+                        "KSZ021",
+                        "KSZ022",
+                        "KSZ023",
+                        "KSZ024",
+                        "KSZ026",
+                        "KSZ034",
+                        "KSZ035",
+                        "KSZ036",
+                        "KSZ037",
+                        "KSZ038",
+                        "KSZ039",
+                        "KSZ040",
+                        "KSZ054",
+                        "KSZ055",
+                        "KSZ056",
+                        "KSZ058",
+                        "KSZ059"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/KSZ008",
+                    "https://api.weather.gov/zones/forecast/KSZ009",
+                    "https://api.weather.gov/zones/forecast/KSZ010",
+                    "https://api.weather.gov/zones/forecast/KSZ011",
+                    "https://api.weather.gov/zones/forecast/KSZ012",
+                    "https://api.weather.gov/zones/forecast/KSZ020",
+                    "https://api.weather.gov/zones/forecast/KSZ021",
+                    "https://api.weather.gov/zones/forecast/KSZ022",
+                    "https://api.weather.gov/zones/forecast/KSZ023",
+                    "https://api.weather.gov/zones/forecast/KSZ024",
+                    "https://api.weather.gov/zones/forecast/KSZ026",
+                    "https://api.weather.gov/zones/forecast/KSZ034",
+                    "https://api.weather.gov/zones/forecast/KSZ035",
+                    "https://api.weather.gov/zones/forecast/KSZ036",
+                    "https://api.weather.gov/zones/forecast/KSZ037",
+                    "https://api.weather.gov/zones/forecast/KSZ038",
+                    "https://api.weather.gov/zones/forecast/KSZ039",
+                    "https://api.weather.gov/zones/forecast/KSZ040",
+                    "https://api.weather.gov/zones/forecast/KSZ054",
+                    "https://api.weather.gov/zones/forecast/KSZ055",
+                    "https://api.weather.gov/zones/forecast/KSZ056",
+                    "https://api.weather.gov/zones/forecast/KSZ058",
+                    "https://api.weather.gov/zones/forecast/KSZ059"
+                ],
+                "references": [],
+                "sent": "2026-09-06T01:50:00-05:00",
+                "effective": "2026-09-06T01:50:00-05:00",
+                "onset": "2026-09-06T01:50:00-05:00",
+                "expires": "2026-09-06T16:00:00-05:00",
+                "ends": "2026-09-08T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Extreme Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Topeka KS",
+                "headline": "Extreme Heat Warning issued September 6 at 1:50AM CDT until September 8 at 7:00PM CDT by NWS Topeka KS",
+                "description": "* WHAT...Dangerously hot conditions with afternoon heat index values\nof 100 to 108.\n\n* WHERE...Portions of central, east central, north central, and\nnortheast Kansas.\n\n* WHEN...Until 7 PM CDT Tuesday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.",
+                "instruction": "Take extra precautions when outside. Wear lightweight and loose\nfitting clothing. Try to limit strenuous activities to early morning\nor evening. Take action when you see symptoms of heat exhaustion and\nheat stroke.\n\nDo not leave young children and pets in unattended vehicles. Car\ninteriors will reach lethal temperatures in a matter of minutes.\n\nDrink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWTOP"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS73 KTOP 060650"
+                    ],
+                    "NWSheadline": [
+                        "EXTREME HEAT WARNING REMAINS IN EFFECT UNTIL 7 PM CDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTOP.XH.W.0005.000000T0000Z-260909T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-08T19:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bf49cd40e7469422347a3ccdd5756b53bd0df433.001.1,2026-09-05T02:13:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.085a109822975c5bf521cf3c5096e68d926cd84f.001.1,2026-09-04T12:31:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d1b166933793cf7f83eebc20f06e4246b2324a80.001.1,2026-09-04T01:41:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.066a57baa50d1076d8b99082cc8989459d1f8661.001.2,2026-09-03T11:34:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "XHW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917c5df2c20ec5a7764f36e98ecf4b7e525dff76.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917c5df2c20ec5a7764f36e98ecf4b7e525dff76.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.917c5df2c20ec5a7764f36e98ecf4b7e525dff76.001.1",
+                "areaDesc": "San Juan and Vicinity; Northeast; Southeast; Eastern Interior; North Central; Central Interior; Ponce and Vicinity; Northwest; Western Interior; Mayaguez and Vicinity; Southwest",
+                "geocode": {
+                    "SAME": [
+                        "072021",
+                        "072031",
+                        "072033",
+                        "072061",
+                        "072127",
+                        "072135",
+                        "072137",
+                        "072139",
+                        "072029",
+                        "072037",
+                        "072053",
+                        "072069",
+                        "072087",
+                        "072089",
+                        "072103",
+                        "072119",
+                        "072015",
+                        "072057",
+                        "072095",
+                        "072109",
+                        "072123",
+                        "072151",
+                        "072007",
+                        "072025",
+                        "072035",
+                        "072041",
+                        "072045",
+                        "072063",
+                        "072077",
+                        "072085",
+                        "072129",
+                        "072013",
+                        "072017",
+                        "072051",
+                        "072054",
+                        "072091",
+                        "072143",
+                        "072145",
+                        "072009",
+                        "072019",
+                        "072039",
+                        "072043",
+                        "072047",
+                        "072073",
+                        "072101",
+                        "072105",
+                        "072107",
+                        "072149",
+                        "072059",
+                        "072075",
+                        "072111",
+                        "072113",
+                        "072133",
+                        "072153",
+                        "072005",
+                        "072027",
+                        "072065",
+                        "072071",
+                        "072115",
+                        "072001",
+                        "072081",
+                        "072083",
+                        "072093",
+                        "072121",
+                        "072131",
+                        "072141",
+                        "072003",
+                        "072011",
+                        "072067",
+                        "072097",
+                        "072099",
+                        "072117",
+                        "072125",
+                        "072023",
+                        "072055",
+                        "072079"
+                    ],
+                    "UGC": [
+                        "PRZ001",
+                        "PRZ002",
+                        "PRZ003",
+                        "PRZ004",
+                        "PRZ005",
+                        "PRZ006",
+                        "PRZ007",
+                        "PRZ008",
+                        "PRZ009",
+                        "PRZ010",
+                        "PRZ011"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/PRZ001",
+                    "https://api.weather.gov/zones/forecast/PRZ002",
+                    "https://api.weather.gov/zones/forecast/PRZ003",
+                    "https://api.weather.gov/zones/forecast/PRZ004",
+                    "https://api.weather.gov/zones/forecast/PRZ005",
+                    "https://api.weather.gov/zones/forecast/PRZ006",
+                    "https://api.weather.gov/zones/forecast/PRZ007",
+                    "https://api.weather.gov/zones/forecast/PRZ008",
+                    "https://api.weather.gov/zones/forecast/PRZ009",
+                    "https://api.weather.gov/zones/forecast/PRZ010",
+                    "https://api.weather.gov/zones/forecast/PRZ011"
+                ],
+                "references": [],
+                "sent": "2026-09-06T02:09:00-04:00",
+                "effective": "2026-09-06T02:09:00-04:00",
+                "onset": "2026-09-06T10:00:00-04:00",
+                "expires": "2026-09-06T17:00:00-04:00",
+                "ends": "2026-09-06T17:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Extreme Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS San Juan PR",
+                "headline": "Extreme Heat Warning issued September 6 at 2:09AM AST until September 6 at 5:00PM AST by NWS San Juan PR",
+                "description": "* WHAT...This level of heat can affect anyone without effective\ncooling and/or adequate hydration.\n\n* WHERE...Portions of Puerto Rico, particularly across coastal and\nurban areas and lower-elevation valleys.\n\n* WHEN...From 10 AM this morning to 5 PM AST this afternoon.\n\n* IMPACTS...Heat-related illnesses increase significantly during\nperiods of very high heat indices or high temperatures. This\nextreme heat event poses a severe threat to anyone with inadequate\ncooling or hydration. These extreme impacts will be most pronounced\nacross coastal sections, lowlands, interior valleys, and urban\nareas.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.\n\nDo not leave young children and pets in unattended vehicles. Car\ninteriors will reach lethal temperatures in a matter of minutes.\n\nTake extra precautions when outside. Wear lightweight and loose\nfitting clothing. Try to limit strenuous activities to early morning\nor evening. Take action when you see symptoms of heat exhaustion and\nheat stroke.\n\nTo reduce risk during outdoor work, the Occupational Safety and\nHealth Administration recommends scheduling frequent rest breaks in\nshaded or air conditioned environments. Anyone overcome by heat\nshould be moved to a cool and shaded location. Heat stroke is an\nemergency! Call 9 1 1.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWSJU"
+                    ],
+                    "WMOidentifier": [
+                        "WWCA72 TJSJ 060609"
+                    ],
+                    "NWSheadline": [
+                        "EXTREME HEAT WARNING IN EFFECT FROM 10 AM THIS MORNING TO 5 PM AST THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.TJSJ.XH.W.0005.260906T1400Z-260906T2100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T17:00:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "XHW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ae7bfcfa014939cc981000982615d039c8cc0af1.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ae7bfcfa014939cc981000982615d039c8cc0af1.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.ae7bfcfa014939cc981000982615d039c8cc0af1.001.1",
+                "areaDesc": "North and Central Sebastian; Southern Crawford; Central and Southern Franklin",
+                "geocode": {
+                    "SAME": [
+                        "005131",
+                        "005033",
+                        "005047"
+                    ],
+                    "UGC": [
+                        "ARZ129",
+                        "ARZ219",
+                        "ARZ220"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ARZ129",
+                    "https://api.weather.gov/zones/forecast/ARZ219",
+                    "https://api.weather.gov/zones/forecast/ARZ220"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd032b9ef6681be8aeaf347bc944629b3b6a9dc2.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.bd032b9ef6681be8aeaf347bc944629b3b6a9dc2.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T11:07:00-05:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.540595aa158f5197b18b92fb379af877be76749d.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.540595aa158f5197b18b92fb379af877be76749d.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T18:53:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-05T23:43:00-05:00",
+                "effective": "2026-09-05T23:43:00-05:00",
+                "onset": "2026-09-06T12:00:00-05:00",
+                "expires": "2026-09-06T13:00:00-05:00",
+                "ends": "2026-09-06T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Extreme Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tulsa OK",
+                "headline": "Extreme Heat Warning issued September 5 at 11:43PM CDT until September 6 at 7:00PM CDT by NWS Tulsa OK",
+                "description": "* WHAT...Dangerously hot conditions with heat index values up to 112\nexpected.\n\n* WHERE...Southern Crawford, Central and Southern Franklin, and North\nand Central Sebastian Counties.\n\n* WHEN...From noon to 7 PM CDT Sunday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWTSA"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS74 KTSA 060443"
+                    ],
+                    "NWSheadline": [
+                        "EXTREME HEAT WARNING REMAINS IN EFFECT FROM NOON TO 7 PM CDT SUNDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTSA.XH.W.0018.260906T1700Z-260907T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T19:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "XHW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.002.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.33,
+                            30.48
+                        ],
+                        [
+                            -94.23,
+                            30.5
+                        ],
+                        [
+                            -94.04,
+                            30.26
+                        ],
+                        [
+                            -94.14,
+                            30.16
+                        ],
+                        [
+                            -94.33,
+                            30.33
+                        ],
+                        [
+                            -94.33,
+                            30.48
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.002.1",
+                "areaDesc": "Hardin, TX",
+                "geocode": {
+                    "SAME": [
+                        "048199"
+                    ],
+                    "UGC": [
+                        "TXC199"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC199"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.be6a99bb7665f83745474c22e43b93e87b6daa2e.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.be6a99bb7665f83745474c22e43b93e87b6daa2e.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T10:18:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-05T20:16:00-05:00",
+                "effective": "2026-09-05T20:16:00-05:00",
+                "onset": "2026-09-05T20:16:00-05:00",
+                "expires": "2026-09-06T14:15:00-05:00",
+                "ends": "2026-09-07T01:30:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Lake Charles LA",
+                "headline": "Flood Warning issued September 5 at 8:16PM CDT until September 7 at 1:30AM CDT by NWS Lake Charles LA",
+                "description": "...The Flood Warning continues for the following rivers in Texas...\n\nNeches River at Neches River Saltwater Barrier affecting Jasper,\nJefferson, Hardin and Orange Counties.\n\nPine Island Bayou Near Sour Lake affecting Jefferson and Hardin\nCounties.\n\n...The Flood Warning is extended for the following rivers in Texas...\n\nVillage Creek Near Kountze affecting Hardin County.\n\nFor the Neches River...including Town Bluff, Evadale, Neches River\nSaltwater Barrier...Minor flooding is forecast.\nFor the Village Creek...including Kountze...Minor flooding is\nforecast.\nFor the Pine Island Bayou...including Sour Lake...Minor flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Village Creek near Kountze.\n\n* WHEN...Until late Sunday night.\n\n* IMPACTS...At 18.4 feet, The water will be at the low chord of\nHighway 418.\n\n* ADDITIONAL DETAILS...\n- At 7:30 PM CDT Saturday the stage was 19.3 feet.\n- Bankfull stage is 12.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 7:30 PM CDT Saturday was 20.9 feet.\n- Forecast...The river is expected to fall below flood stage early\ntomorrow afternoon and continue falling to 5.0 feet Thursday\nevening.\n- Flood stage is 17.0 feet.\n- Flood History...This crest compares to a previous crest of 19.3\nfeet on 03/07/1992.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Sunday afternoon at 215 PM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSLCH"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS84 KLCH 060116"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL LATE SUNDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KLCH.FL.W.0037.000000T0000Z-260907T0630Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-07T01:30:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.99c6a0fd6fda0d3f4c0d7635c73119e2d3bf5141.001.1,2026-09-04T20:09:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fe9e1588041e372f6b92a4618a3575498da272e0.001.1,2026-09-04T11:26:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f491253129c77e8ecdc143123a723c5fc693869c.001.1,2026-09-03T13:59:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1ec16fd98fc8afcc468c17295165ecd999e06bc7.001.1,2026-09-03T20:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6fe70a82701616ddc2c18ab2b81e32a9117f2846.001.1,2026-09-03T07:58:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62a4e9086ee83cf0ed552ce3cbe8bf1d40470cb0.001.1,2026-09-03T09:10:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b34277fd7f8320a853a0cb15595502e31218e04c.001.1,2026-09-02T14:06:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.001.1,2026-09-02T20:00:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9cd612dfd4b822c978327e2c4b9355a79fe132c1.002.1,2026-09-02T11:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fa16a1b5a4b3fee862a51ec3933b69c79a66610b.002.1,2026-09-02T07:53:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.45,
+                            30.12
+                        ],
+                        [
+                            -94.23,
+                            30.24
+                        ],
+                        [
+                            -94.07,
+                            30.21
+                        ],
+                        [
+                            -94.06,
+                            30.13
+                        ],
+                        [
+                            -94.45,
+                            30.04
+                        ],
+                        [
+                            -94.45,
+                            30.12
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.001.1",
+                "areaDesc": "Hardin, TX; Jefferson, TX",
+                "geocode": {
+                    "SAME": [
+                        "048199",
+                        "048245"
+                    ],
+                    "UGC": [
+                        "TXC199",
+                        "TXC245"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC199",
+                    "https://api.weather.gov/zones/county/TXC245"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.be6a99bb7665f83745474c22e43b93e87b6daa2e.003.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.be6a99bb7665f83745474c22e43b93e87b6daa2e.003.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T10:18:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-05T20:16:00-05:00",
+                "effective": "2026-09-05T20:16:00-05:00",
+                "onset": "2026-09-05T20:16:00-05:00",
+                "expires": "2026-09-06T14:15:00-05:00",
+                "ends": "2026-09-07T21:24:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Lake Charles LA",
+                "headline": "Flood Warning issued September 5 at 8:16PM CDT until September 7 at 9:24PM CDT by NWS Lake Charles LA",
+                "description": "...The Flood Warning continues for the following rivers in Texas...\n\nNeches River at Neches River Saltwater Barrier affecting Jasper,\nJefferson, Hardin and Orange Counties.\n\nPine Island Bayou Near Sour Lake affecting Jefferson and Hardin\nCounties.\n\n...The Flood Warning is extended for the following rivers in Texas...\n\nVillage Creek Near Kountze affecting Hardin County.\n\nFor the Neches River...including Town Bluff, Evadale, Neches River\nSaltwater Barrier...Minor flooding is forecast.\nFor the Village Creek...including Kountze...Minor flooding is\nforecast.\nFor the Pine Island Bayou...including Sour Lake...Minor flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Pine Island Bayou near Sour Lake.\n\n* WHEN...From this evening to Monday evening.\n\n* IMPACTS...At 25.0 feet, Water inundates roads in lowland areas near\nthe river. Low spots on Old Sour Lake Road are under water.\n\n* ADDITIONAL DETAILS...\n- At 7:45 PM CDT Saturday the stage was 25.5 feet.\n- Bankfull stage is 22.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 7:45 PM CDT Saturday was 25.5 feet.\n- Forecast...The river is expected to rise to a crest of 26.1 feet\ntomorrow morning. It will then fall below flood stage late Monday\nmorning.\n- Flood stage is 25.0 feet.\n- Flood History...This crest compares to a previous crest of 26.0\nfeet on 01/29/1990.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Sunday afternoon at 215 PM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSLCH"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS84 KLCH 060116"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT FROM THIS EVENING TO MONDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KLCH.FL.W.0038.260906T0116Z-260908T0224Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-07T21:24:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.99c6a0fd6fda0d3f4c0d7635c73119e2d3bf5141.003.1,2026-09-04T20:09:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fe9e1588041e372f6b92a4618a3575498da272e0.003.1,2026-09-04T11:26:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f491253129c77e8ecdc143123a723c5fc693869c.002.1,2026-09-03T13:59:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1ec16fd98fc8afcc468c17295165ecd999e06bc7.002.1,2026-09-03T20:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6fe70a82701616ddc2c18ab2b81e32a9117f2846.002.1,2026-09-03T07:58:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62a4e9086ee83cf0ed552ce3cbe8bf1d40470cb0.002.1,2026-09-03T09:10:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b34277fd7f8320a853a0cb15595502e31218e04c.002.1,2026-09-02T14:06:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.002.1,2026-09-02T20:00:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9cd612dfd4b822c978327e2c4b9355a79fe132c1.003.1,2026-09-02T11:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fa16a1b5a4b3fee862a51ec3933b69c79a66610b.003.1,2026-09-02T07:53:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.003.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.04,
+                            30.33
+                        ],
+                        [
+                            -94.02,
+                            30.18
+                        ],
+                        [
+                            -93.78,
+                            30.04
+                        ],
+                        [
+                            -93.87,
+                            29.92
+                        ],
+                        [
+                            -94.06,
+                            29.98
+                        ],
+                        [
+                            -94.13,
+                            30.08
+                        ],
+                        [
+                            -94.21,
+                            30.33
+                        ],
+                        [
+                            -94.04,
+                            30.33
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.003.1",
+                "areaDesc": "Hardin, TX; Jasper, TX; Jefferson, TX; Orange, TX",
+                "geocode": {
+                    "SAME": [
+                        "048199",
+                        "048241",
+                        "048245",
+                        "048361"
+                    ],
+                    "UGC": [
+                        "TXC199",
+                        "TXC241",
+                        "TXC245",
+                        "TXC361"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/TXC199",
+                    "https://api.weather.gov/zones/county/TXC241",
+                    "https://api.weather.gov/zones/county/TXC245",
+                    "https://api.weather.gov/zones/county/TXC361"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.be6a99bb7665f83745474c22e43b93e87b6daa2e.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.be6a99bb7665f83745474c22e43b93e87b6daa2e.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-05T10:18:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-05T20:16:00-05:00",
+                "effective": "2026-09-05T20:16:00-05:00",
+                "onset": "2026-09-05T20:16:00-05:00",
+                "expires": "2026-09-06T14:15:00-05:00",
+                "ends": "2026-09-09T04:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Lake Charles LA",
+                "headline": "Flood Warning issued September 5 at 8:16PM CDT until September 9 at 4:00AM CDT by NWS Lake Charles LA",
+                "description": "...The Flood Warning continues for the following rivers in Texas...\n\nNeches River at Neches River Saltwater Barrier affecting Jasper,\nJefferson, Hardin and Orange Counties.\n\nPine Island Bayou Near Sour Lake affecting Jefferson and Hardin\nCounties.\n\n...The Flood Warning is extended for the following rivers in Texas...\n\nVillage Creek Near Kountze affecting Hardin County.\n\nFor the Neches River...including Town Bluff, Evadale, Neches River\nSaltwater Barrier...Minor flooding is forecast.\nFor the Village Creek...including Kountze...Minor flooding is\nforecast.\nFor the Pine Island Bayou...including Sour Lake...Minor flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Neches River at Neches River Saltwater Barrier.\n\n* WHEN...Until late Tuesday night.\n\n* IMPACTS...At 6.0 feet, Colliers Ferry Park is under water, and\nflooding of secondary roads near the river can be expected.\n\n* ADDITIONAL DETAILS...\n- At 7:15 PM CDT Saturday the stage was 5.1 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 7:15 PM CDT Saturday was 5.1 feet.\n- Forecast...The river is expected to rise to a crest of 5.7 feet\nearly Monday morning. It will then fall below flood stage early\nTuesday morning.\n- Flood stage is 4.0 feet.\n- Flood History...This crest compares to a previous crest of 5.8\nfeet on 02/14/2005.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Sunday afternoon at 215 PM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSLCH"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS84 KLCH 060116"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL LATE TUESDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KLCH.FL.W.0036.000000T0000Z-260909T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-09T04:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.99c6a0fd6fda0d3f4c0d7635c73119e2d3bf5141.002.1,2026-09-04T20:09:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fe9e1588041e372f6b92a4618a3575498da272e0.002.1,2026-09-04T11:26:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f491253129c77e8ecdc143123a723c5fc693869c.003.1,2026-09-03T13:59:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1ec16fd98fc8afcc468c17295165ecd999e06bc7.003.1,2026-09-03T20:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6fe70a82701616ddc2c18ab2b81e32a9117f2846.003.1,2026-09-03T07:58:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62a4e9086ee83cf0ed552ce3cbe8bf1d40470cb0.003.1,2026-09-03T09:10:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b34277fd7f8320a853a0cb15595502e31218e04c.003.1,2026-09-02T14:06:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.003.1,2026-09-02T20:00:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9cd612dfd4b822c978327e2c4b9355a79fe132c1.001.1,2026-09-02T11:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.fa16a1b5a4b3fee862a51ec3933b69c79a66610b.001.1,2026-09-02T07:53:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7aa2a925c4efdedfe471582b1b5d629c878d1cb3.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7aa2a925c4efdedfe471582b1b5d629c878d1cb3.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.7aa2a925c4efdedfe471582b1b5d629c878d1cb3.001.1",
+                "areaDesc": "Bourbon; Crawford; Cherokee; Benton; Morgan; Miller; Maries; Vernon; St. Clair; Hickory; Camden; Pulaski; Phelps; Barton; Cedar; Polk; Dallas; Laclede; Texas; Dent; Jasper; Dade; Greene; Webster; Wright; Newton; Lawrence; Christian; Douglas; Howell; Shannon; McDonald; Barry; Stone; Taney; Ozark; Oregon",
+                "geocode": {
+                    "SAME": [
+                        "020011",
+                        "020037",
+                        "020021",
+                        "029015",
+                        "029141",
+                        "029131",
+                        "029125",
+                        "029217",
+                        "029185",
+                        "029085",
+                        "029029",
+                        "029169",
+                        "029161",
+                        "029011",
+                        "029039",
+                        "029167",
+                        "029059",
+                        "029105",
+                        "029215",
+                        "029065",
+                        "029097",
+                        "029057",
+                        "029077",
+                        "029225",
+                        "029229",
+                        "029145",
+                        "029109",
+                        "029043",
+                        "029067",
+                        "029091",
+                        "029203",
+                        "029119",
+                        "029009",
+                        "029209",
+                        "029213",
+                        "029153",
+                        "029149"
+                    ],
+                    "UGC": [
+                        "KSZ073",
+                        "KSZ097",
+                        "KSZ101",
+                        "MOZ055",
+                        "MOZ056",
+                        "MOZ057",
+                        "MOZ058",
+                        "MOZ066",
+                        "MOZ067",
+                        "MOZ068",
+                        "MOZ069",
+                        "MOZ070",
+                        "MOZ071",
+                        "MOZ077",
+                        "MOZ078",
+                        "MOZ079",
+                        "MOZ080",
+                        "MOZ081",
+                        "MOZ082",
+                        "MOZ083",
+                        "MOZ088",
+                        "MOZ089",
+                        "MOZ090",
+                        "MOZ091",
+                        "MOZ092",
+                        "MOZ093",
+                        "MOZ094",
+                        "MOZ095",
+                        "MOZ096",
+                        "MOZ097",
+                        "MOZ098",
+                        "MOZ101",
+                        "MOZ102",
+                        "MOZ103",
+                        "MOZ104",
+                        "MOZ105",
+                        "MOZ106"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/KSZ073",
+                    "https://api.weather.gov/zones/forecast/KSZ097",
+                    "https://api.weather.gov/zones/forecast/KSZ101",
+                    "https://api.weather.gov/zones/forecast/MOZ055",
+                    "https://api.weather.gov/zones/forecast/MOZ056",
+                    "https://api.weather.gov/zones/forecast/MOZ057",
+                    "https://api.weather.gov/zones/forecast/MOZ058",
+                    "https://api.weather.gov/zones/forecast/MOZ066",
+                    "https://api.weather.gov/zones/forecast/MOZ067",
+                    "https://api.weather.gov/zones/forecast/MOZ068",
+                    "https://api.weather.gov/zones/forecast/MOZ069",
+                    "https://api.weather.gov/zones/forecast/MOZ070",
+                    "https://api.weather.gov/zones/forecast/MOZ071",
+                    "https://api.weather.gov/zones/forecast/MOZ077",
+                    "https://api.weather.gov/zones/forecast/MOZ078",
+                    "https://api.weather.gov/zones/forecast/MOZ079",
+                    "https://api.weather.gov/zones/forecast/MOZ080",
+                    "https://api.weather.gov/zones/forecast/MOZ081",
+                    "https://api.weather.gov/zones/forecast/MOZ082",
+                    "https://api.weather.gov/zones/forecast/MOZ083",
+                    "https://api.weather.gov/zones/forecast/MOZ088",
+                    "https://api.weather.gov/zones/forecast/MOZ089",
+                    "https://api.weather.gov/zones/forecast/MOZ090",
+                    "https://api.weather.gov/zones/forecast/MOZ091",
+                    "https://api.weather.gov/zones/forecast/MOZ092",
+                    "https://api.weather.gov/zones/forecast/MOZ093",
+                    "https://api.weather.gov/zones/forecast/MOZ094",
+                    "https://api.weather.gov/zones/forecast/MOZ095",
+                    "https://api.weather.gov/zones/forecast/MOZ096",
+                    "https://api.weather.gov/zones/forecast/MOZ097",
+                    "https://api.weather.gov/zones/forecast/MOZ098",
+                    "https://api.weather.gov/zones/forecast/MOZ101",
+                    "https://api.weather.gov/zones/forecast/MOZ102",
+                    "https://api.weather.gov/zones/forecast/MOZ103",
+                    "https://api.weather.gov/zones/forecast/MOZ104",
+                    "https://api.weather.gov/zones/forecast/MOZ105",
+                    "https://api.weather.gov/zones/forecast/MOZ106"
+                ],
+                "references": [],
+                "sent": "2026-09-05T16:08:00-05:00",
+                "effective": "2026-09-05T16:08:00-05:00",
+                "onset": "2026-09-05T16:08:00-05:00",
+                "expires": "2026-09-06T14:15:00-05:00",
+                "ends": "2026-09-06T20:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Extreme Heat Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Springfield MO",
+                "headline": "Extreme Heat Warning issued September 5 at 4:08PM CDT until September 6 at 8:00PM CDT by NWS Springfield MO",
+                "description": "* WHAT...Dangerously hot conditions with heat index values up to 107.\n\n* WHERE...Portions of southeast Kansas and central, east central,\nsouth central, southwest, and west central Missouri.\n\n* WHEN...Until 8 PM CDT Sunday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat and high humidity events.\n\n* ADDITIONAL DETAILS...An approaching frontal boundary will provide\nsome relief to portions of central Missouri into the eastern Ozarks\nSunday...and farther westward on Monday.  The warning may need to\nbe extended for southeast Kansas into far southwest Missouri\nMonday.",
+                "instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWSGF"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS73 KSGF 052108"
+                    ],
+                    "NWSheadline": [
+                        "EXTREME HEAT WARNING REMAINS IN EFFECT UNTIL 8 PM CDT SUNDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSGF.XH.W.0004.000000T0000Z-260907T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T20:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f6dbefba73dc6ea355ad02a4086425224b00230b.001.2,2026-09-04T13:30:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "XHW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4daac28a30a8306dbe0303ed3b4dbe9969b995c.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4daac28a30a8306dbe0303ed3b4dbe9969b995c.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.d4daac28a30a8306dbe0303ed3b4dbe9969b995c.001.1",
+                "areaDesc": "Eastern Beaverhead National Forest",
+                "geocode": {
+                    "SAME": [
+                        "030001",
+                        "030043",
+                        "030057",
+                        "030093"
+                    ],
+                    "UGC": [
+                        "MTZ111"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/MTZ111"
+                ],
+                "references": [],
+                "sent": "2026-09-05T14:40:00-06:00",
+                "effective": "2026-09-05T14:40:00-06:00",
+                "onset": "2026-09-06T12:00:00-06:00",
+                "expires": "2026-09-06T21:00:00-06:00",
+                "ends": "2026-09-06T21:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Missoula MT",
+                "headline": "Red Flag Warning issued September 5 at 2:40PM MDT until September 6 at 9:00PM MDT by NWS Missoula MT",
+                "description": "...RED FLAG WARNING REMAINS IN EFFECT FROM NOON TO 9 PM MDT SUNDAY\nDUE TO WIND AND LOW RELATIVE HUMIDITY FOR EAST BEAVERHEAD...\n\n* AFFECTED AREA...Fire Weather Zone 111.\n\n* TIMING...From noon to 9 PM MDT Sunday.\n\n* WINDS...South winds 15 to 25 mph with gusts up to 40 mph.\n\n* RELATIVE HUMIDITY...Relative Humidity between 15 to 25 percent.\n\n* IMPACTS...Any fires that develop will spread rapidly. Outdoor\nburning is not recommended.",
+                "instruction": "Please advise the appropriate officials or fire crews in the field of\nthis Red Flag Warning.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWMSO"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KMSO 052040"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM NOON TO 9 PM MDT SUNDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMSO.FW.W.0013.260906T1800Z-260907T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-06T21:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-09-06T09:37:57+00:00"
+}

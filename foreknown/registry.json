@@ -469,6 +469,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/gdacs.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-01T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-04T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/gdacs.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -511,7 +528,7 @@
       "where": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
       "window": {
         "from": "2025-12-21T00:00:00",
-        "to": "2026-09-01T00:00:00"
+        "to": "2026-09-04T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -913,6 +930,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/gdacs.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-01T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-04T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/gdacs.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -928,7 +962,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-09-01T00:00:00"
+        "to": "2026-09-04T00:00:00"
       }
     },
     "gdacs-dr-1027449": {
@@ -1202,6 +1236,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/gdacs.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-01T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-04T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/gdacs.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -1222,7 +1273,7 @@
       "where": "The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-09-01T00:00:00"
+        "to": "2026-09-04T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -2068,6 +2119,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "gdacs-eq-1498907",
@@ -2078,7 +2133,7 @@
       "severity": "Red",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1498907&episodeid=1658860&eventtype=EQ",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Earthquake in Afghanistan",
       "where": "Afghanistan",
       "window": {
@@ -2094,6 +2149,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "gdacs-eq-1499045",
@@ -2104,7 +2163,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1499045&episodeid=1659816&eventtype=EQ",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Earthquake in Afghanistan",
       "where": "Afghanistan",
       "window": {
@@ -3621,6 +3680,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/gdacs.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-07-31T01:00:00",
+                "to": "2026-09-03T01:00:00"
+              },
+              "to": {
+                "from": "2026-07-31T01:00:00",
+                "to": "2026-09-07T01:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/gdacs.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "gdacs-fl-1104081",
@@ -3636,7 +3712,7 @@
       "where": "China",
       "window": {
         "from": "2026-07-31T01:00:00",
-        "to": "2026-09-03T01:00:00"
+        "to": "2026-09-07T01:00:00"
       }
     },
     "gdacs-fl-1104121": {
@@ -5404,6 +5480,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/nhc-current-storms.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "DISSIPATED",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nhc-al052026",
@@ -5412,7 +5492,7 @@
       "severity": "20",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
-      "status": "OPEN",
+      "status": "DISSIPATED",
       "what": "Edouard (PTC)",
       "where": "AT5",
       "window": {
@@ -6184,19 +6264,48 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/nhc-current-storms.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "105",
+              "to": "50"
+            },
+            "what": {
+              "from": "Karina (HU)",
+              "to": "Karina (TS)"
+            },
+            "where": {
+              "from": "EP1",
+              "to": "CP5"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-03T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-06T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nhc-current-storms.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nhc-ep112026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "105",
+      "severity": "50",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
-      "what": "Karina (HU)",
-      "where": "EP1",
+      "what": "Karina (TS)",
+      "where": "CP5",
       "window": {
-        "from": "2026-09-03T09:00:00.000Z",
+        "from": "2026-09-06T09:00:00.000Z",
         "to": null
       }
     },
@@ -6334,19 +6443,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/nhc-current-storms.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "125",
+              "to": "110"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-03T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-06T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nhc-current-storms.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nhc-ep122026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "125",
+      "severity": "110",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Lowell (HU)",
       "where": "CP4",
       "window": {
-        "from": "2026-09-03T09:00:00.000Z",
+        "from": "2026-09-06T09:00:00.000Z",
         "to": null
       }
     },
@@ -6404,19 +6534,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/nhc-current-storms.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "75",
+              "to": "80"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-03T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-06T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nhc-current-storms.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nhc-ep132026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "75",
+      "severity": "80",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Marie (HU)",
       "where": "EP3",
       "window": {
-        "from": "2026-09-03T09:00:00.000Z",
+        "from": "2026-09-06T09:00:00.000Z",
         "to": null
       }
     },
@@ -6548,6 +6699,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kbis-svw-0323-26",
@@ -6558,7 +6713,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.407fbae8c09754eaf7f19983de314a775c6c98f1.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Severe Thunderstorm Warning",
       "where": "Ward, ND",
       "window": {
@@ -6574,6 +6729,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kbuf-faw-0011-26",
@@ -6584,7 +6743,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d02613a7d72cc8c744d3a2edefd83341f2e68711.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Monroe, NY",
       "window": {
@@ -6600,6 +6759,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kbuf-faw-0012-26",
@@ -6610,7 +6773,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9ddf62bfef97c5434ee14ba2aef19f8f2dcacf76.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Orleans, NY",
       "window": {
@@ -6656,6 +6819,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kbyz-fww-0010-26",
@@ -6666,7 +6833,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ce8ab46e042d97b48f2ae18e9be541b060fa522a.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Gallatin National Forest; Wheatland County/Sweet Grass County; Stillwater County; Beartooth Ranger District Custer National Forest; Golden Valley County/Musselshell County; Yellowstone County; Crow Indian Reservation/Big Horn Canyon Rec Area; Bighorn National Forest",
       "window": {
@@ -6772,6 +6939,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kcle-faw-0022-26",
@@ -6782,7 +6953,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9cc5bf0761668955801cbad06e1c6111a86430e9.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Erie, PA",
       "window": {
@@ -6828,6 +6999,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kcle-svw-0266-26",
@@ -6838,7 +7013,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e848fde7265516ba1053825c36991c70cc6e2b87.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Severe Thunderstorm Warning",
       "where": "Crawford, PA; Erie, PA",
       "window": {
@@ -6854,6 +7029,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-faw-0024-26",
@@ -6864,7 +7043,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.db85b2eeffd8e23c0fbb60695c6cc3b3e3217bd6.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Centre, PA; Clinton, PA; Lycoming, PA; Union, PA",
       "window": {
@@ -6880,6 +7059,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-faw-0026-26",
@@ -6890,7 +7073,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e57d4adbff57783c6e24fe0eeb2ee2de2bc197b2.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Dauphin, PA; Lebanon, PA; Schuylkill, PA",
       "window": {
@@ -6906,6 +7089,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-faw-0027-26",
@@ -6916,7 +7103,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f098a21cee169a6749ef2acbd635de5832fb242.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Clinton, PA; Lycoming, PA",
       "window": {
@@ -6932,6 +7119,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-faw-0028-26",
@@ -6942,7 +7133,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1830903f1166819d6c023077d8fd701aab02ccee.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Centre, PA; Clearfield, PA; Huntingdon, PA; Juniata, PA; Mifflin, PA; Perry, PA",
       "window": {
@@ -6958,6 +7149,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-faw-0029-26",
@@ -6968,7 +7163,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.696577db35dcb7eab202c47fd7298d73b9bafbb9.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "McKean, PA; Warren, PA",
       "window": {
@@ -6984,6 +7179,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-ffw-0091-26",
@@ -6994,7 +7193,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.673e4ea7f8b4b1db2520ce073168c0d4a7ff2331.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Dauphin, PA; Lancaster, PA; Lebanon, PA",
       "window": {
@@ -7040,6 +7239,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-flw-0006-26",
@@ -7050,7 +7253,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8d5178b20563d964a2794ca38e4b453231e4ac5e.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Centre, PA; Clinton, PA",
       "window": {
@@ -7066,6 +7269,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kctp-flw-0007-26",
@@ -7076,7 +7283,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9e1df72155e40b4ec43fd8af9b912c2a9bde5415.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Snyder, PA; Union, PA",
       "window": {
@@ -7092,6 +7299,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kcys-fww-0039-26",
@@ -7102,7 +7313,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.88116d24e0634f36d39a21d526dc56a2eea93d44.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Niobrara/Lower Elevations of Converse/Thunder Basin National Grassland; Middle North Platte River Basin/Niobrara and Converse High Plains",
       "window": {
@@ -7135,6 +7346,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kdvn-xhw-0003-26",
@@ -7145,12 +7360,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a18c85dc094dd84f3907fb3f141b9a20f6eabe58.001.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Iowa; Johnson; Cedar; Muscatine; Scott; Keokuk; Washington; Louisa; Jefferson; Henry; Des Moines; Van Buren; Lee; Rock Island; Henry; Bureau; Putnam; Mercer; Henderson; Warren; Hancock; McDonough; Scotland; Clark",
       "window": {
         "from": "2026-09-03T02:39:00-05:00",
         "to": "2026-09-04T19:00:00-05:00"
+      }
+    },
+    "nws-keax-xhw-0013-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-keax-xhw-0013-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a11d5f1cf7f63becee55f90b9f3bb821bc47aa02.002.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Doniphan; Buchanan; Clinton; Caldwell; Ray; Carroll; Lafayette; Saline; Howard; Johnson; Pettis; Cooper; Henry",
+      "window": {
+        "from": "2026-09-06T03:39:00-05:00",
+        "to": "2026-09-06T20:00:00-05:00"
       }
     },
     "nws-kewx-xhw-0003-26": {
@@ -7361,6 +7602,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-faw-0020-26",
@@ -7371,7 +7616,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.940707c46a78f48760546e60df0bede6afdd4a87.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Liberty, TX; Polk, TX; San Jacinto, TX",
       "window": {
@@ -7387,6 +7632,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-faw-0021-26",
@@ -7397,7 +7646,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe012e30298b46e9ceb8e811a776f1ce9324f753.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Polk, TX; San Jacinto, TX",
       "window": {
@@ -7413,6 +7662,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-faw-0022-26",
@@ -7423,7 +7676,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1ea803ceeec6b517cfd476829dbd8674b39e405c.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Liberty, TX",
       "window": {
@@ -7559,6 +7812,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-ffw-0048-26",
@@ -7569,7 +7826,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8485088af067e49367b5e9704da4d5b81d9eb106.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Trinity, TX",
       "window": {
@@ -7585,6 +7842,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-ffw-0049-26",
@@ -7595,7 +7856,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21e26579b6b163bf607458aae715b8aee5fdbf69.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Houston, TX; Trinity, TX",
       "window": {
@@ -7611,6 +7872,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-flw-0017-26",
@@ -7621,7 +7886,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.095934b7171ca69548537d54f1542690bc676f94.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Polk, TX; San Jacinto, TX",
       "window": {
@@ -7637,6 +7902,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-khgx-flw-0018-26",
@@ -7647,7 +7916,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.095934b7171ca69548537d54f1542690bc676f94.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Hardin, TX; Liberty, TX; Polk, TX",
       "window": {
@@ -7983,6 +8252,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kilx-xhw-0003-26",
@@ -7993,7 +8266,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.260d78f1c77d871c3eb663c6516ffe05a2f72962.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Knox; Stark; Peoria; Marshall; Woodford; Fulton; Tazewell; McLean; Mason; Logan; De Witt; Piatt; Champaign; Vermilion; Macon; Moultrie; Douglas; Coles; Edgar; Clark",
       "window": {
@@ -9092,6 +9365,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-klch-faw-0012-26",
@@ -9102,7 +9379,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8d69fb701470fc62b3d8b764cdb336904f54b89a.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Hardin, TX",
       "window": {
@@ -9178,6 +9455,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-klch-flw-0036-00",
@@ -9188,12 +9469,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.003.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Hardin, TX; Jasper, TX; Jefferson, TX; Orange, TX",
       "window": {
         "from": "2026-09-02T20:00:00-05:00",
         "to": "2026-09-03T08:00:00-05:00"
+      }
+    },
+    "nws-klch-flw-0036-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-klch-flw-0036-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6726e7861c2669921792985f7e9b4df86b59cc51.003.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Hardin, TX; Jasper, TX; Jefferson, TX; Orange, TX",
+      "window": {
+        "from": "2026-09-05T20:16:00-05:00",
+        "to": "2026-09-09T04:00:00-05:00"
       }
     },
     "nws-klch-flw-0037-26": {
@@ -9204,6 +9511,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-02T20:00:00-05:00",
+                "to": "2026-09-05T03:20:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-05T20:16:00-05:00",
+                "to": "2026-09-07T01:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-klch-flw-0037-26",
@@ -9218,8 +9542,8 @@
       "what": "Flood Warning",
       "where": "Hardin, TX",
       "window": {
-        "from": "2026-09-02T20:00:00-05:00",
-        "to": "2026-09-05T03:20:00-05:00"
+        "from": "2026-09-05T20:16:00-05:00",
+        "to": "2026-09-07T01:30:00-05:00"
       }
     },
     "nws-klch-flw-0038-26": {
@@ -9230,6 +9554,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-04T14:20:00-05:00",
+                "to": "2026-09-07T03:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-05T20:16:00-05:00",
+                "to": "2026-09-07T21:24:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-klch-flw-0038-26",
@@ -9244,8 +9585,8 @@
       "what": "Flood Warning",
       "where": "Hardin, TX; Jefferson, TX",
       "window": {
-        "from": "2026-09-04T14:20:00-05:00",
-        "to": "2026-09-07T03:00:00-05:00"
+        "from": "2026-09-05T20:16:00-05:00",
+        "to": "2026-09-07T21:24:00-05:00"
       }
     },
     "nws-klch-ssw-1005-00": {
@@ -9337,6 +9678,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-klot-xhw-0003-26",
@@ -9347,7 +9692,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bddf91dcdb223fa4f83f375ce4eccd07342e249a.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Northern Cook; Central Cook; Southern Cook",
       "window": {
@@ -9533,6 +9878,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-klsx-xhw-0004-26",
@@ -9543,7 +9892,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d73ea6d5ab8cebf59bf31795aa0dd28ba5ad13b7.002.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Madison; St. Clair; Monroe; St. Charles; St. Louis; St. Louis City; Jefferson",
       "window": {
@@ -9859,6 +10208,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-02/nws-alerts-active.json",
           "ts": "2026-09-02T09:53:18+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kmso-fww-0012-26",
@@ -9869,12 +10222,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6aa2d90f00e5d478fcc6fa61918041effddc4d0f.001.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Eastern Beaverhead National Forest",
       "window": {
         "from": "2026-09-02T12:00:00-06:00",
         "to": "2026-09-03T20:00:00-06:00"
+      }
+    },
+    "nws-kmso-fww-0013-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-kmso-fww-0013-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d4daac28a30a8306dbe0303ed3b4dbe9969b995c.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Eastern Beaverhead National Forest",
+      "window": {
+        "from": "2026-09-06T12:00:00-06:00",
+        "to": "2026-09-06T21:00:00-06:00"
       }
     },
     "nws-kmtr-fww-0002-26": {
@@ -9905,6 +10284,32 @@
       "window": {
         "from": "2026-08-28T06:51:00-07:00",
         "to": "2026-08-28T15:00:00-07:00"
+      }
+    },
+    "nws-kohx-ffw-0072-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "flash flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-kohx-ffw-0072-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.96f256f4ae799b32e7361c7c86d3fcec7f0ab199.001.1",
+      "status": "OPEN",
+      "what": "Flash Flood Warning",
+      "where": "Cumberland, TN",
+      "window": {
+        "from": "2026-09-06T03:05:00-05:00",
+        "to": "2026-09-06T06:00:00-05:00"
       }
     },
     "nws-kotx-fww-0022-26": {
@@ -10133,6 +10538,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kpah-xhw-0006-26",
@@ -10143,7 +10552,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.14cf8dafa424ad0b3eaebcb7ff4bff6150379992.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Jefferson; Wayne; Edwards; Wabash; Perry; Franklin; Hamilton; White; Jackson; Williamson; Saline; Gallatin; Union; Johnson; Pope; Hardin; Alexander; Pulaski; Massac; Gibson; Pike; Posey; Vanderburgh; Warrick; Spencer; Fulton; Hickman; Carlisle; Ballard; McCracken; Graves; Livingston; Marshall; Calloway; Crittenden; Lyon; Trigg; Caldwell; Union; Webster; Hopkins; Christian; Henderson; Daviess; McLean; Muhlenberg; Todd; Perry; Bollinger; Cape Girardeau; Wayne; Carter; Ripley; Butler; Stoddard; Scott; Mississippi; New Madrid",
       "window": {
@@ -10206,6 +10615,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kpbz-svw-0322-26",
@@ -10216,7 +10629,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2041270f99dc18000cb7b8a8e869d99623c5c103.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Severe Thunderstorm Warning",
       "where": "Butler, PA; Lawrence, PA; Mercer, PA; Venango, PA",
       "window": {
@@ -10262,6 +10675,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kphi-faw-0024-26",
@@ -10272,7 +10689,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7b89cb353fc3b28e2f62c9e0778fe3039c6a53fd.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "New Castle, DE; Burlington, NJ; Camden, NJ; Gloucester, NJ; Salem, NJ; Bucks, PA; Chester, PA; Delaware, PA; Montgomery, PA; Philadelphia, PA",
       "window": {
@@ -10612,6 +11029,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kriw-fww-0024-26",
@@ -10622,7 +11043,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a93d04077cc1db72b9197a1dd4d2c071edbaaf79.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "North Bighorn Basin/Worland BLM; Cody Foothills; Lincoln and Uinta Counties/Lower Elevations; Upper Green River Basin/Rock Springs BLM; Sweetwater County/Rock Springs BLM/Flaming Gorge NRA; Natrona County/Casper BLM; Johnson County/Casper BLM; South Bighorn Basin/Worland BLM; Upper Wind River Basin/Wind River Basin; South Bighorn Mountains; Absaroka Mountains/North Shoshone NF; Owl Creek Mountains; East Wind River Mountains/South Shoshone NF; Granite/Green/Ferris/Rattlesnake Mountains; Casper Mountain",
       "window": {
@@ -10688,6 +11109,32 @@
       "window": {
         "from": "2026-08-22T21:49:00-04:00",
         "to": "2026-08-23T04:00:00-04:00"
+      }
+    },
+    "nws-ksgf-xhw-0004-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-ksgf-xhw-0004-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7aa2a925c4efdedfe471582b1b5d629c878d1cb3.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Bourbon; Crawford; Cherokee; Benton; Morgan; Miller; Maries; Vernon; St. Clair; Hickory; Camden; Pulaski; Phelps; Barton; Cedar; Polk; Dallas; Laclede; Texas; Dent; Jasper; Dade; Greene; Webster; Wright; Newton; Lawrence; Christian; Douglas; Howell; Shannon; McDonald; Barry; Stone; Taney; Ozark; Oregon",
+      "window": {
+        "from": "2026-09-05T16:08:00-05:00",
+        "to": "2026-09-06T20:00:00-05:00"
       }
     },
     "nws-ksgx-xhw-0008-26": {
@@ -10829,6 +11276,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kshv-flw-0024-26",
@@ -10839,7 +11290,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e1a2d09386cdcfc592e944e6e6489d1430c6322a.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Anderson, TX; Cherokee, TX",
       "window": {
@@ -10855,6 +11306,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kshv-flw-0025-26",
@@ -10865,7 +11320,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c074cd208e81fe54da07e86ac2bb2aaa6ff01db8.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Anderson, TX; Angelina, TX; Cherokee, TX; Houston, TX",
       "window": {
@@ -10881,6 +11336,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kshv-flw-0026-26",
@@ -10891,7 +11350,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21deb6920212c28ad5f082c7c261cc7e8f67ee11.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Angelina, TX; Polk, TX; Trinity, TX",
       "window": {
@@ -11047,6 +11506,58 @@
       "window": {
         "from": "2026-09-02T12:00:00-06:00",
         "to": "2026-09-02T21:00:00-06:00"
+      }
+    },
+    "nws-ktop-xhw-0005-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-ktop-xhw-0005-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7c15dbede3416b187b393973a2786751ed0336cd.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Republic; Washington; Marshall; Nemaha; Brown; Cloud; Clay; Riley; Pottawatomie; Jackson; Jefferson; Ottawa; Dickinson; Geary; Morris; Wabaunsee; Shawnee; Douglas; Lyon; Osage; Franklin; Coffey; Anderson",
+      "window": {
+        "from": "2026-09-06T01:50:00-05:00",
+        "to": "2026-09-08T19:00:00-05:00"
+      }
+    },
+    "nws-ktsa-xhw-0018-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-ktsa-xhw-0018-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ae7bfcfa014939cc981000982615d039c8cc0af1.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "North and Central Sebastian; Southern Crawford; Central and Southern Franklin",
+      "window": {
+        "from": "2026-09-06T12:00:00-05:00",
+        "to": "2026-09-06T19:00:00-05:00"
       }
     },
     "nws-ktwc-ffw-0151-26": {
@@ -11257,6 +11768,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-03/nws-alerts-active.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-06T09:39:02+00:00"
         }
       ],
       "id": "nws-kunr-fww-0035-26",
@@ -11267,7 +11782,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.371e2eac68682be003f90e86c36e12ba13f41cb2.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Fall River County Area",
       "window": {
@@ -11429,6 +11944,32 @@
         "to": "2026-08-30T22:30:00+10:00"
       }
     },
+    "nws-pgum-ffw-0028-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "flash flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-pgum-ffw-0028-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eef58e3a22e0c1563d3babc1ca8844e150abd9ea.001.1",
+      "status": "OPEN",
+      "what": "Flash Flood Warning",
+      "where": "Guam, GU",
+      "window": {
+        "from": "2026-09-06T19:15:00+10:00",
+        "to": "2026-09-06T20:45:00+10:00"
+      }
+    },
     "nws-tjsj-faw-0019-26": {
       "announced_at": "2026-09-01T10:27:00+00:00",
       "hazard": "flood",
@@ -11487,6 +12028,32 @@
       "window": {
         "from": "2026-08-26T09:00:00-04:00",
         "to": "2026-08-26T17:00:00-04:00"
+      }
+    },
+    "nws-tjsj-xhw-0005-26": {
+      "announced_at": "2026-09-06T09:39:02+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-06/nws-alerts-active.json",
+          "ts": "2026-09-06T09:39:02+00:00"
+        }
+      ],
+      "id": "nws-tjsj-xhw-0005-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917c5df2c20ec5a7764f36e98ecf4b7e525dff76.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "San Juan and Vicinity; Northeast; Southeast; Eastern Interior; North Central; Central Interior; Ponce and Vicinity; Northwest; Western Interior; Mayaguez and Vicinity; Southwest",
+      "window": {
+        "from": "2026-09-06T10:00:00-04:00",
+        "to": "2026-09-06T17:00:00-04:00"
       }
     }
   }
