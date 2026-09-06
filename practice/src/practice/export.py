@@ -90,7 +90,7 @@ def figures(repo_root: Path) -> list[dict]:
     # "last night was fine" — a divergence, once found, stays on the record.
     probes = [read_json(path, {}) for path in continuity]
     rechecks = sum(int(probe.get("answered") or 0) for probe in probes)
-    divergences = sum(int(probe.get("catches") or 0) for probe in probes)
+    divergences = sum(len(probe.get("catches") or []) for probe in probes)
     # A resolution whose future was already historical at first sight closes
     # a record, not a cycle. The practice reports both numbers or neither.
     watched = sum(1 for r in resolutions if r.get("cold_start") is False)
