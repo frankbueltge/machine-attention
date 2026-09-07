@@ -91,8 +91,26 @@ def test_catches_without_an_id_are_not_collapsed_into_one(tmp_path):
     assert figs["darkocean_continuity_divergences"] == 2
 
 
-def test_the_committed_record_reads_four_distinct_products():
-    """The real files: three nights of catches, one finding of four products."""
+def test_the_committed_record_agrees_with_an_independent_count():
+    """The real files, counted here without going through export.py.
+
+    Deliberately not a literal: the continuity register gains a night every
+    time the notary runs, and a figure pinned to today's number is a test that
+    fails on a night when nothing is wrong. The expectation is derived from the
+    committed probes each run, the way the register's own ledger is.
+    """
     repo_root = Path(__file__).resolve().parents[2]
+    probes = sorted((repo_root / "darkocean" / "continuity").glob("*.json"))
+    ids: set[str] = set()
+    events = 0
+    for path in probes:
+        for entry in json.loads(path.read_text(encoding="utf-8")).get("catches") or []:
+            ids.add(str(entry.get("id")))
+            events += 1
     figs = {f["key"]: f["value"] for f in figures(repo_root)}
-    assert figs["darkocean_continuity_divergences"] == 4
+    assert figs["darkocean_continuity_divergences"] == len(ids)
+    # While the record carries a product caught on more than one night, summing
+    # per-night lengths and counting products give different answers, so this
+    # also fails if the figure ever goes back to summing.
+    if events > len(ids):
+        assert figs["darkocean_continuity_divergences"] < events
