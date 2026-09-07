@@ -45,9 +45,54 @@ def test_continuity_divergences_counts_every_committed_night_with_zero_catches(t
     assert figs["darkocean_continuity_rechecks"] == 3 * 1004
 
 
+def _catch(product_id: str) -> dict:
+    return {"kind": "gone_from_catalog", "id": product_id, "current": None,
+            "preserved": {"online": True}}
+
+
 def test_continuity_divergences_counts_real_catches_instead_of_crashing(tmp_path):
-    catch = {"kind": "gone_from_catalog", "id": "x", "current": None,
-             "preserved": {"online": True}}
-    root = _repo(tmp_path, [[], [catch, catch, catch, catch], []])
+    # Four catches on one night are four products, so the fixture carries four
+    # distinct ids -- the shape darkocean/continuity/2026-09-03.json has. The
+    # earlier fixture repeated one id four times, which only read as 4 because
+    # the figure was summing list lengths and never looked at what was in them.
+    four = [_catch("a"), _catch("b"), _catch("c"), _catch("d")]
+    root = _repo(tmp_path, [[], four, []])
     figs = {f["key"]: f["value"] for f in figures(root)}
+    assert figs["darkocean_continuity_divergences"] == 4
+
+
+def test_a_product_still_gone_is_not_a_fresh_divergence_each_night(tmp_path):
+    """The record's own case: one finding re-caught, not new findings.
+
+    A product gone from the catalog is caught again every night it stays gone.
+    The same four ids stand in 2026-09-03, -04 and -05, so summing per-night
+    lengths reports 12 for 4 products and climbs by 4 a night while nothing
+    new has happened. The figure counts distinct products.
+    """
+    four = [_catch("a"), _catch("b"), _catch("c"), _catch("d")]
+    root = _repo(tmp_path, [list(four), list(four), list(four)])
+    figs = {f["key"]: f["value"] for f in figures(root)}
+    assert figs["darkocean_continuity_divergences"] == 4
+
+
+def test_a_genuinely_new_product_raises_the_count(tmp_path):
+    root = _repo(tmp_path, [[_catch("a"), _catch("b")],
+                            [_catch("a"), _catch("b"), _catch("e")]])
+    figs = {f["key"]: f["value"] for f in figures(root)}
+    assert figs["darkocean_continuity_divergences"] == 3
+
+
+def test_catches_without_an_id_are_not_collapsed_into_one(tmp_path):
+    """No committed probe lacks an id; if one ever does, it must not vanish."""
+    bare = [{"kind": "gone_from_catalog", "current": None, "name": "one"},
+            {"kind": "gone_from_catalog", "current": None, "name": "two"}]
+    root = _repo(tmp_path, [bare])
+    figs = {f["key"]: f["value"] for f in figures(root)}
+    assert figs["darkocean_continuity_divergences"] == 2
+
+
+def test_the_committed_record_reads_four_distinct_products():
+    """The real files: three nights of catches, one finding of four products."""
+    repo_root = Path(__file__).resolve().parents[2]
+    figs = {f["key"]: f["value"] for f in figures(repo_root)}
     assert figs["darkocean_continuity_divergences"] == 4
