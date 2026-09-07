@@ -238,6 +238,11 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
   early because the archive is slow: the audit budgets one to three hours),
   same machine identity. Optional `ANTHROPIC_API_KEY` for the capped model
   layer; without it the reading records `off: no key configured`.
+- `registry-stall.yml` — nightly cause-agnostic staleness check (01:00 UTC,
+  before the other three so it reads last night's state, not tonight's own
+  writes), same machine identity. Never writes a register, only
+  `autonomy/log.jsonl`; no `verify.py` step. Promoted sensor,
+  `foreknown/proposals/sensor-registry-stall.json`.
 - **Discovery pass** — since 2026-08-08 a nightly cloud routine (06:30 UTC)
   in the maintainer's Claude UI, visible and manually startable there;
   `discovery.yml` stays as a manual fallback (`workflow_dispatch`, repo
