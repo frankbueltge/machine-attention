@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Environmental Insights Explorer - Make Informed Decisions</title>
+  <base href="/">
+  <meta name="description" content="Environmental impact begins with insights. Explore data to make informed decisions and inspire action." />
+  <meta property="og:description" content="Environmental impact begins with insights. Explore data to make informed decisions and inspire action." />
+  <meta property="og:image" content="https://www.gstatic.com/environmental-insights-team/share_og.png" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500|Google+Sans:400,500" rel="stylesheet">
+
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.gstatic.com/images/branding/googleg/2x/googleg_standard_color_192dp.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.gstatic.com/images/branding/product/ico/googleg_standard_32dp.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.gstatic.com/images/branding/product/ico/googleg_standard_16dp.ico">
+  <link rel="stylesheet" href="/eie_material_theme.css">
+  <link rel="stylesheet" href="/src/scss/styles.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0ESE6ZNN1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    const additionalConfig = {
+      "anonymize_ip": true, // Adding IP Scrubbing following pwg guidance.
+    };
+    if (window.location !== window.parent.location) {
+      // If site is embedded allow cookie access for analytics to work
+      additionalConfig['cookie_flags'] = 'secure;samesite=none';
+    }
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G0ESE6ZNN1', additionalConfig);
+  </script>
+</head>
+<body class="eie">
+  <eie-app></eie-app>
+  <script>
+    const devServerSupportedLocales = [
+      "ar-xb",
+      "en-xa",
+      "de-ch",
+    ];
+
+    const prodSupportedLocales = [
+      "da",
+      "de",
+      "en",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "it",
+      "ja",
+      "nl",
+      "pl",
+      "pt-br",
+      "ru",
+      "th",
+      "tr",
+      "zh-tw",
+    ]
+
+    const unsupportedLocales = [
+      "ar",
+    ]
+
+    // Different configs for dev server vs dev deploys vs prod:
+    // Dev server has a smaller language set (test locales) to emphasize speed
+    // Dev deploys is full set of desired languages, to enable testing
+    // Prod is (only) supported languages that have been QA'd
+    const devServer = location.host.includes('proxy');
+    const devDeploys = location.host.includes('appspot');
+    // UAT is the QA team's test environment: let's make it match prod for this.
+    const prodDeploy =
+      location.host.includes("uat") ||
+      location.host.includes("insights.sustainability.google");
+
+    // Choose supported locales and which bundle to serve (as defined in the BUILD file) based on
+    // the environment.
+    let supportedLocales;
+    let jsBundleBase;
+    if (prodDeploy) {
+      supportedLocales = prodSupportedLocales;
+      jsBundleBase = "/sources_i18n_prod";
+    } else if (devServer) {
+      supportedLocales = devServerSupportedLocales;
+      jsBundleBase = "/devsrcs_i18n";
+    } else if (devDeploys) {
+      supportedLocales = [
+        ...prodSupportedLocales,
+        ...unsupportedLocales,
+        ...devServerSupportedLocales,
+      ];
+      jsBundleBase = "/sources_i18n";
+    } else {
+      // Fall back to prod.
+      supportedLocales = prodSupportedLocales;
+      jsBundleBase = "/sources_i18n_prod";
+    }
+
+    // Add js bundle as a script element to served html.
+    function loadApplication() {
+      // First check url params, then language setting in browser, then language setting in OS
+      // (Windows only).
+      const locale = new URLSearchParams(location.search).get('hl') ||
+            navigator.language || navigator.userLanguage;
+      const applicationScript = document.createElement('script');
+      applicationScript.src = chooseLocaleBundle(locale.toLowerCase());
+
+      // Add lang attribute on the body for correct i18n capitalization
+      document.body.setAttribute('lang', locale);
+      document.head.append(applicationScript);
+    }
+
+    // Use correct js bundle based on locale information. All english locales other than
+    // pseudolocales use en-US, which is also the overall default.
+    function chooseLocaleBundle(locale) {
+      if (supportedLocales.includes(locale)) {
+        gtag('event', 'load', {'event_category': 'load-binary', 'event_label': locale});
+        return transformLocaleToBundle(locale);
+      } else if (locale.split('-')[0] === 'en') {
+        gtag('event', 'load', {'event_category': 'load-binary', 'event_label': 'en'});
+        return `${jsBundleBase}.js`;
+      } else if (getSupportedLanguage(locale)) {
+        gtag('event', 'load', {'event_category': 'load-binary', 'event_label': getSupportedLanguage(locale)});
+        return transformLocaleToBundle(getSupportedLanguage(locale));
+      } else {
+        gtag('event', 'load', {'event_category': 'load-binary', 'event_label': 'en'});
+        return `${jsBundleBase}.js`;
+      }
+    }
+
+    // Attempts to get only the language portion of locale, eg "fr" in "fr-CA." This allows for
+    // defaulting to a supported language for unsupported locale requests (de-NA -> de).
+    function getSupportedLanguage(locale) {
+      return supportedLocales.find(
+          (supportedLocale) => supportedLocale.split('-')[0] === locale.split('-')[0]);
+    }
+
+    // Match locale to generated locale-specific js binary syntax.
+    function transformLocaleToBundle(locale) {
+      return `${jsBundleBase}__${locale.replace(/-/g, '_')}.js`;
+    }
+    loadApplication();
+  </script>
+  <noscript>
+    <h1>Environmental Insights Explorer</h1>
+    <p>Impact begins with insights. Explore data to make informed decisions and inspire action.</p>
+    <p>
+      Explore estimated carbon emissions from transportation and buildings, rooftop solar energy potential,
+      and NASA climate forecasts, derived from Google’s proprietary data and leading data sources.
+    </p>
+    <p>
+      In partnership with <a href="https://www.globalcovenantofmayors.org">Global Covenant of Mayors for Climate and Energy</a>.
+    </p>
+    <p>This website requires JavaScript.</p>
+
+    <h2>Google Sustainability</h2>
+    <p>Explore all of Google’s sustainability initiatives. <a href="https://sustainability.google">Visit sustainability.google</a></p>
+
+    <ul class="footer-links -no-bullets" role="navigation">
+      <li>
+        <a href="https://www.google.com">Google</a>
+      </li>
+      <li>
+        <a href="https://sustainability.google/tools/environmental-insights-explorer/">Home</a>
+      </li>
+      <li>
+        <a href="https://insights.sustainability.google/methodology">Methodology</a>
+      </li>
+      <li>
+        <a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a>
+      </li>
+      <li>
+        <a href="https://www.google.com/intl/en/policies/terms/">Terms</a>
+      </li>
+    </ul>
+  </noscript>
+
+  <script
+    data-autoload-cookie-consent-bar="true"
+    data-autoload-cookie-consent-bar-intl-code=""
+    src="https://www.gstatic.com/brandstudio/kato/cookie_choice_component/cookie_consent_bar.v3.js">
+  </script>
+</body>
+</html>
