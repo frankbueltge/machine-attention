@@ -503,6 +503,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/gdacs.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-05T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-06T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/gdacs.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -545,7 +562,7 @@
       "where": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
       "window": {
         "from": "2025-12-21T00:00:00",
-        "to": "2026-09-05T00:00:00"
+        "to": "2026-09-06T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -981,6 +998,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/gdacs.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-05T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-06T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/gdacs.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -996,7 +1030,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-09-05T00:00:00"
+        "to": "2026-09-06T00:00:00"
       }
     },
     "gdacs-dr-1027449": {
@@ -1304,6 +1338,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/gdacs.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-05T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-06T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/gdacs.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -1324,7 +1375,7 @@
       "where": "The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-09-05T00:00:00"
+        "to": "2026-09-06T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -3808,6 +3859,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-03/gdacs.json",
           "ts": "2026-09-03T10:06:48+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-08-09T01:00:00",
+                "to": "2026-09-02T01:00:00"
+              },
+              "to": {
+                "from": "2026-08-09T01:00:00",
+                "to": "2026-09-03T01:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/gdacs.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "gdacs-fl-1104121",
@@ -3823,7 +3891,7 @@
       "where": "India",
       "window": {
         "from": "2026-08-09T01:00:00",
-        "to": "2026-09-02T01:00:00"
+        "to": "2026-09-03T01:00:00"
       }
     },
     "gdacs-fl-1104123": {
@@ -3989,6 +4057,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "gdacs-tc-1001206",
@@ -3999,7 +4071,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1001206&episodeid=8&eventtype=TC",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Tropical Cyclone TAPAH-25",
       "where": "China",
       "window": {
@@ -6369,6 +6441,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nhc-current-storms.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "DISSIPATED",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nhc-ep112026",
@@ -6377,7 +6453,7 @@
       "severity": "40",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
-      "status": "OPEN",
+      "status": "DISSIPATED",
       "what": "Karina (PTC)",
       "where": "CP5",
       "window": {
@@ -6561,19 +6637,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nhc-current-storms.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "100",
+              "to": "95"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-07T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-08T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nhc-current-storms.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nhc-ep122026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "100",
+      "severity": "95",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Lowell (HU)",
       "where": "CP4",
       "window": {
-        "from": "2026-09-07T09:00:00.000Z",
+        "from": "2026-09-08T09:00:00.000Z",
         "to": null
       }
     },
@@ -6677,19 +6774,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nhc-current-storms.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "55",
+              "to": "40"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-07T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-08T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nhc-current-storms.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nhc-ep132026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "55",
+      "severity": "40",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Marie (TS)",
       "where": "EP3",
       "window": {
-        "from": "2026-09-07T09:00:00.000Z",
+        "from": "2026-09-08T09:00:00.000Z",
         "to": null
       }
     },
@@ -7528,6 +7646,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-07T03:55:00-05:00",
+                "to": "2026-09-08T20:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-08T04:17:00-05:00",
+                "to": "2026-09-08T20:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-keax-xhw-0014-26",
@@ -7542,7 +7677,7 @@
       "what": "Extreme Heat Warning",
       "where": "Atchison; Miami; Linn; Leavenworth; Wyandotte; Johnson; Platte; Clay; Jackson; Cass; Bates",
       "window": {
-        "from": "2026-09-07T03:55:00-05:00",
+        "from": "2026-09-08T04:17:00-05:00",
         "to": "2026-09-08T20:00:00-05:00"
       }
     },
@@ -7682,6 +7817,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-kfsd-ffw-0015-26",
@@ -7692,7 +7831,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a27208e69f91efba37b950ca811c8edfd21cf0ad.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Plymouth, IA; Woodbury, IA",
       "window": {
@@ -7772,6 +7911,32 @@
         "to": "2026-08-25T21:00:00-05:00"
       }
     },
+    "nws-kggw-hww-0015-26": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "high wind",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-kggw-hww-0015-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e4e36bca832d4ab96eea3feeb1f3b0824e4f4ff4.001.1",
+      "status": "OPEN",
+      "what": "High Wind Warning",
+      "where": "Southwest Phillips",
+      "window": {
+        "from": "2026-09-07T18:29:00-06:00",
+        "to": "2026-09-08T09:00:00-06:00"
+      }
+    },
     "nws-kgsp-ffw-0015-26": {
       "announced_at": "2026-09-07T10:43:10+00:00",
       "hazard": "flash flood",
@@ -7780,6 +7945,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-kgsp-ffw-0015-26",
@@ -7790,7 +7959,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2237c182aeeced276aee1c21dffc3f90deb84ea8.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "McDowell, NC; Rutherford, NC",
       "window": {
@@ -9706,6 +9875,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-06T20:11:00-05:00",
+                "to": "2026-09-09T23:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-07T21:52:00-05:00",
+                "to": "2026-09-09T09:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-klch-flw-0036-26",
@@ -9720,8 +9906,8 @@
       "what": "Flood Warning",
       "where": "Hardin, TX; Jasper, TX; Jefferson, TX; Orange, TX",
       "window": {
-        "from": "2026-09-06T20:11:00-05:00",
-        "to": "2026-09-09T23:00:00-05:00"
+        "from": "2026-09-07T21:52:00-05:00",
+        "to": "2026-09-09T09:00:00-05:00"
       }
     },
     "nws-klch-flw-0037-26": {
@@ -9813,6 +9999,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-06T20:11:00-05:00",
+                "to": "2026-09-09T05:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-07T21:52:00-05:00",
+                "to": "2026-09-09T05:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-klch-flw-0038-26",
@@ -9827,7 +10030,7 @@
       "what": "Flood Warning",
       "where": "Hardin, TX; Jefferson, TX",
       "window": {
-        "from": "2026-09-06T20:11:00-05:00",
+        "from": "2026-09-07T21:52:00-05:00",
         "to": "2026-09-09T05:30:00-05:00"
       }
     },
@@ -10300,6 +10503,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-kmfr-fzw-0008-26",
@@ -10310,7 +10517,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.73bebb7610cf65b339bac141550301ae1698e8d5.001.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Freeze Warning",
       "where": "South Central Siskiyou County; Northeast Siskiyou and Northwest Modoc Counties; Modoc County; Klamath Basin; Northern and Eastern Klamath County and Western Lake County; Central and Eastern Lake County",
       "window": {
@@ -10386,6 +10593,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-kmob-maw-0186-26",
@@ -10396,7 +10607,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a9c6b3b81c71eae5c9de9b225d4b17da2c92bf50.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Waters from Okaloosa-Walton County Line to Pensacola FL from 20 to 60 NM",
       "window": {
@@ -11387,6 +11598,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-kriw-fww-0026-26",
@@ -11397,12 +11612,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b95ab926aa54ef020b60965b1af87e91ff5ef4cd.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "North Bighorn Basin/Worland BLM; South Bighorn Basin/Worland BLM",
       "window": {
         "from": "2026-09-07T12:00:00-06:00",
         "to": "2026-09-07T19:00:00-06:00"
+      }
+    },
+    "nws-kriw-fww-0027-26": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-kriw-fww-0027-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ead00ce8fe0edc5329ad967ea8902bf0062b5231.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Natrona County/Casper BLM; Granite/Green/Ferris/Rattlesnake Mountains; Casper Mountain",
+      "window": {
+        "from": "2026-09-08T12:00:00-06:00",
+        "to": "2026-09-10T21:00:00-06:00"
       }
     },
     "nws-krlx-faw-0106-26": {
@@ -11494,6 +11735,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-07T03:25:00-05:00",
+                "to": "2026-09-07T20:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-08T00:39:00-05:00",
+                "to": "2026-09-08T20:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-ksgf-xhw-0004-26",
@@ -11508,8 +11766,8 @@
       "what": "Extreme Heat Warning",
       "where": "Bourbon; Crawford; Cherokee; Vernon; St. Clair; Barton; Cedar; Jasper; Dade; Newton; Lawrence; McDonald; Barry; Stone",
       "window": {
-        "from": "2026-09-07T03:25:00-05:00",
-        "to": "2026-09-07T20:00:00-05:00"
+        "from": "2026-09-08T00:39:00-05:00",
+        "to": "2026-09-08T20:00:00-05:00"
       }
     },
     "nws-ksgx-xhw-0008-26": {
@@ -11641,6 +11899,32 @@
       "window": {
         "from": "2026-08-28T21:06:00-07:00",
         "to": "2026-08-29T20:00:00-07:00"
+      }
+    },
+    "nws-ksgx-xhw-0009-26": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-ksgx-xhw-0009-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9781086943425f317f517d30846b423c2556491d.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Coachella Valley; San Diego County Deserts; San Gorgonio Pass Near Banning",
+      "window": {
+        "from": "2026-09-09T10:00:00-07:00",
+        "to": "2026-09-11T20:00:00-07:00"
       }
     },
     "nws-kshv-flw-0024-26": {
@@ -11861,6 +12145,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-ktae-maw-0369-26",
@@ -11871,7 +12159,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cfd80abaf2e9ac8985564014b91852e04f25262b.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Waters from Okaloosa-Walton County Line to Mexico Beach from 20 to 60 NM; Waters from Mexico Beach to Apalachicola FL from 20 to 60 NM",
       "window": {
@@ -11934,6 +12222,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-07T02:13:00-05:00",
+                "to": "2026-09-08T19:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-09-08T01:51:00-05:00",
+                "to": "2026-09-08T19:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-ktop-xhw-0005-26",
@@ -11948,7 +12253,7 @@
       "what": "Extreme Heat Warning",
       "where": "Republic; Washington; Marshall; Nemaha; Brown; Cloud; Clay; Riley; Pottawatomie; Jackson; Jefferson; Ottawa; Dickinson; Geary; Morris; Wabaunsee; Shawnee; Douglas; Lyon; Osage; Franklin; Coffey; Anderson",
       "window": {
-        "from": "2026-09-07T02:13:00-05:00",
+        "from": "2026-09-08T01:51:00-05:00",
         "to": "2026-09-08T19:00:00-05:00"
       }
     },
@@ -11980,6 +12285,32 @@
       "window": {
         "from": "2026-09-06T12:00:00-05:00",
         "to": "2026-09-06T19:00:00-05:00"
+      }
+    },
+    "nws-ktsa-xhw-0019-26": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-ktsa-xhw-0019-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7050211f8d3d06e5d76843e0d9573390a8f8153f.001.2",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "North and Central Sebastian; Southern Crawford; Central and Southern Franklin; Tulsa; Rogers; Mayes; Okmulgee; Wagoner; Muskogee; McIntosh; Haskell; Northern Le Flore; Central and Southern Sequoyah",
+      "window": {
+        "from": "2026-09-08T12:00:00-05:00",
+        "to": "2026-09-08T20:00:00-05:00"
       }
     },
     "nws-ktwc-ffw-0151-26": {
@@ -12220,6 +12551,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-kunr-fww-0037-26",
@@ -12230,7 +12565,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e14699a7fc48ecfb122e9718144f778edace9b09.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Fall River County Area; Northern Campbell; Southern Campbell; Crook County Plains; Weston County Plains",
       "window": {
@@ -12332,6 +12667,32 @@
         "to": "2026-08-28T20:00:00-07:00"
       }
     },
+    "nws-kvef-xhw-0006-26": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-kvef-xhw-0006-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b99f604fb70a3df99504477f1c506bd9e8b33cb.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "Lake Havasu and Fort Mohave; Lake Mead - AZ side; Lake Mohave - AZ side; Northwest Deserts; Death Valley National Park; Cadiz Basin; San Bernardino County-Upper Colorado River Valley; Northeast Clark County; Western Clark and Southern Nye County; Las Vegas Valley; Lake Mead - NV side; Lake Mohave - NV side",
+      "window": {
+        "from": "2026-09-10T10:00:00-07:00",
+        "to": "2026-09-10T20:00:00-07:00"
+      }
+    },
     "nws-pafg-hww-0010-26": {
       "announced_at": "2026-08-28T17:41:45+00:00",
       "hazard": "high wind",
@@ -12422,6 +12783,58 @@
         "to": "2026-09-06T20:45:00+10:00"
       }
     },
+    "nws-phfo-ffw-0051-26": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "flash flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-phfo-ffw-0051-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f81bb297f069003a1778c79c7c81367626ca2c5.001.1",
+      "status": "OPEN",
+      "what": "Flash Flood Warning",
+      "where": "Kauai, HI",
+      "window": {
+        "from": "2026-09-07T23:03:00-10:00",
+        "to": "2026-09-08T01:30:00-10:00"
+      }
+    },
+    "nws-phfo-huw-2012-00": {
+      "announced_at": "2026-09-08T10:04:31+00:00",
+      "hazard": "hurricane",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
+        }
+      ],
+      "id": "nws-phfo-huw-2012-00",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Extreme",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4954e7119873a51c87064e207efc890582760fd2.001.1",
+      "status": "OPEN",
+      "what": "Hurricane Warning",
+      "where": "Niihau",
+      "window": {
+        "from": "2026-09-07T22:53:00-10:00",
+        "to": "2026-09-08T07:00:00-10:00"
+      }
+    },
     "nws-phfo-huw-2012-26": {
       "announced_at": "2026-09-07T10:43:10+00:00",
       "hazard": "hurricane",
@@ -12430,6 +12843,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-phfo-huw-2012-26",
@@ -12440,7 +12857,7 @@
       "severity": "Extreme",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ed03814643444e3903dfb9700254a2522c5bd9c7.002.2",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Hurricane Warning",
       "where": "Kauai Northwest Waters; Kauai Leeward Waters",
       "window": {
@@ -12456,6 +12873,27 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Kauai Channel",
+              "to": "Central Oahu"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-06T23:09:00-10:00",
+                "to": "2026-09-07T12:15:00-10:00"
+              },
+              "to": {
+                "from": "2026-09-07T22:53:00-10:00",
+                "to": "2026-09-08T07:00:00-10:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-phfo-trw-2012-00",
@@ -12468,10 +12906,10 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ed03814643444e3903dfb9700254a2522c5bd9c7.003.1",
       "status": "OPEN",
       "what": "Tropical Storm Warning",
-      "where": "Kauai Channel",
+      "where": "Central Oahu",
       "window": {
-        "from": "2026-09-06T23:09:00-10:00",
-        "to": "2026-09-07T12:15:00-10:00"
+        "from": "2026-09-07T22:53:00-10:00",
+        "to": "2026-09-08T07:00:00-10:00"
       }
     },
     "nws-tjsj-faw-0019-26": {
@@ -12572,6 +13010,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-07/nws-alerts-active.json",
           "ts": "2026-09-07T10:43:10+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-08T10:04:31+00:00"
         }
       ],
       "id": "nws-tjsj-xhw-0006-26",
@@ -12582,7 +13024,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.240dcecdac07573f0fe8b8afbe286582775ddec3.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "San Juan and Vicinity; Northeast; Southeast; Eastern Interior; North Central; Central Interior; Ponce and Vicinity; Northwest; Western Interior; Mayaguez and Vicinity; Southwest",
       "window": {

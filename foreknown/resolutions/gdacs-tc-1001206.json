@@ -1,0 +1,274 @@
+{
+  "cold_start": true,
+  "evidence": [
+    "foreknown/snapshots/2026-08-08/gdacs.json"
+  ],
+  "future": "gdacs-tc-1001206",
+  "measured": {
+    "episode_days": 1.8,
+    "episode_window": {
+      "from": "2025-09-06T06:00:00",
+      "to": "2025-09-08T00:00:00"
+    },
+    "escalated": false,
+    "revisions": 0,
+    "severity_path": [
+      "Orange"
+    ]
+  },
+  "reaction": {
+    "limits": [
+      "the money figures are the response plans' own annual totals for every country they list; none of it was raised for this hazard and no part of it is attributable to this future",
+      "attention is measured for the future's countries, not for the hazard — a second event in the same country moves the same number",
+      "the series covers the nights this future was source-open under watch, which for a cold start is shorter than its announced window",
+      "a funding movement inside the watch happened in the same period as the warning, which is not the same as because of it"
+    ],
+    "measured": {
+      "attention_peak": {
+        "articles": 42072,
+        "date": "2026-08-28",
+        "ratio_to_baseline": 1.91
+      },
+      "money_plan_match": false,
+      "nights_watched": 26
+    },
+    "nights": [
+      {
+        "articles": 19724,
+        "attention_day": "2026-08-07",
+        "date": "2026-08-08",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.85
+      },
+      {
+        "articles": 19724,
+        "attention_day": "2026-08-07",
+        "date": "2026-08-09",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.85
+      },
+      {
+        "articles": 22312,
+        "attention_day": "2026-08-11",
+        "date": "2026-08-12",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.03
+      },
+      {
+        "articles": 22732,
+        "attention_day": "2026-08-12",
+        "date": "2026-08-13",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.02
+      },
+      {
+        "articles": 22732,
+        "attention_day": "2026-08-12",
+        "date": "2026-08-14",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.02
+      },
+      {
+        "articles": 18114,
+        "attention_day": "2026-08-13",
+        "date": "2026-08-15",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.82
+      },
+      {
+        "articles": 20561,
+        "attention_day": "2026-08-14",
+        "date": "2026-08-16",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.94
+      },
+      {
+        "articles": 18588,
+        "attention_day": "2026-08-15",
+        "date": "2026-08-17",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.88
+      },
+      {
+        "articles": 10572,
+        "attention_day": "2026-08-16",
+        "date": "2026-08-18",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.51
+      },
+      {
+        "articles": 17394,
+        "attention_day": "2026-08-17",
+        "date": "2026-08-19",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.84
+      },
+      {
+        "articles": 24250,
+        "attention_day": "2026-08-18",
+        "date": "2026-08-20",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.17
+      },
+      {
+        "articles": 23581,
+        "attention_day": "2026-08-19",
+        "date": "2026-08-21",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.14
+      },
+      {
+        "articles": 33288,
+        "attention_day": "2026-08-20",
+        "date": "2026-08-22",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.61
+      },
+      {
+        "articles": 27977,
+        "attention_day": "2026-08-21",
+        "date": "2026-08-23",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.35
+      },
+      {
+        "articles": 21968,
+        "attention_day": "2026-08-22",
+        "date": "2026-08-24",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.06
+      },
+      {
+        "articles": 12155,
+        "attention_day": "2026-08-23",
+        "date": "2026-08-25",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.59
+      },
+      {
+        "articles": 25688,
+        "attention_day": "2026-08-24",
+        "date": "2026-08-26",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.24
+      },
+      {
+        "articles": 42072,
+        "attention_day": "2026-08-27",
+        "date": "2026-08-28",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.91
+      },
+      {
+        "articles": 40512,
+        "attention_day": "2026-08-28",
+        "date": "2026-08-29",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.84
+      },
+      {
+        "articles": 28742,
+        "attention_day": "2026-08-29",
+        "date": "2026-08-30",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.3
+      },
+      {
+        "articles": 22342,
+        "attention_day": "2026-08-30",
+        "date": "2026-08-31",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.01
+      },
+      {
+        "articles": 42094,
+        "attention_day": "2026-08-31",
+        "date": "2026-09-01",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.9
+      },
+      {
+        "articles": 37686,
+        "attention_day": "2026-09-01",
+        "date": "2026-09-02",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.69
+      },
+      {
+        "articles": 30609,
+        "attention_day": "2026-09-02",
+        "date": "2026-09-03",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 1.36
+      },
+      {
+        "articles": 12332,
+        "attention_day": "2026-09-05",
+        "date": "2026-09-06",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.52
+      },
+      {
+        "articles": 14888,
+        "attention_day": "2026-09-06",
+        "date": "2026-09-07",
+        "has_fts_plan_match": false,
+        "plan_funded_usd": 0,
+        "plan_requirements_usd": 0,
+        "ratio_to_baseline": 0.62
+      }
+    ]
+  },
+  "resolved_at": "2026-09-08T10:04:31+00:00",
+  "verdict": "EPISODE_ENDED"
+}
