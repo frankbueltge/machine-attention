@@ -1,5 +1,10 @@
 {
   "id": "obs-2026-09-08-1",
+  "erratum": {
+    "corrected_by": "obs-2026-09-09-1",
+    "date": "2026-09-09",
+    "note": "This file's statement describes gdacs-fl-1103815 as \"a China flood (glide FL-2026-000148-CHN...)\". All 27 committed foreknown/snapshots/<date>/gdacs.json files and foreknown/registry.json agree it is an Afghanistan flood, glide FL-2026-000047-AFG; the glide code given here belongs to a different, unrelated record (gdacs-fl-1104081). The observation's core finding -- the 26-night echo then two-night freeze -- is unaffected. Title, statement, method, and figures below are left exactly as originally written; see obs-2026-09-09-1.json for the correction."
+  },
   "date": "2026-09-08",
   "kind": "difference_observation",
   "title": "One of the seventeen records obs-2026-08-19-1.json found echoing the notary's own fetch time has stopped: gdacs-fl-1103815's datemodified froze on 2026-09-03 and has stayed frozen across two more observed nights, ending a 26-night unbroken echo run right when the underlying source itself stopped touching the record",
