@@ -554,6 +554,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/gdacs.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-08T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-09T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/gdacs.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -596,7 +613,7 @@
       "where": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
       "window": {
         "from": "2025-12-21T00:00:00",
-        "to": "2026-09-08T00:00:00"
+        "to": "2026-09-09T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -1083,6 +1100,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/gdacs.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-08T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-09T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/gdacs.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -1098,7 +1132,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-09-08T00:00:00"
+        "to": "2026-09-09T00:00:00"
       }
     },
     "gdacs-dr-1027449": {
@@ -1457,6 +1491,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/gdacs.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-08T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-09T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/gdacs.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -1477,7 +1528,7 @@
       "where": "The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-09-08T00:00:00"
+        "to": "2026-09-09T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -6802,19 +6853,44 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nhc-current-storms.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "55",
+              "to": "45"
+            },
+            "what": {
+              "from": "Lowell (TS)",
+              "to": "Lowell (PTC)"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-10T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-11T03:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nhc-current-storms.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nhc-ep122026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "55",
+      "severity": "45",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
-      "what": "Lowell (TS)",
+      "what": "Lowell (PTC)",
       "where": "CP4",
       "window": {
-        "from": "2026-09-10T09:00:00.000Z",
+        "from": "2026-09-11T03:00:00.000Z",
         "to": null
       }
     },
@@ -6959,6 +7035,30 @@
         "to": null
       }
     },
+    "nhc-ep142026": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "tropical cyclone",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nhc-current-storms.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nhc-ep142026",
+      "iso3": [],
+      "kind": "FORECAST",
+      "severity": "50",
+      "source": "NHC",
+      "source_ref": "https://www.nhc.noaa.gov/",
+      "status": "OPEN",
+      "what": "Norbert (TS)",
+      "where": "EP4",
+      "window": {
+        "from": "2026-09-11T09:00:00.000Z",
+        "to": null
+      }
+    },
     "nws-kabr-faw-0022-26": {
       "announced_at": "2026-08-25T06:04:45+00:00",
       "hazard": "flood",
@@ -6987,6 +7087,32 @@
       "window": {
         "from": "2026-08-24T22:51:00-05:00",
         "to": "2026-08-25T01:45:00-05:00"
+      }
+    },
+    "nws-kabr-fww-0022-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-kabr-fww-0022-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31d0698786a0424ef384b1375f5f4d52421fa66f.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Jones; Lyman; Buffalo",
+      "window": {
+        "from": "2026-09-11T10:00:00-05:00",
+        "to": "2026-09-11T19:00:00-05:00"
       }
     },
     "nws-kakq-ffw-0083-26": {
@@ -7057,6 +7183,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kbis-fww-0018-26",
@@ -7067,7 +7197,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f1f998432f645d48a1fb348189dfb49b2bbd5990.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "McKenzie; Dunn; Mercer; Oliver; Golden Valley; Billings; Stark; Morton; Slope; Hettinger; Grant; Bowman; Adams; Sioux",
       "window": {
@@ -7263,6 +7393,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kbyz-fww-0012-26",
@@ -7273,7 +7407,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.38b96b8ac499b09bedccf72a822784ca4bdc641f.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Gallatin National Forest; Wheatland County/Sweet Grass County; Golden Valley County/Musselshell County",
       "window": {
@@ -7786,6 +7920,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kcys-fww-0041-26",
@@ -7796,12 +7934,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5326bf53d79a7e4ae77a431ae5fe139b1c0be3af.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "North Laramie Range and Adjacent High Plains; North Laramie Valley/Shirley Basin; Ferris/Seminoe/Shirley Mountains; Central and West Carbon; Upper North Platte River Basin; North Snowy Range Foothills",
       "window": {
         "from": "2026-09-10T00:18:00-06:00",
         "to": "2026-09-10T20:00:00-06:00"
+      }
+    },
+    "nws-kcys-fww-0042-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-kcys-fww-0042-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.871a0b8376a961dc0d8b59bd070c4f2f5ba928f0.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Southern Laramie Range; Laramie Foothills and High Plains; Laramie East High Plains; Bordeaux/Chugwater/Wheatland",
+      "window": {
+        "from": "2026-09-11T11:00:00-06:00",
+        "to": "2026-09-11T19:00:00-06:00"
       }
     },
     "nws-kdmx-ffw-0030-26": {
@@ -8286,6 +8450,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kggw-fww-0017-26",
@@ -8296,7 +8464,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f7ce37b04627ea3816841aa0329161fe14a41d10.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Dawson/McCone/Prairie/Richland/Wibaux Counties; Southern Petroleum and Southern Garfield Counties",
       "window": {
@@ -8796,6 +8964,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kiln-ffw-0084-26",
@@ -8806,7 +8978,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0a412663dc1c89c9bd2911270ba5b4ad04fd9944.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Adams, OH; Highland, OH; Pike, OH; Ross, OH",
       "window": {
@@ -8822,6 +8994,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kiln-ffw-0085-26",
@@ -8832,7 +9008,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.155414184bcd7f8b7121abcc3bec4b3e8fd6ce20.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Adams, OH; Pike, OH; Scioto, OH",
       "window": {
@@ -10179,6 +10355,32 @@
         "to": "2026-08-30T03:24:00-05:00"
       }
     },
+    "nws-klbf-fww-0043-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-klbf-fww-0043-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.288e061eb6ac4368a0f017fe989151649066eb19.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Eastern Panhandle/Crescent Lake NWR; Sandhills/Valentine NWR/Nebraska National Forest; Niobrara Valley/Fort Niobrara NWR/Samuel R McKelvie National Forest",
+      "window": {
+        "from": "2026-09-11T12:00:00-05:00",
+        "to": "2026-09-11T20:00:00-05:00"
+      }
+    },
     "nws-klch-faw-0012-26": {
       "announced_at": "2026-09-03T10:06:48+00:00",
       "hazard": "flood",
@@ -10503,6 +10705,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-klch-flw-0038-26",
@@ -10513,7 +10719,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fd2372f1ad6c2297067367b11628d0fc16914c0a.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Hardin, TX; Jefferson, TX",
       "window": {
@@ -10827,6 +11033,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-klox-xhw-0007-26",
@@ -10837,7 +11047,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.da14037dc337bb529017df499a9745b0cace3362.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Cuyama Valley; Santa Clarita Valley; San Luis Obispo County Beaches; San Luis Obispo County Inland Central Coast; Santa Lucia Mountains; Southern Salinas Valley; San Luis Obispo County Interior Valleys; San Luis Obispo County Mountains; Santa Barbara County Central Coast Beaches; Santa Barbara County Inland Central Coast; Santa Ynez Valley; Santa Barbara County Southwestern Coast; Santa Barbara County Southeastern Coast; Santa Ynez Mountains Western Range; Santa Ynez Mountains Eastern Range; Santa Barbara County Interior Mountains; Ventura County Beaches; Ventura County Inland Coast; Lake Casitas; Ojai Valley; Central Ventura County Valleys; Southeastern Ventura County Valleys; Santa Susana Mountains",
       "window": {
@@ -11145,6 +11355,32 @@
         "to": "2026-09-07T06:15:00-05:00"
       }
     },
+    "nws-kmob-maw-0198-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "special marine",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-kmob-maw-0198-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d6ba958650154733b75757ae0d548a4c2ff62187.002.1",
+      "status": "OPEN",
+      "what": "Special Marine Warning",
+      "where": "Western Choctawhatchee Bay; Coastal waters from Okaloosa-Walton County Line to Pensacola FL out 20 NM; Waters from Okaloosa-Walton County Line to Pensacola FL from 20 to 60 NM",
+      "window": {
+        "from": "2026-09-11T04:45:00-05:00",
+        "to": "2026-09-11T05:15:00-05:00"
+      }
+    },
     "nws-kmso-fww-0009-26": {
       "announced_at": "2026-08-23T06:00:16+00:00",
       "hazard": "red flag",
@@ -11303,6 +11539,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kmso-fww-0014-26",
@@ -11313,7 +11553,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3938bd446b526d34b8ae6e592861f184f94e6291.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Eastern Beaverhead National Forest",
       "window": {
@@ -11667,6 +11907,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kpbz-faw-0049-26",
@@ -11677,7 +11921,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d7fe8a6d9f0acfbf878c928f0bb0f6569ee1e78.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Monroe, OH; Noble, OH",
       "window": {
@@ -11967,6 +12211,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kpih-fww-0024-26",
@@ -11977,12 +12225,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31bf6403f118b280a1c259eb407ec1bc3f9e6cf2.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Upper Snake River Valley/Idaho Falls BLM",
       "window": {
         "from": "2026-09-10T12:00:00-06:00",
         "to": "2026-09-10T20:00:00-06:00"
+      }
+    },
+    "nws-kpih-fww-0025-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-kpih-fww-0025-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61c5edaad7ce3332c70b8f23da448e3ae31c8550.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Upper Snake River Valley/Idaho Falls BLM",
+      "window": {
+        "from": "2026-09-11T12:00:00-06:00",
+        "to": "2026-09-11T21:00:00-06:00"
       }
     },
     "nws-kpsr-xhw-0008-26": {
@@ -12162,6 +12436,27 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Northwest Valley; Buckeye/Avondale; Cave Creek/New River; Deer Valley; Central Phoenix; North Phoenix/Glendale; Scottsdale/Paradise Valley; East Valley; Fountain Hills/East Mesa; South Mountain/Ahwatukee; Southeast Valley/Queen Creek",
+              "to": "Parker Valley; Central La Paz; Palo Verde Valley; Chuckwalla Valley"
+            },
+            "window": {
+              "from": {
+                "from": "2026-09-10T01:12:00-07:00",
+                "to": "2026-09-10T20:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-09-11T00:02:00-07:00",
+                "to": "2026-09-11T20:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kpsr-xhw-0009-26",
@@ -12174,10 +12469,10 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ee31f48d7b85974bcfdf73be08db467b213d5bfb.005.1",
       "status": "OPEN",
       "what": "Extreme Heat Warning",
-      "where": "Northwest Valley; Buckeye/Avondale; Cave Creek/New River; Deer Valley; Central Phoenix; North Phoenix/Glendale; Scottsdale/Paradise Valley; East Valley; Fountain Hills/East Mesa; South Mountain/Ahwatukee; Southeast Valley/Queen Creek",
+      "where": "Parker Valley; Central La Paz; Palo Verde Valley; Chuckwalla Valley",
       "window": {
-        "from": "2026-09-10T01:12:00-07:00",
-        "to": "2026-09-10T20:00:00-07:00"
+        "from": "2026-09-11T00:02:00-07:00",
+        "to": "2026-09-11T20:00:00-07:00"
       }
     },
     "nws-kpub-svw-0281-26": {
@@ -12350,6 +12645,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kriw-fww-0027-26",
@@ -12360,7 +12659,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ead00ce8fe0edc5329ad967ea8902bf0062b5231.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Absaroka Mountains/North Shoshone NF; Owl Creek Mountains; East Wind River Mountains/South Shoshone NF",
       "window": {
@@ -12436,6 +12735,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-faw-0107-26",
@@ -12446,7 +12749,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cb76287ab2efc9b2edc0ce94da989c1af15eadbb.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Morgan, OH; Perry, OH",
       "window": {
@@ -12462,6 +12765,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-faw-0108-26",
@@ -12472,7 +12779,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.39e927488a06e315c767ebcab5adb61e89624a51.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Morgan, OH",
       "window": {
@@ -12488,6 +12795,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-faw-0109-26",
@@ -12498,7 +12809,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.37481c88911f1108e095c706d8967d1b73e9e937.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Washington, OH",
       "window": {
@@ -12514,6 +12825,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-faw-0110-26",
@@ -12524,12 +12839,64 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fbac46efa3008e0227f95917cda459c76328a671.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Washington, OH",
       "window": {
         "from": "2026-09-10T04:56:00-04:00",
         "to": "2026-09-10T08:00:00-04:00"
+      }
+    },
+    "nws-krlx-faw-0113-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-krlx-faw-0113-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.263a0e66528ba1a34cce8bfe1faa9d3aa0277104.002.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Jackson, OH",
+      "window": {
+        "from": "2026-09-11T05:02:00-04:00",
+        "to": "2026-09-11T08:30:00-04:00"
+      }
+    },
+    "nws-krlx-faw-0115-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-krlx-faw-0115-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bcd92fbdb277bec7bf0cfdce908bae9223bc2a06.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Calhoun, WV; Gilmer, WV; Ritchie, WV",
+      "window": {
+        "from": "2026-09-11T03:16:00-04:00",
+        "to": "2026-09-11T06:00:00-04:00"
       }
     },
     "nws-krlx-ffw-0194-26": {
@@ -12540,6 +12907,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-ffw-0194-26",
@@ -12550,7 +12921,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57afec377a495e762f83dfee2e01a3271a27582c.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Gallia, OH; Jackson, OH; Meigs, OH; Vinton, OH",
       "window": {
@@ -12566,6 +12937,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-ffw-0195-26",
@@ -12576,7 +12951,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a317dcc5c257c83aa428d992daf8e7f55e5e707.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Gallia, OH; Meigs, OH; Jackson, WV; Mason, WV",
       "window": {
@@ -12592,6 +12967,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-krlx-ffw-0196-26",
@@ -12602,7 +12981,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d8d7e588a7c8cbab1093ca30c683f3e240ab96e7.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Gallia, OH; Jackson, OH; Lawrence, OH",
       "window": {
@@ -12864,6 +13243,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-09T19:44:00-07:00",
+                "to": "2026-09-11T20:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-09-11T02:30:00-07:00",
+                "to": "2026-09-11T20:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-ksgx-xhw-0009-26",
@@ -12878,7 +13274,7 @@
       "what": "Extreme Heat Warning",
       "where": "Coachella Valley; San Diego County Deserts; San Gorgonio Pass Near Banning",
       "window": {
-        "from": "2026-09-09T19:44:00-07:00",
+        "from": "2026-09-11T02:30:00-07:00",
         "to": "2026-09-11T20:00:00-07:00"
       }
     },
@@ -13130,6 +13526,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-ktbw-flw-0001-26",
@@ -13140,7 +13540,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.75cca58a9917fcfed96b458f538d59470b94fc78.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Manatee, FL",
       "window": {
@@ -13156,6 +13556,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-11T12:00:00-04:00",
+                "to": "2026-09-10T11:15:00-04:00"
+              },
+              "to": {
+                "from": "2026-09-13T08:00:00-04:00",
+                "to": "2026-09-11T12:00:00-04:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-ktbw-flw-0002-26",
@@ -13170,8 +13587,8 @@
       "what": "Flood Warning",
       "where": "DeSoto, FL",
       "window": {
-        "from": "2026-09-11T12:00:00-04:00",
-        "to": "2026-09-10T11:15:00-04:00"
+        "from": "2026-09-13T08:00:00-04:00",
+        "to": "2026-09-11T12:00:00-04:00"
       }
     },
     "nws-ktbw-flw-0003-26": {
@@ -13182,6 +13599,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-ktbw-flw-0003-26",
@@ -13192,7 +13613,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.75cca58a9917fcfed96b458f538d59470b94fc78.003.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Hillsborough, FL",
       "window": {
@@ -13208,6 +13629,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-ktbw-flw-0004-26",
@@ -13218,7 +13643,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.75cca58a9917fcfed96b458f538d59470b94fc78.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Hillsborough, FL",
       "window": {
@@ -13670,6 +14095,32 @@
         "to": "2026-09-07T19:00:00-06:00"
       }
     },
+    "nws-kunr-fww-0038-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-kunr-fww-0038-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2c43a7f8451c13c768de5adcb3e861c823d2841.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Southern Black Hills; Fall River County Area; Custer County Plains; Pine Ridge Area; Badlands Area; Bennett County Area; Weston County Plains",
+      "window": {
+        "from": "2026-09-11T11:00:00-06:00",
+        "to": "2026-09-11T19:00:00-06:00"
+      }
+    },
     "nws-kvef-xhw-0004-26": {
       "announced_at": "2026-08-23T06:00:16+00:00",
       "hazard": "extreme heat",
@@ -13772,6 +14223,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-08/nws-alerts-active.json",
           "ts": "2026-09-08T10:04:31+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-kvef-xhw-0006-26",
@@ -13782,7 +14237,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b99f604fb70a3df99504477f1c506bd9e8b33cb.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Lake Havasu and Fort Mohave; Lake Mead - AZ side; Lake Mohave - AZ side; Northwest Deserts; Death Valley National Park; Cadiz Basin; San Bernardino County-Upper Colorado River Valley; Northeast Clark County; Western Clark and Southern Nye County; Las Vegas Valley; Lake Mead - NV side; Lake Mohave - NV side",
       "window": {
@@ -13828,6 +14283,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-09/nws-alerts-active.json",
           "ts": "2026-09-09T10:08:36+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-10T04:00:00-08:00",
+                "to": "2026-09-11T16:00:00-08:00"
+              },
+              "to": {
+                "from": "2026-09-10T15:10:00-08:00",
+                "to": "2026-09-11T16:00:00-08:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-pafg-hww-0011-26",
@@ -13842,7 +14314,7 @@
       "what": "High Wind Warning",
       "where": "Western Arctic Coast",
       "window": {
-        "from": "2026-09-10T04:00:00-08:00",
+        "from": "2026-09-10T15:10:00-08:00",
         "to": "2026-09-11T16:00:00-08:00"
       }
     },
@@ -13871,6 +14343,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
           "ts": "2026-09-10T10:02:14+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-10T01:54:00-08:00",
+                "to": "2026-09-11T16:00:00-08:00"
+              },
+              "to": {
+                "from": "2026-09-10T15:10:00-08:00",
+                "to": "2026-09-11T16:00:00-08:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
         }
       ],
       "id": "nws-pafg-hww-0012-26",
@@ -13885,7 +14374,7 @@
       "what": "High Wind Warning",
       "where": "Shishmaref; Bering Strait Coast; St Lawrence Island",
       "window": {
-        "from": "2026-09-10T01:54:00-08:00",
+        "from": "2026-09-10T15:10:00-08:00",
         "to": "2026-09-11T16:00:00-08:00"
       }
     },
@@ -14208,6 +14697,32 @@
       "window": {
         "from": "2026-09-07T10:00:00-04:00",
         "to": "2026-09-07T17:00:00-04:00"
+      }
+    },
+    "nws-tjsj-xhw-0008-26": {
+      "announced_at": "2026-09-11T09:59:34+00:00",
+      "hazard": "extreme heat",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
+          "ts": "2026-09-11T09:59:34+00:00"
+        }
+      ],
+      "id": "nws-tjsj-xhw-0008-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f2fa78dbc91a633874f5e3dd161e8e04f41f43e5.001.1",
+      "status": "OPEN",
+      "what": "Extreme Heat Warning",
+      "where": "San Juan and Vicinity; Northeast; Southeast; Eastern Interior; North Central; Central Interior; Ponce and Vicinity; Northwest; Western Interior; Mayaguez and Vicinity; Southwest",
+      "window": {
+        "from": "2026-09-11T10:00:00-04:00",
+        "to": "2026-09-11T17:00:00-04:00"
       }
     }
   }
