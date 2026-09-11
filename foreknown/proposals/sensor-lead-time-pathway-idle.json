@@ -11,5 +11,31 @@
     "foreknown/registry.json",
     "practice/src/practice/foreknown/resolve.py"
   ],
-  "status": "PROPOSED"
+  "status": "PROMOTED",
+  "promotion": {
+    "date": "2026-09-11",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the test_rule's own firing condition -- N=10 total FORECAST-kind resolutions accumulated with the MATERIALIZED_AS_ALERT count still zero -- is now met against the committed record, not merely anticipated.",
+    "case": "foreknown/resolutions/ holds exactly ten nhc-*.json files as of tonight (al032026, al042026, al052026, cp012026, cp022026, ep082026, ep092026, ep102026, ep112026, ep132026), every one verdict NO_ALERT_MATCH, resolved_at spanning 2026-08-14T06:58:12 (al032026) through 2026-09-09T10:08:36 (ep132026). Zero carry MATERIALIZED_AS_ALERT; zero carry a lead_time_hours value. The two futures the proposal's own falsification clause named as still-OPEN when it was written (nhc-cp012026, nhc-ep082026) both resolved NO_ALERT_MATCH (2026-08-28T17:41:45 and 2026-08-16T05:58:54 respectively) well before tonight -- but the N=10 threshold was reached by the fuller season's arrivals (al042026, al052026, ep092026, ep102026, ep112026, ep132026), not by those two alone, so the falsification clause's worry about a threshold set from a too-small three-miss sample does not apply: ten independently-named storms across two ocean basins and four weeks, not two.",
+    "test_rule_held": "read directly with foreknown/resolutions/ as it stands committed tonight: forecast_resolutions_total=10, materialized_as_alert_total=0 -- the exact condition the test_rule names. The falsification clause's own undoing (any MATERIALIZED_AS_ALERT with a lead_time_hours value) has not happened once across all ten.",
+    "implemented_in": [
+      "practice/src/practice/foreknown/resolve.py, function lead_time_pathway_idle and the FORECAST_VERDICTS/LEAD_TIME_PATHWAY_IDLE_N constants",
+      "practice/src/practice/foreknown/run.py, the lead_time_pathway field build_reading now writes into every night's run.json",
+      "practice/tests/test_resolve.py, test_lead_time_pathway_idle_is_false_with_no_resolutions_at_all, test_lead_time_pathway_idle_counts_only_forecast_verdicts, test_lead_time_pathway_idle_fires_at_n_forecast_resolutions_with_zero_matches, test_lead_time_pathway_idle_does_not_fire_once_the_pathway_has_matched"
+    ],
+    "kept_unchanged": "definition, test_rule and falsification are the machine's text as written; N=10 is unchanged, and the implementation counts a resolution's own verdict (MATERIALIZED_AS_ALERT or NO_ALERT_MATCH) rather than re-deriving future kind from the registry, since resolve_future (resolve.py) never writes either verdict for an ALERT_EPISODE future -- a mechanical fact about the code, not a new judgement.",
+    "evidence": [
+      "foreknown/resolutions/nhc-al032026.json",
+      "foreknown/resolutions/nhc-al042026.json",
+      "foreknown/resolutions/nhc-al052026.json",
+      "foreknown/resolutions/nhc-cp012026.json",
+      "foreknown/resolutions/nhc-cp022026.json",
+      "foreknown/resolutions/nhc-ep082026.json",
+      "foreknown/resolutions/nhc-ep092026.json",
+      "foreknown/resolutions/nhc-ep102026.json",
+      "foreknown/resolutions/nhc-ep112026.json",
+      "foreknown/resolutions/nhc-ep132026.json",
+      "practice/src/practice/foreknown/resolve.py"
+    ]
+  }
 }
