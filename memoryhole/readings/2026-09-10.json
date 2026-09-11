@@ -1,0 +1,838 @@
+{
+  "date": "2026-09-10",
+  "entries": [
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-09-10/history-62ad9f99140d9e58.json",
+      "id": "62ad9f99140d9e58",
+      "institution": "bmuv",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://www.bmuv.de/themen/naturschutz/biologische-vielfalt-international/unesco-welterbeuebereinkommen/weltnaturerbe-wattenmeer"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "FIGBWEQXGUQL3BZFRXM3V7UK4H3DV6XP",
+          "file": "memoryhole/snapshots/2026-09-10/after-bde4020bdeda91b3.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910132238/https://insights.sustainability.google/labs/airquality?hl=en-US",
+          "timestamp": "20260910132238"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "WI5ZENAZI2OJ4H7AH2ZMADUJI54TO5JN",
+          "file": "memoryhole/snapshots/2026-09-10/before-bde4020bdeda91b3.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260306062227/https://insights.sustainability.google/labs/airquality?hl=en-US",
+          "timestamp": "20260306062227"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 113,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "too_short",
+          "tokens": 0,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-09-10/history-bde4020bdeda91b3.json",
+      "id": "bde4020bdeda91b3",
+      "institution": "google-sustainability",
+      "kind": "sampled",
+      "reason": "gate_before_too_short",
+      "url": "https://insights.sustainability.google/labs/airquality?hl=en-US"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "32BCTCZ6MRWBXL4PDQFKCOLH7QICCSA6",
+          "file": "memoryhole/snapshots/2026-09-10/after-b15ef4ac9e8fda70.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910132059/https://sustainability.google/intl/el/newsletter/",
+          "timestamp": "20260910132059"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "SOXVE3EGVTTYS6QBLEARUCPE5ZTNWPZF",
+          "file": "memoryhole/snapshots/2026-09-10/before-b15ef4ac9e8fda70.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910132055/https://sustainability.google/intl/el/newsletter/",
+          "timestamp": "20260910132055"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 495,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 464,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-09-10/history-b15ef4ac9e8fda70.json",
+      "id": "b15ef4ac9e8fda70",
+      "institution": "google-sustainability",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://sustainability.google/intl/el/newsletter/"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-09-10/history-fb1b85438752f966.json",
+      "id": "fb1b85438752f966",
+      "institution": "google-sustainability",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260910132043/https://sustainability.google/intl/el/stories/device-circularity/",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://sustainability.google/intl/el/stories/device-circularity/"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "TIQ2YYYPO6HPNL44WEX274WERZFTDZKG",
+          "file": "memoryhole/snapshots/2026-09-10/after-5b394efe9686642d.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910135324/https://sustainability.google/progress/supplier-responsibility/",
+          "timestamp": "20260910135324"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "HANEJWC42EYPCRKT5ZCYWT3RUMZZ4BPD",
+          "file": "memoryhole/snapshots/2026-09-10/before-5b394efe9686642d.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260901114522/https://sustainability.google/progress/supplier-responsibility/",
+          "timestamp": "20260901114522"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 420,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 334,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-09-10/history-5b394efe9686642d.json",
+      "id": "5b394efe9686642d",
+      "institution": "google-sustainability",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://sustainability.google/progress/supplier-responsibility/"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "JRATL2PLTYTMHUUWPAYXMZ7PQ7YSQ7O4",
+          "file": "memoryhole/snapshots/2026-09-10/after-a89dbe209328026c.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910132100/https://sustainability.google/reports/alphabet-2025-cdp-response/",
+          "timestamp": "20260910132100"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "NNEAXJ54AIJ2E7VZGA6XXAET2ITL5FRH",
+          "file": "memoryhole/snapshots/2026-09-10/before-a89dbe209328026c.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910132055/https://sustainability.google/reports/alphabet-2025-cdp-response/",
+          "timestamp": "20260910132055"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 257,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "not_prose",
+          "tokens": 201,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-09-10/history-a89dbe209328026c.json",
+      "id": "a89dbe209328026c",
+      "institution": "google-sustainability",
+      "kind": "sampled",
+      "reason": "gate_before_not_prose",
+      "url": "https://sustainability.google/reports/alphabet-2025-cdp-response/"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-09-10/history-5e15ec0af88ec7d6.json",
+      "id": "5e15ec0af88ec7d6",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://annualreport2025.volkswagen-group.com/group-management-report/results-of-operations-financial-position-and-net-assets"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-09-10/history-49e6132c631b828f.json",
+      "id": "49e6132c631b828f",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "no_earlier_capture",
+      "url": "https://annualreport2025.volkswagen-group.com/group-management-report/results-of-operations-financial-position-and-net-assets.html?utm_source=chatgpt.com"
+    },
+    {
+      "abstentions": [],
+      "added_sentences": 0,
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "TZZLM6VZIDBHZISX4XKT7XKFESMVKGZG",
+          "file": "memoryhole/snapshots/2026-09-10/after-907b7b44af3ba9c8.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20260910141536/https://geschaeftsbericht2023.volkswagen-group.com/konzernlagebericht/prognosebericht/nutzfahrzeuge.html",
+          "timestamp": "20260910141536"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "AKJ5KJEQRZKFPU7JY6BYMO2SLJKKR3HV",
+          "file": "memoryhole/snapshots/2026-09-10/before-907b7b44af3ba9c8.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20240313172245/https://geschaeftsbericht2023.volkswagen-group.com/konzernlagebericht/prognosebericht/nutzfahrzeuge.html",
+          "timestamp": "20240313172245"
+        }
+      },
+      "category": "D",
+      "class": "changed",
+      "events": [],
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 15,
+          "reason": "ok",
+          "tokens": 315,
+          "valid": true
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 15,
+          "reason": "ok",
+          "tokens": 315,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-09-10/history-907b7b44af3ba9c8.json",
+      "id": "907b7b44af3ba9c8",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "new digest, both captures passed the gate",
+      "removed_tokens": 0,
+      "rewritten_pairs": 0,
+      "url": "https://geschaeftsbericht2023.volkswagen-group.com/konzernlagebericht/prognosebericht/nutzfahrzeuge.html"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-09-10/history-8d6c9e819ccd7910.json",
+      "id": "8d6c9e819ccd7910",
+      "institution": "vw",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20260910132411/https://www.volkswagen-group.com/en/media-contacts?show=fabian-lebersorger",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.volkswagen-group.com/en/media-contacts?show=fabian-lebersorger"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-09-10/history-eeed90bfb1ec8da4.json",
+      "id": "eeed90bfb1ec8da4",
+      "institution": "vw",
+      "kind": "sampled",
+      "reason": "archive_status_-",
+      "url": "https://www.volkswagen-group.com/en/press-releases/volkswagen-to-strengthen-regional-development-competence-for-autonomous-driving-in-china-through-joint-venture-between-cariad-and-horizon-robotics-16562"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-dbe0f096619f5e8e.json",
+      "id": "dbe0f096619f5e8e",
+      "institution": "bmg",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt"
+    },
+    {
+      "archive_status": "403",
+      "category": "E",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-09-10/history-e130846662a12f87.json",
+      "id": "e130846662a12f87",
+      "institution": "rki",
+      "kind": "control",
+      "permalink": "https://web.archive.org/web/20260910053947/https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html",
+      "reason": "deletion_candidate_survived_recheck_ok",
+      "recheck": {
+        "class": "ok",
+        "http_code": 200
+      },
+      "url": "https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-c8622e70da28decb.json",
+      "id": "c8622e70da28decb",
+      "institution": "uba",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.umweltbundesamt.de/barrierefreiheit"
+    },
+    {
+      "category": "E",
+      "class": "unverifiable",
+      "id": "9c16981977ddf4b2",
+      "institution": "destatis",
+      "kind": "control",
+      "reason": "history_unavailable",
+      "url": "https://www.destatis.de/DE/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-9d50b4ba45fa1a1b.json",
+      "id": "9d50b4ba45fa1a1b",
+      "institution": "ec-climate",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://climate.ec.europa.eu/accessibility-statement_en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-49f1ccae7b87cdc8.json",
+      "id": "49f1ccae7b87cdc8",
+      "institution": "bnetza",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesnetzagentur.de/DE/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-7b813ae60a9465ad.json",
+      "id": "7b813ae60a9465ad",
+      "institution": "bundesbank",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesbank.de/de/bundesbank/forschung/studie-zur-wirtschaftlichen-lage-privater-haushalte-phf/datenschutz-604914"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-83ae0473fbac2146.json",
+      "id": "83ae0473fbac2146",
+      "institution": "shell",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.shell.com/about-us/contact-us/contact-ecuador.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-2ee1d7cf60f4f1ed.json",
+      "id": "2ee1d7cf60f4f1ed",
+      "institution": "vw",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.volkswagen-group.com/de/datenschutzerklaerung-15677"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-2f0dd7d6a087b05d.json",
+      "id": "2f0dd7d6a087b05d",
+      "institution": "basf",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://products.basf.com/global/en/TermsConditionsofSales"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-c6b487f2b088586d.json",
+      "id": "c6b487f2b088586d",
+      "institution": "bp",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bp.com/en/global/corporate/contact-us.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-8593dfddae266d9a.json",
+      "id": "8593dfddae266d9a",
+      "institution": "bmwe",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Datenschutzerklaerung/datenschutzerklaerung.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-a311042b780d7e38.json",
+      "id": "a311042b780d7e38",
+      "institution": "bmg",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt-1"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-22cab31b7d00bcd6.json",
+      "id": "22cab31b7d00bcd6",
+      "institution": "destatis",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.destatis.de/EN/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-68f584e6350b91d4.json",
+      "id": "68f584e6350b91d4",
+      "institution": "ec-climate",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://climate.ec.europa.eu/citizens-stakeholders/contact-us_en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-9505ba4febeea90d.json",
+      "id": "9505ba4febeea90d",
+      "institution": "shell",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.shell.com/about-us/contact-us/contact-honduras.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-822331e0a30a63eb.json",
+      "id": "822331e0a30a63eb",
+      "institution": "vw",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.volkswagen-group.com/de/goto/terms-of-service"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-35a9d704a7102374.json",
+      "id": "35a9d704a7102374",
+      "institution": "basf",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.basf.com/global/en/legal/contact"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-e1744886dfe68a8a.json",
+      "id": "e1744886dfe68a8a",
+      "institution": "bp",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bp.com/en/global/corporate/disclaimer.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-09-10/history-7760a5da50e6c440.json",
+      "id": "7760a5da50e6c440",
+      "institution": "bnetza",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesnetzagentur.de/datenschutz"
+    }
+  ],
+  "failures": [
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:uba"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:destatis"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 503 after 4 attempts",
+      "scope": "memoryhole:discovery:eiopa"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:ema"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:bnetza"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:bundesbank"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:shell"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:history:9c16981977ddf4b2"
+    }
+  ],
+  "generated_at": "2026-09-11T09:36:33+00:00",
+  "institutions": [
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bmwe",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-bmwe.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bmg",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-bmg.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "bmuv",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-bmuv.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "rki",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-rki.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "uba",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "destatis",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "ec-climate",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-ec-climate.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "esma",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-esma.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "eba",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-eba.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 503 after 4 attempts",
+      "sampled": 0,
+      "slug": "eiopa",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "ema",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "acer",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-acer.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "bnetza",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bafin",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-bafin.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "bundesbank",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "google-sustainability",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-google-sustainability.json",
+      "strategy": "domain",
+      "urls_seen": 17
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "exxonmobil",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-exxonmobil.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "shell",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "vw",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-vw.json",
+      "strategy": "domain",
+      "urls_seen": 16
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "basf",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-basf.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bayer",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-bayer.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "bp",
+      "source": "memoryhole/snapshots/2026-09-10/discovery-bp.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    }
+  ],
+  "method_versions": {
+    "cdx": "cdx-v1",
+    "events": "events-v1",
+    "extract": "extract-v1",
+    "gate": "gate-v1",
+    "model_layer": "model-v1",
+    "prose": "prose-v1",
+    "recheck": "recheck-v1",
+    "salience": "salience-v1",
+    "textdiff": "textdiff-v1"
+  },
+  "model": {
+    "available": false,
+    "cap": 40,
+    "considered": 0,
+    "cost_usd": 0.0,
+    "currency": "USD",
+    "model": "claude-haiku-4-5",
+    "prompt_version": "memoryhole-classify-v1",
+    "state": "off: no key configured",
+    "submitted": 0,
+    "unclassified_at_cap": 0,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "verdicts": []
+  },
+  "notes": [
+    "domain scope: many pages of few institutions, the architecture the audit made condition 1 — a longer curated list would be the origin with more rows and belongs in the origin",
+    "the archive's cadence is the resolution: institutional pages are crawled weekly to never, so 'nightly' is the protocol frequency, not the observation frequency; a night without a finding is a measurement and is written",
+    "a capture counts as a page only after the validity gate; challenge, consent and bot-wall pages are counted as unverifiable and never diffed",
+    "'gone' is a live-rechecked assertion, never a CDX row; bot-walls, server errors and 451 stay out of the gone-rate denominator and are disclosed as counts",
+    "event types name operations on text, never intent — 'commitment_removed' says a commitment verb left a sentence, nothing about why",
+    "passages carrying an ascription to a person are recorded as digests, not as text: the name stays in the preserved bytes as evidence and never becomes the subject of the record",
+    "model verdicts, when the layer runs, are estimates recorded beside the deterministic record and never inside it",
+    "control pages (category E) carry no commitments; every event on one is a fault of the instrument by construction"
+  ],
+  "rates": {
+    "changed_ci95": [
+      0.0094,
+      0.2464
+    ],
+    "changed_rate": 0.0526,
+    "counts": {
+      "changed": 1,
+      "gone": 2,
+      "unchanged": 18,
+      "unverifiable": 10
+    },
+    "decided": 19,
+    "deletion": {
+      "candidates": 3,
+      "counts": {
+        "botwall": 0,
+        "gone_404": 2,
+        "gone_410": 0,
+        "legal_451": 0,
+        "ok": 1,
+        "other": 0,
+        "server_error": 0,
+        "unreachable": 0
+      },
+      "decided": 3,
+      "excluded_unverifiable": 0,
+      "gone": 2,
+      "gone_ci95": [
+        0.2077,
+        0.9385
+      ],
+      "gone_rate": 0.6667
+    },
+    "examined": 31,
+    "unverifiable_ci95": [
+      0.1857,
+      0.4986
+    ],
+    "unverifiable_rate": 0.3226,
+    "unverifiable_reasons": {
+      "archive_status_-": 1,
+      "archive_status_301": 2,
+      "deletion_candidate_survived_recheck_ok": 1,
+      "gate_before_not_prose": 3,
+      "gate_before_too_short": 1,
+      "history_unavailable": 1,
+      "no_earlier_capture": 1
+    }
+  },
+  "sampling": {
+    "fetch_cap": 40,
+    "over_fetch_cap": 0,
+    "pairs_fetched": 5,
+    "per_institution": 5,
+    "rank": "sha256(day|url), ascending"
+  },
+  "watchlist_version": "2026-08-14"
+}
