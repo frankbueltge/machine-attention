@@ -17,14 +17,24 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from ..preserve import utc_now, write_json
+from ..preserve import read_json, utc_now, write_json
 from .series import reaction_series  # noqa: F401  (re-exported: the join is read through the resolver)
 
 EPISODE_ENDED = "EPISODE_ENDED"
 MATERIALIZED_AS_ALERT = "MATERIALIZED_AS_ALERT"
 NO_ALERT_MATCH = "NO_ALERT_MATCH"
 VERDICTS = (EPISODE_ENDED, MATERIALIZED_AS_ALERT, NO_ALERT_MATCH)
+# The two verdicts resolve_future ever writes for a FORECAST-kind future
+# (EPISODE_ENDED is ALERT_EPISODE-only, see resolve_future below) — a
+# resolution file's own verdict is enough to tell the two kinds apart
+# without re-reading the registry.
+FORECAST_VERDICTS = (MATERIALIZED_AS_ALERT, NO_ALERT_MATCH)
 TOP_OF_LADDER = frozenset({"Red", "Extreme"})
+
+# foreknown/proposals/sensor-lead-time-pathway-idle.json, promoted
+# 2026-09-11: N=10 total FORECAST-kind resolutions accumulated (NO_ALERT_MATCH
+# or MATERIALIZED_AS_ALERT combined) with the materialized count still zero.
+LEAD_TIME_PATHWAY_IDLE_N = 10
 
 _STORM_STOPWORDS = {"TROPICAL", "CYCLONE", "HURRICANE", "STORM", "TYPHOON",
                     "DEPRESSION", "POTENTIAL", "SUBTROPICAL", "SUPER"}
@@ -127,6 +137,30 @@ def resolve_future(future: dict, registry_futures: dict,
                         "observatory's registry — a statement about the "
                         "record, not about the world")
     return base
+
+
+def lead_time_pathway_idle(repo_root: Path) -> dict:
+    """Whether the MATERIALIZED_AS_ALERT / lead_time_hours pathway
+    (resolve_future above) has ever actually fired, across every resolution
+    this observatory has ever written. Reads foreknown/resolutions/ directly
+    — append-only, so the count only grows — rather than the registry, since
+    a resolution's own verdict already says which kind of future it came
+    from (FORECAST_VERDICTS above)."""
+    res_dir = repo_root / "foreknown" / "resolutions"
+    total = materialized = 0
+    if res_dir.is_dir():
+        for path in sorted(res_dir.glob("*.json")):
+            verdict = (read_json(path) or {}).get("verdict")
+            if verdict not in FORECAST_VERDICTS:
+                continue
+            total += 1
+            if verdict == MATERIALIZED_AS_ALERT:
+                materialized += 1
+    return {
+        "forecast_resolutions_total": total,
+        "materialized_as_alert_total": materialized,
+        "idle": total >= LEAD_TIME_PATHWAY_IDLE_N and materialized == 0,
+    }
 
 
 def resolve_pending(repo_root: Path, registry: dict) -> list[dict]:

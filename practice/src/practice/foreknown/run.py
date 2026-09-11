@@ -21,7 +21,7 @@ from . import reaction, sources
 from .futures import (COLD_START_OVERDUE, DRIFT_OVERDUE, drought_window_class,
                       drought_window_crossings, is_overdue, overdue_kind,
                       update_registry)
-from .resolve import resolve_pending
+from .resolve import lead_time_pathway_idle, resolve_pending
 
 # How many past UTC days of the attention series a nightly run completes.
 # GDELT publishes a day's file the morning after, so the newest day is
@@ -124,6 +124,13 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
                        for f in open_futures if f.get("hazard") == "drought"}
     drought_crossings = drought_window_crossings(registry, day)
 
+    # The machine's proposal sensor-lead-time-pathway-idle: has the
+    # MATERIALIZED_AS_ALERT / lead_time_hours pathway (resolve.py) ever
+    # actually fired, across every resolution this observatory has ever
+    # written. A whole-history read, not a per-night computation — it only
+    # ever grows more certain, never resets.
+    lead_time_pathway = lead_time_pathway_idle(repo_root)
+
     # The reaction axis: what moved while the warning was already running.
     # Its outages are recorded in its own block — a quiet GDELT day is not a
     # failure of the notary, and the two must stay legible apart.
@@ -154,6 +161,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "drought_window_class": {fid: state for fid, state in
                                  sorted(drought_classes.items()) if state},
         "drought_window_crossings": drought_crossings,
+        "lead_time_pathway": lead_time_pathway,
         "reaction": reaction_summary,
     })
     autonomy.append(repo_root, "foreknown-notary-run", "machine", detail={

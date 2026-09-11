@@ -124,6 +124,46 @@ def test_nightly_run_resolves_a_dissipated_forecast(tmp_path: Path):
     assert run_record["resolved"] == ["nhc-al052026"]
 
 
+def _write_resolution(root: Path, fid: str, verdict: str) -> None:
+    directory = root / "foreknown" / "resolutions"
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / f"{fid}.json").write_text(
+        json.dumps({"future": fid, "verdict": verdict}), encoding="utf-8")
+
+
+def test_lead_time_pathway_idle_is_false_with_no_resolutions_at_all(tmp_path: Path):
+    state = resolve.lead_time_pathway_idle(tmp_path)
+    assert state == {"forecast_resolutions_total": 0,
+                     "materialized_as_alert_total": 0, "idle": False}
+
+
+def test_lead_time_pathway_idle_counts_only_forecast_verdicts(tmp_path: Path):
+    _write_resolution(tmp_path, "nhc-al012026", "NO_ALERT_MATCH")
+    _write_resolution(tmp_path, "gdacs-tc-1001297", "EPISODE_ENDED")
+    state = resolve.lead_time_pathway_idle(tmp_path)
+    assert state["forecast_resolutions_total"] == 1
+
+
+def test_lead_time_pathway_idle_fires_at_n_forecast_resolutions_with_zero_matches(
+        tmp_path: Path):
+    for n in range(resolve.LEAD_TIME_PATHWAY_IDLE_N):
+        _write_resolution(tmp_path, f"nhc-al0{n}2026", "NO_ALERT_MATCH")
+    state = resolve.lead_time_pathway_idle(tmp_path)
+    assert state["forecast_resolutions_total"] == resolve.LEAD_TIME_PATHWAY_IDLE_N
+    assert state["materialized_as_alert_total"] == 0
+    assert state["idle"] is True
+
+
+def test_lead_time_pathway_idle_does_not_fire_once_the_pathway_has_matched(
+        tmp_path: Path):
+    for n in range(resolve.LEAD_TIME_PATHWAY_IDLE_N - 1):
+        _write_resolution(tmp_path, f"nhc-al0{n}2026", "NO_ALERT_MATCH")
+    _write_resolution(tmp_path, "nhc-al992026", "MATERIALIZED_AS_ALERT")
+    state = resolve.lead_time_pathway_idle(tmp_path)
+    assert state["materialized_as_alert_total"] == 1
+    assert state["idle"] is False
+
+
 def _reaction_reading(day: str, futures: dict, attention_day: str) -> dict:
     return {"date": day, "attention_day": attention_day, "futures": futures}
 
