@@ -1,0 +1,1028 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.001.1",
+                "areaDesc": "Southern Mono County; West Humboldt Basin - Pershing County; Lahontan Basin - Churchill and Eastern Mineral Counties",
+                "geocode": {
+                    "SAME": [
+                        "006019",
+                        "006039",
+                        "006051",
+                        "032001",
+                        "032027",
+                        "032015",
+                        "032019",
+                        "032021",
+                        "032031"
+                    ],
+                    "UGC": [
+                        "CAZ274",
+                        "NVZ423",
+                        "NVZ429"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ274",
+                    "https://api.weather.gov/zones/fire/NVZ423",
+                    "https://api.weather.gov/zones/fire/NVZ429"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f31e8ba66992dc7a26984db504c31cad6a6d00.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.85f31e8ba66992dc7a26984db504c31cad6a6d00.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-11T10:18:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-12T02:08:00-07:00",
+                "effective": "2026-09-12T02:08:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-13T02:00:00-07:00",
+                "ends": "2026-09-13T02:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Reno NV",
+                "headline": "Red Flag Warning issued September 12 at 2:08AM PDT until September 13 at 2:00AM PDT by NWS Reno NV",
+                "description": "* CHANGES...None.\n\n* Affected Area...Fire Weather Zone 274 Southern Mono County,\nFire Weather Zone 423 West Humboldt Basin in Pershing County,\nFire Weather Zone 429 Lahontan Basin including Churchill and\nEastern Mineral Counties.\n\n* Winds...Southwest 15 to 25 mph with gusts of 40 to 50 mph.\n\n* Humidity...RH reductions to 10 to 15 percent in the afternoon.\nNighttime recoveries of 40 to 60 percent Sunday morning, except\n30 to 40 percent in southern Mono and Mineral counties.\n\n* Duration...3 to 6 hours.\n\n* Impacts...The combination of strong winds and low humidity can\ncause fire to rapidly grow in size and intensity before first\nresponders can contain them.",
+                "instruction": "Avoid outdoor activities that can cause a spark near dry\nvegetation, such as yard work, target shooting, or campfires.\nFollow local fire restrictions. Check weather.gov/reno for\nupdates and livingwithfire.info for preparedness tips.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWREV"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KREV 120908"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM THIS MORNING TO 2 AM PDT SUNDAY FOR STRONG WINDS AND LOW HUMIDITY FOR THE WEST HUMBOLDT BASIN, LAHONTAN BASIN, AND SOUTHERN MONO COUNTY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KREV.FW.W.0012.260912T1800Z-260913T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-13T02:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.002.1",
+                "areaDesc": "Northern Sierra Front - Carson City/Douglas/Storey/Southern Washoe/Eastern Lyon/Far Southern Lassen Counties; Southern Sierra Front - Alpine/Northern Mono/Southern Lyon/Western Mineral Counties",
+                "geocode": {
+                    "SAME": [
+                        "006035",
+                        "006091",
+                        "032005",
+                        "032019",
+                        "032029",
+                        "032031",
+                        "032510",
+                        "006003",
+                        "006017",
+                        "006051",
+                        "032021"
+                    ],
+                    "UGC": [
+                        "NVZ420",
+                        "NVZ421"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/NVZ420",
+                    "https://api.weather.gov/zones/fire/NVZ421"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f31e8ba66992dc7a26984db504c31cad6a6d00.002.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.85f31e8ba66992dc7a26984db504c31cad6a6d00.002.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-11T10:18:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-12T02:08:00-07:00",
+                "effective": "2026-09-12T02:08:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-13T02:00:00-07:00",
+                "ends": "2026-09-13T02:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Reno NV",
+                "headline": "Red Flag Warning issued September 12 at 2:08AM PDT until September 13 at 2:00AM PDT by NWS Reno NV",
+                "description": "* CHANGES...None.\n\n* Affected Area...Fire Weather Zone 420 Northern Sierra Front\nincluding Carson City, Douglas, Storey, Southern Washoe,\nWestern Lyon, and Far Southern Lassen Counties, Fire Weather\nZone 421 Southern Sierra Front including Alpine, Northern\nMono, Southern Lyon, and Western Mineral Counties.\n\n* Winds...Southwest 20 to 30 mph with gusts of 45 to 55 mph.\n\n* Humidity...RH reductions to 12 to 17 percent in the afternoon.\nNighttime recoveries of 40 to 60 percent Sunday morning.\n\n* Duration...4 to 8 hours.\n\n* Impacts...The combination of strong winds and low humidity can\ncause fire to rapidly grow in size and intensity before first\nresponders can contain them.",
+                "instruction": "Avoid outdoor activities that can cause a spark near dry\nvegetation, such as yard work, target shooting, or campfires.\nFollow local fire restrictions. Check weather.gov/reno for\nupdates and livingwithfire.info for preparedness tips.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWREV"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KREV 120908"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM THIS MORNING TO 2 AM PDT SUNDAY FOR STRONG WINDS AND LOW HUMIDITY FOR THE SIERRA FRONT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KREV.FW.W.0012.260912T1800Z-260913T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-13T02:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.003.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.003.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.003.1",
+                "areaDesc": "Surprise Valley California; Eastern Lassen County; Northern Washoe County",
+                "geocode": {
+                    "SAME": [
+                        "006049",
+                        "006035",
+                        "032027",
+                        "032031"
+                    ],
+                    "UGC": [
+                        "CAZ270",
+                        "CAZ278",
+                        "NVZ458"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ270",
+                    "https://api.weather.gov/zones/fire/CAZ278",
+                    "https://api.weather.gov/zones/fire/NVZ458"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.85f31e8ba66992dc7a26984db504c31cad6a6d00.003.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.85f31e8ba66992dc7a26984db504c31cad6a6d00.003.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-11T10:18:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-12T02:08:00-07:00",
+                "effective": "2026-09-12T02:08:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-13T02:00:00-07:00",
+                "ends": "2026-09-13T02:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Reno NV",
+                "headline": "Red Flag Warning issued September 12 at 2:08AM PDT until September 13 at 2:00AM PDT by NWS Reno NV",
+                "description": "* CHANGES...None.\n\n* Affected Area...Fire Weather Zone 270 Surprise Valley\nCalifornia, Fire Weather Zone 278 Eastern Lassen County, Fire\nWeather Zone 458 Northern Washoe County.\n\n* Winds...Southwest 20 to 30 mph with gusts of 40 to 50 mph.\n\n* Humidity...RH reductions to 15 to 20 percent in the afternoon.\nNighttime recoveries of 50 to 80 percent Sunday morning.\n\n* Duration...4 to 8 hours.\n\n* Impacts...The combination of strong winds and low humidity can\ncause fire to rapidly grow in size and intensity before first\nresponders can contain them.",
+                "instruction": "Avoid outdoor activities that can cause a spark near dry\nvegetation, such as yard work, target shooting, or campfires.\nFollow local fire restrictions. Check weather.gov/reno for\nupdates and livingwithfire.info for preparedness tips.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWREV"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KREV 120908"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM THIS MORNING TO 2 AM PDT SUNDAY FOR STRONG WINDS AND LOW HUMIDITY FOR NORTHERN WASHOE COUNTY, NORTHEAST CALIFORNIA, AND THE SURPRISE VALLEY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KREV.FW.W.0012.260912T1800Z-260913T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-13T02:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57489f9bf0aa66b0c57a3ec620ef854cced397ab.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57489f9bf0aa66b0c57a3ec620ef854cced397ab.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.57489f9bf0aa66b0c57a3ec620ef854cced397ab.001.1",
+                "areaDesc": "Goose Creek and Raft River Valley/Southern Sawtooth NF/Twin Falls BLM south of the Snake River",
+                "geocode": {
+                    "SAME": [
+                        "016013",
+                        "016031",
+                        "016067",
+                        "016071",
+                        "016073",
+                        "016077",
+                        "016083"
+                    ],
+                    "UGC": [
+                        "IDZ427"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/IDZ427"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e53c8d61dfae74c061e96d055d33b1dbffe5cc53.002.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.e53c8d61dfae74c061e96d055d33b1dbffe5cc53.002.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-11T20:32:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-12T03:07:00-06:00",
+                "effective": "2026-09-12T03:07:00-06:00",
+                "onset": "2026-09-12T12:00:00-06:00",
+                "expires": "2026-09-12T21:00:00-06:00",
+                "ends": "2026-09-12T21:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Pocatello ID",
+                "headline": "Red Flag Warning issued September 12 at 3:07AM MDT until September 12 at 9:00PM MDT by NWS Pocatello ID",
+                "description": "* AFFECTED AREA...Fire Weather Zone 427 Goose Creek and Raft\nRiver Valley/Southern Sawtooth NF/Twin Falls BLM south of the\nSnake River.\n\n* WINDS...West 10 to 20 mph with gusts up to 30 mph.\n\n* RELATIVE HUMIDITY...As low as 13 percent.\n\n* IMPACTS...Low humidity and moderate to strong wind causes\nrapid fire spread and higher intensity wildfires.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions\nare either occurring now, or will shortly based on these criteria\nfor Southeastern Idaho:\n\n- Relative humidity at or below 15 percent and wind gusts of at\nleast 25 mph in the mountains, or 30 mph in the Snake Plain.\n\n- Thunderstorm coverage of 25 percent, without specific rainfall\ncriteria.\n\n- Other high impact events deemed critical by the National\nWeather Service and area fire management agencies.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWPIH"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KPIH 120907"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM NOON TODAY TO 9 PM MDT THIS EVENING FOR GUSTY WINDS AND LOW RELATIVE HUMIDITY FOR IDAHO FIRE WEATHER ZONE 427"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KPIH.FW.W.0026.260912T1800Z-260913T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-12T21:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4912e6139c4c237ad19365646ea0ba460bcb5098.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4912e6139c4c237ad19365646ea0ba460bcb5098.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.4912e6139c4c237ad19365646ea0ba460bcb5098.001.1",
+                "areaDesc": "Southeastern Humboldt County and northern Lander County; White Pine and Northeast Nye Counties; Northern Nye County - Mojave; Central Nevada - Toiyabe; Humboldt County - Quinn; Western Elko County, northern Eureka and Lander Counties north of Interstate 80; Central Elko County; Eastern Elko County",
+                "geocode": {
+                    "SAME": [
+                        "032007",
+                        "032011",
+                        "032013",
+                        "032015",
+                        "032023",
+                        "032033"
+                    ],
+                    "UGC": [
+                        "NVZ424",
+                        "NVZ425",
+                        "NVZ426",
+                        "NVZ427",
+                        "NVZ437",
+                        "NVZ438",
+                        "NVZ469",
+                        "NVZ470"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/NVZ424",
+                    "https://api.weather.gov/zones/fire/NVZ425",
+                    "https://api.weather.gov/zones/fire/NVZ426",
+                    "https://api.weather.gov/zones/fire/NVZ427",
+                    "https://api.weather.gov/zones/fire/NVZ437",
+                    "https://api.weather.gov/zones/fire/NVZ438",
+                    "https://api.weather.gov/zones/fire/NVZ469",
+                    "https://api.weather.gov/zones/fire/NVZ470"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.83bc0cdc495e6b4d0d786b1545fa2b8ae533a4a7.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.83bc0cdc495e6b4d0d786b1545fa2b8ae533a4a7.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-11T12:16:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-12T00:08:00-07:00",
+                "effective": "2026-09-12T00:08:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-12T11:00:00-07:00",
+                "ends": "2026-09-12T23:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Elko NV",
+                "headline": "Red Flag Warning issued September 12 at 12:08AM PDT until September 12 at 11:00PM PDT by NWS Elko NV",
+                "description": "...A RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM PDT THIS\nMORNING UNTIL 11 PM PDT THIS EVENING FOR STRONG GUSTY WINDS AND\nLOW HUMIDITY FOR FIRE WEATHER ZONES 424, 425, 426, 427, 437, 438,\n469, AND 470...\n\n* WIND...Sustained southwest winds 20 to 25 mph, with gusts near\n45 mph.\n\n* HUMIDITY...Minimum relative humidity values as low as 8\npercent.\n\n* IMPACTS...Any fires that develop will likely spread rapidly.\nOutdoor burning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions\nare either occurring now, or will shortly. A combination of strong\nwinds and low relative humidity can contribute to extreme fire\nbehavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWLKN"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KLKN 120708"
+                    ],
+                    "NWSheadline": [
+                        "A RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM PDT THIS MORNING UNTIL 11 PM PDT THIS EVENING FOR STRONG GUSTY WINDS AND LOW HUMIDITY FOR FIRE WEATHER ZONES 424, 425, 426, 427, 437, 438, 469, AND 470"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KLKN.FW.W.0011.260912T1800Z-260913T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-12T23:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c4a09795ac018f0e69b3c92fd279a46e18f538e.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -81.94,
+                            27.26
+                        ],
+                        [
+                            -81.98,
+                            27.08
+                        ],
+                        [
+                            -82.02,
+                            27.08
+                        ],
+                        [
+                            -82.01,
+                            27.26
+                        ],
+                        [
+                            -81.94,
+                            27.26
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c4a09795ac018f0e69b3c92fd279a46e18f538e.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1c4a09795ac018f0e69b3c92fd279a46e18f538e.001.1",
+                "areaDesc": "DeSoto, FL",
+                "geocode": {
+                    "SAME": [
+                        "012027"
+                    ],
+                    "UGC": [
+                        "FLC027"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC027"
+                ],
+                "references": [],
+                "sent": "2026-09-11T21:33:00-04:00",
+                "effective": "2026-09-11T21:33:00-04:00",
+                "onset": "2026-09-14T05:00:00-04:00",
+                "expires": "2026-09-12T13:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tampa Bay Ruskin FL",
+                "headline": "Flood Warning issued September 11 at 9:33PM EDT by NWS Tampa Bay Ruskin FL",
+                "description": "...The Flood Warning is extended for the following rivers in\nFlorida...\n\nHorse Creek Near Arcadia at SR 72 affecting DeSoto County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Horse Creek near Arcadia at SR 72.\n\n* WHEN...From late Sunday night until further notice.\n\n* IMPACTS...At 12.0 feet, The access road to Hidden Oak is\nimpassable.\n\n* ADDITIONAL DETAILS...\n- At 8:30 PM EDT Friday the stage was 7.8 feet.\n- Bankfull stage is 12.0 feet.\n- Forecast...The river is expected to rise above flood stage early\nMonday morning and continue rising to 12.3 feet Monday evening.\nAdditional rises are possible thereafter.\n- Flood stage is 12.0 feet.\n- Flood History...This crest compares to a previous crest of 12.3\nfeet on 08/09/1957.\n- https://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Saturday afternoon at 100 PM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSTBW"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS82 KTBW 120133"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT FROM LATE SUNDAY NIGHT UNTIL FURTHER NOTICE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KTBW.FL.W.0002.260914T0900Z-000000T0000Z/"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a5f08a96314d891d04a11c9ad5a8902713e68f74.001.1,2026-09-11T09:20:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.14de77ae5b3cb53c4fda58c41d225766609224cd.001.1,2026-09-10T21:46:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4f9de9098d487ff68fcf4840273157270b9c76a8.004.1,2026-09-10T10:17:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.75cca58a9917fcfed96b458f538d59470b94fc78.004.1,2026-09-09T22:48:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.01cb3c70e418cd50cc7bf3fa78cf7152d519c9c1.002.1,2026-09-09T10:36:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c8a600c138a2e5e1b0aad4d4453e06aaff0b1e9.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c8a600c138a2e5e1b0aad4d4453e06aaff0b1e9.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0c8a600c138a2e5e1b0aad4d4453e06aaff0b1e9.001.1",
+                "areaDesc": "Northern Lake Including Gravelly Valley; Eastern Lake Including Clearlake and Middletown; Southern Lake Including Cobb and Konocti; Western Lake Including Lakeport",
+                "geocode": {
+                    "SAME": [
+                        "006033"
+                    ],
+                    "UGC": [
+                        "CAZ418",
+                        "CAZ419",
+                        "CAZ420",
+                        "CAZ421"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ418",
+                    "https://api.weather.gov/zones/fire/CAZ419",
+                    "https://api.weather.gov/zones/fire/CAZ420",
+                    "https://api.weather.gov/zones/fire/CAZ421"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6c03bff3cf4e4fade2f7fa40b36c23b2487f3659.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.6c03bff3cf4e4fade2f7fa40b36c23b2487f3659.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-11T10:09:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-11T17:32:00-07:00",
+                "effective": "2026-09-11T17:32:00-07:00",
+                "onset": "2026-09-12T10:00:00-07:00",
+                "expires": "2026-09-12T01:45:00-07:00",
+                "ends": "2026-09-13T02:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Eureka CA",
+                "headline": "Red Flag Warning issued September 11 at 5:32PM PDT until September 13 at 2:00AM PDT by NWS Eureka CA",
+                "description": "...UPDATE FOR LOCATION CLARIFICATION...\n\n* WIND...Northwest winds gusts of 20 to 30 mph, locally up to 40\nfor the higher ridges.\n\n* HUMIDITY...Relative humidity 20 to 30 percent.\n\n* IMPACTS...Any fires that develop or are already burning will\nlikely spread rapidly. Outdoor burning is not recommended.\n\n* WHERE...All of Lake County, California. Including but not\nlimited to Lakeport, Clearlake, Kelseyville, Upper Lake, Cobb,\nMiddletown, and Lower Lake.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions\nare either occurring now, or will shortly. A combination of\nstrong winds, low relative humidity, and warm temperatures can\ncontribute to extreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWEKA"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS86 KEKA 120032"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM 10 AM SATURDAY TO 2 AM PDT SUNDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KEKA.FW.W.0005.260912T1700Z-260913T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-13T02:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5cb8914fd35198578cd66e8cfe9df9eee494edb4.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5cb8914fd35198578cd66e8cfe9df9eee494edb4.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5cb8914fd35198578cd66e8cfe9df9eee494edb4.001.2",
+                "areaDesc": "Owyhee Mountains; Southern Highlands",
+                "geocode": {
+                    "SAME": [
+                        "016027",
+                        "016073",
+                        "016083"
+                    ],
+                    "UGC": [
+                        "IDZ423",
+                        "IDZ426"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/IDZ423",
+                    "https://api.weather.gov/zones/fire/IDZ426"
+                ],
+                "references": [],
+                "sent": "2026-09-11T12:47:00-06:00",
+                "effective": "2026-09-11T12:47:00-06:00",
+                "onset": "2026-09-12T12:00:00-06:00",
+                "expires": "2026-09-12T15:00:00-06:00",
+                "ends": "2026-09-12T21:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Boise ID",
+                "headline": "Red Flag Warning issued September 11 at 12:47PM MDT until September 12 at 9:00PM MDT by NWS Boise ID",
+                "description": "...HOT AND DRY WITH GUSTY WINDS AHEAD OF A COLD FRONT SATURDAY\nAFTERNOON AND EVENING...\n\nHot and dry conditions on Saturday will combined with increase\nsoutherly winds ahead of an approaching cold front. Expect\nsustained winds of 15 to 25 mph with gusts up to 45 mph with\nhumidities between 15 and 20 percent. Eastern portions of 423\nalong with zone 426 has seen little to no rainfall in the last two\nweeks keeping fuel critically dry.\n\nThe National Weather Service in Boise has issued a Red Flag\nWarning for winds and low relative humidities, which is in effect\nfrom noon to 9 PM MDT Saturday. The Fire Weather Watch is no\nlonger in effect.\n\n* AFFECTED AREA...In Idaho, Fire Weather Zones 423 Owyhee\nMountains and 426 Southern Highlands.\n\n* TIMING...From noon to 9 PM MDT Saturday.\n\n* WINDS...Southwest 15 to 25 mph with gusts up to 45 mph.\n\n* RELATIVE HUMIDITY...15 to 20 percent.\n\n* TEMPERATURES...78 to 88 degrees.\n\n* IMPACTS...Any fire that develops will catch and spread\nquickly. Outdoor burning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions\nare either occurring now, or will occur shortly.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWBOI"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KBOI 111847"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING IN EFFECT FROM NOON TO 9 PM MDT SATURDAY FOR WINDS AND LOW RELATIVE HUMIDITIES FOR OWYHEE MOUNTAINS AND SOUTHERN HIGHLANDS...WHICH ARE FIRE WEATHER ZONES 423 AND 426"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KBOI.FW.W.0022.260912T1800Z-260913T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-12T21:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0362aa2a2a64d0b8e59f76a680f9c24f422a97c2.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0362aa2a2a64d0b8e59f76a680f9c24f422a97c2.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0362aa2a2a64d0b8e59f76a680f9c24f422a97c2.001.2",
+                "areaDesc": "Esmeralda and Nye County Deserts/CNC Dispatch; Nye County Deserts/Las Vegas Dispatch; Sheep Range; Spring Mountains; Clark and SW Lincoln County Deserts/Las Vegas Dispatch",
+                "geocode": {
+                    "SAME": [
+                        "032009",
+                        "032023",
+                        "032003",
+                        "032017"
+                    ],
+                    "UGC": [
+                        "NVZ460",
+                        "NVZ462",
+                        "NVZ463",
+                        "NVZ464",
+                        "NVZ465"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/NVZ460",
+                    "https://api.weather.gov/zones/fire/NVZ462",
+                    "https://api.weather.gov/zones/fire/NVZ463",
+                    "https://api.weather.gov/zones/fire/NVZ464",
+                    "https://api.weather.gov/zones/fire/NVZ465"
+                ],
+                "references": [],
+                "sent": "2026-09-11T10:58:00-07:00",
+                "effective": "2026-09-11T10:58:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-12T05:00:00-07:00",
+                "ends": "2026-09-13T00:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Las Vegas NV",
+                "headline": "Red Flag Warning issued September 11 at 10:58AM PDT until September 13 at 12:00AM PDT by NWS Las Vegas NV",
+                "description": "...RED FLAG WARNING IN EFFECT FROM 11 AM SATURDAY TO MIDNIGHT PDT\nSATURDAY NIGHT DUE TO WIND AND LOW RELATIVE HUMIDITY FOR ESMERALDA\nAND NYE COUNTY DESERTS/CNC DISPATCH, NYE COUNTY DESERTS/LAS VEGAS\nDISPATCH, SHEEP RANGE, SPRING MOUNTAINS, AND CLARK AND SW LINCOLN\nCOUNTY DESERTS/LAS VEGAS DISPATCH...\n\nThe National Weather Service in Las Vegas NV has issued a Red Flag\nWarning in effect from 11 AM Saturday to midnight PDT Saturday Night.\n\n* AFFECTED AREA...In Nevada, Fire Weather Zones 460, 462, 463, 464,\nand 465.\n\n* TIMING...From 11 AM Saturday to midnight PDT Saturday Night.\n\n* WINDS...South winds 15 to 25 mph with gusts up to 35 mph.\n\n* RELATIVE HUMIDITY...Relative Humidity between 5 to 20 percent.\n\n* IMPACTS...Any fires that develop will spread rapidly. Outdoor\nburning is not recommended.",
+                "instruction": "Please advise the appropriate officials or fire crews in the field of\nthis Red Flag Warning.\n\nFollow all fire restrictions. Avoid activities that could cause\nsparks.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWVEF"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KVEF 111758"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING IN EFFECT FROM 11 AM SATURDAY TO MIDNIGHT PDT SATURDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KVEF.FW.W.0007.260912T1800Z-260913T0700Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-13T00:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.002.1",
+                "areaDesc": "Glenn and Colusa County Coast Range Above 3000 ft; Western Glenn and Colusa County Foothills Between 1000-3000 ft",
+                "geocode": {
+                    "SAME": [
+                        "006011",
+                        "006021",
+                        "006033"
+                    ],
+                    "UGC": [
+                        "CAZ143",
+                        "CAZ147"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ143",
+                    "https://api.weather.gov/zones/fire/CAZ147"
+                ],
+                "references": [],
+                "sent": "2026-09-11T10:02:00-07:00",
+                "effective": "2026-09-11T10:02:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-12T16:15:00-07:00",
+                "ends": "2026-09-14T11:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Sacramento CA",
+                "headline": "Red Flag Warning issued September 11 at 10:02AM PDT until September 14 at 11:00AM PDT by NWS Sacramento CA",
+                "description": "...RED FLAG WARNING IN EFFECT FROM 11 AM SATURDAY TO 11 AM PDT MONDAY\nDUE TO GUSTY WINDS AND LOW RELATIVE HUMIDITY FOR PORTIONS OF NORTHERN\nCALIFORNIA...\n\nThe National Weather Service in Sacramento CA has issued a Red Flag\nWarning.\n\n* AFFECTED AREA...The coastal foothills of Glenn and Colusa Counties.\n\n* TIMING...From 11 AM Saturday to 11 AM PDT Monday.\n\n* WINDS...Gusts 20 to 35 mph. South to southwest winds Saturday\nmorning and afternoon, becoming north to northeast Saturday evening\nthrough Monday. Strongest winds in the afternoon and evenings over\nthe weekend.\n\n* RELATIVE HUMIDITY...Relative Humidity between 10 to 25 percent.\n\n* IMPACTS...Any fires that develop will spread rapidly. Outdoor\nburning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions are\neither occurring now, or will shortly. A combination of strong winds,\nlow relative humidity, and warm temperatures can contribute to\nextreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWSTO"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS86 KSTO 111702"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING IN EFFECT FROM 11 AM SATURDAY TO 11 AM PDT MONDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSTO.FW.W.0005.260912T1800Z-260914T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T11:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.001.2",
+                "areaDesc": "South-Central Shasta County Including Redding Metro; Sierra Nevada of Tehama-Butte-Plumas Counties Between 1000-3000 ft; Northern Sacramento Valley in Tehama County; Central Glenn County Including Interstate 5; Eastern Glenn County; Butte County Below 1000 ft; Central Colusa County Including Interstate 5; Eastern Colusa County; Sutter and Yuba Counties Below 1000 ft",
+                "geocode": {
+                    "SAME": [
+                        "006089",
+                        "006007",
+                        "006063",
+                        "006103",
+                        "006021",
+                        "006011",
+                        "006057",
+                        "006061",
+                        "006101",
+                        "006115"
+                    ],
+                    "UGC": [
+                        "CAZ124",
+                        "CAZ129",
+                        "CAZ142",
+                        "CAZ144",
+                        "CAZ145",
+                        "CAZ146",
+                        "CAZ148",
+                        "CAZ149",
+                        "CAZ150"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ124",
+                    "https://api.weather.gov/zones/fire/CAZ129",
+                    "https://api.weather.gov/zones/fire/CAZ142",
+                    "https://api.weather.gov/zones/fire/CAZ144",
+                    "https://api.weather.gov/zones/fire/CAZ145",
+                    "https://api.weather.gov/zones/fire/CAZ146",
+                    "https://api.weather.gov/zones/fire/CAZ148",
+                    "https://api.weather.gov/zones/fire/CAZ149",
+                    "https://api.weather.gov/zones/fire/CAZ150"
+                ],
+                "references": [],
+                "sent": "2026-09-11T10:02:00-07:00",
+                "effective": "2026-09-11T10:02:00-07:00",
+                "onset": "2026-09-12T11:00:00-07:00",
+                "expires": "2026-09-12T16:15:00-07:00",
+                "ends": "2026-09-14T11:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Sacramento CA",
+                "headline": "Red Flag Warning issued September 11 at 10:02AM PDT until September 14 at 11:00AM PDT by NWS Sacramento CA",
+                "description": "...RED FLAG WARNING IN EFFECT FROM 11 AM SATURDAY TO 11 AM PDT MONDAY\nDUE TO GUSTY WINDS AND LOW RELATIVE HUMIDITY FOR PORTIONS OF NORTHERN\nCALIFORNIA...\n\nThe National Weather Service in Sacramento CA has issued a Red Flag\nWarning in effect from 11 AM Saturday to 11 AM PDT Monday.\n\n* AFFECTED AREA...A portion of northern California.\n\n* TIMING...From 11 AM Saturday to 11 AM PDT Monday.\n\n* WINDS...Gusts 20 to 35 mph. South to southwest winds Saturday\nmorning and afternoon, becoming north to northeast Saturday evening\nthrough Monday. Strongest winds in the afternoon and evenings over\nthe weekend.\n\n* RELATIVE HUMIDITY...Relative Humidity between 10 to 25 percent.\n\n* IMPACTS...Any fires that develop will spread rapidly. Outdoor\nburning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions are\neither occurring now, or will shortly. A combination of strong winds,\nlow relative humidity, and warm temperatures can contribute to\nextreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWSTO"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS86 KSTO 111702"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING IN EFFECT FROM 11 AM SATURDAY TO 11 AM PDT MONDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSTO.FW.W.0005.260912T1800Z-260914T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T11:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-09-12T09:33:59+00:00"
+}

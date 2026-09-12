@@ -1,10 +1,370 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "81d4870",
+    "commit": "a694a0f",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nws-tjsj-xhw-0008-26.html",
+      "evidence": "foreknown/resolutions/nws-tjsj-xhw-0008-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Extreme Heat Warning"
+    },
+    {
+      "enter": "/attention/future/nws-tjsj-xhw-0008-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Extreme Heat Warning"
+    },
+    {
+      "enter": "/attention/future/nws-pafg-hww-0012-26.html",
+      "evidence": "foreknown/resolutions/nws-pafg-hww-0012-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-pafg-hww-0012-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-pafg-hww-0011-26.html",
+      "evidence": "foreknown/resolutions/nws-pafg-hww-0011-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-pafg-hww-0011-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kvef-fww-0007-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kunr-fww-0038-26.html",
+      "evidence": "foreknown/resolutions/nws-kunr-fww-0038-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kunr-fww-0038-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-ktbw-flw-0002-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 2 days after it was first preserved.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-ksto-fww-0005-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-ksgx-xhw-0009-26.html",
+      "evidence": "foreknown/resolutions/nws-ksgx-xhw-0009-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Extreme Heat Warning"
+    },
+    {
+      "enter": "/attention/future/nws-ksgx-xhw-0009-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Extreme Heat Warning"
+    },
+    {
+      "enter": "/attention/future/nws-krlx-faw-0115-26.html",
+      "evidence": "foreknown/resolutions/nws-krlx-faw-0115-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-krlx-faw-0115-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-krlx-faw-0113-26.html",
+      "evidence": "foreknown/resolutions/nws-krlx-faw-0113-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-krlx-faw-0113-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-krev-fww-0012-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kpsr-xhw-0009-26.html",
+      "evidence": "foreknown/resolutions/nws-kpsr-xhw-0009-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Extreme Heat Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kpsr-xhw-0009-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Extreme Heat Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kpih-fww-0026-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kpih-fww-0025-26.html",
+      "evidence": "foreknown/resolutions/nws-kpih-fww-0025-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kpih-fww-0025-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kmob-maw-0198-26.html",
+      "evidence": "foreknown/resolutions/nws-kmob-maw-0198-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Special Marine Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kmob-maw-0198-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Special Marine Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klkn-fww-0011-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klbf-fww-0043-26.html",
+      "evidence": "foreknown/resolutions/nws-klbf-fww-0043-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klbf-fww-0043-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-keka-fww-0005-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kcys-fww-0042-26.html",
+      "evidence": "foreknown/resolutions/nws-kcys-fww-0042-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kcys-fww-0042-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kboi-fww-0022-26.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kabr-fww-0022-26.html",
+      "evidence": "foreknown/resolutions/nws-kabr-fww-0022-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kabr-fww-0022-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Red Flag Warning"
+    },
+    {
+      "enter": "/attention/future/nhc-ep142026.html",
+      "evidence": "foreknown/snapshots/2026-09-12/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 24 hours after it was first preserved.",
+      "subject": "Norbert (TS)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep122026.html",
+      "evidence": "foreknown/resolutions/nhc-ep122026.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A forecast passed without an alert in this register.",
+      "subject": "Lowell (PTC)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep122026.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "dissipation",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A forecast dissipated from its source's feed.",
+      "subject": "Lowell (PTC)"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027449.html",
+      "evidence": "foreknown/snapshots/2026-09-12/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 25 days after it was first preserved.",
+      "subject": "Drought in The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-09-12/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 35 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-09-12/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-12T09:34:18+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 35 days after it was first preserved.",
+      "subject": "Drought in Austria, Bosnia  and  Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
+    },
     {
       "enter": "/attention/future/nws-tjsj-xhw-0008-26.html",
       "evidence": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
@@ -544,366 +904,6 @@
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
       "subject": "Red Flag Warning"
-    },
-    {
-      "enter": "/attention/future/nhc-ep142026.html",
-      "evidence": "foreknown/snapshots/2026-09-11/nhc-current-storms.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-11T09:59:34+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Norbert (TS)"
-    },
-    {
-      "enter": "/attention/future/nhc-ep122026.html",
-      "evidence": "foreknown/snapshots/2026-09-11/nhc-current-storms.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-11T09:59:34+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 14 days after it was first preserved.",
-      "subject": "Lowell (PTC)"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1027449.html",
-      "evidence": "foreknown/snapshots/2026-09-11/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-11T09:59:34+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 24 days after it was first preserved.",
-      "subject": "Drought in The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018431.html",
-      "evidence": "foreknown/snapshots/2026-09-11/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-11T09:59:34+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 34 days after it was first preserved.",
-      "subject": "Drought in Madagascar"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018332.html",
-      "evidence": "foreknown/snapshots/2026-09-11/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-11T09:59:34+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 34 days after it was first preserved.",
-      "subject": "Drought in Austria, Bosnia  and  Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,"
-    },
-    {
-      "enter": "/attention/future/nws-pafg-hww-0012-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 24 hours after it was first preserved.",
-      "subject": "High Wind Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktsa-xhw-0020-26.html",
-      "evidence": "foreknown/resolutions/nws-ktsa-xhw-0020-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Extreme Heat Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktsa-xhw-0020-26.html",
-      "evidence": "foreknown/registry.json",
-      "mode": "closure",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A source let go of one of its warnings.",
-      "subject": "Extreme Heat Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktbw-flw-0004-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktbw-flw-0003-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktbw-flw-0002-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktbw-flw-0001-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ksgx-xhw-0009-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 2 days after it was first preserved.",
-      "subject": "Extreme Heat Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-ffw-0196-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-ffw-0195-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-ffw-0194-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-faw-0110-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-faw-0109-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-faw-0108-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-faw-0107-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kriw-fzw-0005-26.html",
-      "evidence": "foreknown/resolutions/nws-kriw-fzw-0005-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Freeze Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kriw-fzw-0005-26.html",
-      "evidence": "foreknown/registry.json",
-      "mode": "closure",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A source let go of one of its warnings.",
-      "subject": "Freeze Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kriw-fww-0027-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 2 days after it was first preserved.",
-      "subject": "Red Flag Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kpsr-xhw-0009-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 3 days after it was first preserved.",
-      "subject": "Extreme Heat Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kpih-fww-0024-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Red Flag Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kpbz-faw-0049-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-koax-ffw-0038-26.html",
-      "evidence": "foreknown/resolutions/nws-koax-ffw-0038-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-koax-ffw-0038-26.html",
-      "evidence": "foreknown/registry.json",
-      "mode": "closure",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A source let go of one of its warnings.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kmso-fww-0014-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Red Flag Warning"
-    },
-    {
-      "enter": "/attention/future/nws-klox-xhw-0007-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 24 hours after it was first preserved.",
-      "subject": "Extreme Heat Warning"
-    },
-    {
-      "enter": "/attention/future/nws-klch-flw-0038-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 7 days after it was first preserved.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kiln-ffw-0085-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kiln-ffw-0084-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kggw-fww-0017-26.html",
-      "evidence": "foreknown/snapshots/2026-09-10/nws-alerts-active.json",
-      "mode": "notarization",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A new announced future entered the record.",
-      "subject": "Red Flag Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdmx-flw-0019-26.html",
-      "evidence": "foreknown/resolutions/nws-kdmx-flw-0019-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdmx-flw-0019-26.html",
-      "evidence": "foreknown/registry.json",
-      "mode": "closure",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A source let go of one of its warnings.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdmx-flw-0018-26.html",
-      "evidence": "foreknown/resolutions/nws-kdmx-flw-0018-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdmx-flw-0018-26.html",
-      "evidence": "foreknown/registry.json",
-      "mode": "closure",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A source let go of one of its warnings.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdmx-flw-0017-26.html",
-      "evidence": "foreknown/resolutions/nws-kdmx-flw-0017-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdmx-flw-0017-26.html",
-      "evidence": "foreknown/registry.json",
-      "mode": "closure",
-      "occurred_at": "2026-09-10T10:02:14+00:00",
-      "project": "foreknown",
-      "statement": "A source let go of one of its warnings.",
-      "subject": "Flood Warning"
     }
   ],
   "practice": {

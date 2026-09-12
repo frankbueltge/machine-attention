@@ -571,6 +571,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/gdacs.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-09T00:00:00"
+              },
+              "to": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-09-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-12/gdacs.json",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -613,7 +630,7 @@
       "where": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine, ,",
       "window": {
         "from": "2025-12-21T00:00:00",
-        "to": "2026-09-09T00:00:00"
+        "to": "2026-09-10T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -1117,6 +1134,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/gdacs.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-09T00:00:00"
+              },
+              "to": {
+                "from": "2025-11-21T00:00:00",
+                "to": "2026-09-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-12/gdacs.json",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "gdacs-dr-1018431",
@@ -1132,7 +1166,7 @@
       "where": "Madagascar",
       "window": {
         "from": "2025-11-21T00:00:00",
-        "to": "2026-09-09T00:00:00"
+        "to": "2026-09-10T00:00:00"
       }
     },
     "gdacs-dr-1027449": {
@@ -1508,6 +1542,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/gdacs.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-09T00:00:00"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-09-10T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-12/gdacs.json",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -1528,7 +1579,7 @@
       "where": "The Bahamas, Belize, Cuba, Guatemala, Honduras, Mexico, Nicaragua, El Salvador",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-09-09T00:00:00"
+        "to": "2026-09-10T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -6878,6 +6929,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/nhc-current-storms.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "DISSIPATED",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nhc-ep122026",
@@ -6886,7 +6941,7 @@
       "severity": "45",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
-      "status": "OPEN",
+      "status": "DISSIPATED",
       "what": "Lowell (PTC)",
       "where": "CP4",
       "window": {
@@ -7043,6 +7098,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nhc-current-storms.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-11T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-09-12T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nhc-current-storms.json",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nhc-ep142026",
@@ -7055,7 +7127,7 @@
       "what": "Norbert (TS)",
       "where": "EP4",
       "window": {
-        "from": "2026-09-11T09:00:00.000Z",
+        "from": "2026-09-12T09:00:00.000Z",
         "to": null
       }
     },
@@ -7097,6 +7169,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-kabr-fww-0022-26",
@@ -7107,7 +7183,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.31d0698786a0424ef384b1375f5f4d52421fa66f.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Jones; Lyman; Buffalo",
       "window": {
@@ -7263,6 +7339,32 @@
       "window": {
         "from": "2026-09-03T05:04:00-05:00",
         "to": "2026-09-03T05:30:00-05:00"
+      }
+    },
+    "nws-kboi-fww-0022-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-kboi-fww-0022-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5cb8914fd35198578cd66e8cfe9df9eee494edb4.001.2",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Owyhee Mountains; Southern Highlands",
+      "window": {
+        "from": "2026-09-12T12:00:00-06:00",
+        "to": "2026-09-12T21:00:00-06:00"
       }
     },
     "nws-kbuf-faw-0011-26": {
@@ -7950,6 +8052,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-kcys-fww-0042-26",
@@ -7960,7 +8066,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.871a0b8376a961dc0d8b59bd070c4f2f5ba928f0.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Southern Laramie Range; Laramie Foothills and High Plains; Laramie East High Plains; Bordeaux/Chugwater/Wheatland",
       "window": {
@@ -8210,6 +8316,32 @@
       "window": {
         "from": "2026-09-08T04:17:00-05:00",
         "to": "2026-09-08T20:00:00-05:00"
+      }
+    },
+    "nws-keka-fww-0005-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-keka-fww-0005-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c8a600c138a2e5e1b0aad4d4453e06aaff0b1e9.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Northern Lake Including Gravelly Valley; Eastern Lake Including Clearlake and Middletown; Southern Lake Including Cobb and Konocti; Western Lake Including Lakeport",
+      "window": {
+        "from": "2026-09-12T10:00:00-07:00",
+        "to": "2026-09-13T02:00:00-07:00"
       }
     },
     "nws-kewx-xhw-0003-26": {
@@ -10363,6 +10495,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-klbf-fww-0043-26",
@@ -10373,7 +10509,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.288e061eb6ac4368a0f017fe989151649066eb19.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Eastern Panhandle/Crescent Lake NWR; Sandhills/Valentine NWR/Nebraska National Forest; Niobrara Valley/Fort Niobrara NWR/Samuel R McKelvie National Forest",
       "window": {
@@ -10806,6 +10942,32 @@
       "window": {
         "from": "2026-09-01T16:02:00-05:00",
         "to": "2026-09-02T05:00:00-05:00"
+      }
+    },
+    "nws-klkn-fww-0011-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-klkn-fww-0011-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4912e6139c4c237ad19365646ea0ba460bcb5098.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Southeastern Humboldt County and northern Lander County; White Pine and Northeast Nye Counties; Northern Nye County - Mojave; Central Nevada - Toiyabe; Humboldt County - Quinn; Western Elko County, northern Eureka and Lander Counties north of Interstate 80; Central Elko County; Eastern Elko County",
+      "window": {
+        "from": "2026-09-12T11:00:00-07:00",
+        "to": "2026-09-12T23:00:00-07:00"
       }
     },
     "nws-klot-xhw-0003-26": {
@@ -11363,6 +11525,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-kmob-maw-0198-26",
@@ -11373,7 +11539,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d6ba958650154733b75757ae0d548a4c2ff62187.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Western Choctawhatchee Bay; Coastal waters from Okaloosa-Walton County Line to Pensacola FL out 20 NM; Waters from Okaloosa-Walton County Line to Pensacola FL from 20 to 60 NM",
       "window": {
@@ -12241,6 +12407,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-kpih-fww-0025-26",
@@ -12251,12 +12421,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.61c5edaad7ce3332c70b8f23da448e3ae31c8550.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Upper Snake River Valley/Idaho Falls BLM",
       "window": {
         "from": "2026-09-11T12:00:00-06:00",
         "to": "2026-09-11T21:00:00-06:00"
+      }
+    },
+    "nws-kpih-fww-0026-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-kpih-fww-0026-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57489f9bf0aa66b0c57a3ec620ef854cced397ab.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Goose Creek and Raft River Valley/Southern Sawtooth NF/Twin Falls BLM south of the Snake River",
+      "window": {
+        "from": "2026-09-12T12:00:00-06:00",
+        "to": "2026-09-12T21:00:00-06:00"
       }
     },
     "nws-kpsr-xhw-0008-26": {
@@ -12457,6 +12653,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-kpsr-xhw-0009-26",
@@ -12467,7 +12667,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ee31f48d7b85974bcfdf73be08db467b213d5bfb.005.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Parker Valley; Central La Paz; Palo Verde Valley; Chuckwalla Valley",
       "window": {
@@ -12533,6 +12733,32 @@
       "window": {
         "from": "2026-09-01T11:00:00-07:00",
         "to": "2026-09-01T23:00:00-07:00"
+      }
+    },
+    "nws-krev-fww-0012-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-krev-fww-0012-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f013e86a95d6feab89329b6992e517a46a25cd15.001.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Southern Mono County; West Humboldt Basin - Pershing County; Lahontan Basin - Churchill and Eastern Mineral Counties",
+      "window": {
+        "from": "2026-09-12T11:00:00-07:00",
+        "to": "2026-09-13T02:00:00-07:00"
       }
     },
     "nws-kriw-fww-0024-26": {
@@ -12855,6 +13081,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-krlx-faw-0113-26",
@@ -12865,7 +13095,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.263a0e66528ba1a34cce8bfe1faa9d3aa0277104.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Jackson, OH",
       "window": {
@@ -12881,6 +13111,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-krlx-faw-0115-26",
@@ -12891,7 +13125,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bcd92fbdb277bec7bf0cfdce908bae9223bc2a06.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Calhoun, WV; Gilmer, WV; Ritchie, WV",
       "window": {
@@ -13260,6 +13494,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-ksgx-xhw-0009-26",
@@ -13270,7 +13508,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9781086943425f317f517d30846b423c2556491d.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "Coachella Valley; San Diego County Deserts; San Gorgonio Pass Near Banning",
       "window": {
@@ -13428,6 +13666,32 @@
         "to": "2026-08-25T01:00:00-06:00"
       }
     },
+    "nws-ksto-fww-0005-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-ksto-fww-0005-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.002.1",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Glenn and Colusa County Coast Range Above 3000 ft; Western Glenn and Colusa County Foothills Between 1000-3000 ft",
+      "window": {
+        "from": "2026-09-12T11:00:00-07:00",
+        "to": "2026-09-14T11:00:00-07:00"
+      }
+    },
     "nws-ktae-maw-0340-26": {
       "announced_at": "2026-08-28T17:41:45+00:00",
       "hazard": "special marine",
@@ -13573,6 +13837,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-13T08:00:00-04:00",
+                "to": "2026-09-11T12:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-09-14T05:00:00-04:00",
+                "to": "2026-09-12T13:00:00-04:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-ktbw-flw-0002-26",
@@ -13587,8 +13868,8 @@
       "what": "Flood Warning",
       "where": "DeSoto, FL",
       "window": {
-        "from": "2026-09-13T08:00:00-04:00",
-        "to": "2026-09-11T12:00:00-04:00"
+        "from": "2026-09-14T05:00:00-04:00",
+        "to": "2026-09-12T13:00:00-04:00"
       }
     },
     "nws-ktbw-flw-0003-26": {
@@ -14103,6 +14384,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-kunr-fww-0038-26",
@@ -14113,12 +14398,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2c43a7f8451c13c768de5adcb3e861c823d2841.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Red Flag Warning",
       "where": "Southern Black Hills; Fall River County Area; Custer County Plains; Pine Ridge Area; Badlands Area; Bennett County Area; Weston County Plains",
       "window": {
         "from": "2026-09-11T11:00:00-06:00",
         "to": "2026-09-11T19:00:00-06:00"
+      }
+    },
+    "nws-kvef-fww-0007-26": {
+      "announced_at": "2026-09-12T09:34:18+00:00",
+      "hazard": "red flag",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-09-12/nws-alerts-active.json",
+          "ts": "2026-09-12T09:34:18+00:00"
+        }
+      ],
+      "id": "nws-kvef-fww-0007-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0362aa2a2a64d0b8e59f76a680f9c24f422a97c2.001.2",
+      "status": "OPEN",
+      "what": "Red Flag Warning",
+      "where": "Esmeralda and Nye County Deserts/CNC Dispatch; Nye County Deserts/Las Vegas Dispatch; Sheep Range; Spring Mountains; Clark and SW Lincoln County Deserts/Las Vegas Dispatch",
+      "window": {
+        "from": "2026-09-12T11:00:00-07:00",
+        "to": "2026-09-13T00:00:00-07:00"
       }
     },
     "nws-kvef-xhw-0004-26": {
@@ -14300,6 +14611,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-pafg-hww-0011-26",
@@ -14310,7 +14625,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2ed44a62e3fb558a4a15f24ee448f939a300634e.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "High Wind Warning",
       "where": "Western Arctic Coast",
       "window": {
@@ -14360,6 +14675,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-pafg-hww-0012-26",
@@ -14370,7 +14689,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c05856926d4628c2d8a695c428b3ecfd3c4ee34e.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "High Wind Warning",
       "where": "Shishmaref; Bering Strait Coast; St Lawrence Island",
       "window": {
@@ -14707,6 +15026,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-09-11/nws-alerts-active.json",
           "ts": "2026-09-11T09:59:34+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-09-12T09:34:18+00:00"
         }
       ],
       "id": "nws-tjsj-xhw-0008-26",
@@ -14717,7 +15040,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f2fa78dbc91a633874f5e3dd161e8e04f41f43e5.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Extreme Heat Warning",
       "where": "San Juan and Vicinity; Northeast; Southeast; Eastern Interior; North Central; Central Interior; Ponce and Vicinity; Northwest; Western Interior; Mayaguez and Vicinity; Southwest",
       "window": {
