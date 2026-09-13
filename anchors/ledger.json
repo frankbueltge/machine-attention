@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-09-13T09:47:52Z",
+ "generated_at": "2026-09-13T10:27:40Z",
  "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
  "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
  "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
  "why_proofs_live_apart": "an .ots is rewritten once, by `ots upgrade`, when the Bitcoin path arrives — so it cannot live inside the append-only record trees the I3 guard protects",
  "method": "docs/2026-08-09-opentimestamps-examination.md",
  "counts": {
-  "manifests": 124,
+  "manifests": 125,
   "complete": 120,
   "pending": 3,
   "stamped_this_run": 0,
@@ -887,6 +887,11 @@
    "proof": "anchors/memoryhole/snapshots/2026-09-10/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 966502, 966510, 966539"
+  },
+  {
+   "manifest": "memoryhole/snapshots/2026-09-12/manifest.json",
+   "sha256": "389cea9be089f1c210db12d0f10c9766b9d7daaf28754ca9b7f879cee6613e64",
+   "state": "unstamped"
   }
  ]
 }
