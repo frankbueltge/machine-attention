@@ -15,7 +15,7 @@ from urllib.parse import parse_qs, urlsplit
 import pytest
 
 from practice.fetch import Client
-from practice.memoryhole.run import run
+from practice.memoryhole.run import MAX_RUN_SECONDS, run
 
 DAY = "2026-08-14"
 BEFORE = "20260810120000"
@@ -243,9 +243,7 @@ def test_an_empty_night_is_still_written(repo):
     assert reading["rates"]["examined"] == len(CONTROLS)
 
 
-def test_the_verifier_recomputes_the_reading_from_the_preserved_bytes(
-        repo, reading):
-    """The whole point: an independent second implementation, over the bytes."""
+def _verify_problems(repo: Path) -> list[str]:
     root = Path(__file__).resolve().parents[2]
     sys.path.insert(0, str(root))
     try:
@@ -256,4 +254,37 @@ def test_the_verifier_recomputes_the_reading_from_the_preserved_bytes(
         spec.loader.exec_module(verify)
     finally:
         sys.path.remove(str(root))
-    assert verify.check(repo) == []
+    return verify.check(repo)
+
+
+def test_the_verifier_recomputes_the_reading_from_the_preserved_bytes(
+        repo, reading):
+    """The whole point: an independent second implementation, over the bytes."""
+    assert _verify_problems(repo) == []
+
+
+def test_an_ample_budget_skips_nothing(reading):
+    assert reading["time_budget"] == {"max_seconds": MAX_RUN_SECONDS,
+                                      "institutions_skipped": 0,
+                                      "pages_skipped": 0}
+
+
+def test_a_run_that_hits_its_time_budget_still_writes_a_reading(repo):
+    """A run killed by the workflow's own outer timeout before this function
+    ever calls write_json commits nothing at all -- not this function's own
+    internal budget, which must always finish and write a (visibly marked)
+    reading of its own accord, well before that outer kill could land."""
+    client = Client(opener=_opener, sleep=lambda _s: None, clock=lambda: 0.0)
+    run(repo, "2026-08-20", client=client, model_key=None,
+        clock=lambda: 0.0, max_seconds=0)
+    reading = json.loads(
+        (repo / "memoryhole" / "readings" / "2026-08-20.json")
+        .read_text(encoding="utf-8"))
+    assert reading["time_budget"] == {"max_seconds": 0,
+                                      "institutions_skipped": 1,
+                                      "pages_skipped": len(CONTROLS)}
+    assert reading["institutions"][0]["skipped"] == "over_time_budget"
+    assert reading["institutions"][0]["source"] is None
+    assert all(e["reason"] == "over_time_budget" for e in reading["entries"])
+    assert reading["rates"]["counts"]["unverifiable"] == len(CONTROLS)
+    assert _verify_problems(repo) == []
