@@ -25,6 +25,7 @@ presence before a passed E-experiment.
 from __future__ import annotations
 
 import argparse
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -50,6 +51,23 @@ MAX_CHANGED_PAGES = 40
 # archive is not scarce, it is slow and flaky; a shorter ladder keeps a night
 # inside its budget. Substrate finding, recorded in the build report.
 CDX_BACKOFF = (5.0, 15.0, 30.0)
+
+# Wall-clock ceiling on this function's own fetching, independent of the
+# workflow's outer timeout-minutes: 240 on the "Reading of the completed UTC
+# day" step (memoryhole.yml). Before this budget, a run killed by that outer
+# timeout (or any other interruption before write_json below) committed
+# nothing at all -- not even a partial reading disclosing what it had
+# examined -- because every institution and page is discovered and fetched
+# in memory and the reading is written once, at the very end. Since main()
+# always resolves --date to "yesterday" at the moment it runs, a night lost
+# this way is never retried by a later run; it is gone from the record for
+# good (obs-2026-09-13-1.json: memoryhole/readings' first stall since
+# sensor-registry-stall.json's 2026-09-07 promotion). MAX_RUN_SECONDS keeps
+# this function inside the outer timeout with margin for the steps after it
+# (anchor register, verify, commit), converting an external kill into a
+# self-truncated, visibly marked reading -- the same "disclosed, never
+# silently dropped" shape MAX_CHANGED_PAGES already uses for its own cap.
+MAX_RUN_SECONDS = 200 * 60
 
 NOTES = [
     "domain scope: many pages of few institutions, the architecture the audit "
@@ -280,7 +298,8 @@ def rates(entries: list[dict], deletion: dict) -> dict:
 
 
 def run(repo_root: Path, day: str, client: Client | None = None,
-        live_client: Client | None = None, model_key: str | None = None) -> dict:
+        live_client: Client | None = None, model_key: str | None = None,
+        clock=time.monotonic, max_seconds: float = MAX_RUN_SECONDS) -> dict:
     client = client or Client(backoff=CDX_BACKOFF)
     live_client = live_client or client
     reading_path = readings_dir(repo_root) / f"{day}.json"
@@ -292,10 +311,19 @@ def run(repo_root: Path, day: str, client: Client | None = None,
     excluded = watchlist.excluded_urls(doc)
     failures: list[dict] = []
     snap = Snapshot(repo_root, day, base=SNAPSHOT_BASE)
+    deadline = clock() + max_seconds
 
     institutions: list[dict] = []
     pages: list[dict] = []
+    institutions_skipped = 0
     for entry in doc["institutions"]:
+        if clock() >= deadline:
+            institutions.append({
+                "slug": entry["slug"], "category": entry["category"],
+                "strategy": entry["strategy"], "urls_seen": 0, "source": None,
+                "sampled": 0, "skipped": "over_time_budget"})
+            institutions_skipped += 1
+            continue
         urls, record = discover(client, snap, entry, day, failures)
         drawn = sample(urls, day, excluded, SAMPLE_PER_INSTITUTION)
         record["sampled"] = len(drawn)
@@ -309,8 +337,15 @@ def run(repo_root: Path, day: str, client: Client | None = None,
                              "control") for c in doc["controls"])
 
     budget = {"fetched": 0, "over_cap": 0}
-    entries = [read_page(client, snap, page, day, budget, failures)
-               for page in pages]
+    entries: list[dict] = []
+    pages_skipped = 0
+    for page in pages:
+        if clock() >= deadline:
+            entries.append({**page, "class": "unverifiable",
+                            "reason": "over_time_budget"})
+            pages_skipped += 1
+            continue
+        entries.append(read_page(client, snap, page, day, budget, failures))
 
     # Deletion candidates: nothing is called gone before the live look.
     candidates = [e for e in entries if e["class"] == "deletion_candidate"]
@@ -346,6 +381,9 @@ def run(repo_root: Path, day: str, client: Client | None = None,
                      "over_fetch_cap": budget["over_cap"]},
         "institutions": institutions,
         "entries": entries,
+        "time_budget": {"max_seconds": max_seconds,
+                        "institutions_skipped": institutions_skipped,
+                        "pages_skipped": pages_skipped},
         "rates": rates(entries, deletion),
         "model": model_block,
         "failures": failures,
@@ -368,7 +406,9 @@ def run(repo_root: Path, day: str, client: Client | None = None,
                             "events": sum(len(e.get("events", []))
                                           for e in entries),
                             "model": model_block["state"],
-                            "failures": len(failures)})
+                            "failures": len(failures),
+                            "over_time_budget": institutions_skipped
+                            + pages_skipped})
     return {"date": day, "counts": counts,
             "events": sum(len(e.get("events", [])) for e in entries),
             "model": model_block["state"], "failures": failures}
