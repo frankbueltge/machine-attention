@@ -1,0 +1,1644 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.802a31fb3a9c33c84c593625d763d7b59a0e52f7.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -83.26,
+                            29.26
+                        ],
+                        [
+                            -83.54,
+                            29.16
+                        ],
+                        [
+                            -83.93,
+                            28.93
+                        ],
+                        [
+                            -84.11,
+                            28.92
+                        ],
+                        [
+                            -84.12,
+                            28.94
+                        ],
+                        [
+                            -84.14,
+                            28.92
+                        ],
+                        [
+                            -84.69,
+                            28.91
+                        ],
+                        [
+                            -84.68,
+                            29.28
+                        ],
+                        [
+                            -83.73,
+                            29.27
+                        ],
+                        [
+                            -83.28,
+                            29.43
+                        ],
+                        [
+                            -83.26,
+                            29.26
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.802a31fb3a9c33c84c593625d763d7b59a0e52f7.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.802a31fb3a9c33c84c593625d763d7b59a0e52f7.001.1",
+                "areaDesc": "Coastal waters from  Suwannee River to Keaton Beach out 20 NM; Waters from Suwannee River to Apalachicola FL from 20 to 60 NM",
+                "geocode": {
+                    "SAME": [
+                        "077765",
+                        "077775"
+                    ],
+                    "UGC": [
+                        "GMZ765",
+                        "GMZ775"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/GMZ765",
+                    "https://api.weather.gov/zones/forecast/GMZ775"
+                ],
+                "references": [],
+                "sent": "2026-09-14T06:41:00-04:00",
+                "effective": "2026-09-14T06:41:00-04:00",
+                "onset": "2026-09-14T06:41:00-04:00",
+                "expires": "2026-09-14T08:15:00-04:00",
+                "ends": "2026-09-14T08:15:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Special Marine Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Special Marine Warning issued September 14 at 6:41AM EDT until September 14 at 8:15AM EDT by NWS Tallahassee FL",
+                "description": "SMWTAE\n\nThe National Weather Service in Tallahassee has issued a\n\n* Special Marine Warning for...\nCoastal waters from  Suwannee River to Keaton Beach out 20 NM...\nWaters from Suwannee River to Apalachicola FL from 20 to 60 NM...\n\n* Until 815 AM EDT.\n\n* At 640 AM EDT, thunderstorms capable of producing waterspouts were\nlocated along a line extending from 10 nm west of Suwannee River\nto 31 nm south of Buckeye Reef to 11 nm southeast of S Tower,\nmoving south at 5 knots.\n\nHAZARD...Waterspouts and wind gusts 34 knots or greater.\n\nSOURCE...Radar indicated.\n\nIMPACT...Waterspouts can quickly form and capsize boats...damage\nvessels...and create suddenly higher waves. Make sure all\non board are in a secure location and wearing life\njackets. Expect wind gusts in excess of 34\nknots...suddenly higher waves...frequent lightning...and\nheavy downpours. Make sure all on board are wearing life\njackets.\n\n* Severe thunderstorms will remain over mainly open waters.",
+                "instruction": "Move to safe harbor until hazardous weather passes.\n\nThunderstorms can produce sudden waterspouts. Waterspouts can easily\noverturn boats and create locally hazardous seas. Seek safe harbor\nimmediately.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "SMWTAE"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS52 KTAE 141041"
+                    ],
+                    "eventMotionDescription": [
+                        "2026-09-14T10:40:00-00:00...storm...009DEG...6KT...29.3,-83.36 29.15,-83.74 29.13,-84.52"
+                    ],
+                    "waterspoutDetection": [
+                        "POSSIBLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KTAE.MA.W.0388.260914T1041Z-260914T1215Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T08:15:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "SMW"
+                    ],
+                    "NationalWeatherService": [
+                        "MAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c292652d10271bc93a7a512deae14cac2df07f1e.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -95.02,
+                            40.04
+                        ],
+                        [
+                            -94.81,
+                            40.06
+                        ],
+                        [
+                            -94.81,
+                            39.92
+                        ],
+                        [
+                            -94.93,
+                            39.88
+                        ],
+                        [
+                            -94.93,
+                            39.89
+                        ],
+                        [
+                            -94.94,
+                            39.89
+                        ],
+                        [
+                            -94.95,
+                            39.9
+                        ],
+                        [
+                            -95.02,
+                            39.9
+                        ],
+                        [
+                            -95.02,
+                            39.89
+                        ],
+                        [
+                            -95.03,
+                            39.89
+                        ],
+                        [
+                            -95.03,
+                            39.87
+                        ],
+                        [
+                            -95.05,
+                            39.87
+                        ],
+                        [
+                            -95.02,
+                            40.04
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c292652d10271bc93a7a512deae14cac2df07f1e.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.c292652d10271bc93a7a512deae14cac2df07f1e.001.1",
+                "areaDesc": "Andrew, MO; Holt, MO",
+                "geocode": {
+                    "SAME": [
+                        "029003",
+                        "029087"
+                    ],
+                    "UGC": [
+                        "MOC003",
+                        "MOC087"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC003",
+                    "https://api.weather.gov/zones/county/MOC087"
+                ],
+                "references": [],
+                "sent": "2026-09-14T05:16:00-05:00",
+                "effective": "2026-09-14T05:16:00-05:00",
+                "onset": "2026-09-14T05:16:00-05:00",
+                "expires": "2026-09-14T11:15:00-05:00",
+                "ends": "2026-09-14T11:15:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flash Flood Warning issued September 14 at 5:16AM CDT until September 14 at 11:15AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "FFWEAX\n\nThe National Weather Service in Pleasant Hill has issued a\n\n* Flash Flood Warning for...\nWestern Andrew County in northwestern Missouri...\nSoutheastern Holt County in northwestern Missouri...\n\n* Until 1115 AM CDT.\n\n* At 516 AM CDT, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 2 and 4 inches of rain\nhave fallen. Additional rainfall amounts of 1.5 to 3 inches are\npossible in the warned area. Flash flooding is ongoing or expected\nto begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nSavannah, Amazonia, Fillmore and Rosendale.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS53 KEAX 141016"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FF.W.0062.260914T1016Z-260914T1615Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T11:15:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f017bc2f6be9f2a7025985d3824d279007602986.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f017bc2f6be9f2a7025985d3824d279007602986.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.f017bc2f6be9f2a7025985d3824d279007602986.001.1",
+                "areaDesc": "South-Central Shasta County Including Redding Metro; Sierra Nevada of Tehama-Butte-Plumas Counties Between 1000-3000 ft; Northern Sacramento Valley in Tehama County; Glenn and Colusa County Coast Range Above 3000 ft; Central Glenn County Including Interstate 5; Eastern Glenn County; Butte County Below 1000 ft; Western Glenn and Colusa County Foothills Between 1000-3000 ft; Central Colusa County Including Interstate 5; Eastern Colusa County; Sutter and Yuba Counties Below 1000 ft",
+                "geocode": {
+                    "SAME": [
+                        "006089",
+                        "006007",
+                        "006063",
+                        "006103",
+                        "006011",
+                        "006021",
+                        "006033",
+                        "006057",
+                        "006061",
+                        "006101",
+                        "006115"
+                    ],
+                    "UGC": [
+                        "CAZ124",
+                        "CAZ129",
+                        "CAZ142",
+                        "CAZ143",
+                        "CAZ144",
+                        "CAZ145",
+                        "CAZ146",
+                        "CAZ147",
+                        "CAZ148",
+                        "CAZ149",
+                        "CAZ150"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/CAZ124",
+                    "https://api.weather.gov/zones/fire/CAZ129",
+                    "https://api.weather.gov/zones/fire/CAZ142",
+                    "https://api.weather.gov/zones/fire/CAZ143",
+                    "https://api.weather.gov/zones/fire/CAZ144",
+                    "https://api.weather.gov/zones/fire/CAZ145",
+                    "https://api.weather.gov/zones/fire/CAZ146",
+                    "https://api.weather.gov/zones/fire/CAZ147",
+                    "https://api.weather.gov/zones/fire/CAZ148",
+                    "https://api.weather.gov/zones/fire/CAZ149",
+                    "https://api.weather.gov/zones/fire/CAZ150"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a45afce358d7737b976d5afae86ff5aea5b3093f.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a45afce358d7737b976d5afae86ff5aea5b3093f.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T09:41:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-14T03:05:00-07:00",
+                "effective": "2026-09-14T03:05:00-07:00",
+                "onset": "2026-09-14T03:05:00-07:00",
+                "expires": "2026-09-14T17:00:00-07:00",
+                "ends": "2026-09-14T17:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Sacramento CA",
+                "headline": "Red Flag Warning issued September 14 at 3:05AM PDT until September 14 at 5:00PM PDT by NWS Sacramento CA",
+                "description": "...RED FLAG WARNING REMAINS IN EFFECT UNTIL 5 PM PDT THIS AFTERNOON\nDUE TO WIND AND LOW RELATIVE HUMIDITY FOR A PORTION OF NORTHERN\nCALIFORNIA...\n\n* AFFECTED AREA...Portions of the Sacramento Valley and adjacent\nfoothills.\n\n* TIMING...Until 5 PM PDT this afternoon.\n\n* WINDS...North to northwest winds gusting 20 to 35 mph. Strongest\nperiod of north winds expected this morning.\n\n* RELATIVE HUMIDITY...Relative Humidity between 10 to 20 percent.\n\n* IMPACTS...Any fires that develop will spread rapidly. Outdoor\nburning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions are\neither occurring now, or will shortly. A combination of strong winds,\nlow relative humidity, and warm temperatures can contribute to\nextreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWSTO"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS86 KSTO 141005"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT UNTIL 5 PM PDT THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSTO.FW.W.0005.000000T0000Z-260915T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T17:00:00-07:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.4d3b0261c52411fb6830e5ce695ca5af25b3f2cd.001.1,2026-09-12T09:51:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e2f558fa8a62874eb764c18aca4abb174edd1313.002.1,2026-09-12T03:12:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e2f558fa8a62874eb764c18aca4abb174edd1313.001.1,2026-09-12T03:12:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.002.1,2026-09-11T10:02:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.71f0f123f7bf3094a5af9e196e208cb528cf774b.001.2,2026-09-11T10:02:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.62ce53e953fe8bacd62414b80515e038f0d904f0.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -95.94,
+                            40.25
+                        ],
+                        [
+                            -95.9,
+                            40.12
+                        ],
+                        [
+                            -95.54,
+                            40.08
+                        ],
+                        [
+                            -95.64,
+                            40.25
+                        ],
+                        [
+                            -95.94,
+                            40.25
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.62ce53e953fe8bacd62414b80515e038f0d904f0.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.62ce53e953fe8bacd62414b80515e038f0d904f0.001.1",
+                "areaDesc": "Richardson, NE",
+                "geocode": {
+                    "SAME": [
+                        "031147"
+                    ],
+                    "UGC": [
+                        "NEC147"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/NEC147"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.53c57f9eeddda085426dd6a32ff09356f6a069c1.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.53c57f9eeddda085426dd6a32ff09356f6a069c1.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-14T04:10:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-14T05:01:00-05:00",
+                "effective": "2026-09-14T05:01:00-05:00",
+                "onset": "2026-09-14T05:01:00-05:00",
+                "expires": "2026-09-14T07:15:00-05:00",
+                "ends": "2026-09-14T07:15:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Omaha/Valley NE",
+                "headline": "Flash Flood Warning issued September 14 at 5:01AM CDT until September 14 at 7:15AM CDT by NWS Omaha/Valley NE",
+                "description": "At 501 AM CDT, Doppler radar indicated thunderstorms producing heavy\nrain across the warned area. Between 2 and 5 inches of rain have\nfallen. The expected rainfall rate is 1 to 2 inches in 1 hour. Flash\nflooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\nSome locations that will experience flash flooding include...\nVerdon, Stella, Shubert and Dawson.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nBe aware of your surroundings and do not drive on flooded roads.\n\nPlease report observed flooding to local emergency services or law\nenforcement and request they pass this information to the National\nWeather Service when you can do so safely.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFSOAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS73 KOAX 141001"
+                    ],
+                    "NWSheadline": [
+                        "FLASH FLOOD WARNING REMAINS IN EFFECT UNTIL 715 AM CDT THIS MORNING FOR NORTHWESTERN RICHARDSON COUNTY"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KOAX.FF.W.0039.000000T0000Z-260914T1215Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T07:15:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFS"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5d40150ae187d0a0d1d9ba69e29cd43cd1d3938f.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -95.34,
+                            40.06
+                        ],
+                        [
+                            -95.02,
+                            40.04
+                        ],
+                        [
+                            -95.05,
+                            39.87
+                        ],
+                        [
+                            -95.34,
+                            39.91
+                        ],
+                        [
+                            -95.34,
+                            40
+                        ],
+                        [
+                            -95.31,
+                            40
+                        ],
+                        [
+                            -95.33,
+                            40.02
+                        ],
+                        [
+                            -95.34,
+                            40.02
+                        ],
+                        [
+                            -95.34,
+                            40.06
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5d40150ae187d0a0d1d9ba69e29cd43cd1d3938f.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5d40150ae187d0a0d1d9ba69e29cd43cd1d3938f.001.1",
+                "areaDesc": "Doniphan, KS; Holt, MO",
+                "geocode": {
+                    "SAME": [
+                        "020043",
+                        "029087"
+                    ],
+                    "UGC": [
+                        "KSC043",
+                        "MOC087"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/KSC043",
+                    "https://api.weather.gov/zones/county/MOC087"
+                ],
+                "references": [],
+                "sent": "2026-09-14T04:52:00-05:00",
+                "effective": "2026-09-14T04:52:00-05:00",
+                "onset": "2026-09-14T04:52:00-05:00",
+                "expires": "2026-09-14T10:45:00-05:00",
+                "ends": "2026-09-14T10:45:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flash Flood Warning issued September 14 at 4:52AM CDT until September 14 at 10:45AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "FFWEAX\n\nThe National Weather Service in Pleasant Hill has issued a\n\n* Flash Flood Warning for...\nNorthwestern Doniphan County in northeastern Kansas...\nSoutheastern Holt County in northwestern Missouri...\n\n* Until 1045 AM CDT.\n\n* At 452 AM CDT, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 2.5 and 4 inches of rain\nhave fallen. The expected rainfall rate is 1 to 2 inches in 1 hour.\nAdditional rainfall amounts of 1 to 2 inches are possible in the\nwarned area. Flash flooding is ongoing or expected to begin\nshortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nOregon, Forest City, White Cloud, Fortescue and Iowa Point.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS53 KEAX 140952"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FF.W.0061.260914T0952Z-260914T1545Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T10:45:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.16f0bf1c3649d262a846fa9abda0b3d6fe92f137.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.16f0bf1c3649d262a846fa9abda0b3d6fe92f137.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.16f0bf1c3649d262a846fa9abda0b3d6fe92f137.001.2",
+                "areaDesc": "Divide; Burke; Renville; Williams; Mountrail; McKenzie; Dunn; Mercer; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean",
+                "geocode": {
+                    "SAME": [
+                        "038023",
+                        "038013",
+                        "038075",
+                        "038105",
+                        "038061",
+                        "038053",
+                        "038025",
+                        "038057",
+                        "038033",
+                        "038007",
+                        "038089",
+                        "038087",
+                        "038041",
+                        "038011",
+                        "038001",
+                        "038101",
+                        "038055"
+                    ],
+                    "UGC": [
+                        "NDZ001",
+                        "NDZ002",
+                        "NDZ003",
+                        "NDZ009",
+                        "NDZ010",
+                        "NDZ017",
+                        "NDZ018",
+                        "NDZ019",
+                        "NDZ031",
+                        "NDZ032",
+                        "NDZ033",
+                        "NDZ040",
+                        "NDZ041",
+                        "NDZ043",
+                        "NDZ044",
+                        "NDZ055",
+                        "NDZ056",
+                        "NDZ057"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/NDZ001",
+                    "https://api.weather.gov/zones/forecast/NDZ002",
+                    "https://api.weather.gov/zones/forecast/NDZ003",
+                    "https://api.weather.gov/zones/forecast/NDZ009",
+                    "https://api.weather.gov/zones/forecast/NDZ010",
+                    "https://api.weather.gov/zones/forecast/NDZ017",
+                    "https://api.weather.gov/zones/forecast/NDZ018",
+                    "https://api.weather.gov/zones/forecast/NDZ019",
+                    "https://api.weather.gov/zones/forecast/NDZ031",
+                    "https://api.weather.gov/zones/forecast/NDZ032",
+                    "https://api.weather.gov/zones/forecast/NDZ033",
+                    "https://api.weather.gov/zones/forecast/NDZ040",
+                    "https://api.weather.gov/zones/forecast/NDZ041",
+                    "https://api.weather.gov/zones/forecast/NDZ043",
+                    "https://api.weather.gov/zones/forecast/NDZ044",
+                    "https://api.weather.gov/zones/forecast/NDZ055",
+                    "https://api.weather.gov/zones/forecast/NDZ056",
+                    "https://api.weather.gov/zones/forecast/NDZ057"
+                ],
+                "references": [],
+                "sent": "2026-09-14T04:40:00-05:00",
+                "effective": "2026-09-14T04:40:00-05:00",
+                "onset": "2026-09-14T12:00:00-05:00",
+                "expires": "2026-09-14T19:00:00-05:00",
+                "ends": "2026-09-15T00:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Wind Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Bismarck ND",
+                "headline": "High Wind Warning issued September 14 at 4:40AM CDT until September 15 at 12:00AM CDT by NWS Bismarck ND",
+                "description": "* WHAT...West winds 30 to 40 mph with gusts up to 60 mph expected.\n\n* WHERE...Much of western into parts of north central North Dakota.\n\n* WHEN...From noon CDT /11 AM MDT/ today to midnight CDT /11 PM MDT/\ntonight.\n\n* IMPACTS...The high winds may damage roofs, small outbuildings and\nsigns. Tree branches may be broken. Travel will be difficult,\nespecially for high profile vehicles.",
+                "instruction": "Secure objects that could be blown around. Be careful when traveling.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWBIS"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS73 KBIS 140940"
+                    ],
+                    "NWSheadline": [
+                        "HIGH WIND WARNING IN EFFECT FROM NOON CDT /11 AM MDT/ TODAY TO MIDNIGHT CDT /11 PM MDT/ TONIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KBIS.HW.W.0004.260914T1700Z-260915T0500Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-15T00:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "HWW"
+                    ],
+                    "NationalWeatherService": [
+                        "HWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9bf715e3a324dc8f33750d26444cd6e9f02f0875.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -71.76,
+                            41.43
+                        ],
+                        [
+                            -71.74,
+                            41.6
+                        ],
+                        [
+                            -71.63,
+                            41.6
+                        ],
+                        [
+                            -71.64,
+                            41.44
+                        ],
+                        [
+                            -71.76,
+                            41.43
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9bf715e3a324dc8f33750d26444cd6e9f02f0875.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.9bf715e3a324dc8f33750d26444cd6e9f02f0875.001.1",
+                "areaDesc": "Washington, RI",
+                "geocode": {
+                    "SAME": [
+                        "044009"
+                    ],
+                    "UGC": [
+                        "RIC009"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/RIC009"
+                ],
+                "references": [],
+                "sent": "2026-09-14T05:18:00-04:00",
+                "effective": "2026-09-14T05:18:00-04:00",
+                "onset": "2026-09-14T05:18:00-04:00",
+                "expires": "2026-09-14T14:00:00-04:00",
+                "ends": "2026-09-14T14:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Boston/Norton MA",
+                "headline": "Flood Warning issued September 14 at 5:18AM EDT until September 14 at 2:00PM EDT by NWS Boston/Norton MA",
+                "description": "...The National Weather Service in Norton has issued a Flood Warning\nfor the following rivers in Rhode Island...\n\nWood River At Hope Valley affecting Washington County.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued this afternoon at 200 PM EDT.\n\n* WHAT...Minor flooding is occurring.\n\n* WHERE...Wood River at Hope Valley.\n\n* WHEN...From early this morning to this afternoon.\n\n* IMPACTS...At 5.0 feet, In Richmond, floodwaters begin to pond onto\nWood River Drive. In Hopkinton off of Main Street, the Wood River\nbegins to flood Dow Park.\n\n* ADDITIONAL DETAILS...\n- At 4:15 AM EDT Monday the stage was 5.1 feet. The river will be\nnear or just above flood stage this morning before dropping below\nflood stage this afternoon.\n- Bankfull stage is 5.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 4:15 AM EDT Monday was 5.1 feet.\n- Forecast...The river is expected to fall to 2.1 feet Wednesday\nevening.\n- Flood stage is 5.0 feet.\n- Flood History...This crest compares to a previous crest of 5.1\nfeet on 01/27/1952.\n- http://www.weather.gov/safety/flood",
+                "instruction": null,
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWBOX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS41 KBOX 140918"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM EARLY THIS MORNING TO THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KBOX.FL.W.0009.260914T0918Z-260914T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T14:00:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e72a2f60952c8c94b59b25b97bdaa971f0198362.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e72a2f60952c8c94b59b25b97bdaa971f0198362.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.e72a2f60952c8c94b59b25b97bdaa971f0198362.001.1",
+                "areaDesc": "Star Valley",
+                "geocode": {
+                    "SAME": [
+                        "056023"
+                    ],
+                    "UGC": [
+                        "WYZ023"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/WYZ023"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3afbb4deb82124095d6dcdccd6c93cd9c919e05e.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.3afbb4deb82124095d6dcdccd6c93cd9c919e05e.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T08:50:00-06:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f04e2100edd1bc13586379084bdcd21a40a42cd.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1f04e2100edd1bc13586379084bdcd21a40a42cd.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T11:10:00-06:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07635032106d6a12e309d9ddbc87a853a6fe40b7.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.07635032106d6a12e309d9ddbc87a853a6fe40b7.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T18:58:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-14T02:56:00-06:00",
+                "effective": "2026-09-14T02:56:00-06:00",
+                "onset": "2026-09-14T03:00:00-06:00",
+                "expires": "2026-09-14T09:00:00-06:00",
+                "ends": "2026-09-14T09:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Freeze Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Riverton WY",
+                "headline": "Freeze Warning issued September 14 at 2:56AM MDT until September 14 at 9:00AM MDT by NWS Riverton WY",
+                "description": "* WHAT...Sub-freezing temperatures as low as 26 to 30 expected.\n\n* WHERE...Star Valley.\n\n* WHEN...Until 9 AM MDT this morning.\n\n* IMPACTS...Take steps to protect tender plants from the cold.",
+                "instruction": "Take steps now to protect tender plants from the cold.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWRIW"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS75 KRIW 140856"
+                    ],
+                    "NWSheadline": [
+                        "FREEZE WARNING REMAINS IN EFFECT UNTIL 9 AM MDT THIS MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KRIW.FZ.W.0006.260914T0900Z-260914T1500Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T09:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FZW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e72a2f60952c8c94b59b25b97bdaa971f0198362.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e72a2f60952c8c94b59b25b97bdaa971f0198362.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.e72a2f60952c8c94b59b25b97bdaa971f0198362.002.1",
+                "areaDesc": "Absaroka Mountains; Cody Foothills; Upper Wind River Basin",
+                "geocode": {
+                    "SAME": [
+                        "056013",
+                        "056017",
+                        "056029"
+                    ],
+                    "UGC": [
+                        "WYZ002",
+                        "WYZ003",
+                        "WYZ016"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/WYZ002",
+                    "https://api.weather.gov/zones/forecast/WYZ003",
+                    "https://api.weather.gov/zones/forecast/WYZ016"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1f04e2100edd1bc13586379084bdcd21a40a42cd.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1f04e2100edd1bc13586379084bdcd21a40a42cd.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T11:10:00-06:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07635032106d6a12e309d9ddbc87a853a6fe40b7.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.07635032106d6a12e309d9ddbc87a853a6fe40b7.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T18:58:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-14T02:56:00-06:00",
+                "effective": "2026-09-14T02:56:00-06:00",
+                "onset": "2026-09-14T02:56:00-06:00",
+                "expires": "2026-09-14T14:00:00-06:00",
+                "ends": "2026-09-14T14:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Wind Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Riverton WY",
+                "headline": "High Wind Warning issued September 14 at 2:56AM MDT until September 14 at 2:00PM MDT by NWS Riverton WY",
+                "description": "* WHAT...West winds 30 to 40 mph with gusts up to 60 mph. Local gusts\nto 75 mph are possible in the Absaroka Mountains.\n\n* WHERE...Upper Wind River Basin, Absaroka Mountains, and Cody\nFoothills.\n\n* WHEN...Until 2 PM MDT this afternoon.\n\n* IMPACTS...Gusty winds will make travel difficult. Strong crosswind\ngusts on area highways could cause high-profile vehicle blow-overs.",
+                "instruction": "People are urged to secure loose objects that could be blown around\nor damaged by the wind.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWRIW"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS75 KRIW 140856"
+                    ],
+                    "NWSheadline": [
+                        "HIGH WIND WARNING REMAINS IN EFFECT UNTIL 2 PM MDT THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KRIW.HW.W.0012.000000T0000Z-260914T2000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T14:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "HWW"
+                    ],
+                    "NationalWeatherService": [
+                        "HWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07ba99e810d256c6f395c898d6bd1428824e5ee6.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07ba99e810d256c6f395c898d6bd1428824e5ee6.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.07ba99e810d256c6f395c898d6bd1428824e5ee6.001.1",
+                "areaDesc": "Sweetwater County/Rock Springs BLM/Flaming Gorge NRA; Natrona County/Casper BLM; Upper Wind River Basin/Wind River Basin; Granite/Green/Ferris/Rattlesnake Mountains; Casper Mountain",
+                "geocode": {
+                    "SAME": [
+                        "056037",
+                        "056041",
+                        "056013",
+                        "056019",
+                        "056025"
+                    ],
+                    "UGC": [
+                        "WYZ279",
+                        "WYZ280",
+                        "WYZ283",
+                        "WYZ289",
+                        "WYZ300"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/WYZ279",
+                    "https://api.weather.gov/zones/fire/WYZ280",
+                    "https://api.weather.gov/zones/fire/WYZ283",
+                    "https://api.weather.gov/zones/fire/WYZ289",
+                    "https://api.weather.gov/zones/fire/WYZ300"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a3b4139d415e5e34d8bea4a220095f9cbb92f228.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a3b4139d415e5e34d8bea4a220095f9cbb92f228.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T10:03:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-14T02:51:00-06:00",
+                "effective": "2026-09-14T02:51:00-06:00",
+                "onset": "2026-09-14T12:00:00-06:00",
+                "expires": "2026-09-14T20:00:00-06:00",
+                "ends": "2026-09-14T20:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Riverton WY",
+                "headline": "Red Flag Warning issued September 14 at 2:51AM MDT until September 14 at 8:00PM MDT by NWS Riverton WY",
+                "description": "* AFFECTED AREA:\nIn Central WY Fire Zones...280...283...289...300.\nIn Southwest WY Fire Zone....279.\n\n* COUNTIES AFFECTED:\nIn Central WY...Fremont...Natrona.\nIn Southwest WY...Sweetwater.\n\n* IMPACTS: Low Humidities and Strong Gusty Winds could cause\nerratic fire behavior.\n\n* WIND: West 20 to 30 mph with gusts up to 45 mph.\n\n* HUMIDITY: As low as 10 to 15 percent.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions are\neither occurring now....or will shortly. A combination of strong\nwinds...low relative humidity...and warm temperatures can\ncontribute to extreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWRIW"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KRIW 140851"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM NOON TODAY TO 8 PM MDT THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KRIW.FW.W.0028.260914T1800Z-260915T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T20:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f9326bba7f902ca0acac3471340cf25e7cde570.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f9326bba7f902ca0acac3471340cf25e7cde570.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6f9326bba7f902ca0acac3471340cf25e7cde570.002.1",
+                "areaDesc": "Niobrara/Lower Elevations of Converse/Thunder Basin National Grassland; Middle North Platte River Basin/Niobrara and Converse High Plains; North Laramie Range and Adjacent High Plains; North Laramie Valley/Shirley Basin; Ferris/Seminoe/Shirley Mountains; Central and West Carbon; Southwest Carbon County; North Snowy Range Foothills; Bordeaux/Chugwater/Wheatland; Goshen/Middle-Lower North Platte River Basin",
+                "geocode": {
+                    "SAME": [
+                        "056009",
+                        "056027",
+                        "056015",
+                        "056031",
+                        "056001",
+                        "056021",
+                        "056007"
+                    ],
+                    "UGC": [
+                        "WYZ417",
+                        "WYZ418",
+                        "WYZ419",
+                        "WYZ420",
+                        "WYZ421",
+                        "WYZ422",
+                        "WYZ423",
+                        "WYZ427",
+                        "WYZ432",
+                        "WYZ433"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/WYZ417",
+                    "https://api.weather.gov/zones/fire/WYZ418",
+                    "https://api.weather.gov/zones/fire/WYZ419",
+                    "https://api.weather.gov/zones/fire/WYZ420",
+                    "https://api.weather.gov/zones/fire/WYZ421",
+                    "https://api.weather.gov/zones/fire/WYZ422",
+                    "https://api.weather.gov/zones/fire/WYZ423",
+                    "https://api.weather.gov/zones/fire/WYZ427",
+                    "https://api.weather.gov/zones/fire/WYZ432",
+                    "https://api.weather.gov/zones/fire/WYZ433"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dc865a3591371b52e043610ff5feb67aeea748b9.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dc865a3591371b52e043610ff5feb67aeea748b9.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T12:57:00-06:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dc865a3591371b52e043610ff5feb67aeea748b9.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.dc865a3591371b52e043610ff5feb67aeea748b9.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T12:57:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-14T01:26:00-06:00",
+                "effective": "2026-09-14T01:26:00-06:00",
+                "onset": "2026-09-14T12:00:00-06:00",
+                "expires": "2026-09-14T20:00:00-06:00",
+                "ends": "2026-09-14T20:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Cheyenne WY",
+                "headline": "Red Flag Warning issued September 14 at 1:26AM MDT until September 14 at 8:00PM MDT by NWS Cheyenne WY",
+                "description": "* AFFECTED AREA...Fire weather zones 417-423, 427, 432, and 433.\n\n* WIND...West to Northwest winds 20 to 40 mph, gusts between 45\nto 60 mph.\n\n* HUMIDITY...Relative humidities as low as 10 to 20%.\n\n* IMPACTS...any fires that develop will likely spread rapidly.\nOutdoor burning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions\nare either occurring now, or will shortly. A combination of\nstrong winds, low relative humidity, and warm temperatures can\ncontribute to extreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWCYS"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KCYS 140726"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM NOON TODAY TO 8 PM MDT THIS EVENING FOR GUSTY WINDS AND LOW RH FOR FIRE WEATHER ZONES 417, 418, 419, 420, 421, 422, 423, 427, 432, AND 433"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KCYS.FW.W.0043.260914T1800Z-260915T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T20:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f9326bba7f902ca0acac3471340cf25e7cde570.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f9326bba7f902ca0acac3471340cf25e7cde570.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6f9326bba7f902ca0acac3471340cf25e7cde570.001.1",
+                "areaDesc": "Pine Ridge/Nebraska National Forest; Box Butte/South Sioux/Niobrara River; Lower North Platte River Basin/Scottsbluff National Monument",
+                "geocode": {
+                    "SAME": [
+                        "031045",
+                        "031165",
+                        "031013",
+                        "031123",
+                        "031157",
+                        "031007",
+                        "031033",
+                        "031105",
+                        "056015"
+                    ],
+                    "UGC": [
+                        "NEZ434",
+                        "NEZ435",
+                        "NEZ436"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/NEZ434",
+                    "https://api.weather.gov/zones/fire/NEZ435",
+                    "https://api.weather.gov/zones/fire/NEZ436"
+                ],
+                "references": [],
+                "sent": "2026-09-14T01:26:00-06:00",
+                "effective": "2026-09-14T01:26:00-06:00",
+                "onset": "2026-09-14T12:00:00-06:00",
+                "expires": "2026-09-14T20:00:00-06:00",
+                "ends": "2026-09-14T20:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Cheyenne WY",
+                "headline": "Red Flag Warning issued September 14 at 1:26AM MDT until September 14 at 8:00PM MDT by NWS Cheyenne WY",
+                "description": "The National Weather Service in Cheyenne has issued a Red Flag\nWarning, which is in effect from noon today to 8 PM MDT this\nevening.\n\n* AFFECTED AREA...Fire weather zones 434 through 436.\n\n* WIND...West to Northwest winds 20 to 30 mph, gusts between 35 to\n45 mph.\n\n* HUMIDITY...Relative humidities as low as 12 to 17%.\n\n* IMPACTS...any fires that develop will likely spread rapidly.\nOutdoor burning is not recommended.",
+                "instruction": "A Red Flag Warning means that critical fire weather conditions\nare either occurring now, or will shortly. A combination of\nstrong winds, low relative humidity, and warm temperatures can\ncontribute to extreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWCYS"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KCYS 140726"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING IN EFFECT FROM NOON TODAY TO 8 PM MDT THIS EVENING FOR GUSTY WINDS AND LOW RH FOR FIRE WEATHER ZONES 434, 435, AND 436"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.EXA.KCYS.FW.W.0043.260914T1800Z-260915T0200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T20:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a792b7f5c8b85d21c2b12076ae0f57600e493d6.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a792b7f5c8b85d21c2b12076ae0f57600e493d6.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.3a792b7f5c8b85d21c2b12076ae0f57600e493d6.001.1",
+                "areaDesc": "Fergus County below 4500ft; Snowy and Judith Mountains",
+                "geocode": {
+                    "SAME": [
+                        "030027"
+                    ],
+                    "UGC": [
+                        "MTZ314",
+                        "MTZ318"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/MTZ314",
+                    "https://api.weather.gov/zones/forecast/MTZ318"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.23915720b77bfac5a83106f90f4f9fded383d448.002.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.23915720b77bfac5a83106f90f4f9fded383d448.002.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T23:52:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-14T00:22:00-06:00",
+                "effective": "2026-09-14T00:22:00-06:00",
+                "onset": "2026-09-14T09:00:00-06:00",
+                "expires": "2026-09-14T18:00:00-06:00",
+                "ends": "2026-09-14T18:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Wind Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Great Falls MT",
+                "headline": "High Wind Warning issued September 14 at 12:22AM MDT until September 14 at 6:00PM MDT by NWS Great Falls MT",
+                "description": "* WHAT...West winds 30 to 40 mph, with gusts up to 60 mph expected.\n\n* WHERE...Snowy and Judith Mountains and Fergus County below 4500ft.\n\n* WHEN...From 9 AM this morning to 6 PM MDT this evening.\n\n* IMPACTS...Travel could be difficult, especially for high profile\nvehicles.",
+                "instruction": "People are urged to secure loose objects that could be blown around,\nor damaged by the wind.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWTFX"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS75 KTFX 140622"
+                    ],
+                    "NWSheadline": [
+                        "HIGH WIND WARNING REMAINS IN EFFECT FROM 9 AM THIS MORNING TO 6 PM MDT THIS EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTFX.HW.W.0031.260914T1500Z-260915T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T18:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "HWW"
+                    ],
+                    "NationalWeatherService": [
+                        "HWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b2e8e0bced1a78c4717237cda9291b93688b5476.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -112.68,
+                            36.28
+                        ],
+                        [
+                            -112.58,
+                            36.2
+                        ],
+                        [
+                            -112.56,
+                            36.08
+                        ],
+                        [
+                            -112.51,
+                            36.04
+                        ],
+                        [
+                            -112.56,
+                            36.01
+                        ],
+                        [
+                            -112.62,
+                            36.04
+                        ],
+                        [
+                            -112.63,
+                            36.11
+                        ],
+                        [
+                            -112.69,
+                            36.2
+                        ],
+                        [
+                            -112.71,
+                            36.15
+                        ],
+                        [
+                            -112.71,
+                            36.11
+                        ],
+                        [
+                            -112.75,
+                            36.12
+                        ],
+                        [
+                            -112.78,
+                            36.2
+                        ],
+                        [
+                            -112.78,
+                            36.27
+                        ],
+                        [
+                            -112.79,
+                            36.3
+                        ],
+                        [
+                            -112.77,
+                            36.3
+                        ],
+                        [
+                            -112.76,
+                            36.31
+                        ],
+                        [
+                            -112.76,
+                            36.32
+                        ],
+                        [
+                            -112.75,
+                            36.33
+                        ],
+                        [
+                            -112.68,
+                            36.28
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b2e8e0bced1a78c4717237cda9291b93688b5476.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.b2e8e0bced1a78c4717237cda9291b93688b5476.001.1",
+                "areaDesc": "Coconino, AZ",
+                "geocode": {
+                    "SAME": [
+                        "004005"
+                    ],
+                    "UGC": [
+                        "AZC005"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/AZC005"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bdd6d82b3b6f7ca65520ec1f510391aa68420292.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.bdd6d82b3b6f7ca65520ec1f510391aa68420292.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T16:43:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5559de079b0bc3bc886df674f39cda0f459323e0.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.5559de079b0bc3bc886df674f39cda0f459323e0.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-13T18:25:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-13T22:52:00-07:00",
+                "effective": "2026-09-13T22:52:00-07:00",
+                "onset": "2026-09-13T22:52:00-07:00",
+                "expires": "2026-09-14T05:00:00-07:00",
+                "ends": "2026-09-14T05:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Flagstaff AZ",
+                "headline": "Flash Flood Warning issued September 13 at 10:52PM MST until September 14 at 5:00AM MST by NWS Flagstaff AZ",
+                "description": "FFWFGZ\n\nThe National Weather Service in Flagstaff has extended the\n\n* Flash Flood Warning for...\nThe Havasu Creek basin in...\nCoconino County in north central Arizona...\n\n* Until 500 AM MST Monday.\n\n* At 1052 PM MST, Heavy rain has ended. Earlier between 0.5 and 1.5\ninches of rain have fallen. Flash flooding is ongoing.\n\nHAZARD...Life threatening flash flooding. Thunderstorms producing\nflash flooding in and around the Havasu Creek basin.\n\nSOURCE...Radar indicated.\n\nIMPACT...Life threatening flash flooding of areas in and around the\nHavasu Creek basin.\n\n* Some locations that will experience flash flooding include...\nLittle Navajo Falls, Mooney Falls, Beaver Falls, Hualapai Hilltop,\nHavasupai Reservation and Supai.\n\nThis includes the Colorado River between river miles 156 and 158.\n\nThis includes the following swimming holes...\nAll swimming holes on Havasu Creek near Supai.\n\nThis includes the following creeks, washes and rivers...\nColorado River, Sinyella Canyon, Heather Wash, Pasture Wash, Little\nCoyote Canyon, Havasu Creek and Black Tank Wash.",
+                "instruction": "Campers and hikers should hustle to higher ground immediately! Stay\naway from creeks and washes!\n\nFoot bridges will be washed out in Supai Campground. Some campsites\nwill be flooded. Campers may be stranded in portions of the\ncampground.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWFGZ"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS55 KFGZ 140552"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "flashFloodDamageThreat": [
+                        "CONSIDERABLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KFGZ.FF.W.0157.000000T0000Z-260914T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-14T05:00:00-07:00"
+                    ],
+                    "WEAHandling": [
+                        "Imminent Threat"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b9cbf3df7dc768c5647313c0323305c95564c3ee.001.1,2026-09-13T14:06:00-07:00"
+                    ],
+                    "CMAMtext": [
+                        "NWS: FLASH FLOOD WARNING this area til 5:00 AM MST. Avoid flooded areas."
+                    ],
+                    "CMAMlongtext": [
+                        "National Weather Service: A FLASH FLOOD WARNING is in effect for this area until 5:00 AM MST. This is a dangerous and life-threatening situation. Do not attempt to travel unless you are fleeing an area subject to flooding or under an evacuation order."
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-09-14T10:53:22+00:00"
+}
