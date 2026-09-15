@@ -1,0 +1,601 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.236a8ed8740ee1039bab55876819ec1e90ba85f8.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -95.04,
+                            41.6
+                        ],
+                        [
+                            -94.05,
+                            41.67
+                        ],
+                        [
+                            -94.07,
+                            41.43
+                        ],
+                        [
+                            -95.16,
+                            41.36
+                        ],
+                        [
+                            -95.15,
+                            41.51
+                        ],
+                        [
+                            -95.04,
+                            41.5
+                        ],
+                        [
+                            -95.04,
+                            41.6
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.236a8ed8740ee1039bab55876819ec1e90ba85f8.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.236a8ed8740ee1039bab55876819ec1e90ba85f8.001.1",
+                "areaDesc": "Adair, IA; Audubon, IA; Cass, IA; Dallas, IA; Guthrie, IA; Madison, IA",
+                "geocode": {
+                    "SAME": [
+                        "019001",
+                        "019009",
+                        "019029",
+                        "019049",
+                        "019077",
+                        "019121"
+                    ],
+                    "UGC": [
+                        "IAC001",
+                        "IAC009",
+                        "IAC029",
+                        "IAC049",
+                        "IAC077",
+                        "IAC121"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/IAC001",
+                    "https://api.weather.gov/zones/county/IAC009",
+                    "https://api.weather.gov/zones/county/IAC029",
+                    "https://api.weather.gov/zones/county/IAC049",
+                    "https://api.weather.gov/zones/county/IAC077",
+                    "https://api.weather.gov/zones/county/IAC121"
+                ],
+                "references": [],
+                "sent": "2026-09-15T03:01:00-05:00",
+                "effective": "2026-09-15T03:01:00-05:00",
+                "onset": "2026-09-15T03:01:00-05:00",
+                "expires": "2026-09-15T09:00:00-05:00",
+                "ends": "2026-09-15T09:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Des Moines IA",
+                "headline": "Flash Flood Warning issued September 15 at 3:01AM CDT until September 15 at 9:00AM CDT by NWS Des Moines IA",
+                "description": "FFWDMX\n\nThe National Weather Service in Des Moines has issued a\n\n* Flash Flood Warning for...\nSouthwestern Dallas County in central Iowa...\nNorthwestern Madison County in south central Iowa...\nNorthern Adair County in southwestern Iowa...\nNorthern Cass County in southwestern Iowa...\nSouthern Audubon County in west central Iowa...\nSouthern Guthrie County in west central Iowa...\n\n* Until 900 AM CDT.\n\n* At 301 AM CDT, Doppler radar and automated rain gauges indicate\nadditional thunderstorms will produce heavy rain across the warned\narea. Between 1 and 3 inches of rain have fallen. Additional\nrainfall amounts up to 1 inch are possible in the warned area.\nFlash flooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar and automated gauges indicate 1 to 3 inches have\nfallen, with more thunderstorms moving into the area.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nAtlantic, Stuart, Earlham, Anita, Exira, Redfield, Adair, Dexter,\nCasey, Diamondhead Lake, Menlo, Linden, Brayton, Marne, Wiota,\nAnita Municipal Airport, Lake Anita State Park and Atlantic\nMunicipal Airport.\n\nThis includes Interstate 80 between mile markers 100 and 106...and\nbetween mile markers 50 and 99.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nFor the latest stream observations and forecasts refer to\nweather.gov/desmoines/water.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWDMX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS53 KDMX 150801"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR AND GAUGE INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KDMX.FF.W.0031.260915T0801Z-260915T1400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-15T09:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01672c713f119f0dc2a43185189dab50fc0239e1.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01672c713f119f0dc2a43185189dab50fc0239e1.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.01672c713f119f0dc2a43185189dab50fc0239e1.002.1",
+                "areaDesc": "St Lawrence Island",
+                "geocode": {
+                    "SAME": [
+                        "002180"
+                    ],
+                    "UGC": [
+                        "AKZ827"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AKZ827"
+                ],
+                "references": [],
+                "sent": "2026-09-14T19:58:00-08:00",
+                "effective": "2026-09-14T19:58:00-08:00",
+                "onset": "2026-09-14T22:00:00-08:00",
+                "expires": "2026-09-15T16:00:00-08:00",
+                "ends": "2026-09-15T22:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Wind Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Fairbanks AK",
+                "headline": "High Wind Warning issued September 14 at 7:58PM AKDT until September 15 at 10:00PM AKDT by NWS Fairbanks AK",
+                "description": "* WHAT...Northeast winds 30 to 40 mph with gusts up to 60 mph\nexpected. Winds will shift to the northwest through the day on\nTuesday.\n\n* WHERE...St Lawrence Island.\n\n* WHEN...Until 10 PM AKDT Tuesday.\n\n* IMPACTS...High winds may move loose debris, damage property and\ncause power outages. Travel could be difficult.",
+                "instruction": "People are urged to secure loose objects that could be blown around\nor damaged by the wind.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWWCZ"
+                    ],
+                    "WMOidentifier": [
+                        "WWAK72 PAFG 150358"
+                    ],
+                    "NWSheadline": [
+                        "HIGH WIND WARNING IN EFFECT FROM 10 PM MONDAY TO 10 PM AKDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.PAFG.HW.W.0013.260915T0600Z-260916T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-15T22:00:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "HWW"
+                    ],
+                    "NationalWeatherService": [
+                        "HWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01672c713f119f0dc2a43185189dab50fc0239e1.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.01672c713f119f0dc2a43185189dab50fc0239e1.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.01672c713f119f0dc2a43185189dab50fc0239e1.001.2",
+                "areaDesc": "Yukon Delta Coast",
+                "geocode": {
+                    "SAME": [
+                        "002158"
+                    ],
+                    "UGC": [
+                        "AKZ825"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AKZ825"
+                ],
+                "references": [],
+                "sent": "2026-09-14T19:58:00-08:00",
+                "effective": "2026-09-14T19:58:00-08:00",
+                "onset": "2026-09-15T04:00:00-08:00",
+                "expires": "2026-09-15T16:00:00-08:00",
+                "ends": "2026-09-16T04:00:00-08:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Wind Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Fairbanks AK",
+                "headline": "High Wind Warning issued September 14 at 7:58PM AKDT until September 16 at 4:00AM AKDT by NWS Fairbanks AK",
+                "description": "* WHAT...South winds 30 to 40 mph with gusts up to 60 mph expected.\nWinds will shift to the west sometime late Tuesday morning to early\nTuesday afternoon.\n\n* WHERE...Yukon Delta Coast, particularly areas around Hooper Bay and\nChevak.\n\n* WHEN...From 4 AM Tuesday to 4 AM AKDT Wednesday.\n\n* IMPACTS...High winds may move loose debris, damage property and\ncause power outages. Travel could be difficult.",
+                "instruction": "People are urged to secure loose objects that could be blown around\nor damaged by the wind.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWWCZ"
+                    ],
+                    "WMOidentifier": [
+                        "WWAK72 PAFG 150358"
+                    ],
+                    "NWSheadline": [
+                        "HIGH WIND WARNING IN EFFECT FROM 4 AM TUESDAY TO 4 AM AKDT WEDNESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.PAFG.HW.W.0013.260915T1200Z-260916T1200Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-16T04:00:00-08:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "HWW"
+                    ],
+                    "NationalWeatherService": [
+                        "HWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eaebc1dc10a3b151feb5d9409aa319f1b2a47c4d.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eaebc1dc10a3b151feb5d9409aa319f1b2a47c4d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.eaebc1dc10a3b151feb5d9409aa319f1b2a47c4d.001.1",
+                "areaDesc": "Star Valley",
+                "geocode": {
+                    "SAME": [
+                        "056023"
+                    ],
+                    "UGC": [
+                        "WYZ023"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/WYZ023"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.10929723250af5c8f40e624ae924419b930cc482.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.10929723250af5c8f40e624ae924419b930cc482.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-14T15:35:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-14T21:18:00-06:00",
+                "effective": "2026-09-14T21:18:00-06:00",
+                "onset": "2026-09-15T03:00:00-06:00",
+                "expires": "2026-09-15T09:00:00-06:00",
+                "ends": "2026-09-15T09:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Freeze Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Riverton WY",
+                "headline": "Freeze Warning issued September 14 at 9:18PM MDT until September 15 at 9:00AM MDT by NWS Riverton WY",
+                "description": "* WHAT...Sub-freezing temperatures 26 to 30 degrees. Isolated cold\nprone areas dropping to 22 to 26 degrees.\n\n* WHERE...Star Valley.\n\n* WHEN...From 3 AM to 9 AM MDT Tuesday.\n\n* IMPACTS...Frost and freeze conditions could kill crops, other\nsensitive vegetation and possibly damage unprotected outdoor\nplumbing.\n\n* ADDITIONAL DETAILS...Foothill locations may see Tuesday morning\nlows closer to 32 degrees.",
+                "instruction": "Take steps now to protect tender plants from the cold.",
+                "response": "Execute",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWRIW"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS75 KRIW 150318"
+                    ],
+                    "NWSheadline": [
+                        "FREEZE WARNING REMAINS IN EFFECT FROM 3 AM TO 9 AM MDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KRIW.FZ.W.0007.260915T0900Z-260915T1500Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-15T09:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FZW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e9a96ad7a9c92f58ac3f118ca11262032aecf201.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.44,
+                            28.98
+                        ],
+                        [
+                            -82.48,
+                            29.02
+                        ],
+                        [
+                            -82.44,
+                            29.09
+                        ],
+                        [
+                            -82.37,
+                            29.07
+                        ],
+                        [
+                            -82.44,
+                            28.98
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e9a96ad7a9c92f58ac3f118ca11262032aecf201.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.e9a96ad7a9c92f58ac3f118ca11262032aecf201.001.1",
+                "areaDesc": "Citrus, FL; Levy, FL; Marion, FL",
+                "geocode": {
+                    "SAME": [
+                        "012017",
+                        "012075",
+                        "012083"
+                    ],
+                    "UGC": [
+                        "FLC017",
+                        "FLC075",
+                        "FLC083"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC017",
+                    "https://api.weather.gov/zones/county/FLC075",
+                    "https://api.weather.gov/zones/county/FLC083"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.adfe1096f92b947f235ff0eb0e1ea1470c9b298c.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.adfe1096f92b947f235ff0eb0e1ea1470c9b298c.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-14T13:40:00-04:00"
+                    }
+                ],
+                "sent": "2026-09-14T21:25:00-04:00",
+                "effective": "2026-09-14T21:25:00-04:00",
+                "onset": "2026-09-14T21:25:00-04:00",
+                "expires": "2026-09-15T14:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tampa Bay Ruskin FL",
+                "headline": "Flood Warning issued September 14 at 9:25PM EDT by NWS Tampa Bay Ruskin FL",
+                "description": "...The Flood Warning continues for the following rivers in Florida...\n\nWithlacoochee At US 41 Dunnellon affecting Marion, Citrus and Levy\nCounties.\n\n.Elevated water levels are expected along the river over the next\nseveral days due to recent heavy rainfall.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Withlacoochee at US 41 Dunnellon.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 28.2 feet, Docks and boat ramps flood along the river\nin Citrus and Marion counties.\n\n* ADDITIONAL DETAILS...\n- At 8:45 PM EDT Monday the stage was 28.2 feet.\n- Bankfull stage is 28.2 feet.\n- Forecast...The river is expected to rise above flood stage just\nafter midnight tonight and continue rising to 28.2 feet just\nafter midnight tonight. Additional rises are possible thereafter.\n- Flood stage is 28.2 feet.\n- Flood History...This crest compares to a previous crest of 28.4\nfeet on 08/05/2024.\n- https://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Tuesday afternoon at 200 PM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSTBW"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS82 KTBW 150125"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL FURTHER NOTICE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTBW.FL.W.0005.000000T0000Z-000000T0000Z/"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.af86237b3ddc796bba7667713ebd3e13e93f7a3f.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -81.94,
+                            27.26
+                        ],
+                        [
+                            -81.98,
+                            27.08
+                        ],
+                        [
+                            -82.02,
+                            27.08
+                        ],
+                        [
+                            -82.01,
+                            27.26
+                        ],
+                        [
+                            -81.94,
+                            27.26
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.af86237b3ddc796bba7667713ebd3e13e93f7a3f.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.af86237b3ddc796bba7667713ebd3e13e93f7a3f.001.1",
+                "areaDesc": "DeSoto, FL",
+                "geocode": {
+                    "SAME": [
+                        "012027"
+                    ],
+                    "UGC": [
+                        "FLC027"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC027"
+                ],
+                "references": [],
+                "sent": "2026-09-14T21:23:00-04:00",
+                "effective": "2026-09-14T21:23:00-04:00",
+                "onset": "2026-09-16T11:00:00-04:00",
+                "expires": "2026-09-15T14:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tampa Bay Ruskin FL",
+                "headline": "Flood Warning issued September 14 at 9:23PM EDT by NWS Tampa Bay Ruskin FL",
+                "description": "...The National Weather Service in Tampa Bay Ruskin has issued a\nFlood Warning for the following rivers in Florida...\n\nHorse Creek Near Arcadia at SR 72 affecting DeSoto County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Horse Creek near Arcadia at SR 72.\n\n* WHEN...From Wednesday morning until further notice.\n\n* IMPACTS...At 12.0 feet, The access road to Hidden Oak is\nimpassable.\n\n* ADDITIONAL DETAILS...\n- At 8:30 PM EDT Monday the stage was 9.3 feet.\n- Bankfull stage is 12.0 feet.\n- Forecast...The river is expected to rise above flood stage late\nWednesday morning and continue rising to 12.4 feet Thursday\nevening. Additional rises are possible thereafter.\n- Flood stage is 12.0 feet.\n- Flood History...This crest compares to a previous crest of 12.5\nfeet on 08/31/2002.\n- https://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Tuesday afternoon at 200 PM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWTBW"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS42 KTBW 150123"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM WEDNESDAY MORNING UNTIL FURTHER NOTICE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KTBW.FL.W.0006.260916T1500Z-000000T0000Z/"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-09-15T10:23:16+00:00"
+}
