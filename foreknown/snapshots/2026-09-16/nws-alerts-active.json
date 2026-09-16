@@ -1,0 +1,1814 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f4e7898c8d5c0ea6defa2778f2341ff4d64d12.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f4e7898c8d5c0ea6defa2778f2341ff4d64d12.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.36f4e7898c8d5c0ea6defa2778f2341ff4d64d12.001.1",
+                "areaDesc": "Northern Nye County - Mojave; Central Nevada - Toiyabe",
+                "geocode": {
+                    "SAME": [
+                        "032023",
+                        "032011",
+                        "032015"
+                    ],
+                    "UGC": [
+                        "NVZ426",
+                        "NVZ427"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/NVZ426",
+                    "https://api.weather.gov/zones/fire/NVZ427"
+                ],
+                "references": [],
+                "sent": "2026-09-16T02:46:00-07:00",
+                "effective": "2026-09-16T02:46:00-07:00",
+                "onset": "2026-09-16T11:00:00-07:00",
+                "expires": "2026-09-16T11:00:00-07:00",
+                "ends": "2026-09-16T20:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Elko NV",
+                "headline": "Red Flag Warning issued September 16 at 2:46AM PDT until September 16 at 8:00PM PDT by NWS Elko NV",
+                "description": "...RED FLAG WARNING FOR FWZ 426 & 427 WEDNESDAY...\n\n...RED FLAG WARNING REMAINS IN EFFECT FROM 11\nAM TO 8 PM PDT THURSDAY FOR DRY, WINDY CONDITIONS FOR FIRE\nWEATHER ZONES 426 AND 427...\n\nThe National Weather Service in Elko has issued a Red Flag\nWarning, which is in effect from 11 AM to 8 PM PDT Thursday.\n\n* AFFECTED AREA...Fire weather zones 426 and 427.\n\n* WIND...Sustained southerly winds of 20-25 mph with gusts of\n30-35 mph.\n\n* HUMIDITY...Afternoon values of 10-15% possible\n\n* IMPACTS...any fires that develop will likely spread rapidly.\nOutdoor burning is not recommended.",
+                "instruction": "A red flag warning means that critical fire weather conditions\nare either occurring now, or will shortly. A combination of\nstrong winds, low relative humidity, and warm temperatures can\ncontribute to extreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWLKN"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KLKN 160946"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM THIS MORNING TO 8 PM PDT THIS EVENING FOR DRY, WINDY CONDITIONS FOR FIRE WEATHER ZONES 426 AND 427"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KLKN.FW.W.0012.260916T1800Z-260917T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-16T20:00:00-07:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5e5aa5f21944b69f27788f83cd4bfce3f0ba7980.001.2,2026-09-15T12:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9869913f1fd30d2fac32e92b5bf41a9aed5066f5.001.1,2026-09-15T12:40:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cb9a38bb797b6c6df83322f4444ae3442afe4ab.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -95.37,
+                            40.81
+                        ],
+                        [
+                            -95.3,
+                            40.89
+                        ],
+                        [
+                            -95.28,
+                            40.95
+                        ],
+                        [
+                            -95.28,
+                            40.98
+                        ],
+                        [
+                            -95.25,
+                            41.02
+                        ],
+                        [
+                            -95.26,
+                            41.04
+                        ],
+                        [
+                            -95.2,
+                            41.1
+                        ],
+                        [
+                            -95.21,
+                            41.14
+                        ],
+                        [
+                            -95.19,
+                            41.16
+                        ],
+                        [
+                            -95.15,
+                            41.16
+                        ],
+                        [
+                            -95.16,
+                            41.12
+                        ],
+                        [
+                            -95.19,
+                            41.07
+                        ],
+                        [
+                            -95.23,
+                            41.04
+                        ],
+                        [
+                            -95.21,
+                            41.01
+                        ],
+                        [
+                            -95.25,
+                            40.98
+                        ],
+                        [
+                            -95.27,
+                            40.86
+                        ],
+                        [
+                            -95.3,
+                            40.84
+                        ],
+                        [
+                            -95.3,
+                            40.82
+                        ],
+                        [
+                            -95.31,
+                            40.8
+                        ],
+                        [
+                            -95.33,
+                            40.8
+                        ],
+                        [
+                            -95.37,
+                            40.81
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2cb9a38bb797b6c6df83322f4444ae3442afe4ab.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.2cb9a38bb797b6c6df83322f4444ae3442afe4ab.001.1",
+                "areaDesc": "Montgomery, IA",
+                "geocode": {
+                    "SAME": [
+                        "019137"
+                    ],
+                    "UGC": [
+                        "IAC137"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/IAC137"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7360b537cf9b79a58cc8c751e431705209f43b03.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.7360b537cf9b79a58cc8c751e431705209f43b03.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T16:11:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-16T04:46:00-05:00",
+                "effective": "2026-09-16T04:46:00-05:00",
+                "onset": "2026-09-16T04:46:00-05:00",
+                "expires": "2026-09-17T10:45:00-05:00",
+                "ends": "2026-09-17T10:41:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Omaha/Valley NE",
+                "headline": "Flood Warning issued September 16 at 4:46AM CDT until September 17 at 10:41AM CDT by NWS Omaha/Valley NE",
+                "description": "...The Flood Warning is extended for the following rivers in Iowa...\n\nEast Nishnabotna River At Red Oak affecting Montgomery County.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...East Nishnabotna River at Red Oak.\n\n* WHEN...Until Thursday morning.\n\n* IMPACTS...At 20.0 feet, Lowland flooding begins along the west\nbank.\n\n* ADDITIONAL DETAILS...\n- At 4:00 AM CDT Wednesday the stage was 20.2 feet.\n- Bankfull stage is 18.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 4:00 AM CDT Wednesday was 20.2 feet.\n- Forecast...The river is expected to fall below flood stage late\nthis afternoon and continue falling to 7.7 feet early Monday\nmorning.\n- Flood stage is 18.0 feet.\n- Flood History...This crest compares to a previous crest of 20.3\nfeet on 05/29/1962.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nMotorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nAdditional information is available at water.noaa.gov.\n\nThe next statement will be issued Thursday morning at 1045 AM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSOAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KOAX 160946"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL THURSDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KOAX.FL.W.0006.000000T0000Z-260917T1541Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-17T10:41:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f4e7898c8d5c0ea6defa2778f2341ff4d64d12.001.2",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f4e7898c8d5c0ea6defa2778f2341ff4d64d12.001.2",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.36f4e7898c8d5c0ea6defa2778f2341ff4d64d12.001.2",
+                "areaDesc": "Northern Nye County - Mojave; Central Nevada - Toiyabe",
+                "geocode": {
+                    "SAME": [
+                        "032023",
+                        "032011",
+                        "032015"
+                    ],
+                    "UGC": [
+                        "NVZ426",
+                        "NVZ427"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/fire/NVZ426",
+                    "https://api.weather.gov/zones/fire/NVZ427"
+                ],
+                "references": [],
+                "sent": "2026-09-16T02:46:00-07:00",
+                "effective": "2026-09-16T02:46:00-07:00",
+                "onset": "2026-09-17T11:00:00-07:00",
+                "expires": "2026-09-16T11:00:00-07:00",
+                "ends": "2026-09-17T20:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Red Flag Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Elko NV",
+                "headline": "Red Flag Warning issued September 16 at 2:46AM PDT until September 17 at 8:00PM PDT by NWS Elko NV",
+                "description": "...RED FLAG WARNING FOR FWZ 426 & 427 WEDNESDAY...\n\n...RED FLAG WARNING REMAINS IN EFFECT FROM 11\nAM TO 8 PM PDT THURSDAY FOR DRY, WINDY CONDITIONS FOR FIRE\nWEATHER ZONES 426 AND 427...\n\nThe National Weather Service in Elko has issued a Red Flag\nWarning, which is in effect from 11 AM to 8 PM PDT Thursday.\n\n* AFFECTED AREA...Fire weather zones 426 and 427.\n\n* WIND...Sustained southerly winds of 20-25 mph with gusts of\n30-35 mph.\n\n* HUMIDITY...Afternoon values of 10-15% possible\n\n* IMPACTS...any fires that develop will likely spread rapidly.\nOutdoor burning is not recommended.",
+                "instruction": "A red flag warning means that critical fire weather conditions\nare either occurring now, or will shortly. A combination of\nstrong winds, low relative humidity, and warm temperatures can\ncontribute to extreme fire behavior.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "RFWLKN"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS85 KLKN 160946"
+                    ],
+                    "NWSheadline": [
+                        "RED FLAG WARNING REMAINS IN EFFECT FROM 11 AM THIS MORNING TO 8 PM PDT THIS EVENING FOR DRY, WINDY CONDITIONS FOR FIRE WEATHER ZONES 426 AND 427"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KLKN.FW.W.0013.260917T1800Z-260918T0300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-17T20:00:00-07:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5e5aa5f21944b69f27788f83cd4bfce3f0ba7980.001.1,2026-09-15T12:48:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d5ec8312d0a1433763f84708197da8af5f3c0c2.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.24,
+                            41.16
+                        ],
+                        [
+                            -94.7,
+                            41.16
+                        ],
+                        [
+                            -94.7,
+                            41.5
+                        ],
+                        [
+                            -94.24,
+                            41.5
+                        ],
+                        [
+                            -94.24,
+                            41.16
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3d5ec8312d0a1433763f84708197da8af5f3c0c2.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.3d5ec8312d0a1433763f84708197da8af5f3c0c2.001.1",
+                "areaDesc": "Adair, IA",
+                "geocode": {
+                    "SAME": [
+                        "019001"
+                    ],
+                    "UGC": [
+                        "IAC001"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/IAC001"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.542f600c01f6429eeca558948952045075eb2492.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.542f600c01f6429eeca558948952045075eb2492.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T15:30:00-05:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7c82d702fc88e589d8af40e38251ff8c829a9c42.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.7c82d702fc88e589d8af40e38251ff8c829a9c42.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T20:10:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-16T04:17:00-05:00",
+                "effective": "2026-09-16T04:17:00-05:00",
+                "onset": "2026-09-16T04:17:00-05:00",
+                "expires": "2026-09-16T15:30:00-05:00",
+                "ends": "2026-09-16T15:30:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Des Moines IA",
+                "headline": "Flood Warning issued September 16 at 4:17AM CDT until September 16 at 3:30PM CDT by NWS Des Moines IA",
+                "description": "* WHAT...Small stream flooding caused by excessive rainfall\ncontinues.\n\n* WHERE...Adair County in southwestern Iowa...\n\n* WHEN...Until 330 PM CDT Wednesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 414 AM CDT, numerous roads remain closed in the warned area,\nwith water nearing Highway 25 south of Greenfield. Flooding is\nalready occurring. Between 2 and 4 inches of rain have fallen.\n- An additional 1 inch or more is possible in the warned area\nthrough this morning. Impacted streams include the Middle River.\n- Some locations that will experience flooding include...\nGreenfield, Stuart, Adair, Fontanelle, Orient, Bridgewater,\nGreenfield Municipal Airport and Nodaway Park.\n- This includes Interstate 80 between mile markers 73 and 96.",
+                "instruction": "Be aware of your surroundings and do not drive on flooded roads.\n\nFor the latest stream observations and forecasts refer to\nweather.gov/desmoines/water.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSDMX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KDMX 160917"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL 330 PM CDT THIS AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KDMX.FA.W.0007.000000T0000Z-260916T2030Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-16T15:30:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.30fab1908c866dc23ba9c1af580381af47b55865.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -93.6,
+                            41.56
+                        ],
+                        [
+                            -93.68,
+                            41.54
+                        ],
+                        [
+                            -93.68,
+                            41.59
+                        ],
+                        [
+                            -93.61,
+                            41.6
+                        ],
+                        [
+                            -93.6,
+                            41.56
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.30fab1908c866dc23ba9c1af580381af47b55865.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.30fab1908c866dc23ba9c1af580381af47b55865.001.1",
+                "areaDesc": "Polk, IA",
+                "geocode": {
+                    "SAME": [
+                        "019153"
+                    ],
+                    "UGC": [
+                        "IAC153"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/IAC153"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c249e171a9259b51ccdd9ebdbc976aa7d0beb8e9.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.c249e171a9259b51ccdd9ebdbc976aa7d0beb8e9.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T21:17:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-16T04:13:00-05:00",
+                "effective": "2026-09-16T04:13:00-05:00",
+                "onset": "2026-09-16T04:13:00-05:00",
+                "expires": "2026-09-16T16:00:00-05:00",
+                "ends": "2026-09-17T02:23:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Des Moines IA",
+                "headline": "Flood Warning issued September 16 at 4:13AM CDT until September 17 at 2:23AM CDT by NWS Des Moines IA",
+                "description": "...The Flood Warning continues for the following rivers in Iowa...\n\nRaccoon River at Des Moines Fleur Dr affecting Polk County.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Raccoon River at Des Moines Fleur Dr, or from Walnut Creek\nto the Des Moines River.\n\n* WHEN...Until late tonight.\n\n* IMPACTS...At 15.5 feet, Water approaches Fleur Dr and affects the\nGrays Lake trails.\n\n* ADDITIONAL DETAILS...\n- At 3:47 AM CDT Wednesday the stage was 15.1 feet, and falling.\n- Forecast...The river is expected to fall below flood stage this\nevening and continue falling to 3.7 feet Tuesday evening.\n- Flood stage is 12.0 feet.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nFor the latest stream observations and forecasts refer to\nweather.gov/desmoines/water.\n\nRiver forecasts include observed precipitation plus forecast\nprecipitation over the next 24 hours.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSDMX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KDMX 160913"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL LATE TONIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KDMX.FL.W.0020.000000T0000Z-260917T0723Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-17T02:23:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a647bfc7e4e9f7f58678d810ee1d3f0ba8a5aa88.001.1,2026-09-15T13:45:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e3ade3e55730d2673a56e6ba2c0e7154f067d06.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -84.8,
+                            40.71
+                        ],
+                        [
+                            -84.46,
+                            40.67
+                        ],
+                        [
+                            -84.46,
+                            40.38
+                        ],
+                        [
+                            -84.8,
+                            40.39
+                        ],
+                        [
+                            -84.8,
+                            40.71
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e3ade3e55730d2673a56e6ba2c0e7154f067d06.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.7e3ade3e55730d2673a56e6ba2c0e7154f067d06.001.1",
+                "areaDesc": "Mercer, OH",
+                "geocode": {
+                    "SAME": [
+                        "039107"
+                    ],
+                    "UGC": [
+                        "OHC107"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/OHC107"
+                ],
+                "references": [],
+                "sent": "2026-09-16T03:09:00-04:00",
+                "effective": "2026-09-16T03:09:00-04:00",
+                "onset": "2026-09-16T03:09:00-04:00",
+                "expires": "2026-09-16T07:00:00-04:00",
+                "ends": "2026-09-16T07:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Wilmington OH",
+                "headline": "Flash Flood Warning issued September 16 at 3:09AM EDT until September 16 at 7:00AM EDT by NWS Wilmington OH",
+                "description": "FFWILN\n\nThe National Weather Service in Wilmington has issued a\n\n* Flash Flood Warning for...\nMercer County in west central Ohio...\n\n* Until 700 AM EDT.\n\n* At 309 AM EDT, radar indicated thunderstorms producing heavy rain\nacross the warned area. Between 1.5 and 3 inches of rain have\nfallen. Additional rainfall amounts of 1 to 1.5 inches are possible\nin the warned area. Flash flooding is ongoing or expected to begin\nshortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that may experience flash flooding include...\nCelina, Coldwater, St. Henry, Fort Recovery, Rockford, Wabash,\nMendon, Chickasaw, Montezuma, Tama, Carthagena, Neptune,\nChattanooga and Maria Stein.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nTo report flash flooding, go to our website at weather.gov/iln and\nsubmit your report via social media, when you can do so safely.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWILN"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS51 KILN 160709"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KILN.FF.W.0088.260916T0709Z-260916T1100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-16T07:00:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b98da7478ea1400b0aefea88dfe444b3496c90d6.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -93.3,
+                            39.51
+                        ],
+                        [
+                            -93.21,
+                            39.53
+                        ],
+                        [
+                            -93.07,
+                            39.38
+                        ],
+                        [
+                            -93.13,
+                            39.38
+                        ],
+                        [
+                            -93.27,
+                            39.45
+                        ],
+                        [
+                            -93.3,
+                            39.51
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b98da7478ea1400b0aefea88dfe444b3496c90d6.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.b98da7478ea1400b0aefea88dfe444b3496c90d6.001.1",
+                "areaDesc": "Carroll, MO; Chariton, MO",
+                "geocode": {
+                    "SAME": [
+                        "029033",
+                        "029041"
+                    ],
+                    "UGC": [
+                        "MOC033",
+                        "MOC041"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC033",
+                    "https://api.weather.gov/zones/county/MOC041"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:45:00-05:00",
+                "effective": "2026-09-15T22:45:00-05:00",
+                "onset": "2026-09-18T17:17:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-21T00:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:45PM CDT until September 21 at 12:00AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nGrand River near Brunswick affecting Chariton and Carroll Counties.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Grand River near Brunswick.\n\n* WHEN...From Friday afternoon to late Sunday night.\n\n* IMPACTS...At 19.0 feet, Flooding of low-lying areas occurs along\nthe west bank of the Grand River near the U.S. Highway 24 bridge\nabout 1 mile west of Brunswick.\n\n* ADDITIONAL DETAILS...\n- There is no current observed data.\n- Forecast...The river is expected to rise above flood stage Friday\nafternoon to a crest of 19.7 feet Saturday morning. It will then\nfall below flood stage late Saturday evening.\n- Flood stage is 19.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160345"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM FRIDAY AFTERNOON TO LATE SUNDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0186.260918T2217Z-260921T0500Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-21T00:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.47b4e7066ac010274d315e5d3389caaadf5c3cf8.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -93.63,
+                            39.83
+                        ],
+                        [
+                            -93.43,
+                            39.78
+                        ],
+                        [
+                            -93.43,
+                            39.67
+                        ],
+                        [
+                            -93.67,
+                            39.74
+                        ],
+                        [
+                            -93.63,
+                            39.83
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.47b4e7066ac010274d315e5d3389caaadf5c3cf8.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.47b4e7066ac010274d315e5d3389caaadf5c3cf8.001.1",
+                "areaDesc": "Linn, MO; Livingston, MO",
+                "geocode": {
+                    "SAME": [
+                        "029115",
+                        "029117"
+                    ],
+                    "UGC": [
+                        "MOC115",
+                        "MOC117"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC115",
+                    "https://api.weather.gov/zones/county/MOC117"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:44:00-05:00",
+                "effective": "2026-09-15T22:44:00-05:00",
+                "onset": "2026-09-16T20:00:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-19T04:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:44PM CDT until September 19 at 4:00AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nGrand River near Chillicothe affecting Linn and Livingston\nCounties.\n\n* WHAT...Moderate flooding is forecast.\n\n* WHERE...Grand River near Chillicothe.\n\n* WHEN...From Wednesday evening to late Friday night.\n\n* IMPACTS...At 24.0 feet, Low-lying cropland floods. At 28.0 feet,\nRural roads are under water.\n\n* ADDITIONAL DETAILS...\n- At 9:45 PM CDT Tuesday the stage was 6.3 feet.\n- Forecast...The river is expected to rise above flood stage\ntomorrow evening to a crest of 29.4 feet Thursday morning. It\nwill then fall below flood stage early Friday morning.\n- Flood stage is 24.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160344 RRA"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM WEDNESDAY EVENING TO LATE FRIDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0184.260917T0100Z-260919T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-19T04:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a712fe4a34a19792d5106afe53370213a6b697e.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.1,
+                            39.96
+                        ],
+                        [
+                            -93.99,
+                            40.04
+                        ],
+                        [
+                            -93.63,
+                            39.83
+                        ],
+                        [
+                            -93.67,
+                            39.74
+                        ],
+                        [
+                            -94.1,
+                            39.96
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a712fe4a34a19792d5106afe53370213a6b697e.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1a712fe4a34a19792d5106afe53370213a6b697e.001.1",
+                "areaDesc": "Daviess, MO; Livingston, MO",
+                "geocode": {
+                    "SAME": [
+                        "029061",
+                        "029117"
+                    ],
+                    "UGC": [
+                        "MOC061",
+                        "MOC117"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC061",
+                    "https://api.weather.gov/zones/county/MOC117"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:44:00-05:00",
+                "effective": "2026-09-15T22:44:00-05:00",
+                "onset": "2026-09-16T18:10:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-19T08:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:44PM CDT until September 19 at 8:00AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nGrand River near Gallatin affecting Daviess and Livingston\nCounties.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Grand River near Gallatin.\n\n* WHEN...From Wednesday evening to Saturday morning.\n\n* IMPACTS...At 26.0 feet, Low-lying woodlands and farmland along the\nriver flood.\n\n* ADDITIONAL DETAILS...\n- At 9:45 PM CDT Tuesday the stage was 5.1 feet.\n- Forecast...The river will rise above flood stage tomorrow evening\nto 28.3 feet early Thursday morning. It will then fall Thursday\nmorning. It will rise to 28.9 feet Thursday evening. It will then\nfall below flood stage Friday morning.\n- Flood stage is 26.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160344"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM WEDNESDAY EVENING TO SATURDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0183.260916T2310Z-260919T1300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-19T08:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.63491043fd7ab9cc301b0776a1ba0ce9a2d6dc35.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -93.43,
+                            39.67
+                        ],
+                        [
+                            -93.43,
+                            39.78
+                        ],
+                        [
+                            -93.27,
+                            39.7
+                        ],
+                        [
+                            -93.21,
+                            39.53
+                        ],
+                        [
+                            -93.3,
+                            39.51
+                        ],
+                        [
+                            -93.43,
+                            39.67
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.63491043fd7ab9cc301b0776a1ba0ce9a2d6dc35.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.63491043fd7ab9cc301b0776a1ba0ce9a2d6dc35.001.1",
+                "areaDesc": "Carroll, MO; Chariton, MO; Linn, MO; Livingston, MO",
+                "geocode": {
+                    "SAME": [
+                        "029033",
+                        "029041",
+                        "029115",
+                        "029117"
+                    ],
+                    "UGC": [
+                        "MOC033",
+                        "MOC041",
+                        "MOC115",
+                        "MOC117"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC033",
+                    "https://api.weather.gov/zones/county/MOC041",
+                    "https://api.weather.gov/zones/county/MOC115",
+                    "https://api.weather.gov/zones/county/MOC117"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:44:00-05:00",
+                "effective": "2026-09-15T22:44:00-05:00",
+                "onset": "2026-09-17T00:09:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-21T02:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:44PM CDT until September 21 at 2:00AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nGrand River near Sumner affecting Linn, Chariton, Carroll and\nLivingston Counties.\n\n* WHAT...Moderate flooding is forecast.\n\n* WHERE...Grand River near Sumner.\n\n* WHEN...From late Wednesday night to late Sunday night.\n\n* IMPACTS...At 23.0 feet, Bottomland 1 to 2 miles south of the gage\nbegins to flood. At 26.0 feet, Rural land adjacent to the river is\nflooded. At 28.0 feet, Rural roads are under water.\n\n* ADDITIONAL DETAILS...\n- At 9:45 PM CDT Tuesday the stage was 7.7 feet.\n- Forecast...The river is expected to rise above flood stage early\nThursday morning to a crest of 33.7 feet Thursday evening. It\nwill then fall below flood stage early Sunday morning.\n- Flood stage is 26.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160344 RRB"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM LATE WEDNESDAY NIGHT TO LATE SUNDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0185.260917T0509Z-260921T0700Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-21T02:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc7eec6dd70bc73f8d3763435bb182e9df86703d.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94,
+                            40.04
+                        ],
+                        [
+                            -94.1,
+                            39.96
+                        ],
+                        [
+                            -94.45,
+                            40.14
+                        ],
+                        [
+                            -94.33,
+                            40.2
+                        ],
+                        [
+                            -94,
+                            40.04
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bc7eec6dd70bc73f8d3763435bb182e9df86703d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.bc7eec6dd70bc73f8d3763435bb182e9df86703d.001.1",
+                "areaDesc": "Daviess, MO; Gentry, MO",
+                "geocode": {
+                    "SAME": [
+                        "029061",
+                        "029075"
+                    ],
+                    "UGC": [
+                        "MOC061",
+                        "MOC075"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC061",
+                    "https://api.weather.gov/zones/county/MOC075"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:43:00-05:00",
+                "effective": "2026-09-15T22:43:00-05:00",
+                "onset": "2026-09-16T13:49:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-18T12:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:43PM CDT until September 18 at 12:00PM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nGrand River near Pattonsburg affecting Daviess and Gentry Counties.\n\n* WHAT...Moderate flooding is forecast.\n\n* WHERE...Grand River near Pattonsburg.\n\n* WHEN...From Wednesday afternoon to Friday afternoon.\n\n* IMPACTS...At 25.0 feet, Low-lying farmland begins to flood. At 30.0\nfeet, Nearly all agricultural land and secondary roads in the Grand\nRiver floodplain flood. At 32.0 feet, U.S. Highway 69 south of\nPattonsburg floods.\n\n* ADDITIONAL DETAILS...\n- At 10:30 PM CDT Tuesday the stage was 6.3 feet.\n- Forecast...The river is expected to rise above flood stage early\ntomorrow afternoon to a crest of 31.8 feet early Thursday\nmorning. It will then fall below flood stage early Thursday\nafternoon.\n- Flood stage is 25.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160343"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM WEDNESDAY AFTERNOON TO FRIDAY AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0182.260916T1849Z-260918T1700Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-18T12:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea29188fb7b04634c50619c9228e46ae3e7f7bb8.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.79,
+                            39.39
+                        ],
+                        [
+                            -94.76,
+                            39.35
+                        ],
+                        [
+                            -94.81,
+                            39.27
+                        ],
+                        [
+                            -94.84,
+                            39.29
+                        ],
+                        [
+                            -94.83,
+                            39.33
+                        ],
+                        [
+                            -94.79,
+                            39.39
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea29188fb7b04634c50619c9228e46ae3e7f7bb8.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.ea29188fb7b04634c50619c9228e46ae3e7f7bb8.001.1",
+                "areaDesc": "Platte, MO",
+                "geocode": {
+                    "SAME": [
+                        "029165"
+                    ],
+                    "UGC": [
+                        "MOC165"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC165"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:42:00-05:00",
+                "effective": "2026-09-15T22:42:00-05:00",
+                "onset": "2026-09-18T17:48:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-21T14:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:42PM CDT until September 21 at 2:00PM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nPlatte River near Platte City affecting Platte County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Platte River near Platte City.\n\n* WHEN...From Friday afternoon to Monday afternoon.\n\n* IMPACTS...At 20.0 feet, Cropland near State Highway 92 near Platte\nCity begins to flood. At 22.0 feet, Flooding occurs at Humphreys\nAccess Area which is located 5 miles downstream from Platte City.\n300 acres of pasture are also flooded.\n\n* ADDITIONAL DETAILS...\n- At 9:30 PM CDT Tuesday the stage was 3.6 feet.\n- Forecast...The river will rise to 7.4 feet early tomorrow\nafternoon. It will then fall to 7.3 feet tomorrow evening. It\nwill rise above flood stage Friday afternoon to 22.7 feet early\nSunday morning. It will then fall below flood stage early Sunday\nafternoon.\n- Flood stage is 20.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160342"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM FRIDAY AFTERNOON TO MONDAY AFTERNOON"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0181.260918T2248Z-260921T1900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-21T14:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.de03dc12995507f74aa97a2502010177f77e45d9.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.8,
+                            39.77
+                        ],
+                        [
+                            -94.71,
+                            39.77
+                        ],
+                        [
+                            -94.64,
+                            39.51
+                        ],
+                        [
+                            -94.64,
+                            39.41
+                        ],
+                        [
+                            -94.72,
+                            39.41
+                        ],
+                        [
+                            -94.8,
+                            39.77
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.de03dc12995507f74aa97a2502010177f77e45d9.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.de03dc12995507f74aa97a2502010177f77e45d9.001.1",
+                "areaDesc": "Buchanan, MO",
+                "geocode": {
+                    "SAME": [
+                        "029021"
+                    ],
+                    "UGC": [
+                        "MOC021"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC021"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:41:00-05:00",
+                "effective": "2026-09-15T22:41:00-05:00",
+                "onset": "2026-09-16T17:07:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-19T23:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:41PM CDT until September 19 at 11:00PM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nPlatte River near Agency affecting Buchanan County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Platte River near Agency.\n\n* WHEN...From Wednesday afternoon to Saturday evening.\n\n* IMPACTS...At 20.0 feet, Low-lying areas east of Agency begin to\nflood. At 25.0 feet, Flooding begins at the east border of Agency.\n\n* ADDITIONAL DETAILS...\n- At 9:30 PM CDT Tuesday the stage was 8.0 feet.\n- Forecast...The river is expected to rise above flood stage\ntomorrow afternoon to a crest of 24.7 feet Thursday morning. It\nwill then fall below flood stage late Friday evening.\n- Flood stage is 20.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160341"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM WEDNESDAY AFTERNOON TO SATURDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0179.260916T2207Z-260920T0400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-19T23:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.37b7495daad7b92c187b278c5b55300cd2cc75ec.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -94.74,
+                            39.41
+                        ],
+                        [
+                            -94.64,
+                            39.41
+                        ],
+                        [
+                            -94.76,
+                            39.35
+                        ],
+                        [
+                            -94.79,
+                            39.39
+                        ],
+                        [
+                            -94.74,
+                            39.41
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.37b7495daad7b92c187b278c5b55300cd2cc75ec.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.37b7495daad7b92c187b278c5b55300cd2cc75ec.001.1",
+                "areaDesc": "Platte, MO",
+                "geocode": {
+                    "SAME": [
+                        "029165"
+                    ],
+                    "UGC": [
+                        "MOC165"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MOC165"
+                ],
+                "references": [],
+                "sent": "2026-09-15T22:41:00-05:00",
+                "effective": "2026-09-15T22:41:00-05:00",
+                "onset": "2026-09-18T23:48:00-05:00",
+                "expires": "2026-09-16T22:45:00-05:00",
+                "ends": "2026-09-21T04:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Kansas City/Pleasant Hill MO",
+                "headline": "Flood Warning issued September 15 at 10:41PM CDT until September 21 at 4:00AM CDT by NWS Kansas City/Pleasant Hill MO",
+                "description": "...The National Weather Service in Kansas City/Pleasant Hill has\nissued a Flood Warning for the following rivers in Missouri...\n\nPlatte River At Sharps Station affecting Platte County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Platte River at Sharps Station.\n\n* WHEN...From Friday evening to late Sunday night.\n\n* IMPACTS...At 26.0 feet, Low-lying rural land along the river begins\nto flood. At 29.0 feet, Backwater from the Platte River floods\nHighway KK along the Little Platte River at the location 0.2 miles\neast of Highway B.\n\n* ADDITIONAL DETAILS...\n- At 9:30 PM CDT Tuesday the stage was 9.7 feet.\n- Forecast...The river will rise to 9.8 feet just after midnight\ntonight. It will then fall to 9.3 feet early tomorrow afternoon.\nIt will rise above flood stage late Friday evening to 28.0 feet\nSaturday evening. It will then fall below flood stage early\nSunday morning.\n- Flood stage is 26.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWEAX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KEAX 160341 RRA"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM FRIDAY EVENING TO LATE SUNDAY NIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KEAX.FL.W.0180.260919T0448Z-260921T0900Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-21T04:00:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90b2f24f03b83ebcc081783ace3364473da54707.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -82.44,
+                            28.98
+                        ],
+                        [
+                            -82.48,
+                            29.02
+                        ],
+                        [
+                            -82.44,
+                            29.09
+                        ],
+                        [
+                            -82.37,
+                            29.07
+                        ],
+                        [
+                            -82.44,
+                            28.98
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90b2f24f03b83ebcc081783ace3364473da54707.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.90b2f24f03b83ebcc081783ace3364473da54707.001.1",
+                "areaDesc": "Citrus, FL; Levy, FL; Marion, FL",
+                "geocode": {
+                    "SAME": [
+                        "012017",
+                        "012075",
+                        "012083"
+                    ],
+                    "UGC": [
+                        "FLC017",
+                        "FLC075",
+                        "FLC083"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC017",
+                    "https://api.weather.gov/zones/county/FLC075",
+                    "https://api.weather.gov/zones/county/FLC083"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a80641a01f9fe34c9e77eedc53cf3d18feff0ae8.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a80641a01f9fe34c9e77eedc53cf3d18feff0ae8.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T11:40:00-04:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5dda5410ce25e7a16b20fb8e29cfbee2de4e37c.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.e5dda5410ce25e7a16b20fb8e29cfbee2de4e37c.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T11:52:00-04:00"
+                    }
+                ],
+                "sent": "2026-09-15T21:33:00-04:00",
+                "effective": "2026-09-15T21:33:00-04:00",
+                "onset": "2026-09-15T21:33:00-04:00",
+                "expires": "2026-09-16T14:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tampa Bay Ruskin FL",
+                "headline": "Flood Warning issued September 15 at 9:33PM EDT by NWS Tampa Bay Ruskin FL",
+                "description": "...The Flood Warning continues for the following rivers in Florida...\n\nWithlacoochee At US 41 Dunnellon affecting Levy, Marion and Citrus\nCounties.\n\nHorse Creek Near Arcadia at SR 72 affecting DeSoto County.\n\n.Elevated water levels are expected along a few rivers across the\narea over the next several days.\n\n* WHAT...Minor flooding is occurring and is forecast to continue.\n\n* WHERE...Withlacoochee at US 41 Dunnellon.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 28.2 feet, Docks and boat ramps flood along the river\nin Citrus and Marion counties.\n\n* ADDITIONAL DETAILS...\n- At 8:45 PM EDT Tuesday the stage was 28.2 feet.\n- Bankfull stage is 28.2 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:45 PM EDT Tuesday was 28.2 feet.\n- Forecast...The river is expected to remain steady above flood\nstage at 28.2 feet.\n- Flood stage is 28.2 feet.\n- Flood History...This crest compares to a previous crest of 28.2\nfeet on 06/29/2003.\n- https://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Wednesday afternoon at 200 PM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSTBW"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS82 KTBW 160133"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL FURTHER NOTICE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTBW.FL.W.0005.000000T0000Z-000000T0000Z/"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e9a96ad7a9c92f58ac3f118ca11262032aecf201.001.1,2026-09-14T21:25:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.adfe1096f92b947f235ff0eb0e1ea1470c9b298c.001.1,2026-09-14T13:40:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90b2f24f03b83ebcc081783ace3364473da54707.002.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -81.94,
+                            27.26
+                        ],
+                        [
+                            -81.98,
+                            27.08
+                        ],
+                        [
+                            -82.02,
+                            27.08
+                        ],
+                        [
+                            -82.01,
+                            27.26
+                        ],
+                        [
+                            -81.94,
+                            27.26
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.90b2f24f03b83ebcc081783ace3364473da54707.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.90b2f24f03b83ebcc081783ace3364473da54707.002.1",
+                "areaDesc": "DeSoto, FL",
+                "geocode": {
+                    "SAME": [
+                        "012027"
+                    ],
+                    "UGC": [
+                        "FLC027"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC027"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a80641a01f9fe34c9e77eedc53cf3d18feff0ae8.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a80641a01f9fe34c9e77eedc53cf3d18feff0ae8.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T11:40:00-04:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5dda5410ce25e7a16b20fb8e29cfbee2de4e37c.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.e5dda5410ce25e7a16b20fb8e29cfbee2de4e37c.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-15T11:52:00-04:00"
+                    }
+                ],
+                "sent": "2026-09-15T21:33:00-04:00",
+                "effective": "2026-09-15T21:33:00-04:00",
+                "onset": "2026-09-17T20:00:00-04:00",
+                "expires": "2026-09-16T14:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tampa Bay Ruskin FL",
+                "headline": "Flood Warning issued September 15 at 9:33PM EDT by NWS Tampa Bay Ruskin FL",
+                "description": "...The Flood Warning continues for the following rivers in Florida...\n\nWithlacoochee At US 41 Dunnellon affecting Levy, Marion and Citrus\nCounties.\n\nHorse Creek Near Arcadia at SR 72 affecting DeSoto County.\n\n.Elevated water levels are expected along a few rivers across the\narea over the next several days.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Horse Creek near Arcadia at SR 72.\n\n* WHEN...From Thursday evening until further notice.\n\n* IMPACTS...At 12.0 feet, The access road to Hidden Oak is\nimpassable.\n\n* ADDITIONAL DETAILS...\n- At 8:30 PM EDT Tuesday the stage was 9.8 feet.\n- Bankfull stage is 12.0 feet.\n- Forecast...The river is expected to rise above flood stage\nThursday evening and continue rising to a crest of 12.1 feet\nearly Friday morning.\n- Flood stage is 12.0 feet.\n- Flood History...This crest compares to a previous crest of 12.1\nfeet on 09/30/2003.\n- https://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Wednesday afternoon at 200 PM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSTBW"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS82 KTBW 160133"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT FROM THURSDAY EVENING UNTIL FURTHER NOTICE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTBW.FL.W.0006.260918T0000Z-000000T0000Z/"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.af86237b3ddc796bba7667713ebd3e13e93f7a3f.001.1,2026-09-14T21:23:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-09-16T10:14:13+00:00"
+}
