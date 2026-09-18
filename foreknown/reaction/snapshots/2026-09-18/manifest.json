@@ -1,0 +1,21 @@
+{
+  "entries": [
+    {
+      "bytes": 67733,
+      "file": "foreknown/reaction/snapshots/2026-09-18/fts-funding-2026.json",
+      "http_status": 200,
+      "retrieved_at": "2026-09-18T10:02:35+00:00",
+      "sha256": "15e674fd31f405fd0729612a478387ab668188a53d939ff1020ac78c9020bd3b",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?year=2026&groupby=plan"
+    },
+    {
+      "bytes": 4268,
+      "file": "foreknown/reaction/snapshots/2026-09-18/fips-country.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-09-18T10:02:36+00:00",
+      "sha256": "5c749d1e447b47be45de78702ab49e9697cc54a0bf058f13664cdbe5c71beec1",
+      "url": "https://www.gdeltproject.org/data/lookups/FIPS.country.txt"
+    }
+  ],
+  "run_date": "2026-09-18"
+}
