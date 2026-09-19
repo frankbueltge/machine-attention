@@ -15,9 +15,13 @@ Rules (docs/2026-08-08-foreknown-001-audit-und-entwurf.md):
 
 from __future__ import annotations
 
+import re
 from datetime import date, datetime, timedelta, timezone
 
 from ..preserve import utc_now
+
+_EPISODE_RE = re.compile(r"episodeid=(\d+)")
+_EVENT_RE = re.compile(r"eventid=(\d+)")
 
 OPEN = "OPEN"
 CLOSED_BY_SOURCE = "CLOSED_BY_SOURCE"
@@ -189,6 +193,50 @@ def drought_window_crossings(registry: dict, day: str) -> list[dict]:
             crossings.append({"future": fid, "from_class": prior_state["class"],
                               "to_class": today_state["class"], "run_date": day})
     return crossings
+
+
+def source_ref_episode_drift(registry: dict, gdacs_feed: dict) -> list[dict]:
+    """Every OPEN, revised GDACS future whose stored `source_ref` names an
+    episode GDACS has since moved past.
+
+    Implements the machine's own proposal `sensor-source-ref-episode-drift`
+    (foreknown/proposals/, difference observation of 2026-09-18; promoted
+    2026-09-19): `source_ref` is set once, at NOTARIZED, from the feed's
+    `url.report` and is not a TRACKED_FIELD, so it never moves again even
+    though that URL embeds GDACS's own current `episodeid` for the event.
+    A future revised since notarization can end up citing a report page for
+    an episode the source has already superseded. Read from the stored
+    source_ref and tonight's own preserved feed bytes alone — no extra
+    state, and a future GDACS never re-episodes never fires.
+    """
+    current_episode: dict[str, object] = {}
+    for feature in (gdacs_feed or {}).get("features", []):
+        properties = feature.get("properties", {})
+        event_id = properties.get("eventid")
+        if event_id is not None:
+            current_episode[str(event_id)] = properties.get("episodeid")
+
+    drift = []
+    for fid, future in sorted(registry.get("futures", {}).items()):
+        if future.get("source") != "GDACS" or future.get("status") != OPEN:
+            continue
+        if not any(event.get("event") == "REVISED"
+                   for event in future.get("history") or []):
+            continue
+        source_ref = future.get("source_ref") or ""
+        stored_match = _EPISODE_RE.search(source_ref)
+        event_match = _EVENT_RE.search(source_ref)
+        if not stored_match or not event_match:
+            continue
+        current = current_episode.get(event_match.group(1))
+        if current is None:
+            continue
+        stored_episode, current_episode_id = int(stored_match.group(1)), int(current)
+        if current_episode_id != stored_episode:
+            drift.append({"future": fid, "stored_episode": stored_episode,
+                          "current_episode": current_episode_id,
+                          "gap": current_episode_id - stored_episode})
+    return drift
 
 
 def update_registry(registry: dict, observed: list[dict],

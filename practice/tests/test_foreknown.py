@@ -8,7 +8,8 @@ from practice.foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
                                         DROUGHT_FROZEN, DROUGHT_IRREGULAR,
                                         DROUGHT_ROLLING, drought_window_class,
                                         drought_window_crossings, is_overdue,
-                                        overdue_kind, update_registry,
+                                        overdue_kind, source_ref_episode_drift,
+                                        update_registry,
                                         window_to_at_notarization)
 from practice.foreknown.run import run
 from practice.preserve import read_json
@@ -219,6 +220,48 @@ def test_drought_window_crossings_catches_a_rolling_drought_that_stalls():
                           "from_class": DROUGHT_ROLLING,
                           "to_class": DROUGHT_IRREGULAR,
                           "run_date": "2026-08-11"}]
+
+
+def _gdacs_revised_future(source_ref: str) -> dict:
+    return {"source": "GDACS", "status": "OPEN", "source_ref": source_ref,
+            "history": [{"ts": "2026-08-22T05:58:52+00:00", "event": "NOTARIZED"},
+                       {"ts": "2026-08-23T06:00:16+00:00", "event": "REVISED",
+                        "changes": {}}]}
+
+
+def test_source_ref_episode_drift_fires_when_the_feed_moved_past_the_stored_episode():
+    """Implements the machine's own proposal sensor-source-ref-episode-drift:
+    source_ref is set once at NOTARIZED and never reassigned, so a future
+    revised after GDACS issues a new episode keeps citing the stale one."""
+    registry = {"futures": {"gdacs-tc-1001305": _gdacs_revised_future(
+        "https://www.gdacs.org/report.aspx?eventid=1001305&episodeid=15&eventtype=TC")}}
+    feed = {"features": [{"properties": {"eventid": 1001305, "episodeid": 47}}]}
+    assert source_ref_episode_drift(registry, feed) == [
+        {"future": "gdacs-tc-1001305", "stored_episode": 15,
+         "current_episode": 47, "gap": 32}]
+
+
+def test_source_ref_episode_drift_is_silent_when_the_episode_still_matches():
+    registry = {"futures": {"gdacs-fl-1104124": _gdacs_revised_future(
+        "https://www.gdacs.org/report.aspx?eventid=1104124&episodeid=3&eventtype=FL")}}
+    feed = {"features": [{"properties": {"eventid": 1104124, "episodeid": 3}}]}
+    assert source_ref_episode_drift(registry, feed) == []
+
+
+def test_source_ref_episode_drift_ignores_unrevised_closed_and_non_gdacs_futures():
+    unrevised = {"source": "GDACS", "status": "OPEN",
+                "source_ref": "https://www.gdacs.org/report.aspx?eventid=1&episodeid=1",
+                "history": [{"ts": "2026-08-22T05:58:52+00:00", "event": "NOTARIZED"}]}
+    closed = _gdacs_revised_future(
+        "https://www.gdacs.org/report.aspx?eventid=2&episodeid=1")
+    closed["status"] = "CLOSED_BY_SOURCE"
+    non_gdacs = _gdacs_revised_future("https://www.nhc.noaa.gov/")
+    non_gdacs["source"] = "NHC"
+    non_gdacs["source_ref"] = "https://www.nhc.noaa.gov/"
+    registry = {"futures": {"a": unrevised, "b": closed, "c": non_gdacs}}
+    feed = {"features": [{"properties": {"eventid": 1, "episodeid": 9}},
+                         {"properties": {"eventid": 2, "episodeid": 9}}]}
+    assert source_ref_episode_drift(registry, feed) == []
 
 
 class FakeClient:
