@@ -18,5 +18,26 @@
     "foreknown/proposals/sensor-resolution-reappearance-coverage.json",
     "foreknown/proposals/sensor-source-reconfirmation-blind-spot.json"
   ],
-  "status": "PROPOSED"
+  "status": "PROMOTED",
+  "promotion": {
+    "date": "2026-09-19",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the proposal's own bar: a mechanical, stateless comparison against already-committed bytes, with no threshold or multiple-night wait named in its test_rule, whose 10 confirmed instances were already the finding the night it was written (obs-2026-09-18-1.json). Re-run tonight, a later night, against the same committed registry.json and the newest preserved foreknown/snapshots/2026-09-18/gdacs.json (no notary run had yet posted for 2026-09-19 at the time of this pass), the test_rule reproduces the identical 10 futures and gaps obs-2026-09-18-1.json reported, unchanged because the underlying committed record has not moved since: gdacs-tc-1001305 (15->47, gap 32), gdacs-fl-1104121 (2->14, gap 12), gdacs-fl-1104081 (7->18, gap 11), gdacs-tc-1001297 (51->55, gap 4), gdacs-dr-1018332 (18->21, gap 3), gdacs-dr-1018431 (11->14, gap 3), gdacs-dr-1027450 (5->8, gap 3), gdacs-dr-1027465 (2->5, gap 3), gdacs-dr-1027449 (6->8, gap 2), gdacs-wf-1030252 (39->40, gap 1).",
+    "implemented_in": [
+      "practice/src/practice/foreknown/futures.py, source_ref_episode_drift()",
+      "practice/src/practice/foreknown/run.py, source_ref_drift field wired into run.json as source_ref_episode_drift",
+      "practice/tests/test_foreknown.py, test_source_ref_episode_drift_* "
+    ],
+    "test_rule_held": "verified by direct computation against foreknown/registry.json (current) and foreknown/snapshots/2026-09-18/gdacs.json: same 10 futures, same stored/current episode pairs and gaps obs-2026-09-18-1.json first reported. The function is unit-tested against fixed fixtures (drift, no-drift, and the unrevised/closed/non-GDACS exclusions the definition and falsification clause both name) rather than only against tonight's live data, so the check keeps firing correctly once the underlying record does move.",
+    "kept_unchanged": "definition, test_rule and falsification are the machine's text from 2026-09-18 and match the code as written: episodeid/eventid read from source_ref by the same regex shape the test_rule specifies, matched against the newest preserved GDACS snapshot's properties.eventid, scoped to OPEN GDACS futures with at least one REVISED event, no threshold added. Neither falsification condition has occurred -- update_registry()'s TRACKED_FIELDS (futures.py) still does not include source_ref, and no maintainer note declares source_ref a permanent, first-episode anchor -- so the gap this sensor watches for is still open, which is why it is promoted running as-is rather than retired.",
+    "evidence": [
+      "foreknown/registry.json",
+      "foreknown/snapshots/2026-09-18/gdacs.json",
+      "foreknown/proposals/obs-2026-09-18-1.json",
+      "practice/src/practice/foreknown/futures.py",
+      "practice/src/practice/foreknown/run.py",
+      "practice/tests/test_foreknown.py",
+      "autonomy/log.jsonl"
+    ]
+  }
 }

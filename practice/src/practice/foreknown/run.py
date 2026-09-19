@@ -20,7 +20,7 @@ from ..preserve import Snapshot, read_json, write_json
 from . import reaction, sources
 from .futures import (COLD_START_OVERDUE, DRIFT_OVERDUE, drought_window_class,
                       drought_window_crossings, is_overdue, overdue_kind,
-                      update_registry)
+                      source_ref_episode_drift, update_registry)
 from .resolve import lead_time_pathway_idle, resolve_pending
 
 # How many past UTC days of the attention series a nightly run completes.
@@ -115,6 +115,15 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
             primary_iso3_dropped.append({"future": fid,
                                          "dropped_iso3": dropped})
 
+    # The machine's proposal sensor-source-ref-episode-drift: source_ref is
+    # set once at NOTARIZED from GDACS's url.report and never reassigned,
+    # but that URL embeds a live episodeid GDACS moves forward each time it
+    # re-episodes the event. Fires on any OPEN, revised GDACS future whose
+    # stored citation link (the one stage/generate.py prints as "the
+    # source's own report") no longer names the source's current episode.
+    # Promoted 2026-09-19.
+    source_ref_drift = source_ref_episode_drift(registry, parsed_feeds.get("GDACS") or {})
+
     # The machine's proposal sensor-drought-window-class-crossing: two
     # classes of drought episode established across nights of observation
     # (rolling — window.to advances a calendar day per calendar day elapsed;
@@ -154,6 +163,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "open_total": len(open_futures),
         "overdue": sorted(overdue),
         "primary_iso3_dropped": primary_iso3_dropped,
+        "source_ref_episode_drift": source_ref_drift,
         "overdue_cold_start": sorted(f for f, k in kinds.items()
                                      if k == COLD_START_OVERDUE),
         "overdue_drift": sorted(f for f, k in kinds.items()
@@ -171,6 +181,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "resolved": len(resolutions),
         "open_total": len(open_futures), "failures": len(failures),
         "overdue_drift": sum(1 for k in kinds.values() if k == DRIFT_OVERDUE),
+        "source_ref_episode_drift": len(source_ref_drift),
         "match_rate": reaction_summary.get("match_rate")})
     return {"date": day, "observed": len(observed), "failures": len(failures),
             **{k: len(v) for k, v in summary.items()},
