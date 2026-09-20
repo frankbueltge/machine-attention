@@ -18,6 +18,7 @@ Every figure is recomputed here from committed records; nothing is typed.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 from .foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
@@ -85,12 +86,29 @@ def figures(repo_root: Path) -> list[dict]:
     readings = sorted((repo_root / "darkocean" / "readings").glob("*.json"))
     continuity = sorted((repo_root / "darkocean" / "continuity").glob("*.json"))
     memoryhole = sorted((repo_root / "memoryhole" / "readings").glob("*.json"))
-    # The continuity notary's whole output is a count and a null. Both are
-    # summed over every committed night, so the figure cannot quietly become
-    # "last night was fine" — a divergence, once found, stays on the record.
+    # The continuity notary answers with a count of rows re-asked and a list of
+    # catches. Both are read over every committed night, so the figure cannot
+    # quietly become "last night was fine" — a divergence, once found, stays on
+    # the record.
+    #
+    # Rechecks are events and are summed. Divergences are PRODUCTS and are
+    # counted once each: a product gone from the catalog is caught again every
+    # night it stays gone, so summing per-night lengths reports the same finding
+    # afresh each morning and climbs while nothing new has happened. The four
+    # products first caught on 2026-09-03 stand in 2026-09-04 and 2026-09-05
+    # too, and summing read them as 12. "Stays on the record" means the finding
+    # must not disappear, not that it must be recounted.
     probes = [read_json(path, {}) for path in continuity]
     rechecks = sum(int(probe.get("answered") or 0) for probe in probes)
-    divergences = sum(len(probe.get("catches") or []) for probe in probes)
+    caught: set[str] = set()
+    for probe in probes:
+        for entry in probe.get("catches") or []:
+            # Every committed catch carries an id. A catch without one is kept
+            # distinct rather than collapsed, so a shape change loses no finding.
+            identifier = entry.get("id") if isinstance(entry, dict) else None
+            caught.add(str(identifier) if identifier is not None
+                       else json.dumps(entry, sort_keys=True, default=str))
+    divergences = len(caught)
     # A resolution whose future was already historical at first sight closes
     # a record, not a cycle. The practice reports both numbers or neither.
     watched = sum(1 for r in resolutions if r.get("cold_start") is False)
