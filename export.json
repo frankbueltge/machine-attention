@@ -2,93 +2,93 @@
   "$contract": "attention-export/1",
   "figures": [
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_under_watch",
-      "value": 104
+      "value": 132
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_window_open",
-      "value": 14
+      "value": 42
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_cold_start",
       "value": 89
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_drift",
       "value": 1
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_notarized_total",
-      "value": 398
+      "value": 435
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_resolved",
-      "value": 295
+      "value": 305
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_resolved_under_watch",
-      "value": 273
+      "value": 283
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "materialized",
       "value": 0
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "nights_on_record",
-      "value": 38
-    },
-    {
-      "as_of": "2026-09-18",
-      "key": "darkocean_nights_on_record",
-      "value": 41
-    },
-    {
-      "as_of": "2026-09-18",
-      "key": "darkocean_continuity_rechecks",
-      "value": 33638
-    },
-    {
-      "as_of": "2026-09-18",
-      "key": "darkocean_continuity_divergences",
-      "value": 268
-    },
-    {
-      "as_of": "2026-09-17",
-      "key": "memoryhole_nights_on_record",
-      "value": 33
+      "value": 39
     },
     {
       "as_of": "2026-09-19",
+      "key": "darkocean_nights_on_record",
+      "value": 42
+    },
+    {
+      "as_of": "2026-09-19",
+      "key": "darkocean_continuity_rechecks",
+      "value": 35294
+    },
+    {
+      "as_of": "2026-09-19",
+      "key": "darkocean_continuity_divergences",
+      "value": 289
+    },
+    {
+      "as_of": "2026-09-18",
+      "key": "memoryhole_nights_on_record",
+      "value": 34
+    },
+    {
+      "as_of": "2026-09-20",
       "key": "sources_in_register",
       "value": 3
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_notarized_gdacs",
       "value": 113
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_notarized_nhc",
-      "value": 13
+      "value": 15
     },
     {
-      "as_of": "2026-09-19",
+      "as_of": "2026-09-20",
       "key": "futures_notarized_nws",
-      "value": 272
+      "value": 307
     }
   ],
   "generated_from": {
-    "commit": "dde8362",
+    "commit": "5b57f99",
     "repo": "machine-attention"
   },
   "practice": {
