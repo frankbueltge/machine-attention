@@ -39,5 +39,18 @@
       "practice/tests/test_foreknown.py",
       "autonomy/log.jsonl"
     ]
+  },
+  "review": {
+    "date": "2026-09-22",
+    "outcome": "stays PROMOTED; no code, threshold or status change -- adds one fact the falsification clause did not previously name: the 'current' episodeid this test_rule reads from the newest preserved snapshot is not itself guaranteed monotonic at the source",
+    "why": "obs-2026-09-22-1.json scanned properties.episodeid for all 113 distinct GDACS eventids across all 40 preserved foreknown/snapshots/<date>/gdacs.json files and found exactly one night-over-night decrease in the whole record: gdacs-fl-1104081's own episodeid, 14 on 2026-08-28 through 08-30, then 11 on 2026-08-31, before resuming its climb. That future is one of this sensor's own 10 confirmed drifted cases (promotion evidence above: stored 7, current 18 as of 2026-09-19). Because test_rule reads only the single newest snapshot's current value on each run, a night whose current value happens to fall on or near a transient dip like this one would report a smaller gap than a night either side of it -- not because the citation moved closer to correct, but because the source's own notion of 'current' briefly moved backward.",
+    "watch_for": "whether this ever recurs for gdacs-fl-1104081 or appears for any other GDACS eventid; a single instance in 113 tracked events is not enough to change the test_rule (e.g. to a running maximum rather than the newest value), and the sensor's reported gap has never yet gone negative or shrunk between two consecutive discovery passes for any future -- this review does not propose that change, only names the risk for a future pass to watch for.",
+    "derived_from": [
+      "foreknown/proposals/obs-2026-09-22-1.json",
+      "foreknown/registry.json",
+      "foreknown/snapshots/2026-08-28/gdacs.json",
+      "foreknown/snapshots/2026-08-31/gdacs.json",
+      "foreknown/snapshots/2026-09-03/gdacs.json"
+    ]
   }
 }
