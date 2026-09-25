@@ -17,6 +17,7 @@ import json
 import re
 import sys
 import tempfile
+from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -1278,6 +1279,33 @@ def check_anchors(root: Path, problems: list[str]) -> None:
         problems.append(f"client backup committed: {leftover.relative_to(root)}")
 
 
+def _closed_at(history: list[dict], resolved_at: str | None) -> bool:
+    """Whether the future's last history event at or before resolved_at is a
+    closure (CLOSED_BY_SOURCE or DISSIPATED)."""
+    if not resolved_at:
+        return False
+
+    def as_utc(ts: str) -> datetime | None:
+        try:
+            parsed = datetime.fromisoformat(ts)
+        except (TypeError, ValueError):
+            return None
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+
+    cutoff = as_utc(resolved_at)
+    if cutoff is None:
+        return False
+    last = None
+    for event in history:
+        ts = as_utc(event.get("ts", ""))
+        if ts is not None and ts <= cutoff:
+            last = event
+    return last is not None and last.get("event") in ("CLOSED_BY_SOURCE",
+                                                      "DISSIPATED")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -1326,10 +1354,13 @@ def check(root: Path) -> list[str]:
         # not an error. So the hole this check watches for is a resolution
         # with no matching closure in history at all — not a future that was
         # genuinely closed at resolved_at and only later came back.
-        closed_at_resolution = any(
-            event.get("event") in ("CLOSED_BY_SOURCE", "DISSIPATED")
-            and event.get("ts") == resolution.get("resolved_at")
-            for event in future.get("history", []))
+        # "Closed at resolved_at" means the last history event at or before
+        # resolved_at is a closure. futures.py and resolve.py each call
+        # utc_now() separately, so the closure's ts and resolved_at can differ
+        # by a second (50 of 352 committed resolutions do); demanding string
+        # equality broke the notary run the first time one of those reappeared.
+        closed_at_resolution = _closed_at(future.get("history", []),
+                                          resolution.get("resolved_at"))
         if future.get("status") == "OPEN" and not closed_at_resolution:
             problems.append(f"resolution {fid}: future is still OPEN")
         if resolution.get("verdict") not in VALID_VERDICTS:

@@ -91,3 +91,22 @@ def test_a_currently_closed_future_with_a_resolution_is_still_clean(tmp_path):
     root = _write(tmp_path, _future(reappeared=False), _resolution(resolved_at=CLOSED_TS))
     problems = verify.check(root)
     assert not any("still OPEN" in p for p in problems), problems
+
+
+def test_a_closure_a_second_before_resolved_at_then_reappeared_is_not_a_hole(tmp_path):
+    # The shape of nws-kdvn-flw-0067-26 in foreknown/registry.json:
+    # CLOSED_BY_SOURCE at 10:18:20, resolved_at 10:18:21 (two utc_now()
+    # calls), then REAPPEARED on a later run — which failed the notary run.
+    root = _write(tmp_path, _future(reappeared=True),
+                  _resolution(resolved_at="2026-08-25T06:04:46+00:00"))
+    problems = verify.check(root)
+    assert not any("still OPEN" in p for p in problems), problems
+
+
+def test_a_resolution_written_after_the_reappearance_is_still_a_hole(tmp_path):
+    # The last event at or before resolved_at is REAPPEARED, not a closure:
+    # the resolution claims a closure that no longer held when it was written.
+    root = _write(tmp_path, _future(reappeared=True),
+                  _resolution(resolved_at="2026-08-28T00:00:00+00:00"))
+    problems = verify.check(root)
+    assert any(f"resolution {FID}: future is still OPEN" in p for p in problems), problems

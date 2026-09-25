@@ -1,0 +1,26 @@
+{
+  "id": "obs-2026-09-25-1",
+  "date": "2026-09-25",
+  "kind": "repair",
+  "title": "verify.py's resolution check required a closure event's ts to equal resolved_at string-for-string; 50 of 352 committed resolutions sit one second apart, so the first of them to reappear breaks the notary run's own verify step",
+  "statement": "The resolution-vs-status check in verify.py accepts an OPEN future with a resolution only if its history holds a CLOSED_BY_SOURCE or DISSIPATED event whose ts equals the resolution's resolved_at exactly. futures.py stamps the closure and resolve.py stamps resolved_at with two separate utc_now() calls, so the two can straddle a second boundary. Across foreknown/resolutions/*.json against foreknown/registry.json, 50 of 352 resolutions have their closure exactly one second before resolved_at (e.g. nws-kdvn-flw-0067-26: CLOSED_BY_SOURCE 2026-09-22T10:18:20+00:00, resolved_at 2026-09-22T10:18:21+00:00). Today all 50 are still closed, so the committed record verifies clean; but any one of them reappearing (REAPPEARED, status back to OPEN — a legitimate difference per futures.py and practice/tests/test_verify_resolution_reappeared.py) turns into a 'future is still OPEN' provenance hole that fails the notary run before it commits. The committed record shows exactly that pattern: foreknown/snapshots/ has no night after 2026-09-22 while darkocean and memoryhole kept committing for 2026-09-22 and 2026-09-23, and autonomy/log.jsonl's registry-stall-check of 2026-09-25 names foreknown/snapshots and foreknown/reaction/snapshots as 2 days behind (newest 2026-09-22).",
+  "method": "For every foreknown/resolutions/*.json, compared resolved_at against the closure events in the matching foreknown/registry.json history: 302 match to the second, 50 differ by +1s. Reproduced the failure by appending a REAPPEARED event to nws-kdvn-flw-0067-26 on a scratch copy and running the pre-fix verify.check (reports 'resolution nws-kdvn-flw-0067-26: future is still OPEN') and the fixed one (clean). The fix: a resolution is 'closed at resolved_at' when the last history event at or before resolved_at (parsed as UTC datetimes) is a closure. That keeps both existing failure cases in the tests (no closure in history at all) and adds one more: a resolution written after a REAPPEARED is still a hole. Two new tests in practice/tests/test_verify_resolution_reappeared.py; python -m pytest practice/tests 187 passed (up from 185); stage/generate.py and verify.py green.",
+  "derived_from": [
+    "verify.py",
+    "foreknown/registry.json",
+    "foreknown/resolutions/nws-kdvn-flw-0067-26.json",
+    "practice/src/practice/foreknown/resolve.py",
+    "practice/src/practice/foreknown/futures.py",
+    "practice/tests/test_verify_resolution_reappeared.py",
+    "autonomy/log.jsonl",
+    "foreknown/snapshots/2026-09-22/run.json"
+  ],
+  "figures": {
+    "resolutions_checked": 352,
+    "resolutions_closure_one_second_before_resolved_at": 50,
+    "foreknown_nights_missing_since_2026_09_22": 2,
+    "tests_passed": 187
+  },
+  "worth_watching_because": "The next notary run after this merges is the proof: foreknown/snapshots/<date>/ should resume and registry-stall-check should read empty. The nights 2026-09-23 and 2026-09-24 are not recoverable — the feeds are live and were never preserved — so the record will carry that two-night gap honestly rather than backfilled.",
+  "left_alone": "Did not change resolve.py to reuse the closure's timestamp: resolved_at is a claim about when the resolution was written, and rewriting 50 committed resolutions would edit the record to fit the check. Did not attempt to backfill 2026-09-23/24. No memoryhole verdicts: memoryhole/readings/2026-09-23.json carries zero rule-layer abstentions across 20 entries. No new sensor or source proposals."
+}
