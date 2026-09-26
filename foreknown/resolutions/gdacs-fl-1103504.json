@@ -1,0 +1,421 @@
+{
+  "cold_start": true,
+  "evidence": [
+    "foreknown/snapshots/2026-08-08/gdacs.json"
+  ],
+  "future": "gdacs-fl-1103504",
+  "measured": {
+    "episode_days": 9.5,
+    "episode_window": {
+      "from": "2025-09-16T01:00:00",
+      "to": "2025-09-25T14:00:00"
+    },
+    "escalated": false,
+    "revisions": 0,
+    "severity_path": [
+      "Orange"
+    ]
+  },
+  "reaction": {
+    "limits": [
+      "the money figures are the response plans' own annual totals for every country they list; none of it was raised for this hazard and no part of it is attributable to this future",
+      "attention is measured for the future's countries, not for the hazard — a second event in the same country moves the same number",
+      "the series covers the nights this future was source-open under watch, which for a cold start is shorter than its announced window",
+      "a funding movement inside the watch happened in the same period as the warning, which is not the same as because of it"
+    ],
+    "measured": {
+      "attention_peak": {
+        "articles": 16701,
+        "date": "2026-09-12",
+        "ratio_to_baseline": 17.24
+      },
+      "money_funded_delta_usd": 36692705,
+      "money_funded_first_usd": 433514577,
+      "money_funded_last_usd": 470207282,
+      "money_requirements_last_usd": 2162563336,
+      "nights_watched": 42
+    },
+    "nights": [
+      {
+        "articles": 5511,
+        "attention_day": "2026-08-07",
+        "date": "2026-08-08",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 433514577,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 4.05
+      },
+      {
+        "articles": 5511,
+        "attention_day": "2026-08-07",
+        "date": "2026-08-09",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 433514577,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 4.05
+      },
+      {
+        "articles": 3614,
+        "attention_day": "2026-08-11",
+        "date": "2026-08-12",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 434734581,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 1.87
+      },
+      {
+        "articles": 6758,
+        "attention_day": "2026-08-12",
+        "date": "2026-08-13",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 434734581,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 3.5
+      },
+      {
+        "articles": 6758,
+        "attention_day": "2026-08-12",
+        "date": "2026-08-14",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 434734581,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 3.5
+      },
+      {
+        "articles": 3921,
+        "attention_day": "2026-08-13",
+        "date": "2026-08-15",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 437742587,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.03
+      },
+      {
+        "articles": 3898,
+        "attention_day": "2026-08-14",
+        "date": "2026-08-16",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 437742587,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.02
+      },
+      {
+        "articles": 4574,
+        "attention_day": "2026-08-15",
+        "date": "2026-08-17",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 437742587,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.07
+      },
+      {
+        "articles": 1752,
+        "attention_day": "2026-08-16",
+        "date": "2026-08-18",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 436606233,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.71
+      },
+      {
+        "articles": 2929,
+        "attention_day": "2026-08-17",
+        "date": "2026-08-19",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 436606233,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 1.19
+      },
+      {
+        "articles": 2344,
+        "attention_day": "2026-08-18",
+        "date": "2026-08-20",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 475939944,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.92
+      },
+      {
+        "articles": 804,
+        "attention_day": "2026-08-19",
+        "date": "2026-08-21",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427134939,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.32
+      },
+      {
+        "articles": 1018,
+        "attention_day": "2026-08-20",
+        "date": "2026-08-22",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427126933,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.41
+      },
+      {
+        "articles": 756,
+        "attention_day": "2026-08-21",
+        "date": "2026-08-23",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427126933,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.3
+      },
+      {
+        "articles": 676,
+        "attention_day": "2026-08-22",
+        "date": "2026-08-24",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427126933,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.28
+      },
+      {
+        "articles": 218,
+        "attention_day": "2026-08-23",
+        "date": "2026-08-25",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427126933,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.09
+      },
+      {
+        "articles": 437,
+        "attention_day": "2026-08-24",
+        "date": "2026-08-26",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427126933,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.2
+      },
+      {
+        "articles": 341,
+        "attention_day": "2026-08-27",
+        "date": "2026-08-28",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427252984,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.17
+      },
+      {
+        "articles": 220,
+        "attention_day": "2026-08-28",
+        "date": "2026-08-29",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427252984,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.11
+      },
+      {
+        "articles": 190,
+        "attention_day": "2026-08-29",
+        "date": "2026-08-30",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427252984,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.14
+      },
+      {
+        "articles": 813,
+        "attention_day": "2026-08-30",
+        "date": "2026-08-31",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427252984,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.59
+      },
+      {
+        "articles": 279,
+        "attention_day": "2026-08-31",
+        "date": "2026-09-01",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 427252984,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.2
+      },
+      {
+        "articles": 1726,
+        "attention_day": "2026-09-01",
+        "date": "2026-09-02",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 432462630,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 1.24
+      },
+      {
+        "articles": 466,
+        "attention_day": "2026-09-02",
+        "date": "2026-09-03",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 437884462,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.27
+      },
+      {
+        "articles": 2372,
+        "attention_day": "2026-09-05",
+        "date": "2026-09-06",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438050776,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.45
+      },
+      {
+        "articles": 1231,
+        "attention_day": "2026-09-06",
+        "date": "2026-09-07",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438050776,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 1.27
+      },
+      {
+        "articles": 2052,
+        "attention_day": "2026-09-07",
+        "date": "2026-09-08",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438050776,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.12
+      },
+      {
+        "articles": 7000,
+        "attention_day": "2026-09-08",
+        "date": "2026-09-09",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438050776,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 7.22
+      },
+      {
+        "articles": 4415,
+        "attention_day": "2026-09-09",
+        "date": "2026-09-10",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438050776,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 4.56
+      },
+      {
+        "articles": 7415,
+        "attention_day": "2026-09-10",
+        "date": "2026-09-11",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438329287,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 7.65
+      },
+      {
+        "articles": 16701,
+        "attention_day": "2026-09-11",
+        "date": "2026-09-12",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438551441,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 17.24
+      },
+      {
+        "articles": 11067,
+        "attention_day": "2026-09-12",
+        "date": "2026-09-13",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438551441,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 11.42
+      },
+      {
+        "articles": 8663,
+        "attention_day": "2026-09-13",
+        "date": "2026-09-14",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 438551441,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 8.94
+      },
+      {
+        "articles": 7134,
+        "attention_day": "2026-09-14",
+        "date": "2026-09-15",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 437705503,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 7.36
+      },
+      {
+        "articles": 9733,
+        "attention_day": "2026-09-15",
+        "date": "2026-09-16",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 437705503,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 10.04
+      },
+      {
+        "articles": 7576,
+        "attention_day": "2026-09-16",
+        "date": "2026-09-17",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 446050374,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 7.82
+      },
+      {
+        "articles": 9098,
+        "attention_day": "2026-09-17",
+        "date": "2026-09-18",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 444680374,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 8.09
+      },
+      {
+        "articles": 3741,
+        "attention_day": "2026-09-18",
+        "date": "2026-09-19",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 444680374,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.53
+      },
+      {
+        "articles": 5066,
+        "attention_day": "2026-09-19",
+        "date": "2026-09-20",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 444680374,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 2.68
+      },
+      {
+        "articles": 6654,
+        "attention_day": "2026-09-20",
+        "date": "2026-09-21",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 448550374,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 3.01
+      },
+      {
+        "articles": 5187,
+        "attention_day": "2026-09-21",
+        "date": "2026-09-22",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 470207282,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 1.86
+      },
+      {
+        "articles": 2252,
+        "attention_day": "2026-09-24",
+        "date": "2026-09-25",
+        "has_fts_plan_match": true,
+        "plan_funded_usd": 470207282,
+        "plan_requirements_usd": 2162563336,
+        "ratio_to_baseline": 0.55
+      }
+    ]
+  },
+  "resolved_at": "2026-09-26T10:14:12+00:00",
+  "verdict": "EPISODE_ENDED"
+}
