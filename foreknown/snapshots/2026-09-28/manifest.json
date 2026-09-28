@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "bytes": 123864,
+      "file": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "http_status": 200,
+      "retrieved_at": "2026-09-28T11:58:36+00:00",
+      "sha256": "e5313781d00b46ec62946cb17422d985600e3333cb0d55fad8c80444bd7ad74e",
+      "url": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventlist=EQ,TC,FL,DR,WF&alertlevel=Orange;Red"
+    },
+    {
+      "bytes": 19415,
+      "file": "foreknown/snapshots/2026-09-28/nhc-current-storms.json",
+      "http_status": 200,
+      "retrieved_at": "2026-09-28T11:58:36+00:00",
+      "sha256": "576ba3d6801c8b5f6875858f663cedb0269a27e2cbe28ecca642fd3d958c3af7",
+      "url": "https://www.nhc.noaa.gov/CurrentStorms.json"
+    },
+    {
+      "bytes": 92780,
+      "file": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "http_status": 200,
+      "retrieved_at": "2026-09-28T11:58:38+00:00",
+      "sha256": "7ebb2b7e25c44bec0f7f710c1fef50f74ea7f98c93396520a1efd8394bb01eb1",
+      "url": "https://api.weather.gov/alerts/active?severity=Extreme,Severe&urgency=Immediate,Expected&certainty=Observed,Likely"
+    },
+    {
+      "bytes": 196861,
+      "file": "foreknown/snapshots/2026-09-28/fts-plans-2026.json",
+      "http_status": 200,
+      "retrieved_at": "2026-09-28T11:58:40+00:00",
+      "sha256": "7f61012ec323a663e889e18087a49cebdcf086ee3d17f9d36cadbaf44ba44fb3",
+      "url": "https://api.hpc.tools/v1/public/plan/year/2026"
+    }
+  ],
+  "run_date": "2026-09-28"
+}

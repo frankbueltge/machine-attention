@@ -1,10 +1,442 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "64ac109",
+    "commit": "cea3a83",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/future/nws-phfo-hww-0009-26.html",
+      "evidence": "foreknown/resolutions/nws-phfo-hww-0009-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-phfo-hww-0009-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-ktop-flw-0053-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kphi-srw-0003-26.html",
+      "evidence": "foreknown/resolutions/nws-kphi-srw-0003-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Storm Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kphi-srw-0003-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Storm Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kphi-hww-0002-26.html",
+      "evidence": "foreknown/resolutions/nws-kphi-hww-0002-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kphi-hww-0002-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kphi-faw-0027-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kphi-cfw-0002-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 3 days after it was first preserved.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kokx-srw-0002-26.html",
+      "evidence": "foreknown/resolutions/nws-kokx-srw-0002-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Storm Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kokx-srw-0002-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Storm Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kokx-hww-0001-26.html",
+      "evidence": "foreknown/resolutions/nws-kokx-hww-0001-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kokx-hww-0001-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "High Wind Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kokx-cfw-0002-26.html",
+      "evidence": "foreknown/resolutions/nws-kokx-cfw-0002-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kokx-cfw-0002-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kmob-maw-0221-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Special Marine Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kmlb-flw-0002-00.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 3 days after it was first preserved.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klsx-flw-0115-26.html",
+      "evidence": "foreknown/resolutions/nws-klsx-flw-0115-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klsx-flw-0115-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klsx-flw-0110-26.html",
+      "evidence": "foreknown/resolutions/nws-klsx-flw-0110-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klsx-flw-0110-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klot-flw-0076-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 6 days after it was first preserved.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-klot-flw-0075-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 7 days after it was first preserved.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kkey-cfw-0001-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 25 hours after it was first preserved.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kdvn-flw-0067-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kbox-flw-0010-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kbox-faw-0006-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kbox-cfw-0003-26.html",
+      "evidence": "foreknown/resolutions/nws-kbox-cfw-0003-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kbox-cfw-0003-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kakq-cfw-0002-26.html",
+      "evidence": "foreknown/resolutions/nws-kakq-cfw-0002-26.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "An announced future ran its course under watch.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kakq-cfw-0002-26.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "closure",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A source let go of one of its warnings.",
+      "subject": "Coastal Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kabr-svw-0283-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Severe Thunderstorm Warning"
+    },
+    {
+      "enter": "/attention/future/nws-kabr-faw-0024-26.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nws-alerts-active.json",
+      "mode": "notarization",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A new announced future entered the record.",
+      "subject": "Flood Warning"
+    },
+    {
+      "enter": "/attention/future/nhc-ep182026.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 25 hours after it was first preserved.",
+      "subject": "Rachel (TS)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep172026.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 7 days after it was first preserved.",
+      "subject": "Polo (HU)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep162026.html",
+      "evidence": "foreknown/resolutions/nhc-ep162026.json",
+      "mode": "resolution",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A forecast passed without an alert in this register.",
+      "subject": "Odalys (HU)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep162026.html",
+      "evidence": "foreknown/registry.json",
+      "mode": "dissipation",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A forecast dissipated from its source's feed.",
+      "subject": "Odalys (HU)"
+    },
+    {
+      "enter": "/attention/future/nhc-ep152026.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 14 days after it was first preserved.",
+      "subject": "Nolo (HU)"
+    },
+    {
+      "enter": "/attention/future/nhc-al062026.html",
+      "evidence": "foreknown/snapshots/2026-09-28/nhc-current-storms.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 8 days after it was first preserved.",
+      "subject": "Fay (TD)"
+    },
+    {
+      "enter": "/attention/future/gdacs-tc-1001325.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 3 days after it was first preserved.",
+      "subject": "Tropical Cyclone POLO-26"
+    },
+    {
+      "enter": "/attention/future/gdacs-tc-1001325.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "reappearance",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning came back after its source had let it go.",
+      "subject": "Tropical Cyclone POLO-26"
+    },
+    {
+      "enter": "/attention/future/gdacs-fl-1104121.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 31 days after it was first preserved.",
+      "subject": "Flood in India"
+    },
+    {
+      "enter": "/attention/future/gdacs-fl-1104081.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 47 days after it was first preserved.",
+      "subject": "Flood in China"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027465.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 51 days after it was first preserved.",
+      "subject": "Drought in Democratic Republic of Congo, Kenya, Tanzania, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027450.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 51 days after it was first preserved.",
+      "subject": "Drought in Djibouti, Eritrea, Ethiopia, Kenya, Sudan, Somalia, South Sudan, Uganda"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1027449.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 41 days after it was first preserved.",
+      "subject": "Drought in The Bahamas, Belize, Cuba, Dominican Republic, Guatemala, Honduras, Haiti, Mexico, Nicaragua, El Salvador"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018431.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 51 days after it was first preserved.",
+      "subject": "Drought in Madagascar"
+    },
+    {
+      "enter": "/attention/future/gdacs-dr-1018332.html",
+      "evidence": "foreknown/snapshots/2026-09-28/gdacs.json",
+      "mode": "revision",
+      "occurred_at": "2026-09-28T11:58:40+00:00",
+      "project": "foreknown",
+      "statement": "A warning changed 51 days after it was first preserved.",
+      "subject": "Drought in Austria, Bosnia  and  Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine,"
+    },
     {
       "enter": "/attention/future/nws-phfo-trw-2015-00.html",
       "evidence": "foreknown/resolutions/nws-phfo-trw-2015-00.json",
@@ -390,7 +822,7 @@
       "occurred_at": "2026-09-27T10:43:29+00:00",
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
-      "subject": "Eighteen-E (TD)"
+      "subject": "Rachel (TS)"
     },
     {
       "enter": "/attention/future/nhc-ep172026.html",
@@ -472,438 +904,6 @@
       "project": "foreknown",
       "statement": "A warning changed 40 days after it was first preserved.",
       "subject": "Drought in The Bahamas, Belize, Cuba, Dominican Republic, Guatemala, Honduras, Haiti, Mexico, Nicaragua, El Salvador"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018431.html",
-      "evidence": "foreknown/snapshots/2026-09-27/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-27T10:43:29+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 50 days after it was first preserved.",
-      "subject": "Drought in Madagascar"
-    },
-    {
-      "enter": "/attention/future/gdacs-dr-1018332.html",
-      "evidence": "foreknown/snapshots/2026-09-27/gdacs.json",
-      "mode": "revision",
-      "occurred_at": "2026-09-27T10:43:29+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 50 days after it was first preserved.",
-      "subject": "Drought in Austria, Bosnia  and  Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Netherlands, Poland, Romania, Serbia, Sweden, Slovenia, Slovakia, San Marino, Ukraine,"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7556-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7556-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7555-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7555-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7554-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7554-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7553-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7553-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7552-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7552-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7551-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7551-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7550-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7550-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7549-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7549-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-7548-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-7548-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6200-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6200-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6199-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6199-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6198-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6198-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6197-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6197-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6196-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6196-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6195-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6195-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6194-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6194-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6193-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6193-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-6192-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-6192-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1410-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1410-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1409-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1409-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1408-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1408-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1407-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1407-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1406-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1406-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1405-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1405-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1404-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1404-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1403-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1403-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1402-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1402-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-srw-1401-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-srw-1401-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Storm Warning"
-    },
-    {
-      "enter": "/attention/future/nws-pafc-cfw-0001-26.html",
-      "evidence": "foreknown/resolutions/nws-pafc-cfw-0001-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Coastal Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-ktbw-flw-0007-00.html",
-      "evidence": "foreknown/resolutions/nws-ktbw-flw-0007-00.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krlx-faw-0153-26.html",
-      "evidence": "foreknown/resolutions/nws-krlx-faw-0153-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-krev-fww-0013-26.html",
-      "evidence": "foreknown/resolutions/nws-krev-fww-0013-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Red Flag Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kmkx-flw-0045-26.html",
-      "evidence": "foreknown/resolutions/nws-kmkx-flw-0045-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kmaf-flw-0004-26.html",
-      "evidence": "foreknown/resolutions/nws-kmaf-flw-0004-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kmaf-ffw-0207-26.html",
-      "evidence": "foreknown/resolutions/nws-kmaf-ffw-0207-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-klsx-flw-0111-26.html",
-      "evidence": "foreknown/resolutions/nws-klsx-flw-0111-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-klot-flw-0075-00.html",
-      "evidence": "foreknown/resolutions/nws-klot-flw-0075-00.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kiwx-flw-0057-26.html",
-      "evidence": "foreknown/resolutions/nws-kiwx-flw-0057-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-ffw-0178-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-ffw-0178-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-ffw-0177-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-ffw-0177-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-ffw-0175-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-ffw-0175-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-ffw-0169-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-ffw-0169-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flash Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-faw-0008-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-faw-0008-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-faw-0007-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-faw-0007-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kepz-faw-0006-26.html",
-      "evidence": "foreknown/resolutions/nws-kepz-faw-0006-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kdvn-flw-0079-26.html",
-      "evidence": "foreknown/resolutions/nws-kdvn-flw-0079-26.json",
-      "mode": "resolution",
-      "occurred_at": "2026-09-26T10:14:13+00:00",
-      "project": "foreknown",
-      "statement": "An announced future ran its course under watch.",
-      "subject": "Flood Warning"
     }
   ],
   "practice": {
