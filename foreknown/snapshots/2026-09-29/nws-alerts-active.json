@@ -1,0 +1,1991 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2ebefb2dcc03253397a9cf57efc6acf239d1fa1d.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -111.8,
+                            33.94
+                        ],
+                        [
+                            -111.92,
+                            33.83
+                        ],
+                        [
+                            -112.08,
+                            33.72
+                        ],
+                        [
+                            -112.22,
+                            33.68
+                        ],
+                        [
+                            -112.33,
+                            33.74
+                        ],
+                        [
+                            -112.15,
+                            33.86
+                        ],
+                        [
+                            -111.92,
+                            34.02
+                        ],
+                        [
+                            -111.76,
+                            33.99
+                        ],
+                        [
+                            -111.8,
+                            33.94
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2ebefb2dcc03253397a9cf57efc6acf239d1fa1d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.2ebefb2dcc03253397a9cf57efc6acf239d1fa1d.001.1",
+                "areaDesc": "Maricopa, AZ",
+                "geocode": {
+                    "SAME": [
+                        "004013"
+                    ],
+                    "UGC": [
+                        "AZC013"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/AZC013"
+                ],
+                "references": [],
+                "sent": "2026-09-29T04:31:00-07:00",
+                "effective": "2026-09-29T04:31:00-07:00",
+                "onset": "2026-09-29T04:31:00-07:00",
+                "expires": "2026-09-29T09:30:00-07:00",
+                "ends": "2026-09-29T09:30:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Phoenix AZ",
+                "headline": "Flash Flood Warning issued September 29 at 4:31AM MST until September 29 at 9:30AM MST by NWS Phoenix AZ",
+                "description": "FFWPSR\n\nThe National Weather Service in Phoenix has issued a\n\n* Flash Flood Warning for...\nMaricopa County in south central Arizona...\n\n* Until 930 AM MST.\n\n* At 431 AM MST, gauge reports indicated thunderstorms producing\nheavy rain across the warned area. Between 0.75 and 1.25 inches of\nrain have fallen. Additional rainfall amounts of 0.75 to 1.25\ninches are possible in the warned area. Flash flooding is ongoing\nor expected to begin shortly.\n\nHAZARD...Life threatening flash flooding. Thunderstorms producing\nflash flooding.\n\nSOURCE...Gauges reported.\n\nIMPACT...Life threatening flash flooding of creeks and streams,\nstreets and low water crossings.\n\n* Some locations that will experience flash flooding include...\nPhoenix, New River, Cave Creek, Carefree, Anthem and Seven Springs.\n\nGauges along Skunk Creek are showing elevated flow, likely impacting\nlow water crossings.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWPSR"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS55 KPSR 291131"
+                    ],
+                    "flashFloodDamageThreat": [
+                        "CONSIDERABLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KPSR.FF.W.0075.260929T1131Z-260929T1630Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T09:30:00-07:00"
+                    ],
+                    "WEAHandling": [
+                        "Imminent Threat"
+                    ],
+                    "CMAMtext": [
+                        "NWS: FLASH FLOOD WARNING this area til 9:30 AM MST. Avoid flooded areas."
+                    ],
+                    "CMAMlongtext": [
+                        "National Weather Service: A FLASH FLOOD WARNING is in effect for this area until 9:30 AM MST. This is a dangerous and life-threatening situation. Do not attempt to travel unless you are fleeing an area subject to flooding or under an evacuation order."
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5dcce8919d01d3fa0ba509621965487376ab545.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -112.48,
+                            34.52
+                        ],
+                        [
+                            -112.45,
+                            34.51
+                        ],
+                        [
+                            -112.42,
+                            34.59
+                        ],
+                        [
+                            -112.38,
+                            34.66
+                        ],
+                        [
+                            -112.37,
+                            34.8
+                        ],
+                        [
+                            -112.43,
+                            34.88
+                        ],
+                        [
+                            -112.45,
+                            34.88
+                        ],
+                        [
+                            -112.42,
+                            34.68
+                        ],
+                        [
+                            -112.46,
+                            34.59
+                        ],
+                        [
+                            -112.48,
+                            34.52
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e5dcce8919d01d3fa0ba509621965487376ab545.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.e5dcce8919d01d3fa0ba509621965487376ab545.001.1",
+                "areaDesc": "Yavapai, AZ",
+                "geocode": {
+                    "SAME": [
+                        "004025"
+                    ],
+                    "UGC": [
+                        "AZC025"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/AZC025"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f253c24c9071c3a40f9db945cc6f8e5f19e375df.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.f253c24c9071c3a40f9db945cc6f8e5f19e375df.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-29T01:52:00-07:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1fdecc02033e672f561a4eb20e08c73d30bf9da3.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.1fdecc02033e672f561a4eb20e08c73d30bf9da3.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-29T03:27:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-29T04:30:00-07:00",
+                "effective": "2026-09-29T04:30:00-07:00",
+                "onset": "2026-09-29T04:30:00-07:00",
+                "expires": "2026-09-29T07:45:00-07:00",
+                "ends": "2026-09-29T07:45:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Flagstaff AZ",
+                "headline": "Flash Flood Warning issued September 29 at 4:30AM MST until September 29 at 7:45AM MST by NWS Flagstaff AZ",
+                "description": "FFWFGZ\n\nThe National Weather Service in Flagstaff has extended the\n\n* Flash Flood Warning for...\nYavapai County in west central Arizona...\n\n* Until 745 AM MST.\n\n* At 430 AM MST, the Granite Creek river gauge near Prescott has\nstarted to decline after seeing a rapid 4 foot rise from\nthunderstorms producing heavy rain around 152 AM MST. Flash\nFlooding is likely still ongoing, especially with additional\nrainfall moving in.\n\nHAZARD...Life threatening flash flooding. Thunderstorms producing\nflash flooding.\n\nSOURCE...River gauge reported.\n\nIMPACT...Life threatening flash flooding of creeks and streams,\nnormally dry washes, urban areas, highways, streets and\nunderpasses.\n\n* Some locations that will experience flash flooding include...\nChino Valley, Prescott, Prescott Regional Airport, Embry-Riddle\nAeronautical University, Willow Creek Reservoir, Watson Lake,\nDowntown Prescott, Jim McCasland Willow Creek Park, Watson Lake\nPark, Whipple, AC Williams Granite Creek Park, Courthouse Plaza and\nAcker Park.\n\nThis includes the following highways...\nState Route 69 near mile marker 296. State Route 89 between mile\nmarkers 310 and 320. State Route 89A between mile markers 318 and\n319.\n\nThis includes the following recreation areas and campgrounds...\nAcker Park, AC Williams Granite Creek Park and Watson Lake Park.\n\nThis includes the following creeks, washes and rivers...\nWillow Creek, Verde River, Bottleneck Wash, Little Chino Valley,\nMiller Creek, Granite Creek and Bannon Creek.",
+                "instruction": "Flooding of washes and creeks will occur, some dirt roads will become\nmuddy and impassable. Paved roads and underpasses could become\nflooded as well.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWFGZ"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS55 KFGZ 291130"
+                    ],
+                    "flashFloodDamageThreat": [
+                        "CONSIDERABLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KFGZ.FF.W.0184.000000T0000Z-260929T1445Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T07:45:00-07:00"
+                    ],
+                    "WEAHandling": [
+                        "Imminent Threat"
+                    ],
+                    "CMAMtext": [
+                        "NWS: FLASH FLOOD WARNING this area til 7:45 AM MST. Avoid flooded areas."
+                    ],
+                    "CMAMlongtext": [
+                        "National Weather Service: A FLASH FLOOD WARNING is in effect for this area until 7:45 AM MST. This is a dangerous and life-threatening situation. Do not attempt to travel unless you are fleeing an area subject to flooding or under an evacuation order."
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b9540bd8e2280dd1ba2ebddb1e980a871f9c71d.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -105.65,
+                            35.77
+                        ],
+                        [
+                            -105.47,
+                            35.43
+                        ],
+                        [
+                            -104.96,
+                            35.23
+                        ],
+                        [
+                            -105.22,
+                            35.16
+                        ],
+                        [
+                            -105.67,
+                            35.38
+                        ],
+                        [
+                            -105.75,
+                            35.78
+                        ],
+                        [
+                            -105.65,
+                            35.77
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b9540bd8e2280dd1ba2ebddb1e980a871f9c71d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5b9540bd8e2280dd1ba2ebddb1e980a871f9c71d.001.1",
+                "areaDesc": "San Miguel, NM",
+                "geocode": {
+                    "SAME": [
+                        "035047"
+                    ],
+                    "UGC": [
+                        "NMC047"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/NMC047"
+                ],
+                "references": [],
+                "sent": "2026-09-29T05:24:00-06:00",
+                "effective": "2026-09-29T05:24:00-06:00",
+                "onset": "2026-09-29T11:36:00-06:00",
+                "expires": "2026-09-29T21:00:00-06:00",
+                "ends": "2026-09-30T00:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Albuquerque NM",
+                "headline": "Flood Warning issued September 29 at 5:24AM MDT until September 30 at 12:00AM MDT by NWS Albuquerque NM",
+                "description": "...The National Weather Service in Albuquerque has issued a Flood\nWarning for the following rivers in New Mexico...\n\nPecos River Above Pecos affecting San Miguel County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Pecos River above Pecos.\n\n* WHEN...From this morning to late tonight.\n\n* IMPACTS...At 5.0 feet, Fast flowing water may erode banks and\napproach homes near the river.  Private bridges could drive\nlocalized flooding as debris accumulates along the upstream sides.\nFurther rises may make bridges unsafe to cross and isolate\nresidents.\n\n* ADDITIONAL DETAILS...\n- At 5:00 AM MDT Tuesday the stage was 3.3 feet.\n- Bankfull stage is 4.5 feet.\n- Forecast...The river is expected to rise above flood stage late\nthis morning to a crest of 5.1 feet this afternoon. It will then\nfall below flood stage this evening.\n- Flood stage is 5.0 feet.\n- Flood History...This crest compares to a previous crest of 5.1\nfeet on 05/21/1991.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov/abq.\n\nThe next statement will be issued this evening at 900 PM MDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWABQ"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS45 KABQ 291124"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM THIS MORNING TO LATE TONIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KABQ.FL.W.0004.260929T1736Z-260930T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T00:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e047c64ef3991b83a29212adf43055919c2a8ba.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -111.14,
+                            38.5
+                        ],
+                        [
+                            -111.27,
+                            38.67
+                        ],
+                        [
+                            -110.95,
+                            38.94
+                        ],
+                        [
+                            -110.34,
+                            39.06
+                        ],
+                        [
+                            -110.39,
+                            38.65
+                        ],
+                        [
+                            -110.9,
+                            38.5
+                        ],
+                        [
+                            -111.14,
+                            38.5
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e047c64ef3991b83a29212adf43055919c2a8ba.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.7e047c64ef3991b83a29212adf43055919c2a8ba.001.1",
+                "areaDesc": "Emery, UT",
+                "geocode": {
+                    "SAME": [
+                        "049015"
+                    ],
+                    "UGC": [
+                        "UTC015"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/UTC015"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a28652b4942bf331e77ce5d38140c5344235cea5.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.a28652b4942bf331e77ce5d38140c5344235cea5.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-29T04:20:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-29T05:20:00-06:00",
+                "effective": "2026-09-29T05:20:00-06:00",
+                "onset": "2026-09-29T05:20:00-06:00",
+                "expires": "2026-09-29T06:30:00-06:00",
+                "ends": "2026-09-29T06:30:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Salt Lake City UT",
+                "headline": "Flash Flood Warning issued September 29 at 5:20AM MDT until September 29 at 6:30AM MDT by NWS Salt Lake City UT",
+                "description": "At 520 AM MDT, Automated river gauges indicated a flood wave is\nmoving down the San Rafael River near SR-24. Flash flooding is\nalready occurring.\n\nHAZARD...Life threatening flash flooding. Thunderstorms producing\nflash flooding.\n\nSOURCE...Automated gauges.\n\nIMPACT...Life threatening flash flooding of creeks and streams, urban\nareas, highways, streets and underpasses.\n\nSome locations that will experience flash flooding include...\nGoblin Valley, Little Wild Horse, Crack, Chute, Ding, Dang and all\nother slot canyons in the area.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFSSLC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS75 KSLC 291120"
+                    ],
+                    "NWSheadline": [
+                        "FLASH FLOOD WARNING REMAINS IN EFFECT UNTIL 630 AM MDT THIS MORNING FOR SOUTHWESTERN EMERY COUNTY"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR AND GAUGE INDICATED"
+                    ],
+                    "flashFloodDamageThreat": [
+                        "CONSIDERABLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KSLC.FF.W.0141.000000T0000Z-260929T1230Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T06:30:00-06:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.04fd4b080d38f7924f5c73702f684026dd2135e7.001.1,2026-09-29T01:37:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFS"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.111dd36df4822d2edcbd6c514476540fbdc3f1ec.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -112.02,
+                            37
+                        ],
+                        [
+                            -112.04,
+                            37.07
+                        ],
+                        [
+                            -112.18,
+                            37.25
+                        ],
+                        [
+                            -111.63,
+                            37.37
+                        ],
+                        [
+                            -111.56,
+                            37.22
+                        ],
+                        [
+                            -111.34,
+                            37.04
+                        ],
+                        [
+                            -111.61,
+                            37
+                        ],
+                        [
+                            -112.02,
+                            37
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.111dd36df4822d2edcbd6c514476540fbdc3f1ec.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.111dd36df4822d2edcbd6c514476540fbdc3f1ec.001.1",
+                "areaDesc": "Kane, UT",
+                "geocode": {
+                    "SAME": [
+                        "049025"
+                    ],
+                    "UGC": [
+                        "UTC025"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/UTC025"
+                ],
+                "references": [],
+                "sent": "2026-09-29T05:10:00-06:00",
+                "effective": "2026-09-29T05:10:00-06:00",
+                "onset": "2026-09-29T05:10:00-06:00",
+                "expires": "2026-09-29T08:15:00-06:00",
+                "ends": "2026-09-29T08:15:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Salt Lake City UT",
+                "headline": "Flood Warning issued September 29 at 5:10AM MDT until September 29 at 8:15AM MDT by NWS Salt Lake City UT",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...South Central Kane County in southern Utah...\n\n* WHEN...Until 815 AM MDT.\n\n* IMPACTS...Flooding of the Paria River, Wahweap Creek, and other\nlow-lying and flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 508 AM MDT, gauge reports indicated flooding continues due to\nearlier thunderstorms.\n- Some locations that will experience flooding include...\nBig Water, the Paria River, Buckskin Gulch, Wire Pass, and\nWahweap Creek.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nRemain alert for flooding even in locations not receiving rain. Dry\nwashes, streams, and rivers can become raging killer currents in a\nmatter of minutes, even from distant rainfall.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWSLC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS45 KSLC 291110"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 815 AM MDT THIS MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSLC.FA.W.0007.260929T1110Z-260929T1415Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T08:15:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.66feadf8d2b1381db936e49030a8e0bc0ac8bbe4.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -111.66,
+                            36.94
+                        ],
+                        [
+                            -111.57,
+                            36.86
+                        ],
+                        [
+                            -111.59,
+                            36.85
+                        ],
+                        [
+                            -111.66,
+                            36.9
+                        ],
+                        [
+                            -111.72,
+                            36.93
+                        ],
+                        [
+                            -111.8,
+                            36.96
+                        ],
+                        [
+                            -111.86,
+                            36.97
+                        ],
+                        [
+                            -111.88,
+                            37
+                        ],
+                        [
+                            -111.7,
+                            37
+                        ],
+                        [
+                            -111.66,
+                            36.94
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.66feadf8d2b1381db936e49030a8e0bc0ac8bbe4.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.66feadf8d2b1381db936e49030a8e0bc0ac8bbe4.001.1",
+                "areaDesc": "Coconino, AZ",
+                "geocode": {
+                    "SAME": [
+                        "004005"
+                    ],
+                    "UGC": [
+                        "AZC005"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/AZC005"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7dfebb6b16579962ca0922d09b2fd7f73e63406c.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.7dfebb6b16579962ca0922d09b2fd7f73e63406c.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-28T23:39:00-07:00"
+                    }
+                ],
+                "sent": "2026-09-29T03:37:00-07:00",
+                "effective": "2026-09-29T03:37:00-07:00",
+                "onset": "2026-09-29T03:37:00-07:00",
+                "expires": "2026-09-29T06:45:00-07:00",
+                "ends": "2026-09-29T06:45:00-07:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Flagstaff AZ",
+                "headline": "Flash Flood Warning issued September 29 at 3:37AM MST until September 29 at 6:45AM MST by NWS Flagstaff AZ",
+                "description": "At 337 AM MST /437 AM MDT/, a few hours ago, a river gauge on the\nParia River in Utah reported a rapid rise of 4.47 feet from heavy\nrain over the Paria River, and has started to decrease a couple of\nfeet. This means the flood wave is currently moving through the Paria\nRiver within Arizona. Flash flooding is ongoing or expected to begin\nshortly.\n\nHAZARD...Life threatening flash flooding. Heavy rain producing flash\nflooding in and around the Paria River.\n\nSOURCE...River gauge reported.\n\nIMPACT...Life threatening flash flooding of areas in and around the\nParia River.\n\nSome locations that will experience flash flooding include...\nParia Canyon, Paria River Slot Canyon, Vermilion Cliffs National\nMonument and Lees Ferry.\n\nThis includes the Colorado River near mile marker 0.\n\nThis includes the following recreation areas and campgrounds...\nLees Ferry Camp Site.\n\nThis includes the following creeks, washes and rivers...\nColorado River and Paria River.",
+                "instruction": "Get out of the Paria River slot canyon! Flood waters will flow down\nthe Paria River, reaching the confluence with the Colorado River at\nLees Ferry.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFSFGZ"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS75 KFGZ 291037"
+                    ],
+                    "NWSheadline": [
+                        "FLASH FLOOD WARNING FOR THE PARIA RIVER REMAINS IN EFFECT UNTIL 645 AM MST /745 AM MDT/ THIS MORNING FOR COCONINO COUNTY"
+                    ],
+                    "flashFloodDamageThreat": [
+                        "CONSIDERABLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KFGZ.FF.W.0183.000000T0000Z-260929T1345Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T06:45:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFS"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.78612d59f2b14bd6f07c56c119465a053ba04380.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.78612d59f2b14bd6f07c56c119465a053ba04380.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.78612d59f2b14bd6f07c56c119465a053ba04380.001.1",
+                "areaDesc": "Monroe Upper Keys",
+                "geocode": {
+                    "SAME": [
+                        "012087"
+                    ],
+                    "UGC": [
+                        "FLZ076"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/FLZ076"
+                ],
+                "references": [],
+                "sent": "2026-09-29T03:59:00-04:00",
+                "effective": "2026-09-29T03:59:00-04:00",
+                "onset": "2026-09-29T03:59:00-04:00",
+                "expires": "2026-09-29T12:00:00-04:00",
+                "ends": "2026-09-29T17:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Coastal Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Key West FL",
+                "headline": "Coastal Flood Warning issued September 29 at 3:59AM EDT until September 29 at 5:00PM EDT by NWS Key West FL",
+                "description": "* WHAT...Major saltwater flooding.\n\n* WHERE...Upper Florida Keys, particularly in the sounds, Bay\nside of Key Largo.\n\n* WHEN...Through this afternoon.\n\n* IMPACTS...Numerous roads may be closed. Low lying property\nincluding homes, businesses, and some critical infrastructure\nwill be inundated. In the Upper Keys, little relief can be\nexpected even outside the hours around high tide.",
+                "instruction": "Take the necessary actions to protect flood-prone property. If\ntravel is required, do not drive around barricades or through\nwater of unknown depth.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "CFWKEY"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS42 KKEY 290759"
+                    ],
+                    "NWSheadline": [
+                        "COASTAL FLOOD WARNING REMAINS IN EFFECT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KKEY.CF.W.0002.000000T0000Z-260929T2100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T17:00:00-04:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b202fa7f60066dd00182239a0aac27692f5deafc.001.1,2026-09-28T17:51:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a5364e19dae05339bd062766c7fe75e70aa5951c.001.2,2026-09-28T17:41:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "CFW"
+                    ],
+                    "NationalWeatherService": [
+                        "CFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c6c4fb17af68e7023f2529098317283b2d0d499.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -111.62,
+                            38.37
+                        ],
+                        [
+                            -111.51,
+                            38.48
+                        ],
+                        [
+                            -110.09,
+                            38.52
+                        ],
+                        [
+                            -110,
+                            38.13
+                        ],
+                        [
+                            -110.28,
+                            37.87
+                        ],
+                        [
+                            -110.4,
+                            37.88
+                        ],
+                        [
+                            -110.44,
+                            37.81
+                        ],
+                        [
+                            -110.48,
+                            37.8
+                        ],
+                        [
+                            -110.43,
+                            37.78
+                        ],
+                        [
+                            -110.5,
+                            37.65
+                        ],
+                        [
+                            -110.6,
+                            37.6
+                        ],
+                        [
+                            -110.67,
+                            37.48
+                        ],
+                        [
+                            -110.75,
+                            37.46
+                        ],
+                        [
+                            -110.71,
+                            37.44
+                        ],
+                        [
+                            -110.82,
+                            37.33
+                        ],
+                        [
+                            -110.87,
+                            37.35
+                        ],
+                        [
+                            -110.84,
+                            37.31
+                        ],
+                        [
+                            -110.86,
+                            37.29
+                        ],
+                        [
+                            -111.24,
+                            38
+                        ],
+                        [
+                            -111.48,
+                            37.99
+                        ],
+                        [
+                            -111.62,
+                            38.37
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1c6c4fb17af68e7023f2529098317283b2d0d499.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1c6c4fb17af68e7023f2529098317283b2d0d499.001.1",
+                "areaDesc": "Emery, UT; Garfield, UT; Kane, UT; Wayne, UT",
+                "geocode": {
+                    "SAME": [
+                        "049015",
+                        "049017",
+                        "049025",
+                        "049055"
+                    ],
+                    "UGC": [
+                        "UTC015",
+                        "UTC017",
+                        "UTC025",
+                        "UTC055"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/UTC015",
+                    "https://api.weather.gov/zones/county/UTC017",
+                    "https://api.weather.gov/zones/county/UTC025",
+                    "https://api.weather.gov/zones/county/UTC055"
+                ],
+                "references": [],
+                "sent": "2026-09-29T01:40:00-06:00",
+                "effective": "2026-09-29T01:40:00-06:00",
+                "onset": "2026-09-29T01:40:00-06:00",
+                "expires": "2026-09-29T10:45:00-06:00",
+                "ends": "2026-09-29T10:45:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Salt Lake City UT",
+                "headline": "Flood Warning issued September 29 at 1:40AM MDT until September 29 at 10:45AM MDT by NWS Salt Lake City UT",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...South Central Emery County in central Utah...\nEastern Garfield County in southern Utah...\nNortheastern Kane County in southern Utah...\nWayne County in southern Utah...\n\n* WHEN...Until 1045 AM MDT Tuesday.\n\n* IMPACTS...Flooding of slot canyons, normally dry washes, rivers,\ncreeks, streams, and other low-lying and flood-prone locations is\nimminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 140 AM MDT, Doppler radar indicated heavy rain due to\nthunderstorms. Flooding is ongoing or expected to begin shortly\nin the warned area.\n- Some locations that will experience flooding include...\nHanksville, Capitol Reef National Park, Bicknell, Torrey, Hite\nMarina, Ticaboo, Bullfrog, Halls Crossing, Teasdale, Lyman,\nCaineville and Fruita.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWSLC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS45 KSLC 290740"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 1045 AM MDT THIS MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSLC.FA.W.0006.260929T0740Z-260929T1645Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T10:45:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.04d30657dca7835c75f0ca112435dc73a6f39690.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.04d30657dca7835c75f0ca112435dc73a6f39690.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.04d30657dca7835c75f0ca112435dc73a6f39690.001.1",
+                "areaDesc": "East Glacier Park Region; Northern High Plains; Eastern Glacier, Western Toole, and Central Pondera",
+                "geocode": {
+                    "SAME": [
+                        "030035",
+                        "030073",
+                        "030101"
+                    ],
+                    "UGC": [
+                        "MTZ301",
+                        "MTZ302",
+                        "MTZ303"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/MTZ301",
+                    "https://api.weather.gov/zones/forecast/MTZ302",
+                    "https://api.weather.gov/zones/forecast/MTZ303"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5a1d374de014145472adac10d6c23a40bf2ffc91.001.2",
+                        "identifier": "urn:oid:2.49.0.1.840.0.5a1d374de014145472adac10d6c23a40bf2ffc91.001.2",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-28T12:39:00-06:00"
+                    }
+                ],
+                "sent": "2026-09-29T00:37:00-06:00",
+                "effective": "2026-09-29T00:37:00-06:00",
+                "onset": "2026-09-29T00:37:00-06:00",
+                "expires": "2026-09-29T12:00:00-06:00",
+                "ends": "2026-09-29T12:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "High Wind Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Great Falls MT",
+                "headline": "High Wind Warning issued September 29 at 12:37AM MDT until September 29 at 12:00PM MDT by NWS Great Falls MT",
+                "description": "* WHAT...Southwest winds 30 to 50 mph, with gusts up to 75 mph.\n\n* WHERE...East Glacier Park Region Zone, and Eastern Glacier, Western\nToole, and Central Pondera and Northern High Plains.\n\n* WHEN...Until noon MDT today.\n\n* IMPACTS...Travel could be difficult, especially for high profile\nvehicles.",
+                "instruction": "People are urged to secure loose objects that could be blown around\nor damaged by the wind.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWTFX"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS75 KTFX 290637"
+                    ],
+                    "NWSheadline": [
+                        "HIGH WIND WARNING REMAINS IN EFFECT UNTIL NOON MDT TODAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KTFX.HW.W.0033.000000T0000Z-260929T1800Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T12:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "HWW"
+                    ],
+                    "NationalWeatherService": [
+                        "HWW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa424af7c1c76586486c174dcb00b8117e229d44.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -113.12,
+                            37.39
+                        ],
+                        [
+                            -112.75,
+                            37.39
+                        ],
+                        [
+                            -112.68,
+                            37.17
+                        ],
+                        [
+                            -112.96,
+                            37.14
+                        ],
+                        [
+                            -113.13,
+                            37.17
+                        ],
+                        [
+                            -113.13,
+                            37.26
+                        ],
+                        [
+                            -113.12,
+                            37.39
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fa424af7c1c76586486c174dcb00b8117e229d44.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.fa424af7c1c76586486c174dcb00b8117e229d44.001.1",
+                "areaDesc": "Kane, UT; Washington, UT",
+                "geocode": {
+                    "SAME": [
+                        "049025",
+                        "049053"
+                    ],
+                    "UGC": [
+                        "UTC025",
+                        "UTC053"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/UTC025",
+                    "https://api.weather.gov/zones/county/UTC053"
+                ],
+                "references": [],
+                "sent": "2026-09-28T23:16:00-06:00",
+                "effective": "2026-09-28T23:16:00-06:00",
+                "onset": "2026-09-28T23:16:00-06:00",
+                "expires": "2026-09-29T08:15:00-06:00",
+                "ends": "2026-09-29T08:15:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Salt Lake City UT",
+                "headline": "Flood Warning issued September 28 at 11:16PM MDT until September 29 at 8:15AM MDT by NWS Salt Lake City UT",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...West Central Kane County in southern Utah...\nEast Central Washington County in southwestern Utah...\n\n* WHEN...Until 815 AM MDT Tuesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 1115 PM MDT, gauge reports indicated heavy rain due to\nthunderstorms. Flooding is already occurring in the warned area.\n- Some locations that will experience flooding include...\nZion National Park, Springdale, Rockville, and all slot canyons\nin Zion National Park, as well as the East Fork and North Fork of\nthe Virgin River.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nRemain alert for flooding even in locations not receiving rain. Dry\nwashes, streams, and rivers can become raging killer currents in a\nmatter of minutes, even from distant rainfall.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWSLC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS45 KSLC 290516"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 815 AM MDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSLC.FA.W.0005.260929T0516Z-260929T1415Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T08:15:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.deaa9644882135eb79afc04f6c30c202351c1d1b.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -71.19,
+                            41.82
+                        ],
+                        [
+                            -70.97,
+                            42.02
+                        ],
+                        [
+                            -70.87,
+                            41.94
+                        ],
+                        [
+                            -71.1,
+                            41.77
+                        ],
+                        [
+                            -71.19,
+                            41.82
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.deaa9644882135eb79afc04f6c30c202351c1d1b.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.deaa9644882135eb79afc04f6c30c202351c1d1b.001.1",
+                "areaDesc": "Bristol, MA; Plymouth, MA",
+                "geocode": {
+                    "SAME": [
+                        "025005",
+                        "025023"
+                    ],
+                    "UGC": [
+                        "MAC005",
+                        "MAC023"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/MAC005",
+                    "https://api.weather.gov/zones/county/MAC023"
+                ],
+                "references": [],
+                "sent": "2026-09-29T01:06:00-04:00",
+                "effective": "2026-09-29T01:06:00-04:00",
+                "onset": "2026-09-29T01:06:00-04:00",
+                "expires": "2026-09-29T15:00:00-04:00",
+                "ends": "2026-09-30T02:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Boston/Norton MA",
+                "headline": "Flood Warning issued September 29 at 1:06AM EDT until September 30 at 2:00AM EDT by NWS Boston/Norton MA",
+                "description": "...The Flood Warning is extended for the following rivers in\nMassachusetts...\n\nTaunton River Near Bridgewater affecting Bristol and Plymouth\nCounties.\n\nFor the Taunton River...including Bridgewater...Minor flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Taunton River near Bridgewater.\n\n* WHEN...Until late tonight.\n\n* IMPACTS...At 9.0 feet, Backwater flooding from the Taunton River\nwill cause flooding of lower Purchade Brook in Middleboro.  This\nwill cause Woloski Park to become impassable by most vehicles for\nan extended period of time.  Beware of the dangers of crossing\nflooded roadways. The water may be deeper than you think.\nFloodwaters have the ability to damage roadways. Heed the advice of\nlocal officials, and evacuate if asked to do so.\n\n* ADDITIONAL DETAILS...\n- At 11:45 PM EDT Monday the stage was 9.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 11:45 PM EDT Monday was 9.0 feet.\n- Forecast...The river is expected to fall below flood stage this\nevening and continue falling to 5.9 feet Thursday evening.\n- Flood stage is 8.0 feet.\n- Flood History...This crest compares to a previous crest of 9.0\nfeet on 07/25/1938.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued this afternoon at 300 PM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSBOX"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS81 KBOX 290506"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING NOW IN EFFECT UNTIL LATE TONIGHT"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.EXT.KBOX.FL.W.0010.000000T0000Z-260930T0600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-30T02:00:00-04:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.94c26b71686a2e1b6c2b5a6b5112a9e9c1bc5fd7.001.1,2026-09-28T11:23:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.cd86db9efdea5c7fc1556bc997149d091185bb51.001.1,2026-09-28T07:11:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.191d971382585fba397f300b3cedc378ab8ce595.001.1,2026-09-27T21:44:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.110b2d77e32aa712dc5d42f2a9d99cdf21eeaa76.001.1,2026-09-27T11:53:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2ddd4cfbe75b31bf55c65c789c436d65843224f.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -111.8,
+                            37.98
+                        ],
+                        [
+                            -111.24,
+                            38
+                        ],
+                        [
+                            -110.86,
+                            37.29
+                        ],
+                        [
+                            -111.17,
+                            37.12
+                        ],
+                        [
+                            -111.23,
+                            37.06
+                        ],
+                        [
+                            -111.24,
+                            37.07
+                        ],
+                        [
+                            -111.25,
+                            37.04
+                        ],
+                        [
+                            -111.3,
+                            37.07
+                        ],
+                        [
+                            -111.3,
+                            37.05
+                        ],
+                        [
+                            -111.28,
+                            37.04
+                        ],
+                        [
+                            -111.34,
+                            37.04
+                        ],
+                        [
+                            -111.57,
+                            37.24
+                        ],
+                        [
+                            -111.74,
+                            37.64
+                        ],
+                        [
+                            -111.8,
+                            37.98
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d2ddd4cfbe75b31bf55c65c789c436d65843224f.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.d2ddd4cfbe75b31bf55c65c789c436d65843224f.001.1",
+                "areaDesc": "Garfield, UT; Kane, UT",
+                "geocode": {
+                    "SAME": [
+                        "049017",
+                        "049025"
+                    ],
+                    "UGC": [
+                        "UTC017",
+                        "UTC025"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/UTC017",
+                    "https://api.weather.gov/zones/county/UTC025"
+                ],
+                "references": [],
+                "sent": "2026-09-28T23:02:00-06:00",
+                "effective": "2026-09-28T23:02:00-06:00",
+                "onset": "2026-09-28T23:02:00-06:00",
+                "expires": "2026-09-29T08:00:00-06:00",
+                "ends": "2026-09-29T08:00:00-06:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Salt Lake City UT",
+                "headline": "Flood Warning issued September 28 at 11:02PM MDT until September 29 at 8:00AM MDT by NWS Salt Lake City UT",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...South Central Garfield County in southern Utah...\nEastern Kane County in southern Utah...\n\n* WHEN...Until 800 AM MDT Tuesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, slot canyons,\nnormally dry washes and other low-lying and flood-prone locations\nis imminent or occurring. Waterways continue to rise due to excess\nrunoff from earlier rainfall.\n\n* ADDITIONAL DETAILS...\n- At 1100 PM MDT, Doppler radar indicated heavy rain due to\nthunderstorms. Flooding is ongoing or expected to begin shortly\nin the warned area.\n- Some locations that will experience flooding include...\nEscalante, Boulder, the Escalante River drainage from the\nheadwaters to Powell, Last Chance, Croton Creek, Dry Rock Creek,\nCoyote Gulch and all slot canyons in the Escalante Drainage and\nnear Hole-in-the-Rock Road.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nFlooding is occurring or is imminent. It is important to know where\nyou are relative to streams, rivers, or creeks which can become\nkillers in heavy rains. Campers and hikers should avoid streams or\ncreeks.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWSLC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS45 KSLC 290502"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 8 AM MDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KSLC.FA.W.0004.260929T0502Z-260929T1400Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T08:00:00-06:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fc5fbe4d423f91b7171abcaa8082ce27eff62253.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -98.47,
+                            47.24
+                        ],
+                        [
+                            -98.47,
+                            47.29
+                        ],
+                        [
+                            -97.99,
+                            47.5
+                        ],
+                        [
+                            -97.99,
+                            47.33
+                        ],
+                        [
+                            -97.98,
+                            47.33
+                        ],
+                        [
+                            -97.98,
+                            47.24
+                        ],
+                        [
+                            -98.47,
+                            47.09
+                        ],
+                        [
+                            -98.47,
+                            47.24
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fc5fbe4d423f91b7171abcaa8082ce27eff62253.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.fc5fbe4d423f91b7171abcaa8082ce27eff62253.001.1",
+                "areaDesc": "Barnes, ND; Griggs, ND",
+                "geocode": {
+                    "SAME": [
+                        "038003",
+                        "038039"
+                    ],
+                    "UGC": [
+                        "NDC003",
+                        "NDC039"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/NDC003",
+                    "https://api.weather.gov/zones/county/NDC039"
+                ],
+                "references": [],
+                "sent": "2026-09-28T23:36:00-05:00",
+                "effective": "2026-09-28T23:36:00-05:00",
+                "onset": "2026-09-28T23:36:00-05:00",
+                "expires": "2026-09-29T09:15:00-05:00",
+                "ends": "2026-09-29T09:15:00-05:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Grand Forks ND",
+                "headline": "Flood Warning issued September 28 at 11:36PM CDT until September 29 at 9:15AM CDT by NWS Grand Forks ND",
+                "description": "* WHAT...Small stream flooding caused by excessive rainfall is\nexpected.\n\n* WHERE...Northwestern Barnes County in southeastern North Dakota...\nSouthern Griggs County in southeastern North Dakota...\n\n* WHEN...Until 915 AM CDT Tuesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Streams\ncontinue to rise due to excess runoff from earlier rainfall.\n\n* ADDITIONAL DETAILS...\n- At 1136 PM CDT, Doppler radar and automated rain gauges indicated\nheavy rain due to thunderstorms. Flooding is ongoing or expected\nto begin shortly in the warned area. Between 2 and 3 inches of\nrain have fallen.\n- Additional rainfall amounts of 1 to 2 inches are possible in the\nwarned area.\n- Some locations that will experience flooding include...\nCooperstown, Wimbledon, Hannaford, Dazey and Walum.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWFGF"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KFGF 290436"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 915 AM CDT TUESDAY"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KFGF.FA.W.0001.260929T0436Z-260929T1415Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-09-29T09:15:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b777cd6d800bde61e4575e84052799e21f6ea36.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -90.9,
+                            42
+                        ],
+                        [
+                            -90.71,
+                            41.84
+                        ],
+                        [
+                            -90.33,
+                            41.77
+                        ],
+                        [
+                            -90.35,
+                            41.69
+                        ],
+                        [
+                            -90.8,
+                            41.71
+                        ],
+                        [
+                            -90.9,
+                            41.85
+                        ],
+                        [
+                            -90.9,
+                            42
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b777cd6d800bde61e4575e84052799e21f6ea36.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.6b777cd6d800bde61e4575e84052799e21f6ea36.001.1",
+                "areaDesc": "Clinton, IA; Scott, IA",
+                "geocode": {
+                    "SAME": [
+                        "019045",
+                        "019163"
+                    ],
+                    "UGC": [
+                        "IAC045",
+                        "IAC163"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/IAC045",
+                    "https://api.weather.gov/zones/county/IAC163"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d849a3733b7d5b90b2c1d26ecd55903d076fba9c.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.d849a3733b7d5b90b2c1d26ecd55903d076fba9c.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-28T10:27:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-28T21:03:00-05:00",
+                "effective": "2026-09-28T21:03:00-05:00",
+                "onset": "2026-09-28T21:03:00-05:00",
+                "expires": "2026-09-29T21:15:00-05:00",
+                "ends": "2026-10-01T11:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Quad Cities IA IL",
+                "headline": "Flood Warning issued September 28 at 9:03PM CDT until October 1 at 11:00AM CDT by NWS Quad Cities IA IL",
+                "description": "...The Flood Warning continues for the following rivers in Iowa...\n\nWapsipinicon River near De Witt 4S affecting Clinton and Scott\nCounties.\n\n* WHAT...Moderate flooding is occurring.\n\n* WHERE...Wapsipinicon River near De Witt 4S.\n\n* WHEN...Until Thursday morning.\n\n* IMPACTS...At 12.0 feet, Overbank flooding occurs. Water affects\nresidences along the river between Wheatland and Calamus. Water\naffects businesses along the river near Calamus.\n\n* ADDITIONAL DETAILS...\n- At 8:30 PM CDT Monday the stage was 12.2 feet.\n- Forecast...The river is expected to fall below flood stage\nThursday morning and continue falling to 8.6 feet Tuesday,\nOctober 6th.\n- Flood stage is 11.0 feet.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nMotorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nThe next statement will be issued by Tuesday evening.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSDVN"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS83 KDVN 290203"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL THURSDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KDVN.FL.W.0067.000000T0000Z-261001T1600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-01T11:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.79aad7b0b8cf5f5cff8d248b6a17f1ddbe70d5f8.001.1,2026-09-27T20:23:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.db60aabc5e5fc05a360ce2fd38e8089e65219f4b.001.1,2026-09-27T10:17:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.0ed642483059d9b59eac0b64a2385eaea06ebcc3.001.1,2026-09-26T20:38:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9b949fb3e2ee63bc5895d3cbb34c83428e3e6bcd.001.1,2026-09-26T09:00:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d95d93928b42844640738fe2c4cd0fe20de7e515.001.1,2026-09-25T20:42:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.42fb1ed77fa0fef72c6ae77d76e596c3f8548831.003.1,2026-09-25T10:43:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.29d61db02245de13cd2c0c90e72ef2ebb56b8211.001.1,2026-09-24T20:24:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1b9c33892c3bb15332068d255203d1d0c079edb3.001.1,2026-09-24T09:12:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c3d4f6fc2760f716ebc9a3b5e8f5d32867f94dae.001.1,2026-09-23T20:56:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b4b2668337195a5896def4038316d48545cceb9f.006.1,2026-09-22T21:22:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ea8fdec7f6d6c27827f4ccc86bd622edc090feca.001.1,2026-09-22T10:23:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3d2cef778e6b7be60e34840d7695e13a0c94caea.002.1,2026-09-21T20:35:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.71acef68e750c8547dad09860588c21c7c3f0f6f.001.1,2026-09-21T11:15:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.72a1004c19fca4f45e91e42577309569e2d692fd.001.1,2026-09-20T20:27:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6a87f4831d29bc973fd3fa9dce6f99e736badc38.001.1,2026-09-20T09:40:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c10ba31e9363469b68935b3938561fa711696fb9.001.1,2026-09-19T20:57:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1bd7a692872d5f7d5a57fe045d6480d86be5a18d.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -87.97,
+                            42.51
+                        ],
+                        [
+                            -87.87,
+                            42.5
+                        ],
+                        [
+                            -87.89,
+                            42.47
+                        ],
+                        [
+                            -87.87,
+                            42.39
+                        ],
+                        [
+                            -87.96,
+                            42.39
+                        ],
+                        [
+                            -87.99,
+                            42.47
+                        ],
+                        [
+                            -87.97,
+                            42.51
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1bd7a692872d5f7d5a57fe045d6480d86be5a18d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.1bd7a692872d5f7d5a57fe045d6480d86be5a18d.001.1",
+                "areaDesc": "Lake, IL",
+                "geocode": {
+                    "SAME": [
+                        "017097"
+                    ],
+                    "UGC": [
+                        "ILC097"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ILC097"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b8ad1939b714543f020f6037cf2cfd7a8705ba90.002.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.b8ad1939b714543f020f6037cf2cfd7a8705ba90.002.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-28T08:37:00-05:00"
+                    }
+                ],
+                "sent": "2026-09-28T21:00:00-05:00",
+                "effective": "2026-09-28T21:00:00-05:00",
+                "onset": "2026-09-28T21:00:00-05:00",
+                "expires": "2026-09-29T15:00:00-05:00",
+                "ends": "2026-10-01T19:00:00-05:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Chicago IL",
+                "headline": "Flood Warning issued September 28 at 9:00PM CDT until October 1 at 7:00PM CDT by NWS Chicago IL",
+                "description": "...Observed flooding changed from Minor to Moderate severity for the\nfollowing rivers in Illinois...\n\nDes Plaines River near Russell affecting Lake IL County.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Des Plaines River from IL/WI state line downstream to US-41\nin Gurnee, including the Russell gauge.\n\n* WHEN...Until Thursday evening.\n\n* IMPACTS...At 8.0 feet, Agricultural and park land is inundated near\nthe river. Residential property is threatened near the river.\n\n* ADDITIONAL DETAILS...\n- At 8:30 PM CDT Monday the stage was 7.6 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:30 PM CDT Monday was 7.9 feet.\n- Forecast...The river will slowly fall below flood stage towards\nthe end of the week.\n- Flood stage is 7.0 feet.\n- http://www.weather.gov/safety/flood",
+                "instruction": "A Flood Warning means water levels above flood stage are imminent or\nmay already be occurring. Persons along rivers and streams in the\nwarned area should take immediate precautions to protect life and\nproperty.\n\nThese forecasts are based on observed precipitation as well as\nforecast precipitation 24 hours into the future. Changes to the\nrainfall forecast, or any additional rainfall after 24 hours, may\ncause changes to these river forecasts.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued by Tuesday afternoon.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWLOT"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS43 KLOT 290200"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL THURSDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KLOT.FL.W.0075.000000T0000Z-261002T0000Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-01T19:00:00-05:00"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.337c1ba9d8f0617e5fd634072b1785a8bccc4fc7.002.1,2026-09-27T20:09:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6efc3f4a6f6c9132e07e564bedb6f2c0ab4e8141.002.1,2026-09-27T10:28:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8142b6734fa1399e2866f4b56b499ee6c5ec159f.002.1,2026-09-26T21:12:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.2c71983bc69c0792c2e2b1d190550fcb3236095d.002.1,2026-09-26T10:47:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.951759a5df5a3425be1df9eaeca8ef446b499430.002.1,2026-09-25T20:41:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e74fe38c273b0bba1814a01038b588aa79958106.001.1,2026-09-25T09:14:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8ff2165e0da55233b8995df679228eda56292898.002.1,2026-09-24T20:28:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.b27f8f406ffaecbd4b82dc6639c78ffa8cce751f.002.1,2026-09-24T11:12:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.8466fbc308a3da03603065de3a425b18e2dd60d8.002.1,2026-09-23T20:29:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a19c3b34911b3f7ee96bf38cb64eed7c94cff02f.002.1,2026-09-23T11:20:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.1be9ff2706a5a97a1b88bc94ce30635ea5e9cf38.002.1,2026-09-22T21:16:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3ff521a03d10f018c876ec1322593ad941032900.001.1,2026-09-22T10:21:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.a133a67c6499ba6d06c3732ce9bb35361ba299fd.001.1,2026-09-21T19:17:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3c967b0cce947e852b0796714f78d0aff5cffabd.001.1,2026-09-21T10:21:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.f812a5ff0e3f4e642e18d0b046272e988a240463.001.1,2026-09-20T21:02:00-05:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.023d56d87685b261f608048266eb5ead72063253.001.1,2026-09-20T09:14:00-05:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57539f065ac0cf8247b80b2a74ede212d4dce0ff.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -81.5,
+                            29.08
+                        ],
+                        [
+                            -81.69,
+                            29.32
+                        ],
+                        [
+                            -81.57,
+                            29.35
+                        ],
+                        [
+                            -81.42,
+                            29.1
+                        ],
+                        [
+                            -81.5,
+                            29.08
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.57539f065ac0cf8247b80b2a74ede212d4dce0ff.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.57539f065ac0cf8247b80b2a74ede212d4dce0ff.001.1",
+                "areaDesc": "Lake, FL; Volusia, FL",
+                "geocode": {
+                    "SAME": [
+                        "012069",
+                        "012127"
+                    ],
+                    "UGC": [
+                        "FLC069",
+                        "FLC127"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/FLC069",
+                    "https://api.weather.gov/zones/county/FLC127"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5162f7516e072fa25d70b45089596b8a21b1dd81.001.1",
+                        "identifier": "urn:oid:2.49.0.1.840.0.5162f7516e072fa25d70b45089596b8a21b1dd81.001.1",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2026-09-28T09:13:00-04:00"
+                    }
+                ],
+                "sent": "2026-09-28T20:48:00-04:00",
+                "effective": "2026-09-28T20:48:00-04:00",
+                "onset": "2026-09-28T20:48:00-04:00",
+                "expires": "2026-09-29T11:00:00-04:00",
+                "ends": null,
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Melbourne FL",
+                "headline": "Flood Warning issued September 28 at 8:48PM EDT by NWS Melbourne FL",
+                "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Astor affecting Lake and Volusia Counties.\n\n.The St Johns River at Astor remains within Minor Flood Stage due to\ntidal effects. River levels are forecast to gradually subside this\nweek but remain within Minor Flood stage.\n\nFor the St. Johns River...including Astor...Minor flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...St Johns River near Astor.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 2.8 feet, Docks and boat ramps covered at South Moon\nFish Camp and approaching sea wall at Blair's Jungle Den. Water\napproaching sites closest to the river at Fish Tales RV Resort and\nAstor Landing Campground. Portion of Clair Street covered by river\nwater south of the Butler Boat Ramp. Docks underwater at the Astor\nBridge Marina and along Riveredge Drive. Portions of Fox Road are\ncovered with water nearest to the river. Acorn, Hazelnut and Redbud\nroads are underwater with yards inundated.\n\n* ADDITIONAL DETAILS...\n- At 7:30 PM EDT Monday the stage was 2.6 feet.\n- Bankfull stage is 2.0 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 7:30 PM EDT Monday was 2.7 feet.\n- Forecast...The river is expected to remain steady above flood\nstage at 2.6 feet.\n- Flood stage is 2.3 feet.\n- Flood History...This crest compares to a previous crest of 2.6\nfeet on 10/14/1996.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Motorists should not attempt to drive around barricades or drive cars\nthrough flooded areas.\n\nCaution is urged when walking near riverbanks.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Tuesday morning at 1100 AM EDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLSMLB"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS82 KMLB 290048"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING REMAINS IN EFFECT UNTIL FURTHER NOTICE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.CON.KMLB.FL.W.0002.000000T0000Z-000000T0000Z/"
+                    ],
+                    "expiredReferences": [
+                        "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3644b0431c4f6a0fbb0cc15ce9fc8e0a62258312.001.1,2026-09-27T20:58:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d8bb493a8c1a50dd9be8df1abf45e5a21a72e262.001.1,2026-09-27T09:17:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.09387ba1ca26dbd4c13ec4ad270ef15171955dab.001.1,2026-09-26T20:36:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.d629296c457c07a0efd1538977eea81337cf40fa.001.1,2026-09-26T09:37:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eff9358ddf4d6bcb0980287f01224ec6739f254d.001.1,2026-09-25T21:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.61a1e48e84bbd6063a52237159bd005c369218ec.001.1,2026-09-25T09:19:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.223828a80c7e006bd29ddadf9ce2b3acb9a41828.001.1,2026-09-24T20:56:00-04:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.3ccda8f194db8a4f82d8582bde19a003ff3c4e62.001.1,2026-09-24T09:13:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLS"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        }
+    ],
+    "title": "Current watches, warnings, and advisories",
+    "updated": "2026-09-29T11:33:13+00:00"
+}
