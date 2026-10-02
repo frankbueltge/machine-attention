@@ -272,3 +272,54 @@ def test_escalation_reads_the_top_of_whichever_ladder_the_source_uses():
     ])
     resolution = resolve.resolve_future(calm, {calm["id"]: calm}, "2026-08-08")
     assert resolution["measured"]["escalated"] is False
+
+
+def _reappeared_future(*events):
+    return {"futures": {"nws-kiwx-flw-0054-26": {
+        "status": events[-1][1] if events[-1][1] != "REAPPEARED" else "OPEN",
+        "history": [{"ts": ts, "event": ev} for ts, ev in events]}}}
+
+
+def _write_resolved_at(root: Path, fid: str, resolved_at: str) -> None:
+    directory = root / "foreknown" / "resolutions"
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / f"{fid}.json").write_text(
+        json.dumps({"future": fid, "resolved_at": resolved_at}), encoding="utf-8")
+
+
+def test_resolution_reappearance_uncovered_fires_on_a_second_closure(tmp_path: Path):
+    """Implements the machine's own proposal
+    sensor-resolution-reappearance-coverage: one resolution per future id
+    means a second life's closure is never measured."""
+    registry = _reappeared_future(
+        ("2026-09-17T10:24:40+00:00", "NOTARIZED"),
+        ("2026-09-19T09:42:42+00:00", "CLOSED_BY_SOURCE"),
+        ("2026-09-20T10:05:25+00:00", "REAPPEARED"),
+        ("2026-09-26T10:14:12+00:00", "CLOSED_BY_SOURCE"))
+    _write_resolved_at(tmp_path, "nws-kiwx-flw-0054-26", "2026-09-19T09:42:42+00:00")
+    assert resolve.resolution_reappearance_uncovered(tmp_path, registry) == [
+        {"future": "nws-kiwx-flw-0054-26",
+         "resolved_at": "2026-09-19T09:42:42+00:00",
+         "later_closures": ["2026-09-26T10:14:12+00:00"]}]
+
+
+def test_resolution_reappearance_uncovered_is_silent_while_still_open(tmp_path: Path):
+    registry = _reappeared_future(
+        ("2026-08-08T05:46:00+00:00", "NOTARIZED"),
+        ("2026-08-25T06:04:45+00:00", "CLOSED_BY_SOURCE"),
+        ("2026-08-28T17:41:45+00:00", "REAPPEARED"))
+    _write_resolved_at(tmp_path, "nws-kiwx-flw-0054-26", "2026-08-25T06:04:45+00:00")
+    assert resolve.resolution_reappearance_uncovered(tmp_path, registry) == []
+
+
+def test_resolution_reappearance_uncovered_is_silent_when_a_later_closure_is_resolved(
+        tmp_path: Path):
+    """Falsification (a): resolutions keyed per episode would carry the
+    second closure's resolved_at — one second late is still covered."""
+    registry = _reappeared_future(
+        ("2026-09-17T10:24:40+00:00", "NOTARIZED"),
+        ("2026-09-19T09:42:42+00:00", "CLOSED_BY_SOURCE"),
+        ("2026-09-20T10:05:25+00:00", "REAPPEARED"),
+        ("2026-09-26T10:14:12+00:00", "CLOSED_BY_SOURCE"))
+    _write_resolved_at(tmp_path, "nws-kiwx-flw-0054-26", "2026-09-26T10:14:13+00:00")
+    assert resolve.resolution_reappearance_uncovered(tmp_path, registry) == []

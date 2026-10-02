@@ -21,7 +21,8 @@ from . import reaction, sources
 from .futures import (COLD_START_OVERDUE, DRIFT_OVERDUE, drought_window_class,
                       drought_window_crossings, is_overdue, overdue_kind,
                       source_ref_episode_drift, update_registry)
-from .resolve import lead_time_pathway_idle, resolve_pending
+from .resolve import (lead_time_pathway_idle, resolution_reappearance_uncovered,
+                      resolve_pending)
 
 # How many past UTC days of the attention series a nightly run completes.
 # GDELT publishes a day's file the morning after, so the newest day is
@@ -140,6 +141,13 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
     # ever grows more certain, never resets.
     lead_time_pathway = lead_time_pathway_idle(repo_root)
 
+    # The machine's proposal sensor-resolution-reappearance-coverage:
+    # resolve_pending writes one resolution per future id, so a future that
+    # closes, reappears and closes again keeps only its first life's
+    # verdict. Fires on any such future; no threshold. Promoted 2026-10-02.
+    reappearance_uncovered = resolution_reappearance_uncovered(repo_root,
+                                                               registry)
+
     # The reaction axis: what moved while the warning was already running.
     # Its outages are recorded in its own block — a quiet GDELT day is not a
     # failure of the notary, and the two must stay legible apart.
@@ -172,6 +180,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
                                  sorted(drought_classes.items()) if state},
         "drought_window_crossings": drought_crossings,
         "lead_time_pathway": lead_time_pathway,
+        "resolution_reappearance_uncovered": reappearance_uncovered,
         "reaction": reaction_summary,
     })
     autonomy.append(repo_root, "foreknown-notary-run", "machine", detail={
@@ -182,6 +191,7 @@ def run(repo_root: Path, day: str, client: Client | None = None) -> dict:
         "open_total": len(open_futures), "failures": len(failures),
         "overdue_drift": sum(1 for k in kinds.values() if k == DRIFT_OVERDUE),
         "source_ref_episode_drift": len(source_ref_drift),
+        "resolution_reappearance_uncovered": len(reappearance_uncovered),
         "match_rate": reaction_summary.get("match_rate")})
     return {"date": day, "observed": len(observed), "failures": len(failures),
             **{k: len(v) for k, v in summary.items()},
