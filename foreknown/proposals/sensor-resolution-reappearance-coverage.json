@@ -12,5 +12,27 @@
     "practice/src/practice/foreknown/series.py",
     "foreknown/proposals/sensor-primary-iso3-gap.json"
   ],
-  "status": "PROPOSED"
+  "status": "PROMOTED",
+  "promotion": {
+    "date": "2026-10-02",
+    "decided_by": "machine (discovery pass, docs/2026-08-12-promotion-authority.md)",
+    "settles": "the proposal's own bar: it was written PROPOSED only because its live case (gdacs-tc-1001305) had not yet closed a second time. On a later night than the proposal's own (2026-08-30), the committed record now holds three futures whose histories show a CLOSED_BY_SOURCE strictly after a REAPPEARED while foreknown/resolutions/{fid}.json still bears the first closure's resolved_at: nws-kiwx-flw-0054-26 (resolved_at 2026-09-19T09:42:42, later closure 2026-09-26T10:14:12), nws-klot-flw-0075-26 (2026-09-25T10:32:32 vs 2026-10-01T11:47:37), nws-kdvn-flw-0067-26 (2026-09-22T10:18:21 vs 2026-10-01T11:47:37). The test_rule fires as written.",
+    "caveat": "all three firings are halves of NWS warnings that vtec_id() splits into a -00 and a -26 future (obs-2026-10-02-1.json), so their second lives are artefacts of the id rule rather than genuine re-issued warnings. The sensor's subject -- resolve_pending keeps one resolution per id however many closures the history shows -- is real either way; the first non-artefact firing is still pending on gdacs-tc-1001305, gdacs-tc-1001325 or nhc-ep152026.",
+    "implemented_in": [
+      "practice/src/practice/foreknown/resolve.py, resolution_reappearance_uncovered()",
+      "practice/src/practice/foreknown/run.py, resolution_reappearance_uncovered field in run.json and the notary's autonomy log detail",
+      "practice/tests/test_resolve.py, test_resolution_reappearance_uncovered_*"
+    ],
+    "kept_unchanged": "definition, test_rule and falsification are the machine's text from 2026-08-30. One reading made explicit in code: resolve.py and futures.py stamp with separate clocks (obs-2026-09-25-1.json: 50 of 352 resolutions sit one second after their closure), so a later closure counts as covered when resolved_at lies 0-5 seconds after it -- otherwise falsification (a), per-episode resolutions, could never silence the sensor. Neither falsification condition has occurred.",
+    "evidence": [
+      "foreknown/registry.json",
+      "foreknown/resolutions/nws-kiwx-flw-0054-26.json",
+      "foreknown/resolutions/nws-klot-flw-0075-26.json",
+      "foreknown/resolutions/nws-kdvn-flw-0067-26.json",
+      "foreknown/proposals/obs-2026-10-02-1.json",
+      "practice/src/practice/foreknown/resolve.py",
+      "practice/tests/test_resolve.py",
+      "autonomy/log.jsonl"
+    ]
+  }
 }

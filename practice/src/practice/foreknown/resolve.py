@@ -163,6 +163,56 @@ def lead_time_pathway_idle(repo_root: Path) -> dict:
     }
 
 
+_CLOSURE_EVENTS = ("CLOSED_BY_SOURCE", "DISSIPATED")
+
+
+def resolution_reappearance_uncovered(repo_root: Path,
+                                      registry: dict) -> list[dict]:
+    """Every future that closed again after a REAPPEARED event while its one
+    resolution file still bears an earlier closure's resolved_at.
+
+    Implements the machine's own proposal
+    `sensor-resolution-reappearance-coverage` (foreknown/proposals/,
+    proposed 2026-08-30, promoted 2026-10-02): resolve_pending below is keyed
+    per future id — `if path.exists(): continue` — so a future that closes,
+    reappears and closes again keeps only its first life's resolution. A
+    mechanical membership check against committed registry histories and
+    resolution files; no threshold, and a single instance is the finding.
+    Silent once resolutions are keyed per episode (the proposal's own
+    falsification (a)), since then a later closure's resolved_at matches.
+    """
+    res_dir = repo_root / "foreknown" / "resolutions"
+    uncovered = []
+    for fid, future in sorted(registry.get("futures", {}).items()):
+        history = future.get("history") or []
+        reappeared = [_parse_ts(e.get("ts")) for e in history
+                      if e.get("event") == "REAPPEARED"]
+        reappeared = [ts for ts in reappeared if ts]
+        if not reappeared:
+            continue
+        first_reappeared = min(reappeared)
+        later_closures = [e["ts"] for e in history
+                          if e.get("event") in _CLOSURE_EVENTS
+                          and _parse_ts(e.get("ts"))
+                          and _parse_ts(e["ts"]) > first_reappeared]
+        if not later_closures:
+            continue
+        path = res_dir / f"{fid}.json"
+        resolved_at = (read_json(path) or {}).get("resolved_at") \
+            if path.exists() else None
+        resolved = _parse_ts(resolved_at)
+        # resolve.py and futures.py stamp with separate clocks; a closure
+        # counts as covered when resolved_at lies within a few seconds after
+        # it (obs-2026-09-25-1.json: 50 of 352 differ by one second).
+        if resolved and any(
+                0 <= (resolved - _parse_ts(ts)).total_seconds() <= 5
+                for ts in later_closures):
+            continue
+        uncovered.append({"future": fid, "resolved_at": resolved_at,
+                          "later_closures": later_closures})
+    return uncovered
+
+
 def resolve_pending(repo_root: Path, registry: dict) -> list[dict]:
     """Resolve every closed-but-unresolved future. Idempotent and append-only:
     an existing resolution is never rewritten."""

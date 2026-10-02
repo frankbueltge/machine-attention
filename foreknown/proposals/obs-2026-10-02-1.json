@@ -1,0 +1,31 @@
+{
+  "id": "obs-2026-10-02-1",
+  "date": "2026-10-02",
+  "kind": "difference",
+  "title": "vtec_id derives a warning's year from VTEC's begin/end stamps, so one NWS warning becomes two futures (-00 and -26) that close and reappear in lockstep each time the issuer toggles its end time to 'until further notice'; 8 such pairs are in the registry, and every firing of the newly promoted reappearance sensor is one of them",
+  "statement": "practice/src/practice/foreknown/sources.py's vtec_id() keys an NWS future by office, phenomenon, significance, ETN and a two-digit year taken from VTEC's begin stamp, or its end stamp when begin is 000000T0000Z. Once a warning is in progress its begin stamp is zeroed; when the office then also sets the end to until-further-notice (000000T0000Z), the year reads '00'. The same warning thus alternates between two ids. foreknown/snapshots/2026-09-25/nws-alerts-active.json carries /O.EXT.KDVN.FL.W.0067.000000T0000Z-261001T0900Z/ (id nws-kdvn-flw-0067-26) and foreknown/snapshots/2026-10-01/nws-alerts-active.json carries /O.CON.KDVN.FL.W.0067.000000T0000Z-000000T0000Z/ for the same area (Clinton, IA; Scott, IA) (id nws-kdvn-flw-0067-00). foreknown/registry.json shows the consequence as interlocked histories: nws-kdvn-flw-0067-00 CLOSED_BY_SOURCE at 2026-09-25T10:32:31 is the same timestamp as nws-kdvn-flw-0067-26's REAPPEARED, and nws-kdvn-flw-0067-26's CLOSED_BY_SOURCE at 2026-10-01T11:47:37 is the same timestamp as nws-kdvn-flw-0067-00's REAPPEARED. The KLOT FL.W 0075 pair (Lake, IL) and the KIWX FL.W 0054 pair show the same interlock. Of 17 NWS futures ending in -00 among 566 NWS futures, 8 have a -26 twin with the same office/phenomenon/ETN (kdvn-flw-0067, kilx-flw-0038, kiwx-flw-0054, kiwx-flw-0057, klch-flw-0036, klot-flw-0075, ktop-flw-0054, phfo-huw-2012); 14 of the 17 -00 futures already have a resolution file in foreknown/resolutions/, so each split also mints a resolution for a closure the issuer never made.",
+  "method": "Listed every foreknown/registry.json future whose id ends in -00 and checked for a -26 id with the same prefix; read the full history of the KDVN, KLOT and KIWX pairs; read the raw VTEC strings for KDVN.FL.W.0067 and KLOT.FL.W.0075 in the two preserved NWS snapshots named above. Ran the newly promoted resolution_reappearance_uncovered() against the committed registry and resolutions: it returns exactly nws-kdvn-flw-0067-26, nws-kiwx-flw-0054-26 and nws-klot-flw-0075-26 -- all three are -26 halves of split pairs.",
+  "derived_from": [
+    "practice/src/practice/foreknown/sources.py",
+    "foreknown/registry.json",
+    "foreknown/snapshots/2026-09-25/nws-alerts-active.json",
+    "foreknown/snapshots/2026-10-01/nws-alerts-active.json",
+    "foreknown/resolutions/nws-kdvn-flw-0067-00.json",
+    "foreknown/resolutions/nws-kdvn-flw-0067-26.json",
+    "foreknown/resolutions/nws-kiwx-flw-0054-26.json",
+    "foreknown/resolutions/nws-klot-flw-0075-26.json",
+    "foreknown/proposals/sensor-resolution-reappearance-coverage.json",
+    "practice/src/practice/foreknown/resolve.py"
+  ],
+  "figures": {
+    "nws_futures": 566,
+    "nws_futures_with_year_00": 17,
+    "split_pairs_with_26_twin": 8,
+    "year_00_futures_with_resolution": 14,
+    "reappearance_sensor_firings": 3,
+    "reappearance_sensor_firings_that_are_split_pairs": 3
+  },
+  "proposed_patch": "In vtec_id(), when both VTEC stamps are 000000T0000Z, take the year from the CAP message's own sent/effective timestamp instead of '00' (the warning's year is still knowable; only VTEC withholds it). Not applied tonight: switching the id rule makes the notary close the five OPEN -00 futures (nws-kdvn-flw-0067-00, nws-klot-flw-0075-00, nws-kmlb-flw-0002-00, nws-ktop-flw-0054-00, nws-pgum-trw-4026-00) as if their source had ended them, and reopen their -26 twins -- one last batch of artefact closures and resolutions, plus a decision on whether committed -00 histories should be marked as aliases. That reconciliation is a design choice about the record's identity, larger than one night's repair.",
+  "worth_watching_because": "Each toggle of an office's end time adds a false CLOSED_BY_SOURCE, a false REAPPEARED and possibly a false resolution to the record, and inflates the resolution layer's NWS closure count. The promoted sensor will keep naming these pairs; a genuine second closure (e.g. gdacs-tc-1001305, gdacs-tc-1001325 or nhc-ep152026, all reappeared and still OPEN) would be the first firing that is not this artefact.",
+  "left_alone": "Did not change vtec_id() or rewrite any committed id, history or resolution. No memoryhole verdicts: memoryhole/readings/2026-09-30.json (newest) carries zero rule-layer abstentions, as do 2026-09-25 through 2026-09-29. sensor-source-reconfirmation-blind-spot stays PROPOSED with its open design problem untouched. No source proposals."
+}
