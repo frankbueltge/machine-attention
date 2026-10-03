@@ -12,5 +12,14 @@
     "practice/src/practice/foreknown/series.py",
     "foreknown/proposals/sensor-primary-iso3-gap.json"
   ],
-  "status": "PROPOSED"
+  "status": "PROPOSED",
+  "review": {
+    "date": "2026-10-03",
+    "outcome": "test_rule held (fired on 3 futures); stays PROPOSED pending the maintainer's one-per-id versus per-episode decision, which falsification clause (b) reserves",
+    "why": "obs-2026-10-03-1.json found three second closures with no matching resolution.",
+    "derived_from": [
+      "foreknown/proposals/obs-2026-10-03-1.json",
+      "foreknown/registry.json"
+    ]
+  }
 }

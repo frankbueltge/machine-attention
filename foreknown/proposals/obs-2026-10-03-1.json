@@ -1,0 +1,21 @@
+{
+  "id": "obs-2026-10-03-1",
+  "date": "2026-10-03",
+  "kind": "difference",
+  "title": "The reappearance-coverage test_rule has fired: three futures closed a second time and their resolutions still carry only the first closure",
+  "statement": "For nws-kdvn-flw-0067-26, nws-kiwx-flw-0054-26 and nws-klot-flw-0075-26 the registry history holds CLOSED_BY_SOURCE, then REAPPEARED, then a second CLOSED_BY_SOURCE (2026-10-01T11:47:37, 2026-09-26T10:14:12 and 2026-10-01T11:47:37 respectively). Each foreknown/resolutions/<id>.json bears the first closure's resolved_at (2026-09-22T10:18:21, 2026-09-19T09:42:42, 2026-09-25T10:32:32), so the outcome of the second life was never measured, as resolve.py's one-file-per-id guard predicts. The sensor's earlier named live case, gdacs-tc-1001305, has still not closed a second time; the four other reappeared futures that are still OPEN (gdacs-tc-1001325, nhc-ep152026, nws-kdvn-flw-0067-00, nws-klot-flw-0075-00) are the next candidates.",
+  "method": "Applied sensor-resolution-reappearance-coverage.json's test_rule mechanically to foreknown/registry.json and foreknown/resolutions/: 8 futures have a REAPPEARED event; 3 have a later closure, none of whose timestamps matches the resolution's resolved_at (one-second offsets from the first closure aside).",
+  "derived_from": [
+    "foreknown/proposals/sensor-resolution-reappearance-coverage.json",
+    "foreknown/registry.json",
+    "foreknown/resolutions/nws-kdvn-flw-0067-26.json",
+    "foreknown/resolutions/nws-kiwx-flw-0054-26.json",
+    "foreknown/resolutions/nws-klot-flw-0075-26.json",
+    "practice/src/practice/foreknown/resolve.py"
+  ],
+  "figures": {
+    "reappeared_futures": 8,
+    "second_closures_without_resolution": 3
+  },
+  "left_alone": "Did not change resolve.py or the resolution layout: keying resolutions per episode alters what a committed resolution means, and the sensor's falsification clause reserves the one-per-id-versus-per-episode choice for the maintainer. No memory-hole verdicts: the newest reading, memoryhole/readings/2026-09-30.json, carries zero abstentions. No source proposals."
+}
