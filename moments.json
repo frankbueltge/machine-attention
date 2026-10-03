@@ -1,10 +1,19 @@
 {
   "$contract": "stage-moments/1",
   "generated_from": {
-    "commit": "63b4a0c",
+    "commit": "c3b42f4",
     "repo": "machine-attention"
   },
   "moments": [
+    {
+      "enter": "/attention/",
+      "evidence": "foreknown/RETIRED.json",
+      "mode": "retirement",
+      "occurred_at": "2026-10-04T00:00:00Z",
+      "project": "foreknown",
+      "statement": "The Foreknown stopped recording after 50 nights; its whole record stays public and verifiable.",
+      "subject": "The Foreknown"
+    },
     {
       "enter": "/attention/future/nws-phfo-ffw-0054-26.html",
       "evidence": "foreknown/resolutions/nws-phfo-ffw-0054-26.json",
@@ -895,15 +904,6 @@
       "project": "foreknown",
       "statement": "A new announced future entered the record.",
       "subject": "Freeze Warning"
-    },
-    {
-      "enter": "/attention/future/nws-kgld-faw-0015-26.html",
-      "evidence": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
-      "mode": "revision",
-      "occurred_at": "2026-10-03T10:36:01+00:00",
-      "project": "foreknown",
-      "statement": "A warning changed 23 hours after it was first preserved.",
-      "subject": "Flood Warning"
     }
   ],
   "practice": {

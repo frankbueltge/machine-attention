@@ -3,26 +3,6 @@
   "figures": [
     {
       "as_of": "2026-10-03",
-      "key": "futures_under_watch",
-      "value": 149
-    },
-    {
-      "as_of": "2026-10-03",
-      "key": "futures_window_open",
-      "value": 67
-    },
-    {
-      "as_of": "2026-10-03",
-      "key": "futures_cold_start",
-      "value": 81
-    },
-    {
-      "as_of": "2026-10-03",
-      "key": "futures_drift",
-      "value": 1
-    },
-    {
-      "as_of": "2026-10-03",
       "key": "futures_notarized_total",
       "value": 757
     },
@@ -88,7 +68,7 @@
     }
   ],
   "generated_from": {
-    "commit": "63b4a0c",
+    "commit": "c3b42f4",
     "repo": "machine-attention"
   },
   "practice": {
@@ -100,7 +80,7 @@
       "id": "foreknown",
       "since": "2026-08-08",
       "site_route": "/attention",
-      "status": "running",
+      "status": "retired",
       "title": "The Foreknown"
     },
     {
