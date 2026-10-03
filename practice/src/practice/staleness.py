@@ -32,6 +32,14 @@ handshake fix; 2026-09-04/05's export bug: two nights before the
 self-correcting without an active repair landing mid-gap. A register more
 than one day behind yesterday has, on the evidence so far, stalled -- not
 merely slipped a beat.
+
+Retired registers (2026-10-04). The sensor's own falsification clause
+foresaw the case: a register allowed to stop by design needs an explicit
+exception "rather than firing on every gap". The Foreknown was retired on the
+maintainer's decision of 2026-10-04 (foreknown/RETIRED.json); its two
+registers end on their last night by design. They are still listed under
+"checked", and reported under "retired" with that last night — never as
+stale, and never silently dropped from the output.
 """
 
 from __future__ import annotations
@@ -42,6 +50,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from .autonomy import append as autonomy_append
+from .foreknown.retired import read_retired
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -73,23 +82,30 @@ def _newest_date(base: Path, kind: str) -> str | None:
 
 def check(repo_root: Path, *, today: date | None = None) -> dict:
     """Compare each register's newest committed dated unit against
-    "yesterday" (UTC). Returns {"checked": [labels], "stale": [entries]},
+    "yesterday" (UTC). Returns {"checked": [labels], "stale": [entries],
+    "retired": [entries]} (a retired register is reported, not judged),
     where a stale entry is {"register", "newest_committed_date",
     "days_behind"} -- days_behind is None when the register has no dated
     unit at all yet."""
     today = today or datetime.now(timezone.utc).date()
     yesterday = today - timedelta(days=1)
+    closing = read_retired(repo_root)
     checked: list[str] = []
     stale: list[dict] = []
+    retired: list[dict] = []
     for label, rel, kind in REGISTERS:
         newest = _newest_date(repo_root / rel, kind)
+        checked.append(label)
+        if closing and label.startswith("foreknown/"):
+            retired.append({"register": label, "newest_committed_date": newest,
+                            "last_night": closing["last_night"]})
+            continue
         days_behind = (None if newest is None
                        else (yesterday - date.fromisoformat(newest)).days)
-        checked.append(label)
         if newest is None or days_behind > THRESHOLD_DAYS:
             stale.append({"register": label, "newest_committed_date": newest,
                           "days_behind": days_behind})
-    return {"checked": checked, "stale": stale}
+    return {"checked": checked, "stale": stale, "retired": retired}
 
 
 def main(argv=None) -> None:
@@ -100,10 +116,13 @@ def main(argv=None) -> None:
     root = args.repo_root.resolve()
     result = check(root)
     autonomy_append(root, "registry-stall-check", "machine", detail=result)
+    if result["retired"]:
+        print("RETIRED (by design, not stale):",
+              [r["register"] for r in result["retired"]])
     if result["stale"]:
         print("STALE:", result["stale"])
     else:
-        print("all registers current as of yesterday (UTC)")
+        print("all running registers current as of yesterday (UTC)")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,13 @@
-# The nightly notary run of The Foreknown (project 001). Same proven shape
-# as state-before-interface: the run writes files, committing is a separate
-# step under the machine's identity, deploy hangs off the push.
+# Until 2026-10-03 the nightly notary run of The Foreknown (project 001).
+#
+# The Foreknown was RETIRED on 2026-10-04 (foreknown/RETIRED.json,
+# docs/2026-10-04-foreknown-retired.md): the notary step is gone, and nothing
+# here may bring it back — verify.py fails any foreknown night recorded after
+# the last one. What stays is everything else this job always did for the
+# whole practice, because it was the only place that did it: the export and
+# the stage moments the house mirrors for frankbueltge.de, and the stage
+# rebuild, verified and committed under the machine's identity. Dark Ocean and
+# Memory Hole run on, and their figures reach the house only through here.
 name: sentinel
 
 on:
@@ -27,20 +34,9 @@ jobs:
       - name: Install practice
         run: python -m pip install --quiet -e ./practice
 
-      - name: Notarize announced futures
-        run: python -m practice.foreknown.run --repo-root .
-
-      # The night lists itself in the anchor ledger as "unstamped" (stdlib-only,
-      # no ots client, append-only): verify.py demands every register night be
-      # LISTED in the ledger, but only the anchor job can stamp, and it can only
-      # reach manifests already on main. Without this handshake the two jobs
-      # deadlock — they did, 2026-08-10 to 2026-08-12, and three nights recorded
-      # nothing. BEFORE the stage rebuild: verify.html renders the ledger, and
-      # the deterministic-rebuild check holds the stage against the ledger's
-      # final state.
-      - name: Register the night in the anchor ledger
-        run: python tools/anchor.py --register
-
+      # No notary step since 2026-10-04 (retired). No anchor registration
+      # either: it existed to list each new notary night in the ledger, and
+      # there are no new nights to list.
       - name: Rebuild stage
         run: python stage/generate.py --repo-root .
 
@@ -80,4 +76,4 @@ jobs:
       - name: Commit observation
         if: always() && steps.verify.outcome == 'success'
         run: |
-          tools/commit-and-push.sh "foreknown: notary run of $(date -u +%F)"
+          tools/commit-and-push.sh "export: house mirror of $(date -u +%F)"
