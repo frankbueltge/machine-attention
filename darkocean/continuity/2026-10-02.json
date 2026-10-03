@@ -1,0 +1,464 @@
+{
+  "answered": 2173,
+  "baselines_established": [],
+  "batches": 55,
+  "catches": [
+    {
+      "current": "2026-09-07T13:19:29.193684Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "0611389c-dc71-4f93-8805-b2f741e9ac41",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260904T051411_20260904T051436_009293_01278A_36FD_COG.SAFE",
+      "preserved": "2026-09-04T06:18:49.044327Z"
+    },
+    {
+      "current": "2026-09-07T13:18:18.610592Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "085dec82-ca26-463a-9e3d-5148aa6755d1",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260904T042613_20260904T042638_004423_008311_2B55.SAFE",
+      "preserved": "2026-09-04T05:36:18.298864Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "0ece9439-04a7-4fcf-90a2-32305c22d43d",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051309_20260829T051334_004336_007FFF_199F_COG.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "267aa560ae18ef564109084a46d2795be99b77d8aa1ac7ab1862e2e67a03a576",
+          "md5": "c7b6c73978dd212c5bb43b3cdb21de4d"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T06:59:48.384926Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "178487b1-152f-472c-8cc2-18e2aaa4ba9f",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051514_20260829T051539_004336_007FFF_4D25_COG.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "cd5a3d3a54c74c0901311f014a26a03c3807e8aab3ab63fd7aa7f6dbb14bdf8f",
+          "md5": "8a6a53dd5c5dc603bf25deb54b39e850"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T07:02:11.195556Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "25be18a1-5781-4e77-b481-a18db1df6ca7",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163850_20260816T163915_009023_011E98_5086.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "b2327105a83cdc737110cc23c96a222d65cd7e5dce1ba282b7c29505b32e0f2a",
+          "md5": "824702ea87372cda0e21449513060705"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:02:29.390664Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:23:30.282395Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-03",
+      "id": "341e384f-d335-4529-9a72-b6c7a8588c65",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260903T163713_20260903T163738_004416_0082CA_2545_COG.SAFE",
+      "preserved": "2026-09-03T21:05:08.734097Z"
+    },
+    {
+      "current": "2026-09-07T13:21:01.039730Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-03",
+      "id": "4d3b161f-35b5-4bad-b6af-7942a226ecb4",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260903T154649_20260903T154714_009285_012741_44ED.SAFE",
+      "preserved": "2026-09-03T16:52:41.516711Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "4d688e60-5dbc-4499-ae5d-59063cc12f01",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051539_20260829T051604_004336_007FFF_C7AB.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "3c62b9c9c5618ec8c9c0f8be02924c18c86195e2f067f2f0bcc8c69fd04e7fae",
+          "md5": "fc83ac156d8b75301631f1c6f965513b"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T07:01:18.248253Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:24:39.144585Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "5484220c-8087-4f66-b606-ac4aa3c4ff57",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260904T042638_20260904T042703_004423_008311_A2E4.SAFE",
+      "preserved": "2026-09-04T05:28:43.696770Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "6ca41e9e-5fc8-47e1-ae4a-30bd4877cc2e",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051604_20260829T051629_004336_007FFF_1090_COG.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "675652586c4873cecaf86a4057835831d2a6c016ee1c0c313a7f124c350e1043",
+          "md5": "f8f6c148ff0f3f95e6877b683b96471f"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T06:59:08.547834Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "8154cb91-ae10-40e2-a723-d419f36c44de",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051449_20260829T051514_004336_007FFF_128B.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "651433f2882f8e6650d0d2dc59a159fb2f4b42c8265f0dd5b9ab32af5b478bc1",
+          "md5": "1422f515a8bcf8118be45d57ca222a99"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T06:59:14.970121Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:20:32.471595Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "871ccd00-3a10-43bd-b036-8d78c1eea60b",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260904T051436_20260904T051501_009293_01278A_0FFC.SAFE",
+      "preserved": "2026-09-04T06:33:02.098815Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "903e7aca-6752-4a3d-b97f-8f41329a70c5",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051359_20260829T051424_004336_007FFF_A328_COG.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "ff6f796a625b74d0dfeec5017750738b5a45b4393d4ed4e15ec91c7903a7d86e",
+          "md5": "1011edd2aee9ccf9edbbabf0a5e78fb6"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T07:03:57.905091Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:25:11.192018Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-03",
+      "id": "91d27b44-0f05-49f4-b475-117f89c1d9c8",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260903T154739_20260903T154804_009285_012741_00D7_COG.SAFE",
+      "preserved": "2026-09-03T23:08:22.483880Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "9abc6a43-b849-4426-bc8f-a6ad953d22af",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163732_20260816T163800_009023_011E98_5EF6.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "12b3226025447b41dbd85e1ababb5b0aaa06a151b82184fcd98e3cb03f989685",
+          "md5": "35474012d8b8798eca5d240d10c4d03c"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:04:42.320997Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-23T19:08:50.770285Z",
+      "field": "modification_date",
+      "first_seen": "2026-08-24",
+      "id": "9bb7bda2-5e0e-4fff-8237-928a31dedaa5",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260824T153147_20260824T153212_009139_01225D_7955_COG.SAFE",
+      "preserved": "2026-08-24T16:40:00.405551Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "a019b749-85dd-425b-9f79-726c77b8e6e2",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051629_20260829T051654_004336_007FFF_2D5C.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "e03cb468446c2fc7ab2dd400e09903745c4f6344e8cf2c2922ac19db96161654",
+          "md5": "e8e39b2fc85623970bb388f7acdfe6bd"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T06:53:10.044409Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "a440d01e-5598-4906-9441-677d974ecde9",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051244_20260829T051309_004336_007FFF_0CAB_COG.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "94de5428e3a445060d7bc44d6e69c6fc67224584d4b6e7180ca127f6c8744c51",
+          "md5": "af2fc30ad13ebfeaaf40f9bbe78fa42a"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T07:13:19.330522Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:19:50.118153Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "b4d99381-edfa-4f45-a2bc-364920a0952f",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260904T051551_20260904T051616_009293_01278A_602D.SAFE",
+      "preserved": "2026-09-04T06:18:42.872165Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "b68f8503-f4eb-498c-866c-44b0c8b1e872",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051424_20260829T051449_004336_007FFF_4D8B_COG.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "65e9c5c3a69e4c86d076d85f53ace4566fce54d7e2bdb6ecd7c6c760a93c485e",
+          "md5": "85be537e4c6eb7cc2914efeecfb39e1c"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T07:07:14.441735Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:25:09.396262Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-03",
+      "id": "bbc746a4-e446-4e69-9f02-8a2d99fe8ff3",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260903T154714_20260903T154739_009285_012741_3EE9_COG.SAFE",
+      "preserved": "2026-09-03T23:06:54.654610Z"
+    },
+    {
+      "current": "2026-09-07T13:19:48.291357Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "cc43fb8d-df4e-4d09-a3c3-f821c1fcc097",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260904T051501_20260904T051526_009293_01278A_3E88.SAFE",
+      "preserved": "2026-09-04T06:18:43.737047Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "d07251c2-1581-4fbb-994b-0c57eefc5972",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163825_20260816T163850_009023_011E98_276F.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "335760dea6b9ec0d64347def6db8117d4e0835398429a2c1f38f5f3824a1e7e4",
+          "md5": "f55339aec7e0e855a334d14d90edb2a1"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:04:33.007825Z",
+        "online": true
+      }
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-16",
+      "id": "d2eea937-e4b5-48d1-a125-d5e1cb21b5fc",
+      "kind": "gone_from_catalog",
+      "name": "S1C_IW_GRDH_1SDV_20260816T163800_20260816T163825_009023_011E98_7F3B.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "f589075e90927bd12379a11fcf59cde73be2f1ece1827c7f2255512dd10bc7ea",
+          "md5": "4f49f1d7b07bce5a5b76e67a011eb50a"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-16T19:02:29.048833Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:24:02.544150Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "d5b1b85a-2a14-4166-b7e1-9563a3ba70de",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260904T042703_20260904T042728_004423_008311_86D2.SAFE",
+      "preserved": "2026-09-04T05:29:05.263355Z"
+    },
+    {
+      "current": "2026-09-07T13:25:09.692598Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "df16131b-de6b-4fed-91e5-b6227c09cb9a",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260904T042548_20260904T042613_004423_008311_255E.SAFE",
+      "preserved": "2026-09-04T05:32:53.689152Z"
+    },
+    {
+      "current": "2026-09-07T13:19:27.921304Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "e0e4985d-446a-4fd5-a502-473f6c7a31f2",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260904T042458_20260904T042523_004423_008311_C3D2_COG.SAFE",
+      "preserved": "2026-09-04T05:45:26.205239Z"
+    },
+    {
+      "current": "2026-09-07T13:23:51.285213Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-03",
+      "id": "e82e3529-211f-40e2-aa0c-4160f8185846",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260903T163623_20260903T163648_004416_0082CA_19E2.SAFE",
+      "preserved": "2026-09-03T21:10:39.749996Z"
+    },
+    {
+      "current": "2026-09-07T13:24:49.672374Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "e8f403c5-5894-45a3-91ef-ea12cc5b7b9a",
+      "kind": "changed",
+      "name": "S1D_IW_GRDH_1SDV_20260904T042523_20260904T042548_004423_008311_3DBC.SAFE",
+      "preserved": "2026-09-04T05:33:49.133395Z"
+    },
+    {
+      "current": null,
+      "first_seen": "2026-08-29",
+      "id": "e9066977-afd3-49de-9c1d-67e3e9ced78e",
+      "kind": "gone_from_catalog",
+      "name": "S1D_IW_GRDH_1SDV_20260829T051334_20260829T051359_004336_007FFF_2FF0.SAFE",
+      "preserved": {
+        "checksums": {
+          "blake3": "ad302ca2e3bbeb187df6c850aaf577671689b622db18fe7c8e5d35538394cd02",
+          "md5": "48c684cb1c5a8a26340faad41075df62"
+        },
+        "eviction_date": "9999-12-31T23:59:59.999999Z",
+        "modification_date": "2026-08-29T06:57:42.415021Z",
+        "online": true
+      }
+    },
+    {
+      "current": "2026-09-07T13:20:09.441487Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "f3451743-93ee-448c-8888-e0e76cf32b64",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260904T051616_20260904T051641_009293_01278A_7D89.SAFE",
+      "preserved": "2026-09-04T06:24:57.606516Z"
+    },
+    {
+      "current": "2026-09-07T13:20:00.061066Z",
+      "field": "modification_date",
+      "first_seen": "2026-09-04",
+      "id": "f7e9bada-b724-4299-8f87-b4438cd932a8",
+      "kind": "changed",
+      "name": "S1C_IW_GRDH_1SDV_20260904T051526_20260904T051551_009293_01278A_817A.SAFE",
+      "preserved": "2026-09-04T06:19:54.484003Z"
+    }
+  ],
+  "date": "2026-10-02",
+  "failures": [],
+  "generated_at": "2026-10-03T10:06:54+00:00",
+  "notes": [
+    "the look-back re-probes products the register already recorded; it never widens the catch to products it never held",
+    "a divergence is committed with both values side by side and is never reconciled to the newer one — the overwrite is the forgetting this register exists to catch",
+    "readings before 2026-08-09 carry no modification_date; for their products the first probe establishes the baseline and says so, rather than reporting an unchanged value it never had",
+    "the eviction premise is structural, not observed: every product probed so far is online with EvictionDate 9999-12-31 (darkocean/METHOD.md). The probe measures whether that stays true",
+    "a product absent from the catalog's answer is the strongest divergence the register can record, and is committed as its own kind of catch"
+  ],
+  "probed": 2187,
+  "products_unchanged": 2155,
+  "sources": {
+    "CDSE-lookback": [
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b1.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b2.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b3.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b4.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b5.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b6.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b7.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b8.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b9.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b10.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b11.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b12.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b13.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b14.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b15.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b16.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b17.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b18.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b19.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b20.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b21.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b22.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b23.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b24.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b25.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b26.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b27.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b28.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b29.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b30.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b31.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b32.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b33.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b34.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b35.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b36.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b37.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b38.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b39.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b40.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b41.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b42.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b43.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b44.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b45.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b46.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b47.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b48.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b49.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b50.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b51.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b52.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b53.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b54.json",
+      "darkocean/snapshots/2026-10-02/cdse-lookback-b55.json"
+    ]
+  }
+}
