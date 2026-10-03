@@ -86,3 +86,21 @@ def test_missing_register_directory_is_maximally_stale(tmp_path):
         "newest_committed_date": None,
         "days_behind": None,
     }]
+
+
+def test_a_retired_project_is_reported_as_retired_never_as_stale(tmp_path):
+    # foreknown/RETIRED.json (2026-10-04): the notary stops by design. Its two
+    # registers fall behind forever after the last night; the check must say
+    # "retired" and keep judging the registers that still run.
+    import json
+    root = _repo(tmp_path, foreknown=("2026-09-01",), reaction=("2026-09-01",),
+                 darkocean=("2026-09-01",), memoryhole=("2026-09-05",))
+    (root / "foreknown" / "RETIRED.json").write_text(json.dumps({
+        "project": "foreknown", "status": "RETIRED", "last_night": "2026-09-01",
+        "decided": "2026-09-02", "record": "docs/x.md", "reason": "r"}),
+        encoding="utf-8")
+    result = check(root, today=TODAY)
+    assert [r["register"] for r in result["retired"]] == [
+        "foreknown/snapshots", "foreknown/reaction/snapshots"]
+    assert [s["register"] for s in result["stale"]] == ["darkocean/snapshots"]
+    assert len(result["checked"]) == 4

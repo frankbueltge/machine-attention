@@ -10,6 +10,20 @@ frankbueltge.de and corrected on day one from a monitoring corridor to an open
 practice — the reasoning lives in
 [`docs/2026-08-08-korrektur-praxis-ueber-observatorium.md`](docs/2026-08-08-korrektur-praxis-ueber-observatorium.md).
 
+## Where the practice stands (2026-10-04)
+
+- **The Foreknown is retired.** Fifty nights of record (2026-08-08 – 2026-10-03)
+  showed that the notary could not measure what it was built for. The stage at
+  frankbueltge.de/attention is now the archive of that finished record —
+  [`docs/2026-10-04-foreknown-retired.md`](docs/2026-10-04-foreknown-retired.md).
+- **The question moves to a clock where response is measurable:** slow-onset
+  food crises, projection against funding —
+  [`docs/2026-10-04-kandidat-the-interval.md`](docs/2026-10-04-kandidat-the-interval.md).
+- **The discovery pass builds now, instead of maintaining:** it carries
+  candidates through the admission path rather than tending one instrument —
+  [`docs/2026-10-04-discovery-neuer-auftrag.md`](docs/2026-10-04-discovery-neuer-auftrag.md).
+- Dark Ocean (instrument) and Memory Hole (v0) run on unchanged.
+
 ## The stage
 
 The public face is not documentation but a stage: monumental true statements,
@@ -38,7 +52,17 @@ test, not an intention.
 nightly via its `attention-integrate` workflow. This repository builds
 `public/` as the canonical, verified artifact; it does not deploy itself.
 
-## Project 001 — The Foreknown
+## Project 001 — The Foreknown (RETIRED 2026-10-04)
+
+**Retired on the maintainer's decision of 2026-10-04** (wording private;
+[`docs/2026-10-04-foreknown-retired.md`](docs/2026-10-04-foreknown-retired.md)).
+Last notary night 2026-10-03. Of 757 announced futures, 622 were local US
+weather warnings; of 614 measured verdicts, 595 said a warning ran out at its
+source and one that a forecast became an alert; the reaction axis could never
+attribute money or attention to a warning. The record stays complete and
+verifiable; `foreknown/RETIRED.json` is read by the stage, the export, the
+moments, the staleness check and `verify.py`. What follows below describes the
+project as it ran.
 
 > An observatory of announced futures. The machine notarizes what was knowable,
 > when — and measures the gap between warning and response while the clock is

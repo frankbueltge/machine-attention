@@ -1306,6 +1306,34 @@ def _closed_at(history: list[dict], resolved_at: str | None) -> bool:
                                                       "DISSIPATED")
 
 
+def check_retired(root: Path, problems: list[str]) -> None:
+    """The Foreknown's closing record (2026-10-04, foreknown/RETIRED.json).
+
+    A retired project ends on its last night: a night recorded after it would
+    be the notary running on under a record that says it stopped — the one
+    silent restart this check exists to make loud. The file's shape is held
+    too, because the stage, the export, the moments and the staleness check
+    all read it."""
+    path = root / "foreknown" / "RETIRED.json"
+    if not path.exists():
+        return
+    record = load(path)
+    for key in ("project", "status", "last_night", "decided", "record", "reason"):
+        if not record.get(key):
+            problems.append(f"foreknown/RETIRED.json: missing {key}")
+    if record.get("status") != "RETIRED":
+        problems.append("foreknown/RETIRED.json: status must be RETIRED")
+    last = str(record.get("last_night") or "")
+    if record.get("record") and not (root / record["record"]).exists():
+        problems.append(f"foreknown/RETIRED.json: record {record['record']} "
+                        "does not exist")
+    for base in ("foreknown/snapshots", "foreknown/reaction/snapshots"):
+        for night in sorted((root / base).glob("*")):
+            if night.is_dir() and last and night.name > last:
+                problems.append(f"{base}/{night.name}: recorded after the "
+                                f"project was retired (last night {last})")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -1317,6 +1345,8 @@ def check(root: Path) -> list[str]:
                     False)
     check_snapshots(root, "memoryhole/snapshots", problems, registry_files,
                     False)
+
+    check_retired(root, problems)
 
     registry = load(root / "foreknown" / "registry.json") \
         if (root / "foreknown" / "registry.json").exists() else {"futures": {}}

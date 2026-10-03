@@ -22,6 +22,7 @@ from pathlib import Path
 
 from .foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
                                 overdue_kind)
+from .foreknown.retired import read_retired
 from .preserve import read_json, write_json
 
 CONTRACT = "attention-export/1"
@@ -31,6 +32,11 @@ CONTRACT = "attention-export/1"
 # only in this repository — which is the admission path's rule, not an
 # oversight (no stage presence before the E-experiment is passed).
 PROJECTS = (
+    # Retired 2026-10-04 (docs/2026-10-04-foreknown-retired.md): the notary
+    # stopped after its fifty-night record, which stays public at the same
+    # route as an archive. build() reads the status from foreknown/RETIRED.json
+    # so the word and the closing record cannot disagree; "running" below is
+    # only what it was before that file existed.
     {"id": "foreknown", "title": "The Foreknown", "since": "2026-08-08",
      "site_route": "/attention", "status": "running"},
     # Reviewed 2026-08-22: the E-experiment did not pass, and the stage
@@ -110,7 +116,10 @@ def figures(repo_root: Path) -> list[dict]:
     open_futures = [f for f in futures.values() if f.get("status") == "OPEN"]
     kinds = {f["id"]: overdue_kind(f, f"{as_of}T00:00:00")
              for f in open_futures} if as_of else {}
-    return [
+    # Nothing is "under watch" once the notary is retired: the four figures
+    # that describe a watch are left out rather than frozen at the last
+    # night, where they would go on claiming a present the record ended.
+    watching = [] if read_retired(repo_root) else [
         {"key": "futures_under_watch",
          "value": len(open_futures),
          "as_of": as_of},
@@ -123,6 +132,8 @@ def figures(repo_root: Path) -> list[dict]:
         {"key": "futures_drift",
          "value": sum(1 for k in kinds.values() if k == DRIFT_OVERDUE),
          "as_of": as_of},
+    ]
+    return watching + [
         {"key": "futures_notarized_total", "value": len(futures),
          "as_of": as_of},
         {"key": "futures_resolved", "value": len(resolutions), "as_of": as_of},
@@ -149,13 +160,22 @@ def figures(repo_root: Path) -> list[dict]:
     ]
 
 
+def _with_closing_record(project: dict, repo_root: Path) -> dict:
+    """The Foreknown's status word comes from its closing record when one
+    exists — `retired`, the admission path's own word for an honest end."""
+    if project["id"] == "foreknown" and read_retired(repo_root):
+        project["status"] = "retired"
+    return project
+
+
 def build(repo_root: Path) -> dict:
     return {
         "$contract": CONTRACT,
         "generated_from": {"repo": "machine-attention",
                            "commit": head_commit(repo_root)},
         "practice": {"id": "machine-attention", "label": "Machine Attention"},
-        "projects": [dict(project) for project in PROJECTS],
+        "projects": [_with_closing_record(dict(project), repo_root)
+                     for project in PROJECTS],
         "figures": figures(repo_root),
     }
 

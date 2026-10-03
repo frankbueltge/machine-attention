@@ -22,6 +22,7 @@ from pathlib import Path
 
 from ..preserve import read_json
 from .futures import overdue_kind
+from .retired import RETIRED_FILE, read_retired
 
 MODES = {
     "REVISED": "revision",
@@ -114,6 +115,25 @@ def moments(repo_root: Path) -> list[dict]:
         out.append(_moment(future, ts, "resolution",
                            VERDICT_STATEMENTS[verdict],
                            f"foreknown/resolutions/{path.name}"))
+
+    # The last moment the project offers: its own end (2026-10-04). Derived
+    # from the committed closing record like every other moment, so the shared
+    # stage says the notary stopped instead of showing its final night as if
+    # the machine were still looking.
+    retired = read_retired(repo_root)
+    if retired:
+        nights = len(run_dates)
+        out.append({
+            "project": "foreknown",
+            "occurred_at": f"{retired['decided']}T00:00:00Z",
+            "mode": "retirement",
+            "statement": (f"The Foreknown stopped recording after {nights} "
+                          f"night{'s' if nights != 1 else ''}; its whole "
+                          f"record stays public and verifiable."),
+            "subject": "The Foreknown",
+            "enter": "/attention/",
+            "evidence": str(RETIRED_FILE),
+        })
 
     out.sort(key=lambda m: (m["occurred_at"], m["enter"], m["mode"]),
              reverse=True)

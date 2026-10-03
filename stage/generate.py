@@ -18,6 +18,12 @@ evidence is infinite, attention is not.
 Every figure is a real system state; clocks tick client-side from data
 timestamps so the build stays byte-stable for identical data (verify.py
 rebuilds and compares — which also makes "no dead ends" testable).
+
+RETIRED (2026-10-04): when foreknown/RETIRED.json exists, the stage becomes the
+archive of a finished record. No "right now", no ticking clocks, no countdown to
+a reading that will not come: the front page says what was recorded, why it
+stopped and what stays; every dossier, the ledger and the verify level remain,
+in the past tense, with every figure still derived from the committed record.
 """
 
 from __future__ import annotations
@@ -116,7 +122,8 @@ def collect(root: Path) -> dict:
             "manifests": manifests, "reaction_manifests": reaction_manifests,
             "states": states,
             "run_date": run_date,
-            "first_run_date": runs[0]["date"] if runs else ""}
+            "first_run_date": runs[0]["date"] if runs else "",
+            "retired": read_json(root / "foreknown" / "RETIRED.json")}
 
 
 def _plan_maps(root: Path, reading: dict | None) -> tuple[dict, dict]:
@@ -155,9 +162,23 @@ def _usd(value: int) -> str:
     return f"${value:,}"
 
 
-def _clock(future: dict, state: str | None = None) -> str:
+def _clock(future: dict, state: str | None = None,
+           retired: dict | None = None) -> str:
     window = future.get("window") or {}
     to, frm = window.get("to"), window.get("from")
+    if retired:
+        # A retired record has no present to count down in: the line says
+        # where the window stood when the notary stopped, and nothing ticks.
+        last = esc(retired["last_night"])
+        if to:
+            return (f'<span class="clock clock-past">announced window to '
+                    f'{esc(to[:16].replace("T", " "))} — still open at its '
+                    f'source when recording stopped on {last}</span>')
+        if frm:
+            return (f'<span class="clock clock-past">ongoing since '
+                    f'{esc(frm[:10])} — still open at its source when '
+                    f'recording stopped on {last}</span>')
+        return ""
     if state == "cold_start" and to:
         # No ticking clock for a cold start: a countdown stages a present
         # the record does not claim. A static line says what is known.
@@ -286,8 +307,13 @@ def _overdue_state(future: dict, run_date: str) -> str | None:
     return "drift"
 
 
-def _shell(title: str, description: str, body: str, depth: int = 0) -> str:
+def _shell(title: str, description: str, body: str, depth: int = 0,
+           retired: dict | None = None) -> str:
     rel = "../" * depth
+    masthead = ("The Foreknown — a machine records the world&#8217;s warnings"
+                if not retired else
+                f"The Foreknown — retired {esc(retired['decided'])} · the "
+                f"record stays")
     nav = "".join(
         f'<a class="enter" href="{href}">{label} &rarr;</a>'
         for label, href in (("Stage", f"{rel}index.html"),
@@ -307,7 +333,7 @@ def _shell(title: str, description: str, body: str, depth: int = 0) -> str:
 <body>
 <div class="stage doc">
   <header>
-    <span>The Foreknown — a machine records the world&#8217;s warnings</span>
+    <span>{masthead}</span>
     <span>every figure on this page is real</span>
   </header>
   <a class="crumb" href="{rel}index.html">&larr; the stage</a>
@@ -469,7 +495,8 @@ def dossier_page(future: dict, data: dict) -> str:
                      f'measured from committed records only</li>')
 
     entry = (data["reading"] or {}).get("futures", {}).get(fid)
-    clock = _clock(future, overdue) if status == "OPEN" else ""
+    clock = (_clock(future, overdue, data["retired"]) if status == "OPEN"
+             else "")
 
     iso3 = ", ".join(esc(c) for c in future.get("iso3", [])) or "—"
     source_ref = future.get("source_ref") or ""
@@ -501,7 +528,7 @@ def dossier_page(future: dict, data: dict) -> str:
   </section>"""
     return _shell(f"{_short(future.get('what') or fid, 70)} — The Foreknown",
                   "One announced future: its life, the world's reaction, "
-                  "and the evidence.", body, depth=1)
+                  "and the evidence.", body, depth=1, retired=data["retired"])
 
 
 def _hazard_tables(members: list, reading_futures: dict) -> str:
@@ -559,8 +586,12 @@ def ledger_page(data: dict) -> str:
     for future in open_futures:
         by_state[states[future["id"]]].append(future)
 
+    retired = data["retired"]
     if by_state["window_open"]:
         window_html = _hazard_tables(by_state["window_open"], reading_futures)
+    elif retired:
+        window_html = ('<p class="trace">No source-open warning was inside '
+                       'its announced window on the last night.</p>')
     else:
         window_html = ('<p class="trace">No source-open warning is inside '
                        'its announced window tonight — an honest zero, not '
@@ -596,9 +627,10 @@ def ledger_page(data: dict) -> str:
         if future["status"] == "OPEN":
             continue
         resolution = data["resolutions"].get(fid)
+        pending = ("no verdict — recording stopped first" if retired else
+                   "verdict pending — the resolver runs nightly")
         verdict = (esc(resolution["verdict"].replace("_", " ").lower())
-                   if resolution else "verdict pending — the resolver runs "
-                   "nightly")
+                   if resolution else pending)
         closed_rows.append(
             f'<tr><td><a href="future/{esc(fid)}.html">'
             f'{esc(_short(future.get("what") or fid, 56))}</a></td>'
@@ -618,7 +650,8 @@ def ledger_page(data: dict) -> str:
     coverage = (data["reading"] or {}).get("coverage")
     sensor_state = (data["reading"] or {}).get("sensor", {})
     if coverage:
-        line = (f"The machine&#8217;s standing sensor measures nightly: "
+        line = (f"The machine&#8217;s standing sensor "
+                f"{'measured on the last night' if retired else 'measures nightly'}: "
                 f"<strong>{coverage['with_fts_plan_match']} of "
                 f"{coverage['open_alert_episodes']}</strong> open alert "
                 f"episodes appear in a 2026 UN response plan "
@@ -655,10 +688,28 @@ def ledger_page(data: dict) -> str:
         machine_bits.append('<p class="trace">Nothing proposed yet — an '
                             'empty night is honest.</p>')
 
+    retired_note = ""
+    if retired:
+        retired_note = (
+            f'<p class="note">Recording stopped after the night of '
+            f'{esc(retired["last_night"])}; the project was retired on '
+            f'{esc(retired["decided"])}. What stood open then stands open '
+            f'here. <a href="{_gh(esc(retired["record"]))}">Why it was '
+            f'retired &rarr;</a></p>')
+    window_heading = ("Inside the announced window when recording stopped"
+                      if retired else
+                      "Inside the announced window — the clocks still running")
+    so_far = "recorded" if retired else "has recorded so far"
+    noticed = ("The nightly discovery pass read the accumulated record and "
+               "proposed observations and sensors."
+               if retired else
+               "The nightly discovery pass reads the accumulated record and "
+               "may propose observations and sensors.")
     body = f"""
   <p class="kicker">Investigate — the full record</p>
   <h1>The ledger</h1>
-  <p>Everything the machine has recorded so far: <strong>{data['total']}
+  {retired_note}
+  <p>Everything the machine {so_far}: <strong>{data['total']}
   announced futures</strong> over {nights} night{'s' if nights != 1 else ''}
   — {len(open_futures)} source-open ({len(by_state['window_open'])} inside
   the announced window, {len(by_state['drift'])} outlived under watch,
@@ -673,7 +724,7 @@ def ledger_page(data: dict) -> str:
   </section>
 
   <section>
-    <h2>Inside the announced window — the clocks still running</h2>
+    <h2>{window_heading}</h2>
     {window_html}
   </section>
 
@@ -687,15 +738,15 @@ def ledger_page(data: dict) -> str:
 
   <section>
     <h2>What the machine itself has noticed</h2>
-    <p class="note">The nightly discovery pass reads the accumulated record
-    and may propose observations and sensors. Everything below was written by
+    <p class="note">{noticed} Everything below was written by
     the machine and cites committed files; promotion to a standing sensor is
     a separate, reasoned commit.</p>
     {''.join(machine_bits)}
   </section>"""
     return _shell("The ledger — The Foreknown",
                   "Every announced future the machine has recorded, night by "
-                  "night, with what it noticed on its own.", body)
+                  "night, with what it noticed on its own.", body,
+                  retired=retired)
 
 
 def verify_page(data: dict) -> str:
@@ -803,6 +854,15 @@ def verify_page(data: dict) -> str:
     <th>evidence</th></tr></thead><tbody>{rows}</tbody></table>
   </section>"""
 
+    retired = data["retired"]
+    fetch_line = (
+        f"Each night from {esc(data['first_run_date'])} to "
+        f"{esc(data['run_date'])} the machine fetched the public feeds and "
+        f"preserved the original bytes with URL, UTC time and SHA-256; then "
+        f"the project was retired and the chain was closed, not cut."
+        if retired else
+        "Each night the machine fetches the public feeds and preserves the "
+        "original bytes with URL, UTC time and SHA-256.")
     body = f"""
   <p class="kicker">Verify — where the claims meet the bytes</p>
   <h1>Nothing here asks to be believed</h1>
@@ -812,8 +872,7 @@ def verify_page(data: dict) -> str:
 
   <section>
     <h2>How the chain holds</h2>
-    <p>Each night the machine fetches the public feeds and preserves the
-    original bytes with URL, UTC time and SHA-256. The registry of announced
+    <p>{fetch_line} The registry of announced
     futures is folded from those bytes; revisions append, nothing is
     overwritten. Verdicts and reaction figures are derived from committed
     records only. The stage — including this page — is a deterministic
@@ -859,10 +918,96 @@ cd practice &amp;&amp; python -m pip install -e '.[dev]' &amp;&amp; python -m py
   </section>"""
     return _shell("Verify — The Foreknown",
                   "The provenance level: preserved bytes, hashes, and how to "
-                  "re-run the whole chain.", body)
+                  "re-run the whole chain.", body, retired=retired)
 
 
 # --- the stage (ATTRACT) ----------------------------------------------------
+
+def retired_index(data: dict) -> str:
+    """The front page of a finished record (2026-10-04): what was recorded,
+    why it stopped, what stays — every figure counted from the record."""
+    retired = data["retired"]
+    futures = data["registry"]["futures"]
+    nights = len(data["runs"])
+    by_source: dict[str, int] = {}
+    for future in futures.values():
+        by_source[future["source"]] = by_source.get(future["source"], 0) + 1
+    sources = " · ".join(f"{n} from {esc(name)}" for name, n in
+                         sorted(by_source.items(), key=lambda kv: -kv[1]))
+    verdicts: dict[str, int] = {}
+    for resolution in data["resolutions"].values():
+        verdict = resolution.get("verdict", "")
+        verdicts[verdict] = verdicts.get(verdict, 0) + 1
+    ended = verdicts.get("EPISODE_ENDED", 0)
+    no_match = verdicts.get("NO_ALERT_MATCH", 0)
+    materialized = verdicts.get("MATERIALIZED_AS_ALERT", 0)
+    ledger_rows = []
+    for event, future in data["events"]:
+        label = event["event"].replace("_", " ").lower()
+        ledger_rows.append(
+            f'<p class="trace"><strong>{esc(label)}</strong> — '
+            f'{esc(_short(future.get("what") or future["id"], 70))} '
+            f'<span class="verdict">{esc(_short(future.get("where", ""), 40))}'
+            f' · {esc(event["ts"][:10])}</span></p>')
+    successor = retired.get("successor")
+    successor_link = (f'<a class="enter" href="{_gh(esc(successor))}">What '
+                      f'the question becomes next &rarr;</a>'
+                      if successor else "")
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Foreknown — a finished record of the world's warnings</title>
+<meta name="description" content="For {nights} night{'s' if nights != 1 else ''} a machine preserved the world's public warnings the moment they were issued. It was retired on {esc(retired['decided'])}; the whole record stays public and verifiable.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage">
+  <header>
+    <span>The Foreknown — retired {esc(retired['decided'])} · the record stays</span>
+    <span>every figure on this page is real</span>
+  </header>
+
+  <div class="hero">
+    <h1>For {nights} night{'s' if nights != 1 else ''} a machine recorded the world&#8217;s warnings. Then&nbsp;it&nbsp;was&nbsp;stopped.</h1>
+    <p class="hero-sub">{esc(retired['reason'])}</p>
+  </div>
+
+  <section class="ledger" aria-label="What the record holds">
+    <p class="label">What the record holds · {esc(data['first_run_date'])} to {esc(data['run_date'])}</p>
+    <p class="trace"><strong>{data['total']} announced futures</strong>, each preserved as original bytes with SHA-256 the moment it was first seen — {sources}.</p>
+    <p class="trace"><strong>{data['resolved']} verdicts</strong>, measured from committed records only — {ended} say a warning ran out at its source, {no_match} that a forecast left no alert behind, {materialized} that a forecast became an alert.</p>
+    <p class="trace"><strong>{len(data['open'])} still open at their source</strong> when the last night was recorded; they stay open here, as they stood.</p>
+    <p class="trace">{esc(retired.get('kept', ''))}</p>
+  </section>
+
+  <section class="ledger" aria-label="The last entries">
+    <p class="label">The last entries before recording stopped · <a class="plain" href="ledger.html">the whole ledger &rarr;</a></p>
+    {''.join(ledger_rows)}
+  </section>
+
+  <footer>
+    <p class="state-line"><strong>What was this?</strong> The Foreknown — the first
+    investigation of <em>machine attention</em>, a machine-run investigative practice.
+    It applied evidence discipline to the future: warnings were preserved as original
+    bytes with SHA-256 the moment they were issued, revisions never overwrote the
+    original, and the machine&#8217;s own work was logged step by step. Subject was the
+    warning system and institutional time — never the victims.</p>
+    <nav class="enter-nav">
+      <a class="enter" href="{_gh(esc(retired['record']))}">Why it was retired &rarr;</a>
+      {successor_link}
+      <a class="enter" href="ledger.html">Ledger &rarr;</a>
+      <a class="enter" href="verify.html">Verify &rarr;</a>
+      <a class="enter" href="{REPO_URL}">Archive &rarr;</a>
+    </nav>
+  </footer>
+</div>
+<script src="stage.js"></script>
+</body>
+</html>
+"""
+
 
 def build(root: Path, out: Path | None = None) -> Path:
     out = out or root / "public"
@@ -1035,6 +1180,8 @@ def build(root: Path, out: Path | None = None) -> Path:
 </body>
 </html>
 """
+    if data["retired"]:
+        page = retired_index(data)
     if out.exists():
         shutil.rmtree(out)
     out.mkdir(parents=True)
