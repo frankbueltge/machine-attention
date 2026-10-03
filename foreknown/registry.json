@@ -901,6 +901,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/gdacs.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-10-02T07:08:01"
+              },
+              "to": {
+                "from": "2025-12-21T00:00:00",
+                "to": "2026-10-01T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/gdacs.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "gdacs-dr-1018332",
@@ -943,7 +960,7 @@
       "where": "Austria, Bosnia & Herzegovina, Belgium, Belarus, Switzerland, Czech Republic, Germany, Denmark, Spain, France, Croatia, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Moldova, Montenegro, Netherlands, Norway, Poland, Romania, Serbia, Russia, Sweden, Slovenia, Slovakia, San Marino, Ukraine,",
       "window": {
         "from": "2025-12-21T00:00:00",
-        "to": "2026-10-02T07:08:01"
+        "to": "2026-10-01T00:00:00"
       }
     },
     "gdacs-dr-1018431": {
@@ -2436,6 +2453,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/gdacs.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-10-02T07:07:51"
+              },
+              "to": {
+                "from": "2026-04-21T00:00:00",
+                "to": "2026-10-01T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/gdacs.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "gdacs-dr-1027449",
@@ -2456,7 +2490,7 @@
       "where": "The Bahamas, Belize, Costa Rica, Cuba, Dominican Republic, Guatemala, Honduras, Haiti, Mexico, Nicaragua, El Salvador",
       "window": {
         "from": "2026-04-21T00:00:00",
-        "to": "2026-10-02T07:07:51"
+        "to": "2026-10-01T00:00:00"
       }
     },
     "gdacs-dr-1027450": {
@@ -3086,6 +3120,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/gdacs.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-06-21T00:00:00",
+                "to": "2026-10-02T07:07:44"
+              },
+              "to": {
+                "from": "2026-06-21T00:00:00",
+                "to": "2026-10-01T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/gdacs.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "gdacs-dr-1027450",
@@ -3103,7 +3154,7 @@
       "where": "Democratic Republic of Congo, Central African Republic, Cameroon, Djibouti, Eritrea, Ethiopia, Kenya, Niger, Nigeria, Sudan, Somalia, South Sudan, Chad",
       "window": {
         "from": "2026-06-21T00:00:00",
-        "to": "2026-10-02T07:07:44"
+        "to": "2026-10-01T00:00:00"
       }
     },
     "gdacs-dr-1027465": {
@@ -3709,6 +3760,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/gdacs.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-10-02T07:07:46"
+              },
+              "to": {
+                "from": "2026-05-21T00:00:00",
+                "to": "2026-10-01T00:00:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/gdacs.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "gdacs-dr-1027465",
@@ -3727,7 +3795,7 @@
       "where": "Democratic Republic of Congo, Kenya, Tanzania, Uganda",
       "window": {
         "from": "2026-05-21T00:00:00",
-        "to": "2026-10-02T07:07:46"
+        "to": "2026-10-01T00:00:00"
       }
     },
     "gdacs-eq-1494848": {
@@ -5948,6 +6016,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-08-08/gdacs.json",
           "ts": "2026-08-08T17:40:13+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "gdacs-tc-1001218",
@@ -5958,7 +6030,7 @@
       "severity": "Orange",
       "source": "GDACS",
       "source_ref": "https://www.gdacs.org/report.aspx?eventid=1001218&episodeid=6&eventtype=TC",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Tropical Cyclone ONE-25",
       "where": "India",
       "window": {
@@ -9413,19 +9485,44 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nhc-current-storms.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "55",
+              "to": "95"
+            },
+            "what": {
+              "from": "Nolo (TS)",
+              "to": "Nolo (HU)"
+            },
+            "window": {
+              "from": {
+                "from": "2026-10-02T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-10-03T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nhc-current-storms.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nhc-ep152026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "55",
+      "severity": "95",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
-      "what": "Nolo (TS)",
+      "what": "Nolo (HU)",
       "where": "CP2",
       "window": {
-        "from": "2026-10-02T09:00:00.000Z",
+        "from": "2026-10-03T09:00:00.000Z",
         "to": null
       }
     },
@@ -9866,19 +9963,40 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nhc-current-storms.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "severity": {
+              "from": "100",
+              "to": "80"
+            },
+            "window": {
+              "from": {
+                "from": "2026-10-02T09:00:00.000Z",
+                "to": null
+              },
+              "to": {
+                "from": "2026-10-03T09:00:00.000Z",
+                "to": null
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nhc-current-storms.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nhc-ep182026",
       "iso3": [],
       "kind": "FORECAST",
-      "severity": "100",
+      "severity": "80",
       "source": "NHC",
       "source_ref": "https://www.nhc.noaa.gov/",
       "status": "OPEN",
       "what": "Rachel (HU)",
       "where": "EP3",
       "window": {
-        "from": "2026-10-02T09:00:00.000Z",
+        "from": "2026-10-03T09:00:00.000Z",
         "to": null
       }
     },
@@ -10225,6 +10343,32 @@
       "window": {
         "from": "2026-09-29T11:36:00-06:00",
         "to": "2026-09-30T00:00:00-06:00"
+      }
+    },
+    "nws-kabq-flw-0008-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-kabq-flw-0008-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.875171722a553aa742fa733bf3e7ebfdb2a955d7.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Socorro, NM",
+      "window": {
+        "from": "2026-10-02T21:42:00-06:00",
+        "to": "2026-10-04T00:00:00-06:00"
       }
     },
     "nws-kabr-faw-0022-26": {
@@ -10808,6 +10952,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kama-flw-0001-26",
@@ -10818,7 +10966,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2b6c20efd0b4b04db8bd5f1123c4ff864970403d.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Potter, TX",
       "window": {
@@ -12542,6 +12690,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdlh-fzw-0003-26",
@@ -12552,7 +12704,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d096785cbdfb1c1bc889993479f2c6417099efa.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Freeze Warning",
       "where": "Koochiching; North St. Louis; Central St. Louis",
       "window": {
@@ -12568,6 +12720,27 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Iron",
+              "to": "Ashland; Iron"
+            },
+            "window": {
+              "from": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-03T07:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T03:30:00-05:00",
+                "to": "2026-10-03T07:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdlh-fzw-0004-26",
@@ -12580,9 +12753,9 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4ec0d0943fc4af9cdec5c4e3ab64cfcf778ebe95.001.1",
       "status": "OPEN",
       "what": "Freeze Warning",
-      "where": "Iron",
+      "where": "Ashland; Iron",
       "window": {
-        "from": "2026-10-02T21:00:00-05:00",
+        "from": "2026-10-03T03:30:00-05:00",
         "to": "2026-10-03T07:00:00-05:00"
       }
     },
@@ -12624,6 +12797,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-faw-0008-26",
@@ -12634,7 +12811,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b598d5afe5f0b70e392652203db39427b3b9e856.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Black Hawk, IA; Butler, IA; Grundy, IA; Tama, IA",
       "window": {
@@ -12967,6 +13144,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T03:39:00-05:00",
+                "to": "2026-10-05T19:32:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T04:06:00-05:00",
+                "to": "2026-10-05T08:12:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0024-26",
@@ -12981,8 +13175,8 @@
       "what": "Flood Warning",
       "where": "Polk, IA",
       "window": {
-        "from": "2026-10-02T03:39:00-05:00",
-        "to": "2026-10-05T19:32:00-05:00"
+        "from": "2026-10-03T04:06:00-05:00",
+        "to": "2026-10-05T08:12:00-05:00"
       }
     },
     "nws-kdmx-flw-0025-26": {
@@ -13100,6 +13294,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T05:11:00-05:00",
+                "to": "2026-10-03T16:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T04:06:00-05:00",
+                "to": "2026-10-04T06:08:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0029-26",
@@ -13114,8 +13325,8 @@
       "what": "Flood Warning",
       "where": "Black Hawk, IA",
       "window": {
-        "from": "2026-10-02T05:11:00-05:00",
-        "to": "2026-10-03T16:00:00-05:00"
+        "from": "2026-10-03T04:06:00-05:00",
+        "to": "2026-10-04T06:08:00-05:00"
       }
     },
     "nws-kdmx-flw-0030-26": {
@@ -13143,6 +13354,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-03T07:00:00-05:00",
+                "to": "2026-10-04T03:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-04T01:00:00-05:00",
+                "to": "2026-10-05T05:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0030-26",
@@ -13157,8 +13385,8 @@
       "what": "Flood Warning",
       "where": "Jasper, IA; Marion, IA; Polk, IA",
       "window": {
-        "from": "2026-10-03T07:00:00-05:00",
-        "to": "2026-10-04T03:00:00-05:00"
+        "from": "2026-10-04T01:00:00-05:00",
+        "to": "2026-10-05T05:00:00-05:00"
       }
     },
     "nws-kdmx-flw-0032-26": {
@@ -13216,6 +13444,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T14:17:00-05:00",
+                "to": "2026-10-05T04:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T04:06:00-05:00",
+                "to": "2026-10-04T20:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0033-26",
@@ -13230,8 +13475,8 @@
       "what": "Flood Warning",
       "where": "Marion, IA; Polk, IA; Warren, IA",
       "window": {
-        "from": "2026-10-02T14:17:00-05:00",
-        "to": "2026-10-05T04:00:00-05:00"
+        "from": "2026-10-03T04:06:00-05:00",
+        "to": "2026-10-04T20:30:00-05:00"
       }
     },
     "nws-kdmx-flw-0034-26": {
@@ -13259,6 +13504,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T03:39:00-05:00",
+                "to": "2026-10-04T02:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T04:06:00-05:00",
+                "to": "2026-10-03T16:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0034-26",
@@ -13273,8 +13535,8 @@
       "what": "Flood Warning",
       "where": "Dallas, IA",
       "window": {
-        "from": "2026-10-02T03:39:00-05:00",
-        "to": "2026-10-04T02:30:00-05:00"
+        "from": "2026-10-03T04:06:00-05:00",
+        "to": "2026-10-03T16:00:00-05:00"
       }
     },
     "nws-kdmx-flw-0035-26": {
@@ -13285,6 +13547,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T03:39:00-05:00",
+                "to": "2026-10-02T21:48:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T04:06:00-05:00",
+                "to": "2026-10-03T14:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0035-26",
@@ -13299,8 +13578,8 @@
       "what": "Flood Warning",
       "where": "Polk, IA; Story, IA",
       "window": {
-        "from": "2026-10-02T03:39:00-05:00",
-        "to": "2026-10-02T21:48:00-05:00"
+        "from": "2026-10-03T04:06:00-05:00",
+        "to": "2026-10-03T14:00:00-05:00"
       }
     },
     "nws-kdmx-flw-0036-26": {
@@ -13311,6 +13590,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T03:39:00-05:00",
+                "to": "2026-10-02T19:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T22:21:00-05:00",
+                "to": "2026-10-03T09:28:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0036-26",
@@ -13325,8 +13621,8 @@
       "what": "Flood Warning",
       "where": "Story, IA",
       "window": {
-        "from": "2026-10-02T03:39:00-05:00",
-        "to": "2026-10-02T19:00:00-05:00"
+        "from": "2026-10-02T22:21:00-05:00",
+        "to": "2026-10-03T09:28:00-05:00"
       }
     },
     "nws-kdmx-flw-0037-26": {
@@ -13337,6 +13633,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdmx-flw-0037-26",
@@ -13347,12 +13647,38 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ad5ad3e5089dbf300ff9f12b67c16ee51a5814d1.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Story, IA",
       "window": {
         "from": "2026-10-02T03:39:00-05:00",
         "to": "2026-10-02T13:00:00-05:00"
+      }
+    },
+    "nws-kdmx-flw-0038-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-kdmx-flw-0038-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c9471f8583e9feafd222df0add14bb7059fd2f96.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Marshall, IA",
+      "window": {
+        "from": "2026-10-03T04:08:00-05:00",
+        "to": "2026-10-03T14:12:00-05:00"
       }
     },
     "nws-kdvn-faw-0004-26": {
@@ -13363,6 +13689,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-faw-0004-26",
@@ -13373,7 +13703,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2a5d21cbd4852f315b7009b52ef077b1f4014d51.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Louisa, IA; Muscatine, IA; Washington, IA",
       "window": {
@@ -13389,6 +13719,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-faw-0007-26",
@@ -13399,7 +13733,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb73df7633222974730431531e751ec58c9580c7.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Scott, IA; Henry, IL; Mercer, IL; Rock Island, IL",
       "window": {
@@ -13625,6 +13959,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T19:42:00-05:00",
+                "to": "2026-10-02T19:45:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:35:00-05:00",
+                "to": "2026-10-03T20:45:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0067-00",
@@ -13639,8 +13990,8 @@
       "what": "Flood Warning",
       "where": "Clinton, IA; Scott, IA",
       "window": {
-        "from": "2026-10-01T19:42:00-05:00",
-        "to": "2026-10-02T19:45:00-05:00"
+        "from": "2026-10-02T20:35:00-05:00",
+        "to": "2026-10-03T20:45:00-05:00"
       }
     },
     "nws-kdvn-flw-0067-26": {
@@ -14424,6 +14775,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T19:42:00-05:00",
+                "to": "2026-10-04T19:17:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:35:00-05:00",
+                "to": "2026-10-04T15:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0081-26",
@@ -14438,8 +14806,8 @@
       "what": "Flood Warning",
       "where": "Keokuk, IA",
       "window": {
-        "from": "2026-10-01T19:42:00-05:00",
-        "to": "2026-10-04T19:17:00-05:00"
+        "from": "2026-10-02T20:35:00-05:00",
+        "to": "2026-10-04T15:00:00-05:00"
       }
     },
     "nws-kdvn-flw-0082-26": {
@@ -14467,6 +14835,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T19:42:00-05:00",
+                "to": "2026-10-05T00:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:35:00-05:00",
+                "to": "2026-10-04T16:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0082-26",
@@ -14481,8 +14866,8 @@
       "what": "Flood Warning",
       "where": "Des Moines, IA; Henry, IA; Lee, IA",
       "window": {
-        "from": "2026-10-01T19:42:00-05:00",
-        "to": "2026-10-05T00:00:00-05:00"
+        "from": "2026-10-02T20:35:00-05:00",
+        "to": "2026-10-04T16:00:00-05:00"
       }
     },
     "nws-kdvn-flw-0083-26": {
@@ -14510,6 +14895,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:06:00-05:00",
+                "to": "2026-10-08T23:40:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-09T07:12:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0083-26",
@@ -14524,8 +14926,8 @@
       "what": "Flood Warning",
       "where": "Benton, IA; Iowa, IA",
       "window": {
-        "from": "2026-10-01T20:06:00-05:00",
-        "to": "2026-10-08T23:40:00-05:00"
+        "from": "2026-10-02T21:00:00-05:00",
+        "to": "2026-10-09T07:12:00-05:00"
       }
     },
     "nws-kdvn-flw-0084-26": {
@@ -14553,6 +14955,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:01:00-05:00",
+                "to": "2026-10-04T15:24:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-04T04:23:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0084-26",
@@ -14567,8 +14986,8 @@
       "what": "Flood Warning",
       "where": "Johnson, IA; Washington, IA",
       "window": {
-        "from": "2026-10-01T20:01:00-05:00",
-        "to": "2026-10-04T15:24:00-05:00"
+        "from": "2026-10-02T21:00:00-05:00",
+        "to": "2026-10-04T04:23:00-05:00"
       }
     },
     "nws-kdvn-flw-0085-26": {
@@ -14596,6 +15015,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T21:15:00-05:00",
+                "to": "2026-10-08T07:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-08T00:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0085-26",
@@ -14610,8 +15046,8 @@
       "what": "Flood Warning",
       "where": "Louisa, IA; Muscatine, IA",
       "window": {
-        "from": "2026-10-01T21:15:00-05:00",
-        "to": "2026-10-08T07:30:00-05:00"
+        "from": "2026-10-02T21:00:00-05:00",
+        "to": "2026-10-08T00:00:00-05:00"
       }
     },
     "nws-kdvn-flw-0086-26": {
@@ -14639,6 +15075,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T05:30:00-05:00",
+                "to": "2026-10-05T05:34:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-04T17:24:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0086-26",
@@ -14653,8 +15106,8 @@
       "what": "Flood Warning",
       "where": "Johnson, IA; Louisa, IA; Washington, IA",
       "window": {
-        "from": "2026-10-02T05:30:00-05:00",
-        "to": "2026-10-05T05:34:00-05:00"
+        "from": "2026-10-02T21:00:00-05:00",
+        "to": "2026-10-04T17:24:00-05:00"
       }
     },
     "nws-kdvn-flw-0087-26": {
@@ -14682,6 +15135,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:06:00-05:00",
+                "to": "2026-10-09T01:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-08T21:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0087-26",
@@ -14696,8 +15166,8 @@
       "what": "Flood Warning",
       "where": "Louisa, IA",
       "window": {
-        "from": "2026-10-01T20:06:00-05:00",
-        "to": "2026-10-09T01:00:00-05:00"
+        "from": "2026-10-02T21:00:00-05:00",
+        "to": "2026-10-08T21:00:00-05:00"
       }
     },
     "nws-kdvn-flw-0088-26": {
@@ -14725,6 +15195,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:06:00-05:00",
+                "to": "2026-10-09T00:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-08T19:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0088-26",
@@ -14739,8 +15226,8 @@
       "what": "Flood Warning",
       "where": "Louisa, IA",
       "window": {
-        "from": "2026-10-01T20:06:00-05:00",
-        "to": "2026-10-09T00:00:00-05:00"
+        "from": "2026-10-02T21:00:00-05:00",
+        "to": "2026-10-08T19:00:00-05:00"
       }
     },
     "nws-kdvn-flw-0089-26": {
@@ -14751,6 +15238,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kdvn-flw-0089-26",
@@ -14761,7 +15252,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.835d5c046a5634db86bbd8d72d205cb82e200c41.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Lee, IA; Clark, MO",
       "window": {
@@ -15222,6 +15713,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T21:00:00-05:00",
+                "to": "2026-10-04T11:06:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:49:00-05:00",
+                "to": "2026-10-05T14:03:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0188-26",
@@ -15236,8 +15744,8 @@
       "what": "Flood Warning",
       "where": "Buchanan, MO",
       "window": {
-        "from": "2026-10-01T21:00:00-05:00",
-        "to": "2026-10-04T11:06:00-05:00"
+        "from": "2026-10-02T19:49:00-05:00",
+        "to": "2026-10-05T14:03:00-05:00"
       }
     },
     "nws-keax-flw-0189-26": {
@@ -15265,6 +15773,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T02:26:00-05:00",
+                "to": "2026-10-06T08:06:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:48:00-05:00",
+                "to": "2026-10-06T06:47:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0189-26",
@@ -15279,8 +15804,8 @@
       "what": "Flood Warning",
       "where": "Carroll, MO; Chariton, MO; Linn, MO; Livingston, MO",
       "window": {
-        "from": "2026-10-02T02:26:00-05:00",
-        "to": "2026-10-06T08:06:00-05:00"
+        "from": "2026-10-02T19:48:00-05:00",
+        "to": "2026-10-06T06:47:00-05:00"
       }
     },
     "nws-keax-flw-0190-26": {
@@ -15308,6 +15833,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T04:00:00-05:00",
+                "to": "2026-10-06T06:46:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:49:00-05:00",
+                "to": "2026-10-07T07:58:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0190-26",
@@ -15322,8 +15864,8 @@
       "what": "Flood Warning",
       "where": "Platte, MO",
       "window": {
-        "from": "2026-10-02T04:00:00-05:00",
-        "to": "2026-10-06T06:46:00-05:00"
+        "from": "2026-10-02T19:49:00-05:00",
+        "to": "2026-10-07T07:58:00-05:00"
       }
     },
     "nws-keax-flw-0191-26": {
@@ -15351,6 +15893,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T21:00:00-05:00",
+                "to": "2026-10-05T21:50:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:49:00-05:00",
+                "to": "2026-10-06T23:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0191-26",
@@ -15365,8 +15924,8 @@
       "what": "Flood Warning",
       "where": "Platte, MO",
       "window": {
-        "from": "2026-10-02T21:00:00-05:00",
-        "to": "2026-10-05T21:50:00-05:00"
+        "from": "2026-10-02T19:49:00-05:00",
+        "to": "2026-10-06T23:30:00-05:00"
       }
     },
     "nws-keax-flw-0192-26": {
@@ -15394,6 +15953,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T02:28:00-05:00",
+                "to": "2026-10-05T15:43:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:43:00-05:00",
+                "to": "2026-10-05T08:48:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0192-26",
@@ -15408,8 +15984,8 @@
       "what": "Flood Warning",
       "where": "Doniphan, KS; Andrew, MO; Buchanan, MO",
       "window": {
-        "from": "2026-10-02T02:28:00-05:00",
-        "to": "2026-10-05T15:43:00-05:00"
+        "from": "2026-10-02T19:43:00-05:00",
+        "to": "2026-10-05T08:48:00-05:00"
       }
     },
     "nws-keax-flw-0193-26": {
@@ -15437,6 +16013,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0193-26",
@@ -15447,7 +16027,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b29e049b6b64ca3ed7ef2d851c8a1831d279a97e.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Atchison, KS; Leavenworth, KS",
       "window": {
@@ -15570,6 +16150,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0198-26",
@@ -15580,7 +16164,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.69aa6351b50d93dc133ac545701add712d1c6a7f.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Daviess, MO; Gentry, MO",
       "window": {
@@ -15613,6 +16197,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0199-26",
@@ -15623,7 +16211,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.69aa6351b50d93dc133ac545701add712d1c6a7f.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Daviess, MO; Livingston, MO",
       "window": {
@@ -15656,6 +16244,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T02:26:00-05:00",
+                "to": "2026-10-05T04:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:48:00-05:00",
+                "to": "2026-10-04T20:40:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0200-26",
@@ -15670,8 +16275,8 @@
       "what": "Flood Warning",
       "where": "Linn, MO; Livingston, MO",
       "window": {
-        "from": "2026-10-02T02:26:00-05:00",
-        "to": "2026-10-05T04:00:00-05:00"
+        "from": "2026-10-02T19:48:00-05:00",
+        "to": "2026-10-04T20:40:00-05:00"
       }
     },
     "nws-keax-flw-0201-26": {
@@ -15699,6 +16304,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T20:48:00-05:00",
+                "to": "2026-10-07T04:18:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T23:46:00-05:00",
+                "to": "2026-10-07T02:04:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0201-26",
@@ -15713,8 +16335,8 @@
       "what": "Flood Warning",
       "where": "Carroll, MO; Chariton, MO",
       "window": {
-        "from": "2026-10-02T20:48:00-05:00",
-        "to": "2026-10-07T04:18:00-05:00"
+        "from": "2026-10-02T23:46:00-05:00",
+        "to": "2026-10-07T02:04:00-05:00"
       }
     },
     "nws-keax-flw-0202-26": {
@@ -15742,6 +16364,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T14:30:00-05:00",
+                "to": "2026-10-07T01:51:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:43:00-05:00",
+                "to": "2026-10-07T02:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0202-26",
@@ -15756,8 +16395,8 @@
       "what": "Flood Warning",
       "where": "Jackson, MO; Lafayette, MO; Ray, MO",
       "window": {
-        "from": "2026-10-02T14:30:00-05:00",
-        "to": "2026-10-07T01:51:00-05:00"
+        "from": "2026-10-02T19:43:00-05:00",
+        "to": "2026-10-07T02:00:00-05:00"
       }
     },
     "nws-keax-flw-0203-26": {
@@ -15785,6 +16424,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T23:17:00-05:00",
+                "to": "2026-10-07T11:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:43:00-05:00",
+                "to": "2026-10-07T11:48:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0203-26",
@@ -15799,8 +16455,8 @@
       "what": "Flood Warning",
       "where": "Carroll, MO; Lafayette, MO; Saline, MO",
       "window": {
-        "from": "2026-10-02T23:17:00-05:00",
-        "to": "2026-10-07T11:30:00-05:00"
+        "from": "2026-10-02T19:43:00-05:00",
+        "to": "2026-10-07T11:48:00-05:00"
       }
     },
     "nws-keax-flw-0204-26": {
@@ -15828,6 +16484,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-03T02:20:00-05:00",
+                "to": "2026-10-03T02:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:43:00-05:00",
+                "to": "2026-10-07T23:36:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0204-26",
@@ -15842,8 +16515,8 @@
       "what": "Flood Warning",
       "where": "Carroll, MO; Chariton, MO; Saline, MO",
       "window": {
-        "from": "2026-10-03T02:20:00-05:00",
-        "to": "2026-10-03T02:30:00-05:00"
+        "from": "2026-10-02T19:43:00-05:00",
+        "to": "2026-10-07T23:36:00-05:00"
       }
     },
     "nws-keax-flw-0205-26": {
@@ -15901,6 +16574,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-03T10:12:00-05:00",
+                "to": "2026-10-07T22:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T05:44:00-05:00",
+                "to": "2026-10-07T17:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0206-26",
@@ -15915,8 +16605,8 @@
       "what": "Flood Warning",
       "where": "Chariton, MO; Howard, MO; Saline, MO",
       "window": {
-        "from": "2026-10-03T10:12:00-05:00",
-        "to": "2026-10-07T22:00:00-05:00"
+        "from": "2026-10-03T05:44:00-05:00",
+        "to": "2026-10-07T17:00:00-05:00"
       }
     },
     "nws-keax-flw-0207-26": {
@@ -15944,6 +16634,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-03T23:00:00-05:00",
+                "to": "2026-10-03T02:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T14:48:00-05:00",
+                "to": "2026-10-08T00:38:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0207-26",
@@ -15958,8 +16665,8 @@
       "what": "Flood Warning",
       "where": "Boone, MO; Cooper, MO; Howard, MO; Moniteau, MO",
       "window": {
-        "from": "2026-10-03T23:00:00-05:00",
-        "to": "2026-10-03T02:30:00-05:00"
+        "from": "2026-10-03T14:48:00-05:00",
+        "to": "2026-10-08T00:38:00-05:00"
       }
     },
     "nws-keax-flw-0208-26": {
@@ -15987,6 +16694,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0208-26",
@@ -15997,7 +16708,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c6e576aac6ce82608edc988d8f72dd004b8c93f4.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Leavenworth, KS; Platte, MO",
       "window": {
@@ -16013,6 +16724,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0209-26",
@@ -16023,7 +16738,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b8c5f5449f3a7e4a421a4bb39138614f6031b896.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Carroll, MO",
       "window": {
@@ -16039,6 +16754,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0210-26",
@@ -16049,7 +16768,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.823911f177eac5737113f46080135b55764545d3.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Leavenworth, KS",
       "window": {
@@ -16065,6 +16784,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-keax-flw-0212-26",
@@ -16075,7 +16798,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.97b17c7092c3c0444b2db05b1891194137e38be3.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Chariton, MO; Macon, MO",
       "window": {
@@ -16605,6 +17328,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kewx-flw-0052-26",
@@ -16615,7 +17342,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fc3ee66ae0c3ce13415cc6f9affabdafa04d216b.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Val Verde, TX",
       "window": {
@@ -16648,6 +17375,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kewx-flw-0053-26",
@@ -16658,7 +17389,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fc3ee66ae0c3ce13415cc6f9affabdafa04d216b.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Val Verde, TX",
       "window": {
@@ -16674,6 +17405,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kewx-flw-0054-26",
@@ -16684,7 +17419,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d3535dcbdbe948c679144aa5271cdeb66128ff54.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Llano, TX",
       "window": {
@@ -16811,6 +17546,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kfgf-fzw-0004-26",
@@ -16821,7 +17560,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f63d09885b253940190dc74a80375519bd2d2aaf.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Freeze Warning",
       "where": "Roseau; Lake Of The Woods; East Marshall; North Beltrami; Pennington; Red Lake; East Polk; North Clearwater; Mahnomen; South Clearwater; Towner; Cavalier; Ramsey; Western Walsh County",
       "window": {
@@ -16927,6 +17666,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kfgz-faw-0011-26",
@@ -16937,7 +17680,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5189f0cca6407b5f6ffc0f139a271e61acf4e069.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Coconino, AZ; Navajo, AZ",
       "window": {
@@ -17180,6 +17923,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kfwd-flw-0046-26",
@@ -17190,7 +17937,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.33c43f3e4712ac1acb645526066ec4c493622d52.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Dallas, TX",
       "window": {
@@ -17488,6 +18235,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgid-faw-0016-26",
@@ -17498,7 +18249,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d764d2df9a3ef13d9c0aae06c15d04a32974f20d.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Jewell, KS; Mitchell, KS",
       "window": {
@@ -17514,6 +18265,27 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Nuckolls, NE; Thayer, NE",
+              "to": "Thayer, NE"
+            },
+            "window": {
+              "from": {
+                "from": "2026-10-01T23:34:00-05:00",
+                "to": "2026-10-02T19:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:19:00-05:00",
+                "to": "2026-10-03T13:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgid-faw-0017-26",
@@ -17526,10 +18298,10 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.824fb3b8647cd276c2f92ef5ddb1fb0fb71b7ddd.001.1",
       "status": "OPEN",
       "what": "Flood Warning",
-      "where": "Nuckolls, NE; Thayer, NE",
+      "where": "Thayer, NE",
       "window": {
-        "from": "2026-10-01T23:34:00-05:00",
-        "to": "2026-10-02T19:30:00-05:00"
+        "from": "2026-10-02T19:19:00-05:00",
+        "to": "2026-10-03T13:00:00-05:00"
       }
     },
     "nws-kgid-faw-0018-26": {
@@ -17540,6 +18312,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T23:46:00-05:00",
+                "to": "2026-10-02T19:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T12:24:00-05:00",
+                "to": "2026-10-03T13:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgid-faw-0018-26",
@@ -17554,8 +18343,8 @@
       "what": "Flood Warning",
       "where": "Fillmore, NE; York, NE",
       "window": {
-        "from": "2026-10-01T23:46:00-05:00",
-        "to": "2026-10-02T19:00:00-05:00"
+        "from": "2026-10-02T12:24:00-05:00",
+        "to": "2026-10-03T13:00:00-05:00"
       }
     },
     "nws-kgid-flw-0002-26": {
@@ -17583,6 +18372,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgid-flw-0002-26",
@@ -17593,7 +18386,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2fb7b31e6d11abee5240fd7a8265e53f265df984.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Clay, NE; Nuckolls, NE",
       "window": {
@@ -17656,6 +18449,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgid-flw-0005-26",
@@ -17666,7 +18463,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.68f2af6d2f7e3b58708f77086b552ef216d8d1f5.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Nuckolls, NE; Webster, NE",
       "window": {
@@ -17699,6 +18496,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgid-flw-0006-26",
@@ -17709,7 +18510,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6341d4ca80cb401f864f3afe653ad2a2764a91f6.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Mitchell, KS",
       "window": {
@@ -17785,6 +18586,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T19:47:00-06:00",
+                "to": "2026-10-02T09:00:00-06:00"
+              },
+              "to": {
+                "from": "2026-10-03T00:24:00-06:00",
+                "to": "2026-10-03T09:00:00-06:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kgld-faw-0015-26",
@@ -17799,8 +18617,34 @@
       "what": "Flood Warning",
       "where": "Greeley, KS; Wichita, KS",
       "window": {
-        "from": "2026-10-01T19:47:00-06:00",
-        "to": "2026-10-02T09:00:00-06:00"
+        "from": "2026-10-03T00:24:00-06:00",
+        "to": "2026-10-03T09:00:00-06:00"
+      }
+    },
+    "nws-kgrb-fzw-0005-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "freeze",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-kgrb-fzw-0005-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b96096883897220a6fd76cbf1aec02f9758ab5db.001.1",
+      "status": "OPEN",
+      "what": "Freeze Warning",
+      "where": "Vilas; Forest; Florence; Northern Marinette County",
+      "window": {
+        "from": "2026-10-03T02:00:00-05:00",
+        "to": "2026-10-03T07:00:00-05:00"
       }
     },
     "nws-kgsp-ffw-0015-26": {
@@ -18325,6 +19169,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kict-faw-0062-26",
@@ -18335,7 +19183,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27ac02a57ae0769917996e0ef8fae7bc0687e47f.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Chase, KS; McPherson, KS; Marion, KS; Reno, KS",
       "window": {
@@ -18351,6 +19199,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kict-faw-0063-26",
@@ -18361,7 +19213,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.050a3d750d8324b3b274385321d729c9d8bf9de7.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Harvey, KS",
       "window": {
@@ -18377,6 +19229,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kict-faw-0064-26",
@@ -18387,7 +19243,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.59abbd01a90111023c0e59addee73bb1997d7033.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Kingman, KS",
       "window": {
@@ -18403,6 +19259,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kict-faw-0065-26",
@@ -18413,7 +19273,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.02b03253c8e21f223dc6b73c8e8cbccdf9e10265.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Chase, KS",
       "window": {
@@ -18429,6 +19289,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kict-faw-0067-26",
@@ -18439,7 +19303,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a9bca85126b031c598cb9a9ae6c26452f2516122.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Harper, KS; Sumner, KS",
       "window": {
@@ -20936,6 +21800,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kkey-maw-0316-26",
@@ -20946,7 +21814,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fae03206ffa4f93f0f1c6e0a21041571c49e3c29.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Hawk Channel from west end of Seven Mile Bridge to Halfmoon Shoal out to the reef; Straits of Florida from Craig Key to west end of Seven Mile Bridge out 20 NM; Straits of Florida from west end of Seven Mile Bridge to south of Halfmoon Shoal out 20 NM",
       "window": {
@@ -20962,6 +21830,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kkey-maw-0317-26",
@@ -20972,7 +21844,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.663cca0c51f12acbcab42efeebaf7be766c8b312.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Hawk Channel from west end of Seven Mile Bridge to Halfmoon Shoal out to the reef; Straits of Florida from west end of Seven Mile Bridge to south of Halfmoon Shoal out 20 NM; Straits of Florida from west end of Seven Mile Bridge to south of Halfmoon Shoal 20 to 60 NM out",
       "window": {
@@ -20988,6 +21860,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kkey-maw-0318-26",
@@ -20998,7 +21874,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c66e3657fb3be321531ecea8b83d31b44c6a1929.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Special Marine Warning",
       "where": "Gulf of America from East Cape Sable to Chokoloskee 20 to 60 NM out and beyond 5 fathoms",
       "window": {
@@ -21382,6 +22258,58 @@
         "to": "2026-09-10T21:00:00-05:00"
       }
     },
+    "nws-klch-flw-0042-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klch-flw-0042-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.591eb0b7ee73b778a100d1822946f4dc25e484b9.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Calcasieu, LA",
+      "window": {
+        "from": "2026-10-02T21:30:00-05:00",
+        "to": "2026-10-04T13:00:00-05:00"
+      }
+    },
+    "nws-klch-flw-0043-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klch-flw-0043-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.591eb0b7ee73b778a100d1822946f4dc25e484b9.002.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Calcasieu, LA",
+      "window": {
+        "from": "2026-10-03T01:00:00-05:00",
+        "to": "2026-10-06T01:00:00-05:00"
+      }
+    },
     "nws-klch-ssw-1005-00": {
       "announced_at": "2026-09-01T10:27:00+00:00",
       "hazard": "storm surge",
@@ -21728,6 +22656,28 @@
         {
           "event": "CLOSED_BY_SOURCE",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "REAPPEARED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-09-30T21:30:00-05:00",
+                "to": "2026-10-01T15:30:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:19:00-05:00",
+                "to": "2026-10-03T14:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-klot-flw-0075-00",
@@ -21738,12 +22688,12 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8ff2165e0da55233b8995df679228eda56292898.002.1",
-      "status": "CLOSED_BY_SOURCE",
+      "status": "OPEN",
       "what": "Flood Warning",
       "where": "Lake, IL",
       "window": {
-        "from": "2026-09-30T21:30:00-05:00",
-        "to": "2026-10-01T15:30:00-05:00"
+        "from": "2026-10-02T20:19:00-05:00",
+        "to": "2026-10-03T14:30:00-05:00"
       }
     },
     "nws-klot-flw-0075-26": {
@@ -21891,6 +22841,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-klot-flw-0075-26",
@@ -21901,7 +22855,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f812a5ff0e3f4e642e18d0b046272e988a240463.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Lake, IL",
       "window": {
@@ -22015,6 +22969,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-klot-flw-0077-26",
@@ -22025,7 +22983,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ec747410c3367ee06d4f2e726b7dbe5c088354ed.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "La Salle, IL",
       "window": {
@@ -22288,6 +23246,27 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "Cuyama Valley; Santa Barbara County Southwestern Coast; Santa Barbara County Southeastern Coast; Santa Ynez Mountains Western Range; Santa Ynez Mountains Eastern Range; Santa Barbara County Interior Mountains; Santa Cruz and Anacapa Islands",
+              "to": "Catalina and Santa Barbara Islands; Santa Clarita Valley; Ventura County Beaches; Ventura County Inland Coast; Lake Casitas; Ojai Valley; Central Ventura County Valleys; Malibu Coast; Los Angeles County Beaches; Palos Verdes Hills; Los Angeles County Inland Coast including Downtown Los Angeles; Western Santa Monica Mountains Recreational Area; Eastern Santa Monica Mountains Recreational Area; Calabasas and Agoura Hills; Western San Fernando Valley; Eastern San Fernando Valley; Southeastern Ventura County Valleys; Santa Susana Mountains; Los Angeles County San Gabriel Valley"
+            },
+            "window": {
+              "from": {
+                "from": "2026-10-02T10:00:00-07:00",
+                "to": "2026-10-08T20:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-10-02T10:38:00-07:00",
+                "to": "2026-10-08T20:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-klox-xhw-0008-26",
@@ -22300,9 +23279,9 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a83e130c2d84400d0abc57e184bd5fa32180bde1.001.2",
       "status": "OPEN",
       "what": "Extreme Heat Warning",
-      "where": "Cuyama Valley; Santa Barbara County Southwestern Coast; Santa Barbara County Southeastern Coast; Santa Ynez Mountains Western Range; Santa Ynez Mountains Eastern Range; Santa Barbara County Interior Mountains; Santa Cruz and Anacapa Islands",
+      "where": "Catalina and Santa Barbara Islands; Santa Clarita Valley; Ventura County Beaches; Ventura County Inland Coast; Lake Casitas; Ojai Valley; Central Ventura County Valleys; Malibu Coast; Los Angeles County Beaches; Palos Verdes Hills; Los Angeles County Inland Coast including Downtown Los Angeles; Western Santa Monica Mountains Recreational Area; Eastern Santa Monica Mountains Recreational Area; Calabasas and Agoura Hills; Western San Fernando Valley; Eastern San Fernando Valley; Southeastern Ventura County Valleys; Santa Susana Mountains; Los Angeles County San Gabriel Valley",
       "window": {
-        "from": "2026-10-02T10:00:00-07:00",
+        "from": "2026-10-02T10:38:00-07:00",
         "to": "2026-10-08T20:00:00-07:00"
       }
     },
@@ -22707,6 +23686,162 @@
         "to": "2026-09-28T17:00:00-05:00"
       }
     },
+    "nws-klsx-flw-0116-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klsx-flw-0116-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dd70dff2b2eae2cb0b86237b3a1e594209f414d9.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Boone, MO; Callaway, MO; Cole, MO; Moniteau, MO",
+      "window": {
+        "from": "2026-10-04T16:30:00-05:00",
+        "to": "2026-10-08T07:17:00-05:00"
+      }
+    },
+    "nws-klsx-flw-0117-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klsx-flw-0117-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dd70dff2b2eae2cb0b86237b3a1e594209f414d9.002.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Callaway, MO; Osage, MO",
+      "window": {
+        "from": "2026-10-05T04:00:00-05:00",
+        "to": "2026-10-08T22:49:00-05:00"
+      }
+    },
+    "nws-klsx-flw-0118-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klsx-flw-0118-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dd70dff2b2eae2cb0b86237b3a1e594209f414d9.003.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Gasconade, MO; Montgomery, MO",
+      "window": {
+        "from": "2026-10-05T09:34:00-05:00",
+        "to": "2026-10-08T19:00:00-05:00"
+      }
+    },
+    "nws-klsx-flw-0119-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klsx-flw-0119-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e10e75d9a6cc607a8bb5230a6125fad6f6b8807.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Pike, IL; Pike, MO",
+      "window": {
+        "from": "2026-10-03T19:00:00-05:00",
+        "to": "2026-10-08T01:00:00-05:00"
+      }
+    },
+    "nws-klsx-flw-0120-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klsx-flw-0120-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e10e75d9a6cc607a8bb5230a6125fad6f6b8807.002.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Calhoun, IL; Pike, MO",
+      "window": {
+        "from": "2026-10-03T23:00:00-05:00",
+        "to": "2026-10-08T13:00:00-05:00"
+      }
+    },
+    "nws-klsx-flw-0122-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-klsx-flw-0122-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c2ce5091cc632b92953c80317fee320191c106e7.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Lewis, MO",
+      "window": {
+        "from": "2026-10-02T22:24:00-05:00",
+        "to": "2026-10-04T08:40:00-05:00"
+      }
+    },
     "nws-klsx-xhw-0004-26": {
       "announced_at": "2026-09-03T10:06:48+00:00",
       "hazard": "extreme heat",
@@ -23015,6 +24150,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kmaf-hww-0021-26",
@@ -23025,7 +24164,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.889134bcecdcbdf79fd124d6075c7ada45d07776.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "High Wind Warning",
       "where": "Guadalupe Mountains of Eddy County; Guadalupe Mountains Above 7000 Feet; Guadalupe and Delaware Mountains",
       "window": {
@@ -23375,6 +24514,32 @@
         "to": "2026-09-22T19:00:00-05:00"
       }
     },
+    "nws-kmkx-flw-0047-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "flood",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-kmkx-flw-0047-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1e831bb71c79c8686c7ea911a7d1abc28ef25abc.001.1",
+      "status": "OPEN",
+      "what": "Flood Warning",
+      "where": "Lake, IL; Kenosha, WI",
+      "window": {
+        "from": "2026-10-02T21:43:00-05:00",
+        "to": "2026-10-04T13:00:00-05:00"
+      }
+    },
     "nws-kmlb-flw-0002-00": {
       "announced_at": "2026-09-25T10:32:31+00:00",
       "hazard": "flood",
@@ -23502,6 +24667,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T21:25:00-04:00",
+                "to": "2026-10-02T11:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:44:00-04:00",
+                "to": "2026-10-03T11:00:00-04:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kmlb-flw-0002-00",
@@ -23516,8 +24698,8 @@
       "what": "Flood Warning",
       "where": "Lake, FL; Volusia, FL",
       "window": {
-        "from": "2026-10-01T21:25:00-04:00",
-        "to": "2026-10-02T11:00:00-04:00"
+        "from": "2026-10-02T20:44:00-04:00",
+        "to": "2026-10-03T11:00:00-04:00"
       }
     },
     "nws-kmlb-maw-0267-26": {
@@ -23708,6 +24890,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T22:00:00-04:00",
+                "to": "2026-10-03T10:00:00-04:00"
+              },
+              "to": {
+                "from": "2026-10-03T00:12:00-04:00",
+                "to": "2026-10-03T10:00:00-04:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kmqt-fzw-0003-26",
@@ -23722,7 +24921,7 @@
       "what": "Freeze Warning",
       "where": "Ontonagon; Houghton; Baraga; Marquette; Alger; Luce; Gogebic; Iron; Dickinson; Menominee; Delta; Southern Schoolcraft; Southern Houghton; Northern Schoolcraft",
       "window": {
-        "from": "2026-10-02T22:00:00-04:00",
+        "from": "2026-10-03T00:12:00-04:00",
         "to": "2026-10-03T10:00:00-04:00"
       }
     },
@@ -24334,6 +25533,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-faw-0017-26",
@@ -24344,7 +25547,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.06fbfd859d2b3dd9c4589f68eeaa8dca94619876.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Mills, IA; Pottawattamie, IA",
       "window": {
@@ -24467,6 +25670,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:58:00-05:00",
+                "to": "2026-10-05T19:55:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T05:23:00-05:00",
+                "to": "2026-10-05T16:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0007-26",
@@ -24481,8 +25701,8 @@
       "what": "Flood Warning",
       "where": "Gage, NE",
       "window": {
-        "from": "2026-10-01T20:58:00-05:00",
-        "to": "2026-10-05T19:55:00-05:00"
+        "from": "2026-10-03T05:23:00-05:00",
+        "to": "2026-10-05T16:00:00-05:00"
       }
     },
     "nws-koax-flw-0008-26": {
@@ -24510,6 +25730,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T14:12:00-05:00",
+                "to": "2026-10-06T06:36:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T05:20:00-05:00",
+                "to": "2026-10-06T00:06:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0008-26",
@@ -24524,8 +25761,8 @@
       "what": "Flood Warning",
       "where": "Gage, NE",
       "window": {
-        "from": "2026-10-02T14:12:00-05:00",
-        "to": "2026-10-06T06:36:00-05:00"
+        "from": "2026-10-03T05:20:00-05:00",
+        "to": "2026-10-06T00:06:00-05:00"
       }
     },
     "nws-koax-flw-0009-26": {
@@ -24553,6 +25790,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T03:06:00-05:00",
+                "to": "2026-10-04T07:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T19:57:00-05:00",
+                "to": "2026-10-04T02:20:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0009-26",
@@ -24567,8 +25821,8 @@
       "what": "Flood Warning",
       "where": "Holt, MO; Richardson, NE",
       "window": {
-        "from": "2026-10-02T03:06:00-05:00",
-        "to": "2026-10-04T07:00:00-05:00"
+        "from": "2026-10-02T19:57:00-05:00",
+        "to": "2026-10-04T02:20:00-05:00"
       }
     },
     "nws-koax-flw-0010-26": {
@@ -24596,6 +25850,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0010-26",
@@ -24606,7 +25864,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.907e2b6f969a72ed708e6f8cffca2a5ecdf4e807.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Atchison, MO; Nemaha, NE",
       "window": {
@@ -24639,6 +25897,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:58:00-05:00",
+                "to": "2026-10-05T14:20:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:17:00-05:00",
+                "to": "2026-10-05T02:49:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0011-26",
@@ -24653,8 +25928,8 @@
       "what": "Flood Warning",
       "where": "Saline, NE",
       "window": {
-        "from": "2026-10-01T20:58:00-05:00",
-        "to": "2026-10-05T14:20:00-05:00"
+        "from": "2026-10-02T20:17:00-05:00",
+        "to": "2026-10-05T02:49:00-05:00"
       }
     },
     "nws-koax-flw-0012-26": {
@@ -24682,6 +25957,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:58:00-05:00",
+                "to": "2026-10-04T20:45:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T05:16:00-05:00",
+                "to": "2026-10-04T17:48:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0012-26",
@@ -24696,8 +25988,8 @@
       "what": "Flood Warning",
       "where": "Saline, NE; Seward, NE",
       "window": {
-        "from": "2026-10-01T20:58:00-05:00",
-        "to": "2026-10-04T20:45:00-05:00"
+        "from": "2026-10-03T05:16:00-05:00",
+        "to": "2026-10-04T17:48:00-05:00"
       }
     },
     "nws-koax-flw-0013-26": {
@@ -24725,6 +26017,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:58:00-05:00",
+                "to": "2026-10-04T19:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:17:00-05:00",
+                "to": "2026-10-05T04:18:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0013-26",
@@ -24739,8 +26048,8 @@
       "what": "Flood Warning",
       "where": "Saline, NE",
       "window": {
-        "from": "2026-10-01T20:58:00-05:00",
-        "to": "2026-10-04T19:00:00-05:00"
+        "from": "2026-10-02T20:17:00-05:00",
+        "to": "2026-10-05T04:18:00-05:00"
       }
     },
     "nws-koax-flw-0014-26": {
@@ -24768,6 +26077,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-01T20:58:00-05:00",
+                "to": "2026-10-03T19:00:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-03T05:24:00-05:00",
+                "to": "2026-10-04T05:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0014-26",
@@ -24782,8 +26108,8 @@
       "what": "Flood Warning",
       "where": "Gage, NE; Saline, NE",
       "window": {
-        "from": "2026-10-01T20:58:00-05:00",
-        "to": "2026-10-03T19:00:00-05:00"
+        "from": "2026-10-03T05:24:00-05:00",
+        "to": "2026-10-04T05:00:00-05:00"
       }
     },
     "nws-koax-flw-0015-26": {
@@ -24901,6 +26227,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0018-26",
@@ -24911,7 +26241,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dbf443d89b6562b56caed7047380d2c42ae50c71.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Cass, NE",
       "window": {
@@ -24974,6 +26304,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0020-26",
@@ -24984,7 +26318,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bffb509c1fe86259ebb914d338e6c8bdb81e876.005.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Seward, NE",
       "window": {
@@ -25017,6 +26351,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0021-26",
@@ -25027,7 +26365,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bffb509c1fe86259ebb914d338e6c8bdb81e876.004.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Jefferson, NE",
       "window": {
@@ -25060,6 +26398,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0022-26",
@@ -25070,7 +26412,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d7628bcf924ef2f554150db0e51081c38cf2ed30.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Saunders, NE",
       "window": {
@@ -25163,6 +26505,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0025-26",
@@ -25173,7 +26519,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d99974ee73ed9b1fef15dc1377a61ba88ef0eb21.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Fremont, IA",
       "window": {
@@ -25206,6 +26552,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-koax-flw-0026-26",
@@ -25216,7 +26566,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c06bd156de0ae2b4f9a2aeef12d48d5a5539bad.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Fremont, IA; Mills, IA",
       "window": {
@@ -26874,6 +28224,23 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T04:09:00-06:00",
+                "to": "2026-10-04T07:30:00-06:00"
+              },
+              "to": {
+                "from": "2026-10-03T00:40:00-06:00",
+                "to": "2026-10-04T16:00:00-06:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-kpub-flw-0002-26",
@@ -26888,8 +28255,8 @@
       "what": "Flood Warning",
       "where": "Bent, CO",
       "window": {
-        "from": "2026-10-02T04:09:00-06:00",
-        "to": "2026-10-04T07:30:00-06:00"
+        "from": "2026-10-03T00:40:00-06:00",
+        "to": "2026-10-04T16:00:00-06:00"
       }
     },
     "nws-kpub-svw-0281-26": {
@@ -28773,6 +30140,27 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-01/nws-alerts-active.json",
           "ts": "2026-10-01T11:47:37+00:00"
+        },
+        {
+          "changes": {
+            "where": {
+              "from": "San Diego County Coastal Areas",
+              "to": "San Diego County Inland Valleys"
+            },
+            "window": {
+              "from": {
+                "from": "2026-10-02T10:00:00-07:00",
+                "to": "2026-10-08T20:00:00-07:00"
+              },
+              "to": {
+                "from": "2026-10-02T21:13:00-07:00",
+                "to": "2026-10-08T20:00:00-07:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ksgx-xhw-0010-26",
@@ -28785,9 +30173,9 @@
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b0298ce8669ec993197e560fc10afa2f9b515d6e.001.2",
       "status": "OPEN",
       "what": "Extreme Heat Warning",
-      "where": "San Diego County Coastal Areas",
+      "where": "San Diego County Inland Valleys",
       "window": {
-        "from": "2026-10-02T10:00:00-07:00",
+        "from": "2026-10-02T21:13:00-07:00",
         "to": "2026-10-08T20:00:00-07:00"
       }
     },
@@ -30014,6 +31402,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T03:21:00-05:00",
+                "to": "2026-10-06T23:40:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:02:00-05:00",
+                "to": "2026-10-07T15:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0054-26",
@@ -30028,8 +31433,8 @@
       "what": "Flood Warning",
       "where": "Marshall, KS",
       "window": {
-        "from": "2026-10-02T03:21:00-05:00",
-        "to": "2026-10-06T23:40:00-05:00"
+        "from": "2026-10-02T20:02:00-05:00",
+        "to": "2026-10-07T15:00:00-05:00"
       }
     },
     "nws-ktop-flw-0055-26": {
@@ -30087,6 +31492,10 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0056-26",
@@ -30097,7 +31506,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ebac6aac8ed7b0a72bd6e7a6ca2dfff087e8e40e.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Marshall, KS",
       "window": {
@@ -30160,6 +31569,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T15:34:00-05:00",
+                "to": "2026-10-04T13:42:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:02:00-05:00",
+                "to": "2026-10-04T12:30:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0058-26",
@@ -30174,8 +31600,8 @@
       "what": "Flood Warning",
       "where": "Marshall, KS; Washington, KS",
       "window": {
-        "from": "2026-10-02T15:34:00-05:00",
-        "to": "2026-10-04T13:42:00-05:00"
+        "from": "2026-10-02T20:02:00-05:00",
+        "to": "2026-10-04T12:30:00-05:00"
       }
     },
     "nws-ktop-flw-0059-26": {
@@ -30263,6 +31689,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T13:00:00-05:00",
+                "to": "2026-10-04T11:09:00-05:00"
+              },
+              "to": {
+                "from": "2026-10-02T20:02:00-05:00",
+                "to": "2026-10-04T19:00:00-05:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0061-26",
@@ -30277,8 +31720,8 @@
       "what": "Flood Warning",
       "where": "Cloud, KS",
       "window": {
-        "from": "2026-10-02T13:00:00-05:00",
-        "to": "2026-10-04T11:09:00-05:00"
+        "from": "2026-10-02T20:02:00-05:00",
+        "to": "2026-10-04T19:00:00-05:00"
       }
     },
     "nws-ktop-flw-0063-26": {
@@ -30289,6 +31732,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0063-26",
@@ -30299,7 +31746,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27fb374ba889bcd56ca6b055be58892b43895b00.005.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Pottawatomie, KS",
       "window": {
@@ -30315,6 +31762,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0064-26",
@@ -30325,7 +31776,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27fb374ba889bcd56ca6b055be58892b43895b00.004.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Wabaunsee, KS",
       "window": {
@@ -30341,6 +31792,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0065-26",
@@ -30351,7 +31806,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27fb374ba889bcd56ca6b055be58892b43895b00.003.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Lyon, KS; Osage, KS",
       "window": {
@@ -30367,6 +31822,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0066-26",
@@ -30377,7 +31836,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27fb374ba889bcd56ca6b055be58892b43895b00.002.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Pottawatomie, KS",
       "window": {
@@ -30393,6 +31852,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-ktop-flw-0067-26",
@@ -30403,7 +31866,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27fb374ba889bcd56ca6b055be58892b43895b00.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "Osage, KS",
       "window": {
@@ -31510,6 +32973,84 @@
         "to": "2026-09-25T05:00:00-08:00"
       }
     },
+    "nws-pafc-srw-1642-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "storm",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-pafc-srw-1642-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21de8e68de320a417a4766b2a48848ac868ed16f.026.1",
+      "status": "OPEN",
+      "what": "Storm Warning",
+      "where": "Adak to Kiska Bering Side",
+      "window": {
+        "from": "2026-10-03T05:00:00-08:00",
+        "to": "2026-10-03T17:00:00-08:00"
+      }
+    },
+    "nws-pafc-srw-1643-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "storm",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-pafc-srw-1643-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21de8e68de320a417a4766b2a48848ac868ed16f.027.1",
+      "status": "OPEN",
+      "what": "Storm Warning",
+      "where": "Adak to Kiska Pacific Side",
+      "window": {
+        "from": "2026-10-03T05:00:00-08:00",
+        "to": "2026-10-03T17:00:00-08:00"
+      }
+    },
+    "nws-pafc-srw-1645-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "storm",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-pafc-srw-1645-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21de8e68de320a417a4766b2a48848ac868ed16f.029.1",
+      "status": "OPEN",
+      "what": "Storm Warning",
+      "where": "Kiska to Attu Pacific Side",
+      "window": {
+        "from": "2026-10-03T05:00:00-08:00",
+        "to": "2026-10-03T17:00:00-08:00"
+      }
+    },
     "nws-pafc-srw-6192-26": {
       "announced_at": "2026-09-25T10:32:31+00:00",
       "hazard": "storm",
@@ -31778,6 +33319,32 @@
       "window": {
         "from": "2026-09-24T05:00:00-08:00",
         "to": "2026-09-25T05:00:00-08:00"
+      }
+    },
+    "nws-pafc-srw-6619-26": {
+      "announced_at": "2026-10-03T10:36:01+00:00",
+      "hazard": "storm",
+      "history": [
+        {
+          "event": "NOTARIZED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
+        }
+      ],
+      "id": "nws-pafc-srw-6619-26",
+      "iso3": [
+        "USA"
+      ],
+      "kind": "ALERT_EPISODE",
+      "severity": "Severe",
+      "source": "NWS",
+      "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.239843b99a03debf2e89f255181a3d67fe9eec12.029.1",
+      "status": "OPEN",
+      "what": "Storm Warning",
+      "where": "Kiska to Attu Pacific Side",
+      "window": {
+        "from": "2026-10-03T05:00:00-08:00",
+        "to": "2026-10-03T17:00:00-08:00"
       }
     },
     "nws-pafc-srw-7548-26": {
@@ -32319,6 +33886,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-pajk-faw-0002-26",
@@ -32329,7 +33900,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ebded789f333203269fb1c1b3b286d68771b0a97.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flood Warning",
       "where": "City and Borough of Juneau",
       "window": {
@@ -32426,6 +33997,23 @@
           "event": "REVISED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "changes": {
+            "window": {
+              "from": {
+                "from": "2026-10-02T14:45:00+10:00",
+                "to": "2026-10-03T04:45:00+10:00"
+              },
+              "to": {
+                "from": "2026-10-03T16:54:00+10:00",
+                "to": "2026-10-04T07:00:00+10:00"
+              }
+            }
+          },
+          "event": "REVISED",
+          "snapshot": "foreknown/snapshots/2026-10-03/nws-alerts-active.json",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-pgum-trw-4026-00",
@@ -32440,8 +34028,8 @@
       "what": "Tropical Storm Warning",
       "where": "Tinian Coastal Waters; Saipan Coastal Waters",
       "window": {
-        "from": "2026-10-02T14:45:00+10:00",
-        "to": "2026-10-03T04:45:00+10:00"
+        "from": "2026-10-03T16:54:00+10:00",
+        "to": "2026-10-04T07:00:00+10:00"
       }
     },
     "nws-phfo-ffw-0051-26": {
@@ -32482,6 +34070,10 @@
           "event": "NOTARIZED",
           "snapshot": "foreknown/snapshots/2026-10-02/nws-alerts-active.json",
           "ts": "2026-10-02T11:20:04+00:00"
+        },
+        {
+          "event": "CLOSED_BY_SOURCE",
+          "ts": "2026-10-03T10:36:01+00:00"
         }
       ],
       "id": "nws-phfo-ffw-0054-26",
@@ -32492,7 +34084,7 @@
       "severity": "Severe",
       "source": "NWS",
       "source_ref": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.321a0134702a6d4a7ede735c892ca993c53f53c9.001.1",
-      "status": "OPEN",
+      "status": "CLOSED_BY_SOURCE",
       "what": "Flash Flood Warning",
       "where": "Kauai, HI",
       "window": {
