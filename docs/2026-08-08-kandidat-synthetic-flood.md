@@ -98,3 +98,21 @@ WARC-Bytes, plus ehrliche Konfidenzrechnung.
 2. Detektor-Wahl + Kalibrierungsprotokoll (welche Negativkontrollen?).
 3. Verhältnis zu The Consensus (Kopplung oder strikte Trennung?).
 4. Sprachen der ersten Messreihe (DE-Start wie skizziert, oder EN wegen Korpusgröße?).
+
+## Wiederaufnahme — 2026-10-04 (Frank, Wortlaut privat)
+
+Frank will The Synthetic Flood in der Praxis haben. Der Kandidat geht deshalb zurück in die
+Arbeitsliste des Discovery-Passes (`discovery/AGENDA.md`). Das Go für V0 ist im Voraus erteilt,
+unter einer Bedingung: Das AUDIT muss die beiden Blocker des Re-Audits vom 2026-08-22 ausräumen.
+
+1. **Eine Achse, die nicht GDELT ist.** Der GDELT-Teil wäre eine Dopplung von The Consensus. Zu
+   prüfen, jeweils schlüssellos und kostenfrei:
+   - Wissenschafts-Abstracts (OpenAlex, Crossref, PubMed E-utilities) mit der veröffentlichten
+     „excess vocabulary“-Methode als Nachbar,
+   - Wikipedias eigene Markierung mutmaßlich maschinengeschriebener Texte (MediaWiki-API),
+   - Common Crawl über HTTPS ohne AWS-Konto.
+2. **Die Kadenz der Hauptzahl.** Sie ist ein monatlich driftender Anteil. Messung und
+   Abnahmefenster werden für diesen Takt gebaut, nicht für vierzehn Nächte.
+
+Weiter gilt aus dem Exposé: zwei Schichten. Strukturelle Messungen bilden das Fundament, die
+Detektion ist eine ausgewiesen unsichere Schätzschicht. Keine Prangerlisten von Domains.
