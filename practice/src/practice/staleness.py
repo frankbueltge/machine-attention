@@ -36,8 +36,9 @@ merely slipped a beat.
 Retired registers (2026-10-04). The sensor's own falsification clause
 foresaw the case: a register allowed to stop by design needs an explicit
 exception "rather than firing on every gap". The Foreknown was retired on the
-maintainer's decision of 2026-10-04 (foreknown/RETIRED.json); its two
-registers end on their last night by design. They are still listed under
+maintainer's decision of 2026-10-04 (foreknown/RETIRED.json), Dark Ocean
+the same day (darkocean/RETIRED.json); their registers end on their last
+night by design. They are still listed under
 "checked", and reported under "retired" with that last night — never as
 stale, and never silently dropped from the output.
 """
@@ -50,7 +51,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from .autonomy import append as autonomy_append
-from .foreknown.retired import read_retired
+from .retired import read_retired
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -89,14 +90,14 @@ def check(repo_root: Path, *, today: date | None = None) -> dict:
     unit at all yet."""
     today = today or datetime.now(timezone.utc).date()
     yesterday = today - timedelta(days=1)
-    closing = read_retired(repo_root)
     checked: list[str] = []
     stale: list[dict] = []
     retired: list[dict] = []
     for label, rel, kind in REGISTERS:
         newest = _newest_date(repo_root / rel, kind)
         checked.append(label)
-        if closing and label.startswith("foreknown/"):
+        closing = read_retired(repo_root, label.split("/")[0])
+        if closing:
             retired.append({"register": label, "newest_committed_date": newest,
                             "last_night": closing["last_night"]})
             continue

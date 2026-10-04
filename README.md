@@ -22,7 +22,12 @@ practice — the reasoning lives in
 - **The discovery pass builds now, instead of maintaining:** it carries
   candidates through the admission path rather than tending one instrument —
   [`docs/2026-10-04-discovery-neuer-auftrag.md`](docs/2026-10-04-discovery-neuer-auftrag.md).
-- Dark Ocean (instrument) and Memory Hole (v0) run on unchanged.
+- **Dark Ocean is retired too**, the same day: its continuity notary ran on
+  without holding the practice's attention —
+  [`docs/2026-10-04-dark-ocean-retired.md`](docs/2026-10-04-dark-ocean-retired.md).
+- **Planetary Listening is admitted to V0** (the maintainer's GO of 2026-10-04),
+  next in line for the discovery pass after The Interval's V0.
+- Memory Hole (v0) and the instrument The State Before the Interface run on.
 
 ## The stage
 
@@ -138,7 +143,15 @@ full project of this practice with no stage claim — it may produce nothing for
 and that is allowed. "Background project" was the wrong word for it and was dropped on
 2026-08-09 when the house settled its vocabulary.
 
-## Dark Ocean — instrument since 2026-08-22 (V0 admitted 2026-08-09)
+## Dark Ocean — RETIRED 2026-10-04 (instrument since 2026-08-22, V0 admitted 2026-08-09)
+
+**Retired on the maintainer's decision of 2026-10-04** (wording private;
+[`docs/2026-10-04-dark-ocean-retired.md`](docs/2026-10-04-dark-ocean-retired.md)).
+Last night 2026-10-03. Over 54 nights the continuity notary rechecked 62,737
+catalogue rows; 32 products diverged — 14 left the catalogue, 18 only changed
+their modification date. Its workflow is removed; `darkocean/RETIRED.json` is
+read by the export, the staleness check and `verify.py`. What follows below
+describes the project as it ran.
 
 > Ships tell the world where they are. Satellites can see where they
 > actually are. The two views do not always agree.
@@ -256,7 +269,7 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
 
 - `sentinel.yml` — nightly notary run (05:45 UTC), commits as
   `Machine Attention <attention@machine-attention.invalid>`.
-- `darkocean.yml` — nightly Coverage-vs-Declaration reading (04:50 UTC),
+- `darkocean.yml` — removed 2026-10-04 (Dark Ocean retired); until then the nightly Coverage-vs-Declaration reading (04:50 UTC),
   same machine identity.
 - `memoryhole.yml` — nightly reading of the institutional wording (02:30 UTC,
   early because the archive is slow: the audit budgets one to three hours),

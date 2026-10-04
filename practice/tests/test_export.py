@@ -45,9 +45,22 @@ def test_continuity_divergences_counts_every_committed_night_with_zero_catches(t
     assert figs["darkocean_continuity_rechecks"] == 3 * 1004
 
 
+def _catch(product: str) -> dict:
+    return {"kind": "gone_from_catalog", "id": product, "current": None,
+            "preserved": {"online": True}}
+
+
 def test_continuity_divergences_counts_real_catches_instead_of_crashing(tmp_path):
-    catch = {"kind": "gone_from_catalog", "id": "x", "current": None,
-             "preserved": {"online": True}}
-    root = _repo(tmp_path, [[], [catch, catch, catch, catch], []])
+    root = _repo(tmp_path, [[], [_catch(f"x{i}") for i in range(4)], []])
     figs = {f["key"]: f["value"] for f in figures(root)}
     assert figs["darkocean_continuity_divergences"] == 4
+
+
+def test_a_product_caught_on_many_nights_is_one_divergence(tmp_path):
+    # 2026-10-04 (settling #49): a product gone from the catalog is caught again
+    # every night it stays gone. Summing the nightly lists counted 32 products as
+    # 614 divergences; the figure counts products.
+    root = _repo(tmp_path, [[_catch("a")], [_catch("a"), _catch("b")],
+                            [_catch("a"), _catch("b")]])
+    figs = {f["key"]: f["value"] for f in figures(root)}
+    assert figs["darkocean_continuity_divergences"] == 2

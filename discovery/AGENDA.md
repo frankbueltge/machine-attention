@@ -21,14 +21,18 @@ RUNNING (any time: RETIRED).*
   document §6. Each night one increment, tested, tree green.
 - **Updated:** 2026-10-04 (house)
 
-## Waiting at a gate
+## Next
 
-### Planetary Listening — seismic attention
+### Planetary Listening — "One Quarry, Two Records"
 
-- **Stage:** AUDIT done 2026-08-22 (`docs/2026-08-22-planetary-listening-audit.md`),
-  recommendation to the maintainer; V0 needs his GO, and the audit lists the
-  open decisions he is asked to make.
-- **Asked again:** 2026-10-04, by the house session, to the maintainer directly.
+- **Stage:** AUDIT done 2026-08-22 (`docs/2026-08-22-planetary-listening-audit.md`);
+  **V0 admitted** — the maintainer's GO of 2026-10-04 (wording private), with the
+  audit's own recommendations taken for its open decisions: a spike decides the
+  pairing (Rüdersdorf or Geseke), no Raspberry Shake stations in V0, home is this
+  repository. Recorded at the end of the audit document.
+- **When:** after The Interval's V0 has its first committed reading — or earlier,
+  on any night The Interval waits on something. The audit's "Bewusst nicht" list
+  binds V0.
 - **Updated:** 2026-10-04 (house)
 
 ## Parked
@@ -44,6 +48,12 @@ RUNNING (any time: RETIRED).*
   re-audit, §3).
 
 ## Retired
+
+### Dark Ocean
+
+- **Retired:** 2026-10-04, last night 2026-10-03 (`darkocean/RETIRED.json`,
+  `docs/2026-10-04-dark-ocean-retired.md`). Its workflow is removed; nothing here
+  restarts it.
 
 ### The Foreknown
 

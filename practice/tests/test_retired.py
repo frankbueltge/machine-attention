@@ -91,3 +91,36 @@ def test_the_newest_moment_is_the_end_of_the_project(tmp_path):
     assert newest["enter"] == "/attention/"
     assert newest["evidence"] == "foreknown/RETIRED.json"
     assert "stopped recording after 1 night;" in newest["statement"]
+
+
+def _retire_darkocean(root: Path, last_night: str) -> None:
+    (root / "docs").mkdir(exist_ok=True)
+    (root / "docs" / "darkocean-retired.md").write_text("why\n", encoding="utf-8")
+    (root / "darkocean").mkdir(exist_ok=True)
+    (root / "darkocean" / "RETIRED.json").write_text(json.dumps({
+        "project": "darkocean", "status": "RETIRED", "last_night": last_night,
+        "decided": "2026-08-09", "record": "docs/darkocean-retired.md",
+        "reason": "It did not hold the practice's attention."}), encoding="utf-8")
+
+
+def test_dark_ocean_retires_by_the_same_rule(tmp_path):
+    # 2026-10-04: the closing record is per project. Dark Ocean's export status,
+    # staleness verdict and verify.py's restart guard follow from its own file.
+    from practice.staleness import check
+    from datetime import date
+    root = _fixture_repo(tmp_path)
+    (root / "darkocean" / "continuity").mkdir(parents=True)
+    (root / "darkocean" / "continuity" / "2026-08-07.json").write_text(
+        json.dumps({"date": "2026-08-07", "answered": 1, "catches": []}), encoding="utf-8")
+    _retire_darkocean(root, "2026-08-07")
+    status = {p["id"]: p["status"] for p in export.build(root)["projects"]}
+    assert status["darkocean"] == "retired"
+    assert status["foreknown"] == "running"
+    result = check(root, today=date(2026, 9, 1))
+    assert "darkocean/snapshots" in [r["register"] for r in result["retired"]]
+    verify = _load("verify_darkocean", REPO_ROOT / "verify.py")
+    assert [p for p in verify.check(root) if "darkocean" in p] == []
+    (root / "darkocean" / "continuity" / "2026-08-08.json").write_text(
+        json.dumps({"date": "2026-08-08", "answered": 1, "catches": []}), encoding="utf-8")
+    assert any("darkocean/continuity/2026-08-08.json: recorded after the project "
+               "was retired" in p for p in verify.check(root))

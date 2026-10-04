@@ -328,3 +328,12 @@ eine Achse statt zweier) · **keine ML-Klassifikation** in V0 (symbolische Schwe
 publizierte Diskriminanten, auditierbar) · **keine Konflikt- oder Militärachse**, auch nicht
 hinter einem Flag · kein Lautstärke-Index · kein zweiter Ort, bevor der erste gemessen ist ·
 kein Backfill.
+
+## Entscheidung — 2026-10-04 (Frank, Wortlaut privat)
+
+**Go für V0 „One Quarry, Two Records“.** Für die offenen Entscheidungen 2–4 gelten die
+Empfehlungen dieses Audits: Ein Spike entscheidet die Paarung (Rüdersdorf oder Geseke), keine
+Raspberry-Shake-Stationen in V0, Wohnort ist das Praxis-Repo. Bauen wird der Discovery-Pass
+unter seinem Auftrag vom 2026-10-04 (`docs/2026-10-04-discovery-neuer-auftrag.md`), nach dem
+ersten committeten Lesen von The Interval oder in jeder Nacht, in der The Interval wartet.
+Die Liste „Bewusst nicht“ oben bindet V0 unverändert.
