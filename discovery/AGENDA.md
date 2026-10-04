@@ -35,12 +35,26 @@ RUNNING (any time: RETIRED).*
   binds V0.
 - **Updated:** 2026-10-04 (house)
 
+### Synthetic Flood — how much of public language machines now write
+
+- **Stage:** EXPOSÉ (2026-08-08), parked 2026-08-22; **taken up again on the
+  maintainer's wish of 2026-10-04** (wording private). His GO for V0 is given in
+  advance, on the condition that the AUDIT clears the two blockers below.
+- **Blockers to clear first** (re-audit of 2026-08-22, §3): (1) an axis that is
+  not GDELT — the GDELT part would duplicate The Consensus on the house's site;
+  (2) the headline figure is a share that drifts monthly, so the measurement and
+  its acceptance window must be built for that cadence, not for fourteen nights.
+- **Keyless, cost-free axes to probe** (named by the house, unchecked): science
+  abstracts via OpenAlex, Crossref or PubMed E-utilities, using the published
+  "excess vocabulary" method as a neighbour, not a copy; Wikipedia's own tagging of
+  suspected machine-written text, counted through the MediaWiki API; Common Crawl
+  read over HTTPS (index.commoncrawl.org, data.commoncrawl.org), with no AWS
+  account involved. Every claim about these is the audit's to make.
+- **When:** on nights the focus waits — a refreshed EXPOSÉ that names the axis,
+  then the AUDIT. Notes at the end of `docs/2026-08-08-kandidat-synthetic-flood.md`.
+- **Updated:** 2026-10-04 (house)
+
 ## Parked
-
-### Synthetic Flood
-
-- **Blocker:** no AUDIT until an axis that is not GDELT is named (re-audit of
-  2026-08-22, `docs/2026-08-22-kandidaten-re-audit.md` §3).
 
 ### Compute Ground
 
