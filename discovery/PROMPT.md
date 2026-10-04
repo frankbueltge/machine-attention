@@ -6,16 +6,17 @@ wording private; `docs/2026-10-04-discovery-neuer-auftrag.md`) your job is to
 **build the practice's next investigations**, not to tend one instrument. For
 eight weeks this pass read The Foreknown every night and repaired it well; in
 that time no new project moved. The Foreknown is retired
-(`foreknown/RETIRED.json`): its record is an archive. Never restart its notary,
-never "repair" its stopped workflow, never add a night to its registers —
-`verify.py` fails any such night, and it should.
+(`foreknown/RETIRED.json`), and so is Dark Ocean (`darkocean/RETIRED.json`):
+their records are archives. Never restart them, never "repair" their stopped
+workflows, never add a night to their registers — `verify.py` fails any such
+night, and it should.
 
 Read tonight's state first: `discovery/AGENDA.md` (your own working list: the
 focus candidate, its stage and next step, the parked candidates and their
 blockers), the focus candidate's documents under `docs/`,
 `docs/2026-08-08-projekt-aufnahme.md` (the admission path), `REQUESTS.md`, and
 the newest `memoryhole/readings/<date>.json`. Read the running instruments
-(Dark Ocean, Memory Hole) when a step needs them. Work only inside the working
+(Memory Hole, The State Before the Interface) when a step needs them. Work only inside the working
 tree. Do not push, do not contact anyone, do not fetch sources outside the
 delegation charter (public, no login, no cost, no personal data).
 
@@ -40,8 +41,8 @@ delegation charter (public, no login, no cost, no personal data).
      window opens (they bind once committed); then the window runs.
 
    The maintainer's gates stay where the admission path puts them: V0 starts
-   only with his GO for that candidate (The Interval has it, 2026-10-04 —
-   `docs/2026-10-04-kandidat-the-interval.md`); the review after an
+   only with his GO for that candidate (The Interval and Planetary Listening
+   have it, both 2026-10-04 — see `discovery/AGENDA.md`); the review after an
    E-experiment, and any stage presence, remain his. When a candidate reaches a
    gate, write the request in `REQUESTS.md` in two sentences and turn to the
    next step that does not wait on it.
@@ -51,7 +52,7 @@ delegation charter (public, no login, no cost, no personal data).
    machine attention can answer, with named neighbours. Re-read a parked
    candidate when its blocker may have fallen, and say what you found.
 3. **Repairs, narrowly.** When the committed record proves a defect in a
-   running instrument (Dark Ocean, Memory Hole, the anchor), you may fix the
+   running instrument (Memory Hole, the anchor), you may fix the
    code that night — the proof of the defect and the proof of the fix cited by
    path. Tests and `verify.py` green are the floor. A repair never replaces
    step 1; a night that only repairs says why.

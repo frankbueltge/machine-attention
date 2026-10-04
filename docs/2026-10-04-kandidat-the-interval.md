@@ -144,7 +144,9 @@ Jedes Inkrement ist eine Nacht, getestet, der Baum bleibt grün.
 
 ## 7. Entscheidungen, die bei Frank liegen
 
-- **Partnerzugang bei FEWS NET anfragen?** Das würde die Rückschau 2011–2020 sauber öffnen,
+- **Entschieden 2026-10-04: keine Anfrage bei FEWS NET** (Frank, Wortlaut privat). The Interval
+  bleibt bei IPC/HDX und FTS. Die Rückschau vor 2020 bleibt offen.
+- *(vorher gefragt)* **Partnerzugang bei FEWS NET anfragen?** Das würde die Rückschau 2011–2020 sauber öffnen,
   darunter Somalia 2011 und 2017, und den Bestand sichern, falls FEWS NET eingestellt wird. Eine
   Anfrage ist eine Mail an reale Empfänger, also Franks Knopf. Ein Partner-Entitlement wäre
   außerdem eine Zugangsberechtigung, und die Charter müsste das ausdrücklich zulassen.

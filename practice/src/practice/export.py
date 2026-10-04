@@ -22,7 +22,7 @@ from pathlib import Path
 
 from .foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
                                 overdue_kind)
-from .foreknown.retired import read_retired
+from .retired import read_retired
 from .preserve import read_json, write_json
 
 CONTRACT = "attention-export/1"
@@ -96,7 +96,11 @@ def figures(repo_root: Path) -> list[dict]:
     # "last night was fine" — a divergence, once found, stays on the record.
     probes = [read_json(path, {}) for path in continuity]
     rechecks = sum(int(probe.get("answered") or 0) for probe in probes)
-    divergences = sum(len(probe.get("catches") or []) for probe in probes)
+    # Distinct products, not nightly sightings (2026-10-04, settling #49): a
+    # product gone from the catalog is caught again every night it stays gone,
+    # and summing the nightly lists counted 32 products as 614 divergences.
+    divergences = len({str(catch.get("id")) for probe in probes
+                       for catch in (probe.get("catches") or [])})
     # A resolution whose future was already historical at first sight closes
     # a record, not a cycle. The practice reports both numbers or neither.
     watched = sum(1 for r in resolutions if r.get("cold_start") is False)
@@ -119,7 +123,7 @@ def figures(repo_root: Path) -> list[dict]:
     # Nothing is "under watch" once the notary is retired: the four figures
     # that describe a watch are left out rather than frozen at the last
     # night, where they would go on claiming a present the record ended.
-    watching = [] if read_retired(repo_root) else [
+    watching = [] if read_retired(repo_root, "foreknown") else [
         {"key": "futures_under_watch",
          "value": len(open_futures),
          "as_of": as_of},
@@ -161,9 +165,10 @@ def figures(repo_root: Path) -> list[dict]:
 
 
 def _with_closing_record(project: dict, repo_root: Path) -> dict:
-    """The Foreknown's status word comes from its closing record when one
-    exists — `retired`, the admission path's own word for an honest end."""
-    if project["id"] == "foreknown" and read_retired(repo_root):
+    """A project's status word comes from its closing record when one exists
+    — `retired`, the admission path's own word for an honest end (The
+    Foreknown and Dark Ocean, 2026-10-04)."""
+    if read_retired(repo_root, project["id"]):
         project["status"] = "retired"
     return project
 
