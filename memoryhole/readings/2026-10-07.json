@@ -1,0 +1,855 @@
+{
+  "date": "2026-10-07",
+  "entries": [
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-10-07/history-dd71df724c653b2e.json",
+      "id": "dd71df724c653b2e",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "reason": "archive_status_302",
+      "url": "https://daten.bundeswirtschaftsministerium.de/ODP/Redaktion/DE/OpenData/Stellungnahmen-EEG-OpenData.html"
+    },
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-10-07/history-cf1fc3e3c725f931.json",
+      "id": "cf1fc3e3c725f931",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "reason": "archive_status_302",
+      "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Service/Gesetzesvorhaben/2022/dritte-verordnung-zur-aenderung-der-besonderen-gebuehrenordnung-strom.html"
+    },
+    {
+      "archive_status": "404",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-10-07/history-92e15fbdb1b55ab0.json",
+      "id": "92e15fbdb1b55ab0",
+      "institution": "bmwe",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20261007042605/https://www.bundeswirtschaftsministerium.de/favicon.ico",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.bundeswirtschaftsministerium.de/favicon.ico"
+    },
+    {
+      "archive_status": "404",
+      "category": "A",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-10-07/history-39d6d645dd2fd1ea.json",
+      "id": "39d6d645dd2fd1ea",
+      "institution": "bmg",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20261007073215/https://www.bundesgesundheitsministerium.de/fileadmin/Dateien/3_Downloads/Statisti-ken/GKV/Mitglieder_Versicherte/KM1_Januar_2025.pdf",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://www.bundesgesundheitsministerium.de/fileadmin/Dateien/3_Downloads/Statisti-ken/GKV/Mitglieder_Versicherte/KM1_Januar_2025.pdf"
+    },
+    {
+      "category": "A",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-10-07/history-6ce843bf8c386ef8.json",
+      "id": "6ce843bf8c386ef8",
+      "institution": "bmuv",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "http://www.bmuv.de/fileadmin/Daten_BMU/Download_PDF/EuropaInternational/g7_climate_energy_environment_ministers_"
+    },
+    {
+      "abstentions": [],
+      "added_sentences": 0,
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "4NLNMHHU7SPHDLQJEGBHKAJEXUGAJXHN",
+          "file": "memoryhole/snapshots/2026-10-07/after-92bc14514823282c.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261007133556/https://www.bundesbank.de/en",
+          "timestamp": "20261007133556"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "CRKFPBGUSUMD7M4YJ2V56LYWLAF62XHE",
+          "file": "memoryhole/snapshots/2026-10-07/before-92bc14514823282c.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261006154445/https://www.bundesbank.de/en",
+          "timestamp": "20261006154445"
+        }
+      },
+      "category": "C",
+      "class": "changed",
+      "events": [],
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 11,
+          "reason": "ok",
+          "tokens": 343,
+          "valid": true
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 11,
+          "reason": "ok",
+          "tokens": 343,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-10-07/history-92bc14514823282c.json",
+      "id": "92bc14514823282c",
+      "institution": "bundesbank",
+      "kind": "sampled",
+      "reason": "new digest, both captures passed the gate",
+      "removed_tokens": 0,
+      "rewritten_pairs": 0,
+      "url": "https://www.bundesbank.de/en"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-10-07/history-5bc84cc7ca087975.json",
+      "id": "5bc84cc7ca087975",
+      "institution": "shell",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20261007072249/https://account.shell.com/akam/13/396b3946",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://account.shell.com/akam/13/396b3946"
+    },
+    {
+      "archive_status": "404",
+      "category": "D",
+      "class": "gone",
+      "history": "memoryhole/snapshots/2026-10-07/history-9f9437f06abc1dc8.json",
+      "id": "9f9437f06abc1dc8",
+      "institution": "shell",
+      "kind": "sampled",
+      "permalink": "https://web.archive.org/web/20261007071649/https://account.shell.com/akam/13/396b3b94",
+      "reason": "live 404",
+      "recheck": {
+        "class": "gone_404",
+        "http_code": 404
+      },
+      "url": "https://account.shell.com/akam/13/396b3b94"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-10-07/history-4edb9fd2340068cd.json",
+      "id": "4edb9fd2340068cd",
+      "institution": "shell",
+      "kind": "sampled",
+      "reason": "no_earlier_capture",
+      "url": "https://fleethub.shell.com/mfe/login?code=fdbc8fartgqd7c&state=%7B%22path%22%3A%22home%22%2C%22nonce%22%3A%22fff7ad27-a06c-49e0-b92c-247562f6ca3c%22%7D&response_type=code&scope=openid"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-10-07/history-539739f0b796c1a2.json",
+      "id": "539739f0b796c1a2",
+      "institution": "shell",
+      "kind": "sampled",
+      "reason": "no_earlier_capture",
+      "url": "https://fleethub.shell.com/mfe/login?ui_locale=es-ES"
+    },
+    {
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "MAGYONQ5ZJ5C3CPRNKJZLXNBQFLUUXP5",
+          "file": "memoryhole/snapshots/2026-10-07/after-7385953297ed1871.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261007110346/https://www.shell.com/",
+          "timestamp": "20261007110346"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "CU2LBJGJQSPF7PIFER2R6X5FJYLLFMBQ",
+          "file": "memoryhole/snapshots/2026-10-07/before-7385953297ed1871.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261006154729/https://www.shell.com/",
+          "timestamp": "20261006154729"
+        }
+      },
+      "category": "D",
+      "class": "unverifiable",
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "too_short",
+          "tokens": 0,
+          "valid": false
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 0,
+          "reason": "too_short",
+          "tokens": 0,
+          "valid": false
+        }
+      },
+      "history": "memoryhole/snapshots/2026-10-07/history-7385953297ed1871.json",
+      "id": "7385953297ed1871",
+      "institution": "shell",
+      "kind": "sampled",
+      "reason": "gate_before_too_short",
+      "url": "https://www.shell.com/"
+    },
+    {
+      "category": "D",
+      "class": "unverifiable",
+      "history": "memoryhole/snapshots/2026-10-07/history-8b5594d80182d9b6.json",
+      "id": "8b5594d80182d9b6",
+      "institution": "bayer",
+      "kind": "sampled",
+      "reason": "archive_status_301",
+      "url": "https://www.bayer.com/"
+    },
+    {
+      "abstentions": [],
+      "added_sentences": 0,
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "GP7UBYWPYZXRIMWZNTPBBNTDROF2LCG6",
+          "file": "memoryhole/snapshots/2026-10-07/after-8e89ced00ed05b55.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261007133716/https://www.bayer.com/en",
+          "timestamp": "20261007133716"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "XS673X6RQFBQNL6YTFGVW5MXPFXMS5YZ",
+          "file": "memoryhole/snapshots/2026-10-07/before-8e89ced00ed05b55.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261006165718/https://www.bayer.com/en",
+          "timestamp": "20261006165718"
+        }
+      },
+      "category": "D",
+      "class": "changed",
+      "events": [],
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 11,
+          "reason": "ok",
+          "tokens": 230,
+          "valid": true
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 11,
+          "reason": "ok",
+          "tokens": 230,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-10-07/history-8e89ced00ed05b55.json",
+      "id": "8e89ced00ed05b55",
+      "institution": "bayer",
+      "kind": "sampled",
+      "reason": "new digest, both captures passed the gate",
+      "removed_tokens": 0,
+      "rewritten_pairs": 0,
+      "url": "https://www.bayer.com/en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-dbe0f096619f5e8e.json",
+      "id": "dbe0f096619f5e8e",
+      "institution": "bmg",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt"
+    },
+    {
+      "abstentions": [],
+      "added_sentences": 0,
+      "captures": {
+        "after": {
+          "archive_status": "200",
+          "digest": "TZZS3FQ6FN3VLGGRB5LFSN4B65LFNZVR",
+          "file": "memoryhole/snapshots/2026-10-07/after-e130846662a12f87.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261007073242/https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html",
+          "timestamp": "20261007073242"
+        },
+        "before": {
+          "archive_status": "200",
+          "digest": "M3UYAWC2X5UDZXUAKYEOQ5ADSFNWFYKW",
+          "file": "memoryhole/snapshots/2026-10-07/before-e130846662a12f87.html",
+          "http_status": 200,
+          "permalink": "https://web.archive.org/web/20261002093008/https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html",
+          "timestamp": "20261002093008"
+        }
+      },
+      "category": "E",
+      "class": "changed",
+      "events": [],
+      "gate": {
+        "after": {
+          "markers": [],
+          "prose_sentences": 136,
+          "reason": "ok",
+          "tokens": 2788,
+          "valid": true
+        },
+        "before": {
+          "markers": [],
+          "prose_sentences": 136,
+          "reason": "ok",
+          "tokens": 2788,
+          "valid": true
+        }
+      },
+      "history": "memoryhole/snapshots/2026-10-07/history-e130846662a12f87.json",
+      "id": "e130846662a12f87",
+      "institution": "rki",
+      "kind": "control",
+      "reason": "new digest, both captures passed the gate",
+      "removed_tokens": 0,
+      "rewritten_pairs": 0,
+      "url": "https://www.rki.de/DE/Service/Datenschutz/datenschutz_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-c8622e70da28decb.json",
+      "id": "c8622e70da28decb",
+      "institution": "uba",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.umweltbundesamt.de/barrierefreiheit"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-9c16981977ddf4b2.json",
+      "id": "9c16981977ddf4b2",
+      "institution": "destatis",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.destatis.de/DE/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-9d50b4ba45fa1a1b.json",
+      "id": "9d50b4ba45fa1a1b",
+      "institution": "ec-climate",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://climate.ec.europa.eu/accessibility-statement_en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-49f1ccae7b87cdc8.json",
+      "id": "49f1ccae7b87cdc8",
+      "institution": "bnetza",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesnetzagentur.de/DE/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-7b813ae60a9465ad.json",
+      "id": "7b813ae60a9465ad",
+      "institution": "bundesbank",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesbank.de/de/bundesbank/forschung/studie-zur-wirtschaftlichen-lage-privater-haushalte-phf/datenschutz-604914"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-83ae0473fbac2146.json",
+      "id": "83ae0473fbac2146",
+      "institution": "shell",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.shell.com/about-us/contact-us/contact-ecuador.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-2ee1d7cf60f4f1ed.json",
+      "id": "2ee1d7cf60f4f1ed",
+      "institution": "vw",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.volkswagen-group.com/de/datenschutzerklaerung-15677"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-2f0dd7d6a087b05d.json",
+      "id": "2f0dd7d6a087b05d",
+      "institution": "basf",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://products.basf.com/global/en/TermsConditionsofSales"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-c6b487f2b088586d.json",
+      "id": "c6b487f2b088586d",
+      "institution": "bp",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bp.com/en/global/corporate/contact-us.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-8593dfddae266d9a.json",
+      "id": "8593dfddae266d9a",
+      "institution": "bmwe",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Datenschutzerklaerung/datenschutzerklaerung.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-a311042b780d7e38.json",
+      "id": "a311042b780d7e38",
+      "institution": "bmg",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesgesundheitsministerium.de/service/kontakt-1"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-22cab31b7d00bcd6.json",
+      "id": "22cab31b7d00bcd6",
+      "institution": "destatis",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.destatis.de/EN/Service/Sitemap/sitemap_node.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-68f584e6350b91d4.json",
+      "id": "68f584e6350b91d4",
+      "institution": "ec-climate",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://climate.ec.europa.eu/citizens-stakeholders/contact-us_en"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-9505ba4febeea90d.json",
+      "id": "9505ba4febeea90d",
+      "institution": "shell",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.shell.com/about-us/contact-us/contact-honduras.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-822331e0a30a63eb.json",
+      "id": "822331e0a30a63eb",
+      "institution": "vw",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.volkswagen-group.com/de/goto/terms-of-service"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-35a9d704a7102374.json",
+      "id": "35a9d704a7102374",
+      "institution": "basf",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.basf.com/global/en/legal/contact"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-e1744886dfe68a8a.json",
+      "id": "e1744886dfe68a8a",
+      "institution": "bp",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bp.com/en/global/corporate/disclaimer.html"
+    },
+    {
+      "category": "E",
+      "class": "unchanged",
+      "history": "memoryhole/snapshots/2026-10-07/history-7760a5da50e6c440.json",
+      "id": "7760a5da50e6c440",
+      "institution": "bnetza",
+      "kind": "control",
+      "reason": "no_new_digest_on_day",
+      "url": "https://www.bundesnetzagentur.de/datenschutz"
+    }
+  ],
+  "failures": [
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:rki"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:uba"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:destatis"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:esma"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:ema"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:acer"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:bnetza"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:bafin"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:exxonmobil"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "scope": "memoryhole:discovery:basf"
+    },
+    {
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "scope": "memoryhole:discovery:bp"
+    }
+  ],
+  "generated_at": "2026-10-08T11:51:07+00:00",
+  "institutions": [
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 3,
+      "slug": "bmwe",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-bmwe.json",
+      "strategy": "domain",
+      "urls_seen": 3
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "bmg",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-bmg.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "A",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "bmuv",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-bmuv.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "A",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "rki",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "uba",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "A",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "destatis",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "ec-climate",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-ec-climate.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "esma",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "eba",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-eba.json",
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "eiopa",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-eiopa.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "ema",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "B",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "acer",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "bnetza",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "bafin",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    },
+    {
+      "category": "C",
+      "http_status": 200,
+      "sampled": 1,
+      "slug": "bundesbank",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-bundesbank.json",
+      "strategy": "domain",
+      "urls_seen": 1
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "google-sustainability",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-google-sustainability.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "exxonmobil",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 5,
+      "slug": "shell",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-shell.json",
+      "strategy": "domain",
+      "urls_seen": 7
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 0,
+      "slug": "vw",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-vw.json",
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "error": "https://web.archive.org/cdx/search/cdx: network error: TimeoutError after 4 attempts",
+      "sampled": 0,
+      "slug": "basf",
+      "source": null,
+      "strategy": "domain",
+      "urls_seen": 0
+    },
+    {
+      "category": "D",
+      "http_status": 200,
+      "sampled": 2,
+      "slug": "bayer",
+      "source": "memoryhole/snapshots/2026-10-07/discovery-bayer.json",
+      "strategy": "domain",
+      "urls_seen": 2
+    },
+    {
+      "category": "D",
+      "error": "https://web.archive.org/cdx/search/cdx: HTTP 504 after 4 attempts",
+      "sampled": 0,
+      "slug": "bp",
+      "source": null,
+      "strategy": "prefix",
+      "urls_seen": 0
+    }
+  ],
+  "method_versions": {
+    "cdx": "cdx-v1",
+    "events": "events-v1",
+    "extract": "extract-v1",
+    "gate": "gate-v1",
+    "model_layer": "model-v1",
+    "prose": "prose-v1",
+    "recheck": "recheck-v1",
+    "salience": "salience-v1",
+    "textdiff": "textdiff-v1"
+  },
+  "model": {
+    "available": false,
+    "cap": 40,
+    "considered": 0,
+    "cost_usd": 0.0,
+    "currency": "USD",
+    "model": "claude-haiku-4-5",
+    "prompt_version": "memoryhole-classify-v1",
+    "state": "off: no key configured",
+    "submitted": 0,
+    "unclassified_at_cap": 0,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "verdicts": []
+  },
+  "notes": [
+    "domain scope: many pages of few institutions, the architecture the audit made condition 1 — a longer curated list would be the origin with more rows and belongs in the origin",
+    "the archive's cadence is the resolution: institutional pages are crawled weekly to never, so 'nightly' is the protocol frequency, not the observation frequency; a night without a finding is a measurement and is written",
+    "a capture counts as a page only after the validity gate; challenge, consent and bot-wall pages are counted as unverifiable and never diffed",
+    "'gone' is a live-rechecked assertion, never a CDX row; bot-walls, server errors and 451 stay out of the gone-rate denominator and are disclosed as counts",
+    "event types name operations on text, never intent — 'commitment_removed' says a commitment verb left a sentence, nothing about why",
+    "passages carrying an ascription to a person are recorded as digests, not as text: the name stays in the preserved bytes as evidence and never becomes the subject of the record",
+    "model verdicts, when the layer runs, are estimates recorded beside the deterministic record and never inside it",
+    "control pages (category E) carry no commitments; every event on one is a fault of the instrument by construction"
+  ],
+  "rates": {
+    "changed_ci95": [
+      0.0475,
+      0.3334
+    ],
+    "changed_rate": 0.1364,
+    "counts": {
+      "changed": 3,
+      "gone": 4,
+      "unchanged": 19,
+      "unverifiable": 7
+    },
+    "decided": 22,
+    "deletion": {
+      "candidates": 4,
+      "counts": {
+        "botwall": 0,
+        "gone_404": 4,
+        "gone_410": 0,
+        "legal_451": 0,
+        "ok": 0,
+        "other": 0,
+        "server_error": 0,
+        "unreachable": 0
+      },
+      "decided": 4,
+      "excluded_unverifiable": 0,
+      "gone": 4,
+      "gone_ci95": [
+        0.5101,
+        1.0
+      ],
+      "gone_rate": 1.0
+    },
+    "examined": 33,
+    "unverifiable_ci95": [
+      0.1068,
+      0.3775
+    ],
+    "unverifiable_rate": 0.2121,
+    "unverifiable_reasons": {
+      "archive_status_301": 2,
+      "archive_status_302": 2,
+      "gate_before_too_short": 1,
+      "no_earlier_capture": 2
+    }
+  },
+  "sampling": {
+    "fetch_cap": 40,
+    "over_fetch_cap": 0,
+    "pairs_fetched": 4,
+    "per_institution": 5,
+    "rank": "sha256(day|url), ascending"
+  },
+  "time_budget": {
+    "institutions_skipped": 0,
+    "max_seconds": 12000,
+    "pages_skipped": 0
+  },
+  "watchlist_version": "2026-08-14"
+}
