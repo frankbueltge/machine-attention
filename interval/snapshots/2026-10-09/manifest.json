@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "bytes": 407523,
+      "file": "interval/snapshots/2026-10-09/ipc/package_show.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-09T06:35:04+00:00",
+      "sha256": "60ebf859f1bf0d3b784f5039b73080eff8a51c90ec19dbb3f5a1da18e91b22a7",
+      "url": "https://data.humdata.org/api/3/action/package_show?id=global-acute-food-insecurity-country-data"
+    },
+    {
+      "bytes": 403666,
+      "file": "interval/snapshots/2026-10-09/ipc/ipc_global_national_long.csv",
+      "http_status": 200,
+      "retrieved_at": "2026-10-09T06:35:04+00:00",
+      "sha256": "48c9e8a8945c6a5d395262552dab38f00ae06bd3eb8d76601274b9005f34104c",
+      "url": "https://data.humdata.org/dataset/7a7e7428-b8d7-4d2e-91d3-19100500e016/resource/23d51849-5926-422c-a58a-f9bd68088f20/download/ipc_global_national_long.csv"
+    },
+    {
+      "bytes": 432312,
+      "file": "interval/snapshots/2026-10-09/fts/SDN/fsc-2024-p001.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-09T06:35:06+00:00",
+      "sha256": "30f3b091e526502c9263a354df5c326b64c9602844e6893c8503b8d2b225e004",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SDN&year=2024&limit=200&filterBy=destinationGlobalClusterCode:FSC"
+    },
+    {
+      "bytes": 88226,
+      "file": "interval/snapshots/2026-10-09/fts/SDN/fsc-2024-p002.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-09T06:35:06+00:00",
+      "sha256": "5fa539f1b591dc40cc51ece95f18f1c69965f4925c1af42fd8dbb33f8d4221f5",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SDN&filterBy=destinationGlobalClusterCode:FSC&limit=200&year=2024&page=2"
+    }
+  ],
+  "run_date": "2026-10-09"
+}
