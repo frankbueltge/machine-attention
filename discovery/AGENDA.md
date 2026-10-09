@@ -11,15 +11,14 @@ RUNNING (any time: RETIRED).*
 
 ### The Interval — slow-onset food crises: projection against funding
 
-- **Stage:** AUDIT done by the house, 2026-10-04 — V0 open.
+- **Stage:** V0 — increment 1 of 6 done 2026-10-09 (`docs/2026-10-09-the-interval-v0-inkrement-1.md`): sources, snapshots, 8 tests.
 - **Gate:** the maintainer's GO for V0 given on 2026-10-04 (wording private),
   recorded in `docs/2026-10-04-kandidat-the-interval.md`.
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** V0 increment 1 (sources and snapshots), as laid out in the candidate
-  document §6. Each night one increment, tested, tree green.
-- **Updated:** 2026-10-04 (house)
+- **Next step:** V0 increment 2 (warning series and t0 as pure functions, with the chronic-phase-4 counter-case), candidate document §6. Open question for increment 3: FTS comma-list vs range of years differ (1,912 vs 13,229 flows, Somalia 2011-13).
+- **Updated:** 2026-10-09 (pass)
 
 ## Next
 
