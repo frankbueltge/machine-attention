@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T10:54:07Z",
+ "generated_at": "2026-10-10T12:34:51Z",
  "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
  "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
  "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
@@ -7,10 +7,10 @@
  "method": "docs/2026-08-09-opentimestamps-examination.md",
  "counts": {
   "manifests": 212,
-  "complete": 209,
-  "pending": 2,
-  "stamped_this_run": 0,
-  "upgraded_this_run": 0,
+  "complete": 211,
+  "pending": 1,
+  "stamped_this_run": 1,
+  "upgraded_this_run": 2,
   "failures": 0
  },
  "failures": [],
@@ -1110,10 +1110,10 @@
   {
    "manifest": "interval/snapshots/2026-10-09/manifest.json",
    "sha256": "514265f5d6c9b25cadb27ead905780b988bddf1425e7f195a4ffa6b82efab43a",
-   "stamped_at": "2026-10-09T13:19:57Z",
+   "upgraded_at": "2026-10-10T12:34:37Z",
    "proof": "anchors/interval/snapshots/2026-10-09/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 970636, 970639, 970680"
   },
   {
    "manifest": "memoryhole/snapshots/2026-08-13/manifest.json",
@@ -1482,7 +1482,6 @@
   {
    "manifest": "memoryhole/snapshots/2026-10-07/manifest.json",
    "sha256": "1138fce0c985b7049f8475cf52ebede3ecd719b0e51f18096125fd2e55ebcb23",
-   "upgraded_at": "2026-10-09T13:20:10Z",
    "proof": "anchors/memoryhole/snapshots/2026-10-07/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 970497, 970502, 970505"
@@ -1490,15 +1489,18 @@
   {
    "manifest": "memoryhole/snapshots/2026-10-08/manifest.json",
    "sha256": "1516f8b5ee02aebd20202d2bf06f85e199a7f09ef4d4f5f1e316e5add1e9a71d",
-   "stamped_at": "2026-10-09T13:20:11Z",
+   "upgraded_at": "2026-10-10T12:34:48Z",
    "proof": "anchors/memoryhole/snapshots/2026-10-08/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 970636, 970639, 970680"
   },
   {
    "manifest": "memoryhole/snapshots/2026-10-09/manifest.json",
    "sha256": "052981b8158fd081db5deac460484422aced6d6812ed63078fc2e134714ef02b",
-   "state": "unstamped"
+   "stamped_at": "2026-10-10T12:34:49Z",
+   "proof": "anchors/memoryhole/snapshots/2026-10-09/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   }
  ]
 }
