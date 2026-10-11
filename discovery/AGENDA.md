@@ -11,14 +11,14 @@ RUNNING (any time: RETIRED).*
 
 ### The Interval — slow-onset food crises: projection against funding
 
-- **Stage:** V0 — increment 1 of 6 done 2026-10-09 (`docs/2026-10-09-the-interval-v0-inkrement-1.md`): sources, snapshots, 8 tests.
+- **Stage:** V0 — increment 2 of 6 done 2026-10-11 (`docs/2026-10-11-the-interval-v0-inkrement-2.md`): warning series W and onset t0 as pure functions, 12 tests, chronic counter-case included. Increment 1 (sources, snapshots) done 2026-10-09.
 - **Gate:** the maintainer's GO for V0 given on 2026-10-04 (wording private),
   recorded in `docs/2026-10-04-kandidat-the-interval.md`.
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** V0 increment 2 (warning series and t0 as pure functions, with the chronic-phase-4 counter-case), candidate document §6. Open question for increment 3: FTS comma-list vs range of years differ (1,912 vs 13,229 flows, Somalia 2011-13).
-- **Updated:** 2026-10-09 (pass)
+- **Next step:** V0 increment 3 (money series M and t1, both time axes, FSC and total), candidate document §6. Decide first which FTS year form is the episode's multi-year boundary: comma list and range differ (1,912 vs 13,229 flows, Somalia 2011-13). The register (increment 4) must carry the duplicate-block mark (`blocks` > 1; Somalia 2026-01 is an onset at θ = 10 %).
+- **Updated:** 2026-10-11 (pass)
 
 ## Next
 
