@@ -1,0 +1,77 @@
+{
+  "entries": [
+    {
+      "bytes": 2372,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/probe-boundary-y2011.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:33:56+00:00",
+      "sha256": "46027e0d32ffba6107cb78cd329ce083e9b169e96429ff3714df670d38f1819e",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2011&limit=1"
+    },
+    {
+      "bytes": 1983,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/probe-boundary-y2012.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:33:57+00:00",
+      "sha256": "e91cc0b9cdfbf58cbfd26df2dde887f0b63ee41953ca7b071def538a7a4ab2ef",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2012&limit=1"
+    },
+    {
+      "bytes": 2638,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/probe-boundary-y2013.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:33:58+00:00",
+      "sha256": "51427655ff1afeed81c87cad35223765409de1ae20dd20a432c29b5fe07dfd62",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2013&limit=1"
+    },
+    {
+      "bytes": 1998,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/probe-boundary-list.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:33:59+00:00",
+      "sha256": "f4e7b77ea08aef4752d2d5b8f4e52a614506ae0de990c05a78b444e393738923",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2011,2012,2013&limit=1"
+    },
+    {
+      "bytes": 1995,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/probe-boundary-range.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:34:00+00:00",
+      "sha256": "943ebb8bd6a27ee8667d451f9f6d073fcb9a6df1cf6c7974f2ae4c5aa9715dd4",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2011-2013&limit=1"
+    },
+    {
+      "bytes": 1980,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/probe-boundary-noyear.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:34:01+00:00",
+      "sha256": "ad5da036e794fde53fd3d6ee04af218996432a7566acc7f27de5efab0e277225",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=1"
+    },
+    {
+      "bytes": 407610,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/fsc-2021_2022_2023-p001.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:34:46+00:00",
+      "sha256": "2c05e5edd2705dd6d18a9c847a0bcc6ac97d73b3f61110c7663d3eab9c212a53",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2021,2022,2023&limit=200&filterBy=destinationGlobalClusterCode:FSC"
+    },
+    {
+      "bytes": 396259,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/fsc-2021_2022_2023-p002.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:34:46+00:00",
+      "sha256": "3c0541a87f8b2352b1a090affc2d7ce466f7847d1701a9d55457c47aad80f053",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&filterBy=destinationGlobalClusterCode:FSC&limit=200&year=2021,2022,2023&page=2"
+    },
+    {
+      "bytes": 97041,
+      "file": "interval/snapshots/2026-10-11/fts/SOM/fsc-2021_2022_2023-p003.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-11T23:34:46+00:00",
+      "sha256": "e126441be7b8173c7e773514441d9f57dd24debb936f04567986d60bf864d786",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&filterBy=destinationGlobalClusterCode:FSC&limit=200&year=2021,2022,2023&page=3"
+    }
+  ],
+  "run_date": "2026-10-11"
+}
