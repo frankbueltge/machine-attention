@@ -32,9 +32,12 @@ def test_resolve_ipc_url_missing_raises():
         sources.resolve_ipc_url({"result": {"resources": []}})
 
 
-def test_fts_url_keeps_years_verbatim():
+def test_fts_url_keeps_comma_list_and_refuses_range():
+    # A range is not a filter at FTS (probe of 2026-10-11): refuse it.
     assert "year=2011,2012" in sources.fts_url("SOM", "2011,2012")
-    assert "year=2011-2013" in sources.fts_url("SOM", "2011-2013")
+    for bad in ("2011-2013", "", "11"):
+        with pytest.raises(ValueError):
+            sources.fts_url("SOM", bad)
     assert "filterBy=destinationGlobalClusterCode:FSC" in sources.fts_url(
         "SOM", "2020", filter_by="destinationGlobalClusterCode:FSC")
 

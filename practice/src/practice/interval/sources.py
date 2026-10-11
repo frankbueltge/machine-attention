@@ -10,10 +10,10 @@ Two public, keyless axes (docs/2026-10-04-kandidat-the-interval.md §2):
   response headers, so an ETag cannot be read; identical content is detected
   by SHA-256 against the newest committed snapshot instead.
 - OCHA FTS flows, keyless — pages of up to 200 followed through `nextLink`.
-  `years` is passed to the source verbatim: a comma list ("2011,2012") and a
-  range ("2011-2013") are NOT the same query (probe of 2026-10-09, Somalia
-  2011-2013: 1,912 against 13,229 flows), so the form used is part of the
-  preserved URL and nothing here normalises it.
+  `years` must be one year or a comma list ("2011,2012,2013"). A range
+  ("2011-2013") is refused: FTS ignores it and returns every year there is
+  (probe of 2026-10-11, Somalia: range and no year at all both 13,246 flows
+  with identical totals; interval/snapshots/2026-10-11/fts/SOM/).
 
 The FEWS NET data warehouse is not an axis and is never fetched.
 """
@@ -46,6 +46,8 @@ def resolve_ipc_url(package: dict, name: str = IPC_RESOURCE) -> str:
 
 def fts_url(country_iso3: str, years: str, *, filter_by: str | None = None,
             limit: int = FTS_PAGE_LIMIT) -> str:
+    if not all(y.isdigit() and len(y) == 4 for y in years.split(",")):
+        raise ValueError(f"FTS years must be a comma list, got {years!r}")
     params = [("countryISO3", country_iso3), ("year", years),
               ("limit", str(limit))]
     if filter_by:
