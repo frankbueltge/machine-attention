@@ -1342,6 +1342,249 @@ def check_retired(root: Path, problems: list[str]) -> None:
                     f"project was retired (last night {last})")
 
 
+IV_BASE = "interval/snapshots"
+IV_THETAS = (0.05, 0.10, 0.25)
+IV_KS = (2, 3)
+IV_AXES = ("date", "firstReportedDate")
+IV_SETS = ("fsc", "total")
+IV_DRIVERS = ("drought", "conflict", "economic", "mixed", "unassigned")
+IV_MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
+             "Oct", "Nov", "Dec")
+IV_PAGE = re.compile(r"^(fsc|total)-([0-9_]+)-p(\d{3})\.json$")
+
+
+def _iv_index(month: str) -> int:
+    return int(month[:4]) * 12 + int(month[5:7]) - 1
+
+
+def _iv_month(index: int) -> str:
+    return f"{index // 12:04d}-{index % 12 + 1:02d}"
+
+
+def _iv_warning(text: str) -> dict[str, list[dict]]:
+    """IPC national long table -> per country, the analyses with W, recomputed
+    without the practice package (The Interval, increment 2 semantics)."""
+    import csv
+    import io
+    keyed: dict[tuple, list[dict]] = {}
+    block = None
+    for row in csv.DictReader(io.StringIO(text)):
+        if row["Phase"] == "all":
+            mon, year = row["Date of analysis"].split()
+            block = {"pop": int(row["Total country population"]),
+                     "analysed": int(row["Number"]), "p4": 0, "p5": 0}
+            key = (row["Country"],
+                   f"{int(year):04d}-{IV_MONTHS.index(mon) + 1:02d}",
+                   row["Validity period"])
+            keyed.setdefault(key, []).append(block)
+        elif row["Phase"] in ("4", "5"):
+            block["p" + row["Phase"]] = int(row["Number"])
+    out: dict[str, list[dict]] = {}
+    months = sorted({(c, m) for c, m, _ in keyed})
+    for country, month in months:
+        picked = {}
+        for period in ("first projection", "second projection"):
+            cands = keyed.get((country, month, period), [])
+            if cands:
+                picked[period] = max(cands, key=lambda b: b["analysed"])
+        shares = {p: (b["p4"] + b["p5"]) / b["pop"] if b["pop"] > 0 else None
+                  for p, b in picked.items()}
+        best = [(s, picked[p]) for p, s in shares.items() if s is not None]
+        w, used = max(best, key=lambda x: x[0]) if best else (None, None)
+        out.setdefault(country, []).append({
+            "month": month, "w": w,
+            "w_first": shares.get("first projection"),
+            "w_second": shares.get("second projection"),
+            "coverage": used["analysed"] / used["pop"] if used else None,
+            "blocks": max(len(keyed.get((country, month, p), []))
+                          for p in ("current", "first projection",
+                                    "second projection")),
+            "phase5": any(b["p5"] > 0 for b in picked.values())})
+    return out
+
+
+def _iv_onsets(series: list[dict], theta: float) -> list[str]:
+    found, quiet_from = [], None
+    for p in series:
+        if p["w"] is None:
+            continue
+        if p["w"] < theta:
+            quiet_from = quiet_from or p["month"]
+        else:
+            if quiet_from and _iv_index(p["month"]) - _iv_index(quiet_from) >= 6:
+                found.append(p["month"])
+            quiet_from = None
+    return found
+
+
+def _iv_pages(root: Path, iso3: str, tag: str, years: str):
+    """Newest complete page set of one FTS query: (day, [files]) or None."""
+    base = root / IV_BASE
+    days = sorted((p.name for p in base.iterdir() if p.is_dir()), reverse=True) \
+        if base.exists() else []
+    for day in days:
+        mpath = base / day / "manifest.json"
+        if not mpath.exists():
+            continue
+        prefix = f"{IV_BASE}/{day}/fts/{iso3}/"
+        found = []
+        for e in load(mpath).get("entries", []):
+            if not e["file"].startswith(prefix):
+                continue
+            m = IV_PAGE.match(e["file"][len(prefix):])
+            if m and m.group(1) == tag and m.group(2) == years.replace(",", "_"):
+                found.append((int(m.group(3)), e["file"], e["http_status"]))
+        found.sort()
+        if (not found or [f[0] for f in found] != list(range(1, len(found) + 1))
+                or any(f[2] != 200 for f in found)
+                or (load(root / found[-1][1]).get("meta") or {}).get("nextLink")):
+            continue
+        return day, [f[1] for f in found]
+    return None
+
+
+def _iv_money(root: Path, iso3: str, t0: str, tag: str) -> dict:
+    i0 = _iv_index(t0)
+    first, last = i0 - 12, i0 + 11
+    years = ",".join(str(y) for y in range(first // 12, last // 12 + 1))
+    found = _iv_pages(root, iso3, tag, years)
+    if not found:
+        return {"status": "not_preserved", "boundary_years": years}
+    day, pages = found
+    flows: dict[str, dict] = {}
+    for rel in pages:
+        for f in (load(root / rel).get("data") or {}).get("flows") or []:
+            fid, ver = str(f["id"]), int(f.get("versionId") or 0)
+            if fid not in flows or ver > flows[fid]["v"]:
+                flows[fid] = {"v": ver, "amount": float(f.get("amountUSD") or 0),
+                              "ok": f.get("boundary") == "incoming"
+                              and f.get("status") in ("paid", "commitment"),
+                              "date": f["date"][:7],
+                              "firstReportedDate": (f.get("firstReportedDate")
+                                                    or f["date"])[:7]}
+    as_of = _iv_index(day[:7])
+    cells = []
+    for axis in IV_AXES:
+        series = {i: 0.0 for i in range(first, last + 1)}
+        for fid in sorted(flows):
+            f = flows[fid]
+            idx = _iv_index(f[axis])
+            if f["ok"] and idx in series:
+                series[idx] += f["amount"]
+        base = _median([series[i0 - i] for i in range(1, 13)])
+        after = list(range(i0, min(last, as_of) + 1))
+        half = None
+        if as_of >= last:
+            total, run = sum(series[i] for i in after), 0.0
+            for i in after:
+                run += series[i]
+                if total > 0 and run >= total / 2:
+                    half = _iv_month(i)
+                    break
+        for k in IV_KS:
+            cell = {"k": k, "axis": axis, "baseline_usd": round(base, 2),
+                    "t1": None, "gap_months": None, "open_months": None,
+                    "half_month": half}
+            hit = next((i for i in after if series[i] >= k * base), None) \
+                if base > 0 else None
+            if base <= 0:
+                cell["status"] = "baseline_zero"
+            elif hit is not None:
+                cell.update(status="closed", t1=_iv_month(hit),
+                            gap_months=hit - i0)
+            elif as_of < last:
+                cell.update(status="open", open_months=max(as_of - i0, 0))
+            else:
+                cell["status"] = "none_in_horizon"
+            cells.append(cell)
+    return {"status": "read", "boundary_years": years, "as_of": day[:7],
+            "pages": pages, "pages_sha256": [sha256_file(root / p) for p in pages],
+            "flows": len(flows),
+            "flows_counted": sum(1 for f in flows.values() if f["ok"]),
+            "cells": cells}
+
+
+def check_interval(root: Path, problems: list[str]) -> None:
+    """The Interval's register (V0 increment 4, 2026-10-12) is recomputed
+    here from the committed snapshots and drivers.json, independently of the
+    practice package, and must match the committed file exactly."""
+    rel = "interval/register.json"
+    if not (root / rel).exists():
+        return
+    drivers = {}
+    dpath = root / "interval" / "drivers.json"
+    for d in (load(dpath).get("drivers", []) if dpath.exists() else []):
+        if d.get("driver") not in IV_DRIVERS:
+            problems.append(f"interval/drivers.json: unknown driver {d.get('driver')!r}")
+        elif d["driver"] != "unassigned" and not d.get("source"):
+            problems.append(f"interval/drivers.json: {d.get('country')} "
+                            f"{d.get('t0')}: driver without a source")
+        drivers[(d.get("country"), d.get("t0"))] = d
+    ipc = None
+    base = root / IV_BASE
+    for day in sorted((p.name for p in base.iterdir() if p.is_dir()),
+                      reverse=True) if base.exists() else []:
+        cand = f"{IV_BASE}/{day}/ipc/ipc_global_national_long.csv"
+        mpath = base / day / "manifest.json"
+        if mpath.exists() and any(e["file"] == cand
+                                  for e in load(mpath).get("entries", [])):
+            ipc = cand
+            break
+    if ipc is None:
+        problems.append(f"{rel}: no committed IPC snapshot to recompute from")
+        return
+    series = _iv_warning((root / ipc).read_text(encoding="utf-8"))
+    r6 = lambda x: None if x is None else round(x, 6)  # noqa: E731
+    onsets: dict[tuple[str, str], list[str]] = {}
+    censored = {}
+    for theta in IV_THETAS:
+        censored[f"{theta:.2f}"] = sorted(
+            c for c, s in series.items()
+            if next((p["w"] >= theta for p in s if p["w"] is not None), False))
+        for c, s in series.items():
+            for t0 in _iv_onsets(s, theta):
+                onsets.setdefault((c, t0), []).append(f"{theta:.2f}")
+    episodes = []
+    for (country, t0), thetas in sorted(onsets.items()):
+        p = next(x for x in series[country] if x["month"] == t0)
+        d = drivers.get((country, t0))
+        i0 = _iv_index(t0)
+        episodes.append({
+            "country": country, "t0": t0, "onset_at_theta": thetas,
+            "w": r6(p["w"]), "w_first": r6(p["w_first"]),
+            "w_second": r6(p["w_second"]), "coverage": r6(p["coverage"]),
+            "blocks": p["blocks"], "phase5_projected": p["phase5"],
+            "window": [_iv_month(i0 - 12), _iv_month(i0 + 11)],
+            "driver": {"driver": d["driver"], "source": d.get("source")}
+            if d else {"driver": "unassigned", "source": None},
+            "money": {tag: _iv_money(root, country, t0, tag) for tag in IV_SETS},
+        })
+    expected = {
+        "schema": "interval-register-v1", "ipc_snapshot": ipc,
+        "ipc_sha256": sha256_file(root / ipc),
+        "grid": {"theta": [f"{t:.2f}" for t in IV_THETAS], "k": list(IV_KS),
+                 "axis": list(IV_AXES), "set": list(IV_SETS),
+                 "quiet_months": 6, "baseline_months": 12,
+                 "horizon_months": 12},
+        "left_censored": censored, "episodes": episodes}
+    committed = load(root / rel)
+    if committed == expected:
+        return
+    if committed.get("episodes") != episodes:
+        got = {(e.get("country"), e.get("t0")): e
+               for e in committed.get("episodes", [])}
+        for e in episodes:
+            if got.get((e["country"], e["t0"])) != e:
+                problems.append(f"{rel}: episode {e['country']} {e['t0']} "
+                                "differs from its recomputation")
+        extra = set(got) - {(e["country"], e["t0"]) for e in episodes}
+        for key in sorted(extra):
+            problems.append(f"{rel}: episode {key[0]} {key[1]} has no onset "
+                            "in the snapshot")
+    else:
+        problems.append(f"{rel}: header differs from its recomputation")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -1353,6 +1596,7 @@ def check(root: Path) -> list[str]:
                     False)
     check_snapshots(root, "memoryhole/snapshots", problems, registry_files,
                     False)
+    check_snapshots(root, IV_BASE, problems, registry_files, False)
 
     check_retired(root, problems)
 
@@ -1419,6 +1663,7 @@ def check(root: Path) -> list[str]:
     check_darkocean_continuity(root, registry_files, problems)
     check_memoryhole(root, registry_files, problems)
     check_memoryhole_verdicts(root, problems)
+    check_interval(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
