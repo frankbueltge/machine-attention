@@ -11,14 +11,15 @@ RUNNING (any time: RETIRED).*
 
 ### The Interval — slow-onset food crises: projection against funding
 
-- **Stage:** V0 — increment 3 of 6 done 2026-10-11 (`docs/2026-10-11-the-interval-v0-inkrement-3.md`): money series M and t1 as pure functions (`practice/src/practice/interval/money.py`), 13 tests; both time axes, zero-baseline and open-clock cases. Boundary settled by probe: FTS ignores a year range (`year=2011-2013` = no year, 13,246 flows), so the episode boundary is always a comma list and `fts_url` refuses ranges. Control: Somalia t0 2022-03, FSC, t1 2022-05 (gap 2) on both axes and both k. Increments 1–2 done 2026-10-09 and 2026-10-11.
+- **Stage:** V0 — increment 4 of 6 done 2026-10-12 (`docs/2026-10-12-the-interval-v0-inkrement-4.md`): `interval/register.json` (8 episodes × k × axis × FSC/total, 64 cells, none open, none unpreserved), built by `practice/src/practice/interval/register.py` and recomputed independently by `verify.py` (`check_interval`); `interval/snapshots` now held by the manifest check too. FTS snapshots for every onset in `interval/snapshots/2026-10-12/` (113 requests, all complete, 41 MB, almost all of it country totals). Gaps range 0–10 months; Somalia 2022 control confirmed on the country total. Increments 1–3 done 2026-10-09 and 2026-10-11.
 - **Gate:** the maintainer's GO for V0 given on 2026-10-04 (wording private),
   recorded in `docs/2026-10-04-kandidat-the-interval.md`.
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** V0 increment 4: `interval/register.json` (episodes × grid θ × k × axis × FSC/total), carrying the duplicate-block mark (`blocks` > 1; Somalia 2026-01 is an onset at θ = 10 %), drivers from a cited `interval/drivers.json`, and a `verify.py` extension that recomputes the register from the snapshots. Needs per onset two FTS queries (FSC, total) with `boundary_years`; five onsets at θ = 10 %, six at 5 %. The country-total control for Somalia 2022 is not yet preserved.
-- **Updated:** 2026-10-11 (pass)
+- **Next step:** V0 increment 5: the weekly workflow `interval.yml` (IPC fetch, FTS per episode, register rebuild, anchor registration, verify, commit). Decide first how a weekly reading avoids re-fetching 41 MB: re-fetch only episodes whose horizon is still open against the snapshot month, read closed ones from their snapshot. The workflow lands only together with its first committed reading.
+- **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
+- **Updated:** 2026-10-12 (pass)
 
 ## Next
 

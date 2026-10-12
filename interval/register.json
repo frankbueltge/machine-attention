@@ -1,0 +1,1320 @@
+{
+  "episodes": [
+    {
+      "blocks": 1,
+      "country": "AFG",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2020,2021,2022",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 22386607.0,
+              "gap_months": 1,
+              "half_month": "2022-01",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 22386607.0,
+              "gap_months": 1,
+              "half_month": "2022-01",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 15293772.0,
+              "gap_months": 0,
+              "half_month": "2022-04",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-10"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 15293772.0,
+              "gap_months": 1,
+              "half_month": "2022-04",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            }
+          ],
+          "flows": 388,
+          "flows_counted": 279,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/AFG/fsc-2020_2021_2022-p001.json",
+            "interval/snapshots/2026-10-12/fts/AFG/fsc-2020_2021_2022-p002.json"
+          ],
+          "pages_sha256": [
+            "e1c765d387f28d5942e66e36f13fb559fde866a11e5025ffbd9d001f7866ca50",
+            "69f3c862e1b4f751d8ca47264d1d0b9e7ab48b43953d2efd1888183e35ffef2a"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2020,2021,2022",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 120216014.5,
+              "gap_months": 1,
+              "half_month": "2022-02",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 120216014.5,
+              "gap_months": 1,
+              "half_month": "2022-02",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 117035789.0,
+              "gap_months": 1,
+              "half_month": "2022-04",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 117035789.0,
+              "gap_months": 1,
+              "half_month": "2022-04",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2021-11"
+            }
+          ],
+          "flows": 2245,
+          "flows_counted": 1723,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p001.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p002.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p003.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p004.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p005.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p006.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p007.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p008.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p009.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p010.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p011.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2020_2021_2022-p012.json"
+          ],
+          "pages_sha256": [
+            "1ce24bb36e03561d2b86728c45ba528ca66cc4c67898617c367f1e26c0f8c889",
+            "d37265af1f8b2847d8a2cc78ec2bc31488dc020a8ba3484a1acdd9fabe832084",
+            "8e816ff8651cb50b699b2338c55b628427218ca401f8da5fbb07efa1048b8860",
+            "65b4b90f66d31695c3e7c7a0c9531b73268c8d38dade2ff06430aedbbc3ee1fe",
+            "9053ee63dc7a319de3d3b46126fd19bc46ecad5fa38a7a513236ba1072098005",
+            "4cb254a3639562af3203a2c3b4860645a1273328bf085bd2d7764ce77d56ad95",
+            "9d7333fe2d190715af0a9bd9cd80ac93ba29cfeb8829de0cd66f1a0f23003636",
+            "9fc2a863e8a8812ec7e52217ba00dc6d85c3fe821ec5c55133d36135c30c9b59",
+            "51029da28b18af2475198a51233c57c0ce62bd28f6a4611fa406deb584a1ae28",
+            "db0d28b0e612f32c47f45f041aba5ebd56bc8cdf8ec49380478e673437bb1399",
+            "2c81a9b8435a41dbef546bab990c8adb4530cb0b9a798700947034ef098a11c8",
+            "e3dbc4d989a6d4c325fdcd610ed26ec11f3fd32eb0b87fc60e744488c1b9a883"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.10"
+      ],
+      "phase5_projected": false,
+      "t0": "2021-10",
+      "w": 0.20945,
+      "w_first": 0.20945,
+      "w_second": null,
+      "window": [
+        "2020-10",
+        "2022-09"
+      ]
+    },
+    {
+      "blocks": 1,
+      "country": "AFG",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2024,2025,2026",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 32091886.0,
+              "gap_months": 6,
+              "half_month": "2026-04",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-04"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 32091886.0,
+              "gap_months": null,
+              "half_month": "2026-04",
+              "k": 3,
+              "open_months": null,
+              "status": "none_in_horizon",
+              "t1": null
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 29150775.0,
+              "gap_months": 0,
+              "half_month": "2026-03",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-10"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 29150775.0,
+              "gap_months": null,
+              "half_month": "2026-03",
+              "k": 3,
+              "open_months": null,
+              "status": "none_in_horizon",
+              "t1": null
+            }
+          ],
+          "flows": 348,
+          "flows_counted": 276,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/AFG/fsc-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-10-12/fts/AFG/fsc-2024_2025_2026-p002.json"
+          ],
+          "pages_sha256": [
+            "dba70b8b89644a364cf96c63b44eabf136581451baf125e6dd1c6c6d7e6bf797",
+            "421735bce0425c3fce1aefb6025c286339789bb08532ec327aba4cd07ec547ff"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2024,2025,2026",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 126139403.5,
+              "gap_months": 8,
+              "half_month": "2026-04",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-06"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 126139403.5,
+              "gap_months": null,
+              "half_month": "2026-04",
+              "k": 3,
+              "open_months": null,
+              "status": "none_in_horizon",
+              "t1": null
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 124895373.0,
+              "gap_months": 0,
+              "half_month": "2026-04",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-10"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 124895373.0,
+              "gap_months": null,
+              "half_month": "2026-04",
+              "k": 3,
+              "open_months": null,
+              "status": "none_in_horizon",
+              "t1": null
+            }
+          ],
+          "flows": 2900,
+          "flows_counted": 2249,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p002.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p003.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p004.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p005.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p006.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p007.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p008.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p009.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p010.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p011.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p012.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p013.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p014.json",
+            "interval/snapshots/2026-10-12/fts/AFG/total-2024_2025_2026-p015.json"
+          ],
+          "pages_sha256": [
+            "e43fcc7b8c08dcce4f5628e4a4816d38e6df19b0baa0f7227534dd833aa240fe",
+            "4c01b24945023ec25a82cbe88fb23f28b47c1ecaa13cb3f300c9cc6dd8a1cf40",
+            "54bcb1f668d519366df359d178c2bd0ea0a35d9d1d79fcc8627fc5a611f95665",
+            "ca7f8e6c896528d0da0ab5cff943a0062bc05718f876991cf822f8827a487247",
+            "bb8144ce81e8d9a9d64742e4dc456dbe0ffed3de9d54ddd30c4dc2fa83e374e0",
+            "57d3e6f0c3a07c9578d58c31b4c9d2f96daeba2f5e47170316b36c8eafc47ff5",
+            "80bd0ae1ee7c0e0390081388966fd191afa922a4f479d8f35ea69ac06d242ac6",
+            "06e99218e8bee65b13f04f5fbb670289898a45fe0edd3efe238c26c93d8fd9de",
+            "f36ddc2d4b6abacb4b7daf2fd06e350bc2b87f618d65421db62949d6e3e77853",
+            "f93a1170672c21a060687fa706cb494855f5353514aabbb45f7a4e6a09efec1d",
+            "a3e14874cdfc4a6888fc93e3f1b4366eb57037d853ba1ea34e571fada187489a",
+            "4919771d60fcbc41ae98689a5ac2cb6b987127f6931a10ff6cb0db2335feb89c",
+            "5b6cee672673f22e67ca7b2b642dd13b157346840bb2a57f29b4f1fcc61e90f4",
+            "b4d6fe60cd3e40bdf0e14ca95db1dbfd407633514e5093159ab88759f464ce7f",
+            "b55f2da54472bd3419aa777539289ee58ca32bdf8268a1013fd4baa6dc6aeda0"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.05"
+      ],
+      "phase5_projected": false,
+      "t0": "2025-10",
+      "w": 0.095977,
+      "w_first": 0.095977,
+      "w_second": 0.059453,
+      "window": [
+        "2024-10",
+        "2026-09"
+      ]
+    },
+    {
+      "blocks": 1,
+      "country": "DJI",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2022,2023,2024",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 10666.5,
+              "gap_months": 0,
+              "half_month": "2023-07",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-04"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 10666.5,
+              "gap_months": 0,
+              "half_month": "2023-07",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-04"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 0.0,
+              "gap_months": null,
+              "half_month": "2023-07",
+              "k": 2,
+              "open_months": null,
+              "status": "baseline_zero",
+              "t1": null
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 0.0,
+              "gap_months": null,
+              "half_month": "2023-07",
+              "k": 3,
+              "open_months": null,
+              "status": "baseline_zero",
+              "t1": null
+            }
+          ],
+          "flows": 38,
+          "flows_counted": 38,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/DJI/fsc-2022_2023_2024-p001.json"
+          ],
+          "pages_sha256": [
+            "9e1bbd83fb2289a6c3fa7a3c2983bb91ca463fd1c83cd3b09a5bf632b7c0cfac"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2022,2023,2024",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 3158430.0,
+              "gap_months": 0,
+              "half_month": "2023-09",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-04"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 3158430.0,
+              "gap_months": null,
+              "half_month": "2023-09",
+              "k": 3,
+              "open_months": null,
+              "status": "none_in_horizon",
+              "t1": null
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 6033319.0,
+              "gap_months": 1,
+              "half_month": "2023-08",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-05"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 6033319.0,
+              "gap_months": 1,
+              "half_month": "2023-08",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-05"
+            }
+          ],
+          "flows": 248,
+          "flows_counted": 248,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/DJI/total-2022_2023_2024-p001.json",
+            "interval/snapshots/2026-10-12/fts/DJI/total-2022_2023_2024-p002.json"
+          ],
+          "pages_sha256": [
+            "b9529d5ad843f2f6c79eccb1f586b3fac2bbdc9951cedc1b30387b555d398700",
+            "9cf155dcbb4d2abc332342c287841e2f418631f2894e1d2cdfe7298bdf1c7d2e"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.05"
+      ],
+      "phase5_projected": false,
+      "t0": "2023-04",
+      "w": 0.084712,
+      "w_first": 0.084712,
+      "w_second": null,
+      "window": [
+        "2022-04",
+        "2024-03"
+      ]
+    },
+    {
+      "blocks": 1,
+      "country": "SDN",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2022,2023,2024",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 13438199.0,
+              "gap_months": 0,
+              "half_month": "2023-12",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 13438199.0,
+              "gap_months": 0,
+              "half_month": "2023-12",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 6917350.0,
+              "gap_months": 0,
+              "half_month": "2023-09",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 6917350.0,
+              "gap_months": 0,
+              "half_month": "2023-09",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            }
+          ],
+          "flows": 532,
+          "flows_counted": 454,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SDN/fsc-2022_2023_2024-p001.json",
+            "interval/snapshots/2026-10-12/fts/SDN/fsc-2022_2023_2024-p002.json",
+            "interval/snapshots/2026-10-12/fts/SDN/fsc-2022_2023_2024-p003.json"
+          ],
+          "pages_sha256": [
+            "c9e5be21a84a81b232e37e34dacd6133cde825685de4e8dc3ef529077b38dd74",
+            "3ec06997943873d329775e9732f6f8dcb4d9c41bcde1942de119647cbf907d42",
+            "16d8688f1f35ed86a370ed4763a9ad6d2419308d8a53f4f05e45753a2de6a13c"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2022,2023,2024",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 41008660.0,
+              "gap_months": 0,
+              "half_month": "2023-11",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 41008660.0,
+              "gap_months": 0,
+              "half_month": "2023-11",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 66767882.0,
+              "gap_months": 0,
+              "half_month": "2023-11",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 66767882.0,
+              "gap_months": 0,
+              "half_month": "2023-11",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2023-06"
+            }
+          ],
+          "flows": 3361,
+          "flows_counted": 2741,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p001.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p002.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p003.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p004.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p005.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p006.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p007.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p008.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p009.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p010.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p011.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p012.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p013.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p014.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p015.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p016.json",
+            "interval/snapshots/2026-10-12/fts/SDN/total-2022_2023_2024-p017.json"
+          ],
+          "pages_sha256": [
+            "bbe74536b10e6657fef90d89ff144e9b91e58f24dc285741b704a1c64893004b",
+            "f208f3427a86e5c3570def5267fb7b86fa37f39eee746590edf9438082a368d4",
+            "0304a9414d5de0e2527d637526ce1ec35870fd8fa31374a96bfd198c396edcc1",
+            "f2994c04231bc7271c8192bafc3f7b8c7390655396e0f2729ae216224d84f90a",
+            "ea6eac7f359727110069240b859d10b2415005d5fc9778b45a43d96827d516d9",
+            "14031349beda169fbe2d8c7790026ae4224ad4b5d0ddeddf35c9fa9a8907f88d",
+            "ce534a7b25e57e0685071dbea5da426042f964e1cc7b59382c6b23d00cef779e",
+            "300bbb78b3b34d811e0b00ff66c8cd8595af90d4d7ff3432771ff95417ef16b5",
+            "0c8305db1517594d060afb63f22384f3f62b0d4c85285136b5e6768a91724de9",
+            "673f33a2167fd3f0f708d6e242505fe5f3d859a70c23cde7ce6120448d5e7c52",
+            "a89a9716a22782497a5ff52f7132d9244443cb5c394bb200543ca6f999bd9e98",
+            "ad9358b4d51df06f5b071abc16d0f67110cb5e1974e8811b370b0f41e78d4932",
+            "d1f7fb92baf060b9289c621ca2bee38fcb0e35d62cdbcedd015b80457b362f49",
+            "a8ff355d6b22c3cdc61f327e5436acca7b1f002c67626c121d4f91ec75b2c60b",
+            "d2afd68cdbdde5623cd0bd73841bfa3c00b86db33033a043f594fe1d1626553d",
+            "611be1a474bb684d6f3bb3a67a82961f405083aeb40d463dfe30a3f927541905",
+            "3ef5d514458508711860843bb786d38412c8e0d1b0f758b1ff0d56ea98de2136"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.10"
+      ],
+      "phase5_projected": false,
+      "t0": "2023-06",
+      "w": 0.128774,
+      "w_first": 0.128774,
+      "w_second": 0.078706,
+      "window": [
+        "2022-06",
+        "2024-05"
+      ]
+    },
+    {
+      "blocks": 1,
+      "country": "SOM",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2021,2022,2023",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 40791906.0,
+              "gap_months": 2,
+              "half_month": "2022-06",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 40791906.0,
+              "gap_months": 2,
+              "half_month": "2022-06",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 24848159.0,
+              "gap_months": 2,
+              "half_month": "2022-08",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 24848159.0,
+              "gap_months": 2,
+              "half_month": "2022-08",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            }
+          ],
+          "flows": 456,
+          "flows_counted": 407,
+          "pages": [
+            "interval/snapshots/2026-10-11/fts/SOM/fsc-2021_2022_2023-p001.json",
+            "interval/snapshots/2026-10-11/fts/SOM/fsc-2021_2022_2023-p002.json",
+            "interval/snapshots/2026-10-11/fts/SOM/fsc-2021_2022_2023-p003.json"
+          ],
+          "pages_sha256": [
+            "2c05e5edd2705dd6d18a9c847a0bcc6ac97d73b3f61110c7663d3eab9c212a53",
+            "3c0541a87f8b2352b1a090affc2d7ce466f7847d1701a9d55457c47aad80f053",
+            "e126441be7b8173c7e773514441d9f57dd24debb936f04567986d60bf864d786"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2021,2022,2023",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 111724823.5,
+              "gap_months": 2,
+              "half_month": "2022-07",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 111724823.5,
+              "gap_months": 2,
+              "half_month": "2022-07",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 105785530.0,
+              "gap_months": 2,
+              "half_month": "2022-08",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 105785530.0,
+              "gap_months": 2,
+              "half_month": "2022-08",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2022-05"
+            }
+          ],
+          "flows": 2276,
+          "flows_counted": 1883,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p001.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p002.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p003.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p004.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p005.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p006.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p007.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p008.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p009.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p010.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p011.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2021_2022_2023-p012.json"
+          ],
+          "pages_sha256": [
+            "7f163c5b9d1af9fa8c97e2e3a0eba4f4211b8f3a72db11b3d05916668d3040a8",
+            "1fc3bda3aa7946ecc451bbdc334b3aa6273a21d1c652d2983f8c22e86ad47f62",
+            "5aa207d302dd98582083d1e6634de281e28b4c7be26c153ae50f964a4f2b1303",
+            "80af4378db9cd20069777031fe812e0ee87ba542d72831a49a62db5a8b2f157e",
+            "b1479d4c3d85056016fadcadf5770f91ed719e5619cfa25ae3df5e15676c6862",
+            "7ae5d011a8aa73391ad9401d6f6fca458782e65579a7dcdb728856f7e09010e5",
+            "0fbd98e4b3c73c3493332ab311784421676857fe7f587cc9f72a913c707cc4eb",
+            "09a6db22f59c8ec881e2756e06462b55f15e4e367ffce59fae9128f85fd61e5a",
+            "0484ef6c3c6a3e17c2cae99b73d02638762040669bd1fe7d174949aeabdf7486",
+            "4bfd5594aebfcd2778003b90a2330b376e1b1400ab84106ef48e13880bf74f46",
+            "098c4e523aad3bf6484c3a33bd413a5eedf6dca3472947213c3a2542d0cb8aa6",
+            "ce5846e762b5ecab6f959742ef07dae4cd39ed2c4d04324a5428b846df92e316"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.05",
+        "0.10"
+      ],
+      "phase5_projected": true,
+      "t0": "2022-03",
+      "w": 0.11573,
+      "w_first": 0.076268,
+      "w_second": 0.11573,
+      "window": [
+        "2021-03",
+        "2023-02"
+      ]
+    },
+    {
+      "blocks": 1,
+      "country": "SOM",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2023,2024,2025",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 21781487.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 21781487.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 15621394.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 15621394.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            }
+          ],
+          "flows": 479,
+          "flows_counted": 399,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SOM/fsc-2023_2024_2025-p001.json",
+            "interval/snapshots/2026-10-12/fts/SOM/fsc-2023_2024_2025-p002.json",
+            "interval/snapshots/2026-10-12/fts/SOM/fsc-2023_2024_2025-p003.json"
+          ],
+          "pages_sha256": [
+            "cd0cead308e4becacd7180856882ffdd8bf203a219b15016465c574159905f5d",
+            "05c0a04264aa707a9f17248e260f968488976773826d2eb2bbb598a81b264450",
+            "f98212e73cef0b256cac1dad21c3e8705085fe106ba995f6e69c261d9f680a36"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2023,2024,2025",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 70371442.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 70371442.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 62060594.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 62060594.0,
+              "gap_months": 7,
+              "half_month": "2025-03",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-03"
+            }
+          ],
+          "flows": 2768,
+          "flows_counted": 2103,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p001.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p002.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p003.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p004.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p005.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p006.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p007.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p008.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p009.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p010.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p011.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p012.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p013.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2023_2024_2025-p014.json"
+          ],
+          "pages_sha256": [
+            "96e1379f287bbb28f388511e7ac296cef88be79a621947cb5fa25523446b5daf",
+            "91cc890b24582da052de48738864e351a6b2503dcd2856ae4df20305e6f0304e",
+            "2165a14be97fb9cd21f6541136285ce0a544a4ca3b1e0f03fe47c63ce2f752a4",
+            "a1a9f4c7fd7a0f2945687945232c427bea7f8347bb3c6db3f89e6e73f4881d08",
+            "2e8e2b52f7304d8166ab0715a01551efd91a9a07d7551388e4e2d94cdb9e2f6b",
+            "ac42d781da6c3d3684ba1887c4ac43c1d5af7552b70a9c1b2e7810e2635da3a9",
+            "29df77afa717e27111f2d09e5ee5c509c731947a544a0a90a98b32a6fa8394c9",
+            "84299b7fbdf36af1da5dd6567f47fccc1086056cd3a00925dd398f50a631b461",
+            "f0894de041c25114cc0e008efd76c43f89c891d63f3f364d5a6db46f8fcbacdc",
+            "ffcf62c93f0de06e55328313f2fb08af22176ce3017f469c800b2a6f1693a273",
+            "ac5c6a12347539eaf716b855e77e2bad71fa49f37663f6128c695389b84b5480",
+            "1fde362bb1f9dad2e8f61c3689c66620331cad87da44d755e65db5f6e26a8e32",
+            "77b863c946b48d087364973d63f4adc9c206b443fd2c93989f5348de80c72112",
+            "1e6a4d86e32f1cd371c5c8c9e67bb4368754d44b90da0bb74e256682bb238ac7"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.05"
+      ],
+      "phase5_projected": false,
+      "t0": "2024-08",
+      "w": 0.052476,
+      "w_first": 0.052476,
+      "w_second": null,
+      "window": [
+        "2023-08",
+        "2025-07"
+      ]
+    },
+    {
+      "blocks": 2,
+      "country": "SOM",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2025,2026",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 2696555.5,
+              "gap_months": 1,
+              "half_month": null,
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-02"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 2696555.5,
+              "gap_months": 1,
+              "half_month": null,
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-02"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 4446059.5,
+              "gap_months": 0,
+              "half_month": null,
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-01"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 4446059.5,
+              "gap_months": 0,
+              "half_month": null,
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-01"
+            }
+          ],
+          "flows": 278,
+          "flows_counted": 184,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SOM/fsc-2025_2026-p001.json",
+            "interval/snapshots/2026-10-12/fts/SOM/fsc-2025_2026-p002.json"
+          ],
+          "pages_sha256": [
+            "5ad4b60631cbba062364a4ef98696958bafe95bbc0cf627a017d72b3d9130d97",
+            "0316c75eda40b2b1e56e2a4e96dbce7b6098b248414739f0d7f4ffdf3650d789"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2025,2026",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 25085345.0,
+              "gap_months": 1,
+              "half_month": null,
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-02"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 25085345.0,
+              "gap_months": 3,
+              "half_month": null,
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-04"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 22425043.0,
+              "gap_months": 1,
+              "half_month": null,
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-02"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 22425043.0,
+              "gap_months": 3,
+              "half_month": null,
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-04"
+            }
+          ],
+          "flows": 1495,
+          "flows_counted": 1040,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p001.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p002.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p003.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p004.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p005.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p006.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p007.json",
+            "interval/snapshots/2026-10-12/fts/SOM/total-2025_2026-p008.json"
+          ],
+          "pages_sha256": [
+            "91456ce9cf63efeba6c69cd3f38222d437bbbc1368a429823f0c937f8232e2bb",
+            "b373e406aefa42cc4c3d70c79dce7bfa68446d23018b2db3145168822c53eefa",
+            "2d298f1d82246b9df1f51bfae95fe527f0e5b7e2fed814f87392f872887affea",
+            "9890bf4418fcdf8537288496b97ed871d6dc27f8ff197b1b32743a3c3db67766",
+            "94a93bbdb88d53694a6035282e5b3c1aab55121e4b09b53b25396f77cfae0525",
+            "31be9764e048df1673afbc4e0c4c4734d5ac6fdd727225452f81cd82403bf10a",
+            "8bd6bb8f72d5b7a99eb185d7d833153291f652991b01d4894f5ebdb2b5f62a70",
+            "86c17daddb0b157309ffdb86b0f897930ba517b83e3b5a767109c9ca4a02b275"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.05",
+        "0.10"
+      ],
+      "phase5_projected": false,
+      "t0": "2026-01",
+      "w": 0.104552,
+      "w_first": 0.104552,
+      "w_second": 0.081911,
+      "window": [
+        "2025-01",
+        "2026-12"
+      ]
+    },
+    {
+      "blocks": 1,
+      "country": "YEM",
+      "coverage": 1.0,
+      "driver": {
+        "driver": "unassigned",
+        "source": null
+      },
+      "money": {
+        "fsc": {
+          "as_of": "2026-10",
+          "boundary_years": "2024,2025,2026",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 23610704.5,
+              "gap_months": 10,
+              "half_month": "2026-01",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-04"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 23610704.5,
+              "gap_months": 10,
+              "half_month": "2026-01",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-04"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 18133601.0,
+              "gap_months": 3,
+              "half_month": "2026-01",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-09"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 18133601.0,
+              "gap_months": 10,
+              "half_month": "2026-01",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2026-04"
+            }
+          ],
+          "flows": 511,
+          "flows_counted": 390,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/YEM/fsc-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-10-12/fts/YEM/fsc-2024_2025_2026-p002.json",
+            "interval/snapshots/2026-10-12/fts/YEM/fsc-2024_2025_2026-p003.json"
+          ],
+          "pages_sha256": [
+            "ec29e749d799cf980c05a7bf13dc1a00f680de77db24cd9074fb1d0417f1deae",
+            "9bea2684d3045d94db8985598999908531b42012750323cfc2c685ab62f2b1b5",
+            "2c09d7678e7ddfdf1017ca0fcd2f13e67d668b743a73c51cb164ff824bd29fc2"
+          ],
+          "status": "read"
+        },
+        "total": {
+          "as_of": "2026-10",
+          "boundary_years": "2024,2025,2026",
+          "cells": [
+            {
+              "axis": "date",
+              "baseline_usd": 85983117.5,
+              "gap_months": 4,
+              "half_month": "2026-01",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-10"
+            },
+            {
+              "axis": "date",
+              "baseline_usd": 85983117.5,
+              "gap_months": 5,
+              "half_month": "2026-01",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-11"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 102845482.5,
+              "gap_months": 4,
+              "half_month": "2025-12",
+              "k": 2,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-10"
+            },
+            {
+              "axis": "firstReportedDate",
+              "baseline_usd": 102845482.5,
+              "gap_months": 4,
+              "half_month": "2025-12",
+              "k": 3,
+              "open_months": null,
+              "status": "closed",
+              "t1": "2025-10"
+            }
+          ],
+          "flows": 3359,
+          "flows_counted": 2676,
+          "pages": [
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p002.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p003.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p004.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p005.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p006.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p007.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p008.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p009.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p010.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p011.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p012.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p013.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p014.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p015.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p016.json",
+            "interval/snapshots/2026-10-12/fts/YEM/total-2024_2025_2026-p017.json"
+          ],
+          "pages_sha256": [
+            "8811601163cc952c4c8beb1f103269e3295c3de0326a040fc88900bbedddfe34",
+            "295a4c99a426830f8de85f81cd601f04beaeae13be58b4d5a12ca43947c96d15",
+            "314149df1c45dddbe50be530c9fa5fb9a82b5927339d673affb935eb35a906a1",
+            "9545f95481e1291979120b3991776474b7b0703f6941b0121e1e8fa511b0f2f1",
+            "d845f3bd979cd8f5e32830cf93b11c624be57e002f443e1925b6f2423f0770a5",
+            "4542ab6fa78b709a438418dedd98346906bd02c283c3ce18f3c3cf414a9b8602",
+            "db8ff95f6032f6bd5a75494706d29f1612dfb918bdec5b446673211d73b80f5c",
+            "4bcc621034d90c28c2a20e1421144d23b9f84098af429687f5c177b939761318",
+            "11dc3b9b317ce8968c3a3a91e1070272f5ba4075efecac64bc233b6981bc4dec",
+            "8916a00101391bc1e264e11acab3ba95fcc39541f4cd2106edab99c3fdfcd878",
+            "d35eabb9c8c60ad3e5f37e4e22618e3cc6532403bda8c33285855c18312751a1",
+            "4a46e299d41b3aa1a26d12155d315f68896c864793cdede7a0a8b0d6c339c267",
+            "61cbabddd0d6547b9e699ac1f885ca9afc8d3940339c347421854bad38cd5d8e",
+            "4d443bd946f6a7e9d337a10317aab1478ada5407a40ab7a0fbb7266c5f42a605",
+            "0553c1ae464bb82c6d65a5d1dd66599b553a6a609cfb4c65b7e5ca362c0cc00d",
+            "215dbd80cdb88c54824b77a4329db2c208c73d46378e06ff0af09d1cebefdf08",
+            "9f2da1a36e342f517c47413881aeb62c1dac08118eba4e75aaf9dd7352bad025"
+          ],
+          "status": "read"
+        }
+      },
+      "onset_at_theta": [
+        "0.05",
+        "0.10"
+      ],
+      "phase5_projected": true,
+      "t0": "2025-06",
+      "w": 0.159201,
+      "w_first": 0.159201,
+      "w_second": null,
+      "window": [
+        "2024-06",
+        "2026-05"
+      ]
+    }
+  ],
+  "grid": {
+    "axis": [
+      "date",
+      "firstReportedDate"
+    ],
+    "baseline_months": 12,
+    "horizon_months": 12,
+    "k": [
+      2,
+      3
+    ],
+    "quiet_months": 6,
+    "set": [
+      "fsc",
+      "total"
+    ],
+    "theta": [
+      "0.05",
+      "0.10",
+      "0.25"
+    ]
+  },
+  "ipc_sha256": "48c9e8a8945c6a5d395262552dab38f00ae06bd3eb8d76601274b9005f34104c",
+  "ipc_snapshot": "interval/snapshots/2026-10-09/ipc/ipc_global_national_long.csv",
+  "left_censored": {
+    "0.05": [
+      "AFG",
+      "CAF",
+      "COD",
+      "HND",
+      "HTI",
+      "LBN",
+      "PSE",
+      "SDN",
+      "SSD",
+      "YEM"
+    ],
+    "0.10": [
+      "CAF",
+      "HTI",
+      "PSE",
+      "SSD",
+      "YEM"
+    ],
+    "0.25": [
+      "PSE"
+    ]
+  },
+  "schema": "interval-register-v1"
+}
