@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-13",
+  "episodes": 8,
+  "grace_months": 3,
+  "http_429": 0,
+  "ipc": {
+    "sha256": "e9836afee71b638d4ae1073fb2dabe7a01d67937de040a441cb451e1c1260d8c",
+    "snapshot": "interval/snapshots/2026-10-13/ipc/ipc_global_national_long.csv",
+    "status": "preserved"
+  },
+  "queries": [
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2020,2021,2022",
+      "country": "AFG",
+      "decision": "frozen",
+      "set": "fsc",
+      "t0": "2021-10",
+      "window_end": "2022-09"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2020,2021,2022",
+      "country": "AFG",
+      "decision": "frozen",
+      "set": "total",
+      "t0": "2021-10",
+      "window_end": "2022-09"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2024,2025,2026",
+      "country": "AFG",
+      "decision": "fetch",
+      "outcome": "unchanged",
+      "pages": 2,
+      "pages_sha256": [
+        "dba70b8b89644a364cf96c63b44eabf136581451baf125e6dd1c6c6d7e6bf797",
+        "421735bce0425c3fce1aefb6025c286339789bb08532ec327aba4cd07ec547ff"
+      ],
+      "set": "fsc",
+      "t0": "2025-10",
+      "window_end": "2026-09"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2024,2025,2026",
+      "country": "AFG",
+      "decision": "fetch",
+      "outcome": "preserved",
+      "pages": 15,
+      "pages_sha256": [
+        "f6b592abef5338333d99f48b37c266908e7e304ebe40b6d06aa5d6f55057be40",
+        "ebd5f508db3cb5b05b575530fb0b2a07a0283e65cfe6e86c87967b2c10253c74",
+        "67e79a18b67837dc12e1d33deeb2031544a0eb1204c23db32c15cfb01dd1be44",
+        "e2441629be3699366f75605138809910419765560bb15f44d5b23a6a70cfe3da",
+        "e860b83c8a77f8ea6a2d5a6c869accd7368dcbc98fa8d13cea9aa6b96c327a96",
+        "46ae76f272407d14c0b25fd6b24ea156c1b9bda7eb3be3abb1f57595418a8281",
+        "1a88c8758169e8e80fb2c1ca4b038ff8a89efa45c0d91bf7ff48c0420cbe3bb5",
+        "760f85473d497ac6554f2d7d117044d5a50b2ff8bb1971409830c55507385ecb",
+        "dd5621c7ffcb1d80bfb6ac5f84ea840ec6105975c9b37030d84c7f25dcc5e92b",
+        "8722ef3368fe3641bf53dc893b054900b181219a4c736f9f0955d2409082a264",
+        "3d1583c014ce728240fb92ffeb1558ed6f69b3e5adf88be25da8b1133a6ea433",
+        "c401331f5ccce05e36a129dace83dd8f9ec486befcdd6c989e79a5f18d3d50c5",
+        "c4a79521acd19f873708e2d0f6e5429586e0ac123acef846c3c64872eea86f7e",
+        "cb8962db4f54ceef3084d10364f88df9e4e960d944f5ccd089ffa52c9eb57cee",
+        "3a4c467b8bf9d1357ba38493c26a0252501fec4187bdd1396504922938636429"
+      ],
+      "set": "total",
+      "t0": "2025-10",
+      "window_end": "2026-09"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2022,2023,2024",
+      "country": "DJI",
+      "decision": "frozen",
+      "set": "fsc",
+      "t0": "2023-04",
+      "window_end": "2024-03"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2022,2023,2024",
+      "country": "DJI",
+      "decision": "frozen",
+      "set": "total",
+      "t0": "2023-04",
+      "window_end": "2024-03"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2022,2023,2024",
+      "country": "SDN",
+      "decision": "frozen",
+      "set": "fsc",
+      "t0": "2023-06",
+      "window_end": "2024-05"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2022,2023,2024",
+      "country": "SDN",
+      "decision": "frozen",
+      "set": "total",
+      "t0": "2023-06",
+      "window_end": "2024-05"
+    },
+    {
+      "basis_day": "2026-10-11",
+      "boundary_years": "2021,2022,2023",
+      "country": "SOM",
+      "decision": "frozen",
+      "set": "fsc",
+      "t0": "2022-03",
+      "window_end": "2023-02"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2021,2022,2023",
+      "country": "SOM",
+      "decision": "frozen",
+      "set": "total",
+      "t0": "2022-03",
+      "window_end": "2023-02"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2023,2024,2025",
+      "country": "SOM",
+      "decision": "frozen",
+      "set": "fsc",
+      "t0": "2024-08",
+      "window_end": "2025-07"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2023,2024,2025",
+      "country": "SOM",
+      "decision": "frozen",
+      "set": "total",
+      "t0": "2024-08",
+      "window_end": "2025-07"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2025,2026",
+      "country": "SOM",
+      "decision": "fetch",
+      "outcome": "unchanged",
+      "pages": 2,
+      "pages_sha256": [
+        "5ad4b60631cbba062364a4ef98696958bafe95bbc0cf627a017d72b3d9130d97",
+        "0316c75eda40b2b1e56e2a4e96dbce7b6098b248414739f0d7f4ffdf3650d789"
+      ],
+      "set": "fsc",
+      "t0": "2026-01",
+      "window_end": "2026-12"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2025,2026",
+      "country": "SOM",
+      "decision": "fetch",
+      "outcome": "unchanged",
+      "pages": 8,
+      "pages_sha256": [
+        "91456ce9cf63efeba6c69cd3f38222d437bbbc1368a429823f0c937f8232e2bb",
+        "b373e406aefa42cc4c3d70c79dce7bfa68446d23018b2db3145168822c53eefa",
+        "2d298f1d82246b9df1f51bfae95fe527f0e5b7e2fed814f87392f872887affea",
+        "9890bf4418fcdf8537288496b97ed871d6dc27f8ff197b1b32743a3c3db67766",
+        "94a93bbdb88d53694a6035282e5b3c1aab55121e4b09b53b25396f77cfae0525",
+        "31be9764e048df1673afbc4e0c4c4734d5ac6fdd727225452f81cd82403bf10a",
+        "8bd6bb8f72d5b7a99eb185d7d833153291f652991b01d4894f5ebdb2b5f62a70",
+        "86c17daddb0b157309ffdb86b0f897930ba517b83e3b5a767109c9ca4a02b275"
+      ],
+      "set": "total",
+      "t0": "2026-01",
+      "window_end": "2026-12"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2024,2025,2026",
+      "country": "YEM",
+      "decision": "frozen",
+      "set": "fsc",
+      "t0": "2025-06",
+      "window_end": "2026-05"
+    },
+    {
+      "basis_day": "2026-10-12",
+      "boundary_years": "2024,2025,2026",
+      "country": "YEM",
+      "decision": "frozen",
+      "set": "total",
+      "t0": "2025-06",
+      "window_end": "2026-05"
+    }
+  ],
+  "register_sha256": "55324e4d7f893ee450bb1e7c3433dc81caa124935f3a7a041c5037e79b8b241e",
+  "requests": 29,
+  "schema": "interval-reading-v1"
+}

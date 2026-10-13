@@ -11,15 +11,15 @@ RUNNING (any time: RETIRED).*
 
 ### The Interval — slow-onset food crises: projection against funding
 
-- **Stage:** V0 — increment 4 of 6 done 2026-10-12 (`docs/2026-10-12-the-interval-v0-inkrement-4.md`): `interval/register.json` (8 episodes × k × axis × FSC/total, 64 cells, none open, none unpreserved), built by `practice/src/practice/interval/register.py` and recomputed independently by `verify.py` (`check_interval`); `interval/snapshots` now held by the manifest check too. FTS snapshots for every onset in `interval/snapshots/2026-10-12/` (113 requests, all complete, 41 MB, almost all of it country totals). Gaps range 0–10 months; Somalia 2022 control confirmed on the country total. Increments 1–3 done 2026-10-09 and 2026-10-11.
+- **Stage:** V0 — increment 5 of 6 done 2026-10-13 (`docs/2026-10-13-the-interval-v0-inkrement-5.md`): `practice/src/practice/interval/weekly.py` and the weekly workflow `.github/workflows/interval.yml` (Monday 04:50 UTC), with the first committed reading `interval/readings/2026-10-13.json`. A query is frozen once a complete snapshot exists from a month more than three months past the episode's window; 12 of 16 queries are frozen, 4 fetched (AFG 2025-10 total: 3 new flows, preserved; the other three unchanged, not stored twice). The IPC table changed since 2026-10-09 (Gambia and Nigeria, March 2026; the Nigeria rows carry population 0 and cannot yield an onset). Still 8 episodes, no grid cell changed. `verify.py` recomputes every fetch/freeze decision (`check_interval_readings`). Increments 1–4 done 2026-10-09 to 2026-10-12.
 - **Gate:** the maintainer's GO for V0 given on 2026-10-04 (wording private),
   recorded in `docs/2026-10-04-kandidat-the-interval.md`.
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** V0 increment 5: the weekly workflow `interval.yml` (IPC fetch, FTS per episode, register rebuild, anchor registration, verify, commit). Decide first how a weekly reading avoids re-fetching 41 MB: re-fetch only episodes whose horizon is still open against the snapshot month, read closed ones from their snapshot. The workflow lands only together with its first committed reading.
+- **Next step:** V0 increment 6: commit the E-experiment's acceptance criteria as a file **before** the window opens (at least four weekly readings without a gap, candidate document §6); the window then runs on the workflow. The review afterwards is the maintainer's.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-12 (pass)
+- **Updated:** 2026-10-13 (pass)
 
 ## Next
 

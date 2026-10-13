@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-11",
+  "source_reading": "memoryhole/readings/2026-10-11.json",
+  "model": "claude-opus-5-5",
+  "prompt_version": "memoryhole-classify-routine-v1",
+  "cap": 40,
+  "estimated": true,
+  "unclassified_at_cap": 0,
+  "verdicts": [
+    {
+      "before_sha256": "2ed7a441b788c5ceea5011d78af364d8ae852af853aa01b6f3d818ed15c2fa99",
+      "type": "none_of_these",
+      "confidence": "high",
+      "estimated": true
+    }
+  ]
+}

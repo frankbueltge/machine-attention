@@ -86,9 +86,12 @@ def fts_pages(root: Path, day: str, iso3: str, tag: str,
     return [rel for _, rel, _ in pages]
 
 
-def newest_fts(root: Path, iso3: str, tag: str,
-               years: str) -> tuple[str, list[str]] | None:
+def newest_fts(root: Path, iso3: str, tag: str, years: str,
+               before: str | None = None) -> tuple[str, list[str]] | None:
+    """Newest complete page set; with `before`, among earlier days only."""
     for day in reversed(_days(root)):
+        if before is not None and day >= before:
+            continue
         pages = fts_pages(root, day, iso3, tag, years)
         if pages:
             return day, pages
@@ -106,6 +109,23 @@ def load_drivers(root: Path) -> dict[tuple[str, str], dict]:
                              "a driver needs a source")
         out[(d["country"], d["t0"])] = d
     return out
+
+
+def read_onsets(ipc_text: str):
+    """IPC national table -> (series per country, {(country, t0): [θ]},
+    left-censored countries per θ)."""
+    blocks = warning.parse_blocks(ipc_text)
+    onsets: dict[tuple[str, str], list[float]] = {}
+    censored: dict[str, list[str]] = {}
+    series = {c: warning.warning_series(blocks, c)
+              for c in warning.countries(blocks)}
+    for theta in warning.THETAS:
+        censored[f"{theta:.2f}"] = sorted(
+            c for c, s in series.items() if warning.left_censored(s, theta))
+        for c, s in series.items():
+            for t0 in warning.onsets(s, theta):
+                onsets.setdefault((c, t0), []).append(theta)
+    return series, onsets, censored
 
 
 def _round6(x: float | None) -> float | None:
@@ -139,18 +159,9 @@ def build(root: Path) -> dict:
     ipc = newest_ipc(root)
     if ipc is None:
         raise FileNotFoundError("no committed IPC snapshot")
-    blocks = warning.parse_blocks((root / ipc).read_text(encoding="utf-8"))
     drivers = load_drivers(root)
-    onsets: dict[tuple[str, str], list[float]] = {}
-    censored: dict[str, list[str]] = {}
-    series = {c: warning.warning_series(blocks, c)
-              for c in warning.countries(blocks)}
-    for theta in warning.THETAS:
-        censored[f"{theta:.2f}"] = sorted(
-            c for c, s in series.items() if warning.left_censored(s, theta))
-        for c, s in series.items():
-            for t0 in warning.onsets(s, theta):
-                onsets.setdefault((c, t0), []).append(theta)
+    series, onsets, censored = read_onsets(
+        (root / ipc).read_text(encoding="utf-8"))
     episodes = []
     for (country, t0), thetas in sorted(onsets.items()):
         point = next(p for p in series[country] if p.month == t0)
