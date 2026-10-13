@@ -1417,12 +1417,16 @@ def _iv_onsets(series: list[dict], theta: float) -> list[str]:
     return found
 
 
-def _iv_pages(root: Path, iso3: str, tag: str, years: str):
-    """Newest complete page set of one FTS query: (day, [files]) or None."""
+def _iv_pages(root: Path, iso3: str, tag: str, years: str,
+              before: str | None = None):
+    """Newest complete page set of one FTS query: (day, [files]) or None;
+    with `before`, among earlier snapshot days only."""
     base = root / IV_BASE
     days = sorted((p.name for p in base.iterdir() if p.is_dir()), reverse=True) \
         if base.exists() else []
     for day in days:
+        if before is not None and day >= before:
+            continue
         mpath = base / day / "manifest.json"
         if not mpath.exists():
             continue
@@ -1502,6 +1506,100 @@ def _iv_money(root: Path, iso3: str, t0: str, tag: str) -> dict:
             "flows": len(flows),
             "flows_counted": sum(1 for f in flows.values() if f["ok"]),
             "cells": cells}
+
+
+IV_OUTCOMES = ("preserved", "unchanged", "incomplete", "unavailable")
+
+
+def _iv_shas(root: Path, files: list[str]) -> list[str]:
+    day = files[0].split("/")[2]
+    entries = {e["file"]: e for e in
+               load(root / IV_BASE / day / "manifest.json").get("entries", [])}
+    return [entries[f]["sha256"] for f in files]
+
+
+def check_interval_readings(root: Path, problems: list[str]) -> None:
+    """The Interval's weekly readings (V0 increment 5, 2026-10-13): every
+    fetch-or-freeze decision is recomputed from the snapshot days before the
+    reading, and every page hash the reading names must be the one the
+    manifest holds (preserved) or the basis held (unchanged)."""
+    for path in sorted((root / "interval" / "readings").glob("*.json")):
+        rel = f"interval/readings/{path.name}"
+        r = load(path)
+        day = path.stem
+        if r.get("schema") != "interval-reading-v1" or r.get("date") != day:
+            problems.append(f"{rel}: schema or date does not match its name")
+            continue
+        grace = r.get("grace_months")
+        if grace != 3:
+            problems.append(f"{rel}: grace_months {grace!r}, expected 3")
+            continue
+        ipc = (r.get("ipc") or {}).get("snapshot") or ""
+        ipc_day = ipc.split("/")[2] if ipc.count("/") >= 3 else ""
+        if (not ipc.startswith(IV_BASE + "/") or ipc_day > day
+                or not (root / ipc).exists()
+                or sha256_file(root / ipc) != r["ipc"].get("sha256")):
+            problems.append(f"{rel}: ipc snapshot {ipc!r} missing, later "
+                            "than the reading, or with another hash")
+            continue
+        series = _iv_warning((root / ipc).read_text(encoding="utf-8"))
+        keys = sorted({(c, t0) for theta in IV_THETAS
+                       for c, s in series.items() for t0 in _iv_onsets(s, theta)})
+        want = [(c, t0, tag) for c, t0 in keys for tag in IV_SETS]
+        got = [(q.get("country"), q.get("t0"), q.get("set"))
+               for q in r.get("queries", [])]
+        if got != want:
+            problems.append(f"{rel}: queries are not the episodes x sets of "
+                            f"{ipc}")
+            continue
+        for q in r["queries"]:
+            name = f"{rel}: {q['country']} {q['t0']} {q['set']}"
+            i0 = _iv_index(q["t0"])
+            years = ",".join(str(y) for y in
+                             range((i0 - 12) // 12, (i0 + 11) // 12 + 1))
+            end = _iv_month(i0 + 11)
+            basis = _iv_pages(root, q["country"], q["set"], years, before=day)
+            decision = ("frozen" if basis and _iv_index(basis[0][:7])
+                        > _iv_index(end) + grace else "fetch")
+            if (q.get("boundary_years"), q.get("window_end"),
+                    q.get("basis_day"), q.get("decision")) != (
+                    years, end, basis[0] if basis else None, decision):
+                problems.append(f"{name}: decision differs from its "
+                                "recomputation")
+                continue
+            if decision == "frozen":
+                if "outcome" in q:
+                    problems.append(f"{name}: frozen query carries an outcome")
+                continue
+            outcome = q.get("outcome")
+            if outcome not in IV_OUTCOMES:
+                problems.append(f"{name}: unknown outcome {outcome!r}")
+            elif outcome == "unchanged":
+                if not basis or q.get("pages_sha256") != _iv_shas(root, basis[1]):
+                    problems.append(f"{name}: unchanged, but not the basis's "
+                                    "page hashes")
+            elif outcome in ("preserved", "incomplete"):
+                prefix = (f"{IV_BASE}/{day}/fts/{q['country']}/{q['set']}-"
+                          f"{years.replace(',', '_')}-p")
+                mpath = root / IV_BASE / day / "manifest.json"
+                entries = sorted((e["file"], e["sha256"]) for e in
+                                 (load(mpath).get("entries", [])
+                                  if mpath.exists() else [])
+                                 if e["file"].startswith(prefix))
+                if [h for _, h in entries] != q.get("pages_sha256"):
+                    problems.append(f"{name}: preserved pages differ from "
+                                    "the manifest")
+                complete = _iv_pages(root, q["country"], q["set"], years,
+                                     before=_iv_next_day(day))
+                if (outcome == "preserved") != bool(complete
+                                                    and complete[0] == day):
+                    problems.append(f"{name}: outcome {outcome} contradicts "
+                                    "the preserved pages")
+
+
+def _iv_next_day(day: str) -> str:
+    import datetime as _dt
+    return (_dt.date.fromisoformat(day) + _dt.timedelta(days=1)).isoformat()
 
 
 def check_interval(root: Path, problems: list[str]) -> None:
@@ -1664,6 +1762,7 @@ def check(root: Path) -> list[str]:
     check_memoryhole(root, registry_files, problems)
     check_memoryhole_verdicts(root, problems)
     check_interval(root, problems)
+    check_interval_readings(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
