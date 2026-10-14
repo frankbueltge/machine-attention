@@ -1,0 +1,69 @@
+{
+  "entries": [
+    {
+      "bytes": 12800,
+      "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261005T113352.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:08+00:00",
+      "sha256": "883c168af8ffa5ea4900f5cb2a4181cca8f324a78f3aa50c80fed160a6d50d84",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-05T00:00:00&end=2026-10-06T00:00:00"
+    },
+    {
+      "bytes": 14848,
+      "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261005T073308.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:08+00:00",
+      "sha256": "1ee86cd44b4e6d02040958ca56ac8a2cb883c6face30293e1925791d74a65b96",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-05T00:00:00&end=2026-10-06T00:00:00"
+    },
+    {
+      "bytes": 14336,
+      "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261006T073051.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:16+00:00",
+      "sha256": "9baab95d625c34e78931685d67217542cb23a32643715bbe4bd811daa41addd5",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-06T00:00:00&end=2026-10-07T00:00:00"
+    },
+    {
+      "bytes": 15360,
+      "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261007T073113.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:23+00:00",
+      "sha256": "7bb8201b3c06ab6522ca33e67883896175e6d3806551c4fa85bf3155d8d47632",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-07T00:00:00&end=2026-10-08T00:00:00"
+    },
+    {
+      "bytes": 16896,
+      "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261008T073232.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:31+00:00",
+      "sha256": "8df458e0b4df9dd04bc30603e6e4af209a8dccc9dd2b1759edbac5f09cb9b3fc",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-08T00:00:00&end=2026-10-09T00:00:00"
+    },
+    {
+      "bytes": 13312,
+      "file": "planetary/probes/2026-10-14/GR.KAST.HHZ/20250805T095948.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:35+00:00",
+      "sha256": "7c45e8aa9668a1a2da47e2ed7bdfc0315dcde5e4381fdf474ec667296f0f47c6",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-05T07:00:00&endtime=2025-08-05T11:00:00"
+    },
+    {
+      "bytes": 12288,
+      "file": "planetary/probes/2026-10-14/GR.KAST.HHZ/20250819T091356.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:30+00:00",
+      "sha256": "c3f81409c0c3c0b4f23d4ad8d0a143f6967447e0cab5b249ab0329a8142db09a",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-19T07:00:00&endtime=2025-08-19T11:00:00"
+    },
+    {
+      "bytes": 12800,
+      "file": "planetary/probes/2026-10-14/GR.KAST.HHZ/20250828T094830.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:55+00:00",
+      "sha256": "4869203a9d0c511e03fa7f05ba892e8b62ceb8e596de86a2f6313de780a257eb",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-28T07:00:00&endtime=2025-08-28T11:00:00"
+    }
+  ],
+  "run_date": "2026-10-14"
+}

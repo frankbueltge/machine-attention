@@ -1726,6 +1726,94 @@ def check_interval(root: Path, problems: list[str]) -> None:
         problems.append(f"{rel}: header differs from its recomputation")
 
 
+# Planetary Listening (V0 increment 1, 2026-10-14). The declared theatre lives
+# here, not in a config (audit 2026-08-22, ethics 1 and 4): industrial sites
+# in EU states, licence-filtered networks only, no citizen stations (AM).
+PL_BASE = "planetary/probes"
+PL_STATIONS = {"GE.RUE", "GR.KAST"}
+PL_NETWORKS = {"GE": "10.14470/TR560404", "GR": "10.25928/mbx6-hr74"}
+PL_HOSTS = {"geofon.gfz.de", "eida.bgr.de", "www.isc.ac.uk",
+            "earthquake.usgs.gov"}
+PL_MAX_EXCERPTS = 4
+
+
+def _pl_records(data: bytes) -> list[tuple[str, str, int]]:
+    """(network, station, length) per miniSEED 2 record; raises ValueError."""
+    out, offset = [], 0
+    while offset < len(data):
+        head = data[offset:offset + 48]
+        if len(head) < 48 or head[6:7] not in (b"D", b"R", b"Q", b"M"):
+            raise ValueError(f"no record at byte {offset}")
+        order = ">" if 1900 <= int.from_bytes(head[20:22], "big") <= 2100 else "<"
+        blk = int.from_bytes(head[46:48], "big" if order == ">" else "little")
+        reclen = None
+        for _ in range(16):
+            if not blk:
+                break
+            at = offset + blk
+            kind = int.from_bytes(data[at:at + 2], "big" if order == ">" else "little")
+            if kind == 1000:
+                reclen = 1 << data[at + 6]
+            blk = int.from_bytes(data[at + 2:at + 4], "big" if order == ">" else "little")
+        if not reclen:
+            raise ValueError(f"no blockette 1000 at byte {offset}")
+        out.append((head[18:20].decode("ascii").strip(),
+                    head[8:13].decode("ascii").strip(), reclen))
+        offset += reclen
+    if offset != len(data):
+        raise ValueError("trailing bytes are not record-aligned")
+    return out
+
+
+def check_planetary(root: Path, registry_files: dict, problems: list[str]) -> None:
+    base = root / PL_BASE
+    per_station_day: dict[tuple[str, str], int] = {}
+    for f in sorted(base.rglob("*.mseed")) if base.exists() else []:
+        rel = f.relative_to(root).as_posix()
+        try:
+            recs = _pl_records(f.read_bytes())
+        except ValueError as e:
+            problems.append(f"{rel}: not record-aligned miniSEED ({e})")
+            continue
+        for net, sta, _len in recs:
+            if net not in PL_NETWORKS or f"{net}.{sta}" not in PL_STATIONS:
+                problems.append(f"{rel}: station {net}.{sta} outside the "
+                                "declared theatre")
+                break
+        key = (f.parent.name, f.name[:8])
+        per_station_day[key] = per_station_day.get(key, 0) + 1
+    for (station, day), n in sorted(per_station_day.items()):
+        if n > PL_MAX_EXCERPTS:
+            problems.append(f"{PL_BASE}: {station} {day}: {n} excerpts, "
+                            f"more than {PL_MAX_EXCERPTS}")
+    for rpath in sorted(root.glob("planetary/spike/*.json")):
+        rel = rpath.relative_to(root).as_posix()
+        reading = load(rpath)
+        if reading.get("schema") != "planetary-spike-v1":
+            problems.append(f"{rel}: unknown schema")
+            continue
+        for req in reading.get("requests", []):
+            host = req.get("url", "").split("/")[2] if "://" in req.get("url", "") else ""
+            if host not in PL_HOSTS:
+                problems.append(f"{rel}: request to {host or '?'} outside the "
+                                "audited sources")
+            if not re.fullmatch(r"[0-9a-f]{64}", str(req.get("sha256", ""))):
+                problems.append(f"{rel}: request without a SHA-256")
+        for pairing in ("pairing_a", "pairing_b"):
+            for day in reading.get(pairing, {}).get("days", []):
+                net, sta = day.get("station", "..").split(".")[:2]
+                if f"{net}.{sta}" not in PL_STATIONS:
+                    problems.append(f"{rel}: station {net}.{sta} outside the "
+                                    "declared theatre")
+                elif day.get("doi") != PL_NETWORKS[net]:
+                    problems.append(f"{rel}: {net}.{sta} {day.get('day')}: "
+                                    "network DOI missing or wrong")
+                for ex in day.get("excerpts", []):
+                    if ex.get("file") not in registry_files:
+                        problems.append(f"{rel}: excerpt {ex.get('file')} "
+                                        "not manifested")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -1738,6 +1826,7 @@ def check(root: Path) -> list[str]:
     check_snapshots(root, "memoryhole/snapshots", problems, registry_files,
                     False)
     check_snapshots(root, IV_BASE, problems, registry_files, False)
+    check_snapshots(root, PL_BASE, problems, registry_files, False)
 
     check_retired(root, problems)
 
@@ -1807,6 +1896,7 @@ def check(root: Path) -> list[str]:
     check_interval(root, problems)
     check_interval_readings(root, problems)
     check_interval_experiment(root, problems)
+    check_planetary(root, registry_files, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"

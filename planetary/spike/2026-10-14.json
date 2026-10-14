@@ -1,0 +1,1465 @@
+{
+  "catalogues": [
+    {
+      "box": [
+        51.9,
+        52.9,
+        13.2,
+        14.4
+      ],
+      "catalogue": "ISC",
+      "http_status": 204,
+      "pairing": "A",
+      "rows": 0,
+      "span": [
+        "2026-10-05",
+        "2026-10-12"
+      ]
+    },
+    {
+      "box": [
+        51.9,
+        52.9,
+        13.2,
+        14.4
+      ],
+      "catalogue": "USGS",
+      "http_status": 200,
+      "pairing": "A",
+      "rows": 0,
+      "span": [
+        "2026-10-05",
+        "2026-10-12"
+      ]
+    },
+    {
+      "box": [
+        51.1,
+        52.1,
+        7.9,
+        9.1
+      ],
+      "catalogue": "ISC",
+      "http_status": 204,
+      "pairing": "B",
+      "rows": 0,
+      "span": [
+        "2025-07-28",
+        "2025-08-29"
+      ]
+    },
+    {
+      "box": [
+        51.1,
+        52.1,
+        7.9,
+        9.1
+      ],
+      "catalogue": "USGS",
+      "http_status": 200,
+      "pairing": "B",
+      "rows": 0,
+      "span": [
+        "2025-07-28",
+        "2025-08-29"
+      ]
+    }
+  ],
+  "date": "2026-10-14",
+  "detector": {
+    "bin_s": 0.25,
+    "lta_s": 60.0,
+    "min_gap_s": 60.0,
+    "sta_s": 1.0,
+    "trigger_off": 1.5,
+    "trigger_on": 5.0,
+    "version": "stalta-v1"
+  },
+  "excerpt_window_s": [
+    30,
+    60
+  ],
+  "max_excerpts_per_station_day": 4,
+  "pairing_a": {
+    "days": [
+      {
+        "day": "2026-10-05",
+        "doi": "10.14470/TR560404",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261005T113352.mseed",
+            "onset": "2026-10-05T11:33:52.220000+00:00"
+          },
+          {
+            "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261005T073308.mseed",
+            "onset": "2026-10-05T07:33:08.970000+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "0130adb4f65a34183a4408ea217c606be9867b1c61e754ec5a3c3bfa43f6f31d",
+        "samples": 8640381,
+        "station": "GE.RUE..HHZ",
+        "strong": [
+          {
+            "background_rms": 47.4,
+            "duration_s": 9.75,
+            "onset": "2026-10-05T11:33:52.220000+00:00",
+            "peak_ratio": 1025.57,
+            "peak_rms": 66350.4
+          },
+          {
+            "background_rms": 99.8,
+            "duration_s": 17.0,
+            "onset": "2026-10-05T07:33:08.970000+00:00",
+            "peak_ratio": 140.29,
+            "peak_rms": 20044.9
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 47.4,
+            "duration_s": 9.75,
+            "onset": "2026-10-05T11:33:52.220000+00:00",
+            "peak_ratio": 1025.57,
+            "peak_rms": 66350.4
+          },
+          {
+            "background_rms": 99.8,
+            "duration_s": 17.0,
+            "onset": "2026-10-05T07:33:08.970000+00:00",
+            "peak_ratio": 140.29,
+            "peak_rms": 20044.9
+          },
+          {
+            "background_rms": 78.3,
+            "duration_s": 32.75,
+            "onset": "2026-10-05T15:27:25.470000+00:00",
+            "peak_ratio": 11.37,
+            "peak_rms": 1411.0
+          }
+        ],
+        "traces": 1,
+        "triggers": 38
+      },
+      {
+        "day": "2026-10-06",
+        "doi": "10.14470/TR560404",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261006T073051.mseed",
+            "onset": "2026-10-06T07:30:51.020000+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "516d9a81fe8eb860dae3db69f785c27b308f64a70a3c8de2dd9e420dabcdb009",
+        "samples": 8640773,
+        "station": "GE.RUE..HHZ",
+        "strong": [
+          {
+            "background_rms": 88.8,
+            "duration_s": 13.75,
+            "onset": "2026-10-06T07:30:51.020000+00:00",
+            "peak_ratio": 165.29,
+            "peak_rms": 18659.0
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 88.8,
+            "duration_s": 13.75,
+            "onset": "2026-10-06T07:30:51.020000+00:00",
+            "peak_ratio": 165.29,
+            "peak_rms": 18659.0
+          },
+          {
+            "background_rms": 27.6,
+            "duration_s": 291.0,
+            "onset": "2026-10-06T19:48:16.270000+00:00",
+            "peak_ratio": 21.51,
+            "peak_rms": 662.3
+          },
+          {
+            "background_rms": 80.5,
+            "duration_s": 6.25,
+            "onset": "2026-10-06T11:37:59.770000+00:00",
+            "peak_ratio": 12.75,
+            "peak_rms": 1331.0
+          }
+        ],
+        "traces": 1,
+        "triggers": 26
+      },
+      {
+        "day": "2026-10-07",
+        "doi": "10.14470/TR560404",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261007T073113.mseed",
+            "onset": "2026-10-07T07:31:13.810000+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "8e991baecd01d9fe55dd1df27abd976e403a5b834b739bdb58ac29939638d6f7",
+        "samples": 8640480,
+        "station": "GE.RUE..HHZ",
+        "strong": [
+          {
+            "background_rms": 152.0,
+            "duration_s": 6.5,
+            "onset": "2026-10-07T07:31:13.810000+00:00",
+            "peak_ratio": 99.79,
+            "peak_rms": 17603.0
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 152.0,
+            "duration_s": 6.5,
+            "onset": "2026-10-07T07:31:13.810000+00:00",
+            "peak_ratio": 99.79,
+            "peak_rms": 17603.0
+          },
+          {
+            "background_rms": 17.7,
+            "duration_s": 104.5,
+            "onset": "2026-10-07T19:51:58.310000+00:00",
+            "peak_ratio": 32.82,
+            "peak_rms": 657.4
+          },
+          {
+            "background_rms": 79.4,
+            "duration_s": 26.0,
+            "onset": "2026-10-07T10:45:54.060000+00:00",
+            "peak_ratio": 28.99,
+            "peak_rms": 2997.6
+          }
+        ],
+        "traces": 1,
+        "triggers": 102
+      },
+      {
+        "day": "2026-10-08",
+        "doi": "10.14470/TR560404",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GE.RUE.HHZ/20261008T073232.mseed",
+            "onset": "2026-10-08T07:32:32.070000+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "b0a154a18e9408853de21814aa6c28a72f019a36ea17bf450cb6b7d0466f48b4",
+        "samples": 8640281,
+        "station": "GE.RUE..HHZ",
+        "strong": [
+          {
+            "background_rms": 337.2,
+            "duration_s": 5.25,
+            "onset": "2026-10-08T07:32:32.070000+00:00",
+            "peak_ratio": 293.72,
+            "peak_rms": 121895.9
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 337.2,
+            "duration_s": 5.25,
+            "onset": "2026-10-08T07:32:32.070000+00:00",
+            "peak_ratio": 293.72,
+            "peak_rms": 121895.9
+          },
+          {
+            "background_rms": 62.8,
+            "duration_s": 114.75,
+            "onset": "2026-10-08T04:07:38.320000+00:00",
+            "peak_ratio": 31.79,
+            "peak_rms": 3034.3
+          },
+          {
+            "background_rms": 40.6,
+            "duration_s": 73.25,
+            "onset": "2026-10-08T17:03:23.070000+00:00",
+            "peak_ratio": 31.63,
+            "peak_rms": 1877.7
+          }
+        ],
+        "traces": 1,
+        "triggers": 194
+      },
+      {
+        "day": "2026-10-09",
+        "doi": "10.14470/TR560404",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "f8fb7d046bd6c2f08cb2ff7a02ea431a3d005a44ba0268a6bb06937efbf2c63c",
+        "samples": 8640349,
+        "station": "GE.RUE..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 113.2,
+            "duration_s": 27.5,
+            "onset": "2026-10-09T06:07:46.910000+00:00",
+            "peak_ratio": 18.57,
+            "peak_rms": 3812.6
+          },
+          {
+            "background_rms": 132.9,
+            "duration_s": 81.0,
+            "onset": "2026-10-09T05:09:34.410000+00:00",
+            "peak_ratio": 15.16,
+            "peak_rms": 2845.5
+          },
+          {
+            "background_rms": 78.6,
+            "duration_s": 62.5,
+            "onset": "2026-10-09T04:59:33.910000+00:00",
+            "peak_ratio": 14.91,
+            "peak_rms": 2163.4
+          }
+        ],
+        "traces": 1,
+        "triggers": 50
+      },
+      {
+        "day": "2026-10-10",
+        "doi": "10.14470/TR560404",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "cf96c221123ee2acd31f4b2e95ce85e0a3c26b862c03ca2989a4a0ff1f74b332",
+        "samples": 8640492,
+        "station": "GE.RUE..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 32.6,
+            "duration_s": 45.75,
+            "onset": "2026-10-10T13:35:50.750000+00:00",
+            "peak_ratio": 13.48,
+            "peak_rms": 502.8
+          },
+          {
+            "background_rms": 44.9,
+            "duration_s": 11.75,
+            "onset": "2026-10-10T06:31:11+00:00",
+            "peak_ratio": 8.6,
+            "peak_rms": 437.1
+          },
+          {
+            "background_rms": 77.0,
+            "duration_s": 8.0,
+            "onset": "2026-10-10T07:47:46+00:00",
+            "peak_ratio": 7.32,
+            "peak_rms": 636.9
+          }
+        ],
+        "traces": 1,
+        "triggers": 25
+      },
+      {
+        "day": "2026-10-11",
+        "doi": "10.14470/TR560404",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "1d872c3bd1e26116bdf45bb85fb50ff8a8e7b4e65708fc20f489926e927b8db5",
+        "samples": 8640467,
+        "station": "GE.RUE..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 28.0,
+            "duration_s": 32.75,
+            "onset": "2026-10-11T11:03:48.230000+00:00",
+            "peak_ratio": 17.41,
+            "peak_rms": 580.0
+          },
+          {
+            "background_rms": 35.5,
+            "duration_s": 25.5,
+            "onset": "2026-10-11T13:39:10.480000+00:00",
+            "peak_ratio": 16.79,
+            "peak_rms": 682.3
+          },
+          {
+            "background_rms": 33.8,
+            "duration_s": 27.5,
+            "onset": "2026-10-11T13:37:39.730000+00:00",
+            "peak_ratio": 14.43,
+            "peak_rms": 649.2
+          }
+        ],
+        "traces": 1,
+        "triggers": 14
+      }
+    ],
+    "site": "Rüdersdorf",
+    "station": "GE.RUE..HHZ"
+  },
+  "pairing_b": {
+    "days": [
+      {
+        "day": "2025-07-28",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "8ebd8e0cb0265bf025d6ecbf093cf7f38e2218e45d194326845489bde8f75cdc",
+        "samples": 1440408,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 6.3,
+            "duration_s": 21.5,
+            "onset": "2025-07-28T09:48:45.675000+00:00",
+            "peak_ratio": 39.1,
+            "peak_rms": 394.0
+          },
+          {
+            "background_rms": 10.1,
+            "duration_s": 32.25,
+            "onset": "2025-07-28T09:10:19.425000+00:00",
+            "peak_ratio": 20.37,
+            "peak_rms": 215.6
+          },
+          {
+            "background_rms": 5.9,
+            "duration_s": 21.25,
+            "onset": "2025-07-28T08:35:22.675000+00:00",
+            "peak_ratio": 12.2,
+            "peak_rms": 81.5
+          }
+        ],
+        "traces": 1,
+        "triggers": 5
+      },
+      {
+        "day": "2025-07-29",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "a802efbc35a08a0334815d47f6d00fb10e940617257fac989a8d0313be68c406",
+        "samples": 1440412,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 5.1,
+            "duration_s": 41.25,
+            "onset": "2025-07-29T09:14:35.175000+00:00",
+            "peak_ratio": 16.07,
+            "peak_rms": 128.7
+          },
+          {
+            "background_rms": 5.5,
+            "duration_s": 89.25,
+            "onset": "2025-07-29T09:42:44.425000+00:00",
+            "peak_ratio": 14.95,
+            "peak_rms": 117.9
+          },
+          {
+            "background_rms": 5.7,
+            "duration_s": 3.0,
+            "onset": "2025-07-29T09:50:43.425000+00:00",
+            "peak_ratio": 11.87,
+            "peak_rms": 86.2
+          }
+        ],
+        "traces": 1,
+        "triggers": 12
+      },
+      {
+        "day": "2025-07-30",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "102062fad9c7f9d55109b1ed8d097e35bd36874f053c4ab87825a2d5ac18f7d0",
+        "samples": 1440628,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 5.2,
+            "duration_s": 24.5,
+            "onset": "2025-07-30T09:06:48.094900+00:00",
+            "peak_ratio": 15.56,
+            "peak_rms": 108.8
+          },
+          {
+            "background_rms": 5.6,
+            "duration_s": 16.75,
+            "onset": "2025-07-30T09:20:00.844900+00:00",
+            "peak_ratio": 11.01,
+            "peak_rms": 82.6
+          },
+          {
+            "background_rms": 5.2,
+            "duration_s": 17.75,
+            "onset": "2025-07-30T08:13:29.844900+00:00",
+            "peak_ratio": 8.03,
+            "peak_rms": 56.9
+          }
+        ],
+        "traces": 1,
+        "triggers": 3
+      },
+      {
+        "day": "2025-07-31",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "4b0fa77b5834b8d92f25239fee1bbc660d0e0b330fa7ea9f97c12ea9aee9da9f",
+        "samples": 1446002,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 5.9,
+            "duration_s": 22.0,
+            "onset": "2025-07-31T09:28:33.894900+00:00",
+            "peak_ratio": 8.17,
+            "peak_rms": 66.7
+          },
+          {
+            "background_rms": 7.3,
+            "duration_s": 16.5,
+            "onset": "2025-07-31T08:14:14.894900+00:00",
+            "peak_ratio": 6.54,
+            "peak_rms": 60.8
+          }
+        ],
+        "traces": 3,
+        "triggers": 2
+      },
+      {
+        "day": "2025-08-01",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "21bea297a76b27cb7d75fd7616db345e738da5a96d119469578cf8ef68e0e715",
+        "samples": 2483828,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 5.5,
+            "duration_s": 23.25,
+            "onset": "2025-08-01T08:29:48.744900+00:00",
+            "peak_ratio": 21.57,
+            "peak_rms": 152.8
+          },
+          {
+            "background_rms": 5.5,
+            "duration_s": 23.25,
+            "onset": "2025-08-01T08:29:48.785000+00:00",
+            "peak_ratio": 21.31,
+            "peak_rms": 161.1
+          },
+          {
+            "background_rms": 5.4,
+            "duration_s": 29.25,
+            "onset": "2025-08-01T08:45:56.785000+00:00",
+            "peak_ratio": 12.76,
+            "peak_rms": 95.9
+          }
+        ],
+        "traces": 3,
+        "triggers": 8
+      },
+      {
+        "day": "2025-08-04",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "1d4efc233277fea7196e448ee0969d8b71191b2a0c2e4e6a5f31338f9e6bce7c",
+        "samples": 1448218,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 6.8,
+            "duration_s": 17.25,
+            "onset": "2025-08-04T08:52:57.775000+00:00",
+            "peak_ratio": 15.68,
+            "peak_rms": 139.9
+          },
+          {
+            "background_rms": 5.8,
+            "duration_s": 25.0,
+            "onset": "2025-08-04T09:38:23.025000+00:00",
+            "peak_ratio": 15.49,
+            "peak_rms": 103.6
+          },
+          {
+            "background_rms": 6.0,
+            "duration_s": 3.75,
+            "onset": "2025-08-04T08:16:40.775000+00:00",
+            "peak_ratio": 5.52,
+            "peak_rms": 54.9
+          }
+        ],
+        "traces": 4,
+        "triggers": 3
+      },
+      {
+        "day": "2025-08-05",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GR.KAST.HHZ/20250805T095948.mseed",
+            "onset": "2025-08-05T09:59:48.855000+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "9bba77053efd784796098a3fb952f262fc2e51a151649eb4b6503a6f858ae4c5",
+        "samples": 1450102,
+        "station": "GR.KAST..HHZ",
+        "strong": [
+          {
+            "background_rms": 7.7,
+            "duration_s": 36.0,
+            "onset": "2025-08-05T09:59:48.855000+00:00",
+            "peak_ratio": 288.07,
+            "peak_rms": 4541.6
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 7.7,
+            "duration_s": 36.0,
+            "onset": "2025-08-05T09:59:48.855000+00:00",
+            "peak_ratio": 288.07,
+            "peak_rms": 4541.6
+          },
+          {
+            "background_rms": 23.4,
+            "duration_s": 12.0,
+            "onset": "2025-08-05T08:11:24.405000+00:00",
+            "peak_ratio": 19.69,
+            "peak_rms": 541.2
+          },
+          {
+            "background_rms": 9.0,
+            "duration_s": 9.25,
+            "onset": "2025-08-05T08:06:58.905000+00:00",
+            "peak_ratio": 19.51,
+            "peak_rms": 206.1
+          }
+        ],
+        "traces": 2,
+        "triggers": 16
+      },
+      {
+        "day": "2025-08-06",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "229baff8c21156f7dd6963df3a20f0d93d4146bab2599ff533ebe0d6c8701ded",
+        "samples": 1750816,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 7.9,
+            "duration_s": 46.5,
+            "onset": "2025-08-06T09:59:48.424900+00:00",
+            "peak_ratio": 14.69,
+            "peak_rms": 154.5
+          },
+          {
+            "background_rms": 9.3,
+            "duration_s": 15.75,
+            "onset": "2025-08-06T08:17:55.674900+00:00",
+            "peak_ratio": 6.75,
+            "peak_rms": 92.5
+          },
+          {
+            "background_rms": 8.1,
+            "duration_s": 21.25,
+            "onset": "2025-08-06T08:24:51.174900+00:00",
+            "peak_ratio": 6.63,
+            "peak_rms": 65.9
+          }
+        ],
+        "traces": 2,
+        "triggers": 6
+      },
+      {
+        "day": "2025-08-07",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "b2af531513a49fc3a4e05baf5ee5a83087011d1f3371a70bcec1418c2cf03e4e",
+        "samples": 1659882,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 7.0,
+            "duration_s": 19.75,
+            "onset": "2025-08-07T08:28:08.225000+00:00",
+            "peak_ratio": 28.36,
+            "peak_rms": 308.0
+          },
+          {
+            "background_rms": 9.2,
+            "duration_s": 61.75,
+            "onset": "2025-08-07T08:42:21.975000+00:00",
+            "peak_ratio": 17.64,
+            "peak_rms": 209.4
+          },
+          {
+            "background_rms": 6.1,
+            "duration_s": 28.25,
+            "onset": "2025-08-07T08:25:29.475000+00:00",
+            "peak_ratio": 16.47,
+            "peak_rms": 129.6
+          }
+        ],
+        "traces": 2,
+        "triggers": 11
+      },
+      {
+        "day": "2025-08-11",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "1bfbc2a0f82b40f27b61ec8087ff44ec7cb2c836130f4d8e1f96186e79f56082",
+        "samples": 1440396,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 6.4,
+            "duration_s": 41.75,
+            "onset": "2025-08-11T08:13:16.184900+00:00",
+            "peak_ratio": 30.67,
+            "peak_rms": 236.2
+          },
+          {
+            "background_rms": 10.1,
+            "duration_s": 14.75,
+            "onset": "2025-08-11T08:27:01.684900+00:00",
+            "peak_ratio": 7.62,
+            "peak_rms": 107.5
+          },
+          {
+            "background_rms": 7.6,
+            "duration_s": 33.0,
+            "onset": "2025-08-11T08:16:16.434900+00:00",
+            "peak_ratio": 7.49,
+            "peak_rms": 73.0
+          }
+        ],
+        "traces": 1,
+        "triggers": 8
+      },
+      {
+        "day": "2025-08-12",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "3b34a4c957b4e2b56783baa7fa3c7bd377808f6a19f1514e953be98dbc7c4d38",
+        "samples": 1440534,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 8.1,
+            "duration_s": 33.0,
+            "onset": "2025-08-12T09:31:38.774900+00:00",
+            "peak_ratio": 25.28,
+            "peak_rms": 258.2
+          },
+          {
+            "background_rms": 6.2,
+            "duration_s": 78.0,
+            "onset": "2025-08-12T08:01:54.274900+00:00",
+            "peak_ratio": 17.43,
+            "peak_rms": 217.1
+          },
+          {
+            "background_rms": 5.7,
+            "duration_s": 28.0,
+            "onset": "2025-08-12T09:08:09.774900+00:00",
+            "peak_ratio": 16.24,
+            "peak_rms": 110.6
+          }
+        ],
+        "traces": 1,
+        "triggers": 9
+      },
+      {
+        "day": "2025-08-13",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "2cca6ce65062dc42806908e8acd9683d34645a44063487e29754c2a29e1bd719",
+        "samples": 1440596,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 6.1,
+            "duration_s": 4.75,
+            "onset": "2025-08-13T09:42:23.454900+00:00",
+            "peak_ratio": 14.57,
+            "peak_rms": 133.5
+          },
+          {
+            "background_rms": 6.8,
+            "duration_s": 48.25,
+            "onset": "2025-08-13T09:36:45.704900+00:00",
+            "peak_ratio": 10.43,
+            "peak_rms": 164.1
+          },
+          {
+            "background_rms": 8.7,
+            "duration_s": 2.5,
+            "onset": "2025-08-13T08:43:58.454900+00:00",
+            "peak_ratio": 8.52,
+            "peak_rms": 197.3
+          }
+        ],
+        "traces": 1,
+        "triggers": 15
+      },
+      {
+        "day": "2025-08-15",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "4f930c49b99a96f4a660d9f659481b9aaa51f31c308ccdd9ca123f515f666556",
+        "samples": 1440746,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 7.5,
+            "duration_s": 8.0,
+            "onset": "2025-08-15T09:16:57.815000+00:00",
+            "peak_ratio": 14.13,
+            "peak_rms": 133.3
+          },
+          {
+            "background_rms": 7.4,
+            "duration_s": 2.5,
+            "onset": "2025-08-15T08:49:55.315000+00:00",
+            "peak_ratio": 9.21,
+            "peak_rms": 142.9
+          },
+          {
+            "background_rms": 6.7,
+            "duration_s": 17.25,
+            "onset": "2025-08-15T08:07:03.815000+00:00",
+            "peak_ratio": 8.94,
+            "peak_rms": 95.6
+          }
+        ],
+        "traces": 1,
+        "triggers": 7
+      },
+      {
+        "day": "2025-08-18",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "edaf81c3fae960a106784cb605e517f337a0b61c37d24a1a9db8cc6c4fbad2c8",
+        "samples": 1440204,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 7.6,
+            "duration_s": 19.75,
+            "onset": "2025-08-18T09:20:57.625000+00:00",
+            "peak_ratio": 22.46,
+            "peak_rms": 214.1
+          },
+          {
+            "background_rms": 6.9,
+            "duration_s": 22.0,
+            "onset": "2025-08-18T08:18:38.125000+00:00",
+            "peak_ratio": 19.14,
+            "peak_rms": 179.1
+          },
+          {
+            "background_rms": 5.8,
+            "duration_s": 20.5,
+            "onset": "2025-08-18T09:30:35.625000+00:00",
+            "peak_ratio": 8.29,
+            "peak_rms": 65.6
+          }
+        ],
+        "traces": 1,
+        "triggers": 5
+      },
+      {
+        "day": "2025-08-19",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GR.KAST.HHZ/20250819T091356.mseed",
+            "onset": "2025-08-19T09:13:56.855000+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "0e89347b845772eabd8956264f627481a64f5dc6ec1839776d02e3386662a9ef",
+        "samples": 1440386,
+        "station": "GR.KAST..HHZ",
+        "strong": [
+          {
+            "background_rms": 9.3,
+            "duration_s": 18.5,
+            "onset": "2025-08-19T09:13:56.855000+00:00",
+            "peak_ratio": 51.32,
+            "peak_rms": 1085.5
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 9.3,
+            "duration_s": 18.5,
+            "onset": "2025-08-19T09:13:56.855000+00:00",
+            "peak_ratio": 51.32,
+            "peak_rms": 1085.5
+          },
+          {
+            "background_rms": 7.7,
+            "duration_s": 22.5,
+            "onset": "2025-08-19T08:14:51.605000+00:00",
+            "peak_ratio": 26.42,
+            "peak_rms": 307.2
+          },
+          {
+            "background_rms": 6.0,
+            "duration_s": 28.25,
+            "onset": "2025-08-19T09:19:27.605000+00:00",
+            "peak_ratio": 26.26,
+            "peak_rms": 216.9
+          }
+        ],
+        "traces": 1,
+        "triggers": 9
+      },
+      {
+        "day": "2025-08-20",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "a47c2b5bbf1025e7606eb8e423d8c6a42b85e7c1c84d0b48b3e241aadc33b590",
+        "samples": 1440446,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 6.1,
+            "duration_s": 40.75,
+            "onset": "2025-08-20T09:18:03.385000+00:00",
+            "peak_ratio": 28.44,
+            "peak_rms": 204.3
+          },
+          {
+            "background_rms": 5.4,
+            "duration_s": 21.0,
+            "onset": "2025-08-20T08:00:40.385000+00:00",
+            "peak_ratio": 28.03,
+            "peak_rms": 212.5
+          },
+          {
+            "background_rms": 11.8,
+            "duration_s": 17.5,
+            "onset": "2025-08-20T08:21:02.885000+00:00",
+            "peak_ratio": 17.23,
+            "peak_rms": 245.2
+          }
+        ],
+        "traces": 1,
+        "triggers": 9
+      },
+      {
+        "day": "2025-08-25",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "c4898e3af05b469dbb5154af1c549dcb46a53c85628eae1d542d98545c98fe3c",
+        "samples": 1440260,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 8.5,
+            "duration_s": 20.75,
+            "onset": "2025-08-25T09:53:23.064900+00:00",
+            "peak_ratio": 15.52,
+            "peak_rms": 176.6
+          },
+          {
+            "background_rms": 6.6,
+            "duration_s": 16.5,
+            "onset": "2025-08-25T09:15:22.564900+00:00",
+            "peak_ratio": 11.1,
+            "peak_rms": 89.9
+          },
+          {
+            "background_rms": 5.9,
+            "duration_s": 3.5,
+            "onset": "2025-08-25T09:58:36.814900+00:00",
+            "peak_ratio": 7.19,
+            "peak_rms": 113.5
+          }
+        ],
+        "traces": 1,
+        "triggers": 5
+      },
+      {
+        "day": "2025-08-26",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "65ad436f1239f9e1fe380e1f70cafcacbb4dd326955060bb13ce0bd788d3124b",
+        "samples": 1440096,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 10.0,
+            "duration_s": 46.0,
+            "onset": "2025-08-26T08:48:37.275000+00:00",
+            "peak_ratio": 17.17,
+            "peak_rms": 408.5
+          },
+          {
+            "background_rms": 10.1,
+            "duration_s": 72.5,
+            "onset": "2025-08-26T09:56:40.025000+00:00",
+            "peak_ratio": 13.05,
+            "peak_rms": 221.5
+          },
+          {
+            "background_rms": 6.8,
+            "duration_s": 17.5,
+            "onset": "2025-08-26T08:11:55.025000+00:00",
+            "peak_ratio": 12.53,
+            "peak_rms": 101.1
+          }
+        ],
+        "traces": 1,
+        "triggers": 7
+      },
+      {
+        "day": "2025-08-27",
+        "declared": false,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "da7ea99cb7cf46af845c1c2871812bedd9957199c45772af3ea33b57126edd79",
+        "samples": 1440652,
+        "station": "GR.KAST..HHZ",
+        "strong": [],
+        "top": [
+          {
+            "background_rms": 12.9,
+            "duration_s": 6.25,
+            "onset": "2025-08-27T09:45:18.935000+00:00",
+            "peak_ratio": 10.54,
+            "peak_rms": 196.4
+          },
+          {
+            "background_rms": 9.7,
+            "duration_s": 17.5,
+            "onset": "2025-08-27T08:59:15.185000+00:00",
+            "peak_ratio": 8.41,
+            "peak_rms": 94.6
+          },
+          {
+            "background_rms": 9.3,
+            "duration_s": 2.0,
+            "onset": "2025-08-27T09:39:06.185000+00:00",
+            "peak_ratio": 7.13,
+            "peak_rms": 138.3
+          }
+        ],
+        "traces": 1,
+        "triggers": 9
+      },
+      {
+        "day": "2025-08-28",
+        "declared": true,
+        "doi": "10.25928/mbx6-hr74",
+        "excerpts": [
+          {
+            "file": "planetary/probes/2026-10-14/GR.KAST.HHZ/20250828T094830.mseed",
+            "onset": "2025-08-28T09:48:30.224900+00:00"
+          }
+        ],
+        "http_status": 200,
+        "licence": "CC-BY-4.0",
+        "outage": false,
+        "request_sha256": "2d64ead69bc82bf881cb279f374ad830d4231ddc749afba7bca2ff21101b9029",
+        "samples": 1440224,
+        "station": "GR.KAST..HHZ",
+        "strong": [
+          {
+            "background_rms": 6.1,
+            "duration_s": 44.75,
+            "onset": "2025-08-28T09:48:30.224900+00:00",
+            "peak_ratio": 88.68,
+            "peak_rms": 709.2
+          }
+        ],
+        "top": [
+          {
+            "background_rms": 6.1,
+            "duration_s": 44.75,
+            "onset": "2025-08-28T09:48:30.224900+00:00",
+            "peak_ratio": 88.68,
+            "peak_rms": 709.2
+          },
+          {
+            "background_rms": 7.3,
+            "duration_s": 23.0,
+            "onset": "2025-08-28T09:13:53.724900+00:00",
+            "peak_ratio": 21.98,
+            "peak_rms": 314.5
+          },
+          {
+            "background_rms": 7.4,
+            "duration_s": 3.75,
+            "onset": "2025-08-28T08:24:21.724900+00:00",
+            "peak_ratio": 17.03,
+            "peak_rms": 198.2
+          }
+        ],
+        "traces": 1,
+        "triggers": 12
+      }
+    ],
+    "site": "Geseke",
+    "station": "GR.KAST..HHZ",
+    "window_utc": [
+      "08:00",
+      "10:00"
+    ]
+  },
+  "requests": [
+    {
+      "bytes": 11261440,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:02+00:00",
+      "sha256": "0130adb4f65a34183a4408ea217c606be9867b1c61e754ec5a3c3bfa43f6f31d",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-05T00:00:00&end=2026-10-06T00:00:00"
+    },
+    {
+      "bytes": 11471872,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:10+00:00",
+      "sha256": "516d9a81fe8eb860dae3db69f785c27b308f64a70a3c8de2dd9e420dabcdb009",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-06T00:00:00&end=2026-10-07T00:00:00"
+    },
+    {
+      "bytes": 11565056,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:18+00:00",
+      "sha256": "8e991baecd01d9fe55dd1df27abd976e403a5b834b739bdb58ac29939638d6f7",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-07T00:00:00&end=2026-10-08T00:00:00"
+    },
+    {
+      "bytes": 11992064,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:25+00:00",
+      "sha256": "b0a154a18e9408853de21814aa6c28a72f019a36ea17bf450cb6b7d0466f48b4",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-08T00:00:00&end=2026-10-09T00:00:00"
+    },
+    {
+      "bytes": 11402752,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:32+00:00",
+      "sha256": "f8fb7d046bd6c2f08cb2ff7a02ea431a3d005a44ba0268a6bb06937efbf2c63c",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-09T00:00:00&end=2026-10-10T00:00:00"
+    },
+    {
+      "bytes": 9827328,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:40+00:00",
+      "sha256": "cf96c221123ee2acd31f4b2e95ce85e0a3c26b862c03ca2989a4a0ff1f74b332",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-10T00:00:00&end=2026-10-11T00:00:00"
+    },
+    {
+      "bytes": 9355776,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:46+00:00",
+      "sha256": "1d872c3bd1e26116bdf45bb85fb50ff8a8e7b4e65708fc20f489926e927b8db5",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-11T00:00:00&end=2026-10-12T00:00:00"
+    },
+    {
+      "bytes": 1792000,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:54+00:00",
+      "sha256": "8ebd8e0cb0265bf025d6ecbf093cf7f38e2218e45d194326845489bde8f75cdc",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-07-28T07:00:00&endtime=2025-07-28T11:00:00"
+    },
+    {
+      "bytes": 1790976,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:21:58+00:00",
+      "sha256": "a802efbc35a08a0334815d47f6d00fb10e940617257fac989a8d0313be68c406",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-07-29T07:00:00&endtime=2025-07-29T11:00:00"
+    },
+    {
+      "bytes": 1790464,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:01+00:00",
+      "sha256": "102062fad9c7f9d55109b1ed8d097e35bd36874f053c4ab87825a2d5ac18f7d0",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-07-30T07:00:00&endtime=2025-07-30T11:00:00"
+    },
+    {
+      "bytes": 1797120,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:08+00:00",
+      "sha256": "4b0fa77b5834b8d92f25239fee1bbc660d0e0b330fa7ea9f97c12ea9aee9da9f",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-07-31T07:00:00&endtime=2025-07-31T11:00:00"
+    },
+    {
+      "bytes": 3087360,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:19+00:00",
+      "sha256": "21bea297a76b27cb7d75fd7616db345e738da5a96d119469578cf8ef68e0e715",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-01T07:00:00&endtime=2025-08-01T11:00:00"
+    },
+    {
+      "bytes": 1800192,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:29+00:00",
+      "sha256": "1d4efc233277fea7196e448ee0969d8b71191b2a0c2e4e6a5f31338f9e6bce7c",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-04T07:00:00&endtime=2025-08-04T11:00:00"
+    },
+    {
+      "bytes": 1807872,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:34+00:00",
+      "sha256": "9bba77053efd784796098a3fb952f262fc2e51a151649eb4b6503a6f858ae4c5",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-05T07:00:00&endtime=2025-08-05T11:00:00"
+    },
+    {
+      "bytes": 2178048,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:41+00:00",
+      "sha256": "229baff8c21156f7dd6963df3a20f0d93d4146bab2599ff533ebe0d6c8701ded",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-06T07:00:00&endtime=2025-08-06T11:00:00"
+    },
+    {
+      "bytes": 2064384,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:49+00:00",
+      "sha256": "b2af531513a49fc3a4e05baf5ee5a83087011d1f3371a70bcec1418c2cf03e4e",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-07T07:00:00&endtime=2025-08-07T11:00:00"
+    },
+    {
+      "bytes": 1791488,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:22:59+00:00",
+      "sha256": "1bfbc2a0f82b40f27b61ec8087ff44ec7cb2c836130f4d8e1f96186e79f56082",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-11T07:00:00&endtime=2025-08-11T11:00:00"
+    },
+    {
+      "bytes": 1797632,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:04+00:00",
+      "sha256": "3b34a4c957b4e2b56783baa7fa3c7bd377808f6a19f1514e953be98dbc7c4d38",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-12T07:00:00&endtime=2025-08-12T11:00:00"
+    },
+    {
+      "bytes": 1792512,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:11+00:00",
+      "sha256": "2cca6ce65062dc42806908e8acd9683d34645a44063487e29754c2a29e1bd719",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-13T07:00:00&endtime=2025-08-13T11:00:00"
+    },
+    {
+      "bytes": 1794560,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:19+00:00",
+      "sha256": "4f930c49b99a96f4a660d9f659481b9aaa51f31c308ccdd9ca123f515f666556",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-15T07:00:00&endtime=2025-08-15T11:00:00"
+    },
+    {
+      "bytes": 1790464,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:25+00:00",
+      "sha256": "edaf81c3fae960a106784cb605e517f337a0b61c37d24a1a9db8cc6c4fbad2c8",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-18T07:00:00&endtime=2025-08-18T11:00:00"
+    },
+    {
+      "bytes": 1792000,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:30+00:00",
+      "sha256": "0e89347b845772eabd8956264f627481a64f5dc6ec1839776d02e3386662a9ef",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-19T07:00:00&endtime=2025-08-19T11:00:00"
+    },
+    {
+      "bytes": 1792000,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:36+00:00",
+      "sha256": "a47c2b5bbf1025e7606eb8e423d8c6a42b85e7c1c84d0b48b3e241aadc33b590",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-20T07:00:00&endtime=2025-08-20T11:00:00"
+    },
+    {
+      "bytes": 1790464,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:39+00:00",
+      "sha256": "c4898e3af05b469dbb5154af1c549dcb46a53c85628eae1d542d98545c98fe3c",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-25T07:00:00&endtime=2025-08-25T11:00:00"
+    },
+    {
+      "bytes": 1793536,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:43+00:00",
+      "sha256": "65ad436f1239f9e1fe380e1f70cafcacbb4dd326955060bb13ce0bd788d3124b",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-26T07:00:00&endtime=2025-08-26T11:00:00"
+    },
+    {
+      "bytes": 1792512,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:47+00:00",
+      "sha256": "da7ea99cb7cf46af845c1c2871812bedd9957199c45772af3ea33b57126edd79",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-27T07:00:00&endtime=2025-08-27T11:00:00"
+    },
+    {
+      "bytes": 1792000,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:23:55+00:00",
+      "sha256": "2d64ead69bc82bf881cb279f374ad830d4231ddc749afba7bca2ff21101b9029",
+      "url": "https://eida.bgr.de/fdsnws/dataselect/1/query?network=GR&station=KAST&location=--&channel=HHZ&starttime=2025-08-28T07:00:00&endtime=2025-08-28T11:00:00"
+    },
+    {
+      "bytes": 0,
+      "committed": false,
+      "http_status": 204,
+      "retrieved_at": "2026-10-14T18:23:56+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://www.isc.ac.uk/fdsnws/event/1/query?starttime=2026-10-05&endtime=2026-10-12&minlatitude=51.9&maxlatitude=52.9&minlongitude=13.2&maxlongitude=14.4&format=text"
+    },
+    {
+      "bytes": 327,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:24:02+00:00",
+      "sha256": "ce45b0fb9b82b8b3a1fc9a6af152f95e5ba5a33bafacdf6d700619a741760776",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-10-05&endtime=2026-10-12&minlatitude=51.9&maxlatitude=52.9&minlongitude=13.2&maxlongitude=14.4"
+    },
+    {
+      "bytes": 0,
+      "committed": false,
+      "http_status": 204,
+      "retrieved_at": "2026-10-14T18:24:03+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://www.isc.ac.uk/fdsnws/event/1/query?starttime=2025-07-28&endtime=2025-08-29&minlatitude=51.1&maxlatitude=52.1&minlongitude=7.9&maxlongitude=9.1&format=text"
+    },
+    {
+      "bytes": 325,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-10-14T18:24:14+00:00",
+      "sha256": "0779a004331dd11c81d852aaabe2bd769b7e0faf3bbf13446b4195ccd4af2eb0",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-07-28&endtime=2025-08-29&minlatitude=51.1&maxlatitude=52.1&minlongitude=7.9&maxlongitude=9.1"
+    }
+  ],
+  "schema": "planetary-spike-v1",
+  "strong_ratio": 50.0
+}
