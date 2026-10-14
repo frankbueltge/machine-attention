@@ -1,0 +1,28 @@
+{
+  "schema": "planetary-declaration-v1",
+  "site": "Geseke",
+  "declarant": "operator (cement works, three quarries)",
+  "url": "https://www.heidelbergmaterials.de/de/zement/zementwerke/geseke/steinbrueche-und-sprengungen",
+  "read_on": "2026-10-14",
+  "http_status": 200,
+  "bytes": 229112,
+  "sha256": "1b64b8415e4ed50bc11b466c67764707be95f2feaf680e4447f6f35424cad4dc",
+  "page_preserved": false,
+  "why_not_preserved": "a corporate page with contact lines; the ten dated rows and the window sentence are the whole declaration and are transcribed verbatim below",
+  "window_sentence": "In der Regel finden die Sprengungen zwischen 10:00 und 12:00 Uhr statt, sofern nicht anders angegeben. Geplante Sprengtermine können sich für ungünstigere Wetterbedingungen oder betriebliche Erfordernisse kurzfristig verschieben.",
+  "rows": [
+    {"date": "2025-07-28", "quarry": "Viktoria"},
+    {"date": "2025-07-31", "quarry": "Elsa"},
+    {"date": "2025-08-01", "quarry": "Viktoria"},
+    {"date": "2025-08-04", "quarry": "Viktoria"},
+    {"date": "2025-08-07", "quarry": "Milke"},
+    {"date": "2025-08-11", "quarry": "Viktoria"},
+    {"date": "2025-08-15", "quarry": "Viktoria"},
+    {"date": "2025-08-18", "quarry": "Elsa"},
+    {"date": "2025-08-25", "quarry": "Viktoria"},
+    {"date": "2025-08-28", "quarry": "Elsa"}
+  ],
+  "last_declared": "2025-08-28",
+  "days_since_last_declared": 412,
+  "note": "A forward-looking calendar read 412 days after its last row. Whether the operator stopped declaring, stopped blasting, or stopped updating the page is not something this file can say."
+}

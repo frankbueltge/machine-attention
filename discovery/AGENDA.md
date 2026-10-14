@@ -25,16 +25,23 @@ RUNNING (any time: RETIRED).*
 
 ### Planetary Listening — "One Quarry, Two Records"
 
-- **Stage:** AUDIT done 2026-08-22 (`docs/2026-08-22-planetary-listening-audit.md`);
-  **V0 admitted** — the maintainer's GO of 2026-10-04 (wording private), with the
-  audit's own recommendations taken for its open decisions: a spike decides the
-  pairing (Rüdersdorf or Geseke), no Raspberry Shake stations in V0, home is this
-  repository. Recorded at the end of the audit document.
-- **When:** now — The Interval's V0 is complete and its window runs on the workflow
-  (from 2026-10-19). **Next night's step:** the spike that decides the pairing
-  (Rüdersdorf or Geseke), as V0 increment 1. The audit's "Bewusst nicht" list
-  binds V0.
-- **Updated:** 2026-10-04 (house)
+- **Stage:** V0, increment 1 done 2026-10-14 — the spike decided the pairing:
+  **Rüdersdorf** (`docs/2026-10-14-planetary-listening-v0-inkrement-1.md`, reading
+  `planetary/spike/2026-10-14.json`). GE.RUE heard one strong impulse (STA/LTA 100–294)
+  between 07:30:51 and 07:33:08 UTC on each of Mon–Thu 2026-10-05..08, none Fri–Sun;
+  ISC 204 and USGS 0 for the same box and week. Geseke parked: the operator's calendar
+  has no date after 2025-08-28 (412 days, `planetary/declarations/geseke-2026-10-14.json`),
+  and GR.KAST at ~49 km did not separate declared from control days.
+- **Gate:** the maintainer's GO of 2026-10-04 (wording private), audit recommendations
+  taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
+- **Next step:** V0 increment 2 — the nightly T+1 reading for GE.RUE (one day, excerpts
+  under the storage model, max 4 per station-day), with the GEOFON `availability`
+  `Updated` line and the WFCatalog day document as the re-ingestion probe.
+- **Re-read when:** Geseke — if the operator page shows a forward date again, re-measure
+  hearing there (pairing B would restore the second register, audit flagship condition d).
+- **Substrate note:** from the repo root, `practice/` shadows the installed package;
+  module runs there need `PYTHONPATH=practice/src`.
+- **Updated:** 2026-10-14 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 
