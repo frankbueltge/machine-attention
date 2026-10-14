@@ -1597,6 +1597,49 @@ def check_interval_readings(root: Path, problems: list[str]) -> None:
                                     "the preserved pages")
 
 
+def check_interval_experiment(root: Path, problems: list[str]) -> None:
+    """The Interval's E-experiment (V0 increment 6, 2026-10-14): the
+    criteria bind once committed, so they must predate the window. The file
+    names consecutive Mondays (at least four, candidate document §6), its
+    prose by hash, and no reading in the window may predate the commit."""
+    import datetime as _dt
+    rel = "interval/experiment.json"
+    if not (root / rel).exists():
+        return
+    e = load(root / rel)
+    try:
+        committed = _dt.date.fromisoformat(e["committed"])
+        weeks = [_dt.date.fromisoformat(w) for w in e["window"]["weeks"]]
+        closes = _dt.date.fromisoformat(e["window"]["closes"])
+        review = _dt.date.fromisoformat(e["window"]["review_from"])
+        doc = root / e["document"]
+    except (KeyError, TypeError, ValueError) as exc:
+        problems.append(f"{rel}: malformed ({exc})")
+        return
+    if e.get("schema") != "interval-experiment-v1":
+        problems.append(f"{rel}: unknown schema {e.get('schema')!r}")
+    if len(weeks) < 4 or any(w.weekday() != 0 for w in weeks) or any(
+            b - a != _dt.timedelta(days=7) for a, b in zip(weeks, weeks[1:])):
+        problems.append(f"{rel}: window is not four or more consecutive "
+                        "Mondays")
+        return
+    if not committed < weeks[0]:
+        problems.append(f"{rel}: criteria committed {committed}, not before "
+                        f"the window opens {weeks[0]}")
+    if closes != weeks[-1] + _dt.timedelta(days=6) or review <= closes:
+        problems.append(f"{rel}: closes/review_from do not follow the weeks")
+    if not doc.exists() or sha256_file(doc) != e.get("document_sha256"):
+        problems.append(f"{rel}: {e['document']} missing or changed "
+                        "without its hash")
+    if e.get("criteria", {}).get("A1_weeks_required") != len(weeks):
+        problems.append(f"{rel}: A1 must require every week of the window")
+    for day in e.get("pre_window_readings", []):
+        if not day < weeks[0].isoformat() or not (
+                root / "interval" / "readings" / f"{day}.json").exists():
+            problems.append(f"{rel}: pre-window reading {day} missing or "
+                            "inside the window")
+
+
 def _iv_next_day(day: str) -> str:
     import datetime as _dt
     return (_dt.date.fromisoformat(day) + _dt.timedelta(days=1)).isoformat()
@@ -1763,6 +1806,7 @@ def check(root: Path) -> list[str]:
     check_memoryhole_verdicts(root, problems)
     check_interval(root, problems)
     check_interval_readings(root, problems)
+    check_interval_experiment(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"

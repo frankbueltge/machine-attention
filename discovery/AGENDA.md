@@ -11,15 +11,15 @@ RUNNING (any time: RETIRED).*
 
 ### The Interval — slow-onset food crises: projection against funding
 
-- **Stage:** V0 — increment 5 of 6 done 2026-10-13 (`docs/2026-10-13-the-interval-v0-inkrement-5.md`): `practice/src/practice/interval/weekly.py` and the weekly workflow `.github/workflows/interval.yml` (Monday 04:50 UTC), with the first committed reading `interval/readings/2026-10-13.json`. A query is frozen once a complete snapshot exists from a month more than three months past the episode's window; 12 of 16 queries are frozen, 4 fetched (AFG 2025-10 total: 3 new flows, preserved; the other three unchanged, not stored twice). The IPC table changed since 2026-10-09 (Gambia and Nigeria, March 2026; the Nigeria rows carry population 0 and cannot yield an onset). Still 8 episodes, no grid cell changed. `verify.py` recomputes every fetch/freeze decision (`check_interval_readings`). Increments 1–4 done 2026-10-09 to 2026-10-12.
+- **Stage:** E-EXPERIMENT — criteria committed 2026-10-14, **before** the window (`docs/2026-10-14-the-interval-e-experiment-kriterien.md`, machine-readable `interval/experiment.json`, which carries the document's hash). V0 increments 1–6 done 2026-10-09 to 2026-10-14. Window: four ISO weeks without a gap, Mondays 2026-10-19, 10-26, 11-02, 11-09; closes 2026-11-15; review from 2026-11-16 is the maintainer's. The reading of 2026-10-13 is pre-window context. `verify.py` (`check_interval_experiment`) fails if the criteria postdate the window, the weeks are not four or more consecutive Mondays, or the prose changes without its hash. Tally: `python -m practice.interval.experiment --repo-root .` (counts A1–A3, B1, B2 from the readings; decides nothing).
 - **Gate:** the maintainer's GO for V0 given on 2026-10-04 (wording private),
   recorded in `docs/2026-10-04-kandidat-the-interval.md`.
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** V0 increment 6: commit the E-experiment's acceptance criteria as a file **before** the window opens (at least four weekly readings without a gap, candidate document §6); the window then runs on the workflow. The review afterwards is the maintainer's.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. Each Monday's pass may run the tally and note B2/B4 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-13 (pass)
+- **Updated:** 2026-10-14 (pass)
 
 ## Next
 
@@ -30,8 +30,9 @@ RUNNING (any time: RETIRED).*
   audit's own recommendations taken for its open decisions: a spike decides the
   pairing (Rüdersdorf or Geseke), no Raspberry Shake stations in V0, home is this
   repository. Recorded at the end of the audit document.
-- **When:** after The Interval's V0 has its first committed reading — or earlier,
-  on any night The Interval waits on something. The audit's "Bewusst nicht" list
+- **When:** now — The Interval's V0 is complete and its window runs on the workflow
+  (from 2026-10-19). **Next night's step:** the spike that decides the pairing
+  (Rüdersdorf or Geseke), as V0 increment 1. The audit's "Bewusst nicht" list
   binds V0.
 - **Updated:** 2026-10-04 (house)
 

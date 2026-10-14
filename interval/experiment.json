@@ -1,0 +1,25 @@
+{
+  "committed": "2026-10-14",
+  "criteria": {
+    "A1_weeks_required": 4,
+    "A2_max_failed_readings": 1,
+    "A3_max_http_429": 0,
+    "B1_max_frozen_moves": 0
+  },
+  "document": "docs/2026-10-14-the-interval-e-experiment-kriterien.md",
+  "document_sha256": "a3596bb44275312ad695ab82bbdc8c5f88584fd60ba172668e5c6bba982edb84",
+  "pre_window_readings": [
+    "2026-10-13"
+  ],
+  "schema": "interval-experiment-v1",
+  "window": {
+    "closes": "2026-11-15",
+    "review_from": "2026-11-16",
+    "weeks": [
+      "2026-10-19",
+      "2026-10-26",
+      "2026-11-02",
+      "2026-11-09"
+    ]
+  }
+}
