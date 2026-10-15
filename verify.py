@@ -17,7 +17,7 @@ import json
 import re
 import sys
 import tempfile
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -1730,6 +1730,7 @@ def check_interval(root: Path, problems: list[str]) -> None:
 # here, not in a config (audit 2026-08-22, ethics 1 and 4): industrial sites
 # in EU states, licence-filtered networks only, no citizen stations (AM).
 PL_BASE = "planetary/probes"
+PL_SNAP = "planetary/snapshots"     # nightly readings (V0 increment 2)
 PL_STATIONS = {"GE.RUE", "GR.KAST"}
 PL_NETWORKS = {"GE": "10.14470/TR560404", "GR": "10.25928/mbx6-hr74"}
 PL_HOSTS = {"geofon.gfz.de", "eida.bgr.de", "www.isc.ac.uk",
@@ -1766,9 +1767,10 @@ def _pl_records(data: bytes) -> list[tuple[str, str, int]]:
 
 
 def check_planetary(root: Path, registry_files: dict, problems: list[str]) -> None:
-    base = root / PL_BASE
     per_station_day: dict[tuple[str, str], int] = {}
-    for f in sorted(base.rglob("*.mseed")) if base.exists() else []:
+    excerpts = [f for b in (PL_BASE, PL_SNAP) if (root / b).exists()
+                for f in sorted((root / b).rglob("*.mseed"))]
+    for f in excerpts:
         rel = f.relative_to(root).as_posix()
         try:
             recs = _pl_records(f.read_bytes())
@@ -1812,6 +1814,108 @@ def check_planetary(root: Path, registry_files: dict, problems: list[str]) -> No
                     if ex.get("file") not in registry_files:
                         problems.append(f"{rel}: excerpt {ex.get('file')} "
                                         "not manifested")
+    check_planetary_readings(root, registry_files, problems)
+
+
+def _pl_table(data: bytes) -> list[dict]:
+    lines = data.decode("utf-8", "replace").splitlines()
+    if not lines or not lines[0].startswith("#"):
+        return []
+    keys = lines[0].lstrip("#").split()
+    return [dict(zip(keys, c)) for c in (line.split() for line in lines[1:])
+            if len(c) == len(keys)]
+
+
+def _pl_reingestion(prev: list[dict], cur: list[dict]) -> list[dict]:
+    """Independent recomputation of nightly.reingestion (same rule, kept here
+    so the verifier does not trust the code it checks)."""
+    key = lambda r: f"{r.get('Quality')}|{r.get('SampleRate')}|{r.get('Earliest')}"
+    open_row = max(prev, key=lambda r: r.get("Latest", ""), default=None)
+    now = {key(r): r for r in cur}
+    out = []
+    for r in prev:
+        if open_row is not None and key(r) == key(open_row):
+            continue
+        c = now.get(key(r))
+        if c is None:
+            out.append(("segment_gone", key(r)))
+        elif (c.get("Updated"), c.get("Latest")) != (r.get("Updated"), r.get("Latest")):
+            out.append(("segment_rewritten", key(r)))
+    known = {key(r) for r in prev}
+    for r in cur:
+        if key(r) not in known and open_row is not None \
+                and r.get("Earliest", "") < open_row.get("Earliest", ""):
+            out.append(("segment_inserted", key(r)))
+    return out
+
+
+def check_planetary_readings(root: Path, registry_files: dict,
+                             problems: list[str]) -> None:
+    """Nightly GE.RUE readings: one day behind their date, only audited
+    hosts, every claim on a manifested file, re-ingestion events recomputed
+    from the committed extent documents."""
+    prev_rows, prev_rel = None, None
+    for rpath in sorted(root.glob("planetary/readings/*.json")):
+        rel = rpath.relative_to(root).as_posix()
+        r = load(rpath)
+        if r.get("schema") != "planetary-reading-v1":
+            problems.append(f"{rel}: unknown schema")
+            continue
+        try:
+            expected = (date.fromisoformat(rpath.stem) - timedelta(days=1)).isoformat()
+        except ValueError:
+            problems.append(f"{rel}: file name is not a date")
+            continue
+        if r.get("date") != rpath.stem or r.get("day") != expected:
+            problems.append(f"{rel}: not a T+1 reading of {expected}")
+        for req in r.get("requests", []):
+            url = req.get("url", "")
+            host = url.split("/")[2] if "://" in url else ""
+            if host not in PL_HOSTS:
+                problems.append(f"{rel}: request to {host or '?'} outside the "
+                                "audited sources")
+            if not re.fullmatch(r"[0-9a-f]{64}", str(req.get("sha256", ""))):
+                problems.append(f"{rel}: request without a SHA-256")
+        sd = r.get("station_day", {})
+        net, sta = (sd.get("station", "..").split(".") + ["", ""])[:2]
+        if f"{net}.{sta}" not in PL_STATIONS:
+            problems.append(f"{rel}: station {net}.{sta} outside the declared theatre")
+        elif sd.get("doi") != PL_NETWORKS[net]:
+            problems.append(f"{rel}: {net}.{sta}: network DOI missing or wrong")
+        if sd.get("day") != expected:
+            problems.append(f"{rel}: station day is not {expected}")
+        for ex in sd.get("excerpts", []):
+            if ex.get("file") not in registry_files:
+                problems.append(f"{rel}: excerpt {ex.get('file')} not manifested")
+        pub = r.get("publisher", {})
+        for name in ("availability", "extent", "wfcatalog"):
+            f = (pub.get(name) or {}).get("file")
+            if f is not None and f not in registry_files:
+                problems.append(f"{rel}: publisher {name} {f} not manifested")
+        ext = pub.get("extent") or {}
+        rows = None
+        if ext.get("file") in registry_files:
+            rows = _pl_table((root / ext["file"]).read_bytes())
+            if rows != ext.get("rows"):
+                problems.append(f"{rel}: extent rows differ from the committed "
+                                "publisher document")
+        av = pub.get("availability") or {}
+        if av.get("file") in registry_files and \
+                _pl_table((root / av["file"]).read_bytes()) != av.get("rows"):
+            problems.append(f"{rel}: availability rows differ from the "
+                            "committed publisher document")
+        re_ = r.get("reingestion", {})
+        if rows is not None and prev_rows is not None:
+            if re_.get("compared_with") != prev_rel:
+                problems.append(f"{rel}: re-ingestion not compared with {prev_rel}")
+            got = [(e.get("kind"), e.get("segment")) for e in re_.get("events", [])]
+            if got != _pl_reingestion(prev_rows, rows):
+                problems.append(f"{rel}: re-ingestion events differ from their "
+                                "recomputation")
+        elif re_.get("events"):
+            problems.append(f"{rel}: re-ingestion events without a comparison")
+        if rows is not None:
+            prev_rows, prev_rel = rows, rel
 
 
 def check(root: Path) -> list[str]:
@@ -1827,6 +1931,7 @@ def check(root: Path) -> list[str]:
                     False)
     check_snapshots(root, IV_BASE, problems, registry_files, False)
     check_snapshots(root, PL_BASE, problems, registry_files, False)
+    check_snapshots(root, PL_SNAP, problems, registry_files, False)
 
     check_retired(root, problems)
 

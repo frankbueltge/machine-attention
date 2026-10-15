@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "bytes": 13824,
+      "file": "planetary/snapshots/2026-10-15/GE.RUE.HHZ/20261014T073134.mseed",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T06:38:53+00:00",
+      "sha256": "d3f8636fa3141469bacb71acd40d9eb53f776ef8c64ce2060242e917b4f084de",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-14T00:00:00&end=2026-10-15T00:00:00"
+    },
+    {
+      "bytes": 260,
+      "file": "planetary/snapshots/2026-10-15/GE.RUE.HHZ/availability-2026-10-14.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T06:38:54+00:00",
+      "sha256": "3705a9a2078ede3f121a3416087216d19a7bb0279eadcaf100ac7d374b24a3a1",
+      "url": "https://geofon.gfz.de/fdsnws/availability/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-10-14T00:00:00&end=2026-10-15T00:00:00&show=latestupdate&format=text"
+    },
+    {
+      "bytes": 912,
+      "file": "planetary/snapshots/2026-10-15/GE.RUE.HHZ/extent.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T06:38:55+00:00",
+      "sha256": "abe26a875fc6aeaa717a578f6aafc33187dab37a3cab4f9b27bd63b0661d2ecb",
+      "url": "https://geofon.gfz.de/fdsnws/availability/1/extent?net=GE&sta=RUE&loc=--&cha=HHZ&show=latestupdate&format=text"
+    },
+    {
+      "bytes": 702,
+      "file": "planetary/snapshots/2026-10-15/GE.RUE.HHZ/wfcatalog-2026-10-14.json",
+      "http_status": 200,
+      "retrieved_at": "2026-10-15T06:38:56+00:00",
+      "sha256": "5c58e0ba6c4a3b68ad9b537b8de516a2a0606bff305289baf1cad0bfca6c23a9",
+      "url": "https://geofon.gfz.de/eidaws/wfcatalog/1/query?network=GE&station=RUE&location=--&channel=HHZ&start=2026-10-14&end=2026-10-15&include=sample"
+    }
+  ],
+  "run_date": "2026-10-15"
+}

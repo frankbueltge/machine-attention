@@ -17,7 +17,7 @@ RUNNING (any time: RETIRED).*
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. Each Monday's pass may run the tally and note B2/B4 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-15: checked, nothing due — the window opens Monday 2026-10-19.) Each Monday's pass may run the tally and note B2/B4 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
 - **Updated:** 2026-10-14 (pass)
 
@@ -25,23 +25,30 @@ RUNNING (any time: RETIRED).*
 
 ### Planetary Listening — "One Quarry, Two Records"
 
-- **Stage:** V0, increment 1 done 2026-10-14 — the spike decided the pairing:
-  **Rüdersdorf** (`docs/2026-10-14-planetary-listening-v0-inkrement-1.md`, reading
-  `planetary/spike/2026-10-14.json`). GE.RUE heard one strong impulse (STA/LTA 100–294)
-  between 07:30:51 and 07:33:08 UTC on each of Mon–Thu 2026-10-05..08, none Fri–Sun;
-  ISC 204 and USGS 0 for the same box and week. Geseke parked: the operator's calendar
-  has no date after 2025-08-28 (412 days, `planetary/declarations/geseke-2026-10-14.json`),
-  and GR.KAST at ~49 km did not separate declared from control days.
+- **Stage:** V0, increment 2 done 2026-10-15 — the nightly T+1 reading for GE.RUE
+  (`docs/2026-10-15-planetary-listening-v0-inkrement-2.md`, module
+  `practice/src/practice/planetary/nightly.py`, first reading
+  `planetary/readings/2026-10-15.json`, snapshot `planetary/snapshots/2026-10-15/`).
+  Day 2026-10-14 (Wed): one strong impulse 07:31:34 UTC, STA/LTA 153 — inside the
+  spike's weekday band; ISC 204, USGS 0. Publisher documents preserved verbatim
+  (availability `Updated`, extent, WFCatalog); re-ingestion is now a compared event
+  (`segment_rewritten` / `_gone` / `_inserted`), recomputed by `verify.py`
+  (`check_planetary_readings`). Tonight is the baseline; the four closed extent
+  segments carry the same `Updated` as in the audit of 2026-08-22.
+  Increment 1 (2026-10-14): the spike chose **Rüdersdorf**; Geseke parked (operator
+  calendar silent 412 days, `planetary/declarations/geseke-2026-10-14.json`; GR.KAST
+  did not separate declared from control days).
 - **Gate:** the maintainer's GO of 2026-10-04 (wording private), audit recommendations
   taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
-- **Next step:** V0 increment 2 — the nightly T+1 reading for GE.RUE (one day, excerpts
-  under the storage model, max 4 per station-day), with the GEOFON `availability`
-  `Updated` line and the WFCatalog day document as the re-ingestion probe.
+- **Next step:** V0 increment 3 — the daily workflow `.github/workflows/planetary.yml`
+  (after ~06:00 UTC; the publisher's `Updated` tonight was 05:14:43), running
+  `practice.planetary.nightly`, `tools/anchor.py --register`, `verify.py`, commit. Then
+  the acceptance criteria as a committed file before any window.
 - **Re-read when:** Geseke — if the operator page shows a forward date again, re-measure
   hearing there (pairing B would restore the second register, audit flagship condition d).
 - **Substrate note:** from the repo root, `practice/` shadows the installed package;
   module runs there need `PYTHONPATH=practice/src`.
-- **Updated:** 2026-10-14 (pass)
+- **Updated:** 2026-10-15 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 

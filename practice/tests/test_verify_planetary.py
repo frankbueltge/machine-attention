@@ -55,3 +55,57 @@ def test_more_than_four_excerpts_per_station_day(tmp_path):
     for i in range(5):
         place(tmp_path, EXCERPT.read_bytes(), name=f"20261008T07{i:02d}00.mseed")
     assert any("more than 4" in p for p in run(tmp_path))
+
+
+# --- nightly readings (V0 increment 2) ---------------------------------------
+
+READING = REPO / "planetary/readings/2026-10-15.json"
+
+
+def nightly_copy(tmp: Path):
+    """The committed night, copied with its snapshot; returns (reading, registry)."""
+    import json
+    import shutil
+    shutil.copytree(REPO / "planetary/snapshots", tmp / "planetary/snapshots")
+    (tmp / "planetary/readings").mkdir(parents=True)
+    reading = json.loads(READING.read_text())
+    registry: dict = {}
+    verify.check_snapshots(tmp, "planetary/snapshots", [], registry, False)
+    return reading, registry
+
+
+def run_nightly(tmp: Path, reading: dict, registry: dict, name="2026-10-15") -> list[str]:
+    import json
+    (tmp / f"planetary/readings/{name}.json").write_text(json.dumps(reading))
+    problems: list[str] = []
+    verify.check_planetary_readings(tmp, registry, problems)
+    return problems
+
+
+def test_committed_night_passes(tmp_path):
+    reading, registry = nightly_copy(tmp_path)
+    assert run_nightly(tmp_path, reading, registry) == []
+
+
+def test_night_must_read_the_previous_day(tmp_path):
+    reading, registry = nightly_copy(tmp_path)
+    reading["day"] = "2026-10-15"
+    assert any("T+1" in p for p in run_nightly(tmp_path, reading, registry))
+
+
+def test_extent_rows_must_match_the_publisher_document(tmp_path):
+    reading, registry = nightly_copy(tmp_path)
+    reading["publisher"]["extent"]["rows"][0]["Updated"] = "1999-01-01T00:00:00Z"
+    assert any("extent rows differ" in p for p in run_nightly(tmp_path, reading, registry))
+
+
+def test_events_without_comparison_are_refused(tmp_path):
+    reading, registry = nightly_copy(tmp_path)
+    reading["reingestion"]["events"] = [{"kind": "segment_rewritten", "segment": "x"}]
+    assert any("without a comparison" in p for p in run_nightly(tmp_path, reading, registry))
+
+
+def test_unaudited_host_is_refused(tmp_path):
+    reading, registry = nightly_copy(tmp_path)
+    reading["requests"][0]["url"] = "https://data.raspberryshake.org/x"
+    assert any("outside the audited" in p for p in run_nightly(tmp_path, reading, registry))
