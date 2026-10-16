@@ -47,22 +47,22 @@ RUNNING (any time: RETIRED).*
 
 ### Synthetic Flood — how much of public language machines now write
 
-- **Stage:** EXPOSÉ (2026-08-08), parked 2026-08-22; **taken up again on the
-  maintainer's wish of 2026-10-04** (wording private). His GO for V0 is given in
-  advance, on the condition that the AUDIT clears the two blockers below.
-- **Blockers to clear first** (re-audit of 2026-08-22, §3): (1) an axis that is
-  not GDELT — the GDELT part would duplicate The Consensus on the house's site;
-  (2) the headline figure is a share that drifts monthly, so the measurement and
-  its acceptance window must be built for that cadence, not for fourteen nights.
-- **Keyless, cost-free axes to probe** (named by the house, unchecked): science
-  abstracts via OpenAlex, Crossref or PubMed E-utilities, using the published
-  "excess vocabulary" method as a neighbour, not a copy; Wikipedia's own tagging of
-  suspected machine-written text, counted through the MediaWiki API; Common Crawl
-  read over HTTPS (index.commoncrawl.org, data.commoncrawl.org), with no AWS
-  account involved. Every claim about these is the audit's to make.
-- **When:** on nights the focus waits — a refreshed EXPOSÉ that names the axis,
-  then the AUDIT. Notes at the end of `docs/2026-08-08-kandidat-synthetic-flood.md`.
-- **Updated:** 2026-10-04 (house)
+- **Stage:** EXPOSÉ, refreshed 2026-10-16 (`docs/2026-10-16-synthetic-flood-expose-achse.md`):
+  the axis is named — Register A, PubMed abstracts in monthly cohorts with the excess-vocabulary
+  method as a neighbour (a committed word list beside a freshly derived one; their divergence is
+  the method's decay); Register B, counts of Wikipedia's own maintenance category for suspected
+  machine-written text (counts only, no titles, no user names). No GDELT, so the Consensus
+  duplication falls away on paper (blocker 1). Cadence (blocker 2): each cohort read at M+1, M+2,
+  M+3, revisions as compared events, an acceptance window of at least six cohorts. Common Crawl is
+  not the axis. First exposé 2026-08-08, parked 2026-08-22, taken up again on the maintainer's
+  wish of 2026-10-04 (wording private); his GO for V0 is given in advance, on the condition that
+  the AUDIT clears both blockers.
+- **Next step:** the AUDIT — live probes of PubMed E-utilities, OpenAlex, Crossref, the MediaWiki
+  API and the Common Crawl index (endpoint, status, size, rate limit without key, licence of
+  metadata and abstract texts, charter fit), samples with manifests under
+  `syntheticflood/probes/<date>/`, ending in a recommendation (exposé §7). Only on a night the
+  focus waits.
+- **Updated:** 2026-10-16 (pass)
 
 ## Parked
 
