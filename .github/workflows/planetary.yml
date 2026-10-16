@@ -1,0 +1,63 @@
+# Planetary Listening V0 (admission stage 3, the maintainer's GO 2026-10-04):
+# the daily T+1 reading for GE.RUE..HHZ, pairing A (Rüdersdorf). Increment 3,
+# docs/2026-10-16-planetary-listening-v0-inkrement-3.md.
+#
+# The admission path allows a workflow only once V0 has produced a committed
+# reading; planetary/readings/2026-10-15.json and 2026-10-16.json are those
+# readings, both made by the same command this job runs.
+#
+# 06:40 UTC: the publisher's `Updated` for the read day was 05:14:43 (reading
+# of 2026-10-15) and 05:00:57 (reading of 2026-10-16), so the day is complete
+# well before this slot. It runs after the anchor job (06:20); the night's
+# manifest is registered "unstamped" and stamped by the next morning's anchor
+# run, as memoryhole's late nights already are.
+#
+# What is fetched: the day file from GEOFON (hashed, discarded; at most four
+# excerpts of strong impulses kept), three small publisher documents kept
+# verbatim (availability, extent, WFCatalog), and the ISC and USGS catalogues
+# for the same day and box. Public, keyless, CC BY 4.0 data only.
+name: planetary
+
+on:
+  schedule:
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: planetary
+
+jobs:
+  reading:
+    runs-on: ubuntu-latest
+    # One day file of ~11 MB and five small requests; tonight's local run took
+    # well under ten minutes.
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install practice
+        run: python -m pip install --quiet -e ./practice
+
+      # Writes planetary/readings/<date>.json (the reading of the previous
+      # UTC day) and planetary/snapshots/<date>/ with its manifest.
+      - name: Reading of the previous UTC day
+        run: python -m practice.planetary.nightly --repo-root .
+
+      # Same handshake as memoryhole and interval: the fresh manifest is listed
+      # in the ledger as "unstamped" so verify passes; the anchor job stamps it.
+      - name: Register the reading in the anchor ledger
+        run: python tools/anchor.py --register
+
+      - name: Verify provenance chain
+        run: python verify.py --repo-root .
+
+      - name: Commit reading
+        run: |
+          tools/commit-and-push.sh "planetary: reading of $(date -u -d 'yesterday' +%F)"
