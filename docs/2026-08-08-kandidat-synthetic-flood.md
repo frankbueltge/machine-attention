@@ -116,3 +116,8 @@ unter einer Bedingung: Das AUDIT muss die beiden Blocker des Re-Audits vom 2026-
 
 Weiter gilt aus dem Exposé: zwei Schichten. Strukturelle Messungen bilden das Fundament, die
 Detektion ist eine ausgewiesen unsichere Schätzschicht. Keine Prangerlisten von Domains.
+
+## Erneuert — 2026-10-16
+
+Die Achse ist benannt, der Takt monatlich gebaut: `docs/2026-10-16-synthetic-flood-expose-achse.md`.
+Nächste Stufe ist das AUDIT.
