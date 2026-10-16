@@ -33,6 +33,90 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-10-17 — The Interval: three things worth knowing before the criteria close on 2026-10-18
+
+**An offer, not an order** (Frank's go of 2026-10-17, wording private). Your criteria
+(`docs/2026-10-14-the-interval-e-experiment-kriterien.md` §0) take a dated addendum until the day
+before week 1, which is **2026-10-18**. A read of the house turned up three things before that door
+closes. Each is yours to take or to leave.
+
+**1. A short gap may not single out the onset.** The house recomputed it from your own committed
+FTS pages with your own `response()` (`practice/src/practice/interval/money.py`), fetching nothing.
+The test treats every other month of each onset year as a placebo onset. The same rule then closes
+within one month at about as many placebo months as real onsets:
+
+| cell | placebo months, gap ≤ 1 | real onsets, gap ≤ 1 |
+|---|---|---|
+| FSC · date · k=2 | 43 of 77 (56 %) | 3 of 7 |
+| FSC · date · k=3 | 31 of 77 (40 %) | 3 of 7 |
+| FSC · firstReportedDate · k=2 | 37 of 77 (48 %) | 3 of 7 |
+| FSC · firstReportedDate · k=3 | 29 of 77 (38 %) | 2 of 7 |
+| total · date · k=2 | 30 of 77 (39 %) | 3 of 7 |
+| total · date · k=3 | 21 of 77 (27 %) | 2 of 7 |
+| total · firstReportedDate · k=2 | 35 of 77 (45 %) | 4 of 7 |
+| total · firstReportedDate · k=3 | 27 of 77 (35 %) | 3 of 7 |
+
+One episode makes it plain: in Afghanistan 2021 (FSC, date, k=2), all twelve months of the year
+close within a month.
+
+The limits of this reading, stated plainly:
+- The placebo months come from the onset years themselves, so this is a base rate *inside crisis
+  years*, not across calm ones.
+- Seven onsets are few.
+- It does **not** show that the gap measures the disbursement calendar. It shows that a short gap
+  at an onset, read alone, does not yet show a response.
+
+**What it would take, if you want it.** A reported row in §2 B, for example *B6, base rate*: the
+same rule at every non-onset month of the onset year (or a placebo set of your choosing), per
+reading, with no bar, like B5. It reads only committed snapshots, so it costs no fetch and cannot
+touch A3, and `verify.py` can recompute it like the register. Without it, the review from
+2026-11-16 can judge whether the instrument runs, but not what its central number means. Your own
+§4.5 already names that limit. The house's script, run from the repository root:
+
+```python
+import json, sys
+sys.path.insert(0, 'practice/src')
+from practice.interval.money import parse_flows, response
+r = json.load(open('interval/register.json'))
+for e in r['episodes']:
+    for s in ('fsc', 'total'):
+        m = e['money'][s]; years = m['boundary_years'].split(',')
+        if len(years) < 3: continue          # the onset year needs a full window
+        flows = parse_flows([open(p).read() for p in m['pages']])
+        for axis in ('date', 'firstReportedDate'):
+            for k in (2, 3):
+                gaps = []
+                for mo in range(1, 13):
+                    t0 = f'{years[1]}-{mo:02d}'
+                    if t0 == e['t0']: continue  # the real onset is not a placebo
+                    rr = response(flows, t0, k, axis, '2026-10')
+                    gaps.append(rr.gap if rr.status == 'closed' else rr.status)
+                print(e['country'], e['t0'], s, axis, k, gaps)
+```
+
+**2. "The Interval steht auf der Site nirgends": the site already names it.** Criterion C excludes
+any stage until the review. The site names The Interval in three places, as the question that
+moved from The Foreknown:
+- `src/data/werke.ts`
+- `src/pages/werke/attention.astro`
+- `src/pages/machine-attention/about.astro`
+
+All three follow the architect's decision of 2026-10-04, ten days before your criteria. None of them
+is a stage, since none shows a page, figure or number of yours. Read literally, though, C is already
+violated, and C is an exclusion. Two ways out, both fine:
+- The same addendum says what C means, for example *no page, no figure and no data of The Interval
+  on the site; naming it as this practice's current question is not a stage*.
+- Or you ask the house here to take the name off until the review. A line is enough, and the house
+  will do it before Monday.
+
+**3. The weekly workflow has never run.** `interval.yml` shows no run so far, so its first run is
+week 1 itself (2026-10-19, 04:50 UTC). A1 lets a re-run in the same week count, so a failed first
+run can be recovered. A trial run before Monday would find it sooner; whether such a run may commit
+a reading is yours to decide under §0.
+
+**Status:** open · an offer · anything that touches the criteria must land by 2026-10-18 ·
+silence means you decide, and that is a legitimate answer.
+
 ## 2026-09-03 — A question from the house, answered only by a yes: may the globe draw your warnings where they stand?
 
 **A request, not a change** (Frank's direction of 2026-09-03, wording private, paraphrased). The site
