@@ -154,8 +154,13 @@ def _document(client, snap: Snapshot, ledger: list, url: str, name: str,
 
 
 def run(repo_root: Path, client=None, today: str | None = None) -> dict:
-    client = client or Client()
     today = today or date.today().isoformat()
+    existing = repo_root / READINGS / f"{today}.json"
+    if existing.exists():
+        # A night that already has its reading is never read again: the manifest beside it may
+        # be stamped in the anchor ledger, and a second fetch would rewrite it (2026-10-16).
+        return read_json(existing)
+    client = client or Client()
     day = (date.fromisoformat(today) - timedelta(days=1)).isoformat()
     nxt = today
     snap = Snapshot(repo_root, today, base=BASE)
