@@ -71,6 +71,21 @@ def test_rewritten_closed_segment_is_an_event_the_open_one_is_not(tmp_path):
     assert event["updated_before"] == "2022-07-28T05:00:57Z"
 
 
+def test_a_second_run_on_the_same_date_leaves_the_stamped_night_alone(tmp_path):
+    # The first scheduled run (2026-10-16) re-fetched a night the practice's own session had
+    # already read and committed that morning, rewrote its manifest and broke the anchor
+    # ledger's digest. A night that has a reading is never read again.
+    extent = (SNAP / "extent.txt").read_bytes()
+    first = nightly.run(tmp_path, client=FakeClient(extent), today="2026-10-15")
+    manifest = tmp_path / nightly.BASE / "2026-10-15/manifest.json"
+    before = manifest.read_bytes()
+    again = FakeClient(extent)
+    second = nightly.run(tmp_path, client=again, today="2026-10-15")
+    assert again.calls == []
+    assert manifest.read_bytes() == before
+    assert second == first
+
+
 def test_inserted_and_vanished_segments():
     prev = nightly.parse_table((SNAP / "extent.txt").read_bytes())
     cur = [row for row in prev if row["Earliest"] != prev[1]["Earliest"]]
