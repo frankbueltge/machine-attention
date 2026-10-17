@@ -11,15 +11,15 @@ RUNNING (any time: RETIRED).*
 
 ### The Interval — slow-onset food crises: projection against funding
 
-- **Stage:** E-EXPERIMENT — criteria committed 2026-10-14, **before** the window (`docs/2026-10-14-the-interval-e-experiment-kriterien.md`, machine-readable `interval/experiment.json`, which carries the document's hash). V0 increments 1–6 done 2026-10-09 to 2026-10-14. Window: four ISO weeks without a gap, Mondays 2026-10-19, 10-26, 11-02, 11-09; closes 2026-11-15; review from 2026-11-16 is the maintainer's. The reading of 2026-10-13 is pre-window context. `verify.py` (`check_interval_experiment`) fails if the criteria postdate the window, the weeks are not four or more consecutive Mondays, or the prose changes without its hash. Tally: `python -m practice.interval.experiment --repo-root .` (counts A1–A3, B1, B2 from the readings; decides nothing).
+- **Stage:** E-EXPERIMENT — **addendum 2026-10-17** (`docs/2026-10-17-the-interval-e-experiment-nachtrag.md`, held in `interval/experiment.json` under `addenda`): B6 base rate added (reported, no bar; `base_rate` in `experiment.py`, pre-window 43/77 placebo vs 3/7 onsets at FSC·date·k=2, all eight cells in the addendum), C clarified (no page, figure, number or data on the site; naming is not a stage), trial of the reading step in a throwaway copy (0 × 429, verify green, nothing committed). This answers the house's offer in `REQUESTS.md` of 2026-10-17; the criteria close after 2026-10-18. Criteria committed 2026-10-14, **before** the window (`docs/2026-10-14-the-interval-e-experiment-kriterien.md`, machine-readable `interval/experiment.json`, which carries the document's hash). V0 increments 1–6 done 2026-10-09 to 2026-10-14. Window: four ISO weeks without a gap, Mondays 2026-10-19, 10-26, 11-02, 11-09; closes 2026-11-15; review from 2026-11-16 is the maintainer's. The reading of 2026-10-13 is pre-window context. `verify.py` (`check_interval_experiment`) fails if the criteria postdate the window, the weeks are not four or more consecutive Mondays, or the prose changes without its hash. Tally: `python -m practice.interval.experiment --repo-root .` (counts A1–A3, B1, B2 from the readings; decides nothing).
 - **Gate:** the maintainer's GO for V0 given on 2026-10-04 (wording private),
   recorded in `docs/2026-10-04-kandidat-the-interval.md`.
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16: checked, nothing due — the window opens Monday 2026-10-19.) Each Monday's pass may run the tally and note B2/B4 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16: checked, nothing due — the window opens Monday 2026-10-19.) Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-14 (pass)
+- **Updated:** 2026-10-17 (pass)
 
 ## Next
 
@@ -36,14 +36,16 @@ RUNNING (any time: RETIRED).*
   **Rüdersdorf**; Geseke parked (`planetary/declarations/geseke-2026-10-14.json`).
 - **Gate:** the maintainer's GO of 2026-10-04 (wording private), audit recommendations
   taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
-- **Next step:** once the workflow has committed its first reading itself (expected
-  2026-10-17), add `planetary/readings` to `practice/src/practice/staleness.py`. Then
+- **Next step:** once the workflow has committed its first reading itself, add
+  `planetary/readings` to `practice/src/practice/staleness.py` (2026-10-17: the pass's branch
+  was cut before the 06:40 UTC run had committed; `origin/main` still ended at
+  `planetary/readings/2026-10-16.json`, so this moves to 2026-10-18's pass). Then
   V0 increment 4: the acceptance criteria as a committed file before any window.
 - **Re-read when:** Geseke — if the operator page shows a forward date again, re-measure
   hearing there (pairing B would restore the second register, audit flagship condition d).
 - **Substrate note:** after `pip install -e ./practice` module runs need no `PYTHONPATH`
   (checked 2026-10-16); without installation, `practice/` shadows the package.
-- **Updated:** 2026-10-16 (pass)
+- **Updated:** 2026-10-17 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 

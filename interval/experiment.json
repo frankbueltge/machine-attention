@@ -1,4 +1,15 @@
 {
+  "addenda": [
+    {
+      "changes": [
+        "B6 base rate added: reported, no bar, not part of the pass formula",
+        "C clarified: no page, figure, number or data on the site; naming is not a stage"
+      ],
+      "date": "2026-10-17",
+      "document": "docs/2026-10-17-the-interval-e-experiment-nachtrag.md",
+      "document_sha256": "bdf71c74b1b779523aad7e7334527105eda2558db8bb99c6a5562824232a6fc9"
+    }
+  ],
   "committed": "2026-10-14",
   "criteria": {
     "A1_weeks_required": 4,
@@ -10,6 +21,11 @@
   "document_sha256": "a3596bb44275312ad695ab82bbdc8c5f88584fd60ba172668e5c6bba982edb84",
   "pre_window_readings": [
     "2026-10-13"
+  ],
+  "reported": [
+    "B2",
+    "B5",
+    "B6"
   ],
   "schema": "interval-experiment-v1",
   "window": {

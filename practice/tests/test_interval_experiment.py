@@ -4,7 +4,7 @@ verify.py holds the committed criteria to their window."""
 import json
 from pathlib import Path
 
-from practice.interval import experiment, sources
+from practice.interval import experiment, money, sources
 from practice.preserve import sha256, write_json
 
 from .test_interval_register import verifier
@@ -111,3 +111,60 @@ def test_the_committed_experiment_is_clean():
     assert check(REPO) == []
     e = json.loads((REPO / experiment.EXPERIMENT).read_text(encoding="utf-8"))
     assert e["window"]["weeks"] == WEEKS
+
+
+def test_verify_holds_an_addendum_to_its_date_and_hash(tmp_path):
+    def tree(base, day, text):
+        root = committed_tree(base)
+        add = root / "docs" / "n.md"
+        add.write_text("addendum\n", encoding="utf-8")
+        e = json.loads((root / experiment.EXPERIMENT).read_text(encoding="utf-8"))
+        e["addenda"] = [{"date": day, "document": "docs/n.md",
+                         "document_sha256": sha256(add.read_bytes())}]
+        write_json(root / experiment.EXPERIMENT, e)
+        add.write_text(text, encoding="utf-8")
+        return root
+    assert check(tree(tmp_path / "ok", "2026-10-17", "addendum\n")) == []
+    problems = check(tree(tmp_path / "late", "2026-10-19",
+                          "addendum, softened\n"))
+    assert any("not between the criteria and the window" in p
+               for p in problems)
+    assert any("changed without its hash" in p for p in problems)
+
+
+def flow_page(flows):
+    return {"data": {"flows": [
+        {"id": str(i), "versionId": 1, "amountUSD": amt, "status": "paid",
+         "boundary": "incoming", "flowType": "Standard", "date": f"{m}-15",
+         "firstReportedDate": f"{m}-15"} for i, (m, amt) in enumerate(flows)]}}
+
+
+def test_base_rate_counts_placebo_months_against_the_onset(tmp_path):
+    # 10 a month in 2020 and 2022, 100 a month in 2021. A month of 2021
+    # closes at once while at least seven of its twelve baseline months are
+    # 2020's tens (median 10): 2021-01 to 2021-06, the onset among them.
+    flows = [(f"2020-{m:02d}", 10.0) for m in range(1, 13)]
+    flows += [(f"2021-{m:02d}", 100.0) for m in range(1, 13)]
+    flows += [(f"2022-{m:02d}", 10.0) for m in range(1, 13)]
+    page = tmp_path / "p.json"
+    write_json(page, flow_page(flows))
+    side = {"status": "read", "boundary_years": "2020,2021,2022",
+            "as_of": "2026-10", "pages": ["p.json"]}
+    short = {"status": "read", "boundary_years": "2025,2026",
+             "as_of": "2026-10", "pages": ["p.json"]}
+    register = {"episodes": [
+        {"t0": "2021-06", "money": {"fsc": side}},
+        {"t0": "2026-01", "money": {"fsc": short}}]}
+    out = experiment.base_rate(tmp_path, register)
+    assert out["max_gap_months"] == 1
+    assert len(out["cells"]) == len(money.AXES) * len(money.KS)
+    c = out["cells"]["fsc date k=2"]
+    assert (c["onset_short"], c["onset_n"]) == (1, 1)
+    assert c["placebo_n"] == 11
+    assert c["placebo_short"] == 5
+
+
+def test_the_committed_experiment_reports_b6():
+    e = json.loads((REPO / experiment.EXPERIMENT).read_text(encoding="utf-8"))
+    assert "B6" in e["reported"]
+    assert [a["date"] for a in e["addenda"]] == ["2026-10-17"]
