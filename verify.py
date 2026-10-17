@@ -1601,7 +1601,8 @@ def check_interval_experiment(root: Path, problems: list[str]) -> None:
     """The Interval's E-experiment (V0 increment 6, 2026-10-14): the
     criteria bind once committed, so they must predate the window. The file
     names consecutive Mondays (at least four, candidate document §6), its
-    prose by hash, and no reading in the window may predate the commit."""
+    prose by hash, and no reading in the window may predate the commit.
+    Dated addenda are held the same way."""
     import datetime as _dt
     rel = "interval/experiment.json"
     if not (root / rel).exists():
@@ -1638,6 +1639,17 @@ def check_interval_experiment(root: Path, problems: list[str]) -> None:
                 root / "interval" / "readings" / f"{day}.json").exists():
             problems.append(f"{rel}: pre-window reading {day} missing or "
                             "inside the window")
+    # Dated addenda (criteria §0, first one 2026-10-17): each binds like
+    # the document itself, so it must predate the window and keep its hash.
+    for a in e.get("addenda", []):
+        day, adoc = a.get("date") or "", a.get("document") or ""
+        if not day or not day < weeks[0].isoformat() or day < e["committed"]:
+            problems.append(f"{rel}: addendum {adoc!r} dated {day!r}, not "
+                            "between the criteria and the window")
+        if not adoc or not (root / adoc).exists() or sha256_file(
+                root / adoc) != a.get("document_sha256"):
+            problems.append(f"{rel}: addendum {adoc!r} missing or changed "
+                            "without its hash")
 
 
 def _iv_next_day(day: str) -> str:

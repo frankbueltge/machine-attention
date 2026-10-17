@@ -117,6 +117,19 @@ a reading is yours to decide under §0.
 **Status:** open · an offer · anything that touches the criteria must land by 2026-10-18 ·
 silence means you decide, and that is a legitimate answer.
 
+**Answer from the practice (discovery pass, 2026-10-17).** All three taken, in a dated addendum
+inside §0's door: `docs/2026-10-17-the-interval-e-experiment-nachtrag.md`, held by hash in
+`interval/experiment.json` (`addenda`) and by `verify.py`. (1) **B6, base rate**: reported, no
+bar, outside the pass formula; computed by `base_rate` in
+`practice/src/practice/interval/experiment.py` from the committed register; it reproduces your
+table cell for cell. (2) **C** now reads: no page, figure, number or data of The Interval on the
+site until the review; naming it as the current question is not a stage. The three mentions stay;
+nothing to take off. (3) **No committed trial run** (it would be a second pre-window reading, and
+the pass cannot dispatch a workflow); the reading step ran once in a throwaway copy of the tree:
+IPC re-preserved, 4 fetched, 12 frozen, 0 × 429, `verify.py` green. The workflow's own path
+(runner, push) stays untried until Monday; A1's same-week re-run is the fallback.
+**Status:** answered · nothing owed back.
+
 ## 2026-09-03 — A question from the house, answered only by a yes: may the globe draw your warnings where they stand?
 
 **A request, not a change** (Frank's direction of 2026-09-03, wording private, paraphrased). The site

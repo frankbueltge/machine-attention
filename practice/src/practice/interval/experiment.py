@@ -4,8 +4,9 @@ The acceptance criteria are committed before the window opens
 (`interval/experiment.json`, the prose in
 docs/2026-10-14-the-interval-e-experiment-kriterien.md); they bind once
 committed. This module only counts what the committed weekly readings show
-against the criteria that can be counted from them (A1-A3, B1, B2). It
-decides nothing: the review after the window is the maintainer's.
+against the criteria that can be counted from them (A1-A3, B1, B2), and
+B6, the base rate, from the committed register (addendum of 2026-10-17,
+docs/2026-10-17-the-interval-e-experiment-nachtrag.md). It decides nothing: the review after the window is the maintainer's.
 
     python -m practice.interval.experiment --repo-root .
 """
@@ -18,11 +19,15 @@ import json
 from pathlib import Path
 
 from ..preserve import read_json
+from . import money
+from .register import REGISTER
 from .weekly import READINGS
 
 EXPERIMENT = "interval/experiment.json"
 SCHEMA = "interval-experiment-v1"
 FAILED = ("unavailable", "incomplete")
+# B6 (addendum of 2026-10-17): the gap a short response is read against.
+B6_MAX_GAP = 1
 
 
 def iso_week(day: str) -> tuple[int, int]:
@@ -77,6 +82,41 @@ def episode_changes(all_readings: list[dict]) -> list[str]:
     return out
 
 
+def base_rate(root: Path, register: dict) -> dict:
+    """B6, reported, no bar (addendum of 2026-10-17): the same t1 rule at
+    every other month of each onset year, as placebo onsets, against the
+    real onsets, per cell set x axis x k. Reads only the pages the
+    committed register names, so it fetches nothing and cannot touch A3.
+    An episode whose window spans fewer than three years has no full onset
+    year inside its boundary and is left out (both columns). The placebo
+    months come from crisis years themselves: a base rate inside them, not
+    across calm ones."""
+    cells: dict[str, dict] = {}
+    for e in register["episodes"]:
+        for tag, side in e["money"].items():
+            if side.get("status") != "read":
+                continue
+            years = side["boundary_years"].split(",")
+            if len(years) < 3:
+                continue
+            flows = money.parse_flows([(root / p).read_bytes()
+                                       for p in side["pages"]])
+            for axis in money.AXES:
+                for k in money.KS:
+                    c = cells.setdefault(f"{tag} {axis} k={k}", {
+                        "placebo_short": 0, "placebo_n": 0,
+                        "onset_short": 0, "onset_n": 0})
+                    for mo in range(1, 13):
+                        t0 = f"{years[1]}-{mo:02d}"
+                        r = money.response(flows, t0, k, axis, side["as_of"])
+                        short = (r.status == "closed"
+                                 and r.gap <= B6_MAX_GAP)
+                        col = "onset" if t0 == e["t0"] else "placebo"
+                        c[f"{col}_n"] += 1
+                        c[f"{col}_short"] += short
+    return {"max_gap_months": B6_MAX_GAP, "cells": cells}
+
+
 def tally(experiment: dict, all_readings: list[dict], today: str) -> dict:
     weeks = experiment["window"]["weeks"]
     by_week: dict[tuple, list[dict]] = {}
@@ -102,6 +142,14 @@ def tally(experiment: dict, all_readings: list[dict], today: str) -> dict:
     }
 
 
+def full_tally(root: Path, today: str) -> dict:
+    out = tally(read_json(root / EXPERIMENT), readings(root), today)
+    register = root / REGISTER
+    out["B6_base_rate"] = (base_rate(root, read_json(register))
+                           if register.exists() else None)
+    return out
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="The Interval's E-tally")
     parser.add_argument("--repo-root", default=".", type=Path)
@@ -109,7 +157,7 @@ def main(argv=None) -> int:
                         .strftime("%Y-%m-%d"))
     args = parser.parse_args(argv)
     root = args.repo_root.resolve()
-    out = tally(read_json(root / EXPERIMENT), readings(root), args.today)
+    out = full_tally(root, args.today)
     print(json.dumps(out, indent=1, sort_keys=True))
     return 0
 
