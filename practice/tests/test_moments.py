@@ -101,3 +101,14 @@ def test_the_practice_file_carries_the_contract_and_is_deterministic(tmp_path):
     assert payload["practice"]["id"] == "machine-attention"
     assert len(payload["moments"]) == 1
     assert payload == practice_moments.build(root)
+
+
+def test_only_a_project_with_a_stage_offers_moments():
+    # stage-moments/1: a moment's `enter` is a route into the project's own
+    # depth on the site, and extending PRODUCERS is an admission decision.
+    # A project without a route (every project admitted since 2026-08-15,
+    # The Interval and Planetary Listening included) has no stage to offer a
+    # moment to; the instrument never has one by definition.
+    from practice.export import PROJECTS
+    routes = {p["id"]: p["site_route"] for p in PROJECTS}
+    assert [p for p, _ in practice_moments.PRODUCERS if not routes.get(p)] == []

@@ -18,6 +18,7 @@ Every figure is recomputed here from committed records; nothing is typed.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 from .foreknown.futures import (COLD_START_OVERDUE, DRIFT_OVERDUE,
@@ -54,6 +55,19 @@ PROJECTS = (
     {"id": "state-before-interface", "title": "The State Before the Interface",
      "since": "2026-08-08", "site_route": "/observatory",
      "status": "running"},
+    # Both admitted to V0 by the maintainer's GO of 2026-10-04 and missing from
+    # this list for two weeks, the way Memory Hole was in August: the house's
+    # entrance went on naming four projects, two of them retired, while the
+    # practice built these two every night. Neither has a stage. The Interval's
+    # criterion C (addendum of 2026-10-17) allows the site its name as this
+    # practice's current question and nothing else before the review: no page,
+    # no figure, no number, no data. So it is named here, and figures() reads
+    # nothing in interval/. Planetary Listening's audit keeps every public
+    # presence beyond its name for RUNNING, so it exports no figure either.
+    {"id": "interval", "title": "The Interval", "since": "2026-10-04",
+     "site_route": None, "status": "v0"},
+    {"id": "planetary", "title": "Planetary Listening", "since": "2026-10-04",
+     "site_route": None, "status": "v0"},
 )
 
 
@@ -161,15 +175,56 @@ def figures(repo_root: Path) -> list[dict]:
     ] + [
         {"key": f"futures_notarized_{name}", "value": count, "as_of": as_of}
         for name, count in sorted(by_source.items())
+    ] + protocol_figures(repo_root)
+
+
+def protocol_figures(repo_root: Path) -> list[dict]:
+    """The autonomy protocol in four dated counts, practice-wide.
+
+    The house's page said every step's cost was public and measured. The
+    protocol carries a token count or a cost only where a step wrote one, and
+    most model steps wrote none, so the house now reads the counts from here
+    instead of asserting them (2026-10-18). Practice-wide on purpose: a count
+    per project would carry gated projects' activity onto the site. `as_of`
+    is the day of the newest step, which is also how the house can tell that
+    the practice is still moving while no project holds the stage."""
+    path = repo_root / "autonomy" / "log.jsonl"
+    if not path.exists():
+        return []
+    steps = [json.loads(line)
+             for line in path.read_text(encoding="utf-8").splitlines()
+             if line.strip()]
+    if not steps:
+        return []
+    as_of = max(str(step.get("ts") or "")[:10] for step in steps)
+    model_steps = [step for step in steps if step.get("model")]
+    return [
+        {"key": "protocol_steps", "value": len(steps), "as_of": as_of},
+        {"key": "protocol_model_steps", "value": len(model_steps),
+         "as_of": as_of},
+        {"key": "protocol_model_steps_with_tokens",
+         "value": sum(1 for step in model_steps
+                      if int(step.get("tokens") or 0) > 0),
+         "as_of": as_of},
+        {"key": "protocol_model_steps_with_cost",
+         "value": sum(1 for step in model_steps
+                      if float(step.get("cost") or 0) > 0),
+         "as_of": as_of},
     ]
 
 
 def _with_closing_record(project: dict, repo_root: Path) -> dict:
-    """A project's status word comes from its closing record when one exists
-    — `retired`, the admission path's own word for an honest end (The
-    Foreknown and Dark Ocean, 2026-10-04)."""
+    """A project's status word comes from its own record where one says it:
+    `retired` from a closing record, the admission path's word for an honest
+    end (The Foreknown and Dark Ocean, 2026-10-04); `e-experiment` once the
+    acceptance criteria are committed as `<project>/experiment.json` (The
+    Interval, 2026-10-14). Typed words went stale here before, and a word read
+    from the record cannot lag behind it. The rule covers the time between the
+    criteria and the review; the review's outcome decides the word after it."""
     if read_retired(repo_root, project["id"]):
         project["status"] = "retired"
+    elif (repo_root / project["id"] / "experiment.json").exists():
+        project["status"] = "e-experiment"
     return project
 
 
