@@ -1,0 +1,578 @@
+{
+  "entries": [
+    {
+      "bytes": 178,
+      "file": "syntheticflood/probes/2026-10-18/pubmed/robots.txt",
+      "headers": {
+        "content-length": "178",
+        "content-type": "text/plain",
+        "last-modified": "Tue, 17 Jun 2014 17:40:27 GMT",
+        "server": "Apache"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "robots",
+      "retrieved_at": "2026-10-18T06:40:58+00:00",
+      "seconds": 1.57,
+      "sha256": "ead5515bac4e17bafb45312b93ca74f15ea098086a1c678f42a8319f3b369ac8",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/robots.txt"
+    },
+    {
+      "bytes": 15005,
+      "derived": {
+        "count": "41302834",
+        "lastupdate": "2026/10/18 00:00"
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/einfo.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "2"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "einfo",
+      "retrieved_at": "2026-10-18T06:41:02+00:00",
+      "seconds": 3.52,
+      "sha256": "fe5b6b13c88338026d1c2bc1a10ec95ca480edd40a303bb1d843048d702a1077",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=pubmed&retmode=json"
+    },
+    {
+      "bytes": 81,
+      "derived": {
+        "count": 161199
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/cohort-2024-03.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "1"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "cohort-2024-03",
+      "retrieved_at": "2026-10-18T06:41:06+00:00",
+      "seconds": 3.54,
+      "sha256": "322f533c4af6989aa0bb498a32868f2bc5eb6823a17fd50f56a14428fbf69d03",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2024/03[dp]"
+    },
+    {
+      "bytes": 81,
+      "derived": {
+        "count": 131704
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/cohort-2019-03.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "2"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "cohort-2019-03",
+      "retrieved_at": "2026-10-18T06:41:07+00:00",
+      "seconds": 1.5,
+      "sha256": "075f6fd91a624f9834e6fdbd354a54f62653509f74b8e9bc5e5b585fa14a563d",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2019/03[dp]"
+    },
+    {
+      "bytes": 81,
+      "derived": {
+        "count": 165058
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/cohort-2026-09.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "1"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "cohort-2026-09",
+      "retrieved_at": "2026-10-18T06:41:08+00:00",
+      "seconds": 1.41,
+      "sha256": "5a8bedbfd7bd4b161f6444c22b0c0ad5fed46a3c2bd0ff480d6d3a75241e152f",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2026/09[dp]"
+    },
+    {
+      "bytes": 77,
+      "derived": {
+        "count": 15
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/delve-2019-03.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "2"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "delve-2019-03",
+      "retrieved_at": "2026-10-18T06:41:10+00:00",
+      "seconds": 1.56,
+      "sha256": "c178f335157ed5c9e5f42ce63c74632e826b727192c16dc6ea30566de3969009",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=delve[tiab]+AND+hasabstract+AND+2019/03[dp]"
+    },
+    {
+      "bytes": 78,
+      "derived": {
+        "count": 330
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/delve-2024-03.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "0"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "delve-2024-03",
+      "retrieved_at": "2026-10-18T06:41:11+00:00",
+      "seconds": 1.42,
+      "sha256": "8a589c56fdf0c1fe588650b0d53155605763379aa0b6c2c86a385312d6caefab",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=delve[tiab]+AND+hasabstract+AND+2024/03[dp]"
+    },
+    {
+      "bytes": 77,
+      "derived": {
+        "count": 27
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/delve-2026-09.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "2"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "delve-2026-09",
+      "retrieved_at": "2026-10-18T06:41:13+00:00",
+      "seconds": 1.44,
+      "sha256": "9bfc4106ab9aa946b644225989bc348f9f24128cbc32cbd87416c104594dd680",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=delve[tiab]+AND+hasabstract+AND+2026/09[dp]"
+    },
+    {
+      "bytes": 80,
+      "derived": {
+        "count": 46679
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/control-patients-2024-03.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "2"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "control-patients-2024-03",
+      "retrieved_at": "2026-10-18T06:41:14+00:00",
+      "seconds": 1.43,
+      "sha256": "455bf22ce910bebce75354311b57d253766150fb41b49a53322054f2ba6791a3",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=patients[tiab]+AND+hasabstract+AND+2024/03[dp]"
+    },
+    {
+      "bytes": 268,
+      "derived": {
+        "idlist": [
+          "42802731",
+          "41770778",
+          "41675121"
+        ]
+      },
+      "file": "syntheticflood/probes/2026-10-18/pubmed/ids-2024-03.json",
+      "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "2"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "ids-2024-03",
+      "retrieved_at": "2026-10-18T06:41:16+00:00",
+      "seconds": 1.44,
+      "sha256": "9445f54560fdaa8c7e7f87d4107d41f58fd33b839f90dc9e8269e33a223e53fe",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=3&tool=machine-attention&term=hasabstract+AND+2024/03[dp]"
+    },
+    {
+      "bytes": 78357,
+      "derived": {
+        "has_author_names": true,
+        "has_copyright_field": true
+      },
+      "headers": {
+        "content-type": "text/xml; charset=UTF-8",
+        "server": "Finatra",
+        "x-ratelimit-limit": "3",
+        "x-ratelimit-remaining": "1"
+      },
+      "http_status": 200,
+      "kept": false,
+      "name": "efetch-3-abstracts",
+      "note": "body carries author names and publisher text: hashed and discarded, never committed",
+      "retrieved_at": "2026-10-18T06:41:17+00:00",
+      "seconds": 1.5,
+      "sha256": "30518224956ee60ebc584f5f02f94d96ef4d036b897b4c0546ad14dc8da82e9a",
+      "source": "pubmed",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42802731,41770778,41675121&rettype=abstract&retmode=xml&tool=machine-attention"
+    },
+    {
+      "bytes": 21294,
+      "derived": {
+        "mentions_3_per_second": false,
+        "mentions_api_key": false
+      },
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "server": "ESF"
+      },
+      "http_status": 200,
+      "kept": false,
+      "name": "usage-policy",
+      "note": "policy page hashed, not kept",
+      "retrieved_at": "2026-10-18T06:41:19+00:00",
+      "seconds": 1.51,
+      "sha256": "8c77d18e132c1c69b21dd6b09c06581d38b7c6a8d4c33fe830529b5ec841acf1",
+      "source": "pubmed",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+    },
+    {
+      "bytes": 38936,
+      "derived": {
+        "mentions_copyright": true
+      },
+      "headers": {
+        "content-type": "text/html",
+        "server": "Apache"
+      },
+      "http_status": 200,
+      "kept": false,
+      "name": "copyright",
+      "note": "policy page hashed, not kept",
+      "retrieved_at": "2026-10-18T06:41:20+00:00",
+      "seconds": 1.38,
+      "sha256": "8ad8f6f186ca51ec73a5fb8935ecfa17b8cbaad300b7025b381898ab72621869",
+      "source": "pubmed",
+      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    },
+    {
+      "bytes": 23,
+      "file": "syntheticflood/probes/2026-10-18/openalex/robots.txt",
+      "headers": {
+        "content-length": "23",
+        "content-type": "text/plain; charset=utf-8",
+        "server": "cloudflare"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "robots",
+      "retrieved_at": "2026-10-18T06:41:22+00:00",
+      "seconds": 1.34,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "source": "openalex",
+      "url": "https://api.openalex.org/robots.txt"
+    },
+    {
+      "bytes": 1224,
+      "derived": {
+        "count": 528481
+      },
+      "file": "syntheticflood/probes/2026-10-18/openalex/cohort-2024-03.json",
+      "headers": {
+        "content-type": "application/json",
+        "last-modified": "Sun, 18 Oct 2026 06:40:08 GMT",
+        "server": "cloudflare",
+        "x-ratelimit-limit": "1000",
+        "x-ratelimit-remaining": "807",
+        "x-ratelimit-reset": "62318"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "cohort-2024-03",
+      "retrieved_at": "2026-10-18T06:41:23+00:00",
+      "seconds": 1.38,
+      "sha256": "ef74ec5f8f298c390b12f8c65799348c960f91745b372a1aecd23a26c17ba87f",
+      "source": "openalex",
+      "url": "https://api.openalex.org/works?per_page=1&select=id&filter=from_publication_date:2024-03-01,to_publication_date:2024-03-31,has_abstract:true"
+    },
+    {
+      "bytes": 1369,
+      "derived": {
+        "count": 6559
+      },
+      "file": "syntheticflood/probes/2026-10-18/openalex/delve-2024-03.json",
+      "headers": {
+        "content-type": "application/json",
+        "last-modified": "Sun, 18 Oct 2026 06:41:23 GMT",
+        "server": "cloudflare",
+        "x-ratelimit-limit": "1000",
+        "x-ratelimit-remaining": "808",
+        "x-ratelimit-reset": "62317"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "delve-2024-03",
+      "retrieved_at": "2026-10-18T06:41:24+00:00",
+      "seconds": 1.48,
+      "sha256": "cbb782cbdfe5eb58abf20c13617e1f9e12573dda02928c780fb095266ae520d6",
+      "source": "openalex",
+      "url": "https://api.openalex.org/works?per_page=1&select=id&filter=from_publication_date:2024-03-01,to_publication_date:2024-03-31,has_abstract:true,abstract.search:delve"
+    },
+    {
+      "bytes": 1368,
+      "derived": {
+        "count": 301
+      },
+      "file": "syntheticflood/probes/2026-10-18/openalex/delve-2019-03.json",
+      "headers": {
+        "content-type": "application/json",
+        "last-modified": "Sun, 18 Oct 2026 06:40:11 GMT",
+        "server": "cloudflare",
+        "x-ratelimit-limit": "1000",
+        "x-ratelimit-remaining": "412",
+        "x-ratelimit-reset": "62315"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "delve-2019-03",
+      "retrieved_at": "2026-10-18T06:41:26+00:00",
+      "seconds": 1.35,
+      "sha256": "31bb2708c3e2691bb1bd12b8b62545864c6e2e5932a1c27396a8104fe2d07b6d",
+      "source": "openalex",
+      "url": "https://api.openalex.org/works?per_page=1&select=id&filter=from_publication_date:2019-03-01,to_publication_date:2019-03-31,has_abstract:true,abstract.search:delve"
+    },
+    {
+      "bytes": 0,
+      "file": "syntheticflood/probes/2026-10-18/crossref/robots.txt",
+      "headers": {
+        "content-length": "0"
+      },
+      "http_status": 429,
+      "kept": true,
+      "name": "robots",
+      "retrieved_at": "2026-10-18T06:41:27+00:00",
+      "seconds": 1.63,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "crossref",
+      "url": "https://api.crossref.org/robots.txt"
+    },
+    {
+      "bytes": 191,
+      "derived": {
+        "count": 287695
+      },
+      "file": "syntheticflood/probes/2026-10-18/crossref/cohort-2024-03.json",
+      "headers": {
+        "content-type": "application/json",
+        "server": "Jetty(9.4.40.v20210413)",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "cohort-2024-03",
+      "retrieved_at": "2026-10-18T06:41:29+00:00",
+      "seconds": 1.6,
+      "sha256": "fff9e99eca3bda22b5837501a8b0467c4a9ef1013a9f997611ebd3d28746bbea",
+      "source": "crossref",
+      "url": "https://api.crossref.org/works?rows=0&filter=from-pub-date:2024-03-01,until-pub-date:2024-03-31,has-abstract:true"
+    },
+    {
+      "bytes": 191,
+      "derived": {
+        "count": 126820
+      },
+      "file": "syntheticflood/probes/2026-10-18/crossref/cohort-2019-03.json",
+      "headers": {
+        "content-type": "application/json",
+        "server": "Jetty(9.4.40.v20210413)",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "cohort-2019-03",
+      "retrieved_at": "2026-10-18T06:41:31+00:00",
+      "seconds": 1.64,
+      "sha256": "c3358ee832be353589bfaafa964607630b9830f5fdc88981a361a87049020586",
+      "source": "crossref",
+      "url": "https://api.crossref.org/works?rows=0&filter=from-pub-date:2019-03-01,until-pub-date:2019-03-31,has-abstract:true"
+    },
+    {
+      "bytes": 28275,
+      "derived": {
+        "disallows_api": false
+      },
+      "headers": {
+        "content-length": "28275",
+        "content-type": "text/plain; charset=utf-8",
+        "last-modified": "Tue, 06 Oct 2026 02:21:00 GMT",
+        "server": "ATS/9.2.15",
+        "x-cache": "cp1100 miss, cp1100 hit/184"
+      },
+      "http_status": 200,
+      "kept": false,
+      "name": "robots",
+      "note": "large; hashed, not kept",
+      "retrieved_at": "2026-10-18T06:45:16+00:00",
+      "seconds": 1.63,
+      "sha256": "48b98d80c8444d37cdf50cc9a4d2257b66039477e581066d2356062a4cbd678f",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/robots.txt",
+      "user_agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+    },
+    {
+      "bytes": 4013,
+      "derived": {
+        "Articles containing suspected AI-generated sources": 0,
+        "Articles containing suspected AI-generated sources from April 2025": 1,
+        "Articles containing suspected AI-generated sources from April 2026": 1,
+        "Articles containing suspected AI-generated sources from August 2026": 3,
+        "Articles containing suspected AI-generated sources from January 2025": 1,
+        "Articles containing suspected AI-generated sources from January 2026": 1,
+        "Articles containing suspected AI-generated sources from July 2025": 1,
+        "Articles containing suspected AI-generated sources from July 2026": 1,
+        "Articles containing suspected AI-generated sources from March 2025": 1,
+        "Articles containing suspected AI-generated sources from May 2026": 2,
+        "Articles containing suspected AI-generated sources from November 2024": 83,
+        "Articles containing suspected AI-generated sources from October 2026": 1,
+        "Articles containing suspected AI-generated sources from September 2026": 1,
+        "Articles containing suspected AI-generated texts": 0,
+        "Articles containing suspected AI-generated texts from April 2026": 345,
+        "Articles containing suspected AI-generated texts from August 2025": 359,
+        "Articles containing suspected AI-generated texts from August 2026": 462,
+        "Articles containing suspected AI-generated texts from December 2025": 593,
+        "Articles containing suspected AI-generated texts from February 2026": 479,
+        "Articles containing suspected AI-generated texts from January 2026": 393,
+        "Articles containing suspected AI-generated texts from July 2025": 31,
+        "Articles containing suspected AI-generated texts from July 2026": 872,
+        "Articles containing suspected AI-generated texts from June 2025": 2,
+        "Articles containing suspected AI-generated texts from June 2026": 589,
+        "Articles containing suspected AI-generated texts from March 2026": 370,
+        "Articles containing suspected AI-generated texts from May 2025": 1,
+        "Articles containing suspected AI-generated texts from May 2026": 226,
+        "Articles containing suspected AI-generated texts from November 2025": 564,
+        "Articles containing suspected AI-generated texts from October 2025": 512,
+        "Articles containing suspected AI-generated texts from October 2026": 3504,
+        "Articles containing suspected AI-generated texts from September 2025": 387,
+        "Articles containing suspected AI-generated texts from September 2026": 812
+      },
+      "file": "syntheticflood/probes/2026-10-18/mediawiki/allcategories-ai.json",
+      "headers": {
+        "content-length": "4013",
+        "content-type": "application/json; charset=utf-8",
+        "server": "mw-api-ext.eqiad.main-5564d958dd-44nzx",
+        "x-cache": "cp1112 miss, cp1112 pass"
+      },
+      "http_status": 200,
+      "kept": true,
+      "name": "allcategories-ai",
+      "retrieved_at": "2026-10-18T06:45:17+00:00",
+      "seconds": 1.4,
+      "sha256": "b05446cc35d868ec73c84a8e96e2905ecd83d5a02d14aaea2793f36d07780ceb",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=allcategories&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500",
+      "user_agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+    },
+    {
+      "bytes": 274,
+      "derived": {
+        "error": "JSONDecodeError"
+      },
+      "file": "syntheticflood/probes/2026-10-18/mediawiki/categoryinfo.txt",
+      "headers": {
+        "content-length": "274",
+        "content-type": "text/plain",
+        "retry-after": "37",
+        "server": "envoy",
+        "x-cache": "cp1110 miss, cp1110 pass"
+      },
+      "http_status": 429,
+      "kept": true,
+      "name": "categoryinfo",
+      "retrieved_at": "2026-10-18T06:45:24+00:00",
+      "seconds": 1.39,
+      "sha256": "bb7c5cf68835fc9213ce421bae287f59059beec30a15e53560d51ddd7c903123",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=categoryinfo&titles=Category:Articles_containing_suspected_AI-generated_texts",
+      "user_agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+    },
+    {
+      "bytes": 274,
+      "derived": {
+        "error": "JSONDecodeError"
+      },
+      "file": "syntheticflood/probes/2026-10-18/mediawiki/subcats-texts.txt",
+      "headers": {
+        "content-length": "274",
+        "content-type": "text/plain",
+        "retry-after": "31",
+        "server": "envoy",
+        "x-cache": "cp1101 miss, cp1101 pass"
+      },
+      "http_status": 429,
+      "kept": true,
+      "name": "subcats-texts",
+      "retrieved_at": "2026-10-18T06:45:30+00:00",
+      "seconds": 1.35,
+      "sha256": "e57f33c62025cf8c519fb385ff6f66c9740c72444cd9821089a5d4e83dd12e36",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=categorymembers&cmtitle=Category:Articles_containing_suspected_AI-generated_texts&cmtype=subcat&cmlimit=500",
+      "user_agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+    },
+    {
+      "bytes": 0,
+      "derived": {
+        "error": "JSONDecodeError"
+      },
+      "headers": {
+        "x-error": "ConnectionResetError"
+      },
+      "http_status": null,
+      "kept": true,
+      "name": "collinfo",
+      "retrieved_at": "2026-10-18T06:45:38+00:00",
+      "seconds": 8.32,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "commoncrawl",
+      "url": "https://index.commoncrawl.org/collinfo.json",
+      "user_agent": "machine-attention/0.1 (public research practice)"
+    },
+    {
+      "bytes": 0,
+      "headers": {
+        "x-error": "RemoteDisconnected"
+      },
+      "http_status": null,
+      "kept": true,
+      "name": "robots",
+      "retrieved_at": "2026-10-18T06:45:40+00:00",
+      "seconds": 1.57,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "commoncrawl",
+      "url": "https://index.commoncrawl.org/robots.txt",
+      "user_agent": "machine-attention/0.1 (public research practice)"
+    }
+  ],
+  "run_date": "2026-10-18"
+}

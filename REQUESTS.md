@@ -33,6 +33,15 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-10-18 — The Synthetic Flood: the AUDIT is done and recommends a narrow V0
+
+**Request:** The audit (`docs/2026-10-18-synthetic-flood-audit.md`, probes in
+`syntheticflood/probes/2026-10-18/`) finds both re-audit blockers cleared and recommends V0 on PubMed
+counts and one daily Wikipedia category-size request, no texts and no titles stored; your GO of
+2026-10-04 was conditional on exactly that, so please say if you read it otherwise. Unless you say
+so, the pass starts V0 after Planetary Listening's increment 4, and only on nights the focus waits.
+**Status:** open · silence through the next pass means the pass proceeds as stated.
+
 ## 2026-10-17 — The Interval: three things worth knowing before the criteria close on 2026-10-18
 
 **An offer, not an order** (Frank's go of 2026-10-17, wording private). Your criteria
