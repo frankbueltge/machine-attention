@@ -41,6 +41,15 @@ the same day (darkocean/RETIRED.json); their registers end on their last
 night by design. They are still listed under
 "checked", and reported under "retired" with that last night — never as
 stale, and never silently dropped from the output.
+
+Planetary Listening (2026-10-18). planetary/readings joins once its own
+workflow (.github/workflows/planetary.yml, 06:40 UTC) committed a reading
+itself: planetary/readings/2026-10-17.json, commit 934c970 "planetary:
+reading of 2026-10-16". It labels a night by the day the job runs (the file
+2026-10-17.json reads the UTC day 2026-10-16), as foreknown/snapshots did, so
+at this check's 01:00 slot a healthy register reads 0 days behind yesterday,
+and 1 when the scheduled run is delayed past midnight (that run committed at
+11:09 UTC, not 06:40).
 """
 
 from __future__ import annotations
@@ -63,6 +72,7 @@ REGISTERS = (
     ("foreknown/reaction/snapshots", "foreknown/reaction/snapshots", "dir"),
     ("darkocean/snapshots", "darkocean/snapshots", "dir"),
     ("memoryhole/readings", "memoryhole/readings", "file"),
+    ("planetary/readings", "planetary/readings", "file"),
 )
 
 # See module docstring: set from the two of four known causes actually

@@ -31,11 +31,12 @@ def _mkfile_dated(base: Path, *dates: str) -> None:
 
 
 def _repo(tmp_path: Path, *, foreknown=(), reaction=(), darkocean=(),
-          memoryhole=()) -> Path:
+          memoryhole=(), planetary=("2026-09-06",)) -> Path:
     _mkdir_dated(tmp_path / "foreknown" / "snapshots", *foreknown)
     _mkdir_dated(tmp_path / "foreknown" / "reaction" / "snapshots", *reaction)
     _mkdir_dated(tmp_path / "darkocean" / "snapshots", *darkocean)
     _mkfile_dated(tmp_path / "memoryhole" / "readings", *memoryhole)
+    _mkfile_dated(tmp_path / "planetary" / "readings", *planetary)
     return tmp_path
 
 
@@ -46,7 +47,7 @@ def test_all_registers_current_when_checked_before_the_days_own_writes(tmp_path)
     assert result["stale"] == []
     assert set(result["checked"]) == {
         "foreknown/snapshots", "foreknown/reaction/snapshots",
-        "darkocean/snapshots", "memoryhole/readings"}
+        "darkocean/snapshots", "memoryhole/readings", "planetary/readings"}
 
 
 def test_one_night_missed_does_not_fire(tmp_path):
@@ -79,6 +80,7 @@ def test_missing_register_directory_is_maximally_stale(tmp_path):
     _mkdir_dated(tmp_path / "foreknown" / "snapshots", "2026-09-06")
     _mkdir_dated(tmp_path / "foreknown" / "reaction" / "snapshots", "2026-09-06")
     _mkdir_dated(tmp_path / "darkocean" / "snapshots", "2026-09-05")
+    _mkfile_dated(tmp_path / "planetary" / "readings", "2026-09-06")
     # memoryhole/readings never created at all.
     result = check(tmp_path, today=TODAY)
     assert result["stale"] == [{
@@ -103,4 +105,19 @@ def test_a_retired_project_is_reported_as_retired_never_as_stale(tmp_path):
     assert [r["register"] for r in result["retired"]] == [
         "foreknown/snapshots", "foreknown/reaction/snapshots"]
     assert [s["register"] for s in result["stale"]] == ["darkocean/snapshots"]
-    assert len(result["checked"]) == 4
+    assert len(result["checked"]) == 5
+
+
+def test_planetary_labels_by_run_day_and_fires_after_two_missed_runs(tmp_path):
+    # planetary/readings/<run day>.json reads the UTC day before it
+    # (2026-10-17.json, commit 934c970, is the reading of 2026-10-16).
+    # At the 01:00 check a healthy register is 0 behind; one delayed run is
+    # tolerated, two missed runs are a stall.
+    base = dict(foreknown=("2026-09-06",), reaction=("2026-09-06",),
+                darkocean=("2026-09-05",), memoryhole=("2026-09-05",))
+    for newest, stale in (("2026-09-06", False), ("2026-09-05", False),
+                          ("2026-09-04", True)):
+        root = _repo(tmp_path / newest, planetary=(newest,), **base)
+        result = check(root, today=TODAY)
+        assert ([s["register"] for s in result["stale"]]
+                == (["planetary/readings"] if stale else []))

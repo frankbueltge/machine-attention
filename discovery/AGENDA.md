@@ -17,9 +17,9 @@ RUNNING (any time: RETIRED).*
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16: checked, nothing due — the window opens Monday 2026-10-19.) Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-17 (pass)
+- **Updated:** 2026-10-18 (pass)
 
 ## Next
 
@@ -36,35 +36,35 @@ RUNNING (any time: RETIRED).*
   **Rüdersdorf**; Geseke parked (`planetary/declarations/geseke-2026-10-14.json`).
 - **Gate:** the maintainer's GO of 2026-10-04 (wording private), audit recommendations
   taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
-- **Next step:** once the workflow has committed its first reading itself, add
-  `planetary/readings` to `practice/src/practice/staleness.py` (2026-10-17: the pass's branch
-  was cut before the 06:40 UTC run had committed; `origin/main` still ended at
-  `planetary/readings/2026-10-16.json`, so this moves to 2026-10-18's pass). Then
-  V0 increment 4: the acceptance criteria as a committed file before any window.
+- **Next step:** V0 increment 4 — the acceptance criteria as a committed file before any
+  window. (2026-10-18: done — the workflow committed its first own reading,
+  `planetary/readings/2026-10-17.json` in commit 934c970, so `planetary/readings` is now in
+  `practice/src/practice/staleness.py`, labelled by run day, tested in
+  `practice/tests/test_staleness.py`.)
 - **Re-read when:** Geseke — if the operator page shows a forward date again, re-measure
   hearing there (pairing B would restore the second register, audit flagship condition d).
 - **Substrate note:** after `pip install -e ./practice` module runs need no `PYTHONPATH`
   (checked 2026-10-16); without installation, `practice/` shadows the package.
-- **Updated:** 2026-10-17 (pass)
+- **Updated:** 2026-10-18 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 
-- **Stage:** EXPOSÉ, refreshed 2026-10-16 (`docs/2026-10-16-synthetic-flood-expose-achse.md`):
-  the axis is named — Register A, PubMed abstracts in monthly cohorts with the excess-vocabulary
-  method as a neighbour (a committed word list beside a freshly derived one; their divergence is
-  the method's decay); Register B, counts of Wikipedia's own maintenance category for suspected
-  machine-written text (counts only, no titles, no user names). No GDELT, so the Consensus
-  duplication falls away on paper (blocker 1). Cadence (blocker 2): each cohort read at M+1, M+2,
-  M+3, revisions as compared events, an acceptance window of at least six cohorts. Common Crawl is
-  not the axis. First exposé 2026-08-08, parked 2026-08-22, taken up again on the maintainer's
-  wish of 2026-10-04 (wording private); his GO for V0 is given in advance, on the condition that
-  the AUDIT clears both blockers.
-- **Next step:** the AUDIT — live probes of PubMed E-utilities, OpenAlex, Crossref, the MediaWiki
-  API and the Common Crawl index (endpoint, status, size, rate limit without key, licence of
-  metadata and abstract texts, charter fit), samples with manifests under
-  `syntheticflood/probes/<date>/`, ending in a recommendation (exposé §7). Only on a night the
-  focus waits.
-- **Updated:** 2026-10-16 (pass)
+- **Stage:** AUDIT done 2026-10-18 (`docs/2026-10-18-synthetic-flood-audit.md`, 26 probes with
+  manifest in `syntheticflood/probes/2026-10-18/`): PubMed E-utilities counts carry Register A
+  without storing a text (77–81 B per count, 3 req/s keyless); Wikipedia's container
+  "Articles containing suspected AI-generated texts" has dated monthly subcategories (May 2025 to
+  October 2026), one `allcategories` request reads all sizes — a standing backlog by tag month,
+  not an inflow; OpenAlex keyless budget shared on the egress address (807 → 412 in seconds) and
+  Crossref at 1 req/s are denominator controls only; Common Crawl unreachable from this container,
+  not judged, not the axis. Both re-audit blockers cleared; recommendation: GO for a narrow V0.
+  Exposé 2026-10-16 (axis and cadence), first exposé 2026-08-08, parked 2026-08-22, taken up again
+  2026-10-04 with the maintainer's GO for V0 conditional on the audit.
+- **Gate:** the conditional GO of 2026-10-04 (wording private); the pass's reading of it is put to
+  the maintainer in `REQUESTS.md` (2026-10-18), silence through the next pass means proceed.
+- **Next step:** V0 increment 1 — the committed word list and candidate pool, a reader for one
+  cohort, the first reading of 2026-09 (M+1); Wikipedia requests with the contact user agent, one
+  a day. Only after Planetary Listening increment 4, and only on a night the focus waits.
+- **Updated:** 2026-10-18 (pass)
 
 ## Parked
 
