@@ -65,10 +65,30 @@
       "as_of": "2026-10-03",
       "key": "futures_notarized_nws",
       "value": 622
+    },
+    {
+      "as_of": "2026-10-18",
+      "key": "protocol_steps",
+      "value": 351
+    },
+    {
+      "as_of": "2026-10-18",
+      "key": "protocol_model_steps",
+      "value": 57
+    },
+    {
+      "as_of": "2026-10-18",
+      "key": "protocol_model_steps_with_tokens",
+      "value": 10
+    },
+    {
+      "as_of": "2026-10-18",
+      "key": "protocol_model_steps_with_cost",
+      "value": 1
     }
   ],
   "generated_from": {
-    "commit": "5d267f6",
+    "commit": "fb7f662",
     "repo": "machine-attention"
   },
   "practice": {
@@ -103,6 +123,20 @@
       "site_route": "/observatory",
       "status": "running",
       "title": "The State Before the Interface"
+    },
+    {
+      "id": "interval",
+      "since": "2026-10-04",
+      "site_route": null,
+      "status": "e-experiment",
+      "title": "The Interval"
+    },
+    {
+      "id": "planetary",
+      "since": "2026-10-04",
+      "site_route": null,
+      "status": "v0",
+      "title": "Planetary Listening"
     }
   ]
 }
