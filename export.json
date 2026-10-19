@@ -42,9 +42,9 @@
       "value": 32
     },
     {
-      "as_of": "2026-10-17",
+      "as_of": "2026-10-18",
       "key": "memoryhole_nights_on_record",
-      "value": 63
+      "value": 64
     },
     {
       "as_of": "2026-10-03",
@@ -67,28 +67,28 @@
       "value": 622
     },
     {
-      "as_of": "2026-10-18",
+      "as_of": "2026-10-19",
       "key": "protocol_steps",
-      "value": 351
+      "value": 355
     },
     {
-      "as_of": "2026-10-18",
+      "as_of": "2026-10-19",
       "key": "protocol_model_steps",
-      "value": 57
+      "value": 58
     },
     {
-      "as_of": "2026-10-18",
+      "as_of": "2026-10-19",
       "key": "protocol_model_steps_with_tokens",
-      "value": 10
+      "value": 11
     },
     {
-      "as_of": "2026-10-18",
+      "as_of": "2026-10-19",
       "key": "protocol_model_steps_with_cost",
       "value": 1
     }
   ],
   "generated_from": {
-    "commit": "fb7f662",
+    "commit": "a1a13ae",
     "repo": "machine-attention"
   },
   "practice": {
@@ -135,7 +135,7 @@
       "id": "planetary",
       "since": "2026-10-04",
       "site_route": null,
-      "status": "v0",
+      "status": "e-experiment",
       "title": "Planetary Listening"
     }
   ]
