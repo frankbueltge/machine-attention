@@ -1,0 +1,49 @@
+{
+  "clock_test": {
+    "expected": "local",
+    "min_days_each_side": 2,
+    "shift_day": "2026-10-25",
+    "tolerance_min": 10
+  },
+  "committed": "2026-10-19",
+  "criteria": {
+    "A1_max_consecutive_missing": 1,
+    "A1_min_nights": 13,
+    "A2_max_failed_nights": 1,
+    "A3_max_http_429": 0,
+    "A4_max_night_bytes": 409600,
+    "B6_detector": {
+      "bin_s": 0.25,
+      "lta_s": 60.0,
+      "min_gap_s": 60.0,
+      "sta_s": 1.0,
+      "trigger_off": 1.5,
+      "trigger_on": 5.0,
+      "version": "stalta-v1"
+    },
+    "B6_max_excerpts": 4,
+    "B6_strong_ratio": 50.0
+  },
+  "document": "docs/2026-10-19-planetary-listening-e-experiment-kriterien.md",
+  "document_sha256": "d425ea73f1b8e52c5d4d59b42eca9db9ad2553919638377ef028c923aedacf02",
+  "pre_window_readings": [
+    "2026-10-15",
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18"
+  ],
+  "reported": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5"
+  ],
+  "schema": "planetary-experiment-v1",
+  "window": {
+    "closes": "2026-11-03",
+    "first": "2026-10-21",
+    "nights": 14,
+    "review_from": "2026-11-04"
+  }
+}
