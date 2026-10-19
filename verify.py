@@ -1652,6 +1652,60 @@ def check_interval_experiment(root: Path, problems: list[str]) -> None:
                             "without its hash")
 
 
+def check_planetary_experiment(root: Path, problems: list[str]) -> None:
+    """Planetary Listening's E-experiment (V0 increment 4, 2026-10-19): the
+    criteria bind once committed, so they must predate the first night. The
+    window is at least the audit's fourteen nights, the prose is held by
+    hash, and dated addenda the same way."""
+    import datetime as _dt
+    rel = "planetary/experiment.json"
+    if not (root / rel).exists():
+        return
+    e = load(root / rel)
+    try:
+        committed = _dt.date.fromisoformat(e["committed"])
+        first = _dt.date.fromisoformat(e["window"]["first"])
+        count = int(e["window"]["nights"])
+        closes = _dt.date.fromisoformat(e["window"]["closes"])
+        review = _dt.date.fromisoformat(e["window"]["review_from"])
+        crit = e["criteria"]
+    except (KeyError, TypeError, ValueError) as exc:
+        problems.append(f"{rel}: malformed ({exc})")
+        return
+    if e.get("schema") != "planetary-experiment-v1":
+        problems.append(f"{rel}: unknown schema {e.get('schema')!r}")
+    if count < 14:
+        problems.append(f"{rel}: window shorter than the audit's 14 nights")
+    if not committed < first:
+        problems.append(f"{rel}: criteria committed {committed}, not before "
+                        f"the first night {first}")
+    if closes != first + _dt.timedelta(days=count - 1) or review <= closes:
+        problems.append(f"{rel}: closes/review_from do not follow the nights")
+    doc = root / e.get("document", "")
+    if not e.get("document") or not doc.exists() or \
+            sha256_file(doc) != e.get("document_sha256"):
+        problems.append(f"{rel}: {e.get('document')} missing or changed "
+                        "without its hash")
+    if not 0 < crit.get("A1_min_nights", 0) <= count:
+        problems.append(f"{rel}: A1 must require nights inside the window")
+    if crit.get("A4_max_night_bytes", 0) > 400 * 1024:
+        problems.append(f"{rel}: A4 above the audit's 400 KB a night")
+    for day in e.get("pre_window_readings", []):
+        if not day < first.isoformat() or not (
+                root / "planetary" / "readings" / f"{day}.json").exists():
+            problems.append(f"{rel}: pre-window reading {day} missing or "
+                            "inside the window")
+    for a in e.get("addenda", []):
+        day, adoc = a.get("date") or "", a.get("document") or ""
+        if not day or not day < first.isoformat() or day < e["committed"]:
+            problems.append(f"{rel}: addendum {adoc!r} dated {day!r}, not "
+                            "between the criteria and the window")
+        if not adoc or not (root / adoc).exists() or sha256_file(
+                root / adoc) != a.get("document_sha256"):
+            problems.append(f"{rel}: addendum {adoc!r} missing or changed "
+                            "without its hash")
+
+
 def _iv_next_day(day: str) -> str:
     import datetime as _dt
     return (_dt.date.fromisoformat(day) + _dt.timedelta(days=1)).isoformat()
@@ -2014,6 +2068,7 @@ def check(root: Path) -> list[str]:
     check_interval_readings(root, problems)
     check_interval_experiment(root, problems)
     check_planetary(root, registry_files, problems)
+    check_planetary_experiment(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"

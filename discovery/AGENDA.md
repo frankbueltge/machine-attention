@@ -17,35 +17,42 @@ RUNNING (any time: RETIRED).*
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) **2026-10-19, week 1:** at 06:38 UTC the week's reading was not yet on main and `interval.yml` lists no run at all yet — its first scheduled firing; the planetary workflow, scheduled 06:40, ran at 11:08 and 11:39 on 10-17/10-18, so a delay of hours is the platform's norm. Tally at pass time: A1 missing 2026-10-19 (not yet run), A2 none, A3 none, B1 0 moves, B2 no change, B6 unchanged from the addendum (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). A run any day of ISO week 43 still counts; if none has landed by 2026-10-21 a `workflow_dispatch` is asked for in `REQUESTS.md` (2026-10-19). Next Monday 2026-10-26: B2, B4, B6 for weeks 1–2. Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-18 (pass)
+- **Updated:** 2026-10-19 (pass)
 
 ## Next
 
 ### Planetary Listening — "One Quarry, Two Records"
 
-- **Stage:** V0, increment 3 done 2026-10-16 — the daily workflow
-  `.github/workflows/planetary.yml` (06:40 UTC; test `practice/tests/test_planetary_workflow.py`
-  holds the slot ≥ 30 min after every committed publisher `Updated`), documented in
-  `docs/2026-10-16-planetary-listening-v0-inkrement-3.md`. Second reading
-  `planetary/readings/2026-10-16.json` (day 2026-10-15): one strong impulse 07:31:49 UTC,
-  STA/LTA 106 — again in the weekday band; first compared re-ingestion against 2026-10-15:
-  0 events. Increment 2 (2026-10-15): nightly reader, publisher documents, re-ingestion as
-  a compared event (`check_planetary_readings`). Increment 1 (2026-10-14): spike chose
-  **Rüdersdorf**; Geseke parked (`planetary/declarations/geseke-2026-10-14.json`).
+- **Stage:** E-EXPERIMENT — criteria committed **2026-10-19, before the window** (V0 increment 4):
+  `docs/2026-10-19-planetary-listening-e-experiment-kriterien.md`, machine-readable
+  `planetary/experiment.json` (carries the document's hash), tally
+  `python -m practice.planetary.experiment --repo-root .`
+  (`practice/src/practice/planetary/experiment.py`, tests `practice/tests/test_planetary_experiment.py`),
+  `verify.py` `check_planetary_experiment` fails if the criteria postdate the first night, the window is
+  shorter than the audit's 14 nights, A4 exceeds 400 KB or the prose changes without its hash.
+  Window: 14 nights, readings 2026-10-21 to 2026-11-03 (days 10-20 to 11-02); closes 2026-11-03; review
+  from 2026-11-04 is the maintainer's. Addenda allowed until 2026-10-20. Pass = A1 (≥ 13/14, never two
+  in a row missing) · A2 (≤ 1 failed night) · A3 (0 × 429) · A4 (≤ 400 KB a night) · A5 (verify green)
+  · B6 (detector unchanged) · C (no class word, no person, no stage); B1–B5 reported. **B4, the clock
+  test:** Germany leaves summer time on 2026-10-25; the weekday impulse sat at 07:31 UTC (09:31 CEST,
+  `planetary/readings/2026-10-15.json`, `2026-10-16.json`). Median shift of each weekday's first strong
+  impulse: `local` if 60 ± 10 min, `utc` if 0 ± 10, else `neither` — expectation `local`, reported, no
+  bar. **Known before the window:** on both workflow runs (10-17, 10-18, ~11:00 UTC) availability and
+  WFCatalog for the read day answered 204 — the publisher's index then ended one day short
+  (`planetary/snapshots/2026-10-17/GE.RUE.HHZ/extent.txt`, `2026-10-18/…`); B1 counts it, `nightly.py`
+  is deliberately not changed before the window. V0 increments 1–3 done 2026-10-14 to 2026-10-16.
 - **Gate:** the maintainer's GO of 2026-10-04 (wording private), audit recommendations
   taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
-- **Next step:** V0 increment 4 — the acceptance criteria as a committed file before any
-  window. (2026-10-18: done — the workflow committed its first own reading,
-  `planetary/readings/2026-10-17.json` in commit 934c970, so `planetary/readings` is now in
-  `practice/src/practice/staleness.py`, labelled by run day, tested in
-  `practice/tests/test_staleness.py`.)
+- **Next step:** none on the instrument once the window opens; 2026-10-20 is the last day for a dated
+  addendum. From 2026-10-26 the pass notes B4 (first after-shift weekday). At 2026-11-04: a two-sentence
+  review request in `REQUESTS.md`.
 - **Re-read when:** Geseke — if the operator page shows a forward date again, re-measure
   hearing there (pairing B would restore the second register, audit flagship condition d).
 - **Substrate note:** after `pip install -e ./practice` module runs need no `PYTHONPATH`
   (checked 2026-10-16); without installation, `practice/` shadows the package.
-- **Updated:** 2026-10-18 (pass)
+- **Updated:** 2026-10-19 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 
@@ -63,8 +70,10 @@ RUNNING (any time: RETIRED).*
   the maintainer in `REQUESTS.md` (2026-10-18), silence through the next pass means proceed.
 - **Next step:** V0 increment 1 — the committed word list and candidate pool, a reader for one
   cohort, the first reading of 2026-09 (M+1); Wikipedia requests with the contact user agent, one
-  a day. Only after Planetary Listening increment 4, and only on a night the focus waits.
-- **Updated:** 2026-10-18 (pass)
+  a day. Planetary Listening increment 4 is done (2026-10-19) and the request of 2026-10-18 stood
+  unanswered through this pass, so under the standing rule the pass proceeds: increment 1 on the next
+  night the focus waits.
+- **Updated:** 2026-10-19 (pass)
 
 ## Parked
 
