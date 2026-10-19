@@ -1984,6 +1984,105 @@ def check_planetary_readings(root: Path, registry_files: dict,
             prev_rows, prev_rel = rows, rel
 
 
+SF_SNAP = "syntheticflood/snapshots"
+SF_HOST = "eutils.ncbi.nlm.nih.gov"
+SF_LISTS = ("fixed", "controls", "pool")
+SF_ROW_KEYS = {"list", "word", "term", "url", "status", "bytes", "sha256",
+               "count", "file", "error"}
+
+
+def _sf_url(month: str, word: str | None) -> tuple[str, str]:
+    """Independent rebuild of the deterministic esearch count query."""
+    from urllib.parse import quote_plus
+    year, mm = month.split("-")
+    term = f"hasabstract AND {year}/{mm}[dp]"
+    if word:
+        term = f"{word}[tiab] AND {term}"
+    return term, (f"https://{SF_HOST}/entrez/eutils/esearch.fcgi?db=pubmed"
+                  f"&rettype=count&retmode=json&tool=machine-attention"
+                  f"&term={quote_plus(term, safe='/[]')}")
+
+
+def _sf_canonical(count: int) -> bytes:
+    return ('{"header":{"type":"esearch","version":"0.3"},'
+            '"esearchresult":{"count":"%d"}}\n' % count).encode()
+
+
+def _sf_row(rel: str, row: dict, month: str, word: str | None,
+            registry_files: dict, problems: list[str]) -> None:
+    label = word or "cohort total"
+    extra = set(row) - SF_ROW_KEYS
+    if extra:
+        problems.append(f"{rel}: {label}: fields outside counts-only {sorted(extra)}")
+    term, url = _sf_url(month, word)
+    if row.get("term") != term or row.get("url") != url:
+        problems.append(f"{rel}: {label}: query is not the deterministic count query")
+    count = row.get("count")
+    if count is None:
+        if row.get("status") == 200 and row.get("file") not in registry_files:
+            problems.append(f"{rel}: {label}: 200 without a count and without bytes")
+        return
+    if not isinstance(count, int) or count < 0:
+        problems.append(f"{rel}: {label}: count is not a non-negative integer")
+        return
+    if row.get("file") is not None:
+        entry = registry_files.get(row["file"])
+        if entry is None or entry.get("sha256") != row.get("sha256"):
+            problems.append(f"{rel}: {label}: preserved answer not manifested")
+    elif hashlib.sha256(_sf_canonical(count)).hexdigest() != row.get("sha256"):
+        problems.append(f"{rel}: {label}: count does not match the SHA-256 of "
+                        "the answer it claims")
+
+
+def check_syntheticflood(root: Path, registry_files: dict,
+                         problems: list[str]) -> None:
+    """Register A cohort readings: counts only, every committed word asked,
+    every query rebuilt, every count bound to the hash of its answer, the
+    word list an immutable versioned file."""
+    for wpath in sorted(root.glob("syntheticflood/wordlists/*.json")):
+        rel = wpath.relative_to(root).as_posix()
+        doc = load(wpath)
+        seen: set[str] = set()
+        for name in SF_LISTS:
+            for w in doc.get(name) or []:
+                if not (isinstance(w, str) and re.fullmatch(r"[a-z]+", w)) or w in seen:
+                    problems.append(f"{rel}: {name}: {w!r} malformed or repeated")
+                seen.add(w)
+        if doc.get("version") != wpath.stem:
+            problems.append(f"{rel}: version differs from its file name")
+    for rpath in sorted(root.glob("syntheticflood/readings/*/*.json")):
+        rel = rpath.relative_to(root).as_posix()
+        r = load(rpath)
+        if r.get("schema") != "syntheticflood-cohort-v1":
+            problems.append(f"{rel}: unknown schema")
+            continue
+        month = rpath.parent.name
+        if r.get("cohort") != month or r.get("date") != rpath.stem \
+                or not re.fullmatch(r"\d{4}-(0[1-9]|1[0-2])", month):
+            problems.append(f"{rel}: cohort or date differs from its path")
+            continue
+        n = (int(rpath.stem[:4]) - int(month[:4])) * 12 + \
+            int(rpath.stem[5:7]) - int(month[5:7])
+        if n < 1 or r.get("lag_months") != n or r.get("value") != (n == 3) \
+                or r.get("retrospective") != (n > 3):
+            problems.append(f"{rel}: lag, value or retrospective mark is wrong")
+        if r.get("source") != SF_HOST:
+            problems.append(f"{rel}: source outside the audited host")
+        wl = r.get("wordlist") or {}
+        wfile = root / str(wl.get("file", ""))
+        if not wfile.is_file() or sha256_file(wfile) != wl.get("sha256"):
+            problems.append(f"{rel}: word list {wl.get('file')} missing or changed")
+            continue
+        doc = load(wfile)
+        want = [(name, w) for name in SF_LISTS for w in doc.get(name) or []]
+        got = [(c.get("list"), c.get("word")) for c in r.get("counts", [])]
+        if got != want:
+            problems.append(f"{rel}: counts do not cover the word list in order")
+        _sf_row(rel, r.get("total") or {}, month, None, registry_files, problems)
+        for c in r.get("counts", []):
+            _sf_row(rel, c, month, c.get("word"), registry_files, problems)
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -1998,6 +2097,7 @@ def check(root: Path) -> list[str]:
     check_snapshots(root, IV_BASE, problems, registry_files, False)
     check_snapshots(root, PL_BASE, problems, registry_files, False)
     check_snapshots(root, PL_SNAP, problems, registry_files, False)
+    check_snapshots(root, SF_SNAP, problems, registry_files, False)
 
     check_retired(root, problems)
 
@@ -2069,6 +2169,7 @@ def check(root: Path) -> list[str]:
     check_interval_experiment(root, problems)
     check_planetary(root, registry_files, problems)
     check_planetary_experiment(root, problems)
+    check_syntheticflood(root, registry_files, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"

@@ -6,9 +6,15 @@
 # reading; planetary/readings/2026-10-15.json and 2026-10-16.json are those
 # readings, both made by the same command this job runs.
 #
-# 06:40 UTC: the publisher's `Updated` for the read day was 05:14:43 (reading
-# of 2026-10-15) and 05:00:57 (reading of 2026-10-16), so the day is complete
-# well before this slot. It runs after the anchor job (06:20); the night's
+# 08:10 UTC: the publisher's `Updated` for the read day was 05:14:43 (reading
+# of 2026-10-15), 05:00:57 (2026-10-16) and 06:22:02 (2026-10-19) -- the last
+# inside the 30-minute margin of the old 06:40 slot, which
+# practice/tests/test_planetary_workflow.py caught. Moved 2026-10-19, before
+# the window: 08:10 keeps the margin even if the publisher's update follows
+# local time when Germany leaves summer time on 2026-10-25 (06:22 -> 07:22).
+# The criteria count the date of a reading, not its hour
+# (docs/2026-10-19-planetary-listening-e-experiment-kriterien.md §4.2), and
+# the job has in fact run near 11:00. It runs after the anchor job (06:20); the night's
 # manifest is registered "unstamped" and stamped by the next morning's anchor
 # run, as memoryhole's late nights already are.
 #
@@ -20,7 +26,7 @@ name: planetary
 
 on:
   schedule:
-    - cron: "40 6 * * *"
+    - cron: "10 8 * * *"
   workflow_dispatch:
 
 permissions:
