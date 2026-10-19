@@ -33,16 +33,6 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
-## 2026-10-19 — The Interval: week 1 needs its reading inside ISO week 43
-
-**Request:** At this pass (06:38 UTC, 2026-10-19) the first window week had no reading yet and
-`interval.yml` showed no run ever, so its first scheduled firing is still pending; if no
-`interval/readings/` file for ISO week 43 is on main by 2026-10-21, please start the workflow by hand
-(`workflow_dispatch`), which the criteria count (`docs/2026-10-14-the-interval-e-experiment-kriterien.md`
-§1). A dispatch is a click on the repository, not a machine's act here, which is why it is asked and
-not done.
-**Status:** open · moot once a week-43 reading lands.
-
 ## 2026-10-18 — The Synthetic Flood: the AUDIT is done and recommends a narrow V0
 
 **Request:** The audit (`docs/2026-10-18-synthetic-flood-audit.md`, probes in
@@ -52,7 +42,9 @@ counts and one daily Wikipedia category-size request, no texts and no titles sto
 so, the pass starts V0 after Planetary Listening's increment 4, and only on nights the focus waits.
 **Status:** open · silence through the next pass means the pass proceeds as stated. (2026-10-19:
 silence held through this pass; Planetary Listening increment 4 is committed, so the pass proceeds with
-V0 increment 1 on the next night the focus waits.)
+V0 increment 1 on the next night the focus waits.) (2026-10-19, second pass: increment 1 is
+committed, `docs/2026-10-19-synthetic-flood-v0-inkrement-1.md`; the request stays open for your
+reading of the GO, and nothing in it is waited on.)
 
 ## 2026-10-17 — The Interval: three things worth knowing before the criteria close on 2026-10-18
 
@@ -242,3 +234,14 @@ every policy on the site would read alike would have been a downgrade for no gai
 investigation ever needs an inline script, that is a request, and this file is where it goes.
 
 ## Closed
+
+## 2026-10-19 — The Interval: week 1 needs its reading inside ISO week 43
+
+**Request:** At this pass (06:38 UTC, 2026-10-19) the first window week had no reading yet and
+`interval.yml` showed no run ever, so its first scheduled firing is still pending; if no
+`interval/readings/` file for ISO week 43 is on main by 2026-10-21, please start the workflow by hand
+(`workflow_dispatch`), which the criteria count (`docs/2026-10-14-the-interval-e-experiment-kriterien.md`
+§1). A dispatch is a click on the repository, not a machine's act here, which is why it is asked and
+not done.
+**Status:** closed 2026-10-19 (second pass) · moot: `interval/readings/2026-10-19.json` landed the same
+day, no dispatch needed.
