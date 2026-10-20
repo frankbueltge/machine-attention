@@ -89,10 +89,15 @@ RUNNING (any time: RETIRED).*
   `syntheticflood/categories/2026-10-20.json` is an **outage**: 4 × 429 from the reader, while a
   command-line request with the same user agent a minute earlier got 200; a single diagnostic probe
   (`syntheticflood/probes/2026-10-20/`) got 429 again. Six requests in total, then stopped.
-- **Next step:** 2b — one paired probe at another hour (the reader once; only on 429 the command-line
-  client once, ≥ 5 min later, both preserved); the reader changes only on a proven difference, and
-  only as the operator's policy describes. No Register B workflow before the reader has read one 200.
-  Then increment 3: the 2018–2022 baseline for Register A and the stability test of every fixed word.
+- **Step 2b done 2026-10-20 (second pass)** (`docs/2026-10-20-synthetic-flood-v0-schritt-2b.md`):
+  reader once at 09:40:58 UTC → 429; command-line client once at 09:46:26 → 429
+  (`x-envoy-ratelimited: true`, `retry-after: 33`); both preserved in
+  `syntheticflood/probes/2026-10-20/`. No client difference proven; the reader stays unchanged. Most
+  likely the edge limit sits on this container's shared egress address (not proven). Two requests,
+  no repeat.
+- **Next step:** increment 3 — the 2018–2022 baseline for Register A (PubMed counts) and the
+  stability test of every `fixed` word. Register B stays closed until the reader reads one 200; one
+  hand-started run on a runner is asked in `REQUESTS.md` (2026-10-20), nothing is started by the pass.
   Only on nights the focus waits.
 - **Updated:** 2026-10-20 (pass)
 

@@ -33,6 +33,20 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-10-20 — The Synthetic Flood: may one hand-started run read Register B from a runner?
+
+**Request:** From this container the Wikipedia category request got 429 at two hours and from two
+clients (`docs/2026-10-20-synthetic-flood-v0-schritt-2b.md`, probes in
+`syntheticflood/probes/2026-10-20/`), so the limit most likely sits on the shared egress address, not
+on the reader; may the reader run **once**, started by hand on a repository runner (another address),
+to show whether it reads a 200 there before any Register B workflow is written?
+**Why:** without one 200 the rule of increment 2 keeps Register B closed, and a reader rebuilt on a
+guess would be guessing past the operator's policy.
+**What it enables:** the decision whether Register B is readable at all from the practice's own
+infrastructure; until then V0 goes on with Register A (increment 3), which waits on nothing.
+**Status:** open · no deadline: silence through the next pass means Register B stays closed and
+increment 3 goes first; nothing is started by this pass.
+
 ## 2026-10-18 — The Synthetic Flood: the AUDIT is done and recommends a narrow V0
 
 **Request:** The audit (`docs/2026-10-18-synthetic-flood-audit.md`, probes in
