@@ -17,9 +17,9 @@ RUNNING (any time: RETIRED).*
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) **2026-10-19, week 1:** at 06:38 UTC the week's reading was not yet on main and `interval.yml` lists no run at all yet — its first scheduled firing; the planetary workflow, scheduled 06:40, ran at 11:08 and 11:39 on 10-17/10-18, so a delay of hours is the platform's norm. Tally at pass time: A1 missing 2026-10-19 (not yet run), A2 none, A3 none, B1 0 moves, B2 no change, B6 unchanged from the addendum (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). A run any day of ISO week 43 still counts; if none has landed by 2026-10-21 a `workflow_dispatch` is asked for in `REQUESTS.md` (2026-10-19). **Second pass 2026-10-19 (evening):** the week-1 reading landed (`interval/readings/2026-10-19.json`, workflow run 10:20 UTC per `autonomy/log.jsonl`); tally A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged — the request of the morning is closed as moot. Next Monday 2026-10-26: B2, B4, B6 for weeks 1–2. Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) **2026-10-19, week 1:** at 06:38 UTC the week's reading was not yet on main and `interval.yml` lists no run at all yet — its first scheduled firing; the planetary workflow, scheduled 06:40, ran at 11:08 and 11:39 on 10-17/10-18, so a delay of hours is the platform's norm. Tally at pass time: A1 missing 2026-10-19 (not yet run), A2 none, A3 none, B1 0 moves, B2 no change, B6 unchanged from the addendum (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). A run any day of ISO week 43 still counts; if none has landed by 2026-10-21 a `workflow_dispatch` is asked for in `REQUESTS.md` (2026-10-19). **Second pass 2026-10-19 (evening):** the week-1 reading landed (`interval/readings/2026-10-19.json`, workflow run 10:20 UTC per `autonomy/log.jsonl`); tally A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged — the request of the morning is closed as moot. Next Monday 2026-10-26: B2, B4, B6 for weeks 1–2. **2026-10-20:** nothing due (Tuesday; week 1 is read). Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-19 (pass)
+- **Updated:** 2026-10-20 (pass)
 
 ## Next
 
@@ -45,8 +45,9 @@ RUNNING (any time: RETIRED).*
   is deliberately not changed before the window. V0 increments 1–3 done 2026-10-14 to 2026-10-16.
 - **Gate:** the maintainer's GO of 2026-10-04 (wording private), audit recommendations
   taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
-- **Next step:** none on the instrument once the window opens; 2026-10-20 is the last day for a dated
-  addendum. From 2026-10-26 the pass notes B4 (first after-shift weekday). At 2026-11-04: a two-sentence
+- **Next step:** none on the instrument once the window opens; 2026-10-20 was the last day for a dated
+  addendum — **none taken** (2026-10-20: nothing in `planetary/readings/2026-10-19.json` or the tally
+  `python -m practice.planetary.experiment` calls for one; nights due 0 of 14, B4 undetermined, 2 days before the shift). From 2026-10-26 the pass notes B4 (first after-shift weekday). At 2026-11-04: a two-sentence
   review request in `REQUESTS.md`.
 - **Repair 2026-10-19 (second pass), before the window:** the workflow slot moved 06:40 → 08:10 UTC
   (`.github/workflows/planetary.yml`) — `planetary/readings/2026-10-19.json` carries publisher
@@ -56,7 +57,7 @@ RUNNING (any time: RETIRED).*
   hearing there (pairing B would restore the second register, audit flagship condition d).
 - **Substrate note:** after `pip install -e ./practice` module runs need no `PYTHONPATH`
   (checked 2026-10-16); without installation, `practice/` shadows the package.
-- **Updated:** 2026-10-19 (pass)
+- **Updated:** 2026-10-20 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 
@@ -80,11 +81,20 @@ RUNNING (any time: RETIRED).*
   query rebuilt, every count bound to the SHA-256 of its canonical answer). First reading
   `syntheticflood/readings/2026-09/2026-10-19.json`: cohort 2026-09 at M+1, 165 555 abstracts
   (165 058 at the audit a day earlier — revision already visible), 167 requests, 0 × 429.
-- **Next step:** V0 increment 2 — Register B, one daily `allcategories` request with the contact user
-  agent, sizes of the dated subcategories only, reader and verifier. Then increment 3: the 2018–2022
-  baseline (retrospective readings) and the stability test of every fixed word. No workflow before.
+- **Increment 2 done 2026-10-20** (`docs/2026-10-20-synthetic-flood-v0-inkrement-2.md`): Register B
+  reader `practice/src/practice/syntheticflood/wikipedia.py` + `categories.py` (one request, answer
+  preserved under `syntheticflood/snapshots/<date>-categories/`), `verify.py`
+  `check_syntheticflood_categories` (independent re-derivation from the bytes, names and sizes only),
+  tests `practice/tests/test_syntheticflood_categories.py`. First reading
+  `syntheticflood/categories/2026-10-20.json` is an **outage**: 4 × 429 from the reader, while a
+  command-line request with the same user agent a minute earlier got 200; a single diagnostic probe
+  (`syntheticflood/probes/2026-10-20/`) got 429 again. Six requests in total, then stopped.
+- **Next step:** 2b — one paired probe at another hour (the reader once; only on 429 the command-line
+  client once, ≥ 5 min later, both preserved); the reader changes only on a proven difference, and
+  only as the operator's policy describes. No Register B workflow before the reader has read one 200.
+  Then increment 3: the 2018–2022 baseline for Register A and the stability test of every fixed word.
   Only on nights the focus waits.
-- **Updated:** 2026-10-19 (second pass)
+- **Updated:** 2026-10-20 (pass)
 
 ## Parked
 

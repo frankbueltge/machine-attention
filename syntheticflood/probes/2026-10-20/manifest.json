@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "bytes": 274,
+      "client": "python urllib, the reader's headers, one attempt, no retry",
+      "file": "syntheticflood/probes/2026-10-20/mediawiki/allcategories-ai.txt",
+      "headers": {
+        "content-length": "274",
+        "content-type": "text/plain",
+        "retry-after": "2",
+        "server": "envoy",
+        "x-cache": "cp1112 miss, cp1112 pass"
+      },
+      "http_status": 429,
+      "kept": true,
+      "name": "allcategories-ai",
+      "request_headers": {
+        "Accept": "application/json",
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-20T06:43:57+00:00",
+      "sha256": "72e4f45e9f68b35cc4f88e421c638806b8e5ebfb962013d1df6adb96ea0b6fae",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=allcategories&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500"
+    }
+  ],
+  "run_date": "2026-10-20"
+}
