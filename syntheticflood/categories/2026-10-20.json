@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-20",
+  "error": "HTTP 429 after 4 attempts",
+  "finished_at": "2026-10-20T06:42:51+00:00",
+  "http_429": 4,
+  "requests": 4,
+  "schema": "syntheticflood-categories-v1",
+  "source": "en.wikipedia.org",
+  "started_at": "2026-10-20T06:39:19+00:00",
+  "status": null,
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=allcategories&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500",
+  "user_agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+}

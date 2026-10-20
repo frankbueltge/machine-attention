@@ -2083,6 +2083,85 @@ def check_syntheticflood(root: Path, registry_files: dict,
             _sf_row(rel, c, month, c.get("word"), registry_files, problems)
 
 
+SF_WIKI_URL = ("https://en.wikipedia.org/w/api.php?format=json&formatversion=2"
+               "&action=query&list=allcategories"
+               "&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500")
+SF_WIKI_FAMILIES = {
+    "Articles containing suspected AI-generated texts": "texts",
+    "Articles containing suspected AI-generated sources": "sources"}
+SF_WIKI_KEYS = {"schema", "date", "source", "url", "user_agent", "started_at",
+                "finished_at", "requests", "http_429", "status", "file",
+                "sha256", "error", "complete", "families", "unmatched"}
+SF_MONTHS = ("January", "February", "March", "April", "May", "June", "July",
+             "August", "September", "October", "November", "December")
+
+
+def _sf_wiki_derive(data: bytes) -> dict:
+    """Independent derivation of a Register B reading from its bytes."""
+    doc = json.loads(data)
+    fams = {k: {"container": None, "months": {}} for k in SF_WIKI_FAMILIES.values()}
+    unmatched = []
+    for row in doc["query"]["allcategories"]:
+        name, size = row["category"], int(row["size"])
+        if name in SF_WIKI_FAMILIES:
+            fams[SF_WIKI_FAMILIES[name]]["container"] = {
+                "size": size, "pages": int(row["pages"]), "subcats": int(row["subcats"])}
+            continue
+        head, sep, tail = name.rpartition(" from ")
+        parts = tail.split(" ")
+        if sep and head in SF_WIKI_FAMILIES and len(parts) == 2 \
+                and parts[0] in SF_MONTHS and re.fullmatch(r"\d{4}", parts[1]):
+            key = f"{parts[1]}-{SF_MONTHS.index(parts[0]) + 1:02d}"
+            fams[SF_WIKI_FAMILIES[head]]["months"][key] = size
+        else:
+            unmatched.append({"category": name, "size": size})
+    for f in fams.values():
+        f["months"] = dict(sorted(f["months"].items()))
+    return {"complete": "continue" not in doc, "families": fams,
+            "unmatched": unmatched}
+
+
+def check_syntheticflood_categories(root: Path, registry_files: dict,
+                                    problems: list[str]) -> None:
+    """Register B readings: one fixed request, the answer preserved, every
+    number re-derived from the preserved bytes, nothing but category names
+    and sizes."""
+    for rpath in sorted(root.glob("syntheticflood/categories/*.json")):
+        rel = rpath.relative_to(root).as_posix()
+        r = load(rpath)
+        if r.get("schema") != "syntheticflood-categories-v1":
+            problems.append(f"{rel}: unknown schema")
+            continue
+        if r.get("date") != rpath.stem:
+            problems.append(f"{rel}: date differs from its path")
+        extra = set(r) - SF_WIKI_KEYS
+        if extra:
+            problems.append(f"{rel}: fields outside category sizes {sorted(extra)}")
+        if r.get("url") != SF_WIKI_URL or r.get("source") != "en.wikipedia.org":
+            problems.append(f"{rel}: not the audited allcategories request")
+        if r.get("file") is None:
+            if "families" in r or not r.get("error"):
+                problems.append(f"{rel}: sizes without preserved bytes")
+            continue
+        entry = registry_files.get(r["file"])
+        if entry is None or entry.get("sha256") != r.get("sha256") \
+                or not r["file"].startswith(f"{SF_SNAP}/{rpath.stem}-"):
+            problems.append(f"{rel}: answer not manifested under its own date")
+            continue
+        if "families" not in r:
+            if not r.get("error"):
+                problems.append(f"{rel}: neither sizes nor an error")
+            continue
+        try:
+            want = _sf_wiki_derive((root / r["file"]).read_bytes())
+        except (ValueError, KeyError, TypeError):
+            problems.append(f"{rel}: preserved answer does not parse")
+            continue
+        for key in ("complete", "families", "unmatched"):
+            if r.get(key) != want[key]:
+                problems.append(f"{rel}: {key} differs from the preserved answer")
+
+
 def check(root: Path) -> list[str]:
     problems: list[str] = []
     registry_files: dict[str, dict] = {}
@@ -2170,6 +2249,7 @@ def check(root: Path) -> list[str]:
     check_planetary(root, registry_files, problems)
     check_planetary_experiment(root, problems)
     check_syntheticflood(root, registry_files, problems)
+    check_syntheticflood_categories(root, registry_files, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
