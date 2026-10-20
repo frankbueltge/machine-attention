@@ -22,6 +22,53 @@
       "sha256": "72e4f45e9f68b35cc4f88e421c638806b8e5ebfb962013d1df6adb96ea0b6fae",
       "source": "mediawiki",
       "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=allcategories&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500"
+    },
+    {
+      "bytes": 274,
+      "client": "python urllib, the reader's headers, one attempt, no retry (step 2b, second hour)",
+      "file": "syntheticflood/probes/2026-10-20/mediawiki/allcategories-ai-reader-0940.txt",
+      "headers": {
+        "content-length": "274",
+        "content-type": "text/plain",
+        "retry-after": "1",
+        "server": "envoy",
+        "x-cache": "cp1108 miss, cp1108 pass"
+      },
+      "http_status": 429,
+      "kept": true,
+      "name": "allcategories-ai-reader-0940",
+      "request_headers": {
+        "Accept": "application/json",
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-20T09:40:58+00:00",
+      "sha256": "f1363c698deda1a546ba8df851a4188eb16864fcf72fd05fd9baa2a2c5db8364",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=allcategories&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500"
+    },
+    {
+      "bytes": 274,
+      "client": "command-line client (curl 8.5.0, HTTP/2), same user agent, default Accept, one attempt, 328 s after the reader (step 2b)",
+      "file": "syntheticflood/probes/2026-10-20/mediawiki/allcategories-ai-cli-0946.txt",
+      "headers": {
+        "content-length": "274",
+        "content-type": "text/plain",
+        "retry-after": "33",
+        "server": "envoy",
+        "x-cache": "cp1112 miss, cp1112 pass",
+        "x-envoy-ratelimited": "true"
+      },
+      "http_status": 429,
+      "kept": true,
+      "name": "allcategories-ai-cli-0946",
+      "request_headers": {
+        "Accept": "*/*",
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-20T09:46:26+00:00",
+      "sha256": "f207a58b3261aa726e6fd1f960ac4b4b62dbbb0aa6dc85c4415a329f8cda0a57",
+      "source": "mediawiki",
+      "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=allcategories&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500"
     }
   ],
   "run_date": "2026-10-20"
