@@ -1994,8 +1994,11 @@ SF_ROW_KEYS = {"list", "word", "term", "url", "status", "bytes", "sha256",
 def _sf_url(month: str, word: str | None) -> tuple[str, str]:
     """Independent rebuild of the deterministic esearch count query."""
     from urllib.parse import quote_plus
-    year, mm = month.split("-")
-    term = f"hasabstract AND {year}/{mm}[dp]"
+    if "-" in month:
+        year, mm = month.split("-")
+        term = f"hasabstract AND {year}/{mm}[dp]"
+    else:
+        term = f"hasabstract AND {month}[dp]"
     if word:
         term = f"{word}[tiab] AND {term}"
     return term, (f"https://{SF_HOST}/entrez/eutils/esearch.fcgi?db=pubmed"
@@ -2058,11 +2061,12 @@ def check_syntheticflood(root: Path, registry_files: dict,
             continue
         month = rpath.parent.name
         if r.get("cohort") != month or r.get("date") != rpath.stem \
-                or not re.fullmatch(r"\d{4}-(0[1-9]|1[0-2])", month):
+                or not re.fullmatch(r"\d{4}(-(0[1-9]|1[0-2]))?", month):
             problems.append(f"{rel}: cohort or date differs from its path")
             continue
+        # A year cohort (baseline) ends in December.
         n = (int(rpath.stem[:4]) - int(month[:4])) * 12 + \
-            int(rpath.stem[5:7]) - int(month[5:7])
+            int(rpath.stem[5:7]) - (int(month[5:7]) if "-" in month else 12)
         if n < 1 or r.get("lag_months") != n or r.get("value") != (n == 3) \
                 or r.get("retrospective") != (n > 3):
             problems.append(f"{rel}: lag, value or retrospective mark is wrong")
@@ -2081,6 +2085,72 @@ def check_syntheticflood(root: Path, registry_files: dict,
         _sf_row(rel, r.get("total") or {}, month, None, registry_files, problems)
         for c in r.get("counts", []):
             _sf_row(rel, c, month, c.get("word"), registry_files, problems)
+
+
+SF_BASE_YEARS = ("2018", "2019", "2020", "2021", "2022")
+SF_BASE_RULES = {"baseline-v1": {"years": list(SF_BASE_YEARS), "min_count": 50,
+                                 "max_ratio": 1.5}}
+
+
+def check_syntheticflood_baseline(root: Path, problems: list[str]) -> None:
+    """The stability test of a word list: every number re-derived from the
+    committed year readings it names, under a rule that never changes."""
+    for bpath in sorted(root.glob("syntheticflood/baseline/*.json")):
+        rel = bpath.relative_to(root).as_posix()
+        b = load(bpath)
+        rule = b.get("rule") or {}
+        params = SF_BASE_RULES.get(rule.get("id"))
+        if b.get("schema") != "syntheticflood-baseline-v1" or params is None \
+                or {k: v for k, v in rule.items() if k != "id"} != params:
+            problems.append(f"{rel}: unknown schema or rule changed under its id")
+            continue
+        wl = b.get("wordlist") or {}
+        wfile = root / str(wl.get("file", ""))
+        if wl.get("version") != bpath.stem or not wfile.is_file() \
+                or sha256_file(wfile) != wl.get("sha256"):
+            problems.append(f"{rel}: word list missing, changed or not its name")
+            continue
+        doc = load(wfile)
+        reads, totals = {}, {}
+        for y in SF_BASE_YEARS:
+            ref = (b.get("readings") or {}).get(y) or {}
+            f = str(ref.get("file", ""))
+            rp = root / f
+            newest = sorted(p for p in (root / "syntheticflood/readings" / y).glob("*.json")
+                            if load(p).get("wordlist", {}).get("version") == bpath.stem)
+            if not f.startswith(f"syntheticflood/readings/{y}/") or not rp.is_file() \
+                    or sha256_file(rp) != ref.get("sha256") or not newest or newest[-1] != rp:
+                problems.append(f"{rel}: {y}: not the newest committed year reading")
+                break
+            reads[y] = load(rp)
+            totals[y] = reads[y].get("total", {}).get("count")
+        else:
+            want_terms = [(n, w) for n in SF_LISTS for w in doc.get(n) or []]
+            if b.get("totals") != totals or [(w.get("list"), w.get("word"))
+                                             for w in b.get("words", [])] != want_terms:
+                problems.append(f"{rel}: totals or words differ from the readings")
+                continue
+            for i, w in enumerate(b["words"]):
+                counts = {y: reads[y]["counts"][i]["count"] for y in SF_BASE_YEARS}
+                shares = {y: round(counts[y] / totals[y], 9) for y in SF_BASE_YEARS}
+                low, high = min(shares.values()), max(shares.values())
+                ratio = round(high / low, 4) if low > 0 else None
+                if min(counts.values()) < params["min_count"]:
+                    v = "rare"
+                elif ratio <= params["max_ratio"]:
+                    v = "stable"
+                else:
+                    up = shares[SF_BASE_YEARS[-1]] > shares[SF_BASE_YEARS[0]]
+                    v = "drifting-rising" if up else "drifting-falling"
+                if (w.get("counts"), w.get("shares"), w.get("ratio"), w.get("verdict"),
+                        w.get("min_count")) != (counts, shares, ratio, v, min(counts.values())):
+                    problems.append(f"{rel}: {w.get('word')}: differs from the readings")
+            tally: dict = {}
+            for w in b["words"]:
+                tally.setdefault(w["list"], {}).setdefault(w["verdict"], 0)
+                tally[w["list"]][w["verdict"]] += 1
+            if b.get("tally") != tally:
+                problems.append(f"{rel}: tally differs from the words")
 
 
 SF_WIKI_URL = ("https://en.wikipedia.org/w/api.php?format=json&formatversion=2"
@@ -2250,6 +2320,7 @@ def check(root: Path) -> list[str]:
     check_planetary_experiment(root, problems)
     check_syntheticflood(root, registry_files, problems)
     check_syntheticflood_categories(root, registry_files, problems)
+    check_syntheticflood_baseline(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"

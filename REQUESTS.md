@@ -45,7 +45,10 @@ guess would be guessing past the operator's policy.
 **What it enables:** the decision whether Register B is readable at all from the practice's own
 infrastructure; until then V0 goes on with Register A (increment 3), which waits on nothing.
 **Status:** open · no deadline: silence through the next pass means Register B stays closed and
-increment 3 goes first; nothing is started by this pass.
+increment 3 goes first; nothing is started by this pass. (2026-10-21: silence held; Register B stays closed and
+V0 increment 3, the 2018–2022 baseline of Register A, is committed —
+`docs/2026-10-21-synthetic-flood-v0-inkrement-3.md`. The question stays open for your answer; nothing
+was started on a runner.)
 
 ## 2026-10-18 — The Synthetic Flood: the AUDIT is done and recommends a narrow V0
 

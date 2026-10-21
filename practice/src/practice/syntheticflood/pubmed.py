@@ -18,9 +18,13 @@ TOOL = "machine-attention"
 
 
 def cohort_term(month: str, word: str | None = None) -> str:
-    """month is YYYY-MM; word None means the whole cohort (the denominator)."""
-    year, mm = month.split("-")
-    base = f"hasabstract AND {year}/{mm}[dp]"
+    """month is YYYY-MM, or YYYY for a whole baseline year; word None means
+    the whole cohort (the denominator)."""
+    if "-" in month:
+        year, mm = month.split("-")
+        base = f"hasabstract AND {year}/{mm}[dp]"
+    else:
+        base = f"hasabstract AND {month}[dp]"
     return f"{word}[tiab] AND {base}" if word else base
 
 
