@@ -26,7 +26,9 @@ VALUE_LAG = 3
 
 
 def lag(cohort: str, read_on: str) -> int:
-    cy, cm = (int(x) for x in cohort.split("-"))
+    """Months from the cohort's last month; a year cohort (YYYY) ends in
+    December."""
+    cy, cm = (int(x) for x in cohort.split("-")) if "-" in cohort else (int(cohort), 12)
     ry, rm = (int(x) for x in read_on[:7].split("-"))
     return (ry - cy) * 12 + (rm - cm)
 
@@ -95,7 +97,7 @@ def reading_path(repo_root: Path, cohort: str, read_on: str) -> Path:
 def main(argv=None) -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--repo-root", type=Path, default=Path("."))
-    p.add_argument("--cohort", required=True, help="YYYY-MM")
+    p.add_argument("--cohort", required=True, help="YYYY-MM, or YYYY for a baseline year")
     p.add_argument("--date", default=date.today().isoformat())
     p.add_argument("--wordlist", default="wordlist-v1")
     args = p.parse_args(argv)
