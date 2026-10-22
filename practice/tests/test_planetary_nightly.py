@@ -132,3 +132,28 @@ def test_verifier_recomputes_reingestion_events(tmp_path):
     reading["reingestion"]["events"] = []      # a rewrite silently dropped
     path.write_text(json.dumps(reading))
     assert any("recomputation" in p for p in problems())
+
+
+class TimeoutClient(FakeClient):
+    def fetch(self, url, headers=None):
+        if "dataselect" in url:
+            from practice.fetch import SourceUnavailable
+            raise SourceUnavailable(url, "network error: TimeoutError after 4 attempts")
+        return super().fetch(url, headers)
+
+
+def test_a_host_that_times_out_is_a_failed_night_not_a_lost_one(tmp_path):
+    # 2026-10-21, the first window night: GEOFON's dataselect timed out four times, the
+    # exception escaped run() and no reading was written, so A1 lost the night instead of
+    # A2 counting it. The night is written, the day file an outage with its cause named.
+    extent = (SNAP / "extent.txt").read_bytes()
+    r = nightly.run(tmp_path, client=TimeoutClient(extent), today="2026-10-15")
+    sd = r["station_day"]
+    assert sd["outage"] is True and sd["http_status"] == 0
+    assert sd["cause"] == "network error: TimeoutError after 4 attempts"
+    assert r["requests"][0]["error"] == sd["cause"]
+    assert "error" not in r["requests"][1]
+    assert r["publisher"]["extent"]["rows"]   # the rest of the night still read
+    assert (tmp_path / nightly.READINGS / "2026-10-15.json").exists()
+    from practice.planetary import experiment
+    assert experiment.failures(r) == ["day file 0"]
