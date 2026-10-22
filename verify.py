@@ -2153,6 +2153,97 @@ def check_syntheticflood_baseline(root: Path, problems: list[str]) -> None:
                 problems.append(f"{rel}: tally differs from the words")
 
 
+SF_EXCESS_RULES = {"excess-v1": {"min_ratio": 2.0, "min_count": 50, "max_words": 20,
+                                 "control_band": 1.5}}
+
+
+def _sf_expected(shares: dict, cohort: str) -> float:
+    """The baseline's least-squares line at the cohort's position, rebuilt
+    here independently of practice.syntheticflood.excess."""
+    if "-" in cohort:
+        y, m = cohort.split("-")
+        pos = int(y) + (int(m) - 0.5) / 12 - 0.5
+    else:
+        pos = float(int(cohort))
+    xs = [float(y) for y in shares]
+    ys = list(shares.values())
+    mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
+    slope = sum((x - mx) * (v - my) for x, v in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
+    return (my - slope * mx) + slope * pos
+
+
+def check_syntheticflood_derived(root: Path, problems: list[str]) -> None:
+    """A derived list: every ratio re-derived from the cohort reading and the
+    baseline it names by hash, under a rule that never changes."""
+    for dpath in sorted(root.glob("syntheticflood/derived/*/*.json")):
+        rel = dpath.relative_to(root).as_posix()
+        d = load(dpath)
+        rule = d.get("rule") or {}
+        params = SF_EXCESS_RULES.get(rule.get("id"))
+        if d.get("schema") != "syntheticflood-derived-v1" or params is None \
+                or {k: v for k, v in rule.items() if k != "id"} != params:
+            problems.append(f"{rel}: unknown schema or rule changed under its id")
+            continue
+        cohort = dpath.parent.name
+        if d.get("cohort") != cohort or d.get("date") != dpath.stem \
+                or cohort in SF_BASE_YEARS:
+            problems.append(f"{rel}: cohort or date is not its path")
+            continue
+        refs = {}
+        for key, want in (("reading", f"syntheticflood/readings/{cohort}/{dpath.stem}.json"),
+                          ("baseline", None)):
+            ref = d.get(key) or {}
+            f = str(ref.get("file", ""))
+            if (want and f != want) or not (root / f).is_file() \
+                    or sha256_file(root / f) != ref.get("sha256"):
+                problems.append(f"{rel}: {key} missing, changed or not the one named")
+                break
+            refs[key] = load(root / f)
+        else:
+            r, b = refs["reading"], refs["baseline"]
+            if b.get("schema") != "syntheticflood-baseline-v1" \
+                    or r.get("wordlist") != b.get("wordlist") \
+                    or d.get("wordlist") != b.get("wordlist"):
+                problems.append(f"{rel}: reading and baseline on different word lists")
+                continue
+            total = (r.get("total") or {}).get("count")
+            counts = r.get("counts") or []
+            if [(c.get("list"), c.get("word")) for c in counts] != \
+                    [(w.get("list"), w.get("word")) for w in b.get("words", [])] \
+                    or total is None or any(c.get("count") is None for c in counts) \
+                    or d.get("total") != total or d.get("value") != r.get("value") \
+                    or d.get("lag_months") != r.get("lag_months"):
+                problems.append(f"{rel}: reading incomplete or not the baseline's words")
+                continue
+            rows = []
+            for c, w in zip(counts, b["words"]):
+                row = {"list": w["list"], "word": w["word"], "count": c["count"]}
+                exp = _sf_expected(w["shares"], cohort) if w["verdict"] != "rare" else None
+                if exp is None:
+                    row["status"] = "rare"
+                elif exp <= 0:
+                    row["status"] = "no_trend"
+                else:
+                    obs = c["count"] / total
+                    row.update(status="measured", expected=round(exp, 9),
+                               observed=round(obs, 9), ratio=round(obs / exp, 4))
+                rows.append(row)
+            band = params["control_band"]
+            breach = [x["word"] for x in rows if x["list"] == "controls"
+                      and x["status"] == "measured"
+                      and not 1 / band <= x["ratio"] <= band]
+            pool = sorted((x for x in rows if x["list"] == "pool"
+                           and x["status"] == "measured"
+                           and x["ratio"] >= params["min_ratio"]
+                           and x["count"] >= params["min_count"]),
+                          key=lambda x: (-x["ratio"], x["word"]))
+            if d.get("words") != rows:
+                problems.append(f"{rel}: words differ from the reading and baseline")
+            if d.get("control_breach") != breach \
+                    or d.get("derived") != [x["word"] for x in pool[:params["max_words"]]]:
+                problems.append(f"{rel}: derived list or control breach differs")
+
+
 SF_WIKI_URL = ("https://en.wikipedia.org/w/api.php?format=json&formatversion=2"
                "&action=query&list=allcategories"
                "&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500")
@@ -2321,6 +2412,7 @@ def check(root: Path) -> list[str]:
     check_syntheticflood(root, registry_files, problems)
     check_syntheticflood_categories(root, registry_files, problems)
     check_syntheticflood_baseline(root, problems)
+    check_syntheticflood_derived(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
