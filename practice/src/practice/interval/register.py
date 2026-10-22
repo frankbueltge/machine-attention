@@ -38,7 +38,8 @@ DRIVERS = "interval/drivers.json"
 SNAPSHOTS = "interval/snapshots"
 IPC_FILE = "ipc/ipc_global_national_long.csv"
 SETS = {"fsc": "destinationGlobalClusterCode:FSC", "total": None}
-DRIVER_VALUES = ("drought", "conflict", "economic", "mixed", "unassigned")
+DRIVER_VALUES = ("drought", "conflict", "economic", "mixed", "weather",
+                 "unassigned")
 _PAGE = re.compile(r"^(fsc|total)-([0-9_]+)-p(\d{3})\.json$")
 
 

@@ -1347,7 +1347,7 @@ IV_THETAS = (0.05, 0.10, 0.25)
 IV_KS = (2, 3)
 IV_AXES = ("date", "firstReportedDate")
 IV_SETS = ("fsc", "total")
-IV_DRIVERS = ("drought", "conflict", "economic", "mixed", "unassigned")
+IV_DRIVERS = ("drought", "conflict", "economic", "mixed", "weather", "unassigned")
 IV_MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
              "Oct", "Nov", "Dec")
 IV_PAGE = re.compile(r"^(fsc|total)-([0-9_]+)-p(\d{3})\.json$")
@@ -1790,6 +1790,109 @@ def check_interval(root: Path, problems: list[str]) -> None:
                             "in the snapshot")
     else:
         problems.append(f"{rel}: header differs from its recomputation")
+
+
+# The Interval driver rule (2026-10-22, docs/2026-10-22-the-interval-treiber-regel.md):
+# every drivers.json entry that names `drivers-grfc-v1` is re-derived here from the
+# committed GRFC xlsx, with the standard library and without the practice package.
+IV_GRFC_RULE = "drivers-grfc-v1"
+IV_GRFC_PRIMARY = {"Conflict/insecurity": "conflict", "Economic shocks": "economic",
+                   "Weather extremes": "weather"}
+
+
+def _iv_grfc_rows(data: bytes) -> list[dict[str, str]]:
+    import io
+    import zipfile
+    from xml.etree import ElementTree as ET
+    ns = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+    rel = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
+    pkg = "{http://schemas.openxmlformats.org/package/2006/relationships}"
+    text = lambda n: "".join(t.text or "" for t in n.iter(ns + "t"))  # noqa: E731
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+        strings = ([text(si) for si in ET.fromstring(
+            z.read("xl/sharedStrings.xml")).iter(ns + "si")]
+            if "xl/sharedStrings.xml" in z.namelist() else [])
+        first = next(ET.fromstring(z.read("xl/workbook.xml")).iter(ns + "sheet"))
+        target = {r.get("Id"): r.get("Target") for r in ET.fromstring(
+            z.read("xl/_rels/workbook.xml.rels")).iter(pkg + "Relationship")}[
+            first.get(rel + "id")]
+        target = target.lstrip("/")
+        sheet = ET.fromstring(z.read(target if target.startswith("xl/")
+                                     else "xl/" + target))
+    grid = []
+    for row in sheet.iter(ns + "row"):
+        cells = {}
+        for c in row.iter(ns + "c"):
+            col = re.match(r"[A-Z]+", c.get("r")).group(0)
+            v = c.find(ns + "v")
+            if c.get("t") == "inlineStr":
+                cells[col] = text(c)
+            elif v is not None:
+                cells[col] = strings[int(v.text)] if c.get("t") == "s" else v.text
+        grid.append(cells)
+    head = grid[0] if grid else {}
+    return [{name: r.get(col, "") for col, name in head.items()} for r in grid[1:]]
+
+
+def _iv_grfc_assign(rows: list[dict[str, str]], country: str, t0: str) -> dict:
+    year = int(t0[:4])
+
+    def ref(r):
+        try:
+            return int(float(r.get("Year of reference")))
+        except (TypeError, ValueError):
+            return None
+
+    def edition(r):
+        m = re.fullmatch(r"(\d{4})( MYU)?", r.get("GRFC edition", "").strip())
+        if not m:
+            raise ValueError(f"unknown GRFC edition {r.get('GRFC edition')!r}")
+        return (int(m.group(1)), bool(m.group(2)))
+
+    hits = [r for r in rows if r.get("ISO Code 3", "").strip() == country
+            and ref(r) == year]
+    if not hits:
+        return {"driver": "unassigned", "primary": None, "secondary": [],
+                "grfc_edition": None, "year_of_reference": year}
+    row = sorted(hits, key=edition)[-1]
+    primary = row.get("Primary driver", "").strip()
+    rest = [row.get(k, "").strip() for k in ("Secondary driver", "Tertiary driver")]
+    return {"driver": IV_GRFC_PRIMARY.get(primary, "unassigned"),
+            "primary": primary or None,
+            "secondary": [x for x in rest if x not in ("", "N/A", "None")],
+            "grfc_edition": row.get("GRFC edition", "").strip(),
+            "year_of_reference": year}
+
+
+def check_interval_drivers(root: Path, problems: list[str]) -> None:
+    rel = "interval/drivers.json"
+    if not (root / rel).exists():
+        return
+    cache: dict[str, list] = {}
+    for d in load(root / rel).get("drivers", []):
+        if "rule" not in d:
+            continue
+        key = f"{d.get('country')} {d.get('t0')}"
+        if d["rule"] != IV_GRFC_RULE:
+            problems.append(f"{rel}: {key}: unknown rule {d['rule']!r}")
+            continue
+        src = d.get("grfc_file")
+        path = root / src if src else None
+        if d.get("driver") != "unassigned" and d.get("source") != src:
+            problems.append(f"{rel}: {key}: source is not the GRFC file")
+        if path is None or not path.is_file():
+            problems.append(f"{rel}: {key}: GRFC file {src!r} not committed")
+            continue
+        if sha256_file(path) != d.get("source_sha256"):
+            problems.append(f"{rel}: {key}: GRFC file changed without its hash")
+            continue
+        if src not in cache:
+            cache[src] = _iv_grfc_rows(path.read_bytes())
+        want = _iv_grfc_assign(cache[src], d.get("country", ""), d.get("t0", ""))
+        got = {k: d.get(k) for k in want}
+        if got != want:
+            problems.append(f"{rel}: {key}: differs from {IV_GRFC_RULE} "
+                            f"re-derived ({got} != {want})")
 
 
 # Planetary Listening (V0 increment 1, 2026-10-14). The declared theatre lives
@@ -2405,6 +2508,7 @@ def check(root: Path) -> list[str]:
     check_memoryhole(root, registry_files, problems)
     check_memoryhole_verdicts(root, problems)
     check_interval(root, problems)
+    check_interval_drivers(root, problems)
     check_interval_readings(root, problems)
     check_interval_experiment(root, problems)
     check_planetary(root, registry_files, problems)
