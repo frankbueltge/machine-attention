@@ -33,16 +33,16 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
-## 2026-10-22 — Planetary Listening: the first window night was lost; a repair lands inside the window
+## 2026-10-22 — The Interval: a driver source inside the charter exists; enter it inside the window?
 
-**Request:** The night 2026-10-21 has no reading because a GEOFON timeout crashed the run instead
-of being recorded as a failed night (run `planetary` #6; `docs/2026-10-22-planetary-listening-reparatur-ausfall.md`);
-tonight's delivery repairs `nightly.py` so the next such night is written with its cause and counted
-by A2, which is a code change inside the window that the review is yours to weigh. If
-`planetary/readings/2026-10-22.json` is not on main by 23:00 UTC today, please start the workflow by
-hand (`workflow_dispatch`) once this delivery has landed — a second missing night in a row would
-break A1, and only a same-date run counts (criteria §1).
-**Status:** open
+**Request:** The Global Report on Food Crises database on HDX (CC BY, keyless, the same host as the
+IPC file) names a primary, secondary and tertiary driver per country and year, which makes seven of the
+eight episodes in `interval/drivers.json` assignable by a mechanical rule
+(`docs/2026-10-22-the-interval-treiber-quelle-audit.md`, probe in `interval/probes/2026-10-22/`). B5 has
+no bar, but entering drivers changes `interval/register.json` inside the window: silence through the
+next pass means the pass first commits the rule `drivers-grfc-v1` as tested code and enters the drivers
+only after the window closes on 2026-11-15; say so if you want them in the window instead.
+**Status:** open · no deadline.
 
 ## 2026-10-20 — The Synthetic Flood: may one hand-started run read Register B from a runner?
 
@@ -262,6 +262,19 @@ every policy on the site would read alike would have been a downgrade for no gai
 investigation ever needs an inline script, that is a request, and this file is where it goes.
 
 ## Closed
+
+## 2026-10-22 — Planetary Listening: the first window night was lost; a repair lands inside the window
+
+**Request:** The night 2026-10-21 has no reading because a GEOFON timeout crashed the run instead
+of being recorded as a failed night (run `planetary` #6; `docs/2026-10-22-planetary-listening-reparatur-ausfall.md`);
+tonight's delivery repairs `nightly.py` so the next such night is written with its cause and counted
+by A2, which is a code change inside the window that the review is yours to weigh. If
+`planetary/readings/2026-10-22.json` is not on main by 23:00 UTC today, please start the workflow by
+hand (`workflow_dispatch`) once this delivery has landed — a second missing night in a row would
+break A1, and only a same-date run counts (criteria §1).
+**Status:** closed 2026-10-22 (third pass) · moot: `planetary/readings/2026-10-22.json` landed on main
+at 13:44 UTC (commit `7c96e7b`), so no dispatch is needed; the night 2026-10-21 stays the one missing
+night A1 allows. The repair itself remains yours to weigh at the review.
 
 ## 2026-10-19 — The Interval: week 1 needs its reading inside ISO week 43
 

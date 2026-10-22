@@ -1,0 +1,126 @@
+{
+  "entries": [
+    {
+      "bytes": 5552,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "text/html; charset=UTF-8",
+      "file": "interval/probes/2026-10-22/ipcinfo/robots.txt",
+      "http_status": 403,
+      "kept_bytes": 5552,
+      "name": "robots",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:06+00:00",
+      "sha256": "53c02a591a6bc5df30785fb71e7731216306b71656e29f574da54efb23aaa079",
+      "source": "ipcinfo",
+      "truncated": false,
+      "url": "https://www.ipcinfo.org/robots.txt"
+    },
+    {
+      "bytes": 5546,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "text/html; charset=UTF-8",
+      "file": "interval/probes/2026-10-22/ipcinfo/llms.txt",
+      "http_status": 403,
+      "kept_bytes": 5546,
+      "name": "llms",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:09+00:00",
+      "sha256": "eb751b87817c84b891d9f6aa908a8f277f3b3c115031b25dea2a326535c11c63",
+      "source": "ipcinfo",
+      "truncated": false,
+      "url": "https://www.ipcinfo.org/llms.txt"
+    },
+    {
+      "bytes": 2323,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": "interval/probes/2026-10-22/reliefweb/robots.txt",
+      "http_status": 200,
+      "kept_bytes": 2323,
+      "name": "robots",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:11+00:00",
+      "sha256": "1cdf7738c4031a4374770efadad1961d9f316efa95bbfddf00333f5fc835d07c",
+      "source": "reliefweb",
+      "truncated": false,
+      "url": "https://reliefweb.int/robots.txt"
+    },
+    {
+      "bytes": 218,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "interval/probes/2026-10-22/reliefweb/api-reports-som.json",
+      "http_status": 403,
+      "kept_bytes": 218,
+      "name": "api-reports-som",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:13+00:00",
+      "sha256": "3c7dcb80efbb885654d8ddd6eb2b24f660025ae87e302971d9fa5cd122a2c400",
+      "source": "reliefweb",
+      "truncated": false,
+      "url": "https://api.reliefweb.int/v2/reports?appname=machine-attention&limit=1&filter[field]=primary_country.iso3&filter[value]=som"
+    },
+    {
+      "bytes": 40423,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "application/json;charset=utf-8",
+      "file": "interval/probes/2026-10-22/hdx/search-grfc.json",
+      "http_status": 200,
+      "kept_bytes": 40423,
+      "name": "search-grfc",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:15+00:00",
+      "sha256": "c1148bf43842b75767fb02a32fd04ef6c3a2209d5e727b8747cb69cf649424b5",
+      "source": "hdx",
+      "truncated": false,
+      "url": "https://data.humdata.org/api/3/action/package_search?q=%22global+report+on+food+crises%22&rows=5"
+    },
+    {
+      "bytes": 294,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "application/json;charset=utf-8",
+      "file": "interval/probes/2026-10-22/hdx/search-hunger-hotspots.json",
+      "http_status": 200,
+      "kept_bytes": 294,
+      "name": "search-hunger-hotspots",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:18+00:00",
+      "sha256": "8b0409239393d27e5d027703951d9eebfda691df5278b5943960a46d9b1faccc",
+      "source": "hdx",
+      "truncated": false,
+      "url": "https://data.humdata.org/api/3/action/package_search?q=%22hunger+hotspots%22&rows=5"
+    },
+    {
+      "bytes": 197955,
+      "client": "python urllib, one attempt, no retry",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "file": "interval/probes/2026-10-22/hdx/grfc_afi_database_2016-2025_september_update.xlsx",
+      "final_url": "https://s3.us-east-1.amazonaws.com/hdx-production-filestore/resources/82ec0f74-db68-4b49-b300-3f469eff2a0d/grfc_afi_database_2016-2025_september_update.xlsx",
+      "final_url_note": "redirect to the publisher's file store; signed query string not kept",
+      "http_status": 200,
+      "kept_bytes": 197955,
+      "licence": "cc-by (HDX package fsin-grfc)",
+      "name": "grfc-afi-2016-2025-september",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-22T14:17:38+00:00",
+      "sha256": "44de722610a435d1cd37b08b4c6545c7b5064631cb27b05e52481886f8c1a780",
+      "source": "hdx",
+      "truncated": false,
+      "url": "https://data.humdata.org/dataset/9fbae50f-9f74-4946-bd2b-a779af116ba4/resource/82ec0f74-db68-4b49-b300-3f469eff2a0d/download/grfc_afi_database_2016-2025_september_update.xlsx"
+    }
+  ]
+}
