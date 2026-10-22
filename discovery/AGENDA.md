@@ -17,9 +17,9 @@ RUNNING (any time: RETIRED).*
 - **Sources:** IPC on HDX (CC0) and OCHA FTS, both keyless. **The FEWS NET data
   warehouse is not to be fetched** — its operator asks automated and AI clients not
   to (candidate document §2); asking FEWS NET for access is the maintainer's call (§7).
-- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) **2026-10-19, week 1:** at 06:38 UTC the week's reading was not yet on main and `interval.yml` lists no run at all yet — its first scheduled firing; the planetary workflow, scheduled 06:40, ran at 11:08 and 11:39 on 10-17/10-18, so a delay of hours is the platform's norm. Tally at pass time: A1 missing 2026-10-19 (not yet run), A2 none, A3 none, B1 0 moves, B2 no change, B6 unchanged from the addendum (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). A run any day of ISO week 43 still counts; if none has landed by 2026-10-21 a `workflow_dispatch` is asked for in `REQUESTS.md` (2026-10-19). **Second pass 2026-10-19 (evening):** the week-1 reading landed (`interval/readings/2026-10-19.json`, workflow run 10:20 UTC per `autonomy/log.jsonl`); tally A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged — the request of the morning is closed as moot. Next Monday 2026-10-26: B2, B4, B6 for weeks 1–2. **2026-10-20:** nothing due (Tuesday; week 1 is read). **2026-10-21:** nothing due (Wednesday); tally unchanged — A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 43/77 vs 3/7 at FSC·date·k=2. Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
+- **Next step:** none on the instrument until the window runs — the weekly workflow carries it. (2026-10-16 and 2026-10-18: checked, nothing due — the window opens Monday 2026-10-19; no criteria change landed on the last day.) **2026-10-19, week 1:** at 06:38 UTC the week's reading was not yet on main and `interval.yml` lists no run at all yet — its first scheduled firing; the planetary workflow, scheduled 06:40, ran at 11:08 and 11:39 on 10-17/10-18, so a delay of hours is the platform's norm. Tally at pass time: A1 missing 2026-10-19 (not yet run), A2 none, A3 none, B1 0 moves, B2 no change, B6 unchanged from the addendum (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). A run any day of ISO week 43 still counts; if none has landed by 2026-10-21 a `workflow_dispatch` is asked for in `REQUESTS.md` (2026-10-19). **Second pass 2026-10-19 (evening):** the week-1 reading landed (`interval/readings/2026-10-19.json`, workflow run 10:20 UTC per `autonomy/log.jsonl`); tally A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged — the request of the morning is closed as moot. Next Monday 2026-10-26: B2, B4, B6 for weeks 1–2. **2026-10-20:** nothing due (Tuesday; week 1 is read). **2026-10-21:** nothing due (Wednesday); tally unchanged — A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 43/77 vs 3/7 at FSC·date·k=2. **2026-10-22:** nothing due (Thursday); tally unchanged — A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change. Each Monday's pass runs the tally and notes B2, B4 and B6 in this file; nothing in the criteria moves after 2026-10-18. At 2026-11-16: a two-sentence review request in `REQUESTS.md`.
 - **Open, no gate:** all eight drivers in `interval/drivers.json` are `unassigned` — no in-charter driver source is preserved yet; find one (public, keyless) before any driver is entered.
-- **Updated:** 2026-10-21 (pass)
+- **Updated:** 2026-10-22 (pass)
 
 ## Next
 
@@ -47,7 +47,7 @@ RUNNING (any time: RETIRED).*
   taken for the open decisions. The audit's "Bewusst nicht" list binds V0.
 - **Next step:** none on the instrument once the window opens; 2026-10-20 was the last day for a dated
   addendum — **none taken** (2026-10-20: nothing in `planetary/readings/2026-10-19.json` or the tally
-  `python -m practice.planetary.experiment` calls for one; nights due 0 of 14, B4 undetermined, 2 days before the shift). **2026-10-21 (06:4x UTC):** first window night 2026-10-21 not yet due — the workflow slot is 08:10 UTC; tally lists it as missing at pass time (A1 still pass, nights due 1 of 14, 0 × 429, B4 undetermined); the next pass checks it landed. From 2026-10-26 the pass notes B4 (first after-shift weekday). At 2026-11-04: a two-sentence
+  `python -m practice.planetary.experiment` calls for one; nights due 0 of 14, B4 undetermined, 2 days before the shift). **2026-10-21 (06:4x UTC):** first window night 2026-10-21 not yet due — the workflow slot is 08:10 UTC; tally lists it as missing at pass time (A1 still pass, nights due 1 of 14, 0 × 429, B4 undetermined); the next pass checks it landed. **2026-10-22: it did not.** `planetary/readings/2026-10-21.json` is missing — run `planetary` #6 (2026-10-21 13:42–13:52 UTC) died on `SourceUnavailable` (GEOFON dataselect, TimeoutError after 4 attempts) and wrote nothing; the outage branch of the day routine is never taken on a network error. Tally at pass time: A1 missing 2026-10-21 and 2026-10-22 (the latter not yet run), A2 pass, A3 0, B4 undetermined, B6 0. **Repair 2026-10-22** (`docs/2026-10-22-planetary-listening-reparatur-ausfall.md`): `nightly.py` records a host without an answer as status 0 with its cause (`station_day.cause`, `requests[].error`), so the night is written and A2 counts it; test `test_a_host_that_times_out_is_a_failed_night_not_a_lost_one`; detector, spike, client timeouts, workflow and criteria untouched. 2026-10-21 stays the one missing night A1 allows; a second in a row breaks A1 — `workflow_dispatch` asked for in `REQUESTS.md` (2026-10-22) if 2026-10-22 has not landed by 23:00 UTC. The next pass checks 2026-10-22 and 2026-10-23 landed. From 2026-10-26 the pass notes B4 (first after-shift weekday). At 2026-11-04: a two-sentence
   review request in `REQUESTS.md`.
 - **Repair 2026-10-19 (second pass), before the window:** the workflow slot moved 06:40 → 08:10 UTC
   (`.github/workflows/planetary.yml`) — `planetary/readings/2026-10-19.json` carries publisher
@@ -57,7 +57,7 @@ RUNNING (any time: RETIRED).*
   hearing there (pairing B would restore the second register, audit flagship condition d).
 - **Substrate note:** after `pip install -e ./practice` module runs need no `PYTHONPATH`
   (checked 2026-10-16); without installation, `practice/` shadows the package.
-- **Updated:** 2026-10-21 (pass)
+- **Updated:** 2026-10-22 (pass)
 
 ### Synthetic Flood — how much of public language machines now write
 
@@ -105,11 +105,20 @@ RUNNING (any time: RETIRED).*
   control `significantly` is a PubMed stopword (0 in every reading, the 2026-09 one too); `delve` and
   nine other fixed words already rose 2018→2022, so the derived list must measure excess against the
   baseline trend, not its level.
-- **Next step:** increment 3b — `wordlist-v2` (replace `significantly`) and the committed rule for the
-  derived list (excess against the 2018–2022 trend) before any post-2022 cohort is read. Register B
+- **Increment 3b done 2026-10-22** (`docs/2026-10-22-synthetic-flood-v0-inkrement-3b.md`):
+  `syntheticflood/wordlists/wordlist-v2.json` (control `significantly` → `reduced`, fixed and pool
+  unchanged; `wordlist-v1` untouched) and rule `excess-v1`
+  (`practice/src/practice/syntheticflood/excess.py`, tests `practice/tests/test_syntheticflood_excess.py`):
+  least-squares line of 2018–2022 shares, ratio observed/expected, pool word in the month's list at
+  ratio ≥ 2.0 and ≥ 50 abstracts, at most 20; a control outside [1/1.5, 1.5] marks the month
+  `control_breach`. Committed before any derived list is computed; the 2026-09 reading's pool counts
+  were not looked at. No fetch.
+- **Next step:** increment 3c — read the five baseline years and one month cohort on `wordlist-v2`
+  (≈ 1 000 requests, 429 as normal), derive `syntheticflood/baseline/wordlist-v2.json`, then the first
+  derived list as a file `verify.py` re-derives. Register B
   stays closed until the reader reads one 200; the runner question in `REQUESTS.md` (2026-10-20) stays
   open, nothing is started by the pass. Only on nights the focus waits.
-- **Updated:** 2026-10-21 (pass)
+- **Updated:** 2026-10-22 (pass)
 
 ## Parked
 

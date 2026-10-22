@@ -33,6 +33,17 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-10-22 — Planetary Listening: the first window night was lost; a repair lands inside the window
+
+**Request:** The night 2026-10-21 has no reading because a GEOFON timeout crashed the run instead
+of being recorded as a failed night (run `planetary` #6; `docs/2026-10-22-planetary-listening-reparatur-ausfall.md`);
+tonight's delivery repairs `nightly.py` so the next such night is written with its cause and counted
+by A2, which is a code change inside the window that the review is yours to weigh. If
+`planetary/readings/2026-10-22.json` is not on main by 23:00 UTC today, please start the workflow by
+hand (`workflow_dispatch`) once this delivery has landed — a second missing night in a row would
+break A1, and only a same-date run counts (criteria §1).
+**Status:** open
+
 ## 2026-10-20 — The Synthetic Flood: may one hand-started run read Register B from a runner?
 
 **Request:** From this container the Wikipedia category request got 429 at two hours and from two

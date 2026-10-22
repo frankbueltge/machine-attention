@@ -31,7 +31,7 @@ import json
 from datetime import date, timedelta
 from pathlib import Path
 
-from ..fetch import Client
+from ..fetch import Client, SourceUnavailable
 from ..preserve import Snapshot, read_json, sha256, utc_now, write_json
 from . import detect, spike
 
@@ -153,6 +153,29 @@ def _document(client, snap: Snapshot, ledger: list, url: str, name: str,
     return data, status, snap.preserve(name, data, url, status)["file"]
 
 
+class _Recording:
+    """A host that does not answer is a failed request, not a lost night.
+
+    The first window night (2026-10-21) never reached its reading: GEOFON's
+    dataselect timed out four times, the SourceUnavailable escaped `run`, and
+    the outage branch of the day routine (status != 200) was never taken
+    (docs/2026-10-22-planetary-listening-reparatur-ausfall.md). Here such a
+    request answers status 0 with no bytes, and its cause is kept for the
+    ledger, so the night is written and A2 counts it with its cause named.
+    """
+
+    def __init__(self, client):
+        self._client = client
+        self.errors: dict[str, str] = {}
+
+    def fetch(self, url: str, headers: dict | None = None) -> tuple[bytes, int]:
+        try:
+            return self._client.fetch(url, headers=headers)
+        except SourceUnavailable as e:
+            self.errors[url] = e.detail
+            return b"", 0
+
+
 def run(repo_root: Path, client=None, today: str | None = None) -> dict:
     today = today or date.today().isoformat()
     existing = repo_root / READINGS / f"{today}.json"
@@ -160,7 +183,7 @@ def run(repo_root: Path, client=None, today: str | None = None) -> dict:
         # A night that already has its reading is never read again: the manifest beside it may
         # be stamped in the anchor ledger, and a second fetch would rewrite it (2026-10-16).
         return read_json(existing)
-    client = client or Client()
+    client = _Recording(client or Client())
     day = (date.fromisoformat(today) - timedelta(days=1)).isoformat()
     nxt = today
     snap = Snapshot(repo_root, today, base=BASE)
@@ -220,6 +243,12 @@ def run(repo_root: Path, client=None, today: str | None = None) -> dict:
         catalogues.append({"catalogue": name, "http_status": status,
                            "rows": rows, "box": list(spike.BOX_A),
                            "span": [day, nxt]})
+
+    for req in ledger:
+        if req["url"] in client.errors:
+            req["error"] = client.errors[req["url"]]
+    if station_day.get("outage") and station_day.get("http_status") == 0:
+        station_day["cause"] = client.errors.get(ledger[0]["url"], "no answer")
 
     snap.write_manifest()
     reading = {
