@@ -1,0 +1,15 @@
+# robots.txt
+# Add here the private directories, that shouldn't (and can't be indexed by the robots)
+# see also http://en.wikipedia.org/wiki/Robots_exclusion_standard
+#
+User-agent: *
+Disallow: /
+
+# if you enable some paths, don't forget to activate the settings below
+#Disallow: /scripts/
+#Disallow: /styles/
+#Disallow: /images/
+#Disallow: /auth/
+#Disallow: /_pep/
+#Disallow: /passwordchange/
+

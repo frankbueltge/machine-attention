@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /data*
+Disallow: /orders*
+
+Allow: /data/oceans/coris/library*
+
+#CRN
+Disallow: /access/crn/*?
+Disallow: /access/crn/ws/
+Disallow: /access/crn/flex/
+Disallow: /access/crn/error/
+Disallow: /access/crn/new*
+Disallow: /access/crn/xml*
