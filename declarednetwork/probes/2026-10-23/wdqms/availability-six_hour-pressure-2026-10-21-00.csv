@@ -1,0 +1,487 @@
+name,wigosid,country code,in OSCAR,longitude,latitude,#received,#expected,default schedule,color code,description,variable,date,center
+Bujumbura Aero (Earth network),0-108-0-64404,BDI,True,29.32207,-3.32187,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bujumbura (ADCON),0-108-0-64445,BDI,True,29.32186,-3.32313,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Nyabiraba (ADCON),0-108-0-64446,BDI,True,29.44105,-3.45777,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MOGILEV,0-112-0-26862,BLR,True,30.36694,53.87139,0,2,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+ALGER PORT,0-12-0-16ALGCN60369,DZA,True,3.06243,36.77451,2,2,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GOURAYA,0-12-0-42TIPCN00001,DZA,True,1.91317,36.57575,0,2,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MORA,0-120-1-64852,CMR,True,14.1336,11.0336,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MOKOLO,0-120-1-64854,CMR,True,13.8042,10.7424,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+GUIDER,0-120-1-64858,CMR,True,13.95,9.93333,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+POLI,0-120-1-64863,CMR,True,13.25,8.48333,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+TCHOLLIRE,0-120-1-64865,CMR,True,14.18918,8.40161,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+TIGNERE,0-120-1-64868,CMR,True,12.66745,7.35922,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BAMENDA UP STATION,0-120-1-64871,CMR,True,10.1591,5.963,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+TIBATI,0-120-1-64881,CMR,True,12.61667,6.46667,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+NKAMBE,0-120-1-64886,CMR,True,10.6669,6.6336,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+KUMBO,0-120-1-64888,CMR,True,10.6669,6.2002,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DSCHANG,0-120-1-64891,CMR,True,10.06305,5.45305,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BAFOUSSAM-AIRPORT,0-120-1-64894,CMR,True,10.34936,5.54258,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+TIKO,0-120-1-64912,CMR,True,9.36667,4.08333,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+YABASSI,0-120-1-64916,CMR,True,10.0,4.65,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+NANGA-EBOKO,0-120-1-64922,CMR,True,12.3666,4.6833,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Bertoua-aeroport,0-120-1-64931,CMR,True,13.72085,4.5585,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BERTOUA-VILLE,0-120-1-64932,CMR,True,13.73333,4.6,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MONATELE,0-120-1-64940,CMR,True,11.18333,4.23333,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+YAOUNDE-NSIMALEN,0-120-1-64944,CMR,True,11.502,3.7202,1,6,False,red,Availability issues (< 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+NGOUMOU,0-120-1-64954,CMR,True,11.3666,3.75,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+AKONOLINGA,0-120-1-64956,CMR,True,12.24603,3.77352,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+YOKADOUMA,0-120-1-64964,CMR,True,15.0519,3.52277,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+EBOLOWA,0-120-1-64972,CMR,True,11.1333,2.9167,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+SANGMELIMA,0-120-1-64974,CMR,True,11.9833,2.9333,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+AMBAM,0-120-1-64980,CMR,True,11.2669,2.38287,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MBENGWI,0-120-1-64981,CMR,True,10.0002,6.0169,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DJA A NKOLDJA,0-120-237-160001,CMR,True,13.22944,2.83278,0,1,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BOUMBA A BIWALA,0-120-237-160202,CMR,True,14.92053,3.22056,0,1,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DJA A BI,0-120-237-161002,CMR,True,13.35,2.8,0,2,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DJA A SOMALOMO,0-120-237-161003,CMR,True,12.73333,3.36667,0,2,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+AFAMBA A SANGMELIMA,0-120-237-161704,CMR,True,11.98333,2.9,0,2,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+KADEI A PANA,0-120-237-163101,CMR,True,14.68333,4.2,0,1,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BANDA,0-120-4-08113603,CMR,True,13.6428,8.1996,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Mindif,0-120-4-10314406,CMR,True,14.4436,10.39667,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+SEMRY-YAGOUA,0-120-4-10315201,CMR,True,15.2433,10.3486,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Dargala,0-120-4-10514607,CMR,True,14.6002,10.53,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+PETTE,0-120-4-10914405,CMR,True,14.4975,10.96477,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Zina,0-120-4-11214902,CMR,True,14.97056,11.26417,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+WAZA1,0-120-4-11314501,CMR,True,14.55488,11.37828,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+WAZA2,0-120-4-11514702,CMR,True,14.7274,11.5021,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DDT Kousseri,0-120-4-12014904,CMR,True,14.983,12.08528,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Kimbi-fungom,0-120-4-66010404,CMR,True,10.4282,6.6053,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DELTA BURNS BOG,0-124-0-71042,CAN,True,-123.00244,49.12599,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+"CORAL HARBOUR RCS, NU",0-124-0-71134,CAN,True,-83.34705,64.18783,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+ESKASONI FIRST NATION,0-124-0-71175,CAN,True,-60.6469,45.9206,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BURWASH AIRPORT AUTO,0-124-0-71195,CAN,True,-139.03248,61.37013,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+MANKOTA,0-124-0-71204,CAN,True,-107.0222,49.09959,4,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,DWD
+GRATES COVE,0-124-0-71336,CAN,True,-52.9387,48.16992,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+CORMACK RCS,0-124-0-71367,CAN,True,-57.39344,49.32194,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+LITTLE FLATLAND ISLAND (AUT),0-124-0-71468,CAN,True,-88.3058,49.68988,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BELLA COOLA AIRPORT,0-124-0-71533,CAN,True,-126.58678,52.38851,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+FANNY ISLAND,0-124-0-71568,CAN,True,-125.9929,50.45352,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+"FORT NELSON , BC",0-124-0-71594,CAN,True,-122.57417,58.84139,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LOUISBOURG,0-124-0-71596,CAN,True,-59.99563,45.90088,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BRANTFORD AIRPORT,0-124-0-71602,CAN,True,-80.33128,43.13733,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+WOODSTOCK NEWBRIDGE,0-124-0-71606,CAN,True,-67.54265,46.15223,5,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+KUUJJUARAPIK,0-124-0-71615,CAN,True,-77.62914,55.3695,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+MOOSE CREEK WELLS,0-124-0-71635,CAN,True,-74.96295,45.25123,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SALLUIT,0-124-0-71641,CAN,True,-75.67007,62.1797,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+KELOWNA UBCO,0-124-0-71644,CAN,True,-119.40021,49.94077,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+KLEEFELD (MAFRI),0-124-0-71646,CAN,True,-96.91546,49.52967,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+ISLAND LAKE SOUTH,0-124-0-71654,CAN,True,-113.56,54.81683,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+PILGER,0-124-0-71655,CAN,True,-105.15309,52.41898,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+SUSSEX FOUR CORNERS,0-124-0-71656,CAN,True,-65.52917,45.74167,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+MONT-JOLI,0-124-0-71658,CAN,True,-68.19566,48.60519,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+NEW RICHMOND EAST,0-124-0-71659,CAN,True,-65.84193,48.15654,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+PEKISKO,0-124-0-71669,CAN,True,-114.41546,50.36851,5,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+COLLEGEVILLE AUTO,0-124-0-71698,CAN,True,-62.01611,45.49019,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+POINT LEPREAU CS,0-124-0-71699,CAN,True,-66.45792,45.05931,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+TROIS RIVIERES,0-124-0-71729,CAN,True,-72.67586,46.35933,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SUDBURY CLIMATE,0-124-0-71733,CAN,True,-80.796,46.6324,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+RAWSON LAKE (AUT),0-124-0-71855,CAN,True,-93.73292,49.66415,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MILLERTOWN CLIMATE,0-124-0-71856,CAN,True,-56.53444,48.81677,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ROYAL ISLAND (AUT),0-124-0-71859,CAN,True,-94.76312,49.46851,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BAIE-COMEAU,0-124-0-71890,CAN,True,-68.20246,49.13507,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GOLDEN AIRPORT,0-124-0-71905,CAN,True,-116.98444,51.30027,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UXBRIDGE WEST,0-124-0-71932,CAN,True,-79.16355,44.09825,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GRANDES BERGERONNES,0-124-0-71942,CAN,True,-69.54366,48.27453,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BRIER ISLAND,0-124-0-71988,CAN,True,-66.34241,44.28566,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+YELLOW GRASS NORTH,0-124-0-73001,CAN,True,-104.18105,49.82024,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+CAUSAPSCAL AIRPORT,0-124-0-73005,CAN,True,-67.25275,48.30879,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+KITIMAT FOREST AVE,0-124-0-73007,CAN,True,-128.60408,54.05643,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+CHIBOUGAMAU-CHAPAIS,0-124-0-73011,CAN,True,-74.53038,49.77731,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+PELLY RANCH FORT SELKIRK,0-124-0-73013,CAN,True,-137.31217,62.83344,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+PORT HARDY AIRPORT,0-124-0-73014,CAN,True,-127.38044,50.68484,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SHELBURNE SANDY POINT,0-124-0-73015,CAN,True,-65.30792,43.75301,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+NORTH BAY AIRPORT,0-124-0-73016,CAN,True,-79.42355,46.37272,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+"SIOUX LOOKOUT AIRPORT, ONT",0-124-0-73017,CAN,True,-91.9028,50.12054,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+TERRACE BAY AIRPORT,0-124-0-73018,CAN,True,-87.09175,48.81527,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+CHETICAMP HIGHLANDS NATIONAL PARK,0-124-0-73023,CAN,True,-60.95461,46.65112,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+"DANIELS HARBOUR, NFLD",0-124-0-73024,CAN,True,-57.58111,50.23639,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+NORTHEAST MARGAREE,0-124-0-73027,CAN,True,-60.97613,46.3685,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+SAANICHTON CFIA,0-124-0-73028,CAN,True,-123.41023,48.62173,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+MALAY FALLS,0-124-0-73029,CAN,True,-62.48329,44.98694,6,2,True,purple,More than 100%,pressure,2026-10-21 00:00:00+00:00,DWD
+GRAND ETANG,0-124-0-73030,CAN,True,-61.04031,46.54914,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BELLEVILLE QUINTE,0-124-0-73042,CAN,True,-77.43984,44.15936,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+OGOKI POST,0-124-0-73045,CAN,True,-85.90028,51.65774,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAULT STE. MARIE AIRPORT,0-124-0-73070,CAN,True,-84.51676,46.47821,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GERALDTON AIRPORT,0-124-0-73071,CAN,True,-86.9323,49.78091,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+THOMPSON AIRPORT,0-124-0-73072,CAN,True,-97.87659,55.79882,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GUELPH TURFGRASS INSTITUTE,0-124-0-73073,CAN,True,-80.22208,43.54187,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+KING CITY NORTH,0-124-0-73074,CAN,True,-79.57413,43.96352,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+"SCHEFFERVILLE Cote-Nord, QUE",0-124-0-73075,CAN,True,-66.80449,54.80264,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+WINTERLAND BRANCH HILL,0-124-0-73080,CAN,True,-55.32632,47.1365,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+ALDERSVILLE,0-124-0-73081,CAN,True,-64.50902,44.82708,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+"HIGH LEVEL, ALTA",0-124-0-73085,CAN,True,-117.16374,58.6314,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GILLAM,0-124-0-73087,CAN,True,-94.70411,56.35936,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+FORT ST JOHN AIRPORT,0-124-0-73090,CAN,True,-120.75013,56.24748,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+KINDERSLEY AIRPORT,0-124-0-73097,CAN,True,-109.17787,51.51612,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ROMA,0-124-0-73104,CAN,True,-117.45196,56.19332,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAINT-CAMILLE-DE-LELLIS,0-124-0-73105,CAN,True,-70.20744,46.49469,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+NANTES,0-124-0-73115,CAN,True,-70.93274,45.60637,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+GASPE AIRPORT,0-124-0-73116,CAN,True,-64.47939,48.77674,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+MONT-TREMBLANT,0-124-0-73118,CAN,True,-74.55613,46.08041,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HAPPY VALLEY - GOOSE BAY,0-124-0-73120,CAN,True,-60.36264,53.30639,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CHURCHILL FALLS,0-124-0-73122,CAN,True,-64.094,53.558,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CHAPLEAU AIRPORT,0-124-0-73135,CAN,True,-83.35645,47.81926,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PETERBOROUGH TRENT U EXPERIMENTAL FARM,0-124-0-73180,CAN,True,-78.27874,44.35321,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CAPE LIVERPOOL,0-124-0-76000,CAN,True,-78.2947,73.66804,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+CAPE PROVIDENCE,0-124-0-76001,CAN,True,-112.16,74.4566,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+OSBORNE HEAD,0-124-12001-71324,CAN,True,-63.4225,44.61278,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BEDFORD RANGE,0-124-12001-71325,CAN,True,-63.6603,44.74556,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+HALIFAX WINDSOR PARK,0-124-12001-71327,CAN,True,-63.6081,44.65694,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+HALIFAX DOCKYARD,0-124-12001-71328,CAN,True,-63.5758,44.65528,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+BEDFORD BASIN,0-124-12001-71329,CAN,True,-63.6333,44.70611,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+SHEARWATER JETTY,0-124-12001-71330,CAN,True,-63.5225,44.62806,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,DWD
+Mount Timothy,0-124-15003-1C17P,CAN,True,-121.25604,51.90453,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Paradise Lake,0-124-15003-1C44P,CAN,True,-120.28228,49.94864,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+July Mountain,0-124-15003-1C45P,CAN,True,-121.08547,49.70764,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Trophy Mountain,0-124-15003-1E03AP,CAN,True,-119.94064,51.80837,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Hamilton Hill,0-124-15003-2G06P,CAN,True,-120.79439,49.49914,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Cobble Hill,0-124-15003-3B27P,CAN,True,-123.59287,48.69899,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Crocker Creek,0-124-15003-4A40P,CAN,True,-122.18292,54.93481,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Log Cabin,0-124-15003-4E01P,CAN,True,-134.96561,59.76404,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+CHIBOUGAMAU UA,0-124-20000-73140,CAN,True,-74.53128,49.7765,0,2,True,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Kluane Lake Research Station (Primary Stn),0-124-34000-KLRS,CAN,True,-138.41045,61.02759,0,2,True,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Peyto Main,0-124-34001-156,CAN,True,-116.54495,51.68549,0,2,True,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Ogoki Post,0-124-42001-71652,CAN,True,-85.9011,51.65811,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,DWD
+Attawapiskat,0-124-42001-71653,CAN,True,-82.432,52.92759,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,DWD
+Edmonton/Villeneuve,0-124-42001-71664,CAN,True,-113.856,53.66833,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Clinton/Bleiber Ranch,0-124-42001-71717,CAN,True,-121.683,51.25,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,DWD
+Lytton,0-124-42001-71812,CAN,True,-121.567,50.23333,2,6,False,orange,Availability issues (>= 30%),geopotential,2026-10-21 00:00:00+00:00,ECMWF
+Lytton,0-124-42001-71812,CAN,True,-121.567,50.23333,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,DWD
+Mayo,0-124-42001-71965,CAN,True,-135.868,63.61639,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,DWD
+INMG MINDELO,0-132-0-08595,CPV,True,-24.99137,16.88146,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+INMG HQ SAL,0-132-0-08596,CPV,True,-22.93514,16.7312,3,2,True,purple,More than 100%,pressure,2026-10-21 00:00:00+00:00,ECMWF
+INMG PRAIA ASF,0-132-0-08597,CPV,True,-23.5295,14.96558,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Porto Novo,0-132-1-08584,CPV,True,-25.07611,17.01964,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Boa Vista Aeroporto,0-132-1-10,CPV,True,-22.89144,16.13161,0,2,True,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MATTALA Int Airport,0-144-101-330601,LKA,True,81.12389,6.29288,2,2,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+POLONNARUWA,0-144-101-721501,LKA,True,81.04993,7.91306,1,1,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MONARAGALA,0-144-101-821501,LKA,True,81.31616,6.83517,1,1,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+NDJAMENA,0-148-0-64700,TCD,True,15.02,12.08,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BONGOR,0-148-0-64710,TCD,True,15.3748,10.2887,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BILTINE,0-148-0-64761,TCD,True,20.552,14.312,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Amdjarass,0-148-0-64762,TCD,True,22.7667,15.9667,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+MOUNDOU_aéro_CEUBAH,0-148-0-64801,TCD,True,16.07383,8.62183,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+DOBA_aéro_CEUBAH,0-148-0-64803,TCD,True,16.83023,8.69463,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+LAI_aéro_CEUBAH,0-148-0-64805,TCD,True,16.31303,9.39753,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+LAI_aéro_PULCI,0-148-0-64806,TCD,True,16.31306,9.39756,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Kélo_CEUBAH,0-148-0-64807,TCD,True,15.80073,9.27893,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Abéché,0-148-0-CHD64901,TCD,True,20.85,13.84,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Aboudéia,0-148-0-CHD64902,TCD,True,19.27,11.45,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Ati,0-148-0-CHD64903,TCD,True,18.3258,13.2236,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Baro,0-148-0-CHD64904,TCD,True,18.9728,12.1993,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bebedjia ITRAD,0-148-0-CHD64905,TCD,True,16.5602,8.6748,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bekamba,0-148-0-CHD64906,TCD,True,17.3589,8.6949,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Bessao,0-148-0-CHD64907,TCD,True,16.078,7.901,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Binder,0-148-0-CHD64908,TCD,True,14.45,9.96,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bitkine,0-148-0-CHD64909,TCD,True,18.219,11.9832,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bokoro,0-148-0-CHD64910,TCD,True,17.0593,12.3833,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bol,0-148-0-CHD64911,TCD,True,14.7376,13.4449,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Bongor Aéro,0-148-0-CHD64912,TCD,True,15.3748,10.2887,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Djeddah,0-148-0-CHD64913,TCD,True,18.5909,13.5093,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Déli ITRAD,0-148-0-CHD64914,TCD,True,15.859,8.71,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Doba Aéro,0-148-0-CHD64915,TCD,True,16.8302,8.6946,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Dourbali,0-148-0-CHD64916,TCD,True,15.872,11.805,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Fianga,0-148-0-CHD64917,TCD,True,15.06,9.81,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Gagal,0-148-0-CHD64918,TCD,True,15.131,9.021,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Goré,0-148-0-CHD64919,TCD,True,16.639,7.91,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Goundi,0-148-0-CHD64920,TCD,True,17.3607,9.3626,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Gounou Gaya,0-148-0-CHD64921,TCD,True,15.492,9.608,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Guelendeng,0-148-0-CHD64922,TCD,True,15.5402,10.9266,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Kélo,0-148-0-CHD64923,TCD,True,15.8007,9.2789,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Kyabé CT,0-148-0-CHD64924,TCD,True,18.9245,9.4522,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Lagon,0-148-0-CHD64925,TCD,True,14.54,9.5,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Laramanaye,0-148-0-CHD64926,TCD,True,15.7036,8.0325,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Léré,0-148-0-CHD64927,TCD,True,14.33,9.68,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Mailao,0-148-0-CHD64928,TCD,True,15.288,11.5656,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Mangalmé,0-148-0-CHD64929,TCD,True,19.6166,12.3551,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Mani,0-148-0-CHD64930,TCD,True,14.6733,12.736,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Massaguet,0-148-0-CHD64931,TCD,True,15.4385,12.4825,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Massenya,0-148-0-CHD64932,TCD,True,16.176,11.399,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Melfi,0-148-0-CHD64933,TCD,True,17.931,11.08,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Moissala,0-148-0-CHD64934,TCD,True,17.761,8.3635,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Mongo Aéro,0-148-0-CHD64935,TCD,True,18.6786,12.174,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Moundou Aéro,0-148-0-CHD64936,TCD,True,16.0738,8.6218,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Moussafoyo ITRAD,0-148-0-CHD64937,TCD,True,18.6391,8.9059,5,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+N'Djamena Aéro,0-148-0-CHD64938,TCD,True,15.0456,12.1385,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Ngouri,0-148-0-CHD64939,TCD,True,15.37,13.6425,2,6,False,orange,Availability issues (>= 30%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Oum-Hadjer,0-148-0-CHD64940,TCD,True,19.6979,13.2941,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Pala,0-148-0-CHD64941,TCD,True,14.94,9.38,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Sarh Aéro,0-148-0-CHD64942,TCD,True,18.3757,9.1434,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Amtiman-AWS,0-148-0-CHD64943,TCD,True,20.167,12.222,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Haraze Mangueigne,0-148-0-CHD64944,TCD,True,20.5415,9.5647,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Abdi,0-148-0-CHD64945,TCD,True,21.1815,12.4833,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Goz-Beida,0-148-0-CHD64946,TCD,True,21.2457,12.1318,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Amdam,0-148-0-CHD64947,TCD,True,20.2745,12.4552,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Adré,0-148-0-CHD64948,TCD,True,22.1241,13.283,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Farchana,0-148-0-CHD64949,TCD,True,21.4721,13.3519,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Iriba,0-148-0-CHD64950,TCD,True,22.1348,15.0756,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Massakory,0-148-0-CHD64951,TCD,True,15.7366,12.9905,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Dono Manga,0-148-0-CHD64952,TCD,True,16.9208,9.2361,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Ba-illi,0-148-0-CHD64953,TCD,True,16.443,10.5166,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Boumou,0-148-0-CHD64954,TCD,True,16.1036,9.623,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Billiam-Oursi,0-148-0-CHD64955,TCD,True,15.2322,10.5602,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Lai,0-148-0-CHD64956,TCD,True,16.313,9.3975,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Bao,0-148-0-CHD64957,TCD,True,16.0925,9.0363,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Biltine,0-148-0-CHD64958,TCD,True,20.8409,14.5496,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Visviri  Tenencia,0-152-0-170001,CHL,True,-69.4775,-17.595,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Putre,0-152-0-180017,CHL,True,-69.5625,-18.2,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Defensa Civil, Arica",0-152-0-180018,CHL,True,-70.30139,-18.49111,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Cerro Sombrero Arica,0-152-0-180042,CHL,True,-70.26556,-18.5125,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"UNAP (Universidad Arturo Pratt), Iquique",0-152-0-200010,CHL,True,-70.13083,-20.27083,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Ollagüe,0-152-0-210901,CHL,True,-68.25583,-21.22417,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Universidad Católica Norte, Antofagasta",0-152-0-230002,CHL,True,-70.41111,-23.68083,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Toconao,0-152-0-230004,CHL,True,-68.00556,-23.18611,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Mejillones,0-152-0-230022,CHL,True,-70.44333,-23.10917,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Copiapó Universidad de Atacama,0-152-0-270009,CHL,True,-70.35333,-27.35889,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Freirina Nicolasa,0-152-0-280010,CHL,True,-71.01,-28.51694,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Vicuña, Parque Los Pimientos",0-152-0-300046,CHL,True,-70.69722,-30.03361,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Monte Patria, Municipalidad",0-152-0-300047,CHL,True,-70.95778,-30.69833,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Liceo Samuel Román Rojas (Combarbalá),0-152-0-310024,CHL,True,-70.99889,-31.18805,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Salamanca Pisco Capel,0-152-0-310044,CHL,True,-70.95944,-31.78722,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+San Felipe Escuela Agrícola,0-152-0-320019,CHL,True,-70.70694,-32.75528,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Viña del Mar Ad. (Torquemada),0-152-0-320041,CHL,True,-71.47611,-32.94944,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Llay Llay, Las Peñas",0-152-0-320045,CHL,True,-70.91305,-32.88139,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Quintero, Climatológica",0-152-0-320056,CHL,True,-71.52278,-32.78417,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Zapallar Catapilco,0-152-0-320063,CHL,True,-71.2977,-32.5613,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Jardín Botánico ,Viña del Mar",0-152-0-330006,CHL,True,-71.50194,-33.045,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Rodelillo, Ad.",0-152-0-330007,CHL,True,-71.55639,-33.06528,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Talagante,0-152-0-330071,CHL,True,-70.84944,-33.67028,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Rio Clarillo,0-152-0-330075,CHL,True,-70.49667,-33.72833,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Chorombo Hacienda,0-152-0-330076,CHL,True,-71.22917,-33.52944,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+El Colorado,0-152-0-330077,CHL,True,-70.29361,-33.35,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+San José Guayacán,0-152-0-330112,CHL,True,-70.35055,-33.61528,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+El Paico,0-152-0-330113,CHL,True,-71.00805,-33.70639,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+San Pablo - Dasa,0-152-0-330114,CHL,True,-70.7466,-33.4422,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Lo Pinto,0-152-0-330118,CHL,True,-70.73222,-33.26805,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Curacavi,0-152-0-330121,CHL,True,-71.16778,-33.41111,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Aguas Andinas, La Florida",0-152-0-330122,CHL,True,-70.54833,-33.545,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"El Milagro, Buin",0-152-0-330160,CHL,True,-70.76444,-33.75444,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+San Antonio Lo Zarate,0-152-0-330161,CHL,True,-71.50611,-33.53055,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Colina (Reg),0-152-0-330162,CHL,True,-70.64306,-33.16222,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Peldehue Ad.,0-152-0-330163,CHL,True,-70.6858,-33.1138,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Rancagua,0-152-0-340045,CHL,True,-70.77611,-34.17222,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Quimávida,0-152-0-340048,CHL,True,-70.99694,-34.215,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Nilahue - La Quebrada,0-152-0-340066,CHL,True,-71.73528,-34.66083,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Portezuelo - Codelco,0-152-0-340093,CHL,True,-70.57917,-34.19833,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Panguilemo,0-152-0-350028,CHL,True,-71.60111,-35.37778,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Escuela de Artillería Linares,0-152-0-350901,CHL,True,-71.59278,-35.83694,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Retiro Copihue,0-152-0-360047,CHL,True,-71.75805,-36.07555,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Liceo Polivalente San Nicolás,0-152-0-360097,CHL,True,-72.21944,-36.50556,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"María Dolores, Los Angeles Ad.",0-152-0-370033,CHL,True,-72.42389,-37.39694,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"El Huertón liceo agrícola, Los Ángeles",0-152-0-370036,CHL,True,-72.275,-37.45694,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Rucamanque - UFRO,0-152-0-380032,CHL,True,-72.60555,-38.66083,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Maquehue-UFRO,0-152-0-380033,CHL,True,-72.69444,-38.83778,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Victoria,0-152-0-380063,CHL,True,-72.34333,-38.22889,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Lequecahue Tirúa Ad.,0-152-0-380080,CHL,True,-73.48833,-38.35944,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Villarrica,0-152-0-390028,CHL,True,-72.11222,-39.19,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Pucón Aeródromo,0-152-0-390056,CHL,True,-71.9169,-39.2911,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Escuela Mirasol, Puerto Montt",0-152-0-410027,CHL,True,-72.96889,-41.47944,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Puerto Varas ESSAL,0-152-0-410040,CHL,True,-72.97667,-41.32444,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Nueva Chaitén,0-152-0-420015,CHL,True,-72.835,-42.78528,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Quellón Ad.,0-152-0-430001,CHL,True,-73.63278,-43.13361,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Puerto Aysén,0-152-0-450001,CHL,True,-72.67722,-45.39944,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Teniente Gallardo, Puerto Natales Ad.",0-152-0-510005,CHL,True,-72.52889,-51.66722,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Río Serrano, Torres del Paine",0-152-0-510020,CHL,True,-72.97028,-51.21667,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Instituto de la Patagonia (Jorge Schytte),0-152-0-520012,CHL,True,-70.8875,-53.13,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Punta Arenas Unidad Aeropolicial,0-152-0-520014,CHL,True,-70.92639,-53.15278,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Magallanes Villa Tehuelche,0-152-0-520015,CHL,True,-71.41611,-52.42889,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+"Cerro Sombrero, Estrecho de magallanes",0-152-0-520030,CHL,True,-69.29472,-52.77639,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Escuela Alberto Hurtado,0-152-0-530008,CHL,True,-70.94528,-53.16694,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Pichilemu Aeródromo,0-152-0-85620,CHL,True,-72.01861,-34.39417,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Lago Chungará,0-152-2-180031,CHL,True,-69.138,-18.2808,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Codpa,0-152-2-180041,CHL,True,-69.74555,-18.8325,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Azapa Alto,0-152-2-180047,CHL,True,-69.94722,-18.5775,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+CE Huasco,0-152-2-280021,CHL,True,-70.79833,-28.58111,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Quilimari,0-152-2-320116,CHL,True,-71.46,-32.11917,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+La Platina ( INIA ),0-152-2-330026,CHL,True,-70.61972,-33.57278,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Colliguay,0-152-2-330189,CHL,True,-71.1558,-33.1686,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Surco y Semilla,0-152-2-380035,CHL,True,-72.28528,-38.0325,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Sta. Inés,0-152-2-380049,CHL,True,-72.34361,-38.50472,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Tranapuente,0-152-2-380054,CHL,True,-73.35333,-38.69083,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+San Rafael,0-152-2-380072,CHL,True,-72.72417,-38.07055,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Collimallin,0-152-2-85750,CHL,True,-72.70111,-38.60667,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+QUMAHE,0-156-0-56015,CHN,True,94.7281,34.9319,0,2,True,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+Xilinhot (GSRN),0-156-0-C0675,CHN,True,116.3292,44.1356,0,2,True,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+CERTEGUI,0-170-0-11030010,COL,True,-76.6046,5.3736,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNION PANAMERICANA AUT,0-170-0-11035030,COL,True,-76.6278,5.2848,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO EL CARANO,0-170-0-11045010,COL,True,-76.6412,5.68981,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+BELLAVISTA,0-170-0-11080010,COL,True,-76.8881,6.5569,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+NORMAL SANTA TERESA AUT,0-170-0-11110010,COL,True,-76.13361,6.76333,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+BOQUERON DE TOYO,0-170-0-11110110,COL,True,-75.9775,6.69944,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ABRIAQUI - AUT,0-170-0-1111500036,COL,True,-76.07073,6.6363,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CAMPO ALEGRE,0-170-0-1111500203,COL,True,-76.25283,7.0268,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MUSINGA,0-170-0-11115040,COL,True,-76.20333,6.77797,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNGUIA,0-170-0-11135030,COL,True,-77.08786,8.03672,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ATRATO - AUT,0-170-0-11175000,COL,True,-76.64351,5.58835,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+TULENAPA,0-170-0-12015060,COL,True,-76.66581,7.77387,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PISTA INDIRA,0-170-0-12015100,COL,True,-76.69622,7.94075,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+TURBO,0-170-0-12025040,COL,True,-76.70955,8.0835,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CRISTO REY  - AUT,0-170-0-12045020,COL,True,-76.2244,9.0711,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD UNAD CARTAGENA - AUT,0-170-0-1206500136,COL,True,-75.51326,10.4003,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+REPRESA URRA,0-170-0-13015040,COL,True,-76.20306,8.01417,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+AEROPUERTO LOS GARZONES,0-170-0-13035501,COL,True,-75.8251,8.8258,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+CHIMA,0-170-0-13075010,COL,True,-75.62208,9.15075,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO RAFAEL NUNEZ,0-170-0-14015080,COL,True,-75.51603,10.44725,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO SIMON BOLIVAR,0-170-0-15015050,COL,True,-74.23147,11.12118,5,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PARQUE TAYRONA,0-170-0-15015100,COL,True,-73.92881,11.30167,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD TECNOLOGICA  - AUT,0-170-0-15015120,COL,True,-74.18592,11.22306,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+TERMOGUAJIRA  - AUT,0-170-0-15035020,COL,True,-73.41139,11.2525,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO ALM. PADILLA -,0-170-0-15065180,COL,True,-72.91774,11.52827,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA MINA CERREJON  - AUT,0-170-0-15065501,COL,True,-72.61607,11.13749,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+KAURAQUIMANA,0-170-0-15070080,COL,True,-71.45869,12.21836,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SILLAMANA,0-170-0-15080070,COL,True,-71.51589,11.89944,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PUERTO ESTRELLA - AUT,0-170-0-1508500053,COL,True,-71.31273,12.34861,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+ESCUELA AGRICOLA CARRAIPIA  - AUT,0-170-0-15085030,COL,True,-72.3599,11.2168,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+GUACHACA - AUT,0-170-0-1509500118,COL,True,-73.84445,11.21015,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD FRANCISCO DE PAULA SANTANDER,0-170-0-16015110,COL,True,-72.48717,7.89878,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO CAMILO DAZA - AUT,0-170-0-16015501,COL,True,-72.50917,7.93028,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+GRAMALOTE - AUT,0-170-0-1602500044,COL,True,-72.79696,7.91316,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MUTISCUA - AUT,0-170-0-1602500063,COL,True,-72.7463,7.30282,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+CINERA-VILLA OLGA,0-170-0-16025040,COL,True,-72.47878,8.16728,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AGUAS DE LA VIRGEN  - AUT,0-170-0-16055120,COL,True,-73.3975,8.22769,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO SESQUICENTENARIO,0-170-0-17015010,COL,True,-81.70112,12.58785,5,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO EL EMBRUJO,0-170-0-17025020,COL,True,-81.35772,13.3595,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PARQUE ARQUEOLOGICO AUT,0-170-0-21015030,COL,True,-76.29503,1.8885,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+EL LIBANO,0-170-0-21035040,COL,True,-75.83,1.87,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA BETULIA,0-170-0-21045010,COL,True,-75.70508,2.28158,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA ARGENTINA,0-170-0-21050060,COL,True,-75.97228,2.19905,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ZULUAGA,0-170-0-21065040,COL,True,-75.52944,2.2525,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAN RAFAEL,0-170-0-21085030,COL,True,-75.58,2.76,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+EL JUNCAL,0-170-0-21095010,COL,True,-75.33117,2.8288,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ALGECIRAS - AUT,0-170-0-21105030,COL,True,-75.32,2.52,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PALACIO VEGALARGA,0-170-0-21115100,COL,True,-75.06652,2.94263,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SANTA MARIA,0-170-0-21125010,COL,True,-75.58905,2.93569,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HACIENDA PEREZ,0-170-0-21130050,COL,True,-75.25594,3.24356,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+JABALCON,0-170-0-21135020,COL,True,-75.01572,3.85583,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CRUCES LAS,0-170-0-21140120,COL,True,-74.92025,3.42586,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+SANTA ANA - AUT,0-170-0-21145080,COL,True,-74.70556,3.58908,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+GUAMO,0-170-0-21185030,COL,True,-74.98139,4.00883,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VALLE DE SAN JUAN,0-170-0-21185080,COL,True,-75.10461,4.21646,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+BASE AEREA MELGAR,0-170-0-2119500111,COL,True,-74.62953,4.21972,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ITA VALSALICE  - AUT,0-170-0-21195120,COL,True,-74.39272,4.39292,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PAQUILO AUT,0-170-0-21195170,COL,True,-74.39806,3.99361,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD DE LA SABANA - AUT,0-170-0-2120500135,COL,True,-74.03269,4.85414,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+IDEAM PUENTE ARANDA,0-170-0-2120500204,COL,True,-74.10329,4.62177,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD NACIONAL,0-170-0-21205012,COL,True,-74.08892,4.63723,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+TIBAITATA - AUT,0-170-0-21205420,COL,True,-74.20559,4.68863,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MERCEDES - AUT,0-170-0-21205660,COL,True,-74.52318,4.5791,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA FLORIDA,0-170-0-21205670,COL,True,-74.43424,4.76799,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+GUASCA,0-170-0-21205700,COL,True,-73.86444,4.87797,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+JARDIN BOTANICO  - AUT,0-170-0-21205710,COL,True,-74.10102,4.66786,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ELDORADO CATAM - AUT,0-170-0-21205791,COL,True,-74.15067,4.70558,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA COSECHA - AUT,0-170-0-21205910,COL,True,-74.00119,4.98922,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VILLA INES  - AUT,0-170-0-21205940,COL,True,-74.38056,4.83211,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ACAPULCO,0-170-0-21206280,COL,True,-74.32035,4.64823,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+INEM KENNEDY,0-170-0-21206560,COL,True,-74.15606,4.62543,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+NUEVA GENERACION  - AUT,0-170-0-21206600,COL,True,-74.10224,4.78659,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD DE CUNDINAMARCA,0-170-0-21235030,COL,True,-74.80681,4.30675,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+SANTA ISABEL,0-170-0-21245140,COL,True,-75.09446,4.71186,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ARMERO GRANJA,0-170-0-21255090,COL,True,-74.91048,5.00279,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HERRERA AUT,0-170-0-2201500047,COL,True,-75.80245,3.28414,5,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PENA RICA,0-170-0-22020020,COL,True,-75.76178,3.04505,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MESA DE POLE,0-170-0-22055020,COL,True,-75.53636,3.45578,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAN ANTONIO QUINTA,0-170-0-22065040,COL,True,-75.46775,3.9212,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SANTA HELENA,0-170-0-22070030,COL,True,-75.49953,4.12456,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MANZANARES - AUT,0-170-0-2302500064,COL,True,-75.14306,5.2651,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ALBANIA,0-170-0-23025040,COL,True,-74.91458,5.30111,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+BASE PALANQUERO AUT,0-170-0-23035030,COL,True,-74.65807,5.49423,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA CABRERA,0-170-0-23065120,COL,True,-74.13658,5.13789,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VILLETA,0-170-0-23065180,COL,True,-74.47101,5.01669,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+GRANJA EXPERIMENTAL EL NUS  - AUT,0-170-0-23085080,COL,True,-74.83673,6.48359,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CORRIENTES,0-170-0-23085160,COL,True,-75.25354,6.31186,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAN CARLOS,0-170-0-23085220,COL,True,-75.03883,6.1577,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO J.M. CORDOVA - AUT,0-170-0-23085270,COL,True,-75.42592,6.16867,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+OTANCHE,0-170-0-23125080,COL,True,-74.18461,5.66172,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+BUENAVISTA,0-170-0-23125100,COL,True,-73.94289,5.51525,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CIMITARRA,0-170-0-23125120,COL,True,-73.95222,6.30861,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAN CAYETANO,0-170-0-23125170,COL,True,-74.02387,5.33137,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+AEROPUERTO YARIGUIES,0-170-0-23155030,COL,True,-73.80873,7.02632,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO OTUN,0-170-0-23175020,COL,True,-74.71635,7.01175,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SABANA DE TORRES,0-170-0-23180070,COL,True,-73.48944,7.39,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+TONA  - AUT,0-170-0-23190130,COL,True,-72.97056,7.1961,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+NARANJO EL,0-170-0-23190440,COL,True,-73.29972,7.205,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+EL PANTANO,0-170-0-23190600,COL,True,-73.23028,6.9975,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Unknown,0-170-0-23190700,,False,-73.0677795410156,6.99333000183105,6,0,False,yellow,No match in OSCAR/Surface,pressure,2026-10-21 00:00:00+00:00,ECMWF
+FLORIDABLANCA - AUT,0-170-0-2319500043,COL,True,-73.09062,7.0568,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+POLIDEPORTIVO CACHIRA - AUT,0-170-0-2319500125,COL,True,-73.0489,7.7372,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VIVERO SURATA  - AUT,0-170-0-23195090,COL,True,-72.9875,7.36583,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LLANO GRANDE AUT,0-170-0-23195110,COL,True,-73.16727,7.0254,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CACHIRI  - AUT,0-170-0-23195200,COL,True,-72.99111,7.47389,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AGUACHICA - AUT,0-170-0-23195240,COL,True,-73.57641,8.12067,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO PALONEGRO,0-170-0-23195502,COL,True,-73.18453,7.12147,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+COLEGIO COOPERATIVO,0-170-0-23205020,COL,True,-73.92555,7.475,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+CUCUNUBA AUTOMATICA,0-170-0-2401500040,COL,True,-73.78229,5.21957,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+PUENTE GUILLERMO AUT,0-170-0-2401500052,COL,True,-73.70666,5.79633,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UPTC - AUT,0-170-0-2401500086,COL,True,-73.35528,5.55361,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA BOYERA,0-170-0-24015110,COL,True,-73.85175,5.30381,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VILLA CARMEN,0-170-0-24015220,COL,True,-73.49578,5.50939,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VILLA DE LEIVA - AUT,0-170-0-24015300,COL,True,-73.51774,5.64326,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CARMEN DE CARUPA  - AUT,0-170-0-24015380,COL,True,-73.89817,5.34819,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA SIERRA - AUT,0-170-0-24025030,COL,True,-73.16202,5.96708,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+DUITAMA - AUT,0-170-0-2403500041,COL,True,-73.05155,5.78755,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CHITA  - AUT,0-170-0-24035250,COL,True,-72.46556,6.18778,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO A LLERAS C,0-170-0-24035340,COL,True,-72.96792,5.67694,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SOCHA - AUT,0-170-0-24035360,COL,True,-72.71049,5.98244,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+EL ESPINO - AUT,0-170-0-24035370,COL,True,-72.45275,6.50675,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SOGAMOSO - AUT,0-170-0-24035410,COL,True,-72.92067,5.72647,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+TUNGUAVITA - AUT,0-170-0-24035430,COL,True,-73.11636,5.74583,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAN  VICENTE DE CHUCURI  - AUT,0-170-0-24055070,COL,True,-73.4721,6.8234,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HACIENDA LAS BRISAS,0-170-0-24065010,COL,True,-73.79,7.24611,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+JUAN JOSE - AUT,0-170-0-2501500120,COL,True,-75.85346,7.7174,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAHAGUN - AUT,0-170-0-25020140,COL,True,-75.45074,8.94219,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+LOS ALAMOS - AUT,0-170-0-25025002,COL,True,-74.27321,9.30455,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+AYAPEL - AUT,0-170-0-25025030,COL,True,-75.16455,8.29506,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO BARACOA,0-170-0-25025100,COL,True,-74.84528,9.28194,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PLANETA RICA - AUT,0-170-0-25025190,COL,True,-75.58372,8.39933,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MAJAGUAL,0-170-0-25025240,COL,True,-74.62733,8.54269,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNISUCRE AUT,0-170-0-25025270,COL,True,-75.40096,9.21142,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+COLEGIO AGROPECUARIO PAILITAS - AUT,0-170-0-25025330,COL,True,-73.63033,8.95413,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO LAS FLORES - AUT,0-170-0-25025360,COL,True,-73.97091,9.04625,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SAN BENITO - AUT,0-170-0-25025380,COL,True,-75.03644,8.93531,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CORINTO - AUT,0-170-0-2604500039,COL,True,-76.25,3.18,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIVERSIDAD DEL VALLE  - AUT,0-170-0-26055120,COL,True,-76.53379,3.3779,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO A.BONILLA - AUT,0-170-0-26075150,COL,True,-76.3825,3.533,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+BASE AEREA MARCO FIDEL SUAREZ  - AUT,0-170-0-26085170,COL,True,-76.4997,3.4545,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+ZARAGOZA - AUT,0-170-0-26105250,COL,True,-75.92519,4.68978,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+CRQ ARMENIA - AUT,0-170-0-2612500038,COL,True,-75.66956,4.55633,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SALENTO - AUT,0-170-0-2612500130,COL,True,-75.55744,4.64101,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO EL EDEN - - AUT,0-170-0-26125061,COL,True,-75.76639,4.45472,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+POTREROS - AUT,0-170-0-2613500126,COL,True,-75.55808,4.8857,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PNN QUIMBAYA - AUT,0-170-0-26135300,COL,True,-75.57822,4.72858,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+EL JARDIN CUENCA ALTA RIO RISARALDA - AUT,0-170-0-2614500116,COL,True,-75.7964,5.5934,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA ESPERANZA ANDALUCIA - AUT,0-170-0-2615500122,COL,True,-75.35658,5.01778,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO LA NUBIA AUT,0-170-0-26155110,COL,True,-75.46992,5.02978,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LAS BRISAS - AUT,0-170-0-26155150,COL,True,-75.35042,4.93447,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+TESORITO FINCA  - AUT,0-170-0-26155170,COL,True,-75.4383,5.0322,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HACIENDA TUNEZ,0-170-0-26175040,COL,True,-75.65097,5.80025,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SONSON,0-170-0-26180180,COL,True,-75.29457,5.71601,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+VALLE ALTO  - AUT,0-170-0-26180250,COL,True,-75.31778,5.35,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MESOPOTAMIA,0-170-0-26185020,COL,True,-75.31864,5.88636,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SANTA ELENA,0-170-0-27010810,COL,True,-75.51675,6.19689,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LAS BRISAS,0-170-0-27011100,COL,True,-74.82183,7.1588,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+GUAYABITO,0-170-0-27015190,COL,True,-75.14675,6.54039,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA SALADA,0-170-0-27015260,COL,True,-75.62467,6.04836,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PARAMO BELMIRA,0-170-0-27015280,COL,True,-75.64444,6.63203,6,0,False,grey,OSCAR schedule issue,pressure,2026-10-21 00:00:00+00:00,ECMWF
+METROMEDELLIN - AUT,0-170-0-27015310,COL,True,-75.55183,6.32972,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+OLAYA HERRERA - AUT,0-170-0-27015330,COL,True,-75.58898,6.22061,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+LA PALMA DE COCO,0-170-0-27030140,COL,True,-74.8081,7.23609,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+SENA EL BAGRE,0-170-0-27035050,COL,True,-74.80069,7.58467,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+URUMITA AUT,0-170-0-28015070,COL,True,-73.01639,10.56639,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HACIENDA CENTENARIO,0-170-0-28025090,COL,True,-73.26547,9.85025,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO ALFONSO LOPEZ -,0-170-0-28025502,COL,True,-73.24767,10.43617,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+Caracoli,0-170-0-28030190,COL,True,-73.73167,10.08869,0,6,False,black,Not received in period,pressure,2026-10-21 00:00:00+00:00,DWD
+FEDEARROZ - AUT,0-170-0-28035060,COL,True,-73.24806,10.46361,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+GUATAPURI - AUT,0-170-0-28035070,COL,True,-73.39241,10.73213,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+CURUMANÍ AUT,0-170-0-2805500075,COL,True,-73.51297,9.23814,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+EL GUAMO AUT,0-170-0-29015000,COL,True,-74.97663,10.03462,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+HOBO - AUT,0-170-0-2901500072,COL,True,-75.23653,9.67253,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+NORMAL MANATI - AUT,0-170-0-29035080,COL,True,-74.95472,10.45398,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIREFORMADA AUT,0-170-0-2904000176,COL,True,-74.81593,10.9853,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+UNIAUTONOMA AUT,0-170-0-2904000177,COL,True,-74.82401,11.004,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+SABANALARGA - AUT,0-170-0-29045000,COL,True,-74.85042,10.6775,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+JUAN DE ACOSTA,0-170-0-29045110,COL,True,-75.04611,10.8339,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+AEROPUERTO E. CORTISSOZ - AUT,0-170-0-29045190,COL,True,-74.77974,10.8835,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+MEDIA LUNA - AUT,0-170-0-29065000,COL,True,-74.50676,10.51013,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+PUERTO INIRIDA AUT,0-170-0-31095030,COL,True,-67.91905,3.87442,6,6,False,green,Normal (>= 80%),pressure,2026-10-21 00:00:00+00:00,ECMWF
+GRANADA SENA AUT

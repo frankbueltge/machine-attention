@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-23",
+  "entries": [
+    {
+      "bytes": 409,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": "declarednetwork/probes/2026-10-23/oscar/robots.txt",
+      "full_sha256": "86a29fa73def5c8129c5f78344c88507d029da6a8266755af1cbd03d09307406",
+      "http_status": 200,
+      "kept_bytes": 409,
+      "name": "robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:35:50+00:00",
+      "sha256": "86a29fa73def5c8129c5f78344c88507d029da6a8266755af1cbd03d09307406",
+      "source": "oscar",
+      "truncated": false,
+      "url": "https://oscar.wmo.int/robots.txt"
+    },
+    {
+      "bytes": 14374478,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": null,
+      "full_sha256": "c88eed59de89db72b61ad9db4237a96b7445538f8bd27eb4ef4f47d188369661",
+      "http_status": 200,
+      "kept_bytes": 0,
+      "name": "search-synopLand.json",
+      "note": "bytes not preserved: robots.txt of this host disallows every path for every agent; one request was sent in the same batch as the robots read, before it was weighed; counts derived from it are in the audit document",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:32:28+00:00",
+      "sha256": "c88eed59de89db72b61ad9db4237a96b7445538f8bd27eb4ef4f47d188369661",
+      "source": "oscar",
+      "truncated": true,
+      "url": "https://oscar.wmo.int/surface/rest/api/search/station?stationClass=synopLand"
+    },
+    {
+      "bytes": 153,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/html",
+      "file": "declarednetwork/probes/2026-10-23/wdqms/robots.txt",
+      "full_sha256": "5e8b4f436982ee1e6a34300339ba70b7e1c66cf6a7455545d99e266874da654b",
+      "http_status": 404,
+      "kept_bytes": 153,
+      "name": "robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:35:51+00:00",
+      "sha256": "5e8b4f436982ee1e6a34300339ba70b7e1c66cf6a7455545d99e266874da654b",
+      "source": "wdqms",
+      "truncated": false,
+      "url": "https://wdqms.wmo.int/robots.txt"
+    },
+    {
+      "bytes": 1800909,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/csv;",
+      "file": "declarednetwork/probes/2026-10-23/wdqms/availability-six_hour-pressure-2026-10-21-00.csv",
+      "full_sha256": "5ff023582c422806d011d36cfedb76ca74a785b6d2a63f427ef643e081e4a7c1",
+      "http_status": 200,
+      "kept_bytes": 65536,
+      "name": "availability-six_hour-pressure-2026-10-21-00.csv",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:34:29+00:00",
+      "sha256": "f0dec5a8d815f4c0f305a15dd1ac2ccbefa3d7b9b24668aebf6587500949d525",
+      "source": "wdqms",
+      "truncated": true,
+      "url": "https://wdqms.wmo.int/wdqmsapi/v1/download/nwp/synop/six_hour/availability/?date=2026-10-21&period=00&variable=pressure&centers=COMBINED&baseline=OSCAR"
+    },
+    {
+      "bytes": 1442371,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/csv;",
+      "file": "declarednetwork/probes/2026-10-23/wdqms/availability-six_hour-pressure-2023-01-01-00.csv",
+      "full_sha256": "1c1689350fb977717109bfbae4ecdc37a7ea127f5b61b47340c2dc1d8dc4c4b9",
+      "http_status": 200,
+      "kept_bytes": 8192,
+      "name": "availability-six_hour-pressure-2023-01-01-00.csv",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:34:58+00:00",
+      "sha256": "05bd278aabe50f5cc9f2ce0dabe26db1337562635e1749a5bba9b928ca8769b1",
+      "source": "wdqms",
+      "truncated": true,
+      "url": "https://wdqms.wmo.int/wdqmsapi/v1/download/nwp/synop/six_hour/availability/?date=2023-01-01&period=00&variable=pressure&centers=COMBINED&baseline=OSCAR"
+    },
+    {
+      "bytes": 1424002,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/csv;",
+      "file": "declarednetwork/probes/2026-10-23/wdqms/availability-six_hour-pressure-2020-07-06-00.csv",
+      "full_sha256": "bb1caba63e6d475ebfb589802fc6d7af77b8aabef1a86d31a5ea9a5e1dcf274f",
+      "http_status": 200,
+      "kept_bytes": 8192,
+      "name": "availability-six_hour-pressure-2020-07-06-00.csv",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:34:54+00:00",
+      "sha256": "42fb76691242d298319627d8bb615f0c954a386370ac40d975455d28c14e3a4f",
+      "source": "wdqms",
+      "truncated": true,
+      "url": "https://wdqms.wmo.int/wdqmsapi/v1/download/nwp/synop/six_hour/availability/?date=2020-07-06&period=00&variable=pressure&centers=COMBINED&baseline=OSCAR"
+    },
+    {
+      "bytes": 254,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": "declarednetwork/probes/2026-10-23/ncei/robots.txt",
+      "full_sha256": "33fb2a90503c56a9c49e30edcfdbacb4f4449c85ed4230fa455ed385385cda6f",
+      "http_status": 200,
+      "kept_bytes": 254,
+      "name": "robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:35:52+00:00",
+      "sha256": "33fb2a90503c56a9c49e30edcfdbacb4f4449c85ed4230fa455ed385385cda6f",
+      "source": "ncei",
+      "truncated": false,
+      "url": "https://www.ncei.noaa.gov/robots.txt"
+    },
+    {
+      "bytes": 29587,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": "declarednetwork/probes/2026-10-23/ncei/ghcnd-readme.txt",
+      "full_sha256": "0e4e6f0e6947cf1add884c328a01760f31c56ef5fb86b85ed57dd5dc4c4aeaa6",
+      "http_status": 200,
+      "kept_bytes": 29587,
+      "name": "ghcnd-readme.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:34:58+00:00",
+      "sha256": "0e4e6f0e6947cf1add884c328a01760f31c56ef5fb86b85ed57dd5dc4c4aeaa6",
+      "source": "ncei",
+      "truncated": false,
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt"
+    },
+    {
+      "bytes": 65536,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": "declarednetwork/probes/2026-10-23/ncei/ghcnd-inventory-head.txt",
+      "full_sha256": "2b487e734940637c57fba12c7564280a72ecce601ba321cd63360ebe219eb679",
+      "http_status": 206,
+      "kept_bytes": 65536,
+      "name": "ghcnd-inventory-head.txt",
+      "note": "Range request bytes=0-65535; Last-Modified Wed, 14 Oct 2026 23:44:40 GMT; Content-Range bytes 0-65535/36396304",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "retrieved_at": "2026-10-23T22:35:52+00:00",
+      "sha256": "2b487e734940637c57fba12c7564280a72ecce601ba321cd63360ebe219eb679",
+      "source": "ncei",
+      "truncated": false,
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-inventory.txt"
+    }
+  ],
+  "project": "declarednetwork",
+  "stage": "AUDIT"
+}

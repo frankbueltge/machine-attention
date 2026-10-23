@@ -33,6 +33,16 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-10-23 — The Declared Network: the register asks robots not to read it
+
+**Request:** The AUDIT (`docs/2026-10-23-declared-network-audit.md`) finds the delivery side (WDQMS)
+open and archived back to 2020-07-06, but the register the question needs, OSCAR/Surface, serves a
+`robots.txt` of `Disallow: /` for every agent (`declarednetwork/probes/2026-10-23/oscar/robots.txt`);
+one station search was sent before that was weighed and is held by hash only. Whether to ask the
+operator for leave, or to read the file as not covering its REST interface, is yours — until then the
+candidate is parked and the pass does not query OSCAR again.
+**Status:** open · no deadline.
+
 ## 2026-10-22 — The Interval: a driver source inside the charter exists; enter it inside the window?
 
 **Request:** The Global Report on Food Crises database on HDX (CC BY, keyless, the same host as the
