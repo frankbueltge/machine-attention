@@ -1,0 +1,1321 @@
+{
+  "cohort": "2026-09",
+  "earlier": {
+    "file": "syntheticflood/readings/2026-09/2026-10-19.json",
+    "lag_months": 1,
+    "sha256": "0ad12489cb27ab02cbf6ab6506e8535b3cc8a0a6e394e773b10bc67f2b9a8e51",
+    "wordlist": "wordlist-v1"
+  },
+  "later": {
+    "file": "syntheticflood/readings/2026-09/2026-10-22.json",
+    "lag_months": 1,
+    "sha256": "f004e3f44e67642e2d7aa680470b82c3b3687efac0f0ba2c61c3bac4a31bb25c",
+    "wordlist": "wordlist-v2"
+  },
+  "moved": [],
+  "rule": {
+    "band": 1.1,
+    "id": "revision-v1",
+    "min_count": 50
+  },
+  "schema": "syntheticflood-revision-v1",
+  "total": {
+    "earlier": 165555,
+    "growth": 1.0027,
+    "later": 165995
+  },
+  "words": [
+    {
+      "drift": 0.9991,
+      "earlier": 6105,
+      "later": 6116,
+      "list": "fixed",
+      "status": "held",
+      "word": "additionally"
+    },
+    {
+      "earlier": 12,
+      "later": 12,
+      "list": "fixed",
+      "status": "thin",
+      "word": "boasts"
+    },
+    {
+      "earlier": 9,
+      "later": 9,
+      "list": "fixed",
+      "status": "thin",
+      "word": "commendable"
+    },
+    {
+      "drift": 0.9987,
+      "earlier": 9619,
+      "later": 9632,
+      "list": "fixed",
+      "status": "held",
+      "word": "comprehensive"
+    },
+    {
+      "drift": 0.999,
+      "earlier": 4776,
+      "later": 4784,
+      "list": "fixed",
+      "status": "held",
+      "word": "crucial"
+    },
+    {
+      "earlier": 27,
+      "later": 27,
+      "list": "fixed",
+      "status": "thin",
+      "word": "delve"
+    },
+    {
+      "earlier": 6,
+      "later": 6,
+      "list": "fixed",
+      "status": "thin",
+      "word": "delved"
+    },
+    {
+      "drift": 1.0165,
+      "earlier": 52,
+      "later": 53,
+      "list": "fixed",
+      "status": "held",
+      "word": "delves"
+    },
+    {
+      "earlier": 9,
+      "later": 9,
+      "list": "fixed",
+      "status": "thin",
+      "word": "delving"
+    },
+    {
+      "drift": 0.9985,
+      "earlier": 2537,
+      "later": 2540,
+      "list": "fixed",
+      "status": "held",
+      "word": "elucidate"
+    },
+    {
+      "drift": 1.0031,
+      "earlier": 522,
+      "later": 525,
+      "list": "fixed",
+      "status": "held",
+      "word": "elucidates"
+    },
+    {
+      "drift": 0.9987,
+      "earlier": 744,
+      "later": 745,
+      "list": "fixed",
+      "status": "held",
+      "word": "elucidating"
+    },
+    {
+      "drift": 0.9996,
+      "earlier": 1777,
+      "later": 1781,
+      "list": "fixed",
+      "status": "held",
+      "word": "emphasizing"
+    },
+    {
+      "drift": 0.9981,
+      "earlier": 1317,
+      "later": 1318,
+      "list": "fixed",
+      "status": "held",
+      "word": "encompassing"
+    },
+    {
+      "drift": 0.9997,
+      "earlier": 5595,
+      "later": 5608,
+      "list": "fixed",
+      "status": "held",
+      "word": "enhancing"
+    },
+    {
+      "drift": 0.9994,
+      "earlier": 14203,
+      "later": 14232,
+      "list": "fixed",
+      "status": "held",
+      "word": "exhibited"
+    },
+    {
+      "drift": 1.0012,
+      "earlier": 522,
+      "later": 524,
+      "list": "fixed",
+      "status": "held",
+      "word": "fostering"
+    },
+    {
+      "drift": 1.0015,
+      "earlier": 238,
+      "later": 239,
+      "list": "fixed",
+      "status": "held",
+      "word": "garnered"
+    },
+    {
+      "earlier": 45,
+      "later": 45,
+      "list": "fixed",
+      "status": "thin",
+      "word": "groundbreaking"
+    },
+    {
+      "drift": 0.9997,
+      "earlier": 7280,
+      "later": 7297,
+      "list": "fixed",
+      "status": "held",
+      "word": "highlighting"
+    },
+    {
+      "drift": 0.9994,
+      "earlier": 9842,
+      "later": 9862,
+      "list": "fixed",
+      "status": "held",
+      "word": "insights"
+    },
+    {
+      "drift": 1.0005,
+      "earlier": 1589,
+      "later": 1594,
+      "list": "fixed",
+      "status": "held",
+      "word": "interplay"
+    },
+    {
+      "earlier": 23,
+      "later": 23,
+      "list": "fixed",
+      "status": "thin",
+      "word": "intricacies"
+    },
+    {
+      "drift": 1.0021,
+      "earlier": 420,
+      "later": 422,
+      "list": "fixed",
+      "status": "held",
+      "word": "intricate"
+    },
+    {
+      "drift": 1.0092,
+      "earlier": 84,
+      "later": 85,
+      "list": "fixed",
+      "status": "held",
+      "word": "invaluable"
+    },
+    {
+      "drift": 1.0061,
+      "earlier": 1371,
+      "later": 1383,
+      "list": "fixed",
+      "status": "held",
+      "word": "leveraging"
+    },
+    {
+      "drift": 1.0021,
+      "earlier": 210,
+      "later": 211,
+      "list": "fixed",
+      "status": "held",
+      "word": "meticulous"
+    },
+    {
+      "earlier": 44,
+      "later": 44,
+      "list": "fixed",
+      "status": "thin",
+      "word": "meticulously"
+    },
+    {
+      "drift": 0.9987,
+      "earlier": 752,
+      "later": 753,
+      "list": "fixed",
+      "status": "held",
+      "word": "multifaceted"
+    },
+    {
+      "drift": 1.0001,
+      "earlier": 6107,
+      "later": 6124,
+      "list": "fixed",
+      "status": "held",
+      "word": "notably"
+    },
+    {
+      "drift": 1.0336,
+      "earlier": 413,
+      "later": 428,
+      "list": "fixed",
+      "status": "held",
+      "word": "noteworthy"
+    },
+    {
+      "drift": 1.0,
+      "earlier": 381,
+      "later": 382,
+      "list": "fixed",
+      "status": "held",
+      "word": "nuanced"
+    },
+    {
+      "drift": 1.0021,
+      "earlier": 1893,
+      "later": 1902,
+      "list": "fixed",
+      "status": "held",
+      "word": "pivotal"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 55,
+      "later": 55,
+      "list": "fixed",
+      "status": "held",
+      "word": "realm"
+    },
+    {
+      "drift": 0.9864,
+      "earlier": 91,
+      "later": 90,
+      "list": "fixed",
+      "status": "held",
+      "word": "seamlessly"
+    },
+    {
+      "drift": 0.9844,
+      "earlier": 77,
+      "later": 76,
+      "list": "fixed",
+      "status": "held",
+      "word": "showcase"
+    },
+    {
+      "earlier": 20,
+      "later": 21,
+      "list": "fixed",
+      "status": "thin",
+      "word": "showcased"
+    },
+    {
+      "earlier": 46,
+      "later": 46,
+      "list": "fixed",
+      "status": "thin",
+      "word": "showcases"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 87,
+      "later": 87,
+      "list": "fixed",
+      "status": "held",
+      "word": "showcasing"
+    },
+    {
+      "drift": 0.9945,
+      "earlier": 354,
+      "later": 353,
+      "list": "fixed",
+      "status": "held",
+      "word": "surpassing"
+    },
+    {
+      "earlier": 1,
+      "later": 1,
+      "list": "fixed",
+      "status": "thin",
+      "word": "tapestry"
+    },
+    {
+      "drift": 1.001,
+      "earlier": 2443,
+      "later": 2452,
+      "list": "fixed",
+      "status": "held",
+      "word": "underscore"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 142,
+      "later": 142,
+      "list": "fixed",
+      "status": "held",
+      "word": "underscored"
+    },
+    {
+      "drift": 1.0005,
+      "earlier": 1915,
+      "later": 1921,
+      "list": "fixed",
+      "status": "held",
+      "word": "underscores"
+    },
+    {
+      "drift": 1.0001,
+      "earlier": 2159,
+      "later": 2165,
+      "list": "fixed",
+      "status": "held",
+      "word": "underscoring"
+    },
+    {
+      "drift": 1.0018,
+      "earlier": 226,
+      "later": 227,
+      "list": "fixed",
+      "status": "held",
+      "word": "unveiling"
+    },
+    {
+      "earlier": 3,
+      "later": 3,
+      "list": "fixed",
+      "status": "thin",
+      "word": "unwavering"
+    },
+    {
+      "drift": 1.0,
+      "earlier": 55235,
+      "later": 55383,
+      "list": "controls",
+      "status": "held",
+      "word": "analysis"
+    },
+    {
+      "drift": 1.0001,
+      "earlier": 56541,
+      "later": 56699,
+      "list": "controls",
+      "status": "held",
+      "word": "associated"
+    },
+    {
+      "drift": 0.9986,
+      "earlier": 18064,
+      "later": 18087,
+      "list": "controls",
+      "status": "held",
+      "word": "cells"
+    },
+    {
+      "drift": 1.0003,
+      "earlier": 49236,
+      "later": 49383,
+      "list": "controls",
+      "status": "held",
+      "word": "clinical"
+    },
+    {
+      "drift": 1.0008,
+      "earlier": 31766,
+      "later": 31876,
+      "list": "controls",
+      "status": "held",
+      "word": "compared"
+    },
+    {
+      "drift": 0.9999,
+      "earlier": 41354,
+      "later": 41460,
+      "list": "controls",
+      "status": "held",
+      "word": "data"
+    },
+    {
+      "drift": 0.9999,
+      "earlier": 17305,
+      "later": 17349,
+      "list": "controls",
+      "status": "held",
+      "word": "effect"
+    },
+    {
+      "drift": 0.9999,
+      "earlier": 28786,
+      "later": 28860,
+      "list": "controls",
+      "status": "held",
+      "word": "increased"
+    },
+    {
+      "drift": 0.9992,
+      "earlier": 19567,
+      "later": 19604,
+      "list": "controls",
+      "status": "held",
+      "word": "levels"
+    },
+    {
+      "drift": 1.0021,
+      "earlier": 9430,
+      "later": 9475,
+      "list": "controls",
+      "status": "held",
+      "word": "measured"
+    },
+    {
+      "drift": 1.0002,
+      "earlier": 64659,
+      "later": 64843,
+      "list": "controls",
+      "status": "held",
+      "word": "methods"
+    },
+    {
+      "drift": 0.9997,
+      "earlier": 30615,
+      "later": 30687,
+      "list": "controls",
+      "status": "held",
+      "word": "model"
+    },
+    {
+      "drift": 0.9999,
+      "earlier": 23866,
+      "later": 23926,
+      "list": "controls",
+      "status": "held",
+      "word": "observed"
+    },
+    {
+      "drift": 1.0015,
+      "earlier": 12457,
+      "later": 12509,
+      "list": "controls",
+      "status": "held",
+      "word": "outcome"
+    },
+    {
+      "drift": 1.0008,
+      "earlier": 44539,
+      "later": 44695,
+      "list": "controls",
+      "status": "held",
+      "word": "patients"
+    },
+    {
+      "drift": 1.0002,
+      "earlier": 82283,
+      "later": 82518,
+      "list": "controls",
+      "status": "held",
+      "word": "results"
+    },
+    {
+      "drift": 1.0002,
+      "earlier": 31201,
+      "later": 31290,
+      "list": "controls",
+      "status": "held",
+      "word": "risk"
+    },
+    {
+      "drift": 1.0005,
+      "earlier": 34338,
+      "later": 34446,
+      "list": "controls",
+      "status": "held",
+      "word": "treatment"
+    },
+    {
+      "drift": 1.0003,
+      "earlier": 24366,
+      "later": 24437,
+      "list": "controls",
+      "status": "held",
+      "word": "years"
+    },
+    {
+      "earlier": 16,
+      "later": 16,
+      "list": "pool",
+      "status": "thin",
+      "word": "adept"
+    },
+    {
+      "drift": 0.9985,
+      "earlier": 877,
+      "later": 878,
+      "list": "pool",
+      "status": "held",
+      "word": "advancements"
+    },
+    {
+      "drift": 0.9988,
+      "earlier": 2070,
+      "later": 2073,
+      "list": "pool",
+      "status": "held",
+      "word": "advancing"
+    },
+    {
+      "drift": 0.9995,
+      "earlier": 919,
+      "later": 921,
+      "list": "pool",
+      "status": "held",
+      "word": "align"
+    },
+    {
+      "drift": 1.0044,
+      "earlier": 425,
+      "later": 428,
+      "list": "pool",
+      "status": "held",
+      "word": "aligns"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 479,
+      "later": 479,
+      "list": "pool",
+      "status": "held",
+      "word": "amplify"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 54,
+      "later": 54,
+      "list": "pool",
+      "status": "held",
+      "word": "bolster"
+    },
+    {
+      "earlier": 36,
+      "later": 36,
+      "list": "pool",
+      "status": "thin",
+      "word": "bolstering"
+    },
+    {
+      "earlier": 1,
+      "later": 1,
+      "list": "pool",
+      "status": "thin",
+      "word": "captivating"
+    },
+    {
+      "drift": 1.0031,
+      "earlier": 173,
+      "later": 174,
+      "list": "pool",
+      "status": "held",
+      "word": "catalyze"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 1373,
+      "later": 1373,
+      "list": "pool",
+      "status": "held",
+      "word": "comprehensively"
+    },
+    {
+      "drift": 0.9999,
+      "earlier": 2336,
+      "later": 2342,
+      "list": "pool",
+      "status": "held",
+      "word": "consequently"
+    },
+    {
+      "drift": 0.9987,
+      "earlier": 3782,
+      "later": 3787,
+      "list": "pool",
+      "status": "held",
+      "word": "critically"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 98,
+      "later": 98,
+      "list": "pool",
+      "status": "held",
+      "word": "cultivate"
+    },
+    {
+      "drift": 0.9951,
+      "earlier": 444,
+      "later": 443,
+      "list": "pool",
+      "status": "held",
+      "word": "cutting"
+    },
+    {
+      "drift": 1.0006,
+      "earlier": 620,
+      "later": 622,
+      "list": "pool",
+      "status": "held",
+      "word": "delineate"
+    },
+    {
+      "drift": 0.9934,
+      "earlier": 254,
+      "later": 253,
+      "list": "pool",
+      "status": "held",
+      "word": "delineates"
+    },
+    {
+      "drift": 0.9987,
+      "earlier": 7514,
+      "later": 7524,
+      "list": "pool",
+      "status": "held",
+      "word": "diverse"
+    },
+    {
+      "drift": 1.0,
+      "earlier": 7068,
+      "later": 7087,
+      "list": "pool",
+      "status": "held",
+      "word": "dynamic"
+    },
+    {
+      "drift": 0.9921,
+      "earlier": 190,
+      "later": 189,
+      "list": "pool",
+      "status": "held",
+      "word": "elevate"
+    },
+    {
+      "drift": 0.9992,
+      "earlier": 8980,
+      "later": 8997,
+      "list": "pool",
+      "status": "held",
+      "word": "elevated"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 293,
+      "later": 293,
+      "list": "pool",
+      "status": "held",
+      "word": "elevating"
+    },
+    {
+      "earlier": 3,
+      "later": 3,
+      "list": "pool",
+      "status": "thin",
+      "word": "embark"
+    },
+    {
+      "drift": 1.0051,
+      "earlier": 129,
+      "later": 130,
+      "list": "pool",
+      "status": "held",
+      "word": "empower"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 124,
+      "later": 124,
+      "list": "pool",
+      "status": "held",
+      "word": "empowering"
+    },
+    {
+      "drift": 1.0045,
+      "earlier": 278,
+      "later": 280,
+      "list": "pool",
+      "status": "held",
+      "word": "encompass"
+    },
+    {
+      "drift": 1.0001,
+      "earlier": 362,
+      "later": 363,
+      "list": "pool",
+      "status": "held",
+      "word": "encompasses"
+    },
+    {
+      "earlier": 41,
+      "later": 41,
+      "list": "pool",
+      "status": "thin",
+      "word": "endeavor"
+    },
+    {
+      "drift": 1.0021,
+      "earlier": 210,
+      "later": 211,
+      "list": "pool",
+      "status": "held",
+      "word": "enduring"
+    },
+    {
+      "drift": 0.9994,
+      "earlier": 8570,
+      "later": 8588,
+      "list": "pool",
+      "status": "held",
+      "word": "enhance"
+    },
+    {
+      "drift": 0.9994,
+      "earlier": 3945,
+      "later": 3953,
+      "list": "pool",
+      "status": "held",
+      "word": "enhances"
+    },
+    {
+      "drift": 1.0015,
+      "earlier": 239,
+      "later": 240,
+      "list": "pool",
+      "status": "held",
+      "word": "enrich"
+    },
+    {
+      "drift": 1.0011,
+      "earlier": 11750,
+      "later": 11794,
+      "list": "pool",
+      "status": "held",
+      "word": "essential"
+    },
+    {
+      "drift": 1.0007,
+      "earlier": 1762,
+      "later": 1768,
+      "list": "pool",
+      "status": "held",
+      "word": "evolving"
+    },
+    {
+      "drift": 1.0007,
+      "earlier": 3917,
+      "later": 3930,
+      "list": "pool",
+      "status": "held",
+      "word": "facilitate"
+    },
+    {
+      "drift": 1.0011,
+      "earlier": 1589,
+      "later": 1595,
+      "list": "pool",
+      "status": "held",
+      "word": "facilitates"
+    },
+    {
+      "drift": 1.0003,
+      "earlier": 2034,
+      "later": 2040,
+      "list": "pool",
+      "status": "held",
+      "word": "facilitating"
+    },
+    {
+      "drift": 0.9995,
+      "earlier": 9626,
+      "later": 9647,
+      "list": "pool",
+      "status": "held",
+      "word": "furthermore"
+    },
+    {
+      "drift": 1.0045,
+      "earlier": 140,
+      "later": 141,
+      "list": "pool",
+      "status": "held",
+      "word": "harness"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 322,
+      "later": 322,
+      "list": "pool",
+      "status": "held",
+      "word": "harnessing"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 63,
+      "later": 63,
+      "list": "pool",
+      "status": "held",
+      "word": "heighten"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 688,
+      "later": 688,
+      "list": "pool",
+      "status": "held",
+      "word": "holistic"
+    },
+    {
+      "drift": 1.0049,
+      "earlier": 132,
+      "later": 133,
+      "list": "pool",
+      "status": "held",
+      "word": "illuminate"
+    },
+    {
+      "earlier": 42,
+      "later": 43,
+      "list": "pool",
+      "status": "thin",
+      "word": "illuminates"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 57,
+      "later": 57,
+      "list": "pool",
+      "status": "held",
+      "word": "illuminating"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 145,
+      "later": 145,
+      "list": "pool",
+      "status": "held",
+      "word": "impactful"
+    },
+    {
+      "drift": 0.9982,
+      "earlier": 2429,
+      "later": 2431,
+      "list": "pool",
+      "status": "held",
+      "word": "importantly"
+    },
+    {
+      "drift": 0.9994,
+      "earlier": 1426,
+      "later": 1429,
+      "list": "pool",
+      "status": "held",
+      "word": "inherent"
+    },
+    {
+      "drift": 0.9986,
+      "earlier": 1642,
+      "later": 1644,
+      "list": "pool",
+      "status": "held",
+      "word": "innovative"
+    },
+    {
+      "earlier": 32,
+      "later": 32,
+      "list": "pool",
+      "status": "thin",
+      "word": "insightful"
+    },
+    {
+      "drift": 0.9992,
+      "earlier": 537,
+      "later": 538,
+      "list": "pool",
+      "status": "held",
+      "word": "integral"
+    },
+    {
+      "drift": 1.0075,
+      "earlier": 98,
+      "later": 99,
+      "list": "pool",
+      "status": "held",
+      "word": "intriguing"
+    },
+    {
+      "drift": 0.997,
+      "earlier": 2625,
+      "later": 2624,
+      "list": "pool",
+      "status": "held",
+      "word": "landscape"
+    },
+    {
+      "drift": 1.0014,
+      "earlier": 493,
+      "later": 495,
+      "list": "pool",
+      "status": "held",
+      "word": "leverage"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 485,
+      "later": 485,
+      "list": "pool",
+      "status": "held",
+      "word": "leverages"
+    },
+    {
+      "drift": 0.9992,
+      "earlier": 4807,
+      "later": 4816,
+      "list": "pool",
+      "status": "held",
+      "word": "moreover"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 429,
+      "later": 429,
+      "list": "pool",
+      "status": "held",
+      "word": "navigate"
+    },
+    {
+      "drift": 0.9992,
+      "earlier": 547,
+      "later": 548,
+      "list": "pool",
+      "status": "held",
+      "word": "navigating"
+    },
+    {
+      "earlier": 40,
+      "later": 40,
+      "list": "pool",
+      "status": "thin",
+      "word": "nuance"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 84,
+      "later": 84,
+      "list": "pool",
+      "status": "held",
+      "word": "nuances"
+    },
+    {
+      "drift": 1.0008,
+      "earlier": 4274,
+      "later": 4289,
+      "list": "pool",
+      "status": "held",
+      "word": "offering"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 180,
+      "later": 180,
+      "list": "pool",
+      "status": "held",
+      "word": "paramount"
+    },
+    {
+      "drift": 0.9864,
+      "earlier": 91,
+      "later": 90,
+      "list": "pool",
+      "status": "held",
+      "word": "pinpoint"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 98,
+      "later": 98,
+      "list": "pool",
+      "status": "held",
+      "word": "poised"
+    },
+    {
+      "drift": 1.0,
+      "earlier": 1118,
+      "later": 1121,
+      "list": "pool",
+      "status": "held",
+      "word": "profound"
+    },
+    {
+      "drift": 0.9996,
+      "earlier": 448,
+      "later": 449,
+      "list": "pool",
+      "status": "held",
+      "word": "profoundly"
+    },
+    {
+      "drift": 0.9997,
+      "earlier": 13197,
+      "later": 13228,
+      "list": "pool",
+      "status": "held",
+      "word": "promising"
+    },
+    {
+      "earlier": 9,
+      "later": 9,
+      "list": "pool",
+      "status": "thin",
+      "word": "reaffirm"
+    },
+    {
+      "earlier": 15,
+      "later": 15,
+      "list": "pool",
+      "status": "thin",
+      "word": "realms"
+    },
+    {
+      "drift": 0.9982,
+      "earlier": 1219,
+      "later": 1220,
+      "list": "pool",
+      "status": "held",
+      "word": "remarkable"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 654,
+      "later": 654,
+      "list": "pool",
+      "status": "held",
+      "word": "remarkably"
+    },
+    {
+      "earlier": 15,
+      "later": 15,
+      "list": "pool",
+      "status": "thin",
+      "word": "resonate"
+    },
+    {
+      "earlier": 49,
+      "later": 49,
+      "list": "pool",
+      "status": "thin",
+      "word": "revolutionize"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 63,
+      "later": 63,
+      "list": "pool",
+      "status": "held",
+      "word": "revolutionizing"
+    },
+    {
+      "drift": 1.0001,
+      "earlier": 8806,
+      "later": 8830,
+      "list": "pool",
+      "status": "held",
+      "word": "robust"
+    },
+    {
+      "earlier": 19,
+      "later": 19,
+      "list": "pool",
+      "status": "thin",
+      "word": "scrutinize"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 149,
+      "later": 149,
+      "list": "pool",
+      "status": "held",
+      "word": "seamless"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 254,
+      "later": 254,
+      "list": "pool",
+      "status": "held",
+      "word": "shed"
+    },
+    {
+      "earlier": 3,
+      "later": 3,
+      "list": "pool",
+      "status": "thin",
+      "word": "spearhead"
+    },
+    {
+      "drift": 1.0021,
+      "earlier": 208,
+      "later": 209,
+      "list": "pool",
+      "status": "held",
+      "word": "strategically"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 166,
+      "later": 166,
+      "list": "pool",
+      "status": "held",
+      "word": "streamline"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 86,
+      "later": 86,
+      "list": "pool",
+      "status": "held",
+      "word": "streamlining"
+    },
+    {
+      "drift": 1.0004,
+      "earlier": 9015,
+      "later": 9043,
+      "list": "pool",
+      "status": "held",
+      "word": "substantial"
+    },
+    {
+      "drift": 0.9998,
+      "earlier": 5269,
+      "later": 5282,
+      "list": "pool",
+      "status": "held",
+      "word": "substantially"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 3336,
+      "later": 3336,
+      "list": "pool",
+      "status": "held",
+      "word": "synergistic"
+    },
+    {
+      "drift": 0.9995,
+      "earlier": 914,
+      "later": 916,
+      "list": "pool",
+      "status": "held",
+      "word": "synergy"
+    },
+    {
+      "drift": 0.9988,
+      "earlier": 8277,
+      "later": 8289,
+      "list": "pool",
+      "status": "held",
+      "word": "thereby"
+    },
+    {
+      "drift": 0.9958,
+      "earlier": 657,
+      "later": 656,
+      "list": "pool",
+      "status": "held",
+      "word": "transformative"
+    },
+    {
+      "drift": 1.002,
+      "earlier": 852,
+      "later": 856,
+      "list": "pool",
+      "status": "held",
+      "word": "uncover"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 338,
+      "later": 338,
+      "list": "pool",
+      "status": "held",
+      "word": "uncovering"
+    },
+    {
+      "drift": 1.0055,
+      "earlier": 122,
+      "later": 123,
+      "list": "pool",
+      "status": "held",
+      "word": "unlock"
+    },
+    {
+      "earlier": 30,
+      "later": 30,
+      "list": "pool",
+      "status": "thin",
+      "word": "unparalleled"
+    },
+    {
+      "drift": 0.9994,
+      "earlier": 485,
+      "later": 486,
+      "list": "pool",
+      "status": "held",
+      "word": "unprecedented"
+    },
+    {
+      "drift": 1.0137,
+      "earlier": 122,
+      "later": 124,
+      "list": "pool",
+      "status": "held",
+      "word": "unravel"
+    },
+    {
+      "drift": 0.9973,
+      "earlier": 226,
+      "later": 226,
+      "list": "pool",
+      "status": "held",
+      "word": "unraveling"
+    },
+    {
+      "drift": 0.999,
+      "earlier": 3678,
+      "later": 3684,
+      "list": "pool",
+      "status": "held",
+      "word": "valuable"
+    },
+    {
+      "drift": 1.0026,
+      "earlier": 1510,
+      "later": 1518,
+      "list": "pool",
+      "status": "held",
+      "word": "versatile"
+    },
+    {
+      "earlier": 22,
+      "later": 22,
+      "list": "pool",
+      "status": "thin",
+      "word": "vibrant"
+    },
+    {
+      "drift": 1.0027,
+      "earlier": 1685,
+      "later": 1694,
+      "list": "pool",
+      "status": "held",
+      "word": "vital"
+    }
+  ]
+}
