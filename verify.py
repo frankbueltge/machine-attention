@@ -2347,6 +2347,66 @@ def check_syntheticflood_derived(root: Path, problems: list[str]) -> None:
                 problems.append(f"{rel}: derived list or control breach differs")
 
 
+SF_REVISION_RULES = {"revision-v1": {"min_count": 50, "band": 1.1}}
+
+
+def check_syntheticflood_revisions(root: Path, problems: list[str]) -> None:
+    """A revision: two readings of one cohort, named by hash, every drift
+    re-derived from their counts under a rule that never changes."""
+    for rpath in sorted(root.glob("syntheticflood/revisions/*/*.json")):
+        rel = rpath.relative_to(root).as_posix()
+        d = load(rpath)
+        rule = d.get("rule") or {}
+        params = SF_REVISION_RULES.get(rule.get("id"))
+        if d.get("schema") != "syntheticflood-revision-v1" or params is None \
+                or {k: v for k, v in rule.items() if k != "id"} != params:
+            problems.append(f"{rel}: unknown schema or rule changed under its id")
+            continue
+        cohort = rpath.parent.name
+        dates = rpath.stem.split("_")
+        if d.get("cohort") != cohort or cohort in SF_BASE_YEARS or len(dates) != 2 \
+                or not dates[0] < dates[1]:
+            problems.append(f"{rel}: cohort or dates are not its path")
+            continue
+        readings = []
+        for key, day in zip(("earlier", "later"), dates):
+            ref = d.get(key) or {}
+            f = f"syntheticflood/readings/{cohort}/{day}.json"
+            if ref.get("file") != f or not (root / f).is_file() \
+                    or sha256_file(root / f) != ref.get("sha256"):
+                problems.append(f"{rel}: {key} reading missing, changed or not the one named")
+                break
+            r = load(root / f)
+            if ref.get("lag_months") != r.get("lag_months") \
+                    or ref.get("wordlist") != (r.get("wordlist") or {}).get("version") \
+                    or (r.get("total") or {}).get("count") is None \
+                    or any(c.get("count") is None for c in r.get("counts") or []):
+                problems.append(f"{rel}: {key} reading incomplete or misdescribed")
+                break
+            readings.append(r)
+        else:
+            (e, l) = readings
+            t1, t2 = e["total"]["count"], l["total"]["count"]
+            after = {(c["list"], c["word"]): c["count"] for c in l["counts"]}
+            rows = []
+            for c in e["counts"]:
+                k = (c["list"], c["word"])
+                if k not in after:
+                    continue
+                row = {"list": k[0], "word": k[1], "earlier": c["count"], "later": after[k]}
+                if c["count"] < params["min_count"]:
+                    row["status"] = "thin"
+                else:
+                    drift = round((after[k] / t2) / (c["count"] / t1), 4)
+                    inside = 1 / params["band"] <= drift <= params["band"]
+                    row.update(status="held" if inside else "moved", drift=drift)
+                rows.append(row)
+            if d.get("total") != {"earlier": t1, "later": t2, "growth": round(t2 / t1, 4)} \
+                    or d.get("words") != rows \
+                    or d.get("moved") != [x["word"] for x in rows if x["status"] == "moved"]:
+                problems.append(f"{rel}: drift, totals or moved words differ from the readings")
+
+
 SF_WIKI_URL = ("https://en.wikipedia.org/w/api.php?format=json&formatversion=2"
                "&action=query&list=allcategories"
                "&acprefix=Articles+containing+suspected+AI&acprop=size&aclimit=500")
@@ -2517,6 +2577,7 @@ def check(root: Path) -> list[str]:
     check_syntheticflood_categories(root, registry_files, problems)
     check_syntheticflood_baseline(root, problems)
     check_syntheticflood_derived(root, problems)
+    check_syntheticflood_revisions(root, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
