@@ -10,24 +10,37 @@ frankbueltge.de and corrected on day one from a monitoring corridor to an open
 practice — the reasoning lives in
 [`docs/2026-08-08-korrektur-praxis-ueber-observatorium.md`](docs/2026-08-08-korrektur-praxis-ueber-observatorium.md).
 
-## Where the practice stands (2026-10-04)
+## Where the practice stands (2026-10-25)
 
-- **The Foreknown is retired.** Fifty nights of record (2026-08-08 – 2026-10-03)
-  showed that the notary could not measure what it was built for. The stage at
-  frankbueltge.de/attention is now the archive of that finished record —
-  [`docs/2026-10-04-foreknown-retired.md`](docs/2026-10-04-foreknown-retired.md).
-- **The question moves to a clock where response is measurable:** slow-onset
-  food crises, projection against funding —
-  [`docs/2026-10-04-kandidat-the-interval.md`](docs/2026-10-04-kandidat-the-interval.md).
-- **The discovery pass builds now, instead of maintaining:** it carries
-  candidates through the admission path rather than tending one instrument —
-  [`docs/2026-10-04-discovery-neuer-auftrag.md`](docs/2026-10-04-discovery-neuer-auftrag.md).
-- **Dark Ocean is retired too**, the same day: its continuity notary ran on
-  without holding the practice's attention —
-  [`docs/2026-10-04-dark-ocean-retired.md`](docs/2026-10-04-dark-ocean-retired.md).
-- **Planetary Listening is admitted to V0** (the maintainer's GO of 2026-10-04),
-  next in line for the discovery pass after The Interval's V0.
-- Memory Hole (v0) and the instrument The State Before the Interface run on.
+The discovery pass runs daily and keeps its own working list,
+[`discovery/AGENDA.md`](discovery/AGENDA.md); admission path EXPOSÉ → AUDIT → V0 →
+E-EXPERIMENT → RUNNING (any time: RETIRED).
+
+- **The Interval** — slow-onset food crises, projection against funding — is in its
+  **E-experiment**: criteria committed 2026-10-14, before the window
+  ([`docs/2026-10-14-the-interval-e-experiment-kriterien.md`](docs/2026-10-14-the-interval-e-experiment-kriterien.md),
+  addendum 2026-10-17); window four weekly readings, Mondays 2026-10-19 to 2026-11-09, review
+  from 2026-11-16.
+- **Planetary Listening** — "One Quarry, Two Records" — is in its **E-experiment** too:
+  criteria committed 2026-10-19
+  ([`docs/2026-10-19-planetary-listening-e-experiment-kriterien.md`](docs/2026-10-19-planetary-listening-e-experiment-kriterien.md)),
+  window 14 nights, 2026-10-21 to 2026-11-03, review from 2026-11-04.
+- **The Synthetic Flood** — the share of machine-written language in two public registers,
+  and how fast the measuring method loses its sight — is at **V0** since 2026-10-19
+  ([`docs/2026-10-16-synthetic-flood-expose-achse.md`](docs/2026-10-16-synthetic-flood-expose-achse.md));
+  the second reading follows from 2026-11-01.
+- **The Declared Network** — how long a silent weather station stays declared "in
+  operation" — is a new **exposé** of 2026-10-23
+  ([`docs/2026-10-23-kandidat-declared-network.md`](docs/2026-10-23-kandidat-declared-network.md)).
+- **Memory Hole** (V0) and the instrument **The State Before the Interface** run on.
+- **Retired on 2026-10-04:** **The Foreknown**, after fifty nights of record — the stage at
+  frankbueltge.de/attention is the archive of that finished record
+  ([`docs/2026-10-04-foreknown-retired.md`](docs/2026-10-04-foreknown-retired.md)); and
+  **Dark Ocean**, whose continuity notary ran on without holding the practice's attention
+  ([`docs/2026-10-04-dark-ocean-retired.md`](docs/2026-10-04-dark-ocean-retired.md)). On the
+  same day the discovery pass got its new mandate, to build candidates through the admission
+  path instead of tending one instrument
+  ([`docs/2026-10-04-discovery-neuer-auftrag.md`](docs/2026-10-04-discovery-neuer-auftrag.md)).
 
 ## The stage
 
@@ -52,7 +65,7 @@ All four levels are static, deterministic builds from the same committed
 records, so `verify.py` covers them byte for byte — and "no dead ends" is a
 test, not an intention.
 
-**Live:** https://frankbueltge.de/attention/ — published on frankbueltge.de
+**Archive since 2026-10-04:** https://frankbueltge.de/attention/ — published on frankbueltge.de
 (Frank's decision, 2026-08-08), where the site pulls the committed stage build
 nightly via its `attention-integrate` workflow. This repository builds
 `public/` as the canonical, verified artifact; it does not deploy itself.
