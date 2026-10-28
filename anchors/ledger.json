@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T10:06:54Z",
+ "generated_at": "2026-10-28T12:58:09Z",
  "what": "OpenTimestamps anchors for the registers' day manifests. Each manifest carries the SHA-256 of every preserved byte of its night, so one anchor covers the night. Proofs are pending until upgraded; a pending proof is a calendar's promise, a complete one stands on a Bitcoin block alone.",
  "proves": "the manifest's bytes existed no later than the attested block — not that they are true, not that they came from the publisher they name, and not that they did not exist earlier",
  "verify": "ots verify -f <manifest> <proof> — the -f is required because the proof is stored apart from the file it commits to. The Bitcoin side needs a Bitcoin node (--bitcoin-node); a block explorer is a third party, which is the trust an anchor exists to remove",
@@ -7,10 +7,10 @@
  "method": "docs/2026-08-09-opentimestamps-examination.md",
  "counts": {
   "manifests": 247,
-  "complete": 243,
+  "complete": 245,
   "pending": 2,
-  "stamped_this_run": 0,
-  "upgraded_this_run": 0,
+  "stamped_this_run": 2,
+  "upgraded_this_run": 2,
   "failures": 0
  },
  "failures": [],
@@ -1145,7 +1145,6 @@
   {
    "manifest": "interval/snapshots/2026-10-26/manifest.json",
    "sha256": "0e1725610242c6ea34d1c7f5098bb223df402c743d594d3dd7d593fc055880ec",
-   "upgraded_at": "2026-10-27T12:14:39Z",
    "proof": "anchors/interval/snapshots/2026-10-26/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 973241, 973255, 973268"
@@ -1643,7 +1642,6 @@
   {
    "manifest": "memoryhole/snapshots/2026-10-25/manifest.json",
    "sha256": "a46f891241df60529ec3b06834d669623646a92b801655af482c324ff0b20cee",
-   "upgraded_at": "2026-10-27T12:14:50Z",
    "proof": "anchors/memoryhole/snapshots/2026-10-25/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 973241, 973255, 973268"
@@ -1651,15 +1649,18 @@
   {
    "manifest": "memoryhole/snapshots/2026-10-26/manifest.json",
    "sha256": "4a99983f935dc4d16e77a452a4a7509c11f99dc68a54c7b9a74ba857ecff9657",
-   "stamped_at": "2026-10-27T12:14:52Z",
+   "upgraded_at": "2026-10-28T12:57:56Z",
    "proof": "anchors/memoryhole/snapshots/2026-10-26/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 973395, 973414, 973423, 973444"
   },
   {
    "manifest": "memoryhole/snapshots/2026-10-27/manifest.json",
    "sha256": "1e9ec99df00baed1f64e954cb6c779e9acaf04a6b16ab43ccb6b6ae29a0f5a4b",
-   "state": "unstamped"
+   "stamped_at": "2026-10-28T12:57:58Z",
+   "proof": "anchors/memoryhole/snapshots/2026-10-27/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   },
   {
    "manifest": "planetary/snapshots/2026-10-15/manifest.json",
@@ -1727,7 +1728,6 @@
   {
    "manifest": "planetary/snapshots/2026-10-25/manifest.json",
    "sha256": "08a7fed036e514eb0ad71ac045ba1937d9f8dfe01a5ae9da462a04da5d53be16",
-   "upgraded_at": "2026-10-27T12:14:56Z",
    "proof": "anchors/planetary/snapshots/2026-10-25/manifest.json.ots",
    "state": "complete",
    "evidence": "bitcoin block(s) 973241, 973255, 973268"
@@ -1735,15 +1735,18 @@
   {
    "manifest": "planetary/snapshots/2026-10-26/manifest.json",
    "sha256": "b674b8d9314f1678544d250e3327cb96961478d928b06b4a89a80471db439b39",
-   "stamped_at": "2026-10-27T12:14:58Z",
+   "upgraded_at": "2026-10-28T12:58:04Z",
    "proof": "anchors/planetary/snapshots/2026-10-26/manifest.json.ots",
-   "state": "pending",
-   "evidence": "4 calendar promise(s), no block yet"
+   "state": "complete",
+   "evidence": "bitcoin block(s) 973395, 973414, 973423, 973444"
   },
   {
    "manifest": "planetary/snapshots/2026-10-27/manifest.json",
    "sha256": "e042192af5b03701fc439956c5f67d75565f1d2ddf516c951fbd6decbb54cf2f",
-   "state": "unstamped"
+   "stamped_at": "2026-10-28T12:58:06Z",
+   "proof": "anchors/planetary/snapshots/2026-10-27/manifest.json.ots",
+   "state": "pending",
+   "evidence": "4 calendar promise(s), no block yet"
   }
  ]
 }
