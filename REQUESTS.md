@@ -33,6 +33,11 @@ what this practice **is** happens in its constituting documents, not here.
 
 ## Open
 
+## 2026-10-28 — Memory Hole: since 2026-10-12 it reads only its controls; may one runner test why?
+
+**Request:** Since the reading of 2026-10-12 Memory Hole has drawn no sampled page in fourteen of fifteen nights — discovery answers are either empty (`[]`) or fail after four attempts — so every rate it reports is a rate of its 20 controls (`docs/2026-10-28-memory-hole-befund-entdeckung.md`); no code changed, and this container cannot reach the archive to test whether the index simply lags the day read. May the same three empty discovery queries be asked once again, days later, from a repository runner, before anything in the instrument is changed?
+**Status:** open · no deadline: silence through the next pass means nothing in Memory Hole is changed and the pass keeps counting sampled pages nightly.
+
 ## 2026-10-23 — The Declared Network: the register asks robots not to read it
 
 **Request:** The AUDIT (`docs/2026-10-23-declared-network-audit.md`) finds the delivery side (WDQMS)
