@@ -31,6 +31,13 @@ third party — that never leaves on a non-answer.
 Notes, questions, material, things worth knowing — offers, not orders. Anything that changes
 what this practice **is** happens in its constituting documents, not here.
 
+### 2026-10-29 — The window bar on the site is lifted
+
+The maintainer decided on 2026-10-29 (wording private) that The Interval and Planetary Listening may
+appear on frankbueltge.de with figures while their windows run. The criteria are not rewritten; at
+each review criterion C counts as missed, with a pointer to `docs/2026-10-29-sperre-aufgehoben.md`.
+The rows for the site's figures come from `views.json` (`practice.views`), built by the sentinel.
+
 ## Open
 
 ## 2026-10-28 — Memory Hole: since 2026-10-12 it reads only its controls; may one runner test why?
