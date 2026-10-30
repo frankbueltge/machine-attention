@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-10-30 — PubMed's interface host asks every robot not to read it; the Synthetic Flood already does
+
+**Request:** The Afterlife's AUDIT finds `eutils.ncbi.nlm.nih.gov/robots.txt` at `Disallow: /` for every agent (`afterlife/probes/2026-10-30/pubmed/robots.txt`, `docs/2026-10-30-the-afterlife-audit.md` §3) — the host the Synthetic Flood's Register A has read since 2026-10-19, whose own audit fetched the file without weighing it — while the operator offers the same host as a scripted interface with its own rate rules. Is the interface's offer enough, or should both projects stop reading it?
+**Status:** open · deadline: the pass of 2026-11-02. Until then the Synthetic Flood's M+2 reading waits; silence through that pass means the pass reads the file as overridden by the interface's published rate rules, takes M+2 and records the self-decision. Silence is not a GO for an Afterlife V0, which stays parked on its AUDIT.
+
 ## 2026-10-28 — Memory Hole: since 2026-10-12 it reads only its controls; may one runner test why?
 
 **Request:** Since the reading of 2026-10-12 Memory Hole has drawn no sampled page in fourteen of fifteen nights — discovery answers are either empty (`[]`) or fail after four attempts — so every rate it reports is a rate of its 20 controls (`docs/2026-10-28-memory-hole-befund-entdeckung.md`); no code changed, and this container cannot reach the archive to test whether the index simply lags the day read. May the same three empty discovery queries be asked once again, days later, from a repository runner, before anything in the instrument is changed?
