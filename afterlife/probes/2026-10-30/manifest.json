@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-30",
+  "document": "docs/2026-10-30-the-afterlife-audit.md",
+  "entries": [
+    {
+      "bytes": 105,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "afterlife/probes/2026-10-30/crossref/robots.txt",
+      "full_sha256": "e61a074ca2e4f9d188e05a2fbb207940a17a1a2edf18445b02f985e8f7e1bde1",
+      "http_status": 404,
+      "kept_bytes": 105,
+      "name": "robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:38:43 GMT",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "retrieved_at": "2026-10-30T07:38:42+00:00",
+      "sha256": "e61a074ca2e4f9d188e05a2fbb207940a17a1a2edf18445b02f985e8f7e1bde1",
+      "source": "crossref",
+      "truncated": false,
+      "url": "https://api.crossref.org/robots.txt"
+    },
+    {
+      "bytes": 23,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain; charset=utf-8",
+      "file": "afterlife/probes/2026-10-30/openalex/robots.txt",
+      "full_sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "http_status": 200,
+      "kept_bytes": 23,
+      "name": "robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "23",
+        "Date": "Fri, 30 Oct 2026 07:38:44 GMT"
+      },
+      "retrieved_at": "2026-10-30T07:38:44+00:00",
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "source": "openalex",
+      "truncated": false,
+      "url": "https://api.openalex.org/robots.txt"
+    },
+    {
+      "bytes": 178,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": "afterlife/probes/2026-10-30/pubmed/robots.txt",
+      "full_sha256": "ead5515bac4e17bafb45312b93ca74f15ea098086a1c678f42a8319f3b369ac8",
+      "http_status": 200,
+      "kept_bytes": 178,
+      "name": "robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "178",
+        "Date": "Fri, 30 Oct 2026 07:38:45 GMT",
+        "Last-Modified": "Tue, 17 Jun 2014 17:40:27 GMT"
+      },
+      "retrieved_at": "2026-10-30T07:38:45+00:00",
+      "sha256": "ead5515bac4e17bafb45312b93ca74f15ea098086a1c678f42a8319f3b369ac8",
+      "source": "pubmed",
+      "truncated": false,
+      "url": "https://eutils.ncbi.nlm.nih.gov/robots.txt"
+    },
+    {
+      "bytes": 3230,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain; charset=utf-8",
+      "file": "afterlife/probes/2026-10-30/retractionwatch/gitlab-robots.txt",
+      "full_sha256": "9e1e837e03b726eedb04c30b565e69068ccbb96c4d12c7c090d9affcf54f5eb0",
+      "http_status": 200,
+      "kept_bytes": 3230,
+      "name": "gitlab-robots.txt",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "3230",
+        "Date": "Fri, 30 Oct 2026 07:38:47 GMT",
+        "Last-Modified": "Fri, 30 Oct 2026 02:58:55 GMT"
+      },
+      "retrieved_at": "2026-10-30T07:38:47+00:00",
+      "sha256": "9e1e837e03b726eedb04c30b565e69068ccbb96c4d12c7c090d9affcf54f5eb0",
+      "source": "retractionwatch",
+      "truncated": false,
+      "url": "https://gitlab.com/robots.txt"
+    },
+    {
+      "bytes": 188,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "afterlife/probes/2026-10-30/crossref/retraction-notices-count-2026-10.json",
+      "full_sha256": "ea1f6efc383e9b82be6c648d6d7196776d3ec32c69746acdc55cd7b3c53ce50c",
+      "http_status": 200,
+      "kept_bytes": 188,
+      "name": "retraction-notices-count-2026-10.json",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:38:48 GMT",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "retrieved_at": "2026-10-30T07:38:48+00:00",
+      "sha256": "ea1f6efc383e9b82be6c648d6d7196776d3ec32c69746acdc55cd7b3c53ce50c",
+      "source": "crossref",
+      "truncated": false,
+      "url": "https://api.crossref.org/works?filter=update-type:retraction,from-created-date:2026-10-01,until-created-date:2026-10-29&rows=0"
+    },
+    {
+      "bytes": 2068,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "afterlife/probes/2026-10-30/crossref/retraction-notices-sample.json",
+      "full_sha256": "32c94a498c50f4e7fe3a0c80e0fde0a0d14baac6dfdbc4e32b770ec24dbd18e2",
+      "http_status": 200,
+      "kept_bytes": 2068,
+      "name": "retraction-notices-sample.json",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:38:50 GMT",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "retrieved_at": "2026-10-30T07:38:49+00:00",
+      "sha256": "32c94a498c50f4e7fe3a0c80e0fde0a0d14baac6dfdbc4e32b770ec24dbd18e2",
+      "source": "crossref",
+      "truncated": false,
+      "url": "https://api.crossref.org/works?filter=update-type:retraction,from-created-date:2026-10-20,until-created-date:2026-10-29&rows=5&select=DOI,type,created,update-to"
+    },
+    {
+      "bytes": 802,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "afterlife/probes/2026-10-30/openalex/is-retracted-count.json",
+      "full_sha256": "16b9cd3b5cfe7af372d5aa0ca54e06acf7601d96a7e91d52bf5bfa33f965ef21",
+      "http_status": 429,
+      "kept_bytes": 802,
+      "name": "is-retracted-count.json",
+      "note": "one attempt, no retry; 429 on the shared egress address",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "802",
+        "Date": "Fri, 30 Oct 2026 07:38:51 GMT",
+        "Retry-After": "58869",
+        "X-RateLimit-Limit": "1000",
+        "X-RateLimit-Remaining": "0"
+      },
+      "retrieved_at": "2026-10-30T07:38:51+00:00",
+      "sha256": "16b9cd3b5cfe7af372d5aa0ca54e06acf7601d96a7e91d52bf5bfa33f965ef21",
+      "source": "openalex",
+      "truncated": false,
+      "url": "https://api.openalex.org/works?filter=is_retracted:true&per-page=1&select=id,doi,is_retracted,updated_date,publication_date"
+    },
+    {
+      "bytes": 205,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json; charset=UTF-8",
+      "file": "afterlife/probes/2026-10-30/pubmed/retracted-publication-count.json",
+      "full_sha256": "8fe9dff1ec9fafce1a13c44cd09311c4e8cbf1d0cc2cb42ad7cfabcf1f405f08",
+      "http_status": 200,
+      "kept_bytes": 205,
+      "name": "retracted-publication-count.json",
+      "note": "sent in the same batch as this host's robots.txt read, before it was weighed: eutils.ncbi.nlm.nih.gov/robots.txt is 'Disallow: /' for every agent; counts kept (no personal data), no further E-utilities request sent",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:38:52 GMT",
+        "X-Ratelimit-Limit": "3",
+        "X-Ratelimit-Remaining": "2"
+      },
+      "retrieved_at": "2026-10-30T07:38:52+00:00",
+      "sha256": "8fe9dff1ec9fafce1a13c44cd09311c4e8cbf1d0cc2cb42ad7cfabcf1f405f08",
+      "source": "pubmed",
+      "truncated": false,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22retracted+publication%22%5Bpt%5D&retmode=json&retmax=0"
+    },
+    {
+      "bytes": 326,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json; charset=UTF-8",
+      "file": "afterlife/probes/2026-10-30/pubmed/retraction-notice-count.json",
+      "full_sha256": "d74dd5dd23fce4f3f656d0b1e97458ca433353a73ffc8ebb4d5e8b012e8a5534",
+      "http_status": 200,
+      "kept_bytes": 326,
+      "name": "retraction-notice-count.json",
+      "note": "sent in the same batch as this host's robots.txt read, before it was weighed: eutils.ncbi.nlm.nih.gov/robots.txt is 'Disallow: /' for every agent; counts kept (no personal data), no further E-utilities request sent",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:38:54 GMT",
+        "X-Ratelimit-Limit": "3",
+        "X-Ratelimit-Remaining": "2"
+      },
+      "retrieved_at": "2026-10-30T07:38:54+00:00",
+      "sha256": "d74dd5dd23fce4f3f656d0b1e97458ca433353a73ffc8ebb4d5e8b012e8a5534",
+      "source": "pubmed",
+      "truncated": false,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22retraction+of+publication%22%5Bpt%5D&retmode=json&retmax=0"
+    },
+    {
+      "bytes": 1070,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": null,
+      "full_sha256": "c7e4d4f4b3f082d361c58f93d8dab176c387b6c6320d0c6418f5b4863506c160",
+      "http_status": 200,
+      "kept_bytes": 0,
+      "name": "gitlab-project.json",
+      "note": "sent in the same batch as this host's robots.txt read, before it was weighed: gitlab.com/robots.txt disallows /api/v* for every agent; bytes not preserved, hash only",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "1070",
+        "Date": "Fri, 30 Oct 2026 07:38:55 GMT",
+        "ETag": "W/\"c7e4d4f4b3f082d361c58f93d8dab176\""
+      },
+      "retrieved_at": "2026-10-30T07:38:55+00:00",
+      "sha256": null,
+      "source": "retractionwatch",
+      "truncated": true,
+      "url": "https://gitlab.com/api/v4/projects/crossref%2Fretraction-watch-data"
+    },
+    {
+      "bytes": 259,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": null,
+      "full_sha256": "6dfbc31c41e80964e931d804d6c794c859948fd6dc91270b9a9ff7950bb07605",
+      "http_status": 200,
+      "kept_bytes": 0,
+      "name": "gitlab-tree.json",
+      "note": "sent in the same batch as this host's robots.txt read, before it was weighed: gitlab.com/robots.txt disallows /api/v* for every agent; bytes not preserved, hash only",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "259",
+        "Date": "Fri, 30 Oct 2026 07:38:57 GMT",
+        "ETag": "W/\"6dfbc31c41e80964e931d804d6c794c8\""
+      },
+      "retrieved_at": "2026-10-30T07:38:56+00:00",
+      "sha256": null,
+      "source": "retractionwatch",
+      "truncated": true,
+      "url": "https://gitlab.com/api/v4/projects/crossref%2Fretraction-watch-data/repository/tree"
+    },
+    {
+      "bytes": 13541,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": null,
+      "full_sha256": "0ef08b75e7134acce0d72a5b7a33d1a60d2d35a0c40fd37a8be4ac292080d46e",
+      "http_status": 200,
+      "kept_bytes": 0,
+      "name": "gitlab-commits.json",
+      "note": "sent in the same batch as this host's robots.txt read, before it was weighed: gitlab.com/robots.txt disallows /api/v* for every agent; bytes not preserved, hash only (commit records also carry committer names and addresses, I8)",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "13541",
+        "Date": "Fri, 30 Oct 2026 07:38:58 GMT",
+        "ETag": "W/\"0ef08b75e7134acce0d72a5b7a33d1a6\""
+      },
+      "retrieved_at": "2026-10-30T07:38:58+00:00",
+      "sha256": null,
+      "source": "retractionwatch",
+      "truncated": true,
+      "url": "https://gitlab.com/api/v4/projects/crossref%2Fretraction-watch-data/repository/commits?per_page=20"
+    },
+    {
+      "bytes": 10819,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/plain",
+      "file": null,
+      "full_sha256": "22843ad179efc5f6f6f71f5fd4f05dd49312274d906741227d354f32b56f42f0",
+      "http_status": 200,
+      "kept_bytes": 0,
+      "name": "www-robots.txt",
+      "note": "hashed; relevant lines quoted in the audit document",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "10819",
+        "Date": "Fri, 30 Oct 2026 07:40:00 GMT",
+        "Last-Modified": "Tue, 17 Mar 2026 18:08:33 GMT"
+      },
+      "retrieved_at": "2026-10-30T07:40:00+00:00",
+      "sha256": null,
+      "source": "pubmed",
+      "truncated": true,
+      "url": "https://www.ncbi.nlm.nih.gov/robots.txt"
+    },
+    {
+      "bytes": 36020,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "afterlife/probes/2026-10-30/crossref/retraction-notices-sources-2026-10.json",
+      "full_sha256": "1e2bf6c757ec2f3a3688bf82c240708b8dbe3491149936ca4b3057471703f784",
+      "http_status": 200,
+      "kept_bytes": 36020,
+      "name": "retraction-notices-sources-2026-10.json",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:40:03 GMT",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "retrieved_at": "2026-10-30T07:40:02+00:00",
+      "sha256": "1e2bf6c757ec2f3a3688bf82c240708b8dbe3491149936ca4b3057471703f784",
+      "source": "crossref",
+      "truncated": false,
+      "url": "https://api.crossref.org/works?filter=update-type:retraction,from-created-date:2026-10-01,until-created-date:2026-10-29&rows=100&select=DOI,created,update-to"
+    },
+    {
+      "bytes": 0,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": null,
+      "file": null,
+      "full_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "http_status": 429,
+      "kept_bytes": 0,
+      "name": "original-updated-by.json",
+      "note": "one attempt, no retry; 429 on the shared egress address",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "0",
+        "Date": "Fri, 30 Oct 2026 07:40:05 GMT"
+      },
+      "retrieved_at": "2026-10-30T07:40:05+00:00",
+      "sha256": null,
+      "source": "crossref",
+      "truncated": false,
+      "url": "https://api.crossref.org/works?filter=doi:10.1038/s41598-024-71893-3&select=DOI,updated-by,update-to,indexed"
+    },
+    {
+      "bytes": 541,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "application/json",
+      "file": "afterlife/probes/2026-10-30/crossref/original-updated-by-2.json",
+      "full_sha256": "f2a039619fb1be3de7bd684ccc0bbaa727b26aeb270a5307fb7b5da1a26afba8",
+      "http_status": 200,
+      "kept_bytes": 541,
+      "name": "original-updated-by-2.json",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Date": "Fri, 30 Oct 2026 07:40:07 GMT",
+        "x-concurrency-limit": "1",
+        "x-rate-limit-interval": "1s",
+        "x-rate-limit-limit": "1"
+      },
+      "retrieved_at": "2026-10-30T07:40:06+00:00",
+      "sha256": "f2a039619fb1be3de7bd684ccc0bbaa727b26aeb270a5307fb7b5da1a26afba8",
+      "source": "crossref",
+      "truncated": false,
+      "url": "https://api.crossref.org/works?filter=doi:10.3389/fmicb.2025.1738181&select=DOI,updated-by,indexed"
+    },
+    {
+      "bytes": 70908,
+      "client": "command-line client, one attempt, no retry",
+      "content_type": "text/html",
+      "file": null,
+      "full_sha256": "e113dddee5ed6152666837fa4a1019e8808ff212e93a2e2115b5dd60696652aa",
+      "http_status": 200,
+      "kept_bytes": 0,
+      "name": "documentation-retraction-watch.html",
+      "note": "hashed; licence and access lines quoted in the audit document",
+      "request_headers": {
+        "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+      },
+      "response_headers": {
+        "Content-Length": "70908",
+        "Date": "Fri, 30 Oct 2026 07:40:09 GMT",
+        "etag": "\"560c8001f4b945e637ea5a02307e312e\"",
+        "last-modified": "Thu, 29 Oct 2026 14:48:45 GMT"
+      },
+      "retrieved_at": "2026-10-30T07:40:08+00:00",
+      "sha256": null,
+      "source": "crossref",
+      "truncated": true,
+      "url": "https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/"
+    }
+  ],
+  "project": "afterlife",
+  "requests": 17,
+  "stage": "AUDIT"
+}
