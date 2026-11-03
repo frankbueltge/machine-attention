@@ -1,0 +1,57 @@
+{
+  "client": "practice.fetch.Client (the reader's headers and backoff), counts only (rettype=count), tool=machine-attention",
+  "entries": [
+    {
+      "bytes": 82,
+      "file": "syntheticflood/probes/2026-11-03/pubmed/2023-cohort.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-03T07:38:19+00:00",
+      "sha256": "e48981b0ca66f638c9e1ef0d766cc3242a0dd0ea7e14cc86f8884c6ddfcc2072",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2023[dp]"
+    },
+    {
+      "bytes": 81,
+      "file": "syntheticflood/probes/2026-11-03/pubmed/2023-reduced.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-03T07:38:19+00:00",
+      "sha256": "bf189465603b64ecd098514835a5290556c9c6935a3c527d4ff7d7634df8a5cc",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=reduced[tiab]+AND+hasabstract+AND+2023[dp]"
+    },
+    {
+      "bytes": 82,
+      "file": "syntheticflood/probes/2026-11-03/pubmed/2024-cohort.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-03T07:38:21+00:00",
+      "sha256": "81c21b4af314f4d2fc5948382f08b8ce88ebd4079830f46452332a84400f722f",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2024[dp]"
+    },
+    {
+      "bytes": 81,
+      "file": "syntheticflood/probes/2026-11-03/pubmed/2024-reduced.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-03T07:38:52+00:00",
+      "sha256": "047d117c3793f95d40f73346e2e785f83073e1c2912ef341f9a9cc2eace640ce",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=reduced[tiab]+AND+hasabstract+AND+2024[dp]"
+    },
+    {
+      "bytes": 82,
+      "file": "syntheticflood/probes/2026-11-03/pubmed/2025-cohort.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-03T07:38:53+00:00",
+      "sha256": "1b2718379ae8207bb5983de59714c712467d74fed8d7743b5689fc603ec21a08",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2025[dp]"
+    },
+    {
+      "bytes": 81,
+      "file": "syntheticflood/probes/2026-11-03/pubmed/2025-reduced.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-03T07:38:54+00:00",
+      "sha256": "e4c0ef4e8b23f50f301f367b7747f70566e07d3adf442750490b6679ca6d94fc",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=reduced[tiab]+AND+hasabstract+AND+2025[dp]"
+    }
+  ],
+  "http_429": 1,
+  "note": "six counts (2023-2025, cohort and reduced[tiab]); one attempt answered 429 and was retried to 200 by the client's backoff; which of the six is not recorded by the client",
+  "requests": 7,
+  "run_date": "2026-11-03"
+}
