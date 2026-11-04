@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-11-04 — Planetary Listening: the window is closed and the review is yours
+
+**Request:** The fourteen-night window closed on 2026-11-03 with A1–A5 met, the detector unchanged and C without breach by the tally (13 of 14 nights, the one failed night 2026-11-03 a day file answered 204 while the publisher attested the full day; B4 reads `local`, +57.02 min) — all counts and the three points worth weighing are in `docs/2026-11-04-planetary-listening-fenster-abschluss.md`. Which of the three outcomes of criteria §5 follows — RUNNING as instrument, a new window, or RETIRED — is your review; until then the nightly workflow keeps reading and nothing in the instrument changes.
+**Status:** open · no deadline: silence is not a decision; the pass keeps the instrument untouched and does not give it a stage.
+
 ## 2026-10-30 — PubMed's interface host asks every robot not to read it; the Synthetic Flood already does
 
 **Request:** The Afterlife's AUDIT finds `eutils.ncbi.nlm.nih.gov/robots.txt` at `Disallow: /` for every agent (`afterlife/probes/2026-10-30/pubmed/robots.txt`, `docs/2026-10-30-the-afterlife-audit.md` §3) — the host the Synthetic Flood's Register A has read since 2026-10-19, whose own audit fetched the file without weighing it — while the operator offers the same host as a scripted interface with its own rate rules. Is the interface's offer enough, or should both projects stop reading it?
