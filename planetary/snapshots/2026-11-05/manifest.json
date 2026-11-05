@@ -1,0 +1,29 @@
+{
+  "entries": [
+    {
+      "bytes": 390,
+      "file": "planetary/snapshots/2026-11-05/GE.RUE.HHZ/availability-2026-11-04.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-11-05T16:25:00+00:00",
+      "sha256": "d23ecaac4d99770496d75ca58f7e5bccf4f7ccc0f9fabb2dc85d25f8bd797572",
+      "url": "https://geofon.gfz.de/fdsnws/availability/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-11-04T00:00:00&end=2026-11-05T00:00:00&show=latestupdate&format=text"
+    },
+    {
+      "bytes": 912,
+      "file": "planetary/snapshots/2026-11-05/GE.RUE.HHZ/extent.txt",
+      "http_status": 200,
+      "retrieved_at": "2026-11-05T16:25:01+00:00",
+      "sha256": "c328ea2e8cfd0868d1d192370243e32f49ef445d2a94d25bbc717f42b4d9c447",
+      "url": "https://geofon.gfz.de/fdsnws/availability/1/extent?net=GE&sta=RUE&loc=--&cha=HHZ&show=latestupdate&format=text"
+    },
+    {
+      "bytes": 724,
+      "file": "planetary/snapshots/2026-11-05/GE.RUE.HHZ/wfcatalog-2026-11-04.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-05T16:25:02+00:00",
+      "sha256": "dd8c63a9a50e1c7363e3651d7b1e684cae79e526d16acbd244e48e6fbc88fb7e",
+      "url": "https://geofon.gfz.de/eidaws/wfcatalog/1/query?network=GE&station=RUE&location=--&channel=HHZ&start=2026-11-04&end=2026-11-05&include=sample"
+    }
+  ],
+  "run_date": "2026-11-05"
+}
