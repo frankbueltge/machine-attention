@@ -1,0 +1,1952 @@
+{
+  "baseline": {
+    "file": "syntheticflood/baseline/wordlist-v2.json",
+    "sha256": "800c2e41d83928f2a5f030b39a9ffd2bbc786365a2523b2f3a4669c170b83628"
+  },
+  "candidate_baseline": {
+    "age": {
+      "min_count": 150026,
+      "ratio": 1.0767,
+      "shares": {
+        "2018": 0.126393244,
+        "2019": 0.127939372,
+        "2020": 0.130764346,
+        "2021": 0.136092413,
+        "2022": 0.134766631
+      },
+      "verdict": "stable",
+      "word": "age"
+    },
+    "cases": {
+      "min_count": 90215,
+      "ratio": 1.0792,
+      "shares": {
+        "2018": 0.076003936,
+        "2019": 0.075942249,
+        "2020": 0.081499795,
+        "2021": 0.081954805,
+        "2022": 0.0781481
+      },
+      "verdict": "stable",
+      "word": "cases"
+    },
+    "groups": {
+      "min_count": 136291,
+      "ratio": 1.0538,
+      "shares": {
+        "2018": 0.114821842,
+        "2019": 0.115883101,
+        "2020": 0.116075592,
+        "2021": 0.118478498,
+        "2022": 0.120995861
+      },
+      "verdict": "stable",
+      "word": "groups"
+    },
+    "performed": {
+      "min_count": 156117,
+      "ratio": 1.0584,
+      "shares": {
+        "2018": 0.131524763,
+        "2019": 0.134070439,
+        "2020": 0.13748281,
+        "2021": 0.13919971,
+        "2022": 0.138848624
+      },
+      "verdict": "stable",
+      "word": "performed"
+    },
+    "samples": {
+      "min_count": 76827,
+      "ratio": 1.0221,
+      "shares": {
+        "2018": 0.064724873,
+        "2019": 0.065771598,
+        "2020": 0.064812717,
+        "2021": 0.064346577,
+        "2022": 0.065001421
+      },
+      "verdict": "stable",
+      "word": "samples"
+    },
+    "total": {
+      "min_count": 155982,
+      "ratio": 1.1572,
+      "shares": {
+        "2018": 0.131411029,
+        "2019": 0.136874838,
+        "2020": 0.141537308,
+        "2021": 0.147395696,
+        "2022": 0.152069316
+      },
+      "verdict": "stable",
+      "word": "total"
+    }
+  },
+  "composition": {
+    "added": [
+      "samples",
+      "groups",
+      "cases",
+      "performed"
+    ],
+    "controls": [
+      "analysis",
+      "associated",
+      "cells",
+      "clinical",
+      "compared",
+      "data",
+      "increased",
+      "measured",
+      "methods",
+      "model",
+      "outcome",
+      "patients",
+      "results",
+      "risk",
+      "treatment",
+      "years",
+      "samples",
+      "groups",
+      "cases",
+      "performed"
+    ],
+    "dropped": [
+      "effect",
+      "levels",
+      "observed"
+    ],
+    "kept": [
+      "analysis",
+      "associated",
+      "cells",
+      "clinical",
+      "compared",
+      "data",
+      "increased",
+      "measured",
+      "methods",
+      "model",
+      "outcome",
+      "patients",
+      "results",
+      "risk",
+      "treatment",
+      "years"
+    ],
+    "rule": {
+      "band": 1.2,
+      "check_years": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "id": "control-check-v1",
+      "min_controls": 15,
+      "min_count": 50,
+      "target": 20
+    },
+    "struck": [
+      "reduced"
+    ]
+  },
+  "date": "2026-11-06",
+  "finished_at": "2026-11-06T07:41:47+00:00",
+  "http_429": 1,
+  "requests": 114,
+  "results": {
+    "age": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "age",
+      "years": {
+        "2023": {
+          "count": 201093,
+          "expected": 0.138661146,
+          "observed": 0.13251109,
+          "ratio": 0.9556
+        },
+        "2024": {
+          "count": 206925,
+          "expected": 0.141151127,
+          "observed": 0.132664811,
+          "ratio": 0.9399
+        },
+        "2025": {
+          "count": 230149,
+          "expected": 0.143641109,
+          "observed": 0.136373279,
+          "ratio": 0.9494
+        }
+      }
+    },
+    "analysis": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "analysis",
+      "years": {
+        "2023": {
+          "count": 437610,
+          "expected": 0.292222249,
+          "observed": 0.288364976,
+          "ratio": 0.9868
+        },
+        "2024": {
+          "count": 483621,
+          "expected": 0.301109623,
+          "observed": 0.310061561,
+          "ratio": 1.0297
+        },
+        "2025": {
+          "count": 565203,
+          "expected": 0.309996997,
+          "observed": 0.334907326,
+          "ratio": 1.0804
+        }
+      }
+    },
+    "associated": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "associated",
+      "years": {
+        "2023": {
+          "count": 350742,
+          "expected": 0.236626193,
+          "observed": 0.231122937,
+          "ratio": 0.9767
+        },
+        "2024": {
+          "count": 368019,
+          "expected": 0.238953656,
+          "observed": 0.235946217,
+          "ratio": 0.9874
+        },
+        "2025": {
+          "count": 419283,
+          "expected": 0.241281119,
+          "observed": 0.248443388,
+          "ratio": 1.0297
+        }
+      }
+    },
+    "cases": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "cases",
+      "years": {
+        "2023": {
+          "count": 114998,
+          "expected": 0.081800042,
+          "observed": 0.075778423,
+          "ratio": 0.9264
+        },
+        "2024": {
+          "count": 120911,
+          "expected": 0.082830131,
+          "observed": 0.077519077,
+          "ratio": 0.9359
+        },
+        "2025": {
+          "count": 137157,
+          "expected": 0.083860219,
+          "observed": 0.08127148,
+          "ratio": 0.9691
+        }
+      }
+    },
+    "cells": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "cells",
+      "years": {
+        "2023": {
+          "count": 185120,
+          "expected": 0.118135413,
+          "observed": 0.121985614,
+          "ratio": 1.0326
+        },
+        "2024": {
+          "count": 189305,
+          "expected": 0.113431361,
+          "observed": 0.121368187,
+          "ratio": 1.07
+        },
+        "2025": {
+          "count": 196490,
+          "expected": 0.10872731,
+          "observed": 0.116428859,
+          "ratio": 1.0708
+        }
+      }
+    },
+    "clinical": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "clinical",
+      "years": {
+        "2023": {
+          "count": 323489,
+          "expected": 0.219382331,
+          "observed": 0.213164457,
+          "ratio": 0.9717
+        },
+        "2024": {
+          "count": 345680,
+          "expected": 0.225125595,
+          "observed": 0.221624124,
+          "ratio": 0.9844
+        },
+        "2025": {
+          "count": 424002,
+          "expected": 0.230868859,
+          "observed": 0.251239601,
+          "ratio": 1.0882
+        }
+      }
+    },
+    "compared": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "compared",
+      "years": {
+        "2023": {
+          "count": 317327,
+          "expected": 0.211054087,
+          "observed": 0.20910398,
+          "ratio": 0.9908
+        },
+        "2024": {
+          "count": 334546,
+          "expected": 0.212046226,
+          "observed": 0.214485837,
+          "ratio": 1.0115
+        },
+        "2025": {
+          "count": 364980,
+          "expected": 0.213038365,
+          "observed": 0.216266502,
+          "ratio": 1.0152
+        }
+      }
+    },
+    "data": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "data",
+      "years": {
+        "2023": {
+          "count": 370861,
+          "expected": 0.250739546,
+          "observed": 0.244380438,
+          "ratio": 0.9746
+        },
+        "2024": {
+          "count": 390156,
+          "expected": 0.256661073,
+          "observed": 0.250138804,
+          "ratio": 0.9746
+        },
+        "2025": {
+          "count": 440671,
+          "expected": 0.2625826,
+          "observed": 0.261116707,
+          "ratio": 0.9944
+        }
+      }
+    },
+    "effect": {
+      "baseline_verdict": "stable",
+      "pass": false,
+      "reason": "outside_band",
+      "word": "effect",
+      "years": {
+        "2023": {
+          "count": 225895,
+          "expected": 0.150992451,
+          "observed": 0.148854474,
+          "ratio": 0.9858
+        },
+        "2024": {
+          "count": 217897,
+          "expected": 0.151957007,
+          "observed": 0.139699235,
+          "ratio": 0.9193
+        },
+        "2025": {
+          "count": 207201,
+          "expected": 0.152921564,
+          "observed": 0.122775592,
+          "ratio": 0.8029
+        }
+      }
+    },
+    "groups": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "groups",
+      "years": {
+        "2023": {
+          "count": 182524,
+          "expected": 0.121734009,
+          "observed": 0.120274968,
+          "ratio": 0.988
+        },
+        "2024": {
+          "count": 192146,
+          "expected": 0.123228353,
+          "observed": 0.123189623,
+          "ratio": 0.9997
+        },
+        "2025": {
+          "count": 210949,
+          "expected": 0.124722696,
+          "observed": 0.124996445,
+          "ratio": 1.0022
+        }
+      }
+    },
+    "increased": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "increased",
+      "years": {
+        "2023": {
+          "count": 248734,
+          "expected": 0.165036705,
+          "observed": 0.16390433,
+          "ratio": 0.9931
+        },
+        "2024": {
+          "count": 255874,
+          "expected": 0.164568463,
+          "observed": 0.164047243,
+          "ratio": 0.9968
+        },
+        "2025": {
+          "count": 282820,
+          "expected": 0.164100222,
+          "observed": 0.167583134,
+          "ratio": 1.0212
+        }
+      }
+    },
+    "levels": {
+      "baseline_verdict": "stable",
+      "pass": false,
+      "reason": "outside_band",
+      "word": "levels",
+      "years": {
+        "2023": {
+          "count": 183780,
+          "expected": 0.118544641,
+          "observed": 0.121102615,
+          "ratio": 1.0216
+        },
+        "2024": {
+          "count": 209043,
+          "expected": 0.117198762,
+          "observed": 0.134022714,
+          "ratio": 1.1436
+        },
+        "2025": {
+          "count": 239583,
+          "expected": 0.115852882,
+          "observed": 0.141963333,
+          "ratio": 1.2254
+        }
+      }
+    },
+    "measured": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "measured",
+      "years": {
+        "2023": {
+          "count": 89907,
+          "expected": 0.058963992,
+          "observed": 0.059244601,
+          "ratio": 1.0048
+        },
+        "2024": {
+          "count": 88364,
+          "expected": 0.056222345,
+          "observed": 0.056652378,
+          "ratio": 1.0076
+        },
+        "2025": {
+          "count": 94558,
+          "expected": 0.053480699,
+          "observed": 0.056029722,
+          "ratio": 1.0477
+        }
+      }
+    },
+    "methods": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "methods",
+      "years": {
+        "2023": {
+          "count": 550904,
+          "expected": 0.365755397,
+          "observed": 0.363020541,
+          "ratio": 0.9925
+        },
+        "2024": {
+          "count": 593846,
+          "expected": 0.372800386,
+          "observed": 0.380729575,
+          "ratio": 1.0213
+        },
+        "2025": {
+          "count": 671887,
+          "expected": 0.379845375,
+          "observed": 0.39812223,
+          "ratio": 1.0481
+        }
+      }
+    },
+    "model": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "model",
+      "years": {
+        "2023": {
+          "count": 231411,
+          "expected": 0.151180447,
+          "observed": 0.152489266,
+          "ratio": 1.0087
+        },
+        "2024": {
+          "count": 245233,
+          "expected": 0.155557366,
+          "observed": 0.157225031,
+          "ratio": 1.0107
+        },
+        "2025": {
+          "count": 285929,
+          "expected": 0.159934286,
+          "observed": 0.169425351,
+          "ratio": 1.0593
+        }
+      }
+    },
+    "observed": {
+      "baseline_verdict": "stable",
+      "pass": false,
+      "reason": "outside_band",
+      "word": "observed",
+      "years": {
+        "2023": {
+          "count": 175946,
+          "expected": 0.112071469,
+          "observed": 0.115940367,
+          "ratio": 1.0345
+        },
+        "2024": {
+          "count": 199701,
+          "expected": 0.109698983,
+          "observed": 0.128033323,
+          "ratio": 1.1671
+        },
+        "2025": {
+          "count": 227294,
+          "expected": 0.107326497,
+          "observed": 0.134681567,
+          "ratio": 1.2549
+        }
+      }
+    },
+    "outcome": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "outcome",
+      "years": {
+        "2023": {
+          "count": 95543,
+          "expected": 0.067423927,
+          "observed": 0.062958467,
+          "ratio": 0.9338
+        },
+        "2024": {
+          "count": 93684,
+          "expected": 0.068120468,
+          "observed": 0.060063164,
+          "ratio": 0.8817
+        },
+        "2025": {
+          "count": 97742,
+          "expected": 0.068817008,
+          "observed": 0.05791638,
+          "ratio": 0.8416
+        }
+      }
+    },
+    "patients": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "patients",
+      "years": {
+        "2023": {
+          "count": 450063,
+          "expected": 0.311713023,
+          "observed": 0.296570934,
+          "ratio": 0.9514
+        },
+        "2024": {
+          "count": 457064,
+          "expected": 0.316390283,
+          "observed": 0.293035202,
+          "ratio": 0.9262
+        },
+        "2025": {
+          "count": 485683,
+          "expected": 0.321067543,
+          "observed": 0.287788272,
+          "ratio": 0.8963
+        }
+      }
+    },
+    "performed": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "performed",
+      "years": {
+        "2023": {
+          "count": 205433,
+          "expected": 0.142158367,
+          "observed": 0.135370952,
+          "ratio": 0.9523
+        },
+        "2024": {
+          "count": 196273,
+          "expected": 0.144136066,
+          "observed": 0.125835546,
+          "ratio": 0.873
+        },
+        "2025": {
+          "count": 207574,
+          "expected": 0.146113766,
+          "observed": 0.122996611,
+          "ratio": 0.8418
+        }
+      }
+    },
+    "results": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "results",
+      "years": {
+        "2023": {
+          "count": 787360,
+          "expected": 0.524479649,
+          "observed": 0.518834231,
+          "ratio": 0.9892
+        },
+        "2024": {
+          "count": 814598,
+          "expected": 0.527565253,
+          "observed": 0.522259222,
+          "ratio": 0.9899
+        },
+        "2025": {
+          "count": 879860,
+          "expected": 0.530650857,
+          "observed": 0.521355265,
+          "ratio": 0.9825
+        }
+      }
+    },
+    "risk": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "risk",
+      "years": {
+        "2023": {
+          "count": 238279,
+          "expected": 0.1638696,
+          "observed": 0.157014964,
+          "ratio": 0.9582
+        },
+        "2024": {
+          "count": 249213,
+          "expected": 0.169291351,
+          "observed": 0.159776709,
+          "ratio": 0.9438
+        },
+        "2025": {
+          "count": 292993,
+          "expected": 0.174713102,
+          "observed": 0.173611078,
+          "ratio": 0.9937
+        }
+      }
+    },
+    "samples": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "samples",
+      "years": {
+        "2023": {
+          "count": 98286,
+          "expected": 0.06466986,
+          "observed": 0.064765979,
+          "ratio": 1.0015
+        },
+        "2024": {
+          "count": 101827,
+          "expected": 0.064582667,
+          "observed": 0.065283845,
+          "ratio": 1.0109
+        },
+        "2025": {
+          "count": 107499,
+          "expected": 0.064495475,
+          "observed": 0.063697827,
+          "ratio": 0.9876
+        }
+      }
+    },
+    "total": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "total",
+      "years": {
+        "2023": {
+          "count": 227625,
+          "expected": 0.157408867,
+          "observed": 0.149994465,
+          "ratio": 0.9529
+        },
+        "2024": {
+          "count": 230428,
+          "expected": 0.16259261,
+          "observed": 0.147733174,
+          "ratio": 0.9086
+        },
+        "2025": {
+          "count": 244471,
+          "expected": 0.167776353,
+          "observed": 0.144859686,
+          "ratio": 0.8634
+        }
+      }
+    },
+    "treatment": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "treatment",
+      "years": {
+        "2023": {
+          "count": 337448,
+          "expected": 0.222906977,
+          "observed": 0.222362799,
+          "ratio": 0.9976
+        },
+        "2024": {
+          "count": 359173,
+          "expected": 0.22525965,
+          "observed": 0.230274825,
+          "ratio": 1.0223
+        },
+        "2025": {
+          "count": 385082,
+          "expected": 0.227612322,
+          "observed": 0.22817781,
+          "ratio": 1.0025
+        }
+      }
+    },
+    "years": {
+      "baseline_verdict": "stable",
+      "pass": true,
+      "reason": null,
+      "word": "years",
+      "years": {
+        "2023": {
+          "count": 237024,
+          "expected": 0.162307193,
+          "observed": 0.156187976,
+          "ratio": 0.9623
+        },
+        "2024": {
+          "count": 239746,
+          "expected": 0.165714703,
+          "observed": 0.153707178,
+          "ratio": 0.9275
+        },
+        "2025": {
+          "count": 256965,
+          "expected": 0.169122213,
+          "observed": 0.152262923,
+          "ratio": 0.9003
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "bytes": 82,
+      "count": 1186978,
+      "sha256": "362501a9b7d000daf3b8dcd510297f2c184b90d1e2b5004dcc5fa8b9fd727bff",
+      "status": 200,
+      "term": "hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2018[dp]",
+      "word": null,
+      "year": "2018"
+    },
+    {
+      "bytes": 82,
+      "count": 1248396,
+      "sha256": "c2f90fb982666176648e9785950758e703fd764ad4040cc066ac5f381e175067",
+      "status": 200,
+      "term": "hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2019[dp]",
+      "word": null,
+      "year": "2019"
+    },
+    {
+      "bytes": 82,
+      "count": 1434703,
+      "sha256": "a8217d16f55d7c8fc834bd7747148b74f56d9d7508357ea8d7d77eff353b79ef",
+      "status": 200,
+      "term": "hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2020[dp]",
+      "word": null,
+      "year": "2020"
+    },
+    {
+      "bytes": 82,
+      "count": 1582726,
+      "sha256": "10416f27a88921d45ddcf80bf0f21562a8cd2339b4b92b6e9d24f8213426b375",
+      "status": 200,
+      "term": "hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2021[dp]",
+      "word": null,
+      "year": "2021"
+    },
+    {
+      "bytes": 82,
+      "count": 1594319,
+      "sha256": "b5f55bce7a501df199e108ed3578fd83917b3d39833ac0b76727d9f6f147920f",
+      "status": 200,
+      "term": "hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2022[dp]",
+      "word": null,
+      "year": "2022"
+    },
+    {
+      "bytes": 82,
+      "count": 1517556,
+      "sha256": "dd1cefe58c482d246fcafcc187e2e4f42f610064b4b95b4a53b859a4dbce5920",
+      "status": 200,
+      "term": "hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2023[dp]",
+      "word": null,
+      "year": "2023"
+    },
+    {
+      "bytes": 82,
+      "count": 1559758,
+      "sha256": "9240160a8a4947075e40056ab0bc55004a8e18e61b53eba8d2c9d98e688b1ab1",
+      "status": 200,
+      "term": "hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2024[dp]",
+      "word": null,
+      "year": "2024"
+    },
+    {
+      "bytes": 82,
+      "count": 1687640,
+      "sha256": "83dace856a0fd874646c2b97986a1983a9dd3319d40b42a58009dfaf65a67fc8",
+      "status": 200,
+      "term": "hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=hasabstract+AND+2025[dp]",
+      "word": null,
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 437610,
+      "sha256": "2b265819e0dbe4646fb6d86eb67044f5d16632c2a9658d176805f5b601cd3451",
+      "status": 200,
+      "term": "analysis[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=analysis[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "analysis",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 483621,
+      "sha256": "50730e0c9fc929c17d52bf0c5668cbcef9a1f96d366e6d4e04c29423398f0864",
+      "status": 200,
+      "term": "analysis[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=analysis[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "analysis",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 565203,
+      "sha256": "6013cf82e81b02dc08f33258a8159ba17a4faf5ddc5b77cd09c8cdb718fd2022",
+      "status": 200,
+      "term": "analysis[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=analysis[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "analysis",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 350742,
+      "sha256": "d67c7517ea9cd086a846107d3b5b6f036f6d4632a92cf7027720b7000dfd7dd3",
+      "status": 200,
+      "term": "associated[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=associated[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "associated",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 368019,
+      "sha256": "02c7349c2420af142700533479b58820fb8c1f8fbd28d5a3e9a923b0bc5b2804",
+      "status": 200,
+      "term": "associated[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=associated[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "associated",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 419283,
+      "sha256": "0e583cf29078a17b6604b770afdefe0b3fe03f5d0899e76efaf481b210a0ecba",
+      "status": 200,
+      "term": "associated[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=associated[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "associated",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 185120,
+      "sha256": "27e03761fe058509b9949f76b29be290f8b0119a36465876837a92f163b2af81",
+      "status": 200,
+      "term": "cells[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cells[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "cells",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 189305,
+      "sha256": "d7b1e1c8c5457aeb4d5eb8f72e6e5b6a772874993a43f8dbb5108c5c2e21952a",
+      "status": 200,
+      "term": "cells[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cells[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "cells",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 196490,
+      "sha256": "ad7660d3d32c6f75e0ca4eb3874296b95e66088074e4af2418e6c8d109e756fd",
+      "status": 200,
+      "term": "cells[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cells[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "cells",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 323489,
+      "sha256": "fd3c3b6dc9fdbda0b491dfe68416721ea657b6edff5876821ddfeeb65600da81",
+      "status": 200,
+      "term": "clinical[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=clinical[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "clinical",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 345680,
+      "sha256": "0980805b3d830b16177154296c98367661c5f755ab70b73dfb0eca2762793d3f",
+      "status": 200,
+      "term": "clinical[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=clinical[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "clinical",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 424002,
+      "sha256": "04dc726c45c67ee8d09e7a1439bcc7dd5b4ef666db15a80efaf2438c319a94e9",
+      "status": 200,
+      "term": "clinical[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=clinical[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "clinical",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 317327,
+      "sha256": "7160800a2cb65178f916ef5c9517714fdbff9acfeac34f86273c86c2a4a048f5",
+      "status": 200,
+      "term": "compared[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=compared[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "compared",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 334546,
+      "sha256": "acb8612921423f9dfbd0bd17c4a6b6fc9c2b487e06211bc848935c78f7b993c3",
+      "status": 200,
+      "term": "compared[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=compared[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "compared",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 364980,
+      "sha256": "c17e99ae9acf76a43d4e5d3ae81b7ac5959369bbc62bb87fba02543a056c8293",
+      "status": 200,
+      "term": "compared[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=compared[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "compared",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 370861,
+      "sha256": "80061da4b850be16d77825ddc3f51d5ac9c8b4f9c2ce5b2e79063e658fb51b03",
+      "status": 200,
+      "term": "data[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=data[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "data",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 390156,
+      "sha256": "55b18b71f31278b023b8a67b954e6f802964324952358553d94c7b915e45d0e0",
+      "status": 200,
+      "term": "data[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=data[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "data",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 440671,
+      "sha256": "46d8b90cc07e3c64111e2800ca963beb680d29e754180e8766be4340dc1e4eb4",
+      "status": 200,
+      "term": "data[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=data[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "data",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 225895,
+      "sha256": "5df35f36e092d617cb5f5e3a1017e274f720313ea192e26f2032ecf87e8fde2e",
+      "status": 200,
+      "term": "effect[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=effect[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "effect",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 217897,
+      "sha256": "5e1b5d7507bf418feb9574366c5470400c8ba70c9769a5a5cf9a67860f9de09b",
+      "status": 200,
+      "term": "effect[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=effect[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "effect",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 207201,
+      "sha256": "a042a897a3f8f0208a5d47e8fcaafd95178e0eda01b1f9139c60cbd80ac91374",
+      "status": 200,
+      "term": "effect[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=effect[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "effect",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 248734,
+      "sha256": "87f12cd574e041fbbf5a31cfcf36384037ac7fcd5bdcb41534d7503c6f4e12a4",
+      "status": 200,
+      "term": "increased[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=increased[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "increased",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 255874,
+      "sha256": "54680811a6fcdb3246ca93d40c4f9712db2815a68289824263f42e496f4830bd",
+      "status": 200,
+      "term": "increased[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=increased[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "increased",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 282820,
+      "sha256": "839c4d2e03ee5d64fa386bc5282ab248ca1c26a3a9802d6dd005c8723589ed94",
+      "status": 200,
+      "term": "increased[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=increased[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "increased",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 183780,
+      "sha256": "34d85a8b8b9eef2d44c6160388001959e86678c9b590b9b5e395449bb27d428b",
+      "status": 200,
+      "term": "levels[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=levels[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "levels",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 209043,
+      "sha256": "4130fdfa02b9f3644684a886617988d07e4c8d84c83967a715f7961b9ea62f14",
+      "status": 200,
+      "term": "levels[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=levels[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "levels",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 239583,
+      "sha256": "7b021c36c17a6c9776ce37bd78d4e03cf33f6cc55469dcbcf1d93846eba18267",
+      "status": 200,
+      "term": "levels[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=levels[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "levels",
+      "year": "2025"
+    },
+    {
+      "bytes": 80,
+      "count": 89907,
+      "sha256": "62250cc755c7e904516ab070528b1b02caab3d7b3be90419730cb80ccc9c8096",
+      "status": 200,
+      "term": "measured[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=measured[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "measured",
+      "year": "2023"
+    },
+    {
+      "bytes": 80,
+      "count": 88364,
+      "sha256": "879b8f80ec6cbc0c25df5edb6ec0d8ecce02145abba1bb6dd1f7dfc02418474e",
+      "status": 200,
+      "term": "measured[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=measured[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "measured",
+      "year": "2024"
+    },
+    {
+      "bytes": 80,
+      "count": 94558,
+      "sha256": "dbcb5dcddb704550de486f37078b38fff8dbc635e4bba07c48007f1cbe87956f",
+      "status": 200,
+      "term": "measured[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=measured[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "measured",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 550904,
+      "sha256": "8182397bccc82cbb76554896a80bcdf449ac802cced339ac1237b8ebc168906e",
+      "status": 200,
+      "term": "methods[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=methods[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "methods",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 593846,
+      "sha256": "a177bf31ef02df64e02038a2b1a4b52a147e96f0f7a3de4be10808479e17a060",
+      "status": 200,
+      "term": "methods[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=methods[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "methods",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 671887,
+      "sha256": "3bc65317b44305dd7138c2ee560cdb0b41268b7567344d58cd695f1400e0107d",
+      "status": 200,
+      "term": "methods[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=methods[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "methods",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 231411,
+      "sha256": "94b27cf2aab9e6371a93050992958f3d1a31b99b5726d39fd1049036827e10f5",
+      "status": 200,
+      "term": "model[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=model[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "model",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 245233,
+      "sha256": "665471595067e51adcb21c050c15ed9d7c303b32b0bd2d66c1302bef513ea61f",
+      "status": 200,
+      "term": "model[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=model[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "model",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 285929,
+      "sha256": "f8d2a8a0348df73de44becd3d7de6c3e99648f8ef4773792ab136852eb60f1fd",
+      "status": 200,
+      "term": "model[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=model[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "model",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 175946,
+      "sha256": "dd7a2aa0eb1f400765bc07350e00ffe131c2468c313267c11700938a757c19fd",
+      "status": 200,
+      "term": "observed[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=observed[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "observed",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 199701,
+      "sha256": "789e2fdad20f180327dfe5a8ab2a8c9ad37b70fee67d917362c5e518dafaa397",
+      "status": 200,
+      "term": "observed[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=observed[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "observed",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 227294,
+      "sha256": "99fa114694d81a01fdf068b41c1009b77899501e9cdedb899ec94cd32a70e2f4",
+      "status": 200,
+      "term": "observed[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=observed[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "observed",
+      "year": "2025"
+    },
+    {
+      "bytes": 80,
+      "count": 95543,
+      "sha256": "95a1261b0817bbba6032fe754887a88314d389794be7a0a05df02f67fab3e6b4",
+      "status": 200,
+      "term": "outcome[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=outcome[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "outcome",
+      "year": "2023"
+    },
+    {
+      "bytes": 80,
+      "count": 93684,
+      "sha256": "788b12dfd4e902d302b5ebd6a7f5b68900370cd43ca9293d68ef3d7e4ef998df",
+      "status": 200,
+      "term": "outcome[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=outcome[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "outcome",
+      "year": "2024"
+    },
+    {
+      "bytes": 80,
+      "count": 97742,
+      "sha256": "e090c600f7f483d2892914a26469b39e6cea1d42c0f6981e70a7946fa0d8968a",
+      "status": 200,
+      "term": "outcome[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=outcome[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "outcome",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 450063,
+      "sha256": "5aca93261c0c3c6d9c83a2fc2288225bdf5ff33aa6a9b1b150c598c045f9f713",
+      "status": 200,
+      "term": "patients[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=patients[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "patients",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 457064,
+      "sha256": "f20a06c46591747a4b1623017f0358b0a69381924a9ad2126e4a1d0c0280b243",
+      "status": 200,
+      "term": "patients[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=patients[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "patients",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 485683,
+      "sha256": "5687cb4414992de445ee5f77dffa8801b571349b23408ec613cac43d8b0dac72",
+      "status": 200,
+      "term": "patients[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=patients[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "patients",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 787360,
+      "sha256": "7180fadf90ab819bcd83f68d9f4dd81809ccda709871843d212bc07e2b96b8d4",
+      "status": 200,
+      "term": "results[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=results[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "results",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 814598,
+      "sha256": "395add24c0ca6e7da076c351e967e6c5ff0fdc3bc7a75525a573ee6bc6b2b747",
+      "status": 200,
+      "term": "results[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=results[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "results",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 879860,
+      "sha256": "56249f913583e3ffc6a25f72352e016f73c84f64f70be9773c4e98b85e0fb90d",
+      "status": 200,
+      "term": "results[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=results[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "results",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 238279,
+      "sha256": "d0f4ba25ff8beeffe9461475cfee571fff3798bb91d1d1b2a280d38ffb6c0553",
+      "status": 200,
+      "term": "risk[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=risk[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "risk",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 249213,
+      "sha256": "11e3517e14e9ab4b5c2fa8bffead4036c712ac9ebe4b4f228f998513b266822f",
+      "status": 200,
+      "term": "risk[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=risk[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "risk",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 292993,
+      "sha256": "1e4d3278bd11dd77bd4fb1dcc9531d97068534daa9d2297570c7fa547602d774",
+      "status": 200,
+      "term": "risk[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=risk[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "risk",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 337448,
+      "sha256": "df6ec9bd94e553f466d09eaade9e5e2e726619d3db009e3dd45a763df4b78885",
+      "status": 200,
+      "term": "treatment[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=treatment[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "treatment",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 359173,
+      "sha256": "4ca6189279f8ff154ce0a76abae79675f60fe4da21a2a5501f792fb006a984fe",
+      "status": 200,
+      "term": "treatment[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=treatment[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "treatment",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 385082,
+      "sha256": "18843632162f1c70806634f26ee6726030ac7b4b6b44f63aa9f674e40dd0a26c",
+      "status": 200,
+      "term": "treatment[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=treatment[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "treatment",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 237024,
+      "sha256": "21c125c80dd998cfe4dfdefe7b97248f01bc5984ff1dbe68f938dae6f2bb7db7",
+      "status": 200,
+      "term": "years[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=years[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "years",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 239746,
+      "sha256": "623b2f8ae17e4c071ed69ba07e1db137ce8b4ba49839fec90abdc12beef09075",
+      "status": 200,
+      "term": "years[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=years[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "years",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 256965,
+      "sha256": "2d4363919822a4079829c09f8e817fbcd57bd1ec2a35ec5e7558aa398ab9f272",
+      "status": 200,
+      "term": "years[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=years[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "years",
+      "year": "2025"
+    },
+    {
+      "bytes": 80,
+      "count": 76827,
+      "sha256": "4229b5dc06517bd1bd92d04ada2dd331d9ff0ba0f52a30ab2c8d1d653976275b",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2018[dp]",
+      "word": "samples",
+      "year": "2018"
+    },
+    {
+      "bytes": 80,
+      "count": 82109,
+      "sha256": "b47e9db693fc3100f4703e14b2f0a7a0937d9b198d23da7fe012837665eba152",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2019[dp]",
+      "word": "samples",
+      "year": "2019"
+    },
+    {
+      "bytes": 80,
+      "count": 92987,
+      "sha256": "90e4e3fac4bfb928b826c298a34c0c645021f76ee09273d61e467fe00fa40c41",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2020[dp]",
+      "word": "samples",
+      "year": "2020"
+    },
+    {
+      "bytes": 81,
+      "count": 101843,
+      "sha256": "b7c59bfb80a4b261af4f8556418439bbfb44e5237022cc572b662c42f475a550",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2021[dp]",
+      "word": "samples",
+      "year": "2021"
+    },
+    {
+      "bytes": 81,
+      "count": 103633,
+      "sha256": "2796f760a2bc9ef25c108195b0da5aa42470e69c1eccbb9efbdc8009e80769da",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2022[dp]",
+      "word": "samples",
+      "year": "2022"
+    },
+    {
+      "bytes": 80,
+      "count": 98286,
+      "sha256": "0e94a67169159fb9f5980b220fa6c1ffc4a78ade5382aca9ccbd35f45eea3084",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "samples",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 101827,
+      "sha256": "b82831d937cd693bfa17e4cf2db704dc59eaeb91e92dd2230a102348e35e428e",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "samples",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 107499,
+      "sha256": "93112a48354b6e352235ff6853e713b54b5c8b40400fa1497ac9631388ed2815",
+      "status": 200,
+      "term": "samples[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=samples[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "samples",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 136291,
+      "sha256": "23d77fe289ff8d809f255f07bb70860129cadfbf59c47b6065a8b75b4b31a801",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2018[dp]",
+      "word": "groups",
+      "year": "2018"
+    },
+    {
+      "bytes": 81,
+      "count": 144668,
+      "sha256": "d91616bae498817a7ffae86719d02d4762e7fa2da81d19e6501a141e3f94e8de",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2019[dp]",
+      "word": "groups",
+      "year": "2019"
+    },
+    {
+      "bytes": 81,
+      "count": 166534,
+      "sha256": "327dcfc3016f52600f1d4d8225912d3b48babafc4ce3031cdba7686ed1c0edea",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2020[dp]",
+      "word": "groups",
+      "year": "2020"
+    },
+    {
+      "bytes": 81,
+      "count": 187519,
+      "sha256": "3d0cbfc47d4df429adef09653cb390875c30e137c9a0e157b41d7c2a32b1582c",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2021[dp]",
+      "word": "groups",
+      "year": "2021"
+    },
+    {
+      "bytes": 81,
+      "count": 192906,
+      "sha256": "5622a49e61b4fdf67bf987bc18561faf8cb5d7738deb42efd7f13f17f659c8f0",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2022[dp]",
+      "word": "groups",
+      "year": "2022"
+    },
+    {
+      "bytes": 81,
+      "count": 182524,
+      "sha256": "7294b7b8b7902d5ea447100db896c9201455fa164e74e36f5c35693b33517fc6",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "groups",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 192146,
+      "sha256": "dd7b8298ff33a8c9839fcc4baa2ad28bf4bd3c3bf6f987fafff3bb4816688b91",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "groups",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 210949,
+      "sha256": "83fed8dadf01aa1888d6db316545dca41474ee89ccfddd83766cbf2bc5325dfe",
+      "status": 200,
+      "term": "groups[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=groups[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "groups",
+      "year": "2025"
+    },
+    {
+      "bytes": 80,
+      "count": 90215,
+      "sha256": "336adc50c04033a930de8d666d5381a45d60d40cd68376066e7f0de1ac73f322",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2018[dp]",
+      "word": "cases",
+      "year": "2018"
+    },
+    {
+      "bytes": 80,
+      "count": 94806,
+      "sha256": "cbefe42b6efc5eb302f2573ebd5c1e5d268204fee129accceef599177a66207e",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2019[dp]",
+      "word": "cases",
+      "year": "2019"
+    },
+    {
+      "bytes": 81,
+      "count": 116928,
+      "sha256": "bd0851584d4074b4442bd55094d54dfa54fd4c282b2df8e66e845ae2fb6d5f53",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2020[dp]",
+      "word": "cases",
+      "year": "2020"
+    },
+    {
+      "bytes": 81,
+      "count": 129712,
+      "sha256": "88222af15e460586a1467e3cea0d4cb476553d1921ae477259393828dd0d9d2b",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2021[dp]",
+      "word": "cases",
+      "year": "2021"
+    },
+    {
+      "bytes": 81,
+      "count": 124593,
+      "sha256": "51cb2861db18a40928cef247ac979c90b98632188eefa554daf2ddf473c6d923",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2022[dp]",
+      "word": "cases",
+      "year": "2022"
+    },
+    {
+      "bytes": 81,
+      "count": 114998,
+      "sha256": "3594483a8b7d29f20a1ce15fb461f9628318e593d7f33219aeb60a3c2005d257",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "cases",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 120911,
+      "sha256": "9c969f5598256418ebc270e81bbd4aff53f194b83565dccdc5f7455e959ff859",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "cases",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 137157,
+      "sha256": "ddf5f798f3ec55677fc1960a38c2634ab1b8f5cdb6991b638bccbcf8a8d42f65",
+      "status": 200,
+      "term": "cases[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=cases[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "cases",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 156117,
+      "sha256": "2c9d0af986c519c080a74152639cbbb6b8e2cd5a2021b0a5a44fba5262cab740",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2018[dp]",
+      "word": "performed",
+      "year": "2018"
+    },
+    {
+      "bytes": 81,
+      "count": 167373,
+      "sha256": "12fcc0d96672fcf08071abce51cd5f0c464cb8b17a30054a17bc755c382a1702",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2019[dp]",
+      "word": "performed",
+      "year": "2019"
+    },
+    {
+      "bytes": 81,
+      "count": 197247,
+      "sha256": "fea4bf1ced9b355e1dcba37519a8bf9c91fb4772a2aed68a3294c66fd29f8442",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2020[dp]",
+      "word": "performed",
+      "year": "2020"
+    },
+    {
+      "bytes": 81,
+      "count": 220315,
+      "sha256": "a4bf8da913f668e907f9ddb255714f2c0cab3fada4a2e212b47d6147f800128d",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2021[dp]",
+      "word": "performed",
+      "year": "2021"
+    },
+    {
+      "bytes": 81,
+      "count": 221369,
+      "sha256": "3ef0bcd3db47264bd546d3b613fee4d303e04107f625ab28728eaa01e4ee49e6",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2022[dp]",
+      "word": "performed",
+      "year": "2022"
+    },
+    {
+      "bytes": 81,
+      "count": 205433,
+      "sha256": "c9b0e519f4019e20e5b7b2d9a0636b4052e96447e2ac335fdd1e0e0ec115464a",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "performed",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 196273,
+      "sha256": "434f13aab2c35fa34eb67a49e44962b4324e85b2bcf7d991988fc07849846ee3",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "performed",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 207574,
+      "sha256": "9cc37fefc7db85bbd24f17a6397cb6d0cbc8de14ac39016db81d4b175861de44",
+      "status": 200,
+      "term": "performed[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=performed[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "performed",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 155982,
+      "sha256": "942ebe2a2fc3f51bb1067ac0fcfae9b54a929f611bb403f4383ed3fc98d9f6b0",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2018[dp]",
+      "word": "total",
+      "year": "2018"
+    },
+    {
+      "bytes": 81,
+      "count": 170874,
+      "sha256": "47753d5311e7601747dab0cf5289dc5eb5093ec11db98db5a9c583f6400d2e53",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2019[dp]",
+      "word": "total",
+      "year": "2019"
+    },
+    {
+      "bytes": 81,
+      "count": 203064,
+      "sha256": "0252fb2d75d22220a1f8ed62c49661a848a5fe66b9a9b9450119b36504051a68",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2020[dp]",
+      "word": "total",
+      "year": "2020"
+    },
+    {
+      "bytes": 81,
+      "count": 233287,
+      "sha256": "ae4395986667c6d5f8800d63119ab6278d2c34fd7c5fec9d772f6116ea554e91",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2021[dp]",
+      "word": "total",
+      "year": "2021"
+    },
+    {
+      "bytes": 81,
+      "count": 242447,
+      "sha256": "c68c0f897221fd8fc68a5496c9810b659d35dfc90371e3eac9d6b4f89c7d1dfa",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2022[dp]",
+      "word": "total",
+      "year": "2022"
+    },
+    {
+      "bytes": 81,
+      "count": 227625,
+      "sha256": "7794000012307ecfa22f9b0ee5ee049ff6f5335eae405405ca709813b6632e0a",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "total",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 230428,
+      "sha256": "e6dcf89d484e2f07d2bab8d4e1719169772db43bed82fe4a02500984daba88c0",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "total",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 244471,
+      "sha256": "be882983d943fe8b1b138a5eaa33d0f74e9999a15bb437e2494f70fd3adf2577",
+      "status": 200,
+      "term": "total[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=total[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "total",
+      "year": "2025"
+    },
+    {
+      "bytes": 81,
+      "count": 150026,
+      "sha256": "051982a636137427957a10d52df7ab032dd92f7f89ae19edef334da7da641e89",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2018[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2018[dp]",
+      "word": "age",
+      "year": "2018"
+    },
+    {
+      "bytes": 81,
+      "count": 159719,
+      "sha256": "f02442cff8d9b5409b07fd1073ef561032be87b1a03ddf43348196af6d3ed03a",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2019[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2019[dp]",
+      "word": "age",
+      "year": "2019"
+    },
+    {
+      "bytes": 81,
+      "count": 187608,
+      "sha256": "0c8f94b86fd3ebf3d99c9f612ba25a5b5ae16d60979c6e32d620b17bcb02722d",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2020[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2020[dp]",
+      "word": "age",
+      "year": "2020"
+    },
+    {
+      "bytes": 81,
+      "count": 215397,
+      "sha256": "9c315e4d2b25ed6abd88241055df76d6d88d2b07deb43e87341bead9900fb886",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2021[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2021[dp]",
+      "word": "age",
+      "year": "2021"
+    },
+    {
+      "bytes": 81,
+      "count": 214861,
+      "sha256": "3b955d9561f268260350d8dd0668ca2bf3b5f6a44a9d78834ed003901677ed3a",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2022[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2022[dp]",
+      "word": "age",
+      "year": "2022"
+    },
+    {
+      "bytes": 81,
+      "count": 201093,
+      "sha256": "df264115aa113e3d63a4d9af50036cea9579e7d64b27e58106c4dbd74d1942cb",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2023[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2023[dp]",
+      "word": "age",
+      "year": "2023"
+    },
+    {
+      "bytes": 81,
+      "count": 206925,
+      "sha256": "f9e79d5d352db55c86284aff848ac1a5a5a6fffd3a7bec17f25dc54d85463e9f",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2024[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2024[dp]",
+      "word": "age",
+      "year": "2024"
+    },
+    {
+      "bytes": 81,
+      "count": 230149,
+      "sha256": "c6275f4247185f2cd2e5a36f5f4facee7b965042324a42dc3dc0e093934098f6",
+      "status": 200,
+      "term": "age[tiab] AND hasabstract AND 2025[dp]",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&rettype=count&retmode=json&tool=machine-attention&term=age[tiab]+AND+hasabstract+AND+2025[dp]",
+      "word": "age",
+      "year": "2025"
+    }
+  ],
+  "rule": "control-check-v1",
+  "schema": "syntheticflood-controlcheck-v1",
+  "source": "eutils.ncbi.nlm.nih.gov",
+  "started_at": "2026-11-06T07:38:57+00:00",
+  "user_agent": "machine-attention/0.1 (public research practice)",
+  "wordlist": {
+    "file": "syntheticflood/wordlists/wordlist-v2.json",
+    "sha256": "76903d013e189cced231b587aa1d17b1a818067ea1825095cf5f6069394a0870",
+    "version": "wordlist-v2"
+  }
+}
