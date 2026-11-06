@@ -2445,6 +2445,106 @@ def _sf_wiki_derive(data: bytes) -> dict:
             "unmatched": unmatched}
 
 
+SF_CHECK_RULES = {"control-check-v1": {
+    "band": 1.2, "min_count": 50, "check_years": ["2023", "2024", "2025"],
+    "target": 20, "min_controls": 15, "struck": ["reduced"],
+    "candidates": ["samples", "groups", "cases", "performed", "total", "age"]}}
+
+
+def check_syntheticflood_controlcheck(root: Path, registry_files: dict,
+                                      problems: list[str]) -> None:
+    """A control check: every count bound to its answer, every check and the
+    composition re-derived here, independently of
+    practice.syntheticflood.controlcheck, and the successor word list exactly
+    what the composition says."""
+    for cpath in sorted(root.glob("syntheticflood/controlcheck/*.json")):
+        rel = cpath.relative_to(root).as_posix()
+        d = load(cpath)
+        rule = SF_CHECK_RULES.get(d.get("rule"))
+        if d.get("schema") != "syntheticflood-controlcheck-v1" or rule is None \
+                or d.get("date") != cpath.stem or d.get("source") != SF_HOST:
+            problems.append(f"{rel}: unknown schema or rule, or date/source wrong")
+            continue
+        wl, bl = d.get("wordlist") or {}, d.get("baseline") or {}
+        wfile, bfile = root / str(wl.get("file", "")), root / str(bl.get("file", ""))
+        if not wfile.is_file() or sha256_file(wfile) != wl.get("sha256") \
+                or not bfile.is_file() or sha256_file(bfile) != bl.get("sha256"):
+            problems.append(f"{rel}: word list or baseline missing or changed")
+            continue
+        doc, base = load(wfile), load(bfile)
+        if base.get("wordlist", {}).get("sha256") != wl.get("sha256"):
+            problems.append(f"{rel}: baseline is not the word list's")
+            continue
+        base_years, chk = list(SF_BASE_YEARS), rule["check_years"]
+        controls = [w for w in doc.get("controls", []) if w not in rule["struck"]]
+        want = [(y, None) for y in base_years + chk] \
+            + [(y, w) for w in controls for y in chk] \
+            + [(y, w) for w in rule["candidates"] for y in base_years + chk]
+        rows = d.get("rows") or []
+        if [(r.get("year"), r.get("word")) for r in rows] != want:
+            problems.append(f"{rel}: rows do not follow the rule's reading plan")
+            continue
+        counts: dict = {}
+        for r in rows:
+            row = {k: v for k, v in r.items() if k not in ("year", "word")}
+            _sf_row(rel, row, r["year"], r["word"], registry_files, problems)
+            counts[(r["year"], r["word"])] = r.get("count")
+        tot = {y: counts[(y, None)] for y in base_years + chk}
+        entries = {w["word"]: w for w in base.get("words", []) if w.get("list") == "controls"}
+
+        def checked(word, verdict, shares):
+            cs = {y: counts[(y, word)] for y in chk}
+            if any(cs[y] is None or not tot[y] for y in chk):
+                return False
+            if verdict != "stable" or min(cs.values()) < rule["min_count"]:
+                return False
+            for y in chk:
+                exp = _sf_expected(shares, y)
+                if exp <= 0 or not 1 / rule["band"] <= round(cs[y] / tot[y] / exp, 4) <= rule["band"]:
+                    return False
+            return True
+
+        passed = {}
+        for w in controls:
+            e = entries.get(w) or {}
+            passed[w] = checked(w, e.get("verdict"), e.get("shares") or {})
+        for w in rule["candidates"]:
+            bc = {y: counts[(y, w)] for y in base_years}
+            if any(v is None or not tot[y] for y, v in bc.items()):
+                passed[w] = False
+                continue
+            shares = {y: round(bc[y] / tot[y], 9) for y in base_years}
+            lo, hi = min(shares.values()), max(shares.values())
+            stable = min(bc.values()) >= SF_BASE_RULES["baseline-v1"]["min_count"] \
+                and lo > 0 and round(hi / lo, 4) <= SF_BASE_RULES["baseline-v1"]["max_ratio"]
+            passed[w] = checked(w, "stable" if stable else "other", shares)
+        for w, ok in passed.items():
+            if bool((d.get("results") or {}).get(w, {}).get("pass")) != ok:
+                problems.append(f"{rel}: check of {w!r} does not re-derive")
+        kept = [w for w in controls if passed[w]]
+        added = []
+        for w in rule["candidates"]:
+            if len(kept) + len(added) >= rule["target"]:
+                break
+            if w not in doc.get("controls", []) and passed[w]:
+                added.append(w)
+        new = kept + added if len(kept) + len(added) >= rule["min_controls"] else None
+        comp = d.get("composition") or {}
+        if comp.get("kept") != kept or comp.get("added") != added or comp.get("controls") != new:
+            problems.append(f"{rel}: composition does not re-derive")
+        m = re.fullmatch(r"wordlist-v(\d+)", str(wl.get("version")))
+        succ = root / "syntheticflood/wordlists" / f"wordlist-v{int(m.group(1)) + 1}.json" if m else None
+        if new is None or succ is None:
+            continue
+        if not succ.is_file():
+            problems.append(f"{rel}: composed list has no successor word list")
+            continue
+        s = load(succ)
+        if s.get("controls") != new or s.get("fixed") != doc.get("fixed") \
+                or s.get("pool") != doc.get("pool"):
+            problems.append(f"{succ.relative_to(root).as_posix()}: not the composition of {rel}")
+
+
 def check_syntheticflood_categories(root: Path, registry_files: dict,
                                     problems: list[str]) -> None:
     """Register B readings: one fixed request, the answer preserved, every
@@ -2578,6 +2678,7 @@ def check(root: Path) -> list[str]:
     check_syntheticflood_baseline(root, problems)
     check_syntheticflood_derived(root, problems)
     check_syntheticflood_revisions(root, problems)
+    check_syntheticflood_controlcheck(root, registry_files, problems)
     check_anchors(root, problems)
 
     log_path = root / "autonomy" / "log.jsonl"
