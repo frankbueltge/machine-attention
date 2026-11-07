@@ -2202,6 +2202,9 @@ def check_syntheticflood_baseline(root: Path, problems: list[str]) -> None:
         rel = bpath.relative_to(root).as_posix()
         b = load(bpath)
         rule = b.get("rule") or {}
+        if rule.get("id") == "baseline-carry-v1":
+            _sf_check_carry(root, rel, bpath.stem, b, problems)
+            continue
         params = SF_BASE_RULES.get(rule.get("id"))
         if b.get("schema") != "syntheticflood-baseline-v1" or params is None \
                 or {k: v for k, v in rule.items() if k != "id"} != params:
@@ -2254,6 +2257,92 @@ def check_syntheticflood_baseline(root: Path, problems: list[str]) -> None:
                 tally[w["list"]][w["verdict"]] += 1
             if b.get("tally") != tally:
                 problems.append(f"{rel}: tally differs from the words")
+
+
+def _sf_base_verdict(counts: dict, totals: dict, params: dict) -> dict:
+    shares = {y: round(counts[y] / totals[y], 9) for y in SF_BASE_YEARS}
+    low, high = min(shares.values()), max(shares.values())
+    ratio = round(high / low, 4) if low > 0 else None
+    if min(counts.values()) < params["min_count"]:
+        v = "rare"
+    elif ratio <= params["max_ratio"]:
+        v = "stable"
+    else:
+        up = shares[SF_BASE_YEARS[-1]] > shares[SF_BASE_YEARS[0]]
+        v = "drifting-rising" if up else "drifting-falling"
+    return {"shares": shares, "min_count": min(counts.values()), "ratio": ratio, "verdict": v}
+
+
+def _sf_check_carry(root: Path, rel: str, version: str, b: dict,
+                    problems: list[str]) -> None:
+    """baseline-carry-v1: a successor list's baseline from committed counts
+    only — words of the predecessor keep their entry, words new to the list
+    take their 2018–2022 counts from the control-check record that composed
+    it. Re-derived here from both sources, by their hashes."""
+    params = SF_BASE_RULES["baseline-v1"]
+    rule = b.get("rule") or {}
+    if b.get("schema") != "syntheticflood-baseline-v1" \
+            or {k: v for k, v in rule.items() if k != "id"} != params:
+        problems.append(f"{rel}: unknown schema or rule changed under its id")
+        return
+    wl = b.get("wordlist") or {}
+    wfile = root / str(wl.get("file", ""))
+    if wl.get("version") != version or not wfile.is_file() \
+            or sha256_file(wfile) != wl.get("sha256"):
+        problems.append(f"{rel}: word list missing, changed or not its name")
+        return
+    doc = load(wfile)
+    src = {}
+    for key, prefix in (("carried", "syntheticflood/baseline/"),
+                        ("added", "syntheticflood/controlcheck/")):
+        ref = (b.get("sources") or {}).get(key) or {}
+        f = str(ref.get("file", ""))
+        if not f.startswith(prefix) or not (root / f).is_file() \
+                or sha256_file(root / f) != ref.get("sha256"):
+            problems.append(f"{rel}: source {key} missing, changed or not the one named")
+            return
+        src[key] = (ref, load(root / f))
+    (pref, pre), (cref, rec) = src["carried"], src["added"]
+    if (pre.get("rule") or {}).get("id") != "baseline-v1" \
+            or rec.get("wordlist") != pre.get("wordlist") \
+            or (rec.get("composition") or {}).get("controls") != doc.get("controls"):
+        problems.append(f"{rel}: sources are not the predecessor and its control check")
+        return
+    rec_totals, rec_counts = {}, {}
+    for row in rec.get("rows") or []:
+        if row.get("year") in SF_BASE_YEARS and row.get("count") is not None:
+            if row.get("word") is None:
+                rec_totals[row["year"]] = row["count"]
+            else:
+                rec_counts.setdefault(row["word"], {})[row["year"]] = row["count"]
+    if pref.get("totals") != pre.get("totals") or cref.get("totals") != rec_totals \
+            or sorted(rec_totals) != list(SF_BASE_YEARS):
+        problems.append(f"{rel}: source totals differ from the sources")
+        return
+    old = {w.get("word"): w for w in pre.get("words") or []}
+    want_terms = [(n, w) for n in SF_LISTS for w in doc.get(n) or []]
+    if [(w.get("list"), w.get("word")) for w in b.get("words", [])] != want_terms:
+        problems.append(f"{rel}: words differ from the word list")
+        return
+    for w in b["words"]:
+        word = w["word"]
+        if word in old:
+            source, counts, totals = "carried", old[word].get("counts"), pre["totals"]
+        elif sorted(rec_counts.get(word, {})) == list(SF_BASE_YEARS):
+            source, counts, totals = "added", rec_counts[word], rec_totals
+        else:
+            problems.append(f"{rel}: {word}: in neither source")
+            continue
+        counts = {y: counts[y] for y in SF_BASE_YEARS}
+        want = {"source": source, "counts": counts, **_sf_base_verdict(counts, totals, params)}
+        if {k: w.get(k) for k in want} != want:
+            problems.append(f"{rel}: {word}: differs from its source")
+    tally: dict = {}
+    for w in b["words"]:
+        tally.setdefault(w["list"], {}).setdefault(w.get("verdict"), 0)
+        tally[w["list"]][w.get("verdict")] += 1
+    if b.get("tally") != tally:
+        problems.append(f"{rel}: tally differs from the words")
 
 
 SF_EXCESS_RULES = {"excess-v1": {"min_ratio": 2.0, "min_count": 50, "max_words": 20,
