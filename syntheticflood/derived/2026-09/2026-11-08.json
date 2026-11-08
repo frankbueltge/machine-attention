@@ -1,0 +1,1523 @@
+{
+  "baseline": {
+    "file": "syntheticflood/baseline/wordlist-v3.json",
+    "sha256": "bf57e258f11cf84e77629a6e83b7b14ccab7ca3664b2a0ea21af5e4a28658e1d"
+  },
+  "cohort": "2026-09",
+  "control_breach": [],
+  "date": "2026-11-08",
+  "derived": [
+    "offering",
+    "aligns",
+    "transformative",
+    "delineates",
+    "advancing",
+    "substantially",
+    "enhances",
+    "leverages",
+    "substantial",
+    "align",
+    "thereby",
+    "amplify",
+    "robust",
+    "strategically",
+    "profoundly",
+    "elevated",
+    "navigating",
+    "synergy",
+    "enduring",
+    "seamless"
+  ],
+  "lag_months": 2,
+  "reading": {
+    "file": "syntheticflood/readings/2026-09/2026-11-08.json",
+    "sha256": "56ce753baee68548ee0e88bcb90e5c7c57fb775a4713b8678b04660cb1d391f1"
+  },
+  "rule": {
+    "control_band": 1.5,
+    "id": "excess-v1",
+    "max_words": 20,
+    "min_count": 50,
+    "min_ratio": 2.0
+  },
+  "schema": "syntheticflood-derived-v1",
+  "total": 173495,
+  "value": false,
+  "wordlist": {
+    "file": "syntheticflood/wordlists/wordlist-v3.json",
+    "sha256": "9a1e1890151297597e4c28eaebec391afd9065b46e419a334ca609ce1356ffcc",
+    "version": "wordlist-v3"
+  },
+  "words": [
+    {
+      "count": 6349,
+      "expected": 0.042190971,
+      "list": "fixed",
+      "observed": 0.036594715,
+      "ratio": 0.8674,
+      "status": "measured",
+      "word": "additionally"
+    },
+    {
+      "count": 13,
+      "list": "fixed",
+      "status": "rare",
+      "word": "boasts"
+    },
+    {
+      "count": 9,
+      "expected": 7.2925e-05,
+      "list": "fixed",
+      "observed": 5.1875e-05,
+      "ratio": 0.7113,
+      "status": "measured",
+      "word": "commendable"
+    },
+    {
+      "count": 10028,
+      "expected": 0.043414536,
+      "list": "fixed",
+      "observed": 0.057799937,
+      "ratio": 1.3313,
+      "status": "measured",
+      "word": "comprehensive"
+    },
+    {
+      "count": 4988,
+      "expected": 0.035834631,
+      "list": "fixed",
+      "observed": 0.028750108,
+      "ratio": 0.8023,
+      "status": "measured",
+      "word": "crucial"
+    },
+    {
+      "count": 27,
+      "expected": 0.000331349,
+      "list": "fixed",
+      "observed": 0.000155624,
+      "ratio": 0.4697,
+      "status": "measured",
+      "word": "delve"
+    },
+    {
+      "count": 6,
+      "list": "fixed",
+      "status": "rare",
+      "word": "delved"
+    },
+    {
+      "count": 53,
+      "list": "fixed",
+      "status": "rare",
+      "word": "delves"
+    },
+    {
+      "count": 9,
+      "list": "fixed",
+      "status": "rare",
+      "word": "delving"
+    },
+    {
+      "count": 2637,
+      "expected": 0.010140996,
+      "list": "fixed",
+      "observed": 0.015199285,
+      "ratio": 1.4988,
+      "status": "measured",
+      "word": "elucidate"
+    },
+    {
+      "count": 557,
+      "expected": 0.00097706,
+      "list": "fixed",
+      "observed": 0.003210467,
+      "ratio": 3.2858,
+      "status": "measured",
+      "word": "elucidates"
+    },
+    {
+      "count": 783,
+      "expected": 0.002515481,
+      "list": "fixed",
+      "observed": 0.004513098,
+      "ratio": 1.7941,
+      "status": "measured",
+      "word": "elucidating"
+    },
+    {
+      "count": 1830,
+      "expected": 0.00270897,
+      "list": "fixed",
+      "observed": 0.010547854,
+      "ratio": 3.8937,
+      "status": "measured",
+      "word": "emphasizing"
+    },
+    {
+      "count": 1356,
+      "expected": 0.002047818,
+      "list": "fixed",
+      "observed": 0.007815787,
+      "ratio": 3.8166,
+      "status": "measured",
+      "word": "encompassing"
+    },
+    {
+      "count": 5820,
+      "expected": 0.015777086,
+      "list": "fixed",
+      "observed": 0.033545635,
+      "ratio": 2.1262,
+      "status": "measured",
+      "word": "enhancing"
+    },
+    {
+      "count": 14882,
+      "expected": 0.032475607,
+      "list": "fixed",
+      "observed": 0.085777688,
+      "ratio": 2.6413,
+      "status": "measured",
+      "word": "exhibited"
+    },
+    {
+      "count": 539,
+      "expected": 0.001434221,
+      "list": "fixed",
+      "observed": 0.003106718,
+      "ratio": 2.1661,
+      "status": "measured",
+      "word": "fostering"
+    },
+    {
+      "count": 246,
+      "expected": 0.000848947,
+      "list": "fixed",
+      "observed": 0.001417908,
+      "ratio": 1.6702,
+      "status": "measured",
+      "word": "garnered"
+    },
+    {
+      "count": 45,
+      "expected": 0.000274717,
+      "list": "fixed",
+      "observed": 0.000259373,
+      "ratio": 0.9441,
+      "status": "measured",
+      "word": "groundbreaking"
+    },
+    {
+      "count": 7590,
+      "expected": 0.010991458,
+      "list": "fixed",
+      "observed": 0.043747658,
+      "ratio": 3.9802,
+      "status": "measured",
+      "word": "highlighting"
+    },
+    {
+      "count": 10262,
+      "expected": 0.036596087,
+      "list": "fixed",
+      "observed": 0.059148679,
+      "ratio": 1.6163,
+      "status": "measured",
+      "word": "insights"
+    },
+    {
+      "count": 1674,
+      "expected": 0.005758826,
+      "list": "fixed",
+      "observed": 0.009648693,
+      "ratio": 1.6755,
+      "status": "measured",
+      "word": "interplay"
+    },
+    {
+      "count": 25,
+      "expected": 0.000209966,
+      "list": "fixed",
+      "observed": 0.000144096,
+      "ratio": 0.6863,
+      "status": "measured",
+      "word": "intricacies"
+    },
+    {
+      "count": 431,
+      "expected": 0.00159046,
+      "list": "fixed",
+      "observed": 0.002484221,
+      "ratio": 1.562,
+      "status": "measured",
+      "word": "intricate"
+    },
+    {
+      "count": 90,
+      "expected": 0.000828064,
+      "list": "fixed",
+      "observed": 0.000518747,
+      "ratio": 0.6265,
+      "status": "measured",
+      "word": "invaluable"
+    },
+    {
+      "count": 1454,
+      "expected": 0.00353004,
+      "list": "fixed",
+      "observed": 0.008380645,
+      "ratio": 2.3741,
+      "status": "measured",
+      "word": "leveraging"
+    },
+    {
+      "count": 230,
+      "expected": 0.000636399,
+      "list": "fixed",
+      "observed": 0.001325687,
+      "ratio": 2.0831,
+      "status": "measured",
+      "word": "meticulous"
+    },
+    {
+      "count": 46,
+      "expected": 0.000192149,
+      "list": "fixed",
+      "observed": 0.000265137,
+      "ratio": 1.3799,
+      "status": "measured",
+      "word": "meticulously"
+    },
+    {
+      "count": 773,
+      "expected": 0.003132217,
+      "list": "fixed",
+      "observed": 0.00445546,
+      "ratio": 1.4225,
+      "status": "measured",
+      "word": "multifaceted"
+    },
+    {
+      "count": 6410,
+      "expected": 0.014285468,
+      "list": "fixed",
+      "observed": 0.03694631,
+      "ratio": 2.5863,
+      "status": "measured",
+      "word": "notably"
+    },
+    {
+      "count": 461,
+      "expected": 0.001606946,
+      "list": "fixed",
+      "observed": 0.002657137,
+      "ratio": 1.6535,
+      "status": "measured",
+      "word": "noteworthy"
+    },
+    {
+      "count": 389,
+      "expected": 0.00142668,
+      "list": "fixed",
+      "observed": 0.00224214,
+      "ratio": 1.5716,
+      "status": "measured",
+      "word": "nuanced"
+    },
+    {
+      "count": 1981,
+      "expected": 0.006374793,
+      "list": "fixed",
+      "observed": 0.011418196,
+      "ratio": 1.7911,
+      "status": "measured",
+      "word": "pivotal"
+    },
+    {
+      "count": 59,
+      "expected": 0.00045695,
+      "list": "fixed",
+      "observed": 0.000340067,
+      "ratio": 0.7442,
+      "status": "measured",
+      "word": "realm"
+    },
+    {
+      "count": 94,
+      "expected": 0.000270372,
+      "list": "fixed",
+      "observed": 0.000541802,
+      "ratio": 2.0039,
+      "status": "measured",
+      "word": "seamlessly"
+    },
+    {
+      "count": 77,
+      "expected": 0.000902706,
+      "list": "fixed",
+      "observed": 0.000443817,
+      "ratio": 0.4917,
+      "status": "measured",
+      "word": "showcase"
+    },
+    {
+      "count": 26,
+      "expected": 0.000340648,
+      "list": "fixed",
+      "observed": 0.00014986,
+      "ratio": 0.4399,
+      "status": "measured",
+      "word": "showcased"
+    },
+    {
+      "count": 48,
+      "expected": 0.000322482,
+      "list": "fixed",
+      "observed": 0.000276665,
+      "ratio": 0.8579,
+      "status": "measured",
+      "word": "showcases"
+    },
+    {
+      "count": 93,
+      "expected": 0.000264695,
+      "list": "fixed",
+      "observed": 0.000536039,
+      "ratio": 2.0251,
+      "status": "measured",
+      "word": "showcasing"
+    },
+    {
+      "count": 369,
+      "expected": 0.000420797,
+      "list": "fixed",
+      "observed": 0.002126862,
+      "ratio": 5.0544,
+      "status": "measured",
+      "word": "surpassing"
+    },
+    {
+      "count": 1,
+      "list": "fixed",
+      "status": "rare",
+      "word": "tapestry"
+    },
+    {
+      "count": 2531,
+      "expected": 0.001963443,
+      "list": "fixed",
+      "observed": 0.014588317,
+      "ratio": 7.43,
+      "status": "measured",
+      "word": "underscore"
+    },
+    {
+      "count": 146,
+      "expected": 0.000413766,
+      "list": "fixed",
+      "observed": 0.000841523,
+      "ratio": 2.0338,
+      "status": "measured",
+      "word": "underscored"
+    },
+    {
+      "count": 2018,
+      "expected": 0.001143591,
+      "list": "fixed",
+      "observed": 0.011631459,
+      "ratio": 10.171,
+      "status": "measured",
+      "word": "underscores"
+    },
+    {
+      "count": 2253,
+      "expected": 0.000791018,
+      "list": "fixed",
+      "observed": 0.012985965,
+      "ratio": 16.4168,
+      "status": "measured",
+      "word": "underscoring"
+    },
+    {
+      "count": 243,
+      "expected": 0.000806397,
+      "list": "fixed",
+      "observed": 0.001400617,
+      "ratio": 1.7369,
+      "status": "measured",
+      "word": "unveiling"
+    },
+    {
+      "count": 3,
+      "list": "fixed",
+      "status": "rare",
+      "word": "unwavering"
+    },
+    {
+      "count": 57806,
+      "expected": 0.320735908,
+      "list": "controls",
+      "observed": 0.333185394,
+      "ratio": 1.0388,
+      "status": "measured",
+      "word": "analysis"
+    },
+    {
+      "count": 59088,
+      "expected": 0.244093471,
+      "list": "controls",
+      "observed": 0.340574656,
+      "ratio": 1.3953,
+      "status": "measured",
+      "word": "associated"
+    },
+    {
+      "count": 18717,
+      "expected": 0.103043247,
+      "list": "controls",
+      "observed": 0.107882072,
+      "ratio": 1.047,
+      "status": "measured",
+      "word": "cells"
+    },
+    {
+      "count": 51462,
+      "expected": 0.237808636,
+      "list": "controls",
+      "observed": 0.296619499,
+      "ratio": 1.2473,
+      "status": "measured",
+      "word": "clinical"
+    },
+    {
+      "count": 33234,
+      "expected": 0.214237199,
+      "list": "controls",
+      "observed": 0.191555953,
+      "ratio": 0.8941,
+      "status": "measured",
+      "word": "compared"
+    },
+    {
+      "count": 43103,
+      "expected": 0.269737779,
+      "list": "controls",
+      "observed": 0.248439436,
+      "ratio": 0.921,
+      "status": "measured",
+      "word": "data"
+    },
+    {
+      "count": 29988,
+      "expected": 0.16353443,
+      "list": "controls",
+      "observed": 0.17284648,
+      "ratio": 1.0569,
+      "status": "measured",
+      "word": "increased"
+    },
+    {
+      "count": 9897,
+      "expected": 0.050167876,
+      "list": "controls",
+      "observed": 0.057044872,
+      "ratio": 1.1371,
+      "status": "measured",
+      "word": "measured"
+    },
+    {
+      "count": 67493,
+      "expected": 0.38835807,
+      "list": "controls",
+      "observed": 0.389019856,
+      "ratio": 1.0017,
+      "status": "measured",
+      "word": "methods"
+    },
+    {
+      "count": 32020,
+      "expected": 0.165223064,
+      "list": "controls",
+      "observed": 0.184558633,
+      "ratio": 1.117,
+      "status": "measured",
+      "word": "model"
+    },
+    {
+      "count": 13002,
+      "expected": 0.06965866,
+      "list": "controls",
+      "observed": 0.074941641,
+      "ratio": 1.0758,
+      "status": "measured",
+      "word": "outcome"
+    },
+    {
+      "count": 46545,
+      "expected": 0.326719233,
+      "list": "controls",
+      "observed": 0.268278625,
+      "ratio": 0.8211,
+      "status": "measured",
+      "word": "patients"
+    },
+    {
+      "count": 85818,
+      "expected": 0.534379296,
+      "list": "controls",
+      "observed": 0.494642497,
+      "ratio": 0.9256,
+      "status": "measured",
+      "word": "results"
+    },
+    {
+      "count": 32572,
+      "expected": 0.181264384,
+      "list": "controls",
+      "observed": 0.187740281,
+      "ratio": 1.0357,
+      "status": "measured",
+      "word": "risk"
+    },
+    {
+      "count": 35877,
+      "expected": 0.230455134,
+      "list": "controls",
+      "observed": 0.206789821,
+      "ratio": 0.8973,
+      "status": "measured",
+      "word": "treatment"
+    },
+    {
+      "count": 25321,
+      "expected": 0.173239621,
+      "list": "controls",
+      "observed": 0.145946569,
+      "ratio": 0.8425,
+      "status": "measured",
+      "word": "years"
+    },
+    {
+      "count": 10166,
+      "expected": 0.064390117,
+      "list": "controls",
+      "observed": 0.058595349,
+      "ratio": 0.91,
+      "status": "measured",
+      "word": "samples"
+    },
+    {
+      "count": 19493,
+      "expected": 0.126528361,
+      "list": "controls",
+      "observed": 0.112354823,
+      "ratio": 0.888,
+      "status": "measured",
+      "word": "groups"
+    },
+    {
+      "count": 12600,
+      "expected": 0.085104909,
+      "list": "controls",
+      "observed": 0.072624571,
+      "ratio": 0.8534,
+      "status": "measured",
+      "word": "cases"
+    },
+    {
+      "count": 22737,
+      "expected": 0.148503486,
+      "list": "controls",
+      "observed": 0.131052768,
+      "ratio": 0.8825,
+      "status": "measured",
+      "word": "performed"
+    },
+    {
+      "count": 15,
+      "expected": 7.6127e-05,
+      "list": "pool",
+      "observed": 8.6458e-05,
+      "ratio": 1.1357,
+      "status": "measured",
+      "word": "adept"
+    },
+    {
+      "count": 926,
+      "expected": 0.004892601,
+      "list": "pool",
+      "observed": 0.00533733,
+      "ratio": 1.0909,
+      "status": "measured",
+      "word": "advancements"
+    },
+    {
+      "count": 2155,
+      "expected": 0.003110376,
+      "list": "pool",
+      "observed": 0.012421107,
+      "ratio": 3.9934,
+      "status": "measured",
+      "word": "advancing"
+    },
+    {
+      "count": 946,
+      "expected": 0.001872093,
+      "list": "pool",
+      "observed": 0.005452607,
+      "ratio": 2.9126,
+      "status": "measured",
+      "word": "align"
+    },
+    {
+      "count": 430,
+      "expected": 0.000512399,
+      "list": "pool",
+      "observed": 0.002478458,
+      "ratio": 4.837,
+      "status": "measured",
+      "word": "aligns"
+    },
+    {
+      "count": 499,
+      "expected": 0.001106541,
+      "list": "pool",
+      "observed": 0.002876164,
+      "ratio": 2.5992,
+      "status": "measured",
+      "word": "amplify"
+    },
+    {
+      "count": 55,
+      "expected": 0.00050402,
+      "list": "pool",
+      "observed": 0.000317012,
+      "ratio": 0.629,
+      "status": "measured",
+      "word": "bolster"
+    },
+    {
+      "count": 35,
+      "expected": 0.00016346,
+      "list": "pool",
+      "observed": 0.000201735,
+      "ratio": 1.2342,
+      "status": "measured",
+      "word": "bolstering"
+    },
+    {
+      "count": 1,
+      "list": "pool",
+      "status": "rare",
+      "word": "captivating"
+    },
+    {
+      "count": 192,
+      "expected": 0.001176767,
+      "list": "pool",
+      "observed": 0.00110666,
+      "ratio": 0.9404,
+      "status": "measured",
+      "word": "catalyze"
+    },
+    {
+      "count": 1426,
+      "expected": 0.008649062,
+      "list": "pool",
+      "observed": 0.008219257,
+      "ratio": 0.9503,
+      "status": "measured",
+      "word": "comprehensively"
+    },
+    {
+      "count": 2452,
+      "expected": 0.011023527,
+      "list": "pool",
+      "observed": 0.014132972,
+      "ratio": 1.2821,
+      "status": "measured",
+      "word": "consequently"
+    },
+    {
+      "count": 3925,
+      "expected": 0.011083157,
+      "list": "pool",
+      "observed": 0.02262313,
+      "ratio": 2.0412,
+      "status": "measured",
+      "word": "critically"
+    },
+    {
+      "count": 98,
+      "expected": 0.000638875,
+      "list": "pool",
+      "observed": 0.000564858,
+      "ratio": 0.8841,
+      "status": "measured",
+      "word": "cultivate"
+    },
+    {
+      "count": 455,
+      "expected": 0.002786169,
+      "list": "pool",
+      "observed": 0.002622554,
+      "ratio": 0.9413,
+      "status": "measured",
+      "word": "cutting"
+    },
+    {
+      "count": 644,
+      "expected": 0.002047788,
+      "list": "pool",
+      "observed": 0.003711923,
+      "ratio": 1.8126,
+      "status": "measured",
+      "word": "delineate"
+    },
+    {
+      "count": 265,
+      "expected": 0.000339149,
+      "list": "pool",
+      "observed": 0.001527422,
+      "ratio": 4.5037,
+      "status": "measured",
+      "word": "delineates"
+    },
+    {
+      "count": 7897,
+      "expected": 0.028185154,
+      "list": "pool",
+      "observed": 0.045517162,
+      "ratio": 1.6149,
+      "status": "measured",
+      "word": "diverse"
+    },
+    {
+      "count": 7455,
+      "expected": 0.025950278,
+      "list": "pool",
+      "observed": 0.042969538,
+      "ratio": 1.6558,
+      "status": "measured",
+      "word": "dynamic"
+    },
+    {
+      "count": 200,
+      "expected": 0.000948537,
+      "list": "pool",
+      "observed": 0.001152771,
+      "ratio": 1.2153,
+      "status": "measured",
+      "word": "elevate"
+    },
+    {
+      "count": 9400,
+      "expected": 0.024563975,
+      "list": "pool",
+      "observed": 0.054180236,
+      "ratio": 2.2057,
+      "status": "measured",
+      "word": "elevated"
+    },
+    {
+      "count": 299,
+      "expected": 0.000848536,
+      "list": "pool",
+      "observed": 0.001723393,
+      "ratio": 2.031,
+      "status": "measured",
+      "word": "elevating"
+    },
+    {
+      "count": 3,
+      "expected": 6.8375e-05,
+      "list": "pool",
+      "observed": 1.7292e-05,
+      "ratio": 0.2529,
+      "status": "measured",
+      "word": "embark"
+    },
+    {
+      "count": 135,
+      "expected": 0.001036733,
+      "list": "pool",
+      "observed": 0.00077812,
+      "ratio": 0.7506,
+      "status": "measured",
+      "word": "empower"
+    },
+    {
+      "count": 127,
+      "expected": 0.000818885,
+      "list": "pool",
+      "observed": 0.00073201,
+      "ratio": 0.8939,
+      "status": "measured",
+      "word": "empowering"
+    },
+    {
+      "count": 287,
+      "expected": 0.000867236,
+      "list": "pool",
+      "observed": 0.001654226,
+      "ratio": 1.9075,
+      "status": "measured",
+      "word": "encompass"
+    },
+    {
+      "count": 387,
+      "expected": 0.00139855,
+      "list": "pool",
+      "observed": 0.002230612,
+      "ratio": 1.5949,
+      "status": "measured",
+      "word": "encompasses"
+    },
+    {
+      "count": 40,
+      "expected": 0.000501417,
+      "list": "pool",
+      "observed": 0.000230554,
+      "ratio": 0.4598,
+      "status": "measured",
+      "word": "endeavor"
+    },
+    {
+      "count": 218,
+      "expected": 0.000588971,
+      "list": "pool",
+      "observed": 0.00125652,
+      "ratio": 2.1334,
+      "status": "measured",
+      "word": "enduring"
+    },
+    {
+      "count": 8886,
+      "expected": 0.029818353,
+      "list": "pool",
+      "observed": 0.051217614,
+      "ratio": 1.7177,
+      "status": "measured",
+      "word": "enhance"
+    },
+    {
+      "count": 4140,
+      "expected": 0.007088671,
+      "list": "pool",
+      "observed": 0.023862359,
+      "ratio": 3.3663,
+      "status": "measured",
+      "word": "enhances"
+    },
+    {
+      "count": 246,
+      "expected": 0.002038879,
+      "list": "pool",
+      "observed": 0.001417908,
+      "ratio": 0.6954,
+      "status": "measured",
+      "word": "enrich"
+    },
+    {
+      "count": 12284,
+      "expected": 0.052495063,
+      "list": "pool",
+      "observed": 0.070803193,
+      "ratio": 1.3488,
+      "status": "measured",
+      "word": "essential"
+    },
+    {
+      "count": 1835,
+      "expected": 0.005518312,
+      "list": "pool",
+      "observed": 0.010576674,
+      "ratio": 1.9167,
+      "status": "measured",
+      "word": "evolving"
+    },
+    {
+      "count": 4139,
+      "expected": 0.022892478,
+      "list": "pool",
+      "observed": 0.023856595,
+      "ratio": 1.0421,
+      "status": "measured",
+      "word": "facilitate"
+    },
+    {
+      "count": 1684,
+      "expected": 0.006115078,
+      "list": "pool",
+      "observed": 0.009706332,
+      "ratio": 1.5873,
+      "status": "measured",
+      "word": "facilitates"
+    },
+    {
+      "count": 2124,
+      "expected": 0.00679699,
+      "list": "pool",
+      "observed": 0.012242428,
+      "ratio": 1.8012,
+      "status": "measured",
+      "word": "facilitating"
+    },
+    {
+      "count": 10059,
+      "expected": 0.069995857,
+      "list": "pool",
+      "observed": 0.057978616,
+      "ratio": 0.8283,
+      "status": "measured",
+      "word": "furthermore"
+    },
+    {
+      "count": 144,
+      "expected": 0.000827884,
+      "list": "pool",
+      "observed": 0.000829995,
+      "ratio": 1.0025,
+      "status": "measured",
+      "word": "harness"
+    },
+    {
+      "count": 330,
+      "expected": 0.001311251,
+      "list": "pool",
+      "observed": 0.001902072,
+      "ratio": 1.4506,
+      "status": "measured",
+      "word": "harnessing"
+    },
+    {
+      "count": 63,
+      "expected": 0.000184126,
+      "list": "pool",
+      "observed": 0.000363123,
+      "ratio": 1.9721,
+      "status": "measured",
+      "word": "heighten"
+    },
+    {
+      "count": 706,
+      "expected": 0.004355678,
+      "list": "pool",
+      "observed": 0.004069282,
+      "ratio": 0.9342,
+      "status": "measured",
+      "word": "holistic"
+    },
+    {
+      "count": 135,
+      "expected": 0.000845017,
+      "list": "pool",
+      "observed": 0.00077812,
+      "ratio": 0.9208,
+      "status": "measured",
+      "word": "illuminate"
+    },
+    {
+      "count": 45,
+      "expected": 0.00031349,
+      "list": "pool",
+      "observed": 0.000259373,
+      "ratio": 0.8274,
+      "status": "measured",
+      "word": "illuminates"
+    },
+    {
+      "count": 55,
+      "expected": 0.000281359,
+      "list": "pool",
+      "observed": 0.000317012,
+      "ratio": 1.1267,
+      "status": "measured",
+      "word": "illuminating"
+    },
+    {
+      "count": 143,
+      "expected": 0.001173494,
+      "list": "pool",
+      "observed": 0.000824231,
+      "ratio": 0.7024,
+      "status": "measured",
+      "word": "impactful"
+    },
+    {
+      "count": 2544,
+      "expected": 0.012164882,
+      "list": "pool",
+      "observed": 0.014663247,
+      "ratio": 1.2054,
+      "status": "measured",
+      "word": "importantly"
+    },
+    {
+      "count": 1508,
+      "expected": 0.004479462,
+      "list": "pool",
+      "observed": 0.008691893,
+      "ratio": 1.9404,
+      "status": "measured",
+      "word": "inherent"
+    },
+    {
+      "count": 1700,
+      "expected": 0.011616194,
+      "list": "pool",
+      "observed": 0.009798553,
+      "ratio": 0.8435,
+      "status": "measured",
+      "word": "innovative"
+    },
+    {
+      "count": 34,
+      "expected": 0.000503458,
+      "list": "pool",
+      "observed": 0.000195971,
+      "ratio": 0.3892,
+      "status": "measured",
+      "word": "insightful"
+    },
+    {
+      "count": 562,
+      "expected": 0.003647982,
+      "list": "pool",
+      "observed": 0.003239286,
+      "ratio": 0.888,
+      "status": "measured",
+      "word": "integral"
+    },
+    {
+      "count": 107,
+      "expected": 0.001361018,
+      "list": "pool",
+      "observed": 0.000616732,
+      "ratio": 0.4531,
+      "status": "measured",
+      "word": "intriguing"
+    },
+    {
+      "count": 2731,
+      "expected": 0.009431892,
+      "list": "pool",
+      "observed": 0.015741088,
+      "ratio": 1.6689,
+      "status": "measured",
+      "word": "landscape"
+    },
+    {
+      "count": 511,
+      "expected": 0.002806429,
+      "list": "pool",
+      "observed": 0.00294533,
+      "ratio": 1.0495,
+      "status": "measured",
+      "word": "leverage"
+    },
+    {
+      "count": 515,
+      "expected": 0.000938805,
+      "list": "pool",
+      "observed": 0.002968385,
+      "ratio": 3.1619,
+      "status": "measured",
+      "word": "leverages"
+    },
+    {
+      "count": 5039,
+      "expected": 0.072287639,
+      "list": "pool",
+      "observed": 0.029044065,
+      "ratio": 0.4018,
+      "status": "measured",
+      "word": "moreover"
+    },
+    {
+      "count": 432,
+      "expected": 0.001783516,
+      "list": "pool",
+      "observed": 0.002489985,
+      "ratio": 1.3961,
+      "status": "measured",
+      "word": "navigate"
+    },
+    {
+      "count": 560,
+      "expected": 0.001485147,
+      "list": "pool",
+      "observed": 0.003227759,
+      "ratio": 2.1734,
+      "status": "measured",
+      "word": "navigating"
+    },
+    {
+      "count": 43,
+      "expected": 0.00019763,
+      "list": "pool",
+      "observed": 0.000247846,
+      "ratio": 1.2541,
+      "status": "measured",
+      "word": "nuance"
+    },
+    {
+      "count": 85,
+      "expected": 0.000735853,
+      "list": "pool",
+      "observed": 0.000489928,
+      "ratio": 0.6658,
+      "status": "measured",
+      "word": "nuances"
+    },
+    {
+      "count": 4477,
+      "expected": 0.004778552,
+      "list": "pool",
+      "observed": 0.025804778,
+      "ratio": 5.4001,
+      "status": "measured",
+      "word": "offering"
+    },
+    {
+      "count": 192,
+      "expected": 0.002691526,
+      "list": "pool",
+      "observed": 0.00110666,
+      "ratio": 0.4112,
+      "status": "measured",
+      "word": "paramount"
+    },
+    {
+      "count": 93,
+      "expected": 0.000609634,
+      "list": "pool",
+      "observed": 0.000536039,
+      "ratio": 0.8793,
+      "status": "measured",
+      "word": "pinpoint"
+    },
+    {
+      "count": 105,
+      "expected": 0.000372202,
+      "list": "pool",
+      "observed": 0.000605205,
+      "ratio": 1.626,
+      "status": "measured",
+      "word": "poised"
+    },
+    {
+      "count": 1174,
+      "expected": 0.004061243,
+      "list": "pool",
+      "observed": 0.006766766,
+      "ratio": 1.6662,
+      "status": "measured",
+      "word": "profound"
+    },
+    {
+      "count": 471,
+      "expected": 0.00118989,
+      "list": "pool",
+      "observed": 0.002714776,
+      "ratio": 2.2815,
+      "status": "measured",
+      "word": "profoundly"
+    },
+    {
+      "count": 13814,
+      "expected": 0.057034283,
+      "list": "pool",
+      "observed": 0.079621891,
+      "ratio": 1.396,
+      "status": "measured",
+      "word": "promising"
+    },
+    {
+      "count": 9,
+      "expected": 0.00012179,
+      "list": "pool",
+      "observed": 5.1875e-05,
+      "ratio": 0.4259,
+      "status": "measured",
+      "word": "reaffirm"
+    },
+    {
+      "count": 15,
+      "expected": 0.000147206,
+      "list": "pool",
+      "observed": 8.6458e-05,
+      "ratio": 0.5873,
+      "status": "measured",
+      "word": "realms"
+    },
+    {
+      "count": 1277,
+      "expected": 0.00828224,
+      "list": "pool",
+      "observed": 0.007360443,
+      "ratio": 0.8887,
+      "status": "measured",
+      "word": "remarkable"
+    },
+    {
+      "count": 685,
+      "expected": 0.005388876,
+      "list": "pool",
+      "observed": 0.003948241,
+      "ratio": 0.7327,
+      "status": "measured",
+      "word": "remarkably"
+    },
+    {
+      "count": 16,
+      "expected": 9.5469e-05,
+      "list": "pool",
+      "observed": 9.2222e-05,
+      "ratio": 0.966,
+      "status": "measured",
+      "word": "resonate"
+    },
+    {
+      "count": 49,
+      "expected": 0.000384024,
+      "list": "pool",
+      "observed": 0.000282429,
+      "ratio": 0.7354,
+      "status": "measured",
+      "word": "revolutionize"
+    },
+    {
+      "count": 68,
+      "expected": 0.000230869,
+      "list": "pool",
+      "observed": 0.000391942,
+      "ratio": 1.6977,
+      "status": "measured",
+      "word": "revolutionizing"
+    },
+    {
+      "count": 9256,
+      "expected": 0.022040269,
+      "list": "pool",
+      "observed": 0.053350241,
+      "ratio": 2.4206,
+      "status": "measured",
+      "word": "robust"
+    },
+    {
+      "count": 20,
+      "expected": 0.00032953,
+      "list": "pool",
+      "observed": 0.000115277,
+      "ratio": 0.3498,
+      "status": "measured",
+      "word": "scrutinize"
+    },
+    {
+      "count": 158,
+      "expected": 0.000428846,
+      "list": "pool",
+      "observed": 0.000910689,
+      "ratio": 2.1236,
+      "status": "measured",
+      "word": "seamless"
+    },
+    {
+      "count": 261,
+      "expected": 0.005835012,
+      "list": "pool",
+      "observed": 0.001504366,
+      "ratio": 0.2578,
+      "status": "measured",
+      "word": "shed"
+    },
+    {
+      "count": 4,
+      "list": "pool",
+      "status": "rare",
+      "word": "spearhead"
+    },
+    {
+      "count": 226,
+      "expected": 0.000550591,
+      "list": "pool",
+      "observed": 0.001302631,
+      "ratio": 2.3659,
+      "status": "measured",
+      "word": "strategically"
+    },
+    {
+      "count": 173,
+      "expected": 0.000569499,
+      "list": "pool",
+      "observed": 0.000997147,
+      "ratio": 1.7509,
+      "status": "measured",
+      "word": "streamline"
+    },
+    {
+      "count": 88,
+      "expected": 0.000316291,
+      "list": "pool",
+      "observed": 0.000507219,
+      "ratio": 1.6036,
+      "status": "measured",
+      "word": "streamlining"
+    },
+    {
+      "count": 9495,
+      "expected": 0.017391014,
+      "list": "pool",
+      "observed": 0.054727802,
+      "ratio": 3.1469,
+      "status": "measured",
+      "word": "substantial"
+    },
+    {
+      "count": 5542,
+      "expected": 0.00871783,
+      "list": "pool",
+      "observed": 0.031943284,
+      "ratio": 3.6641,
+      "status": "measured",
+      "word": "substantially"
+    },
+    {
+      "count": 3488,
+      "expected": 0.009841339,
+      "list": "pool",
+      "observed": 0.020104326,
+      "ratio": 2.0428,
+      "status": "measured",
+      "word": "synergistic"
+    },
+    {
+      "count": 948,
+      "expected": 0.002554329,
+      "list": "pool",
+      "observed": 0.005464134,
+      "ratio": 2.1392,
+      "status": "measured",
+      "word": "synergy"
+    },
+    {
+      "count": 8681,
+      "expected": 0.018021728,
+      "list": "pool",
+      "observed": 0.050036024,
+      "ratio": 2.7764,
+      "status": "measured",
+      "word": "thereby"
+    },
+    {
+      "count": 688,
+      "expected": 0.000868058,
+      "list": "pool",
+      "observed": 0.003965532,
+      "ratio": 4.5683,
+      "status": "measured",
+      "word": "transformative"
+    },
+    {
+      "count": 890,
+      "expected": 0.003868285,
+      "list": "pool",
+      "observed": 0.005129831,
+      "ratio": 1.3261,
+      "status": "measured",
+      "word": "uncover"
+    },
+    {
+      "count": 352,
+      "expected": 0.001296038,
+      "list": "pool",
+      "observed": 0.002028877,
+      "ratio": 1.5654,
+      "status": "measured",
+      "word": "uncovering"
+    },
+    {
+      "count": 136,
+      "expected": 0.000460491,
+      "list": "pool",
+      "observed": 0.000783884,
+      "ratio": 1.7023,
+      "status": "measured",
+      "word": "unlock"
+    },
+    {
+      "count": 31,
+      "expected": 0.000316551,
+      "list": "pool",
+      "observed": 0.00017868,
+      "ratio": 0.5645,
+      "status": "measured",
+      "word": "unparalleled"
+    },
+    {
+      "count": 517,
+      "expected": 0.006342423,
+      "list": "pool",
+      "observed": 0.002979913,
+      "ratio": 0.4698,
+      "status": "measured",
+      "word": "unprecedented"
+    },
+    {
+      "count": 131,
+      "expected": 0.001500843,
+      "list": "pool",
+      "observed": 0.000755065,
+      "ratio": 0.5031,
+      "status": "measured",
+      "word": "unravel"
+    },
+    {
+      "count": 238,
+      "expected": 0.00090988,
+      "list": "pool",
+      "observed": 0.001371797,
+      "ratio": 1.5077,
+      "status": "measured",
+      "word": "unraveling"
+    },
+    {
+      "count": 3859,
+      "expected": 0.018966294,
+      "list": "pool",
+      "observed": 0.022242716,
+      "ratio": 1.1727,
+      "status": "measured",
+      "word": "valuable"
+    },
+    {
+      "count": 1650,
+      "expected": 0.004527105,
+      "list": "pool",
+      "observed": 0.009510361,
+      "ratio": 2.1008,
+      "status": "measured",
+      "word": "versatile"
+    },
+    {
+      "count": 22,
+      "expected": 0.000133545,
+      "list": "pool",
+      "observed": 0.000126805,
+      "ratio": 0.9495,
+      "status": "measured",
+      "word": "vibrant"
+    },
+    {
+      "count": 1773,
+      "expected": 0.018162518,
+      "list": "pool",
+      "observed": 0.010219315,
+      "ratio": 0.5627,
+      "status": "measured",
+      "word": "vital"
+    }
+  ]
+}
