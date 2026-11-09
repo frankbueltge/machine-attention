@@ -1,0 +1,69 @@
+# Synthetic Flood V0 (admission stage 3, the maintainer's conditional GO of
+# 2026-10-04, read by the pass in REQUESTS.md 2026-10-18): the monthly Register
+# A reading. Increment 4, docs/2026-11-09-synthetic-flood-v0-inkrement-4.md.
+#
+# The admission path allows a workflow only once V0 has produced a committed
+# reading; syntheticflood/readings/2026-10/2026-11-09.json is the first made by
+# the command this job runs (practice/tests/test_syntheticflood_monthly.py
+# holds that). It was added only after a month derived without a control
+# breach (syntheticflood/derived/2026-09/2026-11-08.json).
+#
+# Each month cohort from 2026-09 on is read once at M+1, M+2 and M+3 on
+# wordlist-v3 and derived under excess-v1; a revision is written against the
+# cohort's earlier reading on the same list. A second run in the same month
+# asks nothing. At most three cohorts, about 167 count requests each.
+#
+# The 4th, 03:17 UTC: early in the month so M+1 is a month old, clear of
+# memoryhole (02:30, up to four hours, but on other hosts), the interval job
+# (Monday 04:50), the sentinel (05:45) and the anchor job (06:20) that stamps
+# any manifest this run writes.
+#
+# What is fetched: PubMed E-utilities esearch counts only, keyless, no text,
+# title or name. The host's robots.txt reads `Disallow: /`; the operator
+# offers it as a scripted interface with published rate rules, and the pass
+# read it on that basis (self-decision of 2026-11-02, REQUESTS.md 2026-10-30).
+# If the maintainer objects, this file is removed.
+name: syntheticflood
+
+on:
+  schedule:
+    - cron: "17 3 4 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: syntheticflood
+
+jobs:
+  reading:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install practice
+        run: python -m pip install --quiet -e ./practice
+
+      # Writes syntheticflood/readings/<cohort>/<date>.json for each due
+      # cohort, its derived list and its revision.
+      - name: Monthly reading
+        run: python -m practice.syntheticflood.monthly --repo-root .
+
+      # Same handshake as the other instruments: a manifest (only written
+      # when an answer is not canonical) is listed as "unstamped" so verify
+      # passes; the anchor job stamps it.
+      - name: Register the reading in the anchor ledger
+        run: python tools/anchor.py --register
+
+      - name: Verify provenance chain
+        run: python verify.py --repo-root .
+
+      - name: Commit reading
+        run: |
+          tools/commit-and-push.sh "syntheticflood: reading of $(date -u +%F)"
