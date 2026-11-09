@@ -173,18 +173,18 @@
             {
               "axis": "date",
               "baseline_usd": 32091886.0,
-              "gap_months": 6,
-              "half_month": "2026-04",
+              "gap_months": null,
+              "half_month": "2026-03",
               "k": 2,
               "open_months": null,
-              "status": "closed",
-              "t1": "2026-04"
+              "status": "none_in_horizon",
+              "t1": null
             },
             {
               "axis": "date",
               "baseline_usd": 32091886.0,
               "gap_months": null,
-              "half_month": "2026-04",
+              "half_month": "2026-03",
               "k": 3,
               "open_months": null,
               "status": "none_in_horizon",
@@ -192,9 +192,9 @@
             },
             {
               "axis": "firstReportedDate",
-              "baseline_usd": 29150775.0,
+              "baseline_usd": 29118889.0,
               "gap_months": 0,
-              "half_month": "2026-03",
+              "half_month": "2026-01",
               "k": 2,
               "open_months": null,
               "status": "closed",
@@ -202,24 +202,24 @@
             },
             {
               "axis": "firstReportedDate",
-              "baseline_usd": 29150775.0,
+              "baseline_usd": 29118889.0,
               "gap_months": null,
-              "half_month": "2026-03",
+              "half_month": "2026-01",
               "k": 3,
               "open_months": null,
               "status": "none_in_horizon",
               "t1": null
             }
           ],
-          "flows": 357,
-          "flows_counted": 285,
+          "flows": 353,
+          "flows_counted": 283,
           "pages": [
-            "interval/snapshots/2026-11-02/fts/AFG/fsc-2024_2025_2026-p001.json",
-            "interval/snapshots/2026-11-02/fts/AFG/fsc-2024_2025_2026-p002.json"
+            "interval/snapshots/2026-11-09/fts/AFG/fsc-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-11-09/fts/AFG/fsc-2024_2025_2026-p002.json"
           ],
           "pages_sha256": [
-            "2525f5a3f0440ac42a0d81b27052cb572e0a23f5248f14a6205c08d8ad8c6a2c",
-            "16bf417ee176cc92a461ee42756a8d998c90663a16c03090cd21cf2a847c81b6"
+            "20b5663488dec7a25b57a0c134b44e527772e6fe099f8a8bfff60c580ba57189",
+            "692aa07ac2548c5497779bc14c07366ee0796a00f415a56b9a23a282392aa912"
           ],
           "status": "read"
         },
@@ -268,41 +268,43 @@
               "t1": null
             }
           ],
-          "flows": 2981,
-          "flows_counted": 2287,
+          "flows": 3020,
+          "flows_counted": 2283,
           "pages": [
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p001.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p002.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p003.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p004.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p005.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p006.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p007.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p008.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p009.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p010.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p011.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p012.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p013.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p014.json",
-            "interval/snapshots/2026-11-02/fts/AFG/total-2024_2025_2026-p015.json"
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p002.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p003.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p004.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p005.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p006.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p007.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p008.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p009.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p010.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p011.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p012.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p013.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p014.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p015.json",
+            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p016.json"
           ],
           "pages_sha256": [
-            "b4de83d325be1d867dc12dc95e04da75ac89404e6bc7df1466bf80adc531c9cd",
-            "053f173bacf731945276591f9979ef631f956cdcca83a648199090dcc0866de8",
-            "ff943df30437c796da4a2360579ece4372816de20c158a1bcaf7260afebab438",
-            "1a519e90e37b8c716245fffc04b1912f649a24948086378adb7fc63c37ed04f4",
-            "6bda255262ecaf72984089593c4ee9e17c09979c9d1eb28bcd75b4e2d1c156d0",
-            "b089cb9bd69d0d37a8cb38eb9cb450f014e7dc0a36696ed495d3abba902918ab",
-            "be050f99377a6d76552293ec6ae4bfe2f38458edaaa47491bd7f2995b64d5976",
-            "46ae5bd1beb619cdddfe9355dc1a800369df7d484a1d7fba5d0fcf7f7d0941b3",
-            "4f6ba6989def5091056938897718c36f50cddb095f2883ab444f3744685e84dd",
-            "9bbb376641c58982db5dbc70ddb47f4445f06f2d6accbf7b62884e62bd2102ee",
-            "b1c06b7a8b9c00492eb25a5ce8d1a42eb7c94641b1a7cf370d5edce83f0f0472",
-            "f99b7ba70e656c62b6e461bae2dad202098b2c5d0bd00c934709ad7fe2750d7b",
-            "2117c01bbe29a6acbc14cceb7b8975d43e05238a08ab59783eee31b87c5a7704",
-            "22019e9012ab543e9761d1924e17d6fb596bd83e0973979ad4546cd517672bea",
-            "d63694f737be4a8f98d3fb5d773c48c0a0aa6ac8bfb150e964fad358dd308a48"
+            "3f181448bb0f0ce8790fffc5fec87e3e788e931cb4824eeb92ee68b095d9b9e1",
+            "cb8dcf61331cb75cbf586f8c7f9c12fcbf7f67832885e13fcaebd0b0c966d899",
+            "c91cba3973a9b505aee90af835e9c3ed7d7b13aaf33c9ec3608bc640c84d0b2b",
+            "355392e20d5b39ba4a8268c4ddf46a4fe4b8d077de72c318f24f5f88b9e7415a",
+            "2bd1644265fbec5676884382388dffcc61ef8a974217115fab477fe904ba3397",
+            "f6094b074338643d42161b972848e62a55a34b18854389cfe799c1885915bfc0",
+            "af236edf0579d6ddf830a4d7cef22be150e9fbe50817bd7498dc72b10a36a5e8",
+            "8a49f00d27b2aa5f7685bccad3da335dfa4e864bba66159cfdcfe983c2aa3de6",
+            "b7bae2c9d95fbb6f86d8cfbc923b016117bb73fbded41a875d455a8f37f029a0",
+            "7a2b6bbfbc579a9163c9f0927c0eb00b037fa6688d1d05ff87ce903413e613e0",
+            "cc3a58259e8eae12868a21ac93681b5455f5b98bfab21b85e06179f58a93f201",
+            "afbc8fb53a0a35642766cd02929b2ab154ffbc3262f814d5500ebc285991b87b",
+            "85e0e45c79ef7e6f04cfa7ab8098978c95479d222be19a2926dc4c70e8a9528f",
+            "151508d092f613e0309266b0fe591143b556cf790f2acb5f5c23cff71fa8e9f3",
+            "cc643b5f3e72b4fe64263424b64c8ed4e30775978df4b93ec7d2820733e04ba2",
+            "3b4f135cdca00d4946213077465302a85f735ab23b7a39538ee35b8aa49ba33d"
           ],
           "status": "read"
         }
@@ -962,7 +964,7 @@
           "cells": [
             {
               "axis": "date",
-              "baseline_usd": 2696555.5,
+              "baseline_usd": 1699450.0,
               "gap_months": 1,
               "half_month": null,
               "k": 2,
@@ -972,7 +974,7 @@
             },
             {
               "axis": "date",
-              "baseline_usd": 2696555.5,
+              "baseline_usd": 1699450.0,
               "gap_months": 1,
               "half_month": null,
               "k": 3,
@@ -1001,15 +1003,15 @@
               "t1": "2026-01"
             }
           ],
-          "flows": 280,
-          "flows_counted": 186,
+          "flows": 282,
+          "flows_counted": 188,
           "pages": [
-            "interval/snapshots/2026-11-02/fts/SOM/fsc-2025_2026-p001.json",
-            "interval/snapshots/2026-11-02/fts/SOM/fsc-2025_2026-p002.json"
+            "interval/snapshots/2026-11-09/fts/SOM/fsc-2025_2026-p001.json",
+            "interval/snapshots/2026-11-09/fts/SOM/fsc-2025_2026-p002.json"
           ],
           "pages_sha256": [
-            "89fda5c409f1322d9c16b9e94cdbc814085dfb74566b4cda442e16648941a193",
-            "798cc2f607d0ffdfd5e5eabd09fb18752ac389e2c63b6a46117c40db7e439cc1"
+            "1e1cb191e299aa8387626d86aeba70209d7d3fd6fc46e30b65d1857f099b7cbb",
+            "80a4dcd2d4bd1ecbf4fba5cfda506cb86e982cf12a95d16ae92844cd0ea1efa2"
           ],
           "status": "read"
         },
@@ -1058,27 +1060,27 @@
               "t1": "2026-04"
             }
           ],
-          "flows": 1541,
-          "flows_counted": 1076,
+          "flows": 1545,
+          "flows_counted": 1080,
           "pages": [
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p001.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p002.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p003.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p004.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p005.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p006.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p007.json",
-            "interval/snapshots/2026-11-02/fts/SOM/total-2025_2026-p008.json"
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p001.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p002.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p003.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p004.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p005.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p006.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p007.json",
+            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p008.json"
           ],
           "pages_sha256": [
-            "51a912f844766573fb11cadcc8f11e11433f6d925a83c9a9c81115c5160862f3",
-            "71668a035634cb5056ceec180131fdc254740f5723b3d10bfcbdf7a66ace3b42",
-            "668cdd9ae9c9292927f663088063d191a78905b5d187e0fc1233ca6bd1df3650",
-            "9b7df2f926d6ddd5e4484ac4f74311ce1579015d4364ab1f23eeae435e1b4da3",
-            "a9fb93d9633a492d9a19b6c408394c2dcd0dd390fba7d7699013cada0f5f4d49",
-            "1b030fa9774a7a0fa54970595c3e819f15c7b6c92485aea2961ed68d8fdf1800",
-            "f9880078bfcded33500f0ce5e9ef841548e08cbdbe19b341f9e9cda7c0a42161",
-            "cf47ae450608e79cb5c97e76e670f35a0d062b63dc5f3d612fd7f6038f748101"
+            "a8174432508f080dbf743388de505b877075ca8178ae0f45d9f9fb9b8cc4ee2a",
+            "97312198d1c4cc582f975e80410c03d73a8d028e91276fb08330c93404681e02",
+            "0c4a15c33cf684e134d835c037aa1f7f7aced68b0d79ef5e65ab7eb1fce7d9a0",
+            "f79fda8582f09b6d8627d9b275be3742b21b1e021be9d23657d2766862bed2a5",
+            "a65c311ff3d4d215e0be3aedfad50bcfeafac4240ea2d116888044302ef50be9",
+            "ae30dd2ca6da1d809a8129c17b317ceaee5be01786d3666ed2af3bf59d5ba863",
+            "0996f830fee032249e95c2c2abbcee6e4b762e3e5e73787a19853e7cdc2cd2c9",
+            "69e4b64fa3fce3053668f7852170f4930159e5cabbb8d5a198160e37e1d74e92"
           ],
           "status": "read"
         }
@@ -1290,8 +1292,8 @@
       "0.25"
     ]
   },
-  "ipc_sha256": "ec85a04b3704379e3a264680f92e8a70019f8e222900fcae4aca394f6f90ff28",
-  "ipc_snapshot": "interval/snapshots/2026-10-19/ipc/ipc_global_national_long.csv",
+  "ipc_sha256": "ca943df0b3cd001086302ad64c86a4a84deb6819a53d8ec2a8bc53adaa77b17b",
+  "ipc_snapshot": "interval/snapshots/2026-11-09/ipc/ipc_global_national_long.csv",
   "left_censored": {
     "0.05": [
       "AFG",

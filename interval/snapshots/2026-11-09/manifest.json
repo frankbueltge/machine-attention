@@ -1,0 +1,245 @@
+{
+  "entries": [
+    {
+      "bytes": 418925,
+      "file": "interval/snapshots/2026-11-09/ipc/package_show.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:26+00:00",
+      "sha256": "8cf1e9cc43157ca804f0861d4bad867b52d9f93efa735728e9441bac92aa2da3",
+      "url": "https://data.humdata.org/api/3/action/package_show?id=global-acute-food-insecurity-country-data"
+    },
+    {
+      "bytes": 411351,
+      "file": "interval/snapshots/2026-11-09/ipc/ipc_global_national_long.csv",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:26+00:00",
+      "sha256": "ca943df0b3cd001086302ad64c86a4a84deb6819a53d8ec2a8bc53adaa77b17b",
+      "url": "https://data.humdata.org/dataset/7a7e7428-b8d7-4d2e-91d3-19100500e016/resource/23d51849-5926-422c-a58a-f9bd68088f20/download/ipc_global_national_long.csv"
+    },
+    {
+      "bytes": 407988,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/fsc-2024_2025_2026-p001.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:28+00:00",
+      "sha256": "20b5663488dec7a25b57a0c134b44e527772e6fe099f8a8bfff60c580ba57189",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&year=2024,2025,2026&limit=200&filterBy=destinationGlobalClusterCode:FSC"
+    },
+    {
+      "bytes": 308384,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/fsc-2024_2025_2026-p002.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:28+00:00",
+      "sha256": "692aa07ac2548c5497779bc14c07366ee0796a00f415a56b9a23a282392aa912",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&filterBy=destinationGlobalClusterCode:FSC&limit=200&year=2024,2025,2026&page=2"
+    },
+    {
+      "bytes": 381422,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p001.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "3f181448bb0f0ce8790fffc5fec87e3e788e931cb4824eeb92ee68b095d9b9e1",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&year=2024,2025,2026&limit=200"
+    },
+    {
+      "bytes": 395340,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p002.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "cb8dcf61331cb75cbf586f8c7f9c12fcbf7f67832885e13fcaebd0b0c966d899",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=2"
+    },
+    {
+      "bytes": 387362,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p003.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "c91cba3973a9b505aee90af835e9c3ed7d7b13aaf33c9ec3608bc640c84d0b2b",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=3"
+    },
+    {
+      "bytes": 428562,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p004.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "355392e20d5b39ba4a8268c4ddf46a4fe4b8d077de72c318f24f5f88b9e7415a",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=4"
+    },
+    {
+      "bytes": 408762,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p005.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "2bd1644265fbec5676884382388dffcc61ef8a974217115fab477fe904ba3397",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=5"
+    },
+    {
+      "bytes": 418725,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p006.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "f6094b074338643d42161b972848e62a55a34b18854389cfe799c1885915bfc0",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=6"
+    },
+    {
+      "bytes": 401157,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p007.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "af236edf0579d6ddf830a4d7cef22be150e9fbe50817bd7498dc72b10a36a5e8",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=7"
+    },
+    {
+      "bytes": 399481,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p008.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "8a49f00d27b2aa5f7685bccad3da335dfa4e864bba66159cfdcfe983c2aa3de6",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=8"
+    },
+    {
+      "bytes": 392725,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p009.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "b7bae2c9d95fbb6f86d8cfbc923b016117bb73fbded41a875d455a8f37f029a0",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=9"
+    },
+    {
+      "bytes": 387910,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p010.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "7a2b6bbfbc579a9163c9f0927c0eb00b037fa6688d1d05ff87ce903413e613e0",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=10"
+    },
+    {
+      "bytes": 400899,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p011.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "cc3a58259e8eae12868a21ac93681b5455f5b98bfab21b85e06179f58a93f201",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=11"
+    },
+    {
+      "bytes": 379347,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p012.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "afbc8fb53a0a35642766cd02929b2ab154ffbc3262f814d5500ebc285991b87b",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=12"
+    },
+    {
+      "bytes": 400164,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p013.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "85e0e45c79ef7e6f04cfa7ab8098978c95479d222be19a2926dc4c70e8a9528f",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=13"
+    },
+    {
+      "bytes": 393220,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p014.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "151508d092f613e0309266b0fe591143b556cf790f2acb5f5c23cff71fa8e9f3",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=14"
+    },
+    {
+      "bytes": 405776,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p015.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "cc643b5f3e72b4fe64263424b64c8ed4e30775978df4b93ec7d2820733e04ba2",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=15"
+    },
+    {
+      "bytes": 45425,
+      "file": "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p016.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:47+00:00",
+      "sha256": "3b4f135cdca00d4946213077465302a85f735ab23b7a39538ee35b8aa49ba33d",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=AFG&limit=200&year=2024,2025,2026&page=16"
+    },
+    {
+      "bytes": 408516,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/fsc-2025_2026-p001.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:49+00:00",
+      "sha256": "1e1cb191e299aa8387626d86aeba70209d7d3fd6fc46e30b65d1857f099b7cbb",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2025,2026&limit=200&filterBy=destinationGlobalClusterCode:FSC"
+    },
+    {
+      "bytes": 168736,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/fsc-2025_2026-p002.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:49+00:00",
+      "sha256": "80a4dcd2d4bd1ecbf4fba5cfda506cb86e982cf12a95d16ae92844cd0ea1efa2",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&filterBy=destinationGlobalClusterCode:FSC&limit=200&year=2025,2026&page=2"
+    },
+    {
+      "bytes": 397972,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p001.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "a8174432508f080dbf743388de505b877075ca8178ae0f45d9f9fb9b8cc4ee2a",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&year=2025,2026&limit=200"
+    },
+    {
+      "bytes": 390763,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p002.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "97312198d1c4cc582f975e80410c03d73a8d028e91276fb08330c93404681e02",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=2"
+    },
+    {
+      "bytes": 417166,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p003.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "0c4a15c33cf684e134d835c037aa1f7f7aced68b0d79ef5e65ab7eb1fce7d9a0",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=3"
+    },
+    {
+      "bytes": 391091,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p004.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "f79fda8582f09b6d8627d9b275be3742b21b1e021be9d23657d2766862bed2a5",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=4"
+    },
+    {
+      "bytes": 410098,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p005.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "a65c311ff3d4d215e0be3aedfad50bcfeafac4240ea2d116888044302ef50be9",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=5"
+    },
+    {
+      "bytes": 399551,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p006.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "ae30dd2ca6da1d809a8129c17b317ceaee5be01786d3666ed2af3bf59d5ba863",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=6"
+    },
+    {
+      "bytes": 385651,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p007.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "0996f830fee032249e95c2c2abbcee6e4b762e3e5e73787a19853e7cdc2cd2c9",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=7"
+    },
+    {
+      "bytes": 308496,
+      "file": "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p008.json",
+      "http_status": 200,
+      "retrieved_at": "2026-11-09T13:25:59+00:00",
+      "sha256": "69e4b64fa3fce3053668f7852170f4930159e5cabbb8d5a198160e37e1d74e92",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?countryISO3=SOM&limit=200&year=2025,2026&page=8"
+    }
+  ],
+  "run_date": "2026-11-09"
+}
