@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
+  # tools/sync-discovery.sh dispatches ci on a discovery branch after merging
+  # main into it: its push, made with the workflow's token, starts nothing.
+  workflow_dispatch:
 
 jobs:
   test:
@@ -25,7 +28,7 @@ jobs:
         run: python verify.py --repo-root .
 
   append-only:
-    if: github.event_name == 'pull_request'
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +41,7 @@ jobs:
       - name: Refuse modifications to append-only records (I3)
         run: |
           changed=$(git diff --name-status --diff-filter=MD \
-            "origin/${{ github.base_ref }}...HEAD" -- \
+            "origin/${{ github.base_ref || 'main' }}...HEAD" -- \
             foreknown/snapshots/ \
             foreknown/resolutions/ \
             foreknown/reaction/snapshots/ \
