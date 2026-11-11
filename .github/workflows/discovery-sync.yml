@@ -1,0 +1,41 @@
+# Keeps an open discovery/* pull request mergeable when main moves under it.
+# GitHub ignores the `merge=union` driver for autonomy/log.jsonl when it
+# decides mergeability, so a nightly job appending to the log on main while
+# the discovery pass is out leaves the delivery CONFLICTING, and a conflicting
+# pull request starts neither ci nor automerge (2026-11-11, PR #115). The why
+# and the how: tools/sync-discovery.sh.
+name: discovery sync
+
+on:
+  # main moved: an open delivery may now conflict.
+  push:
+    branches: [main]
+    paths: [autonomy/log.jsonl]
+  # The delivery arrived already conflicting. pull_request_target, because a
+  # conflicting pull request gets no pull_request run; nothing from the
+  # branch is executed (the script works on it in a separate worktree).
+  pull_request_target:
+    types: [opened, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+  actions: write
+
+concurrency:
+  group: discovery-sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Merge main into conflicting discovery deliveries
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: tools/sync-discovery.sh

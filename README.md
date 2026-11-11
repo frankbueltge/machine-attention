@@ -288,6 +288,10 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
   Claude UI and the log entry says so.
 - `ci.yml` — tests + `verify.py` + append-only guard.
 - `automerge.yml` — discovery deliveries merge themselves once CI is green.
+- `discovery-sync.yml` — when main moves under an open discovery delivery
+  (or it arrives already behind), merges main into it, keeps
+  `autonomy/log.jsonl` a pure append and dispatches ci: GitHub ignores the
+  log's union driver when it judges mergeability (`tools/sync-discovery.sh`).
 - Publishing: frankbueltge.de pulls `public/` nightly (no deployer here —
   the site's Cloudflare Pages deploy is the single deployer).
 
