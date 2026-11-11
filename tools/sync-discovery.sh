@@ -17,8 +17,8 @@
 # merges main into the branch (the union driver applies here), rebuilds the
 # log as main's lines plus the branch's own (tools/append_on_main.py), pushes,
 # and dispatches ci on the branch: a push made with the workflow's token
-# starts no workflow by itself, a workflow_dispatch does. ci green → automerge,
-# as before. A conflict in any other file is left alone and reported — that
+# starts no workflow by itself, a workflow_dispatch does. ci green → merged,
+# by automerge or by this job, whichever is first. A conflict in any other file is left alone and reported — that
 # one is for a human.
 #
 # The branch is worked on in a separate worktree, so nothing from it is ever
@@ -82,9 +82,34 @@ while read -r number branch <&3; do
   git -C "$dir" commit --quiet --amend --no-edit
 
   git -C "$dir" push --quiet origin "HEAD:$branch"
-  gh workflow run ci.yml --ref "$branch"
-  echo "#$number ($branch): main merged in, ci dispatched"
   git worktree remove --force "$dir"
+
+  # automerge listens to ci, but GitHub does not document whether a ci run
+  # started with the workflow's own token wakes a workflow_run listener. So
+  # this job waits for that run itself and merges on green: the same gate.
+  since=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+  gh workflow run ci.yml --ref "$branch"
+  run=""
+  for attempt in $(seq 1 20); do
+    run=$(gh run list --workflow ci.yml --branch "$branch" --event workflow_dispatch \
+      --json databaseId,createdAt \
+      --jq "[.[] | select(.createdAt >= \"$since\")][0].databaseId // empty")
+    [ -n "$run" ] && break
+    sleep 6
+  done
+  if [ -z "$run" ]; then
+    echo "::warning::#$number ($branch): main merged in, but the dispatched ci run never showed"
+    status=1
+    continue
+  fi
+  if gh run watch "$run" --exit-status > /dev/null; then
+    gh pr merge "$number" --squash --delete-branch \
+      || echo "#$number already merged (automerge was faster)"
+    echo "#$number ($branch): main merged in, ci green, merged"
+  else
+    echo "::warning::#$number ($branch): main merged in, ci red, left for a human"
+    status=1
+  fi
 done 3<<< "$prs"
 
 exit $status
