@@ -290,8 +290,9 @@ discovery/PROMPT.md       the nightly discovery pass (the intelligence layer)
 - `automerge.yml` — discovery deliveries merge themselves once CI is green.
 - `discovery-sync.yml` — when main moves under an open discovery delivery
   (or it arrives already behind), merges main into it, keeps
-  `autonomy/log.jsonl` a pure append and dispatches ci: GitHub ignores the
-  log's union driver when it judges mergeability (`tools/sync-discovery.sh`).
+  `autonomy/log.jsonl` a pure append, dispatches ci and merges on green:
+  GitHub ignores the log's union driver when it judges mergeability
+  (`tools/sync-discovery.sh`).
 - Publishing: frankbueltge.de pulls `public/` nightly (no deployer here —
   the site's Cloudflare Pages deploy is the single deployer).
 

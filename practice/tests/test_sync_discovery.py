@@ -82,8 +82,10 @@ def test_script_touches_only_conflicting_same_repo_discovery_branches():
 def test_the_sync_reaches_automerge_through_a_ci_dispatch():
     """A push made with the workflow's token starts no workflow; a dispatch does.
     So the script dispatches ci, ci accepts the dispatch with its append-only guard
-    still running, and automerge listens to ci whatever started it."""
-    assert "gh workflow run ci.yml --ref" in SCRIPT.read_text(encoding="utf-8")
+    still running, and the script waits for that run and merges only on green."""
+    script = SCRIPT.read_text(encoding="utf-8")
+    assert "gh workflow run ci.yml --ref" in script
+    assert script.index("gh run watch") < script.index("gh pr merge"), "merge only after ci"
     ci = (WORKFLOWS / "ci.yml").read_text(encoding="utf-8")
     assert "workflow_dispatch:" in ci
     assert "if: github.event_name != 'push'" in ci, "the I3 guard must not skip a dispatched run"
@@ -146,6 +148,7 @@ def test_the_script_end_to_end_against_a_local_origin(tmp_path):
         'case "$1 $2" in\n'
         '  "pr list") echo "115 discovery/2026-11-11" ;;\n'
         '  "pr view") echo CONFLICTING ;;\n'
+        '  "run list") echo 4711 ;;\n'
         "esac\n")
     (bin_dir / "gh").chmod(0o755)
 
@@ -159,5 +162,8 @@ def test_the_script_end_to_end_against_a_local_origin(tmp_path):
     git("fetch", "-q", "origin")
     assert git("show", "origin/discovery/2026-11-11:autonomy/log.jsonl") == BASE + STALL + DISCOVERY
     git("merge-base", "--is-ancestor", "origin/main", "origin/discovery/2026-11-11")
-    assert "workflow run ci.yml --ref discovery/2026-11-11" in calls.read_text()
+    recorded = calls.read_text()
+    assert "workflow run ci.yml --ref discovery/2026-11-11" in recorded
+    assert "run watch 4711 --exit-status" in recorded
+    assert "pr merge 115 --squash --delete-branch" in recorded
     assert git("worktree", "list").count("\n") == 1, "the temporary worktree is removed"
