@@ -1,0 +1,189 @@
+{
+  "catalogues": [
+    {
+      "box": [
+        51.9,
+        52.9,
+        13.2,
+        14.4
+      ],
+      "catalogue": "ISC",
+      "http_status": 204,
+      "rows": 0,
+      "span": [
+        "2026-11-12",
+        "2026-11-13"
+      ]
+    },
+    {
+      "box": [
+        51.9,
+        52.9,
+        13.2,
+        14.4
+      ],
+      "catalogue": "USGS",
+      "http_status": 200,
+      "rows": 0,
+      "span": [
+        "2026-11-12",
+        "2026-11-13"
+      ]
+    }
+  ],
+  "date": "2026-11-13",
+  "day": "2026-11-12",
+  "detector": {
+    "bin_s": 0.25,
+    "lta_s": 60.0,
+    "min_gap_s": 60.0,
+    "sta_s": 1.0,
+    "trigger_off": 1.5,
+    "trigger_on": 5.0,
+    "version": "stalta-v1"
+  },
+  "excerpt_window_s": [
+    30,
+    60
+  ],
+  "max_excerpts_per_station_day": 4,
+  "publisher": {
+    "availability": {
+      "file": null,
+      "http_status": 0,
+      "rows": null
+    },
+    "extent": {
+      "file": null,
+      "http_status": 0,
+      "rows": null
+    },
+    "wfcatalog": {
+      "day": null,
+      "file": null,
+      "http_status": 204
+    }
+  },
+  "reingestion": {
+    "compared_with": "planetary/readings/2026-11-12.json",
+    "events": [],
+    "unverifiable": "extent not read tonight"
+  },
+  "requests": [
+    {
+      "bytes": 10296320,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-11-13T16:12:38+00:00",
+      "sha256": "057ece744c9adfd173d458349f7ab5e190616037b3318ce49ba8fd3aace707df",
+      "url": "https://geofon.gfz.de/fdsnws/dataselect/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-11-12T00:00:00&end=2026-11-13T00:00:00"
+    },
+    {
+      "bytes": 0,
+      "committed": false,
+      "error": "timeout after 4 attempts",
+      "http_status": 0,
+      "retrieved_at": "2026-11-13T16:22:16+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://geofon.gfz.de/fdsnws/availability/1/query?net=GE&sta=RUE&loc=--&cha=HHZ&start=2026-11-12T00:00:00&end=2026-11-13T00:00:00&show=latestupdate&format=text"
+    },
+    {
+      "bytes": 0,
+      "committed": false,
+      "error": "timeout after 4 attempts",
+      "http_status": 0,
+      "retrieved_at": "2026-11-13T16:31:48+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://geofon.gfz.de/fdsnws/availability/1/extent?net=GE&sta=RUE&loc=--&cha=HHZ&show=latestupdate&format=text"
+    },
+    {
+      "bytes": 0,
+      "committed": false,
+      "http_status": 204,
+      "retrieved_at": "2026-11-13T16:31:49+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://geofon.gfz.de/eidaws/wfcatalog/1/query?network=GE&station=RUE&location=--&channel=HHZ&start=2026-11-12&end=2026-11-13&include=sample"
+    },
+    {
+      "bytes": 0,
+      "committed": false,
+      "http_status": 204,
+      "retrieved_at": "2026-11-13T16:31:51+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://www.isc.ac.uk/fdsnws/event/1/query?starttime=2026-11-12&endtime=2026-11-13&minlatitude=51.9&maxlatitude=52.9&minlongitude=13.2&maxlongitude=14.4&format=text"
+    },
+    {
+      "bytes": 327,
+      "committed": false,
+      "http_status": 200,
+      "retrieved_at": "2026-11-13T16:31:51+00:00",
+      "sha256": "773d2f17d76c6001be3f4a09aec323d7d83959c24f081556af836f5d13ec5b68",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-11-12&endtime=2026-11-13&minlatitude=51.9&maxlatitude=52.9&minlongitude=13.2&maxlongitude=14.4"
+    }
+  ],
+  "schema": "planetary-reading-v1",
+  "site": "Rüdersdorf",
+  "station": "GE.RUE..HHZ",
+  "station_day": {
+    "day": "2026-11-12",
+    "doi": "10.14470/TR560404",
+    "excerpts": [
+      {
+        "file": "planetary/snapshots/2026-11-13/GE.RUE.HHZ/20261112T083030.mseed",
+        "onset": "2026-11-12T08:30:30.200000+00:00"
+      },
+      {
+        "file": "planetary/snapshots/2026-11-13/GE.RUE.HHZ/20261112T144726.mseed",
+        "onset": "2026-11-12T14:47:26.950000+00:00"
+      }
+    ],
+    "http_status": 200,
+    "licence": "CC-BY-4.0",
+    "outage": false,
+    "request_sha256": "057ece744c9adfd173d458349f7ab5e190616037b3318ce49ba8fd3aace707df",
+    "samples": 8640762,
+    "station": "GE.RUE..HHZ",
+    "strong": [
+      {
+        "background_rms": 42.7,
+        "duration_s": 13.25,
+        "onset": "2026-11-12T08:30:30.200000+00:00",
+        "peak_ratio": 414.65,
+        "peak_rms": 23681.2
+      },
+      {
+        "background_rms": 53.3,
+        "duration_s": 62.75,
+        "onset": "2026-11-12T14:47:26.950000+00:00",
+        "peak_ratio": 81.91,
+        "peak_rms": 5919.5
+      }
+    ],
+    "top": [
+      {
+        "background_rms": 42.7,
+        "duration_s": 13.25,
+        "onset": "2026-11-12T08:30:30.200000+00:00",
+        "peak_ratio": 414.65,
+        "peak_rms": 23681.2
+      },
+      {
+        "background_rms": 53.3,
+        "duration_s": 62.75,
+        "onset": "2026-11-12T14:47:26.950000+00:00",
+        "peak_ratio": 81.91,
+        "peak_rms": 5919.5
+      },
+      {
+        "background_rms": 47.7,
+        "duration_s": 40.5,
+        "onset": "2026-11-12T16:23:56.450000+00:00",
+        "peak_ratio": 20.21,
+        "peak_rms": 2241.4
+      }
+    ],
+    "traces": 1,
+    "triggers": 54
+  },
+  "strong_ratio": 50.0
+}
