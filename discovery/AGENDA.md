@@ -30,7 +30,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-09 (07:37 UTC), week 4 (ISO week 46):** the week's reading is not yet on main (weeks 1–3 ran at 10:20, 10:35 and 12:54 UTC), so the tally lists 2026-11-09 as missing at pass time only (A1 missing 2026-11-09, weeks due 4 of 4, `closed: false`). A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes, weeks 1–3), B4 for weeks 3–4 not computable until its reading lands, B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). A run any day of ISO week 46 counts; if none has landed by 2026-11-11 a `workflow_dispatch` is asked for in `REQUESTS.md`. The next pass computes B4 for weeks 3–4. The window closes 2026-11-15; at 2026-11-16 the review request. `REQUESTS.md` (2026-10-22) still unanswered.
 - **2026-11-10, week 4 read** (`docs/2026-11-10-the-interval-woche-4.md`): `interval/readings/2026-11-09.json` landed (commit `bd9c933`, 13:26 UTC), so the dispatch deadline of 2026-11-11 is moot. Tally: weeks due 4 of 4, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). First new IPC snapshot in the window (`interval/snapshots/2026-11-09/ipc/`, 42 appended rows: COD, LBN, UGA; no new episode). **B4, weeks 3–4: no violation** — only the four open queries and the IPC pointer changed, each with a new snapshot. **Finding, reported:** AFG 2025-10 FSC·`date`·k=2 went from `closed` (t1 2026-04, gap 6) to `none_in_horizon` — the parked flow 385472 fell from 64.6 to 31.2 M USD with five new child ids while its `versionId` stayed 1 (`updatedAt` moved), so April fell from 69.2 to 35.8 M under the 64.18 M threshold; the same flow sits in the SOM FSC list (SOM's cell stays closed). Second reopened clock in the window, second mechanism; no criterion breached. Next: the pass after 2026-11-15 writes the review request in `REQUESTS.md`; nothing in the instrument changes. `REQUESTS.md` (2026-10-22) still unanswered.
 - **2026-11-11:** nothing due (Wednesday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the review request. `REQUESTS.md` (2026-10-22) still unanswered.
-- **Updated:** 2026-11-11 (pass)
+- **2026-11-13:** nothing due (Friday; no pass ran on 2026-11-12). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
+- **Updated:** 2026-11-13 (pass)
 
 ## Next
 
@@ -206,7 +207,21 @@ RUNNING (any time: RETIRED).*
 
 ### The Provisional Air — how much of what the public was told about its air survives validation
 
-- **Stage:** EXPOSÉ 2026-11-11 (`docs/2026-11-11-kandidat-the-provisional-air.md`): provisional (E2a)
+- **Stage:** AUDIT part 1 done 2026-11-13 (`docs/2026-11-13-the-provisional-air-audit.md`, 18 probes
+  with manifest in `provisionalair/probes/2026-11-13/`, held by `verify.py` `check_snapshots`).
+  **Overwrite answered from one fetch:** the E2a file of one station
+  (`…/blob/e2a-SPO-LU0101A_00005_103.parquet`) has one row per hour (7 591 rows, 7 591 starts) with a
+  per-delivery `ResultTime`; July, September and October each carry a single delivery time early in the
+  following month, so earlier versions are not in the download. The E2a file starts 2026-01-01 while E1a
+  (`…/blob/e1a-…parquet`) already holds 2024–2025 validated: **the provisional side of a validated year
+  is gone from this source** — not half-retroactive here. `dataset` 1 = E2a (container `airquality-p`),
+  2 = E1a (`airquality-p-e1a`), shown by the returned addresses. Files per station × pollutant,
+  year-cumulative, `ETag`/`Last-Modified` per blob, rewritten whole (2 min old at fetch); no 429 in 18
+  requests; **licence not stated** at any endpoint or portal page read. Directive 2008/50/EC is repealed
+  from 2026-12-12 (portal "Legal aspects"); thresholds bind to 2024/2881. **OpenAQ** archive docs: files
+  written 72 h after the day, "may be retroactively patched" — one early version, no documented
+  history; if it carries EEA stations it may hold a pre-redelivery value for past years.
+  Exposé 2026-11-11 (`docs/2026-11-11-kandidat-the-provisional-air.md`): provisional (E2a)
   against validated (E1a) European air-quality values per station × pollutant × day, and the days whose
   side of a daily threshold flips. Neighbours: ETC/ATNI 11/2020 and ETC HE 4/2022 (annual maps from
   provisional data, checked against validated — year and map, not day), the European AQ index (the
@@ -216,12 +231,13 @@ RUNNING (any time: RETIRED).*
   (`luftdaten.umweltbundesamt.de`) does not bar `/api/`; `www.eea.europa.eu` bars `/api` (another host,
   not read). Status calls only, no data, no bytes kept.
 - **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
-- **Next step:** AUDIT, first question: does an E2a re-delivery replace the old version in the download
-  (two fetches of one day, days apart, hashes)? Without overwrite the candidate is half retroactive and
-  its daylight shrinks to intermediate revisions. Also: `dataset` integer → data flow, size of a fixed
-  station set per day, rate, licence, OpenAQ's documented handling of re-deliveries. The request field
-  `email` is never set. Only on a night when no earlier candidate has a step due.
-- **Updated:** 2026-11-11 (pass)
+- **Next step:** AUDIT part 2 (audit doc §6), on a night no earlier candidate has a step due, from
+  2026-11-16: (1) re-fetch the same E2a file once — do the hours 2026-11-13 02:00–07:00 carry a later
+  `ResultTime`, did a value change; (2) OpenAQ public archive: one 2025 day of a Luxembourg station
+  against the same hours in E1a — early or redelivered version, and from which source; (3) UBA control,
+  one hour; (4) licence from the EEA data catalogue. Then the recommendation. The request field `email`
+  is never set.
+- **Updated:** 2026-11-13 (pass)
 
 ## Running instruments — findings
 
@@ -258,7 +274,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-09:** `memoryhole/readings/2026-11-07.json` (commit `0ab8129`) — 20 entries, **0 sampled**, 20 failures (log line of 2026-11-08: 108 requests, 22 institutions), 0 abstentions (no verdicts due). The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-10:** `memoryhole/readings/2026-11-08.json` (commit `7c4b399`) — 21 entries, **1 sampled** (`bmwe`, an HTML page this time, class `unverifiable`), 24 failures (log line of 2026-11-08: 116 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-11:** `memoryhole/readings/2026-11-09.json` (commit `612eb93`) — 21 entries, **1 sampled** (`ec-climate`, an HTML page, class `unverifiable`, `snapshot_unavailable_before`), 23 failures (log line of 2026-11-10: 127 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-11 (pass)
+- **2026-11-13** (no pass ran on 2026-11-12, so two readings): `memoryhole/readings/2026-11-10.json` (commit `cd6e7d2`) — 25 entries, **5 sampled**, all from one institution (`google-sustainability`) and all image assets under one versioned `/js/` path (four `gone`, one `unchanged`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-11.json` (commit `871e8c1`) — 20 entries, **0 sampled**, 20 failures (log line of 2026-11-12: 120 requests, 22 institutions), 0 abstentions. No verdicts due for either. Assets again, one institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-13 (pass)
 
 ## Parked
 

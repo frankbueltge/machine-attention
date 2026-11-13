@@ -2690,6 +2690,7 @@ def check(root: Path) -> list[str]:
     check_snapshots(root, PL_BASE, problems, registry_files, False)
     check_snapshots(root, PL_SNAP, problems, registry_files, False)
     check_snapshots(root, SF_SNAP, problems, registry_files, False)
+    check_snapshots(root, "provisionalair/probes", problems, registry_files, False)
 
     check_retired(root, problems)
 
