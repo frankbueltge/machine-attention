@@ -31,7 +31,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-10, week 4 read** (`docs/2026-11-10-the-interval-woche-4.md`): `interval/readings/2026-11-09.json` landed (commit `bd9c933`, 13:26 UTC), so the dispatch deadline of 2026-11-11 is moot. Tally: weeks due 4 of 4, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). First new IPC snapshot in the window (`interval/snapshots/2026-11-09/ipc/`, 42 appended rows: COD, LBN, UGA; no new episode). **B4, weeks 3–4: no violation** — only the four open queries and the IPC pointer changed, each with a new snapshot. **Finding, reported:** AFG 2025-10 FSC·`date`·k=2 went from `closed` (t1 2026-04, gap 6) to `none_in_horizon` — the parked flow 385472 fell from 64.6 to 31.2 M USD with five new child ids while its `versionId` stayed 1 (`updatedAt` moved), so April fell from 69.2 to 35.8 M under the 64.18 M threshold; the same flow sits in the SOM FSC list (SOM's cell stays closed). Second reopened clock in the window, second mechanism; no criterion breached. Next: the pass after 2026-11-15 writes the review request in `REQUESTS.md`; nothing in the instrument changes. `REQUESTS.md` (2026-10-22) still unanswered.
 - **2026-11-11:** nothing due (Wednesday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the review request. `REQUESTS.md` (2026-10-22) still unanswered.
 - **2026-11-13:** nothing due (Friday; no pass ran on 2026-11-12). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
-- **Updated:** 2026-11-13 (pass)
+- **2026-11-14:** nothing due (Saturday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes tomorrow, 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
+- **Updated:** 2026-11-14 (pass)
 
 ## Next
 
@@ -207,7 +208,19 @@ RUNNING (any time: RETIRED).*
 
 ### The Provisional Air — how much of what the public was told about its air survives validation
 
-- **Stage:** AUDIT part 1 done 2026-11-13 (`docs/2026-11-13-the-provisional-air-audit.md`, 18 probes
+- **Stage:** AUDIT part 2, points 2–4 done 2026-11-14 (`docs/2026-11-14-the-provisional-air-audit-teil-2.md`,
+  12 files with manifest in `provisionalair/probes/2026-11-14/`): **licence CC BY 4.0** (EEA catalogue
+  records `fe809728-…` download service, holder EEA, and `0eed9a67-…` E1a/E2a, holder European Commission;
+  catalogue `robots.txt` `Allow: /`). **UBA control:** Berlin Wedding PM10 2026-11-13 00–11 h, 12 of 12 hours
+  equal to E2a rounded to whole µg/m³ under the same hour labels — a coarser copy of the provisional side,
+  not a "before". **The German E2a file overwrites day by day:** every hour of a day carries the `ResultTime`
+  of the next day's 23:45 delivery; January–March all redelivered on 2026-05-08; future hours of the day stand
+  as −999 / `Validity` −1; timestamps read as UTC+1 (inferred from `ResultTime` after `Last-Modified`).
+  **OpenAQ archive:** keyless, but location ids carry no names or station codes; the mapping needs the keyed
+  interface (outside the charter) — not closable, walking the tree deliberately not done; by inference OpenAQ
+  can hold at most a version from the first three days. **Provisional recommendation: GO for a narrow V0**,
+  final after point 1.
+- **Earlier:** AUDIT part 1 done 2026-11-13 (`docs/2026-11-13-the-provisional-air-audit.md`, 18 probes
   with manifest in `provisionalair/probes/2026-11-13/`, held by `verify.py` `check_snapshots`).
   **Overwrite answered from one fetch:** the E2a file of one station
   (`…/blob/e2a-SPO-LU0101A_00005_103.parquet`) has one row per hour (7 591 rows, 7 591 starts) with a
@@ -231,13 +244,12 @@ RUNNING (any time: RETIRED).*
   (`luftdaten.umweltbundesamt.de`) does not bar `/api/`; `www.eea.europa.eu` bars `/api` (another host,
   not read). Status calls only, no data, no bytes kept.
 - **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
-- **Next step:** AUDIT part 2 (audit doc §6), on a night no earlier candidate has a step due, from
-  2026-11-16: (1) re-fetch the same E2a file once — do the hours 2026-11-13 02:00–07:00 carry a later
-  `ResultTime`, did a value change; (2) OpenAQ public archive: one 2025 day of a Luxembourg station
-  against the same hours in E1a — early or redelivered version, and from which source; (3) UBA control,
-  one hour; (4) licence from the EEA data catalogue. Then the recommendation. The request field `email`
-  is never set.
-- **Updated:** 2026-11-13 (pass)
+- **Next step:** AUDIT part 2, point 1, on a night from 2026-11-16 when no earlier candidate has a step due
+  (the Interval review request comes first on 2026-11-16): re-fetch once the Luxembourg E2a file of
+  2026-11-13 and once the Berlin file of 2026-11-14 — did the fresh hours get a later `ResultTime`, did a
+  **value** change. Two requests, comparison from the preserved files only. Then the final recommendation
+  and the GO request in `REQUESTS.md`. The request field `email` is never set.
+- **Updated:** 2026-11-14 (pass)
 
 ## Running instruments — findings
 
@@ -275,7 +287,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-10:** `memoryhole/readings/2026-11-08.json` (commit `7c4b399`) — 21 entries, **1 sampled** (`bmwe`, an HTML page this time, class `unverifiable`), 24 failures (log line of 2026-11-08: 116 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-11:** `memoryhole/readings/2026-11-09.json` (commit `612eb93`) — 21 entries, **1 sampled** (`ec-climate`, an HTML page, class `unverifiable`, `snapshot_unavailable_before`), 23 failures (log line of 2026-11-10: 127 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-13** (no pass ran on 2026-11-12, so two readings): `memoryhole/readings/2026-11-10.json` (commit `cd6e7d2`) — 25 entries, **5 sampled**, all from one institution (`google-sustainability`) and all image assets under one versioned `/js/` path (four `gone`, one `unchanged`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-11.json` (commit `871e8c1`) — 20 entries, **0 sampled**, 20 failures (log line of 2026-11-12: 120 requests, 22 institutions), 0 abstentions. No verdicts due for either. Assets again, one institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-13 (pass)
+- **2026-11-14:** `memoryhole/readings/2026-11-12.json` (commit `db0d690`) — 20 entries, **0 sampled**, 23 failures, 0 abstentions (no verdicts due). The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-14 (pass)
 
 ## Parked
 
