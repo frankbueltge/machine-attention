@@ -1,0 +1,331 @@
+{
+ "date": "2026-11-14",
+ "document": "docs/2026-11-14-the-provisional-air-audit-teil-2.md",
+ "entries": [
+  {
+   "bytes": 23,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/plain",
+   "file": "provisionalair/probes/2026-11-14/catalogue/robots.txt",
+   "full_sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+   "http_status": 200,
+   "kept_bytes": 23,
+   "method": "GET",
+   "name": "robots.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "23",
+    "Content-Type": "text/plain",
+    "Date": "Sat, 14 Nov 2026 07:40:46 GMT",
+    "ETag": "\"17-65fd7bfc2ff3e\"",
+    "Last-Modified": "Mon, 09 Nov 2026 13:15:00 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:46+00:00",
+   "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+   "source": "catalogue",
+   "truncated": false,
+   "url": "https://sdi.eea.europa.eu/robots.txt"
+  },
+  {
+   "bytes": 0,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": null,
+   "file": "provisionalair/probes/2026-11-14/catalogue/search-e1a-e2a.json",
+   "full_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "http_status": 400,
+   "kept_bytes": 0,
+   "method": "POST",
+   "name": "search-e1a-e2a.json",
+   "request_body": {
+    "_source": [
+     "resourceTitleObject.default",
+     "uuid",
+     "licenseObject",
+     "MD_LegalConstraintsUseLimitationObject"
+    ],
+    "query": {
+     "query_string": {
+      "query": "\"up-to-date\" air quality e-reporting E2a"
+     }
+    },
+    "size": 8
+   },
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Content-Length": "0",
+    "Date": "Sat, 14 Nov 2026 07:40:47 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:46+00:00",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source": "catalogue",
+   "truncated": false,
+   "url": "https://sdi.eea.europa.eu/catalogue/srv/api/search/records/_search"
+  },
+  {
+   "bytes": 30781,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/xml",
+   "file": "provisionalair/probes/2026-11-14/catalogue/record-fe809728-9cec-41c0-a9be-3a8f04600974.xml",
+   "full_sha256": "e3da479b893398156a6943a88a349a1914786ea225fdbd473ee428bd851beec7",
+   "http_status": 200,
+   "kept_bytes": 30781,
+   "method": "GET",
+   "name": "record-fe809728-9cec-41c0-a9be-3a8f04600974.xml",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "application/xml",
+    "Date": "Sat, 14 Nov 2026 07:40:47 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:47+00:00",
+   "sha256": "e3da479b893398156a6943a88a349a1914786ea225fdbd473ee428bd851beec7",
+   "source": "catalogue",
+   "truncated": false,
+   "url": "https://sdi.eea.europa.eu/catalogue/srv/api/records/fe809728-9cec-41c0-a9be-3a8f04600974/formatters/xml"
+  },
+  {
+   "bytes": 38726,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/xml",
+   "file": "provisionalair/probes/2026-11-14/catalogue/record-0eed9a67-0018-4a9b-9925-f4a10d333428.xml",
+   "full_sha256": "ec3f6240a5a90f044ca91b1deffa6d05eb5b7d136b76d1b24d5b39b3a4299b29",
+   "http_status": 200,
+   "kept_bytes": 38726,
+   "method": "GET",
+   "name": "record-0eed9a67-0018-4a9b-9925-f4a10d333428.xml",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "application/xml",
+    "Date": "Sat, 14 Nov 2026 07:40:48 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:48+00:00",
+   "sha256": "ec3f6240a5a90f044ca91b1deffa6d05eb5b7d136b76d1b24d5b39b3a4299b29",
+   "source": "catalogue",
+   "truncated": false,
+   "url": "https://sdi.eea.europa.eu/catalogue/srv/api/records/0eed9a67-0018-4a9b-9925-f4a10d333428/formatters/xml"
+  },
+  {
+   "bytes": 2141,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/plain",
+   "file": "provisionalair/probes/2026-11-14/uba/robots.txt",
+   "full_sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+   "http_status": 200,
+   "kept_bytes": 2141,
+   "method": "GET",
+   "name": "robots.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "max-age=31536000",
+    "Content-Length": "2141",
+    "Content-Type": "text/plain",
+    "Date": "Sat, 14 Nov 2026 07:40:48 GMT",
+    "Last-Modified": "Mon, 02 Nov 2026 10:44:15 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:48+00:00",
+   "sha256": "8e8cb58d810473a52cce903be5ffb73d948eef981bbd101cffbf8dc2c02fcf4e",
+   "source": "uba",
+   "truncated": false,
+   "url": "https://luftdaten.umweltbundesamt.de/robots.txt"
+  },
+  {
+   "bytes": 101899,
+   "client": "command-line client, one attempt after an earlier attempt timed out at 30 s with no bytes; response headers not kept; answer took 57 s",
+   "content_type": "application/json",
+   "file": "provisionalair/probes/2026-11-14/uba/stations-airquality.json",
+   "full_sha256": "4533d104437bb22ebd3bb6533cfe67c6b0e65758a04d593336d8880a870857bc",
+   "http_status": 200,
+   "kept_bytes": 101899,
+   "method": "GET",
+   "name": "stations-airquality.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1"
+   },
+   "response_headers": {},
+   "retrieved_at": "2026-11-14T07:40:15+00:00",
+   "sha256": "4533d104437bb22ebd3bb6533cfe67c6b0e65758a04d593336d8880a870857bc",
+   "source": "uba",
+   "truncated": false,
+   "url": "https://luftdaten.umweltbundesamt.de/api/air-data/v3/stations/json?use=airquality&lang=en"
+  },
+  {
+   "bytes": 1059,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/json",
+   "file": "provisionalair/probes/2026-11-14/uba/measures-121-pm10-2026-11-13.json",
+   "full_sha256": "4d7030eb0d83d47229bea87f08a3428ccd30d2fd1f03459e636b70b3b1348e6b",
+   "http_status": 200,
+   "kept_bytes": 1059,
+   "method": "GET",
+   "name": "measures-121-pm10-2026-11-13.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "max-age=3540, public",
+    "Content-Length": "1059",
+    "Content-Type": "application/json",
+    "Date": "Sat, 14 Nov 2026 07:40:49 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:49+00:00",
+   "sha256": "4d7030eb0d83d47229bea87f08a3428ccd30d2fd1f03459e636b70b3b1348e6b",
+   "source": "uba",
+   "truncated": false,
+   "url": "https://luftdaten.umweltbundesamt.de/api/air-data/v3/measures/json?date_from=2026-11-13&time_from=1&date_to=2026-11-13&time_to=12&station=121&component=1&scope=2"
+  },
+  {
+   "bytes": 37754,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/csv",
+   "file": "provisionalair/probes/2026-11-14/eea/urls-DE-PM10-ds1.csv",
+   "full_sha256": "21435811d6542443669802aec777ac8d4e8029b4f39446efa0ffe0b2e1f9e8dd",
+   "http_status": 200,
+   "kept_bytes": 37754,
+   "method": "POST",
+   "name": "urls-DE-PM10-ds1.csv",
+   "request_body": {
+    "aggregationType": "hour",
+    "cities": [],
+    "countries": [
+     "DE"
+    ],
+    "dataset": 1,
+    "dateTimeEnd": "2026-11-14T00:00:00Z",
+    "dateTimeStart": "2026-11-13T00:00:00Z",
+    "pollutants": [
+     "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"
+    ],
+    "source": "API"
+   },
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "37754",
+    "Content-Type": "text/csv",
+    "Date": "Sat, 14 Nov 2026 07:40:50 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:50+00:00",
+   "sha256": "21435811d6542443669802aec777ac8d4e8029b4f39446efa0ffe0b2e1f9e8dd",
+   "source": "eea",
+   "truncated": false,
+   "url": "https://eeadmz1-downloads-api-appservice.azurewebsites.net/ParquetFile/urls"
+  },
+  {
+   "bytes": 221441,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/octet-stream",
+   "file": "provisionalair/probes/2026-11-14/blob/e2a-SPO.DE_DEBE010_PM1_dataGroup1.parquet",
+   "full_sha256": "3ff0b3b1845608f618997e3e9f3d1819e2ddd986bbe5dab4f6cf7176782d1e6d",
+   "http_status": 200,
+   "kept_bytes": 221441,
+   "method": "GET",
+   "name": "e2a-SPO.DE_DEBE010_PM1_dataGroup1.parquet",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "221441",
+    "Content-Type": "application/octet-stream",
+    "Date": "Sat, 14 Nov 2026 07:40:50 GMT",
+    "ETag": "0x8DF421D4E7603AC",
+    "Last-Modified": "Sat, 14 Nov 2026 07:02:54 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:51+00:00",
+   "sha256": "3ff0b3b1845608f618997e3e9f3d1819e2ddd986bbe5dab4f6cf7176782d1e6d",
+   "source": "blob",
+   "truncated": false,
+   "url": "https://eeadmz1batchservice02.blob.core.windows.net/airquality-p/DE/SPO.DE_DEBE010_PM1_dataGroup1.parquet"
+  },
+  {
+   "bytes": 332,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/xml",
+   "file": "provisionalair/probes/2026-11-14/openaq/list-root.xml",
+   "full_sha256": "8db528aa5d033ca80856d79ebcadf7613af0e76efd360a3ee152dc65dc9ec370",
+   "http_status": 200,
+   "kept_bytes": 332,
+   "method": "GET",
+   "name": "list-root.xml",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "application/xml",
+    "Date": "Sat, 14 Nov 2026 07:40:53 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:51+00:00",
+   "sha256": "8db528aa5d033ca80856d79ebcadf7613af0e76efd360a3ee152dc65dc9ec370",
+   "source": "openaq",
+   "truncated": false,
+   "url": "https://openaq-data-archive.s3.amazonaws.com/?list-type=2&delimiter=/"
+  },
+  {
+   "bytes": 548,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/xml",
+   "file": "provisionalair/probes/2026-11-14/openaq/list-records.xml",
+   "full_sha256": "d77266907ef5a8cedc56cdf34478f329f33300172bf568fea6d06e3ae4c11736",
+   "http_status": 200,
+   "kept_bytes": 548,
+   "method": "GET",
+   "name": "list-records.xml",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "application/xml",
+    "Date": "Sat, 14 Nov 2026 07:40:53 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:52+00:00",
+   "sha256": "d77266907ef5a8cedc56cdf34478f329f33300172bf568fea6d06e3ae4c11736",
+   "source": "openaq",
+   "truncated": false,
+   "url": "https://openaq-data-archive.s3.amazonaws.com/?list-type=2&delimiter=/&prefix=records/"
+  },
+  {
+   "bytes": 82881,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/xml",
+   "file": "provisionalair/probes/2026-11-14/openaq/list-csvgz-page1.xml",
+   "full_sha256": "beddff02ad80484f279f471c3b0f366762b8a3b395966fcd36fb9c7c876ddd20",
+   "http_status": 200,
+   "kept_bytes": 82881,
+   "method": "GET",
+   "name": "list-csvgz-page1.xml",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "application/xml",
+    "Date": "Sat, 14 Nov 2026 07:40:53 GMT"
+   },
+   "retrieved_at": "2026-11-14T07:40:52+00:00",
+   "sha256": "beddff02ad80484f279f471c3b0f366762b8a3b395966fcd36fb9c7c876ddd20",
+   "source": "openaq",
+   "truncated": false,
+   "url": "https://openaq-data-archive.s3.amazonaws.com/?list-type=2&delimiter=/&prefix=records/csv.gz/"
+  }
+ ],
+ "note": "Before these probes, unpreserved reachability checks were sent (status codes only or listings read and discarded): five status checks, two OpenAQ bucket listings, one catalogue search (POST, 200, read: it named the two records kept here), two UBA robots reads, one timed-out stations request. All disclosed in the document."
+}
