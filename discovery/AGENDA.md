@@ -32,7 +32,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-11:** nothing due (Wednesday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the review request. `REQUESTS.md` (2026-10-22) still unanswered.
 - **2026-11-13:** nothing due (Friday; no pass ran on 2026-11-12). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
 - **2026-11-14:** nothing due (Saturday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes tomorrow, 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
-- **Updated:** 2026-11-14 (pass)
+- **2026-11-15:** nothing due (Sunday, last day of the window). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). No reading can land before the window closes tonight (the workflow runs Mondays). The pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`; `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow from 2026-11-16.
+- **Updated:** 2026-11-15 (pass)
 
 ## Next
 
@@ -244,12 +245,13 @@ RUNNING (any time: RETIRED).*
   (`luftdaten.umweltbundesamt.de`) does not bar `/api/`; `www.eea.europa.eu` bars `/api` (another host,
   not read). Status calls only, no data, no bytes kept.
 - **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
-- **Next step:** AUDIT part 2, point 1, on a night from 2026-11-16 when no earlier candidate has a step due
+- **Point 1 prepared 2026-11-15, no fetch** (`docs/2026-11-15-the-provisional-air-punkt-1-regel.md`): the before-rows of both series taken from the preserved bytes into `provisionalair/point1/2026-11-15-vorher.json` (LU0101A 32 hours 11-12 00:00–11-13 07:00; DEBE010 72 hours 11-12 00:00–11-14 23:00, 17 of them −999), rule `compare-v1` (per hour: `missing_after`/`filled`/`withdrawn`/`changed`/`flag_changed`/`redelivered`/`same`, exact decimals, no threshold) and the reading table fixed before the fetch. **Seen in the bytes:** the Luxembourg delivery of 11-13 08:25:07 rewrote exactly the preceding 24 hours — read as "each delivery replaces the last 24 hours" (inferred, one file), so a Luxembourg hour may be overwritten many times on its first day; the fetch can see only the last version.
+- **Next step (unchanged in substance):** AUDIT part 2, point 1, on a night from 2026-11-16 when no earlier candidate has a step due
   (the Interval review request comes first on 2026-11-16): re-fetch once the Luxembourg E2a file of
   2026-11-13 and once the Berlin file of 2026-11-14 — did the fresh hours get a later `ResultTime`, did a
   **value** change. Two requests, comparison from the preserved files only. Then the final recommendation
   and the GO request in `REQUESTS.md`. The request field `email` is never set.
-- **Updated:** 2026-11-14 (pass)
+- **Updated:** 2026-11-15 (pass)
 
 ## Running instruments — findings
 
@@ -288,7 +290,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-11:** `memoryhole/readings/2026-11-09.json` (commit `612eb93`) — 21 entries, **1 sampled** (`ec-climate`, an HTML page, class `unverifiable`, `snapshot_unavailable_before`), 23 failures (log line of 2026-11-10: 127 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-13** (no pass ran on 2026-11-12, so two readings): `memoryhole/readings/2026-11-10.json` (commit `cd6e7d2`) — 25 entries, **5 sampled**, all from one institution (`google-sustainability`) and all image assets under one versioned `/js/` path (four `gone`, one `unchanged`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-11.json` (commit `871e8c1`) — 20 entries, **0 sampled**, 20 failures (log line of 2026-11-12: 120 requests, 22 institutions), 0 abstentions. No verdicts due for either. Assets again, one institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-14:** `memoryhole/readings/2026-11-12.json` (commit `db0d690`) — 20 entries, **0 sampled**, 23 failures, 0 abstentions (no verdicts due). The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-14 (pass)
+- **2026-11-15:** `memoryhole/readings/2026-11-13.json` (commit `5b24814`) — 21 entries, **1 sampled** (`vw`, an HTML page, class `unverifiable`, `gate_before_not_prose`), 20 failures (log line of 2026-11-14: 116 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-15 (pass)
 
 ## Parked
 

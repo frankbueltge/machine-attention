@@ -1,0 +1,876 @@
+{
+ "date": "2026-11-15",
+ "document": "docs/2026-11-15-the-provisional-air-punkt-1-regel.md",
+ "rule": "compare-v1",
+ "fetch": "none tonight; rows read from preserved bytes only",
+ "files": [
+  {
+   "series": "LU0101A PM10",
+   "source": "provisionalair/probes/2026-11-13/blob/e2a-SPO-LU0101A_00005_103.parquet",
+   "sha256": "efc15b4d7f3cc800751fbbcd055df409ae08417dcb3dce305482f991a077bfa9",
+   "rows_in_file": 7591,
+   "window": [
+    "2026-11-12 00:00:00",
+    "2026-11-13 07:00:00"
+   ],
+   "rows": [
+    {
+     "start": "2026-11-12 00:00:00",
+     "value": "9.7",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-12 23:25:07",
+     "observation_log": "1514aae5-bd07-4610-ad51-30b5ee0cab81"
+    },
+    {
+     "start": "2026-11-12 01:00:00",
+     "value": "9.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-12 23:25:07",
+     "observation_log": "1514aae5-bd07-4610-ad51-30b5ee0cab81"
+    },
+    {
+     "start": "2026-11-12 02:00:00",
+     "value": "10.1",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-12 23:25:07",
+     "observation_log": "1514aae5-bd07-4610-ad51-30b5ee0cab81"
+    },
+    {
+     "start": "2026-11-12 03:00:00",
+     "value": "9.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-12 23:25:07",
+     "observation_log": "1514aae5-bd07-4610-ad51-30b5ee0cab81"
+    },
+    {
+     "start": "2026-11-12 04:00:00",
+     "value": "10.5",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-12 23:25:07",
+     "observation_log": "1514aae5-bd07-4610-ad51-30b5ee0cab81"
+    },
+    {
+     "start": "2026-11-12 05:00:00",
+     "value": "12.7",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 05:25:07",
+     "observation_log": "baff9bb4-6c48-4670-b96e-0b834a8abaa9"
+    },
+    {
+     "start": "2026-11-12 06:00:00",
+     "value": "18.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 06:25:07",
+     "observation_log": "c0d7ca00-bccb-414f-b63c-f71098994d49"
+    },
+    {
+     "start": "2026-11-12 07:00:00",
+     "value": "13.7",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 06:25:07",
+     "observation_log": "c0d7ca00-bccb-414f-b63c-f71098994d49"
+    },
+    {
+     "start": "2026-11-12 08:00:00",
+     "value": "6.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 09:00:00",
+     "value": "5.9",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 10:00:00",
+     "value": "6",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 11:00:00",
+     "value": "9.7",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 12:00:00",
+     "value": "19.8",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 13:00:00",
+     "value": "12.6",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 14:00:00",
+     "value": "11.1",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 15:00:00",
+     "value": "11",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 16:00:00",
+     "value": "7.8",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 17:00:00",
+     "value": "7.2",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 18:00:00",
+     "value": "5.7",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 19:00:00",
+     "value": "6.2",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 20:00:00",
+     "value": "7.9",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 21:00:00",
+     "value": "8.5",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 22:00:00",
+     "value": "10.8",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-12 23:00:00",
+     "value": "12",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 00:00:00",
+     "value": "12.7",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 01:00:00",
+     "value": "13.8",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 02:00:00",
+     "value": "13.6",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 03:00:00",
+     "value": "14.2",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 04:00:00",
+     "value": "13.6",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 05:00:00",
+     "value": "15.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 06:00:00",
+     "value": "17.2",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    },
+    {
+     "start": "2026-11-13 07:00:00",
+     "value": "23.5",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 08:25:07",
+     "observation_log": "e3960ec5-049b-4eb5-a1bf-74a8249612f7"
+    }
+   ],
+   "result_times": {
+    "2026-11-12 23:25:07": 5,
+    "2026-11-13 05:25:07": 1,
+    "2026-11-13 06:25:07": 2,
+    "2026-11-13 08:25:07": 24
+   },
+   "placeholders": 0
+  },
+  {
+   "series": "DEBE010 PM10",
+   "source": "provisionalair/probes/2026-11-14/blob/e2a-SPO.DE_DEBE010_PM1_dataGroup1.parquet",
+   "sha256": "3ff0b3b1845608f618997e3e9f3d1819e2ddd986bbe5dab4f6cf7176782d1e6d",
+   "rows_in_file": 7344,
+   "window": [
+    "2026-11-12 00:00:00",
+    "2026-11-14 23:00:00"
+   ],
+   "rows": [
+    {
+     "start": "2026-11-12 00:00:00",
+     "value": "24.29",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 01:00:00",
+     "value": "27.32",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 02:00:00",
+     "value": "30.29",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 03:00:00",
+     "value": "30.59",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 04:00:00",
+     "value": "30.15",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 05:00:00",
+     "value": "24.55",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 06:00:00",
+     "value": "21.14",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 07:00:00",
+     "value": "18.26",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 08:00:00",
+     "value": "16.74",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 09:00:00",
+     "value": "16.89",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 10:00:00",
+     "value": "14.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 11:00:00",
+     "value": "13.87",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 12:00:00",
+     "value": "15.01",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 13:00:00",
+     "value": "13.92",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 14:00:00",
+     "value": "13.95",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 15:00:00",
+     "value": "13.34",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 16:00:00",
+     "value": "10.46",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 17:00:00",
+     "value": "11.78",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 18:00:00",
+     "value": "13.19",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 19:00:00",
+     "value": "13.07",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 20:00:00",
+     "value": "13.27",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 21:00:00",
+     "value": "13.1",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 22:00:00",
+     "value": "13.55",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-12 23:00:00",
+     "value": "13.56",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-13 23:45:40",
+     "observation_log": "59fd0327-8358-4bf7-bb86-71e609c3c062"
+    },
+    {
+     "start": "2026-11-13 00:00:00",
+     "value": "12.47",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 01:00:00",
+     "value": "10.54",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 02:00:00",
+     "value": "9.25",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 03:00:00",
+     "value": "7.73",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 04:00:00",
+     "value": "6.78",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 05:00:00",
+     "value": "5.5",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 06:00:00",
+     "value": "5.23",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 07:00:00",
+     "value": "5.66",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 08:00:00",
+     "value": "6.57",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 09:00:00",
+     "value": "8.09",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 10:00:00",
+     "value": "8.34",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 11:00:00",
+     "value": "9.56",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 12:00:00",
+     "value": "10.33",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 13:00:00",
+     "value": "9.82",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 14:00:00",
+     "value": "10.22",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 15:00:00",
+     "value": "9.04",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 16:00:00",
+     "value": "8.93",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 17:00:00",
+     "value": "8.44",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 18:00:00",
+     "value": "7.38",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 19:00:00",
+     "value": "7.3",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 20:00:00",
+     "value": "7.39",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 21:00:00",
+     "value": "6.87",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 22:00:00",
+     "value": "6.44",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-13 23:00:00",
+     "value": "6.4",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 00:00:00",
+     "value": "6.56",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 01:00:00",
+     "value": "6.72",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 02:00:00",
+     "value": "6.68",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 03:00:00",
+     "value": "6.78",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 04:00:00",
+     "value": "6.73",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 05:00:00",
+     "value": "6.83",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 06:00:00",
+     "value": "7.2",
+     "validity": 1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 07:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 08:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 09:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 10:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 11:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 12:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 13:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 14:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 15:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 16:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 17:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 18:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 19:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 20:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 21:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 22:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    },
+    {
+     "start": "2026-11-14 23:00:00",
+     "value": "-999",
+     "validity": -1,
+     "verification": 3,
+     "result_time": "2026-11-14 07:45:45",
+     "observation_log": "cd590cf3-4a03-4290-84f6-3e6a5744f0e4"
+    }
+   ],
+   "result_times": {
+    "2026-11-13 23:45:40": 24,
+    "2026-11-14 07:45:45": 48
+   },
+   "placeholders": 17
+  }
+ ]
+}
