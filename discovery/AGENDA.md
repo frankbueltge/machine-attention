@@ -32,7 +32,9 @@ RUNNING (any time: RETIRED).*
 - **2026-11-11:** nothing due (Wednesday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change, B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the review request. `REQUESTS.md` (2026-10-22) still unanswered.
 - **2026-11-13:** nothing due (Friday; no pass ran on 2026-11-12). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
 - **2026-11-14:** nothing due (Saturday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes tomorrow, 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
-- **Updated:** 2026-11-14 (pass)
+- **2026-11-16 — window closed, review requested, drivers entered** (`docs/2026-11-16-the-interval-fenster-abschluss.md`): tally `closed: true`, weeks 4 of 4, A1 no missing week, A2 0 failures, A3 0 × 429, A4 green, A5 0, B1 0 moves, B2 no change (8 episodes all four weeks), B3/B4 no breach (B4 checked weeks 1–2, 2–3, 3–4), B6 FSC·date·k=2 43/77 vs 3/7 — one cell moved since the addendum (total·firstReportedDate·k=2 36/77, was 35/77; not traced), C counts as missed by the decision of 2026-10-29. Review request in `REQUESTS.md` (2026-11-16). `REQUESTS.md` (2026-10-22) unanswered, so the driver entries were written by `drivers-grfc-v1`, unchanged, from the file preserved 2026-10-22: 7 of 8 (SOM 2026-01 `unassigned`), `interval/register.json` recomputed — only the seven `driver` fields changed. **Next step:** none on the instrument until the review; the weekly workflow keeps reading.
+- **Stage now:** E-EXPERIMENT closed, **review requested 2026-11-16 (maintainer's)**.
+- **Updated:** 2026-11-16 (pass)
 
 ## Next
 
@@ -249,7 +251,8 @@ RUNNING (any time: RETIRED).*
   2026-11-13 and once the Berlin file of 2026-11-14 — did the fresh hours get a later `ResultTime`, did a
   **value** change. Two requests, comparison from the preserved files only. Then the final recommendation
   and the GO request in `REQUESTS.md`. The request field `email` is never set.
-- **Updated:** 2026-11-14 (pass)
+- **2026-11-16:** held; tonight's step went to closing The Interval's window. Point 1 is the next pass's step. No fetch.
+- **Updated:** 2026-11-16 (pass)
 
 ## Running instruments — findings
 
@@ -288,7 +291,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-11:** `memoryhole/readings/2026-11-09.json` (commit `612eb93`) — 21 entries, **1 sampled** (`ec-climate`, an HTML page, class `unverifiable`, `snapshot_unavailable_before`), 23 failures (log line of 2026-11-10: 127 requests, 22 institutions), 0 abstentions (no verdicts due). One institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-13** (no pass ran on 2026-11-12, so two readings): `memoryhole/readings/2026-11-10.json` (commit `cd6e7d2`) — 25 entries, **5 sampled**, all from one institution (`google-sustainability`) and all image assets under one versioned `/js/` path (four `gone`, one `unchanged`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-11.json` (commit `871e8c1`) — 20 entries, **0 sampled**, 20 failures (log line of 2026-11-12: 120 requests, 22 institutions), 0 abstentions. No verdicts due for either. Assets again, one institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-14:** `memoryhole/readings/2026-11-12.json` (commit `db0d690`) — 20 entries, **0 sampled**, 23 failures, 0 abstentions (no verdicts due). The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-14 (pass)
+- **2026-11-16** (no pass ran on 2026-11-15, so two readings): `memoryhole/readings/2026-11-13.json` (commit `5b24814`) — 21 entries, **1 sampled** (`vw`, an HTML page, `unverifiable`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-14.json` (commit `65f989c`) — 21 entries, **1 sampled** (`bmwe`, an HTML page, `unverifiable`), 20 failures, 0 abstentions. No verdicts due. One institution a night again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-16 (pass)
 
 ## Parked
 
