@@ -174,7 +174,7 @@
               "axis": "date",
               "baseline_usd": 32091886.0,
               "gap_months": null,
-              "half_month": "2026-03",
+              "half_month": "2026-01",
               "k": 2,
               "open_months": null,
               "status": "none_in_horizon",
@@ -184,7 +184,7 @@
               "axis": "date",
               "baseline_usd": 32091886.0,
               "gap_months": null,
-              "half_month": "2026-03",
+              "half_month": "2026-01",
               "k": 3,
               "open_months": null,
               "status": "none_in_horizon",
@@ -214,12 +214,12 @@
           "flows": 353,
           "flows_counted": 283,
           "pages": [
-            "interval/snapshots/2026-11-09/fts/AFG/fsc-2024_2025_2026-p001.json",
-            "interval/snapshots/2026-11-09/fts/AFG/fsc-2024_2025_2026-p002.json"
+            "interval/snapshots/2026-11-16/fts/AFG/fsc-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-11-16/fts/AFG/fsc-2024_2025_2026-p002.json"
           ],
           "pages_sha256": [
-            "20b5663488dec7a25b57a0c134b44e527772e6fe099f8a8bfff60c580ba57189",
-            "692aa07ac2548c5497779bc14c07366ee0796a00f415a56b9a23a282392aa912"
+            "f23de56ce67819aa8dd2a465eb44efed3726d1cd6eb52c61e81ada754eba2c3b",
+            "488079a4425cc5e16cf69f068906ce7430951844a74cce6ab0f239619c4efea5"
           ],
           "status": "read"
         },
@@ -249,7 +249,7 @@
             },
             {
               "axis": "firstReportedDate",
-              "baseline_usd": 124895373.0,
+              "baseline_usd": 124611926.5,
               "gap_months": 0,
               "half_month": "2026-04",
               "k": 2,
@@ -259,7 +259,7 @@
             },
             {
               "axis": "firstReportedDate",
-              "baseline_usd": 124895373.0,
+              "baseline_usd": 124611926.5,
               "gap_months": null,
               "half_month": "2026-04",
               "k": 3,
@@ -268,43 +268,43 @@
               "t1": null
             }
           ],
-          "flows": 3020,
-          "flows_counted": 2283,
+          "flows": 3028,
+          "flows_counted": 2286,
           "pages": [
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p001.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p002.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p003.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p004.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p005.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p006.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p007.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p008.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p009.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p010.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p011.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p012.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p013.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p014.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p015.json",
-            "interval/snapshots/2026-11-09/fts/AFG/total-2024_2025_2026-p016.json"
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p001.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p002.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p003.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p004.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p005.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p006.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p007.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p008.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p009.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p010.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p011.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p012.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p013.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p014.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p015.json",
+            "interval/snapshots/2026-11-16/fts/AFG/total-2024_2025_2026-p016.json"
           ],
           "pages_sha256": [
-            "3f181448bb0f0ce8790fffc5fec87e3e788e931cb4824eeb92ee68b095d9b9e1",
-            "cb8dcf61331cb75cbf586f8c7f9c12fcbf7f67832885e13fcaebd0b0c966d899",
-            "c91cba3973a9b505aee90af835e9c3ed7d7b13aaf33c9ec3608bc640c84d0b2b",
-            "355392e20d5b39ba4a8268c4ddf46a4fe4b8d077de72c318f24f5f88b9e7415a",
-            "2bd1644265fbec5676884382388dffcc61ef8a974217115fab477fe904ba3397",
-            "f6094b074338643d42161b972848e62a55a34b18854389cfe799c1885915bfc0",
-            "af236edf0579d6ddf830a4d7cef22be150e9fbe50817bd7498dc72b10a36a5e8",
-            "8a49f00d27b2aa5f7685bccad3da335dfa4e864bba66159cfdcfe983c2aa3de6",
-            "b7bae2c9d95fbb6f86d8cfbc923b016117bb73fbded41a875d455a8f37f029a0",
-            "7a2b6bbfbc579a9163c9f0927c0eb00b037fa6688d1d05ff87ce903413e613e0",
-            "cc3a58259e8eae12868a21ac93681b5455f5b98bfab21b85e06179f58a93f201",
-            "afbc8fb53a0a35642766cd02929b2ab154ffbc3262f814d5500ebc285991b87b",
-            "85e0e45c79ef7e6f04cfa7ab8098978c95479d222be19a2926dc4c70e8a9528f",
-            "151508d092f613e0309266b0fe591143b556cf790f2acb5f5c23cff71fa8e9f3",
-            "cc643b5f3e72b4fe64263424b64c8ed4e30775978df4b93ec7d2820733e04ba2",
-            "3b4f135cdca00d4946213077465302a85f735ab23b7a39538ee35b8aa49ba33d"
+            "b85415e6bc0499a066a4d066525959ce4789077df46e40ccdcdfc2b1d82c96ea",
+            "b35858a17ea7e53ad1a00ea0fbf9c4d6968632fd84020b9ffc9eb3b0a6e7aa27",
+            "1fc4f7ccafe297cfd15dba3177007d03920756cc3400b0ed0e2b78823a1fd8b8",
+            "45aea7fed4893ab33c1dae7570588b421d7e6f9e79a45cde7afd7c7d20713c39",
+            "9d6fbbaccca69fc54e7288237ee479bd594b316c95da9d31d791e83feb107c99",
+            "cd0aaff8aec2307399de69c9804badd01b7c00054b6a605a2197c9a9244ec311",
+            "0436df8c576f440f06b16ad49f4b5eb7208a5d5258d05864cb4fdbd6b238ee93",
+            "be25794cf58f9947f78a83fc5e908a21e1fafb159ec5f73bc2b578630bb31c18",
+            "4f0456dd1cfde912a6d10fd00bc6f9212fe46f79eb4aeb59504a710c195b6dd0",
+            "0c8cb1959cd0bb3eea908049d8f6def1a323030d36cb41bb8ccd6417c4473017",
+            "9fdb71f26127551faa0297f36d875e7f8ae7835e61b20670d67cc2b49871daf9",
+            "6446e9306aeec7b13d46c652bc74bbc6aea785bc927faccfaa0dd53e8fe0afdd",
+            "c25dcd2194038fc81fe098473add054952d0ecb513a7709dde5e14f61cc48ff9",
+            "c5ac83a0bf0f50056aa66df1edb524da964094d39f7973d208ce2b98a26dc326",
+            "48e945827c2f71569161781ebcec280beb283e4adfb3d5ee2e58de51794d64f3",
+            "d356777c8196c42a892b4706f10462b33eafb05cdc8fdbe74cd7de079879ac84"
           ],
           "status": "read"
         }
@@ -1006,12 +1006,12 @@
           "flows": 282,
           "flows_counted": 188,
           "pages": [
-            "interval/snapshots/2026-11-09/fts/SOM/fsc-2025_2026-p001.json",
-            "interval/snapshots/2026-11-09/fts/SOM/fsc-2025_2026-p002.json"
+            "interval/snapshots/2026-11-16/fts/SOM/fsc-2025_2026-p001.json",
+            "interval/snapshots/2026-11-16/fts/SOM/fsc-2025_2026-p002.json"
           ],
           "pages_sha256": [
-            "1e1cb191e299aa8387626d86aeba70209d7d3fd6fc46e30b65d1857f099b7cbb",
-            "80a4dcd2d4bd1ecbf4fba5cfda506cb86e982cf12a95d16ae92844cd0ea1efa2"
+            "acc0b0135b8f423ecd1d01ac70ea2b14d53558e676ce62229d779ca920b7249e",
+            "e07aa846bd77c4cd36f720f9035f41aa1ef0699c6f757059d4807f96a9f42f52"
           ],
           "status": "read"
         },
@@ -1060,27 +1060,27 @@
               "t1": "2026-04"
             }
           ],
-          "flows": 1545,
-          "flows_counted": 1080,
+          "flows": 1553,
+          "flows_counted": 1083,
           "pages": [
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p001.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p002.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p003.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p004.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p005.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p006.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p007.json",
-            "interval/snapshots/2026-11-09/fts/SOM/total-2025_2026-p008.json"
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p001.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p002.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p003.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p004.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p005.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p006.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p007.json",
+            "interval/snapshots/2026-11-16/fts/SOM/total-2025_2026-p008.json"
           ],
           "pages_sha256": [
-            "a8174432508f080dbf743388de505b877075ca8178ae0f45d9f9fb9b8cc4ee2a",
-            "97312198d1c4cc582f975e80410c03d73a8d028e91276fb08330c93404681e02",
-            "0c4a15c33cf684e134d835c037aa1f7f7aced68b0d79ef5e65ab7eb1fce7d9a0",
-            "f79fda8582f09b6d8627d9b275be3742b21b1e021be9d23657d2766862bed2a5",
-            "a65c311ff3d4d215e0be3aedfad50bcfeafac4240ea2d116888044302ef50be9",
-            "ae30dd2ca6da1d809a8129c17b317ceaee5be01786d3666ed2af3bf59d5ba863",
-            "0996f830fee032249e95c2c2abbcee6e4b762e3e5e73787a19853e7cdc2cd2c9",
-            "69e4b64fa3fce3053668f7852170f4930159e5cabbb8d5a198160e37e1d74e92"
+            "f395a373b1e09ab59581eebee079473a012eeeb4de10bc45a0c13938bc05b966",
+            "498b2be5477106a00f958b9527216960944a593a6b7880a116195a0bde2accd3",
+            "6fed7f53691cdc3c390442b106147e260878ef0416ff435dfdf6787ba1ca7787",
+            "28d0ed704ecd6195eeb11dd5f7e1c69a0f19eae4edaf060d50275f8870519041",
+            "40f8c3caab1aba5bcb67533b16b86573c8a8c6bc9e86df4657856d23b54f4d38",
+            "11de472029f06254f1edd0c1de988d4a7af921dac38bf1697deacfb7d5a36c25",
+            "3a25832274b69f7709808a01840286fab42f644d99dd4ead2ed9a65a58dfaccf",
+            "79a5de3614988e454039d28cb86431345b8ae555834918b5ff4d742849586561"
           ],
           "status": "read"
         }
