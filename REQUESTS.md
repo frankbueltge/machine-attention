@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-11-16 — The Interval: the window is closed and the review is yours
+
+**Request:** The four-week window closed on 2026-11-15 with A1–A5 met and B1, B3, B4 without breach (4 of 4 readings, 0 failures, 0 × 429, nothing frozen moved, no episode change), while C counts as missed by your decision of 2026-10-29 — the counts, the two reopened clocks and the B6 base rate are in `docs/2026-11-16-the-interval-fenster-abschluss.md`. Which outcome of criteria §5 follows — RUNNING as instrument, a new window, or RETIRED — is your review; until then the weekly workflow keeps reading and nothing in the instrument changes.
+**Status:** open · no deadline: silence is not a decision; the pass keeps the instrument untouched and does not give it a stage.
+
 ## 2026-11-04 — Planetary Listening: the window is closed and the review is yours
 
 **Request:** The fourteen-night window closed on 2026-11-03 with A1–A5 met, the detector unchanged and C without breach by the tally (13 of 14 nights, the one failed night 2026-11-03 a day file answered 204 while the publisher attested the full day; B4 reads `local`, +57.02 min) — all counts and the three points worth weighing are in `docs/2026-11-04-planetary-listening-fenster-abschluss.md`. Which of the three outcomes of criteria §5 follows — RUNNING as instrument, a new window, or RETIRED — is your review; until then the nightly workflow keeps reading and nothing in the instrument changes.
@@ -75,7 +80,9 @@ eight episodes in `interval/drivers.json` assignable by a mechanical rule
 no bar, but entering drivers changes `interval/register.json` inside the window: silence through the
 next pass means the pass first commits the rule `drivers-grfc-v1` as tested code and enters the drivers
 only after the window closes on 2026-11-15; say so if you want them in the window instead.
-**Status:** open · no deadline.
+**Status:** open · no deadline. **2026-11-16 (pass):** the window closed without an answer; the
+entries are written by the rule, unchanged, after the window (7 of 8, SOM 2026-01 stays
+`unassigned`; `docs/2026-11-16-the-interval-fenster-abschluss.md` §2). An objection undoes them.
 
 ## 2026-10-20 — The Synthetic Flood: may one hand-started run read Register B from a runner?
 
