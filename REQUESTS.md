@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-11-17 — The Provisional Air: the audit is done; GO for a narrow, weekly V0?
+
+**Request:** The audit's last point shows that the daily re-delivery of the provisional European air-quality files only re-stamps the delivery time — 55 hours with a value at two stations re-delivered, 0 values changed (`docs/2026-11-17-the-provisional-air-audit-punkt-1.md`) — so the candidate narrows to holding the provisional side before validation erases it, a result about a year away, with an experiment before then able to test only the fidelity of the holding. May the pass build that V0 (few stations, two countries, PM10, weekly, only on a changed `ETag`, derived rows committed, source CC BY 4.0 inside the charter), or does the long road to a finding argue against it?
+**Status:** open · no deadline: silence is not a GO; the candidate stays at AUDIT and the pass turns to its other lists.
+
 ## 2026-11-16 — The Interval: the window is closed and the review is yours
 
 **Request:** The four-week window closed on 2026-11-15 with A1–A5 met and B1, B3, B4 without breach (4 of 4 readings, 0 failures, 0 × 429, nothing frozen moved, no episode change), while C counts as missed by your decision of 2026-10-29 — the counts, the two reopened clocks and the B6 base rate are in `docs/2026-11-16-the-interval-fenster-abschluss.md`. Which outcome of criteria §5 follows — RUNNING as instrument, a new window, or RETIRED — is your review; until then the weekly workflow keeps reading and nothing in the instrument changes.
