@@ -246,13 +246,16 @@ RUNNING (any time: RETIRED).*
   (`luftdaten.umweltbundesamt.de`) does not bar `/api/`; `www.eea.europa.eu` bars `/api` (another host,
   not read). Status calls only, no data, no bytes kept.
 - **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
-- **Next step:** AUDIT part 2, point 1, on a night from 2026-11-16 when no earlier candidate has a step due
+- **Next step (done 2026-11-17, below):** AUDIT part 2, point 1, on a night from 2026-11-16 when no earlier candidate has a step due
   (the Interval review request comes first on 2026-11-16): re-fetch once the Luxembourg E2a file of
   2026-11-13 and once the Berlin file of 2026-11-14 — did the fresh hours get a later `ResultTime`, did a
   **value** change. Two requests, comparison from the preserved files only. Then the final recommendation
   and the GO request in `REQUESTS.md`. The request field `email` is never set.
 - **2026-11-16:** held; tonight's step went to closing The Interval's window. Point 1 is the next pass's step. No fetch.
-- **Updated:** 2026-11-16 (pass)
+- **2026-11-17 — AUDIT done, point 1** (`docs/2026-11-17-the-provisional-air-audit-punkt-1.md`, 2 files with manifest in `provisionalair/probes/2026-11-17/`): the LU file of 2026-11-13 and the DE file of 2026-11-14 fetched once more (both 200, new `ETag`s). **0 values changed** among 55 re-delivered hours with a value (LU 24, DE 31); only `ResultTime` moved (LU rolling next-day per hour, DE end of next day); DE's 17 placeholders of 2026-11-14 07–23 h are now first values. Side note from the preserved files: DE January–March carry `Verification` 2, all else 3. **Final recommendation:** GO for a narrow V0, **weekly** on changed `ETag` (the daily re-delivery adds nothing), object = the provisional side held until the 2026 validated year appears (≈ autumn 2027) plus the monthly/quarterly re-deliveries; an earlier E-experiment can test fidelity only. GO request in `REQUESTS.md` (2026-11-17).
+- **Stage now:** AUDIT done; **waits on the maintainer's GO** (`REQUESTS.md` 2026-11-17). Silence is not a GO.
+- **Next step:** none until the GO. Then V0 increment 1: station set and derived-row reader, time zone proven from the documentation first.
+- **Updated:** 2026-11-17 (pass)
 
 ## Running instruments — findings
 
@@ -292,7 +295,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-13** (no pass ran on 2026-11-12, so two readings): `memoryhole/readings/2026-11-10.json` (commit `cd6e7d2`) — 25 entries, **5 sampled**, all from one institution (`google-sustainability`) and all image assets under one versioned `/js/` path (four `gone`, one `unchanged`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-11.json` (commit `871e8c1`) — 20 entries, **0 sampled**, 20 failures (log line of 2026-11-12: 120 requests, 22 institutions), 0 abstentions. No verdicts due for either. Assets again, one institution again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-14:** `memoryhole/readings/2026-11-12.json` (commit `db0d690`) — 20 entries, **0 sampled**, 23 failures, 0 abstentions (no verdicts due). The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-16** (no pass ran on 2026-11-15, so two readings): `memoryhole/readings/2026-11-13.json` (commit `5b24814`) — 21 entries, **1 sampled** (`vw`, an HTML page, `unverifiable`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-14.json` (commit `65f989c`) — 21 entries, **1 sampled** (`bmwe`, an HTML page, `unverifiable`), 20 failures, 0 abstentions. No verdicts due. One institution a night again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-16 (pass)
+- **2026-11-17:** `memoryhole/readings/2026-11-15.json` (commit `2d8e0ab`) — 35 entries, **15 sampled**, the most since 2026-10-12, from **three** institutions (`bmuv` 5, `ec-climate` 5, `google-sustainability` 5), mostly pages and documents, not assets (13 `unverifiable`, 2 `gone`); 25 failures (log line of 2026-11-16: 152 requests, 22 institutions), 0 abstentions, no verdicts due. Several drawn URLs end truncated (e.g. `…/Download_PDF/Luft/t`, `…/eu-adaptation-`), which reads like a discovery answer cut off, not pages — noted, not proven, not a repair. One night with three institutions is not the sample returning; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-17 (pass)
 
 ## Parked
 

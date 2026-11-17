@@ -1,0 +1,65 @@
+{
+ "date": "2026-11-17",
+ "document": "docs/2026-11-17-the-provisional-air-audit-punkt-1.md",
+ "entries": [
+  {
+   "bytes": 185606,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/octet-stream",
+   "file": "provisionalair/probes/2026-11-17/blob/e2a-SPO-LU0101A_00005_103.parquet",
+   "full_sha256": "91870948e8903b566497b5d9bbffa6a476ebf9c11fa122fa34a5f55dff790b33",
+   "http_status": 200,
+   "kept_bytes": 185606,
+   "method": "GET",
+   "name": "e2a-SPO-LU0101A_00005_103.parquet",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "185606",
+    "Content-Type": "application/octet-stream",
+    "Date": "Tue, 17 Nov 2026 07:37:29 GMT",
+    "ETag": "0x8DF4476A28621A8",
+    "Last-Modified": "Tue, 17 Nov 2026 06:47:23 GMT",
+    "x-ms-blob-type": "BlockBlob",
+    "x-ms-version": "2009-09-19"
+   },
+   "retrieved_at": "2026-11-17T07:37:30+00:00",
+   "sha256": "91870948e8903b566497b5d9bbffa6a476ebf9c11fa122fa34a5f55dff790b33",
+   "source": "blob",
+   "truncated": false,
+   "url": "https://eeadmz1batchservice02.blob.core.windows.net/airquality-p/LU/SPO-LU0101A_00005_103.parquet"
+  },
+  {
+   "bytes": 222609,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/octet-stream",
+   "file": "provisionalair/probes/2026-11-17/blob/e2a-SPO.DE_DEBE010_PM1_dataGroup1.parquet",
+   "full_sha256": "c1a63dfb1a706e3d9d736f76f58c1c4f52a3a937691bdecda5b37fa753483e92",
+   "http_status": 200,
+   "kept_bytes": 222609,
+   "method": "GET",
+   "name": "e2a-SPO.DE_DEBE010_PM1_dataGroup1.parquet",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "222609",
+    "Content-Type": "application/octet-stream",
+    "Date": "Tue, 17 Nov 2026 07:37:31 GMT",
+    "ETag": "0x8DF44787FCEFBC8",
+    "Last-Modified": "Tue, 17 Nov 2026 07:00:44 GMT",
+    "x-ms-blob-type": "BlockBlob",
+    "x-ms-version": "2009-09-19"
+   },
+   "retrieved_at": "2026-11-17T07:37:30+00:00",
+   "sha256": "c1a63dfb1a706e3d9d736f76f58c1c4f52a3a937691bdecda5b37fa753483e92",
+   "source": "blob",
+   "truncated": false,
+   "url": "https://eeadmz1batchservice02.blob.core.windows.net/airquality-p/DE/SPO.DE_DEBE010_PM1_dataGroup1.parquet"
+  }
+ ],
+ "note": "AUDIT point 1: the two E2a files of 2026-11-13 (LU) and 2026-11-14 (DE) fetched once more, one attempt each; comparison from the preserved files only"
+}
