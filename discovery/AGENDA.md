@@ -34,7 +34,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-14:** nothing due (Saturday). Tally unchanged (`python -m practice.interval.experiment --repo-root .`): weeks due 4 of 4, `closed: false`, A1 no missing week, A2 pass, A3 none, B1 0 moves, B2 no change (8 episodes all four weeks), B6 unchanged (FSC·date·k=2: 43/77 placebo vs 3/7 onsets). The window closes tomorrow, 2026-11-15; the pass of 2026-11-16 writes the two-sentence review request in `REQUESTS.md`. `REQUESTS.md` (2026-10-22) still unanswered, so the driver entries follow after 2026-11-15.
 - **2026-11-16 — window closed, review requested, drivers entered** (`docs/2026-11-16-the-interval-fenster-abschluss.md`): tally `closed: true`, weeks 4 of 4, A1 no missing week, A2 0 failures, A3 0 × 429, A4 green, A5 0, B1 0 moves, B2 no change (8 episodes all four weeks), B3/B4 no breach (B4 checked weeks 1–2, 2–3, 3–4), B6 FSC·date·k=2 43/77 vs 3/7 — one cell moved since the addendum (total·firstReportedDate·k=2 36/77, was 35/77; not traced), C counts as missed by the decision of 2026-10-29. Review request in `REQUESTS.md` (2026-11-16). `REQUESTS.md` (2026-10-22) unanswered, so the driver entries were written by `drivers-grfc-v1`, unchanged, from the file preserved 2026-10-22: 7 of 8 (SOM 2026-01 `unassigned`), `interval/register.json` recomputed — only the seven `driver` fields changed. **Next step:** none on the instrument until the review; the weekly workflow keeps reading.
 - **Stage now:** E-EXPERIMENT closed, **review requested 2026-11-16 (maintainer's)**.
-- **Updated:** 2026-11-16 (pass)
+- **2026-11-18:** nothing due; `REQUESTS.md` (2026-11-16) unanswered, the weekly workflow keeps reading, nothing in the instrument changes.
+- **Updated:** 2026-11-18 (pass)
 
 ## Next
 
@@ -257,6 +258,27 @@ RUNNING (any time: RETIRED).*
 - **Next step:** none until the GO. Then V0 increment 1: station set and derived-row reader, time zone proven from the documentation first.
 - **Updated:** 2026-11-17 (pass)
 
+### The Shortage Clock — does a medicine-shortage register keep its own clock?
+
+- **Stage:** EXPOSÉ 2026-11-18 (`docs/2026-11-18-kandidat-the-shortage-clock.md`), the exposé of ISO week 47.
+  Question: how often public medicine-shortage registers (US: openFDA `api.fda.gov/drug/shortages.json`
+  and the FDA database; Germany: BfArM Lieferengpassmeldungen; EU: EMA catalogue xlsx as control)
+  rewrite a shortage's own clock — first-posted date, status (`reopened`), expected end — and how a
+  shortage's duration observed day by day differs from the duration in the register's last version;
+  entries deleted after resolution vanish for every later reader. **Nearest neighbour:** the ASPE
+  analysis 2018–2023 rebuilt status histories from 39 web-archive versions (≈ 5 weeks apart) and
+  removed 6.4 % duplicate shortages it suspected came from revised first-posting dates — the daylight
+  is exactly that noise, counted daily. Robots pre-screen: `api.fda.gov` none (404),
+  `anwendungen.pharmnet-bund.de` does not bar `/lieferengpassmeldungen/`, EMA allows report documents,
+  `www.accessdata.fda.gov` asks crawlers for 30 s spacing and 23:00–05:00 EDT. Field names only from
+  one `limit=1` answer; `contact_info` never read (I8); no manufacturer ever named in an output (E-2).
+- **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
+- **Next step:** AUDIT, on a night no earlier candidate has a step due (The Provisional Air goes first
+  if its GO comes): full-pull size and rate per register, licences, whether the same entry shows a
+  different clock on two days, whether resolved entries stay, whether a public daily archive already
+  exists. Probes under `shortageclock/probes/<date>/`.
+- **Updated:** 2026-11-18 (pass)
+
 ## Running instruments — findings
 
 ### Memory Hole — blind to its institutions since 2026-10-12
@@ -296,7 +318,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-14:** `memoryhole/readings/2026-11-12.json` (commit `db0d690`) — 20 entries, **0 sampled**, 23 failures, 0 abstentions (no verdicts due). The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-16** (no pass ran on 2026-11-15, so two readings): `memoryhole/readings/2026-11-13.json` (commit `5b24814`) — 21 entries, **1 sampled** (`vw`, an HTML page, `unverifiable`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-14.json` (commit `65f989c`) — 21 entries, **1 sampled** (`bmwe`, an HTML page, `unverifiable`), 20 failures, 0 abstentions. No verdicts due. One institution a night again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-17:** `memoryhole/readings/2026-11-15.json` (commit `2d8e0ab`) — 35 entries, **15 sampled**, the most since 2026-10-12, from **three** institutions (`bmuv` 5, `ec-climate` 5, `google-sustainability` 5), mostly pages and documents, not assets (13 `unverifiable`, 2 `gone`); 25 failures (log line of 2026-11-16: 152 requests, 22 institutions), 0 abstentions, no verdicts due. Several drawn URLs end truncated (e.g. `…/Download_PDF/Luft/t`, `…/eu-adaptation-`), which reads like a discovery answer cut off, not pages — noted, not proven, not a repair. One night with three institutions is not the sample returning; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-17 (pass)
+- **2026-11-18:** `memoryhole/readings/2026-11-16.json` (commit `d860fd4`) — 33 entries, **13 sampled** from **three** institutions (`bmuv` 3, `google-sustainability` 5, `vw` 5), all `unverifiable`; 23 failures (log line of 2026-11-17: 149 requests, 22 institutions), 0 abstentions, no verdicts due. Second night in a row with three institutions, but a different three; one drawn URL ends in an encoded space (`…abfallwirtschaft_2023_en_bf.pdf%20`), in line with the cut-off discovery answers noted 2026-11-17 — noted, not proven, not a repair. The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-18 (pass)
 
 ## Parked
 
