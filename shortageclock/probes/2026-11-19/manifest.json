@@ -1,0 +1,274 @@
+{
+ "date": "2026-11-19",
+ "document": "docs/2026-11-19-the-shortage-clock-audit-teil-1.md",
+ "entries": [
+  {
+   "bytes": 2029,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/json; charset=utf-8",
+   "derivation": "allowlist: identity and clock fields kept as received (generic_name, presentation, package_ndc, dosage_form, status, initial_posting_date, update_date, update_type, discontinued_date, change_date, therapeutic_category, shortage_reason, availability); company_name, related_info, resolved_note, related_info_link replaced by their SHA-256 (free text can carry company names and telephone numbers, E-2/I8); contact_info and the harmonized 'openfda' block removed unread; full_sha256 is of the bytes received",
+   "file": "shortageclock/probes/2026-11-19/openfda/shortages-limit1.json",
+   "full_sha256": "95ada347a776edeb4f394b6dbb6047192a7ae196c3a943b12849957088711386",
+   "http_status": 200,
+   "kept_bytes": 992,
+   "method": "GET",
+   "name": "shortages-limit1.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Content-Length": "2029",
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Thu, 19 Nov 2026 07:39:04 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:04+00:00",
+   "sha256": "319a437759b1553eff7f32f36a43cc11bfacf88660e04d2d344477de34122c82",
+   "source": "openfda",
+   "truncated": true,
+   "url": "https://api.fda.gov/drug/shortages.json?limit=1"
+  },
+  {
+   "bytes": 632,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/json; charset=utf-8",
+   "file": "shortageclock/probes/2026-11-19/openfda/shortages-count-status.json",
+   "full_sha256": "2fd961e0a04e0532b4347d8e112216ee6b6522017d9ae607403f9039ac46e2aa",
+   "http_status": 200,
+   "kept_bytes": 632,
+   "method": "GET",
+   "name": "shortages-count-status.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Content-Length": "632",
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Thu, 19 Nov 2026 07:39:07 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:06+00:00",
+   "sha256": "2fd961e0a04e0532b4347d8e112216ee6b6522017d9ae607403f9039ac46e2aa",
+   "source": "openfda",
+   "truncated": false,
+   "url": "https://api.fda.gov/drug/shortages.json?count=status"
+  },
+  {
+   "bytes": 619,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/json; charset=utf-8",
+   "file": "shortageclock/probes/2026-11-19/openfda/shortages-count-update_type.json",
+   "full_sha256": "e45b3902cb16103b3acb11b89c758ec2fe87cfd18c881cd546532c36da09b8e2",
+   "http_status": 200,
+   "kept_bytes": 619,
+   "method": "GET",
+   "name": "shortages-count-update_type.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Content-Length": "619",
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Thu, 19 Nov 2026 07:39:09 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:09+00:00",
+   "sha256": "e45b3902cb16103b3acb11b89c758ec2fe87cfd18c881cd546532c36da09b8e2",
+   "source": "openfda",
+   "truncated": false,
+   "url": "https://api.fda.gov/drug/shortages.json?count=update_type"
+  },
+  {
+   "bytes": 602514,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/json; charset=utf-8",
+   "derivation": "excerpt: meta and results.drug.shortages only",
+   "file": "shortageclock/probes/2026-11-19/openfda/download-index-shortages-excerpt.json",
+   "full_sha256": "3316b9ea4acea3ff382a2899581710ba5fcabf5bb7bb2d7b017665f9910a6b69",
+   "http_status": 200,
+   "kept_bytes": 725,
+   "method": "GET",
+   "name": "download-index-shortages-excerpt.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "public, max-age=600",
+    "Content-Length": "602514",
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Thu, 19 Nov 2026 07:39:12 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:11+00:00",
+   "sha256": "4de676e2258270e283a6a858368fb6fbbb599b5b8a6b7bd6491265738c046302",
+   "source": "openfda",
+   "truncated": true,
+   "url": "https://api.fda.gov/download.json"
+  },
+  {
+   "bytes": 447839,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "derivation": "allowlist: identity and clock fields kept as received (generic_name, presentation, package_ndc, dosage_form, status, initial_posting_date, update_date, update_type, discontinued_date, change_date, therapeutic_category, shortage_reason, availability); company_name, related_info, resolved_note, related_info_link replaced by their SHA-256 (free text can carry company names and telephone numbers, E-2/I8); contact_info and the harmonized 'openfda' block removed unread; full_sha256 is of the bytes received; one record per line",
+   "file": "shortageclock/probes/2026-11-19/openfda/drug-shortages-full.scrubbed.json",
+   "full_sha256": "a3f7bc0255643a0912a31ea5a22056147cb9f2df42e168349889423959a2f20c",
+   "http_status": 200,
+   "kept_bytes": 877813,
+   "method": "GET",
+   "name": "drug-shortages-full.scrubbed.json",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "447839",
+    "Content-Type": "application/zip",
+    "Date": "Wed, 18 Nov 2026 22:02:12 GMT",
+    "ETag": "\"ac55dcab64b414035c557d6445c949f0\"",
+    "Last-Modified": "Wed, 18 Nov 2026 14:45:21 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:14+00:00",
+   "sha256": "d44d2344f217523755bf092f55b57672736a0cbef85a0b213b00e6e0200a3d63",
+   "source": "openfda",
+   "truncated": true,
+   "url": "https://download.open.fda.gov/drug/shortages/drug-shortages-0001-of-0001.json.zip"
+  },
+  {
+   "bytes": 123019,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html; charset=utf-8",
+   "file": "shortageclock/probes/2026-11-19/openfda/license.html",
+   "full_sha256": "7fda0041a24f8d7139a1781d4462ae39643a2ee6f3b0f079946c989a8e1982d2",
+   "http_status": 200,
+   "kept_bytes": 123019,
+   "method": "GET",
+   "name": "license.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "max-age=300",
+    "Content-Length": "123019",
+    "Content-Type": "text/html; charset=utf-8",
+    "Date": "Thu, 19 Nov 2026 07:39:18 GMT",
+    "ETag": "\"c7c23090779db92de761c5d528b1fb6a\"",
+    "Last-Modified": "Fri, 09 Oct 2026 15:48:36 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:17+00:00",
+   "sha256": "7fda0041a24f8d7139a1781d4462ae39643a2ee6f3b0f079946c989a8e1982d2",
+   "source": "openfda",
+   "truncated": false,
+   "url": "https://open.fda.gov/license/"
+  },
+  {
+   "bytes": 420,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "shortageclock/probes/2026-11-19/fda-db/default.cfm.html",
+   "full_sha256": "8c3e2fdaa355e6b45f837262f25eaa3d5fb04c9de519c93ebed74646321f4da6",
+   "http_status": 404,
+   "kept_bytes": 420,
+   "method": "GET",
+   "name": "default.cfm.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "420",
+    "Content-Type": "text/html",
+    "Date": "Thu, 19 Nov 2026 07:39:48 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:47+00:00",
+   "sha256": "8c3e2fdaa355e6b45f837262f25eaa3d5fb04c9de519c93ebed74646321f4da6",
+   "source": "fda-db",
+   "truncated": false,
+   "url": "https://www.accessdata.fda.gov/scripts/drugshortages/default.cfm"
+  },
+  {
+   "bytes": 341585,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/csv",
+   "derivation": "decoded utf-8, re-written as ';'-separated utf-8; columns Telefon and E-Mail removed unread (I8); Zulassungsinhaber, Anm. zum Grund, Alternativpr\u00e4parat, Info an Fachkreise replaced by their SHA-256 (free text, E-2/I8); all other columns as received",
+   "file": "shortageclock/probes/2026-11-19/bfarm/lieferengpassmeldungen.csv",
+   "full_sha256": "659fff0dc8dabed62972d36131086367b864efb818dd4d236675fb633cec4472",
+   "http_status": 200,
+   "kept_bytes": 486494,
+   "method": "GET",
+   "name": "lieferengpassmeldungen.csv",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "private",
+    "Content-Disposition": "attachment; filename=\"LEMeldungen_2026-11-19-08-39-51.csv\"",
+    "Content-Type": "text/csv",
+    "Date": "Thu, 19 Nov 2026 07:39:51 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:50+00:00",
+   "sha256": "a13af0d1607dea8bed0e472b953be4119c56c2a024ec46c555f6aefc83ba9f7a",
+   "source": "bfarm",
+   "truncated": true,
+   "url": "https://anwendungen.pharmnet-bund.de/lieferengpassmeldungen/public/csv"
+  },
+  {
+   "bytes": 88113,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   "file": "shortageclock/probes/2026-11-19/ema/medicines-output-shortages-report_en.xlsx",
+   "full_sha256": "8570775ae8c746a40aa1e926a1ed985795951c438617093cd869a30a28cdad57",
+   "http_status": 200,
+   "kept_bytes": 88113,
+   "method": "GET",
+   "name": "medicines-output-shortages-report_en.xlsx",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "public, max-age=300, s-maxage=300",
+    "Content-Length": "88113",
+    "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "Date": "Thu, 19 Nov 2026 07:39:53 GMT",
+    "ETag": "\"3dead0f620f0899c49532cd8bd16e0bf20f112854bf2833e4ba0bc3e68ec5175\"",
+    "Last-Modified": "Thu, 19 Nov 2026 05:00:07 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:39:53+00:00",
+   "sha256": "8570775ae8c746a40aa1e926a1ed985795951c438617093cd869a30a28cdad57",
+   "source": "ema",
+   "truncated": false,
+   "url": "https://www.ema.europa.eu/en/documents/report/medicines-output-shortages-report_en.xlsx"
+  },
+  {
+   "bytes": 420,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "shortageclock/probes/2026-11-19/fda-db/index.html",
+   "final_url": "https://www.accessdata.fda.gov/scripts/drugshortages/",
+   "full_sha256": "e64edfb69c50a74ca6ab65eeb50b0c345112d777231f58ff1d23b19c4a7331c6",
+   "http_status": 404,
+   "kept_bytes": 420,
+   "method": "GET",
+   "name": "index.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "420",
+    "Content-Type": "text/html",
+    "Date": "Thu, 19 Nov 2026 07:41:05 GMT"
+   },
+   "retrieved_at": "2026-11-19T07:41:04+00:00",
+   "sha256": "e64edfb69c50a74ca6ab65eeb50b0c345112d777231f58ff1d23b19c4a7331c6",
+   "source": "fda-db",
+   "truncated": false,
+   "url": "https://www.accessdata.fda.gov/scripts/drugshortages/"
+  }
+ ]
+}
