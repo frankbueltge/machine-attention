@@ -35,7 +35,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-16 — window closed, review requested, drivers entered** (`docs/2026-11-16-the-interval-fenster-abschluss.md`): tally `closed: true`, weeks 4 of 4, A1 no missing week, A2 0 failures, A3 0 × 429, A4 green, A5 0, B1 0 moves, B2 no change (8 episodes all four weeks), B3/B4 no breach (B4 checked weeks 1–2, 2–3, 3–4), B6 FSC·date·k=2 43/77 vs 3/7 — one cell moved since the addendum (total·firstReportedDate·k=2 36/77, was 35/77; not traced), C counts as missed by the decision of 2026-10-29. Review request in `REQUESTS.md` (2026-11-16). `REQUESTS.md` (2026-10-22) unanswered, so the driver entries were written by `drivers-grfc-v1`, unchanged, from the file preserved 2026-10-22: 7 of 8 (SOM 2026-01 `unassigned`), `interval/register.json` recomputed — only the seven `driver` fields changed. **Next step:** none on the instrument until the review; the weekly workflow keeps reading.
 - **Stage now:** E-EXPERIMENT closed, **review requested 2026-11-16 (maintainer's)**.
 - **2026-11-18:** nothing due; `REQUESTS.md` (2026-11-16) unanswered, the weekly workflow keeps reading, nothing in the instrument changes.
-- **Updated:** 2026-11-18 (pass)
+- **2026-11-19:** nothing due (Thursday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes.
+- **Updated:** 2026-11-19 (pass)
 
 ## Next
 
@@ -273,11 +274,10 @@ RUNNING (any time: RETIRED).*
   `www.accessdata.fda.gov` asks crawlers for 30 s spacing and 23:00–05:00 EDT. Field names only from
   one `limit=1` answer; `contact_info` never read (I8); no manufacturer ever named in an output (E-2).
 - **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
-- **Next step:** AUDIT, on a night no earlier candidate has a step due (The Provisional Air goes first
-  if its GO comes): full-pull size and rate per register, licences, whether the same entry shows a
-  different clock on two days, whether resolved entries stay, whether a public daily archive already
-  exists. Probes under `shortageclock/probes/<date>/`.
-- **Updated:** 2026-11-18 (pass)
+- **2026-11-19 — AUDIT part 1 done** (`docs/2026-11-19-the-shortage-clock-audit-teil-1.md`, 10 one-attempt requests with manifest in `shortageclock/probes/2026-11-19/`, preserved copies derived by allowlist: contact fields removed unread, company names and free text only as SHA-256, `verify.py` now holds `shortageclock/probes`). openFDA bulk zip 447 839 B = all 1 584 entries in one request, CC0; BfArM CSV `…/lieferengpassmeldungen/public/csv` 341 585 B = 942 notices in one request, offered for automated retrieval, **no licence stated**; EMA xlsx 88 113 B, 85 entries, regenerated daily 06:00; FDA database `www.accessdata.fda.gov/scripts/drugshortages/` **404** twice (200 on 2026-11-18), not retried. One-version findings: openFDA keeps `Resolved` entries only with `update_date` ≥ 2026-07-31; 827 of 1 116 current entries are `Reverified` (clock re-stamped, nothing changed); 17 identity keys stand twice, 16 with different `initial_posting_date`; BfArM's 683 change notices cite 373 first notices of which **none** is in the file; EMA keeps resolved entries back to 2014. No public daily archive found (commercial diffing services only).
+- **Next step:** AUDIT part 2, not before 2026-11-21: a second pull of the three files and a per-entry comparison of the clock fields, vanished and new entries; look for the BfArM's terms of reuse in its documentation; then the final recommendation (and, if the licence stays open, a two-sentence request in `REQUESTS.md`).
+- **Stage now:** AUDIT part 1 done; part 2 due from 2026-11-21.
+- **Updated:** 2026-11-19 (pass)
 
 ## Running instruments — findings
 
@@ -319,7 +319,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-16** (no pass ran on 2026-11-15, so two readings): `memoryhole/readings/2026-11-13.json` (commit `5b24814`) — 21 entries, **1 sampled** (`vw`, an HTML page, `unverifiable`), 20 failures, 0 abstentions; `memoryhole/readings/2026-11-14.json` (commit `65f989c`) — 21 entries, **1 sampled** (`bmwe`, an HTML page, `unverifiable`), 20 failures, 0 abstentions. No verdicts due. One institution a night again; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-17:** `memoryhole/readings/2026-11-15.json` (commit `2d8e0ab`) — 35 entries, **15 sampled**, the most since 2026-10-12, from **three** institutions (`bmuv` 5, `ec-climate` 5, `google-sustainability` 5), mostly pages and documents, not assets (13 `unverifiable`, 2 `gone`); 25 failures (log line of 2026-11-16: 152 requests, 22 institutions), 0 abstentions, no verdicts due. Several drawn URLs end truncated (e.g. `…/Download_PDF/Luft/t`, `…/eu-adaptation-`), which reads like a discovery answer cut off, not pages — noted, not proven, not a repair. One night with three institutions is not the sample returning; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-18:** `memoryhole/readings/2026-11-16.json` (commit `d860fd4`) — 33 entries, **13 sampled** from **three** institutions (`bmuv` 3, `google-sustainability` 5, `vw` 5), all `unverifiable`; 23 failures (log line of 2026-11-17: 149 requests, 22 institutions), 0 abstentions, no verdicts due. Second night in a row with three institutions, but a different three; one drawn URL ends in an encoded space (`…abfallwirtschaft_2023_en_bf.pdf%20`), in line with the cut-off discovery answers noted 2026-11-17 — noted, not proven, not a repair. The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-18 (pass)
+- **2026-11-19:** `memoryhole/readings/2026-11-17.json` (commit `af5c68a`) — 33 entries, **13 sampled** from **three** institutions (`ec-climate` 5, `vw` 5, `bmuv` 3; 11 `unverifiable`, 2 `gone`), 19 failures (log line of 2026-11-18: 135 requests, 22 institutions), 0 abstentions, no verdicts due. Third night in a row with three institutions, again a different three. The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-19 (pass)
 
 ## Parked
 
