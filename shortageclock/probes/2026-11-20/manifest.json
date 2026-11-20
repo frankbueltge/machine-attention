@@ -1,0 +1,152 @@
+{
+ "date": "2026-11-20",
+ "document": "docs/2026-11-20-the-shortage-clock-audit-teil-2-lizenz.md",
+ "entries": [
+  {
+   "name": "pharmnet-robots.txt",
+   "source": "bfarm",
+   "url": "https://anwendungen.pharmnet-bund.de/robots.txt",
+   "method": "GET",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "client": "standard-library client, one attempt, no retry",
+   "retrieved_at": "2026-11-20T07:39:24+00:00",
+   "http_status": 200,
+   "bytes": 402,
+   "kept_bytes": 402,
+   "full_sha256": "2898d638ff0e7417b523ebc5777a866d4ad63ddc672f5e132e19cfa415033a37",
+   "sha256": "2898d638ff0e7417b523ebc5777a866d4ad63ddc672f5e132e19cfa415033a37",
+   "file": "shortageclock/probes/2026-11-20/bfarm/pharmnet-robots.txt",
+   "response_headers": {
+    "Date": "Fri, 20 Nov 2026 07:39:25 GMT",
+    "Last-Modified": "Wed, 24 Feb 2016 16:01:15 GMT",
+    "ETag": "\"192-52c862cf448c0\"",
+    "Content-Length": "402",
+    "Content-Type": "text/plain"
+   },
+   "truncated": false
+  },
+  {
+   "name": "meldungen-page-excerpt.txt",
+   "source": "bfarm",
+   "url": "https://anwendungen.pharmnet-bund.de/lieferengpassmeldungen/faces/public/meldungen.xhtml",
+   "method": "GET",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "client": "standard-library client, one attempt, no retry",
+   "retrieved_at": "2026-11-20T07:39:27+00:00",
+   "http_status": 200,
+   "bytes": 71708,
+   "kept_bytes": 959,
+   "full_sha256": "c457fd2361b26982024f1bae70c653d33d371c31c396769d52db4fb311af713c",
+   "sha256": "77f37523cb80ec1ce9753a5305ed34873e53bd3d8e9544f7108fe24ef36f9b59",
+   "file": "shortageclock/probes/2026-11-20/bfarm/meldungen-page-excerpt.txt",
+   "response_headers": {
+    "Date": "Fri, 20 Nov 2026 07:39:27 GMT",
+    "Content-Type": "text/html;charset=UTF-8"
+   },
+   "truncated": false,
+   "derivation": "text excerpt: tags removed, whitespace collapsed; kept are the notice paragraph from 'Die Aktualisierung der Datenbank' up to 'Wenn Sie eine Anleitung', the result count after 'gefundene Lieferengpässe:', and the closing sentence from 'Zusätzlich zum manuellen Abruf'; the listing rows (product names that can carry company names, E-2) and navigation not kept"
+  },
+  {
+   "name": "bfarm-robots.status.json",
+   "source": "bfarm",
+   "url": "https://www.bfarm.de/robots.txt",
+   "method": "GET",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "client": "standard-library client, one attempt, no retry",
+   "retrieved_at": "2026-11-20T07:39:29+00:00",
+   "http_status": 404,
+   "bytes": 339836,
+   "kept_bytes": 84,
+   "full_sha256": "79746fd24e248d819c16d3cb574b37354195925eaae5ec43f01a2038ed13bafe",
+   "sha256": "2fe3cb3a8a0d8b056522d91d3904da462039db5c72e4e1c045a1954e23dd629d",
+   "file": "shortageclock/probes/2026-11-20/bfarm/bfarm-robots.status.json",
+   "response_headers": {
+    "Date": "Fri, 20 Nov 2026 07:39:35 GMT",
+    "Content-Type": "text/html;charset=utf-8"
+   },
+   "truncated": false,
+   "derivation": "status only: the 404 answer is the site's HTML error page, not kept"
+  },
+  {
+   "name": "bfarm-impressum-copyright-excerpt.txt",
+   "source": "bfarm",
+   "url": "https://www.bfarm.de/DE/Service/Impressum/_node.html",
+   "method": "GET",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "client": "standard-library client, one attempt, no retry",
+   "retrieved_at": "2026-11-20T07:39:38+00:00",
+   "http_status": 200,
+   "bytes": 346431,
+   "kept_bytes": 861,
+   "full_sha256": "b9da8d49aeb272d7ed998b6e1429c7cac93de1c15e1f4e0d111f6b092977aef2",
+   "sha256": "b190146d630ba6c1a319fe7720448a8ec015f5171d04f8cb7e190ac0319abfb2",
+   "file": "shortageclock/probes/2026-11-20/bfarm/bfarm-impressum-copyright-excerpt.txt",
+   "response_headers": {
+    "Date": "Fri, 20 Nov 2026 07:39:38 GMT",
+    "Last-Modified": "Fri, 20 Nov 2026 07:39:38 GMT",
+    "Content-Type": "text/html;charset=utf-8"
+   },
+   "truncated": false,
+   "derivation": "text excerpt: tags removed, whitespace collapsed, from 'Copyright Das Copyright' up to (not including) 'Rechtliche Hinweise'; the rest of the page not kept (navigation; the imprint names natural persons, I8)"
+  },
+  {
+   "name": "govdata-search-lieferengpass.json",
+   "source": "bfarm",
+   "url": "https://www.govdata.de/ckan/api/3/action/package_search?q=Lieferengpass&rows=5",
+   "method": "GET",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "client": "standard-library client, one attempt, no retry",
+   "retrieved_at": "2026-11-20T07:39:42+00:00",
+   "http_status": 200,
+   "bytes": 215,
+   "kept_bytes": 215,
+   "full_sha256": "86b0d632d1998963af986140f5ee6fb6e76574803f5996e87c4299d7cb7ccbf0",
+   "sha256": "86b0d632d1998963af986140f5ee6fb6e76574803f5996e87c4299d7cb7ccbf0",
+   "file": "shortageclock/probes/2026-11-20/bfarm/govdata-search-lieferengpass.json",
+   "response_headers": {},
+   "truncated": false
+  },
+  {
+   "name": "ema-legal-notice-copyright-excerpt.txt",
+   "source": "ema",
+   "url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
+   "method": "GET",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "client": "standard-library client, one attempt, no retry",
+   "retrieved_at": "2026-11-20T07:39:44+00:00",
+   "http_status": 200,
+   "bytes": 67929,
+   "kept_bytes": 1153,
+   "full_sha256": "6cad047bbcea8041d22c89adbc5402d4976aa6a28eaea06af6c65e1f6d31a081",
+   "sha256": "14363ba26d2e5f4cb508413596df5a8dbca65235e030af471dca6624c31b1c6b",
+   "file": "shortageclock/probes/2026-11-20/ema/ema-legal-notice-copyright-excerpt.txt",
+   "response_headers": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "67929",
+    "Date": "Fri, 20 Nov 2026 07:38:28 GMT",
+    "Last-Modified": "Fri, 20 Nov 2026 07:31:52 GMT",
+    "ETag": "W/\"1795159912-gzip\""
+   },
+   "truncated": false,
+   "derivation": "text excerpt: tags removed, whitespace collapsed, from 'European Medicines Agency copyright and limited reproduction notices The contents' up to (not including) 'The above-mentioned permissions also do not apply'; the rest of the page not kept (navigation; the imprint names natural persons, I8)"
+  }
+ ]
+}

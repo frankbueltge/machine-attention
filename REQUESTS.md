@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-11-20 — The Shortage Clock: the German register reserves its consent; may derived rows be committed?
+
+**Request:** The BfArM offers its shortage list for automated retrieval but states no licence, and its imprint says texts and tables of its web offering may not be reproduced or distributed without its prior consent (`shortageclock/probes/2026-11-20/bfarm/bfarm-impressum-copyright-excerpt.txt`, `docs/2026-11-20-the-shortage-clock-audit-teil-2-lizenz.md`), while openFDA (CC0) and the EMA list (reuse with attribution) sit inside the charter. Should the candidate read the German register as counts and hashes only, ask the BfArM (your call, since it means writing to someone), or leave it out?
+**Status:** open · no deadline: until answered the pass keeps the BfArM side to counts and hashes, commits no new rows from it, and asks no one.
+
 ## 2026-11-17 — The Provisional Air: the audit is done; GO for a narrow, weekly V0?
 
 **Request:** The audit's last point shows that the daily re-delivery of the provisional European air-quality files only re-stamps the delivery time — 55 hours with a value at two stations re-delivered, 0 values changed (`docs/2026-11-17-the-provisional-air-audit-punkt-1.md`) — so the candidate narrows to holding the provisional side before validation erases it, a result about a year away, with an experiment before then able to test only the fidelity of the holding. May the pass build that V0 (few stations, two countries, PM10, weekly, only on a changed `ETag`, derived rows committed, source CC BY 4.0 inside the charter), or does the long road to a finding argue against it?
