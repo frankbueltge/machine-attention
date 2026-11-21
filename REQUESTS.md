@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-11-21 — The Shortage Clock: the audit is done; GO for a narrow, daily V0?
+
+**Request:** Two pulls two days apart show the German register never edits a notice but replaces it, pushing the expected end later in 12 of 15 replacements while the old notice vanishes for every later reader, and openFDA dropping eight entries without a `Resolved` step, while the EU list stayed unchanged (`docs/2026-11-21-the-shortage-clock-audit-teil-2-zweiter-abzug.md`, `shortageclock/comparisons/2026-11-19_2026-11-21.json`). May the pass build a daily V0 on openFDA (CC0) and the EMA list (reuse with attribution) — one request each a night, derived rows by the audited allowlist, no manufacturer in any output — with the German side held to counts and hashes until the request of 2026-11-20 is answered?
+**Status:** open · no deadline: silence is not a GO; the candidate stays at AUDIT and the pass turns to its other lists.
+
 ## 2026-11-20 — The Shortage Clock: the German register reserves its consent; may derived rows be committed?
 
 **Request:** The BfArM offers its shortage list for automated retrieval but states no licence, and its imprint says texts and tables of its web offering may not be reproduced or distributed without its prior consent (`shortageclock/probes/2026-11-20/bfarm/bfarm-impressum-copyright-excerpt.txt`, `docs/2026-11-20-the-shortage-clock-audit-teil-2-lizenz.md`), while openFDA (CC0) and the EMA list (reuse with attribution) sit inside the charter. Should the candidate read the German register as counts and hashes only, ask the BfArM (your call, since it means writing to someone), or leave it out?

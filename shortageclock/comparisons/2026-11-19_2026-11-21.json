@@ -1,0 +1,273 @@
+{
+ "after": "2026-11-21",
+ "before": "2026-11-19",
+ "bfarm": {
+  "cited_first_notices_present_in_file": [
+   0,
+   0
+  ],
+  "in_both_by_kind": {
+   "unchanged": 523
+  },
+  "in_both_fields_changed": {},
+  "meldungsart": [
+   {
+    "Erstmeldung": 259,
+    "Änderungsmeldung": 683
+   },
+   {
+    "Erstmeldung": 262,
+    "Änderungsmeldung": 680
+   }
+  ],
+  "new_by_reference": {
+   "change_notice_citing_a_first_notice_already_cited_on_2026-11-19": 11,
+   "change_notice_citing_a_notice_present_on_2026-11-19": 4,
+   "new_first_notice": 4
+  },
+  "new_notices": 19,
+  "note": "counts only; no row, notice number or product name kept (REQUESTS.md 2026-11-20 open). Before: the derived CSV of 2026-11-19; after: tonight's answer, held only in memory.",
+  "notices": [
+   546,
+   542
+  ],
+  "notices_in_both": 523,
+  "pzn_rows": [
+   928,
+   928
+  ],
+  "rows": [
+   942,
+   942
+  ],
+  "vanished_by_kind": {
+   "Meldungsart=Erstmeldung": 8,
+   "Meldungsart=Änderungsmeldung": 15,
+   "cited_tonight_as_first_notice": 4,
+   "end_before_2026-11-21": 14,
+   "end_open_or_after": 9,
+   "same_first_notice_cited_by_a_new_notice": 11
+  },
+  "vanished_notices": 23
+ },
+ "bfarm_successors": {
+  "by_kind": {
+   "begin_rewritten": 1,
+   "clock_or_reason_changed": 12,
+   "end_moved_later": 12,
+   "no_clock_field_changed": 3,
+   "pzn_set_differs": 4,
+   "same_pzn_set": 11
+  },
+  "fields_changed": {
+   "Beginn": 1,
+   "Ende": 12
+  },
+  "pairs": 15,
+  "vanished_with_successor": 15
+ },
+ "date": "2026-11-21",
+ "document": "docs/2026-11-21-the-shortage-clock-audit-teil-2-zweiter-abzug.md",
+ "ema": {
+  "changed_entries": [],
+  "columns": [
+   "Category",
+   "Medicine affected",
+   "Supply shortage status",
+   "International non-proprietary name (INN) or common name",
+   "Therapeutic area (MeSH)",
+   "Pharmaceutical forms affected",
+   "Strengths affected",
+   "Availability of alternatives",
+   "Start of shortage date",
+   "Expected resolution date",
+   "Expected resolution",
+   "First published date",
+   "Last updated date",
+   "Shortage URL"
+  ],
+  "entries": [
+   85,
+   86
+  ],
+  "fields_changed": {},
+  "generated_line": [
+   [
+    "Output automatically generated from content on www.ema.europa.eu on:",
+    "19/11/2026 - 06:00"
+   ],
+   [
+    "Output automatically generated from content on www.ema.europa.eu on:",
+    "21/11/2026 - 06:00"
+   ]
+  ],
+  "in_both": 85,
+  "key": "Shortage URL",
+  "new": [
+   "Lenzetto"
+  ],
+  "status": [
+   {
+    "Medicine discontinued": 5,
+    "Shortage ongoing": 27,
+    "Shortage resolved": 53
+   },
+   {
+    "Medicine discontinued": 5,
+    "Shortage ongoing": 28,
+    "Shortage resolved": 53
+   }
+  ],
+  "vanished": []
+ },
+ "openfda": {
+  "duplicate_keys": [
+   24,
+   25
+  ],
+  "entries": [
+   1584,
+   1581
+  ],
+  "export": [
+   "2026-11-18",
+   "2026-11-20"
+  ],
+  "fields_changed": {
+   "availability": 33,
+   "presentation": 5,
+   "shortage_reason": 31,
+   "update_date": 346,
+   "update_type": 62
+  },
+  "identity_key": "generic_name, package_ndc, company_name_sha256 (presentation left out: its text is rewritten in place, 3 entries 2026-11-20); duplicates paired by equal initial_posting_date first",
+  "new": 5,
+  "new_entries": [
+   {
+    "generic_name": "Oseltamivir Phosphate Powder, for Suspension",
+    "initial_posting_date": "11/20/2026",
+    "package_ndc": "0004-0822-05",
+    "status": "To Be Discontinued",
+    "update_date": "11/20/2026",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Medroxyprogesterone Acetate Tablet",
+    "initial_posting_date": "11/19/2026",
+    "package_ndc": "0009-0287-01",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2026",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Spironolactone Tablet",
+    "initial_posting_date": "11/20/2026",
+    "package_ndc": "0025-1041-31",
+    "status": "To Be Discontinued",
+    "update_date": "11/20/2026",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Hydroxocobalamin Injection",
+    "initial_posting_date": "11/20/2026",
+    "package_ndc": "0591-2888-30",
+    "status": "To Be Discontinued",
+    "update_date": "11/20/2026",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Demeclocycline Hydrochloride Tablet",
+    "initial_posting_date": "11/18/2026",
+    "package_ndc": "53746-555-48",
+    "status": "To Be Discontinued",
+    "update_date": "11/18/2026",
+    "update_type": "New"
+   }
+  ],
+  "new_status": {
+   "To Be Discontinued": 5
+  },
+  "new_update_type": {
+   "New": 5
+  },
+  "paired": 1576,
+  "paired_by_kind": {
+   "other_field_changed": 40,
+   "restamped_only": 308,
+   "unchanged": 1228
+  },
+  "posting_or_discontinued_date_changed": [],
+  "status_transitions": {},
+  "vanished": 8,
+  "vanished_and_new_share_key": 0,
+  "vanished_entries": [
+   {
+    "generic_name": "Anagrelide Hydrochloride Capsule",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0172-5240-60",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Anagrelide Hydrochloride Capsule",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0172-5241-60",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Valsartan Tablet",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0378-5807-93",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Valsartan Tablet",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0378-5813-77",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Valsartan Tablet",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0378-5814-77",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Valsartan Tablet",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0378-5815-77",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Hydrochlorothiazide Capsule",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0591-0347-01",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   },
+   {
+    "generic_name": "Hydrochlorothiazide Capsule",
+    "initial_posting_date": "11/19/2025",
+    "package_ndc": "0591-0347-05",
+    "status": "To Be Discontinued",
+    "update_date": "11/19/2025",
+    "update_type": "New"
+   }
+  ],
+  "vanished_status": {
+   "To Be Discontinued": 8
+  }
+ }
+}
