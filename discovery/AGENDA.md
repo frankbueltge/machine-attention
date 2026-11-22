@@ -38,7 +38,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-19:** nothing due (Thursday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes.
 - **2026-11-20:** nothing due (Friday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes.
 - **2026-11-21:** nothing due (Saturday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to The Shortage Clock.
-- **Updated:** 2026-11-21 (pass)
+- **2026-11-22 — B6 move traced, for the review** (`docs/2026-11-22-the-interval-b6-nachverfolgung.md`, no fetch): `base_rate` run unchanged on every committed `interval/register.json` (`16a0dcf` … `f4ec544`). total·firstReportedDate·k=2 went 35/77 → 36/77 **with week 1's reading** (`a1a13ae`, 2026-10-19), not in weeks 3–4 as the closing document guessed; all other cells and the onsets unchanged throughout. The added cell is AFG 2025-10's placebo month 2025-06 (gap 4 → 1): flow `403006`, `createdAt` 2026-10-19T10:03Z, 17 minutes before the reading, carries its parent commitment's `firstReportedDate` 2025-07-02 (`interval/snapshots/2026-10-19/fts/AFG/total-2024_2025_2026-p015.json`), lifting July 2025 from 168.96 to 172.39 M over the 170.57 M threshold. Second mechanism in the same week: flow `396456` rewritten in place (`versionId` 1, amount 8.08 → 1.34 M, `firstReportedDate` 2026-06-29 → 2026-10-19). Reported for the review: the `firstReportedDate` axis is not a first-seen date and moves without a version; whether B6 should be frozen or a snapshot-derived first-seen axis added is the maintainer's. Nothing in the instrument changed.
+- **Updated:** 2026-11-22 (pass)
 
 ## Next
 
@@ -326,7 +327,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-19:** `memoryhole/readings/2026-11-17.json` (commit `af5c68a`) — 33 entries, **13 sampled** from **three** institutions (`ec-climate` 5, `vw` 5, `bmuv` 3; 11 `unverifiable`, 2 `gone`), 19 failures (log line of 2026-11-18: 135 requests, 22 institutions), 0 abstentions, no verdicts due. Third night in a row with three institutions, again a different three. The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-20:** `memoryhole/readings/2026-11-18.json` (commit `200545f`) — 20 entries, **0 sampled** (controls only), 22 failures (log line of 2026-11-19: 113 requests, 22 institutions — every discovery query failed), 0 abstentions, no verdicts due. The three nights with three institutions did not continue; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-21:** `memoryhole/readings/2026-11-19.json` — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-20: 112 requests, 22 institutions), 0 abstentions, no verdicts due. Second night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-21 (pass)
+- **2026-11-22:** `memoryhole/readings/2026-11-20.json` (commit `705b6c1`) — 20 entries, **0 sampled** (controls only), 17 failures (log line of 2026-11-21: 100 requests, 22 institutions), 0 abstentions, no verdicts due. Third night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-22 (pass)
 
 ## Parked
 
