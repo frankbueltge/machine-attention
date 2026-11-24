@@ -40,7 +40,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-21:** nothing due (Saturday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to The Shortage Clock.
 - **2026-11-22 — B6 move traced, for the review** (`docs/2026-11-22-the-interval-b6-nachverfolgung.md`, no fetch): `base_rate` run unchanged on every committed `interval/register.json` (`16a0dcf` … `f4ec544`). total·firstReportedDate·k=2 went 35/77 → 36/77 **with week 1's reading** (`a1a13ae`, 2026-10-19), not in weeks 3–4 as the closing document guessed; all other cells and the onsets unchanged throughout. The added cell is AFG 2025-10's placebo month 2025-06 (gap 4 → 1): flow `403006`, `createdAt` 2026-10-19T10:03Z, 17 minutes before the reading, carries its parent commitment's `firstReportedDate` 2025-07-02 (`interval/snapshots/2026-10-19/fts/AFG/total-2024_2025_2026-p015.json`), lifting July 2025 from 168.96 to 172.39 M over the 170.57 M threshold. Second mechanism in the same week: flow `396456` rewritten in place (`versionId` 1, amount 8.08 → 1.34 M, `firstReportedDate` 2026-06-29 → 2026-10-19). Reported for the review: the `firstReportedDate` axis is not a first-seen date and moves without a version; whether B6 should be frozen or a snapshot-derived first-seen axis added is the maintainer's. Nothing in the instrument changed.
 - **2026-11-23:** nothing due (Monday); `REQUESTS.md` (2026-11-16) unanswered, the weekly workflow keeps reading, nothing in the instrument changes. Tonight's step went to a new exposé (The Lead Time).
-- **Updated:** 2026-11-23 (pass)
+- **2026-11-24:** nothing due (Tuesday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to The Lead Time (AUDIT part 1).
+- **Updated:** 2026-11-24 (pass)
 
 ## Next
 
@@ -301,11 +302,29 @@ RUNNING (any time: RETIRED).*
   none in force, **`www.dwd.de` `Disallow: /` for all agents** — V0 does not need that host. 14 requests, nothing
   kept. First cadence below a day in the practice; the AUDIT says whether that fits.
 - **Gate:** AUDIT needs none; V0 needs the maintainer's GO.
-- **Next step:** AUDIT on a night when no earlier candidate has a step due (The Provisional Air and The
-  Shortage Clock come first if their GO arrives): two DWD states a few hours apart — does the CAP chain
-  (`msgType`, `references`) carry a warning's life without gaps, does `_DIFF` suffice; the open-data server's
-  terms; Meteoalarm terms and history; whether the Met Office archive shows changes within a warning.
-- **Updated:** 2026-11-23 (pass)
+- **Next step (done 2026-11-24, below):** AUDIT on a night when no earlier candidate has a step due.
+- **2026-11-24 — AUDIT part 1 done** (`docs/2026-11-24-the-lead-time-audit-teil-1.md`, 144 preserved
+  one-attempt requests in `leadtime/probes/2026-11-24/manifest.json`, 5 exploratory listings not kept and
+  disclosed; `verify.py` now holds `leadtime/probes/`). Two German district-level states 7 h apart (A
+  `…20261124003727…`, 30 messages; B `…20261124073639…`, 40) and all 131 district diffs 2026-11-23 11:30 →
+  2026-11-24 07:36 UTC. **A + the 120 diffs after it rebuild B's 40 identifiers exactly** (add, drop
+  referenced, drop expired); every message of A and B is in a diff (62 distinct); from the two states alone
+  only 3 of B's 9 references resolve, with the diffs all 9. The life is a **tree** (9 parents split, up to
+  3 children; 17 of 18 visible transitions shrink the area; 0 merges); **early end is an `Update` with
+  `expires` = `sent`** (7), 0 `Cancel` — gone from the next full state at once, kept only in the diff. All
+  62 messages `Minor`: no upgrade to test tonight. Listing: 335 German states in ≈ 48 h, median 10.25 min;
+  diffs 2.67 MB per window. **So `_DIFF` suffices and a daily read is enough** (each diff stays ≈ 48 h);
+  shown from one listing. Met Office archive page: every update kept as its own PDF under the warning's
+  code since 2011 — UK becomes control, not gap. Meteoalarm Luxembourg feed empty at 07:40 UTC (present
+  only); licence CC BY 4.0 equivalent with redistribution terms unread. DWD terms only on `www.dwd.de`
+  (`Disallow: /`), not read — the maintainer's question.
+- **Stage now:** AUDIT part 1 done; part 2 open (no gate).
+- **Next step:** AUDIT part 2, no gate, from 2026-11-25 on a night when no earlier candidate has a step
+  due: read all district diffs since `…20261124073639…` once and prove they join this probe without gap
+  (the daily cadence); one folder of the Met Office digital archive (are the PDFs readable for level, window,
+  area); Meteoalarm's redistribution terms if readable without a block. Then the GO request with the DWD
+  terms question in `REQUESTS.md`. Must run by 2026-11-26 ≈ 07:30 UTC, before `…073639…` leaves the window.
+- **Updated:** 2026-11-24 (pass)
 
 ## Running instruments — findings
 
@@ -352,7 +371,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-21:** `memoryhole/readings/2026-11-19.json` — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-20: 112 requests, 22 institutions), 0 abstentions, no verdicts due. Second night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-22:** `memoryhole/readings/2026-11-20.json` (commit `705b6c1`) — 20 entries, **0 sampled** (controls only), 17 failures (log line of 2026-11-21: 100 requests, 22 institutions), 0 abstentions, no verdicts due. Third night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-23:** `memoryhole/readings/2026-11-21.json` — 20 entries, **0 sampled** (controls only), 21 failures (log line of 2026-11-22: 107 requests, 22 institutions), 0 abstentions, no verdicts due. Fourth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-23 (pass)
+- **2026-11-24:** `memoryhole/readings/2026-11-22.json` (commit `792a27c`) — 20 entries, **0 sampled** (controls only), 21 failures (log line of 2026-11-23: 108 requests, 22 institutions), 0 abstentions, no verdicts due. Fifth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-24 (pass)
 
 ## Parked
 
