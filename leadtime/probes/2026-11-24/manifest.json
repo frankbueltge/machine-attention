@@ -1,0 +1,3888 @@
+{
+ "date": "2026-11-24",
+ "document": "docs/2026-11-24-the-lead-time-audit-teil-1.md",
+ "entries": [
+  {
+   "bytes": 1725,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "leadtime/probes/2026-11-24/dwd/cap-index.html",
+   "full_sha256": "6daf65c1f4a49dec85a6044935301af221f2af09bb945bd7b84d86015c9a02c8",
+   "http_status": 200,
+   "kept_bytes": 1725,
+   "method": "GET",
+   "name": "cap-index.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 24 Nov 2026 07:38:25 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:24+00:00",
+   "sha256": "6daf65c1f4a49dec85a6044935301af221f2af09bb945bd7b84d86015c9a02c8",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/"
+  },
+  {
+   "bytes": 296185,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "leadtime/probes/2026-11-24/dwd/DISTRICT_DWD_STAT-index.html",
+   "full_sha256": "7a6999376c4c5b159fd07813c71a5b3d3dc3828be42e07be8b5f1112f817dceb",
+   "http_status": 200,
+   "kept_bytes": 296185,
+   "method": "GET",
+   "name": "DISTRICT_DWD_STAT-index.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 24 Nov 2026 07:38:25 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:25+00:00",
+   "sha256": "7a6999376c4c5b159fd07813c71a5b3d3dc3828be42e07be8b5f1112f817dceb",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_STAT/"
+  },
+  {
+   "bytes": 302905,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "leadtime/probes/2026-11-24/dwd/DISTRICT_DWD_DIFF-index.html",
+   "full_sha256": "138bf95b0a0ed8af522c526312495894a4f8b7aa89a9fd2c0284378f94ac20ad",
+   "http_status": 200,
+   "kept_bytes": 302905,
+   "method": "GET",
+   "name": "DISTRICT_DWD_DIFF-index.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 24 Nov 2026 07:38:26 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:26+00:00",
+   "sha256": "138bf95b0a0ed8af522c526312495894a4f8b7aa89a9fd2c0284378f94ac20ad",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/"
+  },
+  {
+   "bytes": 650247,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/stat/Z_CAP_C_EDZW_20261124003727_PVW_STATUS_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "bac3c847e0a835b6bef757893aabc590c2cb8c438cf3a6a8fc8cf43acf0edbc1",
+   "http_status": 200,
+   "kept_bytes": 650247,
+   "method": "GET",
+   "name": "stat/Z_CAP_C_EDZW_20261124003727_PVW_STATUS_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "650247",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:27 GMT",
+    "ETag": "\"6b04dc48-9ec07\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:37:28 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:27+00:00",
+   "sha256": "bac3c847e0a835b6bef757893aabc590c2cb8c438cf3a6a8fc8cf43acf0edbc1",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_STAT/Z_CAP_C_EDZW_20261124003727_PVW_STATUS_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 673484,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/stat/Z_CAP_C_EDZW_20261124073639_PVW_STATUS_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "12e6c7ae02159462eb5d036e96b833969563150591f68804413165704f0bf617",
+   "http_status": 200,
+   "kept_bytes": 673484,
+   "method": "GET",
+   "name": "stat/Z_CAP_C_EDZW_20261124073639_PVW_STATUS_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "673484",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:28 GMT",
+    "ETag": "\"6b053e88-a46cc\"",
+    "Last-Modified": "Tue, 24 Nov 2026 07:36:40 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:28+00:00",
+   "sha256": "12e6c7ae02159462eb5d036e96b833969563150591f68804413165704f0bf617",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_STAT/Z_CAP_C_EDZW_20261124073639_PVW_STATUS_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124003728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124003728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:30 GMT",
+    "ETag": "\"6b04dc49-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:37:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:29+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124003728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124004818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124004818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:30 GMT",
+    "ETag": "\"6b04ded3-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:48:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:30+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124004818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124005903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124005903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:31 GMT",
+    "ETag": "\"6b04e157-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:59:03 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:30+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124005903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124010953_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124010953_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:31 GMT",
+    "ETag": "\"6b04e3e1-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 01:09:53 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:31+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124010953_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124012008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124012008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:32 GMT",
+    "ETag": "\"6b04e649-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 01:20:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:31+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124012008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 3857,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124012808_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "c7cab3fb2c8ce8bc830b9b90699948af20d15ec6ca701f95baa380f70e214147",
+   "http_status": 200,
+   "kept_bytes": 3857,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124012808_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "3857",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:32 GMT",
+    "ETag": "\"6b04e829-f11\"",
+    "Last-Modified": "Tue, 24 Nov 2026 01:28:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:32+00:00",
+   "sha256": "c7cab3fb2c8ce8bc830b9b90699948af20d15ec6ca701f95baa380f70e214147",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124012808_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124013858_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124013858_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:33 GMT",
+    "ETag": "\"6b04eab2-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 01:38:58 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:32+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124013858_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124014958_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124014958_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:33 GMT",
+    "ETag": "\"6b04ed47-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 01:49:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:33+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124014958_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124020053_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124020053_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:34 GMT",
+    "ETag": "\"6b04efd5-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:00:53 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:33+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124020053_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124021153_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124021153_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:34 GMT",
+    "ETag": "\"6b04f269-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:11:53 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:34+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124021153_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124022213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124022213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:35 GMT",
+    "ETag": "\"6b04f4d6-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:22:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:35+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124022213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 2937,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124022558_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "7bb6d7be2c4009adbbd93e955d66751c608147fc218336d2788908f16756b0df",
+   "http_status": 200,
+   "kept_bytes": 2937,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124022558_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "2937",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:36 GMT",
+    "ETag": "\"6b04f5b7-b79\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:25:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:35+00:00",
+   "sha256": "7bb6d7be2c4009adbbd93e955d66751c608147fc218336d2788908f16756b0df",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124022558_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124023633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124023633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:36 GMT",
+    "ETag": "\"6b04f832-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:36:34 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:36+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124023633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 1911,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124024628_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "df890cab2e39ee4e1f5741f38c9bf2b7b4a49ab82b07c7e52c1506b8a9cd7bb7",
+   "http_status": 200,
+   "kept_bytes": 1911,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124024628_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "1911",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:37 GMT",
+    "ETag": "\"6b04fa85-777\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:46:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:36+00:00",
+   "sha256": "df890cab2e39ee4e1f5741f38c9bf2b7b4a49ab82b07c7e52c1506b8a9cd7bb7",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124024628_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124025728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124025728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:37 GMT",
+    "ETag": "\"6b04fd18-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 02:57:28 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:37+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124025728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 3327,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124030719_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "81a3121d4b1a1a72dc71d49bad8aa8ad2d5355da11b2e21a7913983c090592ff",
+   "http_status": 200,
+   "kept_bytes": 3327,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124030719_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "3327",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:38 GMT",
+    "ETag": "\"6b04ff67-cff\"",
+    "Last-Modified": "Tue, 24 Nov 2026 03:07:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:37+00:00",
+   "sha256": "81a3121d4b1a1a72dc71d49bad8aa8ad2d5355da11b2e21a7913983c090592ff",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124030719_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124031818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124031818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:38 GMT",
+    "ETag": "\"6b0501fa-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 03:18:18 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:38+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124031818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124032818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124032818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:39 GMT",
+    "ETag": "\"6b050452-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 03:28:18 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:38+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124032818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22247,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124033439_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "f66e930732948807f5262c13a2e35d1ae535b4ebd85fcbedf7f5fc4ec74574ca",
+   "http_status": 200,
+   "kept_bytes": 22247,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124033439_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22247",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:39 GMT",
+    "ETag": "\"6b0505d0-56e7\"",
+    "Last-Modified": "Tue, 24 Nov 2026 03:34:40 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:39+00:00",
+   "sha256": "f66e930732948807f5262c13a2e35d1ae535b4ebd85fcbedf7f5fc4ec74574ca",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124033439_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124034538_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124034538_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:40 GMT",
+    "ETag": "\"6b050863-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 03:45:39 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:40+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124034538_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124035543_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124035543_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:41 GMT",
+    "ETag": "\"6b050ac0-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 03:55:44 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:40+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124035543_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124040628_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124040628_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:41 GMT",
+    "ETag": "\"6b050d45-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 04:06:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:41+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124040628_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124041429_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124041429_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:42 GMT",
+    "ETag": "\"6b050f25-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 04:14:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:41+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124041429_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124042533_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124042533_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:42 GMT",
+    "ETag": "\"6b0511bd-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 04:25:33 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:42+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124042533_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124043633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124043633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:43 GMT",
+    "ETag": "\"6b051452-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 04:36:34 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:42+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124043633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124044633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124044633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:43 GMT",
+    "ETag": "\"6b0516aa-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 04:46:34 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:43+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124044633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124045723_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124045723_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:44 GMT",
+    "ETag": "\"6b051934-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 04:57:24 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:43+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124045723_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124050813_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124050813_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:44 GMT",
+    "ETag": "\"6b051bbe-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 05:08:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:44+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124050813_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124051823_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124051823_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:45 GMT",
+    "ETag": "\"6b051e1f-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 05:18:23 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:44+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124051823_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 2577,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124052804_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "3c5e4878f6ce047dc3d00aca137c548caeb5ded5073a3b2f09dc87749f7587a7",
+   "http_status": 200,
+   "kept_bytes": 2577,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124052804_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "2577",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:46 GMT",
+    "ETag": "\"6b052065-a11\"",
+    "Last-Modified": "Tue, 24 Nov 2026 05:28:05 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:45+00:00",
+   "sha256": "3c5e4878f6ce047dc3d00aca137c548caeb5ded5073a3b2f09dc87749f7587a7",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124052804_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124053903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124053903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:46 GMT",
+    "ETag": "\"6b0522f8-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 05:39:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:46+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124053903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 17072,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124054139_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "c7979bded1106cbb563d5c5da85847401253fb567122bbcd27c69b890fb180d5",
+   "http_status": 200,
+   "kept_bytes": 17072,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124054139_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "17072",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:47 GMT",
+    "ETag": "\"6b052394-42b0\"",
+    "Last-Modified": "Tue, 24 Nov 2026 05:41:40 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:46+00:00",
+   "sha256": "c7979bded1106cbb563d5c5da85847401253fb567122bbcd27c69b890fb180d5",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124054139_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124055238_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124055238_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:47 GMT",
+    "ETag": "\"6b052627-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 05:52:39 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:47+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124055238_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 2799,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124060044_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "7eff264ad5e207c28508f3631b4b57ee2511e4d10bad5f7c7711cff5eb831712",
+   "http_status": 200,
+   "kept_bytes": 2799,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124060044_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "2799",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:48 GMT",
+    "ETag": "\"6b05280d-aef\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:00:45 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:47+00:00",
+   "sha256": "7eff264ad5e207c28508f3631b4b57ee2511e4d10bad5f7c7711cff5eb831712",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124060044_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124061133_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124061133_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:48 GMT",
+    "ETag": "\"6b052a96-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:11:34 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:48+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124061133_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124062213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124062213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:49 GMT",
+    "ETag": "\"6b052d15-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:22:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:48+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124062213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124063218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124063218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:49 GMT",
+    "ETag": "\"6b052f73-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:32:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:49+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124063218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124064313_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124064313_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:50 GMT",
+    "ETag": "\"6b053202-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:43:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:49+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124064313_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 47640,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124064759_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "33ff053e343536f521a50dc073e5e41ab8dc39d5a554565aacc9972fd21babf5",
+   "http_status": 200,
+   "kept_bytes": 47640,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124064759_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "47640",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:50 GMT",
+    "ETag": "\"6b053328-ba18\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:48:08 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:50+00:00",
+   "sha256": "33ff053e343536f521a50dc073e5e41ab8dc39d5a554565aacc9972fd21babf5",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124064759_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 7777,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124064929_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "0d5cb13d67a321a6a53f94b17b7c699df8b694a22280b4f18c60d4c16593e50f",
+   "http_status": 200,
+   "kept_bytes": 7777,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124064929_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "7777",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:51 GMT",
+    "ETag": "\"6b053379-1e61\"",
+    "Last-Modified": "Tue, 24 Nov 2026 06:49:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:51+00:00",
+   "sha256": "0d5cb13d67a321a6a53f94b17b7c699df8b694a22280b4f18c60d4c16593e50f",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124064929_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124065903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124065903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:52 GMT",
+    "ETag": "\"6b053891-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 07:11:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:51+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124065903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124071003_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124071003_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:52 GMT",
+    "ETag": "\"6b053891-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 07:11:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:52+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124071003_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124072008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124072008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:53 GMT",
+    "ETag": "\"6b053aa9-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 07:20:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:52+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124072008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124073103_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124073103_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:53 GMT",
+    "ETag": "\"6b053d37-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 07:31:03 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:53+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124073103_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124073639_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124073639_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:38:54 GMT",
+    "ETag": "\"6b053e88-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 07:36:40 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:38:53+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124073639_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 146377,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123113059_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "1754f102b87d9391e945a2e922ffae9e4e0c16f3e5d310fb6d6e150d164517b2",
+   "http_status": 200,
+   "kept_bytes": 146377,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123113059_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "146377",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:45 GMT",
+    "ETag": "\"6b0423f5-23bc9\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:31:01 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:44+00:00",
+   "sha256": "1754f102b87d9391e945a2e922ffae9e4e0c16f3e5d310fb6d6e150d164517b2",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123113059_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 279427,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123113224_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "83003cd80625682f7bd7b25786fc8073d462af24cc7fcf89fdee408be490382d",
+   "http_status": 200,
+   "kept_bytes": 279427,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123113224_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "279427",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:45 GMT",
+    "ETag": "\"6b0424e2-44383\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:34:58 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:45+00:00",
+   "sha256": "83003cd80625682f7bd7b25786fc8073d462af24cc7fcf89fdee408be490382d",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123113224_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 36609,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123113356_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "39bc738b9944e2936e79d1569808ac88e50fa9b4d034c5e8ae279f33f618201f",
+   "http_status": 200,
+   "kept_bytes": 36609,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123113356_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "36609",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:46 GMT",
+    "ETag": "\"6b04250a-8f01\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:35:38 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:46+00:00",
+   "sha256": "39bc738b9944e2936e79d1569808ac88e50fa9b4d034c5e8ae279f33f618201f",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123113356_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 69706,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123113529_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "bda126045950be299a785c9e13b06c0a67eb73b2d097f69e6171730fc2f3baef",
+   "http_status": 200,
+   "kept_bytes": 69706,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123113529_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "69706",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:47 GMT",
+    "ETag": "\"6b042510-1104a\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:35:44 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:47+00:00",
+   "sha256": "bda126045950be299a785c9e13b06c0a67eb73b2d097f69e6171730fc2f3baef",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123113529_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 13533,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123113819_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "b20014027e9082f6e9a69acf991a7c30dbfcd1f36fe4e9cca1a3238fd6a65247",
+   "http_status": 200,
+   "kept_bytes": 13533,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123113819_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "13533",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:48 GMT",
+    "ETag": "\"6b0425ab-34dd\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:38:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:47+00:00",
+   "sha256": "b20014027e9082f6e9a69acf991a7c30dbfcd1f36fe4e9cca1a3238fd6a65247",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123113819_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 25878,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123113944_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "55528fab7cbbfafd1d91ee64a5229a8f3f7d026fce179af67ea4076577f760a4",
+   "http_status": 200,
+   "kept_bytes": 25878,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123113944_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "25878",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:48 GMT",
+    "ETag": "\"6b042600-6516\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:39:44 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:48+00:00",
+   "sha256": "55528fab7cbbfafd1d91ee64a5229a8f3f7d026fce179af67ea4076577f760a4",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123113944_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123115038_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123115038_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:49 GMT",
+    "ETag": "\"6b04288e-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 11:50:38 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:49+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123115038_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123120108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123120108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:50 GMT",
+    "ETag": "\"6b042b05-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 12:01:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:49+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123120108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123121158_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123121158_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:50 GMT",
+    "ETag": "\"6b042d8f-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 12:11:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:50+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123121158_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123122218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123122218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:51 GMT",
+    "ETag": "\"6b042ffb-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 12:22:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:50+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123122218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123123318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123123318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:51 GMT",
+    "ETag": "\"6b04328f-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 12:33:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:51+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123123318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123124408_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123124408_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:52 GMT",
+    "ETag": "\"6b04351a-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 12:44:10 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:51+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123124408_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123125503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123125503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:52 GMT",
+    "ETag": "\"6b0437a8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 12:55:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:52+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123125503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123130558_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123130558_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:53 GMT",
+    "ETag": "\"6b043a37-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 13:05:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:52+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123130558_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123131643_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123131643_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:53 GMT",
+    "ETag": "\"6b043cbc-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 13:16:44 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:53+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123131643_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123132733_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123132733_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:54 GMT",
+    "ETag": "\"6b043f45-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 13:27:33 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:53+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123132733_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123133828_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123133828_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:54 GMT",
+    "ETag": "\"6b0441d5-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 13:38:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:54+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123133828_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123134923_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123134923_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:55 GMT",
+    "ETag": "\"6b044464-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 13:49:24 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:55+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123134923_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123140008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123140008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:56 GMT",
+    "ETag": "\"6b0446e9-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:00:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:55+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123140008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123141058_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123141058_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:56 GMT",
+    "ETag": "\"6b044973-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:10:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:56+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123141058_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123142114_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123142114_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:57 GMT",
+    "ETag": "\"6b044bdb-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:21:15 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:56+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123142114_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123143158_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123143158_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:57 GMT",
+    "ETag": "\"6b044e5f-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:31:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:57+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123143158_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22411,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123143314_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "9b1b0c592a4e6d61ee601be08b6ea09e7489fdad0ea74957353dcc7c7be9a2f8",
+   "http_status": 200,
+   "kept_bytes": 22411,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123143314_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22411",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:58 GMT",
+    "ETag": "\"6b044eab-578b\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:33:15 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:57+00:00",
+   "sha256": "9b1b0c592a4e6d61ee601be08b6ea09e7489fdad0ea74957353dcc7c7be9a2f8",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123143314_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123144418_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123144418_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:59 GMT",
+    "ETag": "\"6b045143-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:44:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:58+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123144418_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123145503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123145503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:39:59 GMT",
+    "ETag": "\"6b0453c8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 14:55:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:59+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123145503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123150603_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123150603_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:00 GMT",
+    "ETag": "\"6b04565c-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 15:06:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:39:59+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123150603_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123151658_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123151658_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:00 GMT",
+    "ETag": "\"6b0458eb-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 15:16:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:00+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123151658_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123152728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123152728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:01 GMT",
+    "ETag": "\"6b045b61-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 15:27:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:00+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123152728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123153818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123153818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:01 GMT",
+    "ETag": "\"6b045deb-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 15:38:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:01+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123153818_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123154913_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123154913_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:02 GMT",
+    "ETag": "\"6b04607a-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 15:49:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:01+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123154913_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123155903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123155903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:03 GMT",
+    "ETag": "\"6b0462c8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 15:59:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:02+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123155903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123160953_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123160953_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:03 GMT",
+    "ETag": "\"6b046552-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:09:54 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:03+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123160953_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 7654,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123161323_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "df1c9a8d1a617f36349d74b9bd5313b28865238520725ec8107a9c25af588e07",
+   "http_status": 200,
+   "kept_bytes": 7654,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123161323_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "7654",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:04 GMT",
+    "ETag": "\"6b046624-1de6\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:13:24 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:03+00:00",
+   "sha256": "df1c9a8d1a617f36349d74b9bd5313b28865238520725ec8107a9c25af588e07",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123161323_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123162423_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123162423_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:04 GMT",
+    "ETag": "\"6b0468b7-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:24:23 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:04+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123162423_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 18962,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123163004_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "4a0e35ce929d8ddeb3534572a00764c1e1e7db75be5008702e70ddbdbce4c268",
+   "http_status": 200,
+   "kept_bytes": 18962,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123163004_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "18962",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:05 GMT",
+    "ETag": "\"6b046a0d-4a12\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:30:05 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:04+00:00",
+   "sha256": "4a0e35ce929d8ddeb3534572a00764c1e1e7db75be5008702e70ddbdbce4c268",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123163004_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123164013_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123164013_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:06 GMT",
+    "ETag": "\"6b046c6d-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:40:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:05+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123164013_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123165013_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123165013_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:06 GMT",
+    "ETag": "\"6b046ec6-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:50:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:06+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123165013_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123165903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123165903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:07 GMT",
+    "ETag": "\"6b0470d8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 16:59:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:06+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123165903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123170948_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123170948_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:07 GMT",
+    "ETag": "\"6b04735c-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:09:48 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:07+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123170948_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123172008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123172008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:08 GMT",
+    "ETag": "\"6b0475c8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:20:08 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:07+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123172008_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123173023_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123173023_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:08 GMT",
+    "ETag": "\"6b047830-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:30:24 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:08+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123173023_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123174118_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123174118_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:09 GMT",
+    "ETag": "\"6b047abe-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:41:18 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:08+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123174118_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 60920,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123174659_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "27ee2f7ed2b416ea18fcd9d9234be2002674cefc5fb063faafabff13764cd61e",
+   "http_status": 200,
+   "kept_bytes": 60920,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123174659_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "60920",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:09 GMT",
+    "ETag": "\"6b047c13-edf8\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:46:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:09+00:00",
+   "sha256": "27ee2f7ed2b416ea18fcd9d9234be2002674cefc5fb063faafabff13764cd61e",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123174659_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123175728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123175728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:10 GMT",
+    "ETag": "\"6b047e88-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:57:28 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:10+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123175728_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 137768,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123175854_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "cf320f06908cfe0e5d215dc35a44e6917f06f9945410b9c1bddac4bcdcd6abdd",
+   "http_status": 200,
+   "kept_bytes": 137768,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123175854_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "137768",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:11 GMT",
+    "ETag": "\"6b047ede-21a28\"",
+    "Last-Modified": "Mon, 23 Nov 2026 17:58:54 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:10+00:00",
+   "sha256": "cf320f06908cfe0e5d215dc35a44e6917f06f9945410b9c1bddac4bcdcd6abdd",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123175854_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 62679,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123180024_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "02782e5c853cdcf4eb257c3a593cb381b97c7f75cec2738debf5a5a39e241608",
+   "http_status": 200,
+   "kept_bytes": 62679,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123180024_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "62679",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:12 GMT",
+    "ETag": "\"6b047f39-f4d7\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:00:25 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:11+00:00",
+   "sha256": "02782e5c853cdcf4eb257c3a593cb381b97c7f75cec2738debf5a5a39e241608",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123180024_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123181054_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123181054_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:12 GMT",
+    "ETag": "\"6b0481ae-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:10:54 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:12+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123181054_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123182103_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123182103_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:13 GMT",
+    "ETag": "\"6b048410-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:21:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:12+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123182103_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 5690,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123183124_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "a12e9309711c12d9dc485c6efb859aad8549720b38750c5b00fde866fca24e5a",
+   "http_status": 200,
+   "kept_bytes": 5690,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123183124_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "5690",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:13 GMT",
+    "ETag": "\"6b04867c-163a\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:31:24 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:13+00:00",
+   "sha256": "a12e9309711c12d9dc485c6efb859aad8549720b38750c5b00fde866fca24e5a",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123183124_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123184143_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123184143_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:14 GMT",
+    "ETag": "\"6b0488e7-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:41:43 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:14+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123184143_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123185213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123185213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:15 GMT",
+    "ETag": "\"6b048b5d-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:52:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:14+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123185213_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123185938_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123185938_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:15 GMT",
+    "ETag": "\"6b048d1a-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 18:59:38 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:15+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123185938_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123191023_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123191023_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:16 GMT",
+    "ETag": "\"6b048f9f-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 19:10:23 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:15+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123191023_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123192108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123192108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:16 GMT",
+    "ETag": "\"6b049224-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 19:21:08 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:16+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123192108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123193208_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123193208_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:17 GMT",
+    "ETag": "\"6b0494b8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 19:32:08 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:16+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123193208_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123194253_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123194253_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:17 GMT",
+    "ETag": "\"6b04973e-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 19:42:54 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:17+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123194253_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123195338_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123195338_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:18 GMT",
+    "ETag": "\"6b0499c3-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 19:53:39 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:17+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123195338_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123200423_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123200423_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:18 GMT",
+    "ETag": "\"6b049c47-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:04:23 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:18+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123200423_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 2919,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123201259_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8ba4a7a9660a0f6a0e2597e84549f36ac4cce51d8410caba6bb751b6540bfb40",
+   "http_status": 200,
+   "kept_bytes": 2919,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123201259_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "2919",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:19 GMT",
+    "ETag": "\"6b049e4b-b67\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:12:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:19+00:00",
+   "sha256": "8ba4a7a9660a0f6a0e2597e84549f36ac4cce51d8410caba6bb751b6540bfb40",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123201259_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123202318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123202318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:20 GMT",
+    "ETag": "\"6b04a0b7-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:23:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:19+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123202318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123203413_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123203413_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:20 GMT",
+    "ETag": "\"6b04a345-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:34:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:20+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123203413_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123204508_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123204508_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:21 GMT",
+    "ETag": "\"6b04a5d4-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:45:08 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:20+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123204508_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 7501,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123204758_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "e174fa055f95805cb07dba9c829266a6db3ac66126927de1243b67538c8069b4",
+   "http_status": 200,
+   "kept_bytes": 7501,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123204758_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "7501",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:21 GMT",
+    "ETag": "\"6b04a67f-1d4d\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:47:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:21+00:00",
+   "sha256": "e174fa055f95805cb07dba9c829266a6db3ac66126927de1243b67538c8069b4",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123204758_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123205858_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123205858_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:22 GMT",
+    "ETag": "\"6b04a913-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:58:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:21+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123205858_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123205920_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123205920_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:22 GMT",
+    "ETag": "\"6b04a928-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 20:59:20 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:22+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123205920_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123211018_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123211018_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:23 GMT",
+    "ETag": "\"6b04abbb-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 21:10:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:22+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123211018_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123212113_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123212113_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:23 GMT",
+    "ETag": "\"6b04ae4a-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 21:21:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:23+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123212113_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123213218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123213218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:24 GMT",
+    "ETag": "\"6b04b0e3-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 21:32:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:24+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123213218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123214303_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123214303_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:25 GMT",
+    "ETag": "\"6b04b367-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 21:43:03 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:24+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123214303_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123215328_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123215328_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:25 GMT",
+    "ETag": "\"6b04b5d8-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 21:53:28 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:25+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123215328_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 6759,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123220009_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "ca46c313c569b659651030aeacd4593c186b86843dacc43e97f3f6381d58d1e7",
+   "http_status": 200,
+   "kept_bytes": 6759,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123220009_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "6759",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:26 GMT",
+    "ETag": "\"6b04b76a-1a67\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:00:10 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:25+00:00",
+   "sha256": "ca46c313c569b659651030aeacd4593c186b86843dacc43e97f3f6381d58d1e7",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123220009_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123221108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123221108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:26 GMT",
+    "ETag": "\"6b04b9fd-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:11:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:26+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123221108_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123222113_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123222113_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:27 GMT",
+    "ETag": "\"6b04bc59-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:21:13 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:26+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123222113_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 50164,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123223119_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "87f8e9870b48381da1ba9e1df82f1c15efb9db869340d666c982c4c1d0cdfeef",
+   "http_status": 200,
+   "kept_bytes": 50164,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123223119_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "50164",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:27 GMT",
+    "ETag": "\"6b04beb7-c3f4\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:31:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:27+00:00",
+   "sha256": "87f8e9870b48381da1ba9e1df82f1c15efb9db869340d666c982c4c1d0cdfeef",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123223119_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123224218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123224218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:28 GMT",
+    "ETag": "\"6b04c14b-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:42:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:28+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123224218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123225318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123225318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:29 GMT",
+    "ETag": "\"6b04c3df-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:53:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:28+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123225318_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123225903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123225903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:29 GMT",
+    "ETag": "\"6b04c538-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 22:59:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:29+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123225903_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 10501,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123230028_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "4ea04d45ee65b1f296978932c70536bd2affde4bf14a4b0a2d7d660f5acdc8fd",
+   "http_status": 200,
+   "kept_bytes": 10501,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123230028_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "10501",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:30 GMT",
+    "ETag": "\"6b04c58d-2905\"",
+    "Last-Modified": "Mon, 23 Nov 2026 23:00:29 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:29+00:00",
+   "sha256": "4ea04d45ee65b1f296978932c70536bd2affde4bf14a4b0a2d7d660f5acdc8fd",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123230028_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123231118_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123231118_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:30 GMT",
+    "ETag": "\"6b04c817-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 23:11:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:30+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123231118_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123232218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123232218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:31 GMT",
+    "ETag": "\"6b04caab-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 23:22:19 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:30+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123232218_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123233313_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123233313_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:31 GMT",
+    "ETag": "\"6b04cd3a-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 23:33:14 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:31+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123233313_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123234408_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123234408_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:32 GMT",
+    "ETag": "\"6b04cfc9-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 23:44:09 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:31+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123234408_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261123235503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261123235503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:32 GMT",
+    "ETag": "\"6b04d258-16\"",
+    "Last-Modified": "Mon, 23 Nov 2026 23:55:04 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:32+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261123235503_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124000533_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124000533_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:33 GMT",
+    "ETag": "\"6b04d4cd-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:05:33 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:32+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124000533_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124001623_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124001623_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:34 GMT",
+    "ETag": "\"6b04d757-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:16:23 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:33+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124001623_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 22,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "application/zip",
+   "file": "leadtime/probes/2026-11-24/dwd/diff/Z_CAP_C_EDZW_20261124002633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "full_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "http_status": 200,
+   "kept_bytes": 22,
+   "method": "GET",
+   "name": "diff/Z_CAP_C_EDZW_20261124002633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "22",
+    "Content-Type": "application/zip",
+    "Date": "Tue, 24 Nov 2026 07:40:34 GMT",
+    "ETag": "\"6b04d9ba-16\"",
+    "Last-Modified": "Tue, 24 Nov 2026 00:26:34 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:34+00:00",
+   "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/Z_CAP_C_EDZW_20261124002633_PVW_DIFFERENCE_PREMIUMDWD_DISTRICT_DE.zip"
+  },
+  {
+   "bytes": 869,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "leadtime/probes/2026-11-24/dwd/opendata-root.html",
+   "full_sha256": "94176daf86e40908dd51a7b517bf341756af89cf5d90d815049bf64aa08582f3",
+   "http_status": 200,
+   "kept_bytes": 869,
+   "method": "GET",
+   "name": "opendata-root.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 24 Nov 2026 07:40:43 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:43+00:00",
+   "sha256": "94176daf86e40908dd51a7b517bf341756af89cf5d90d815049bf64aa08582f3",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/"
+  },
+  {
+   "bytes": 2031,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html",
+   "file": "leadtime/probes/2026-11-24/dwd/weather-index.html",
+   "full_sha256": "d60346ad02261cd80c1f53e831bf5d891de7c283ed1863e9e9438718e9e133d4",
+   "http_status": 200,
+   "kept_bytes": 2031,
+   "method": "GET",
+   "name": "weather-index.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html",
+    "Date": "Tue, 24 Nov 2026 07:40:44 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:43+00:00",
+   "sha256": "d60346ad02261cd80c1f53e831bf5d891de7c283ed1863e9e9438718e9e133d4",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/weather/"
+  },
+  {
+   "bytes": 98934,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": null,
+   "derivation": "text excerpt of the footer (licence line); markup, scripts, the per-session token and the 80 feed links dropped; full_sha256 is of the bytes received; the contact address replaced by a placeholder",
+   "file": "leadtime/probes/2026-11-24/meteoalarm/feeds-root.excerpt.txt",
+   "full_sha256": "fd0b3bf0986879003e3af4c9885a6fc5b4050debf9224d2d0bb852488f53c685",
+   "http_status": 200,
+   "kept_bytes": 191,
+   "method": "GET",
+   "name": "feeds-root.excerpt.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {},
+   "retrieved_at": "2026-11-24T07:40:44+00:00",
+   "sha256": "5767266983ee289907f92405feca13f72dc2c9f4394aad498db1984af805de00",
+   "source": "meteoalarm",
+   "truncated": true,
+   "url": "https://feeds.meteoalarm.org/"
+  },
+  {
+   "bytes": 408,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/plain; charset=utf-8",
+   "file": "leadtime/probes/2026-11-24/metoffice/robots.txt",
+   "full_sha256": "5ce28ffa3233ca8528b06c61b06c1cb859066ac1ed852a86e79bd075bfd7e4d3",
+   "http_status": 200,
+   "kept_bytes": 408,
+   "method": "GET",
+   "name": "robots.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "public, max-age=1090",
+    "Content-Length": "408",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Date": "Tue, 24 Nov 2026 07:40:45 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:45+00:00",
+   "sha256": "5ce28ffa3233ca8528b06c61b06c1cb859066ac1ed852a86e79bd075bfd7e4d3",
+   "source": "metoffice",
+   "truncated": false,
+   "url": "https://www.metoffice.gov.uk/robots.txt"
+  },
+  {
+   "bytes": 1280,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/plain",
+   "file": "leadtime/probes/2026-11-24/dwd/README.txt",
+   "full_sha256": "e5f2e884e21cc5517a77969acdba3f2921da3f5b753d52526917ac8134661d3b",
+   "http_status": 200,
+   "kept_bytes": 1280,
+   "method": "GET",
+   "name": "README.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "1280",
+    "Content-Type": "text/plain",
+    "Date": "Tue, 24 Nov 2026 07:40:51 GMT",
+    "ETag": "\"6998d1a6-500\"",
+    "Last-Modified": "Fri, 20 Feb 2026 21:27:02 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:51+00:00",
+   "sha256": "e5f2e884e21cc5517a77969acdba3f2921da3f5b753d52526917ac8134661d3b",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/README.txt"
+  },
+  {
+   "bytes": 1369,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/plain",
+   "file": "leadtime/probes/2026-11-24/dwd/LIESMICH.txt",
+   "full_sha256": "65212cd96656e8465b1c236b2923f8c12f6fd01bb98685fb59ca2bddc4470ab8",
+   "http_status": 200,
+   "kept_bytes": 1369,
+   "method": "GET",
+   "name": "LIESMICH.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "1369",
+    "Content-Type": "text/plain",
+    "Date": "Tue, 24 Nov 2026 07:40:52 GMT",
+    "ETag": "\"65169e3f-559\"",
+    "Last-Modified": "Fri, 29 Sep 2023 09:51:59 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:51+00:00",
+   "sha256": "65212cd96656e8465b1c236b2923f8c12f6fd01bb98685fb59ca2bddc4470ab8",
+   "source": "dwd",
+   "truncated": false,
+   "url": "https://opendata.dwd.de/LIESMICH.txt"
+  },
+  {
+   "bytes": 87588,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": "text/html; charset=utf-8",
+   "derivation": "text excerpt of the archive section; site navigation dropped, the library's contact address replaced by a placeholder; full_sha256 is of the bytes received",
+   "file": "leadtime/probes/2026-11-24/metoffice/nswws-library.excerpt.txt",
+   "full_sha256": "6f8ed4bcaaab4c962623fab845eaedf57032ac7a42c4853f33328ec113d06963",
+   "http_status": 200,
+   "kept_bytes": 3201,
+   "method": "GET",
+   "name": "nswws-library.excerpt.txt",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Cache-Control": "public, max-age=299",
+    "Content-Type": "text/html; charset=utf-8",
+    "Date": "Tue, 24 Nov 2026 07:40:53 GMT"
+   },
+   "retrieved_at": "2026-11-24T07:40:52+00:00",
+   "sha256": "e48b8f8c768b00639c020a10f662d486bce247c2f9b383e86bc1317da66f6d8b",
+   "source": "metoffice",
+   "truncated": true,
+   "url": "https://www.metoffice.gov.uk/research/library-and-archive/publications/national-severe-weather-warning-service"
+  },
+  {
+   "bytes": 989,
+   "client": "standard-library client, one attempt, no retry",
+   "content_type": null,
+   "file": "leadtime/probes/2026-11-24/meteoalarm/feed-luxembourg.xml",
+   "full_sha256": "520dcdd95a9b6eb2651541812810375630244417ef284a83847bdf98e96150ac",
+   "http_status": 200,
+   "kept_bytes": 989,
+   "method": "GET",
+   "name": "feed-luxembourg.xml",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {},
+   "retrieved_at": "2026-11-24T07:40:59+00:00",
+   "sha256": "520dcdd95a9b6eb2651541812810375630244417ef284a83847bdf98e96150ac",
+   "source": "meteoalarm",
+   "truncated": false,
+   "url": "https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-luxembourg"
+  }
+ ],
+ "not_kept": [
+  {
+   "reason": "exploratory listing before the probe script; listing fetched again and kept where needed",
+   "url": "https://opendata.dwd.de/weather/alerts/cap/"
+  },
+  {
+   "reason": "exploratory listing before the probe script; listing fetched again and kept where needed",
+   "url": "https://opendata.dwd.de/weather/alerts/cap/COMMUNEUNION_DWD_STAT/"
+  },
+  {
+   "reason": "exploratory listing before the probe script; listing fetched again and kept where needed",
+   "url": "https://opendata.dwd.de/weather/alerts/cap/COMMUNEUNION_DWD_DIFF/"
+  },
+  {
+   "reason": "exploratory listing before the probe script; listing fetched again and kept where needed",
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_STAT/"
+  },
+  {
+   "reason": "exploratory listing before the probe script; listing fetched again and kept where needed",
+   "url": "https://opendata.dwd.de/weather/alerts/cap/DISTRICT_DWD_DIFF/"
+  }
+ ]
+}

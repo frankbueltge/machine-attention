@@ -1,0 +1,21 @@
+User-Agent: Swiftbot
+
+User-Agent: *
+Disallow: /alive/
+Disallow: /brand/
+Disallow: /conference/
+Disallow: /images/
+Disallow: /lib/
+Disallow: /public/data/
+Disallow: /public/weather/lib/
+Disallow: /eurocontrol/
+Disallow: /magister/
+Disallow: /premium/
+Disallow: /weather/africa/lam/
+Disallow: /staff
+Disallow: /weather/test/
+
+User-Agent: proximic
+Disallow: /
+
+Sitemap: https://www.metoffice.gov.uk/sitemap.xml
