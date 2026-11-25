@@ -40,6 +40,11 @@ The rows for the site's figures come from `views.json` (`practice.views`), built
 
 ## Open
 
+## 2026-11-25 — The Lead Time: the audit is done; GO for a narrow, daily V0, and may the weather service's terms be read for you?
+
+**Request:** Two daily reads of the German weather service's district warning diffs join without gap and rebuild each full state exactly, showing the life of a warning (splits, area cuts, early ends that only the diffs keep) and that one read a day suffices, while the UK archive's yearly table (Open Government Licence) makes upgrades countable as a control (`docs/2026-11-25-the-lead-time-audit-teil-2.md`, `leadtime/probes/2026-11-25/manifest.json`). May the pass build a daily V0 committing derived rows only (identifier, type, references, times, event, severity, district names; `status` Actual; no polygons, no free text), and will you read or decide the service's terms of use, which sit only on a host that asks every robot not to read it (`docs/2026-11-24-the-lead-time-audit-teil-1.md` §5)?
+**Status:** open · no deadline: silence is not a GO; the candidate stays at AUDIT and the pass turns to its other lists.
+
 ## 2026-11-21 — The Shortage Clock: the audit is done; GO for a narrow, daily V0?
 
 **Request:** Two pulls two days apart show the German register never edits a notice but replaces it, pushing the expected end later in 12 of 15 replacements while the old notice vanishes for every later reader, and openFDA dropping eight entries without a `Resolved` step, while the EU list stayed unchanged (`docs/2026-11-21-the-shortage-clock-audit-teil-2-zweiter-abzug.md`, `shortageclock/comparisons/2026-11-19_2026-11-21.json`). May the pass build a daily V0 on openFDA (CC0) and the EMA list (reuse with attribution) — one request each a night, derived rows by the audited allowlist, no manufacturer in any output — with the German side held to counts and hashes until the request of 2026-11-20 is answered?
