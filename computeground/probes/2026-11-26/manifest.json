@@ -1,0 +1,44 @@
+{
+ "date": "2026-11-26",
+ "document": "docs/2026-11-26-compute-ground-wiederlesung.md",
+ "entries": [
+  {
+   "bytes": 7624,
+   "client": "command-line client, one attempt, redirects followed (link.europa.eu 307 -> dashboard host)",
+   "content_type": "text/html;charset=utf-8",
+   "derivation": "verbatim: the script application's shell page; it carries no figures",
+   "file": "computeground/probes/2026-11-26/dashboard-shell.html",
+   "full_sha256": "8e735a1a9e6f236f037ca928e1d68ef0c02a665edf26222386f033abf361b199",
+   "http_status": 200,
+   "kept_bytes": 7624,
+   "method": "GET",
+   "name": "dashboard-shell.html",
+   "request_body": null,
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html;charset=utf-8",
+    "Date": "Thu, 26 Nov 2026 07:41:06 GMT"
+   },
+   "retrieved_at": "2026-11-26T07:41:06+00:00",
+   "sha256": "8e735a1a9e6f236f037ca928e1d68ef0c02a665edf26222386f033abf361b199",
+   "source": "ec-dashboard",
+   "truncated": false,
+   "url": "https://link.europa.eu/q7x39t",
+   "url_effective": "https://dashboard.tech.ec.europa.eu/qs_digit_dashboard_mt/public/sense/app/940a61c3-bcfe-47d6-a786-25d93aa63b85/sheet/ZLWpJa/state/analysis/bookmark/381456a5-1044-4047-92f5-671be7ad92c4"
+  }
+ ],
+ "not_kept": [
+  {
+   "http_status": 403,
+   "note": "answered by this container's network policy (policy_denied page), not by the host; not judged",
+   "url": "https://policy-reporting-platform.ec.europa.eu/robots.txt"
+  },
+  {
+   "http_status": 403,
+   "note": "same policy_denied page from this container's network policy; not judged",
+   "url": "https://dashboard.tech.ec.europa.eu/robots.txt"
+  }
+ ]
+}
