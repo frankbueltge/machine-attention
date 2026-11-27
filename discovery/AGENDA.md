@@ -43,7 +43,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-24:** nothing due (Tuesday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to The Lead Time (AUDIT part 1).
 - **2026-11-25:** nothing due (Wednesday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to The Lead Time (AUDIT part 2).
 - **2026-11-26:** nothing due (Thursday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to re-reading Compute Ground's blocker.
-- **Updated:** 2026-11-26 (pass)
+- **2026-11-27:** nothing due (Friday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to re-reading The Afterlife's blocker.
+- **Updated:** 2026-11-27 (pass)
 
 ## Next
 
@@ -215,7 +216,8 @@ RUNNING (any time: RETIRED).*
 - **Re-read when:** the maintainer reads the file as not binding the interface — then a narrow V0
   sketch (Crossref cohort from day one, daily PubMed check per open DOI, OpenAlex as control from a
   runner) and the GO request.
-- **Updated:** 2026-10-30 (pass)
+- **Re-read 2026-11-27** (`docs/2026-11-27-the-afterlife-wiederlesung.md`, 3 one-attempt requests in `afterlife/probes/2026-11-27/manifest.json`; `verify.py` now holds `afterlife/probes/`, hash-only entries may claim no kept bytes): the E-utilities `robots.txt` is **byte-identical** to 2026-10-30 (`Disallow: /`, Last-Modified 2014) — **not fallen**. The operator's usage-guidelines page (`www.ncbi.nlm.nih.gov/books/NBK25497/`, allowed by the www host's `robots.txt` for every agent) answered with a browser-check page, held by hash only, not retried. So the counterweight in `REQUESTS.md` (2026-10-30) rests in the record on the header `X-Ratelimit-Limit: 3` alone; the file's "back-end server version" header line is template text (it heads the www host's 390-line rule file too). Note added to `REQUESTS.md` (2026-10-30); no new request. Stays parked.
+- **Updated:** 2026-11-27 (pass)
 
 ### The Provisional Air — how much of what the public was told about its air survives validation
 
@@ -340,6 +342,7 @@ RUNNING (any time: RETIRED).*
   2026-11-25). Silence is not a GO.
 - **Next step:** none until the GO. Then V0 increment 1: diff reader (`status` Actual, derived rows by the
   audited field list, no polygons) with `verify.py` rebuilding the day's last full state from the diffs.
+- **2026-11-27:** held; `REQUESTS.md` (2026-11-25) unanswered. No fetch, no code.
 - **2026-11-26:** held; `REQUESTS.md` (2026-11-25) unanswered. No fetch, no code (audit part 2 §4: nothing until the answer). The district diffs of the two probes leave the publisher's ≈ 48 h window today; what is lost by waiting is the past, not the method.
 - **Updated:** 2026-11-26 (pass)
 
@@ -391,7 +394,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-24:** `memoryhole/readings/2026-11-22.json` (commit `792a27c`) — 20 entries, **0 sampled** (controls only), 21 failures (log line of 2026-11-23: 108 requests, 22 institutions), 0 abstentions, no verdicts due. Fifth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-25:** `memoryhole/readings/2026-11-23.json` (commit `68379b1`) — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-24: 105 requests, 22 institutions), 0 abstentions, no verdicts due. Sixth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-26:** `memoryhole/readings/2026-11-24.json` (commit `5e8243d`) — 20 entries, **0 sampled** (controls only), 17 failures (HTTP 503/504 and timeouts after 4 attempts at the archive's index; log line of 2026-11-25: 102 requests, 22 institutions), 0 abstentions, no verdicts due. Seventh night in a row with no institution sampled. One reachability check from this container to the archive (one request, not kept) failed again at the tunnel, as on 2026-10-28, so the counter-test still needs a runner. The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered, and by its own terms nothing in Memory Hole changes.
-- **Updated:** 2026-11-26 (pass)
+- **2026-11-27:** `memoryhole/readings/2026-11-25.json` (commit `4a09bad`) — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-26: 111 requests, 22 institutions), 0 abstentions, no verdicts due. Eighth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-27 (pass)
 
 ## Parked
 
