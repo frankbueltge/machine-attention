@@ -60,6 +60,13 @@ def check_snapshots(root: Path, base: str, problems: list[str],
             if missing:
                 problems.append(f"{manifest_path}: entry missing {missing}")
                 continue
+            if entry["file"] is None:
+                # Held by hash only (an answer sent before a rule was weighed, or a
+                # block page): no bytes may claim to be kept for it.
+                if entry.get("kept_bytes", 0) != 0:
+                    problems.append(f"{manifest_path}: hash-only entry for "
+                                    f"{entry['url']} claims kept bytes")
+                continue
             target = root / entry["file"]
             listed.add(entry["file"])
             if not target.exists():
@@ -2694,6 +2701,7 @@ def check(root: Path) -> list[str]:
     check_snapshots(root, "shortageclock/probes", problems, registry_files, False)
     check_snapshots(root, "leadtime/probes", problems, registry_files, False)
     check_snapshots(root, "computeground/probes", problems, registry_files, False)
+    check_snapshots(root, "afterlife/probes", problems, registry_files, False)
 
     check_retired(root, problems)
 

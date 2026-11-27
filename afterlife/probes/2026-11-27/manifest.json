@@ -1,0 +1,80 @@
+{
+ "date": "2026-11-27",
+ "document": "docs/2026-11-27-the-afterlife-wiederlesung.md",
+ "entries": [
+  {
+   "bytes": 178,
+   "client": "command-line client, one attempt, no retry",
+   "content_type": "text/plain",
+   "file": "afterlife/probes/2026-11-27/pubmed/robots.txt",
+   "full_sha256": "ead5515bac4e17bafb45312b93ca74f15ea098086a1c678f42a8319f3b369ac8",
+   "http_status": 200,
+   "kept_bytes": 178,
+   "name": "robots.txt",
+   "note": "byte-identical to afterlife/probes/2026-10-30/pubmed/robots.txt (same sha256)",
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "178",
+    "Date": "Fri, 27 Nov 2026 07:39:15 GMT",
+    "Last-Modified": "Tue, 17 Jun 2014 17:40:27 GMT"
+   },
+   "retrieved_at": "2026-11-27T07:39:15+00:00",
+   "sha256": "ead5515bac4e17bafb45312b93ca74f15ea098086a1c678f42a8319f3b369ac8",
+   "source": "pubmed",
+   "truncated": false,
+   "url": "https://eutils.ncbi.nlm.nih.gov/robots.txt"
+  },
+  {
+   "bytes": 10819,
+   "client": "command-line client, one attempt, no retry",
+   "content_type": "text/plain",
+   "file": "afterlife/probes/2026-11-27/ncbi-www/robots.txt",
+   "full_sha256": "22843ad179efc5f6f6f71f5fd4f05dd49312274d906741227d354f32b56f42f0",
+   "http_status": 200,
+   "kept_bytes": 10819,
+   "name": "robots.txt",
+   "note": "read to decide whether /books/NBK* may be fetched: allowed for every agent; held by hash only on 2026-10-30, kept tonight",
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Length": "10819",
+    "Date": "Fri, 27 Nov 2026 07:39:15 GMT",
+    "Last-Modified": "Tue, 17 Mar 2026 18:08:33 GMT"
+   },
+   "retrieved_at": "2026-11-27T07:39:15+00:00",
+   "sha256": "22843ad179efc5f6f6f71f5fd4f05dd49312274d906741227d354f32b56f42f0",
+   "source": "ncbi-www",
+   "truncated": false,
+   "url": "https://www.ncbi.nlm.nih.gov/robots.txt"
+  },
+  {
+   "bytes": 21381,
+   "client": "command-line client, one attempt, no retry",
+   "content_type": "text/html; charset=utf-8",
+   "file": null,
+   "full_sha256": "fee4eb53e42c89e21ad2fc34062223db22a62e48d0bbdde6e283a78d92131ba6",
+   "http_status": 200,
+   "kept_bytes": 0,
+   "name": "NBK25497.html",
+   "note": "answered 200 with a browser-check (challenge) page, not the operator's text; third-party script page, held by hash only; not retried, no script client",
+   "request_headers": {
+    "User-Agent": "machine-attention/0.1 (https://github.com/frankbueltge/machine-attention; public research practice)"
+   },
+   "response_headers": {
+    "Content-Type": "text/html; charset=utf-8",
+    "Date": "Fri, 27 Nov 2026 07:39:31 GMT"
+   },
+   "retrieved_at": "2026-11-27T07:39:31+00:00",
+   "sha256": "fee4eb53e42c89e21ad2fc34062223db22a62e48d0bbdde6e283a78d92131ba6",
+   "source": "ncbi-www",
+   "truncated": true,
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/"
+  }
+ ],
+ "project": "afterlife",
+ "requests": 3,
+ "stage": "re-read of a parked candidate's blocker"
+}
