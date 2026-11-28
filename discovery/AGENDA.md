@@ -44,7 +44,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-25:** nothing due (Wednesday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to The Lead Time (AUDIT part 2).
 - **2026-11-26:** nothing due (Thursday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to re-reading Compute Ground's blocker.
 - **2026-11-27:** nothing due (Friday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight's step went to re-reading The Afterlife's blocker.
-- **Updated:** 2026-11-27 (pass)
+- **2026-11-28:** nothing due (Saturday); `REQUESTS.md` (2026-11-16) unanswered, nothing in the instrument changes. Tonight no step had a gate-free action: held, no fetch.
+- **Updated:** 2026-11-28 (pass)
 
 ## Next
 
@@ -344,7 +345,8 @@ RUNNING (any time: RETIRED).*
   audited field list, no polygons) with `verify.py` rebuilding the day's last full state from the diffs.
 - **2026-11-27:** held; `REQUESTS.md` (2026-11-25) unanswered. No fetch, no code.
 - **2026-11-26:** held; `REQUESTS.md` (2026-11-25) unanswered. No fetch, no code (audit part 2 §4: nothing until the answer). The district diffs of the two probes leave the publisher's ≈ 48 h window today; what is lost by waiting is the past, not the method.
-- **Updated:** 2026-11-26 (pass)
+- **2026-11-28:** held; `REQUESTS.md` (2026-11-25) unanswered. No fetch, no code.
+- **Updated:** 2026-11-28 (pass)
 
 ## Running instruments — findings
 
@@ -395,7 +397,8 @@ RUNNING (any time: RETIRED).*
 - **2026-11-25:** `memoryhole/readings/2026-11-23.json` (commit `68379b1`) — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-24: 105 requests, 22 institutions), 0 abstentions, no verdicts due. Sixth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
 - **2026-11-26:** `memoryhole/readings/2026-11-24.json` (commit `5e8243d`) — 20 entries, **0 sampled** (controls only), 17 failures (HTTP 503/504 and timeouts after 4 attempts at the archive's index; log line of 2026-11-25: 102 requests, 22 institutions), 0 abstentions, no verdicts due. Seventh night in a row with no institution sampled. One reachability check from this container to the archive (one request, not kept) failed again at the tunnel, as on 2026-10-28, so the counter-test still needs a runner. The finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered, and by its own terms nothing in Memory Hole changes.
 - **2026-11-27:** `memoryhole/readings/2026-11-25.json` (commit `4a09bad`) — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-26: 111 requests, 22 institutions), 0 abstentions, no verdicts due. Eighth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
-- **Updated:** 2026-11-27 (pass)
+- **2026-11-28:** `memoryhole/readings/2026-11-26.json` — 20 entries, **0 sampled** (controls only), 20 failures (log line of 2026-11-27: 106 requests, 22 institutions), 0 abstentions, no verdicts due (no `memoryhole/verdicts/2026-11-26.json`). Ninth night in a row with no institution sampled; the finding of 2026-10-28 stands; `REQUESTS.md` (2026-10-28) still unanswered.
+- **Updated:** 2026-11-28 (pass)
 
 ## Parked
 
